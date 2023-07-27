@@ -1,0 +1,467 @@
+---
+title: Experience Cloud ID-Dienst (ECID)
+description: Obwohl die [!DNL Target] SDKs zum Abrufen von Inhalten aus [!DNL Target] kann leistungsstark sein, der Mehrwert der Verwendung der [!UICONTROL Experience Cloud-ID] (ECID) für die Benutzerverfolgung über die Adobe hinaus [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud] Produkte und Funktionen wie A4T-Reporting und [!DNL Adobe Audience Manager] (AAM) Segmente.
+exl-id: fd7e5c3e-51c1-4965-ab6a-f50a6b0c910b
+feature: Implement Server-side
+source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+workflow-type: tm+mt
+source-wordcount: '278'
+ht-degree: 1%
+
+---
+
+# [!UICONTROL Experience Cloud-ID] (ECID)-Dienst
+
+## [!UICONTROL Experience Cloud-ID] (ECID)-Integration
+
+Obwohl die [!DNL Target] SDKs zum Abrufen von Inhalten aus [!DNL Target] kann leistungsstark sein, der Mehrwert der Verwendung der [!UICONTROL Experience Cloud-ID] (ECID) für die Benutzerverfolgung geht über [!DNL Adobe Target]. Mit der ECID können Sie [!DNL Adobe Experience Cloud] Produkte und Funktionen wie A4T-Reporting und [!DNL Adobe Audience Manager] (AAM) Segmente.
+
+Die ECID wird von `visitor.js`, der seinen eigenen Status behält. Die `visitor.js` erstellt ein Cookie mit dem Namen `AMCV_{organizationId}`, das von [!DNL Target] SDK für die ECID-Integration. Wenn die Variable [!DNL Target] zurückgegeben wird, müssen Sie die Besucherinstanz clientseitig mit `thevisitorState` zurückgegeben von [!DNL Target] SDKs
+
+```html {line-numbers="true"}
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ECID (Visitor API) Integration Sample</title>
+  <script src="VisitorAPI.js"></script>
+  <script>
+    Visitor.getInstance("${organizationId}", {serverState: ${visitorState}});
+  </script>
+</head>
+<body>
+  <pre>Sample content</pre>
+</body>
+</html>
+```
+
+>[!BEGINTABS]
+
+>[!TAB Node.js]
+
+```js {line-numbers="true"}
+const express = require("express");
+const cookieParser = require("cookie-parser");
+const TargetClient = require("@adobe/target-nodejs-sdk");
+const CONFIG = {
+  client: "acmeclient",
+  organizationId: "1234567890@AdobeOrg"
+};
+const TEMPLATE = `
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ECID (Visitor API) Integration Sample</title>
+  <script src="VisitorAPI.js"></script>
+  <script>
+    Visitor.getInstance("${organizationId}", {serverState: ${visitorState}});
+  </script>
+</head>
+<body>
+  <pre>${content}</pre>
+</body>
+</html>
+`;
+
+const app = express();
+const targetClient = TargetClient.create(CONFIG);
+
+app.use(cookieParser());
+// We assume that VisitorAPI.js is stored in "public" folder
+app.use(express.static(__dirname + "/public"));
+
+function saveCookie(res, cookie) {
+  if (!cookie) {
+    return;
+  }
+
+  res.cookie(cookie.name, cookie.value, {maxAge: cookie.maxAge * 1000});
+}
+
+const getResponseHeaders = () => ({
+  "Content-Type": "text/html",
+  "Expires": new Date().toUTCString()
+});
+
+function sendSuccessResponse(res, response) {
+  res.set(getResponseHeaders());
+
+  const result = TEMPLATE
+  .replace("${organizationId}", CONFIG.organizationId)
+  .replace("${visitorState}", JSON.stringify(response.visitorState))
+  .replace("${content}", response);
+
+  saveCookie(res, response.targetCookie);
+
+  res.status(200).send(result);
+}
+
+function sendErrorResponse(res, error) {
+  res.set(getResponseHeaders());
+  res.status(500).send(error);
+}
+
+app.get("/abtest", async (req, res) => {
+  const visitorCookie = req.cookies[TargetClient.getVisitorCookieName(CONFIG.organizationId)];
+  const targetCookie = req.cookies[TargetClient.TargetCookieName];
+  const request = {
+      execute: {
+        mboxes: [{
+          address: { url: req.headers.host + req.originalUrl },
+          name: "a1-serverside-ab"
+        }]
+      }};
+```
+
+>[!TAB Java ]
+
+```java {line-numbers="true"
+  console.log("Request", request);
+
+  try {
+      const response = await targetClient.getOffers({ request, visitorCookie, targetCookie });
+      sendSuccessResponse(res, response);
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+});
+
+app.listen(3000, function () {
+  console.log("Listening on port 3000 and watching!");
+});
+@Controller
+public class TargetControllerSample {
+
+  @Autowired
+  private TargetClient targetClient;
+
+  @GetMapping("/")
+  public String targetMcid(Model model, HttpServletRequest request, HttpServletResponse response) {
+    Context context = getContext(request);
+    TargetDeliveryRequest targetDeliveryRequest = TargetDeliveryRequest.builder()
+        .context(context)
+        .prefetch(getPrefetchRequest())
+        .cookies(getTargetCookies(request.getCookies()))
+        .build();
+
+    TargetDeliveryResponse targetResponse = targetClient.getOffers(targetDeliveryRequest);
+    model.addAttribute("visitorState", targetResponse.getVisitorState());
+    model.addAttribute("organizationId", "0DD934B85278256B0A490D44@AdobeOrg");
+    setCookies(targetResponse.getCookies(), response);
+    return "targetMcid";
+  }
+}
+```
+
+>[!ENDTABS]
+
+## ECID mit Kunden-ID-Integration
+
+Um Besucherbenutzerkonten und Anmeldestatusdetails zu verfolgen, müssen Sie `customerIds` kann über [!DNL Target] SDKs
+
+```html {line-numbers="true"
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ECID (Visitor API) Integration Sample</title>
+  <script src="VisitorAPI.js"></script>
+  <script>
+    Visitor.getInstance("${organizationId}", {serverState: ${visitorState}});
+  </script>
+</head>
+<body>
+  <pre>Sample content</pre>
+</body>
+</html>
+```
+
+>[!BEGINTABS]
+
+>[!TAB Node.js]
+
+```js {line-numbers="true"}
+const express = require("express");
+const cookieParser = require("cookie-parser");
+const TargetClient = require("@adobe/target-nodejs-sdk");
+const CONFIG = {
+  client: "acmeclient",
+  organizationId: "1234567890@AdobeOrg"
+};
+const TEMPLATE = `
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ECID (Visitor API) with Customer IDs Integration Sample</title>
+  <script src="VisitorAPI.js"></script>
+  <script>
+    Visitor.getInstance("${organizationId}", {serverState: ${visitorState}});
+  </script>
+</head>
+<body>
+  <pre>${content}</pre>
+</body>
+</html>
+`;
+
+const app = express();
+const targetClient = TargetClient.create(CONFIG);
+
+app.use(cookieParser());
+// We assume that VisitorAPI.js is stored in "public" folder
+app.use(express.static(__dirname + "/public"));
+
+function saveCookie(res, cookie) {
+  if (!cookie) {
+    return;
+  }
+
+  res.cookie(cookie.name, cookie.value, {maxAge: cookie.maxAge * 1000});
+}
+
+const getResponseHeaders = () => ({
+  "Content-Type": "text/html",
+  "Expires": new Date().toUTCString()
+});
+
+function sendSuccessResponse(res, response) {
+  res.set(getResponseHeaders());
+
+  const result = TEMPLATE
+  .replace("${organizationId}", CONFIG.organizationId)
+  .replace("${visitorState}", JSON.stringify(response.visitorState))
+  .replace("${content}", response);
+
+  saveCookie(res, response.targetCookie);
+
+  res.status(200).send(result);
+}
+
+function sendErrorResponse(res, error) {
+  res.set(getResponseHeaders());
+  res.status(500).send(error);
+}
+
+app.get("/abtest", async (req, res) => {
+  const visitorCookie = req.cookies[TargetClient.getVisitorCookieName(CONFIG.organizationId)];
+  const targetCookie = req.cookies[TargetClient.TargetCookieName];
+  const customerIds = {
+      "userid": {
+        "id": "67312378756723456",
+        "authState": TargetClient.AuthState.AUTHENTICATED
+      }
+    };
+  const request = {
+    execute: {
+      mboxes: [{
+        address: { url: req.headers.host + req.originalUrl },
+        name: "a1-serverside-ab"
+      }]
+    }};
+
+  try {
+    const response = await targetClient.getOffers({ request, visitorCookie, targetCookie, customerIds });
+    sendSuccessResponse(res, response);
+  } catch (error) {
+    sendErrorResponse(res, error);
+  }
+});
+
+app.listen(3000, function () {
+  console.log("Listening on port 3000 and watching!");
+});
+```
+
+>[!TAB Java ]
+
+```java {line-numbers="true"}
+@Controller
+public class TargetControllerSample {
+
+  @Autowired
+  private TargetClient targetJavaClient;
+
+  @GetMapping("/targetMcid")
+  public String targetMcid(Model model, HttpServletRequest request, HttpServletResponse response) {
+    Context context = getContext(request);
+    Map<String, CustomerState> customerIds = new HashMap<>();
+    customerIds.put("userid", CustomerState.authenticated("67312378756723456"));
+    customerIds.put("puuid", CustomerState.unknown("550e8400-e29b-41d4-a716-446655440000"));
+    TargetDeliveryRequest targetDeliveryRequest = TargetDeliveryRequest.builder()
+       .context(context)
+       .prefetch(getPrefetchRequest())
+       .cookies(getTargetCookies(request.getCookies()))
+       .customerIds(customerIds)
+       .build();
+
+    TargetDeliveryResponse targetResponse = targetJavaClient.getOffers(targetDeliveryRequest);
+    model.addAttribute("visitorState", targetResponse.getVisitorState());
+    model.addAttribute("organizationId", "0DD934B85278256B0A490D44@AdobeOrg");
+    setCookies(targetResponse.getCookies(), response);
+    return "targetMcid";
+  }
+}
+```
+
+>[!ENDTABS]
+
+## ECID und [!DNL Analytics] Integration
+
+Optimale Nutzung der [!DNL Target] SDKs und zur Verwendung der leistungsstarken Analysefunktionen, die von [!DNL Adobe Analytics], können Sie Integrationen über ECID hinweg verwenden, [!DNL Analytics], und [!DNL Target].
+
+Integration über ECID hinweg [!DNL Analytics], und [!DNL Target] ermöglicht Folgendes:
+
+* Segmente aus Adobe Audience Manager verwenden (AAM)
+* Benutzererlebnis basierend auf dem aus abgerufenen Inhalt anpassen [!DNL Target]
+* Stellen Sie sicher, dass alle Ereignisse und Erfolgsmetriken in [!DNL Analytics]
+* Verwendung [!DNL Analytics]&#39; leistungsstarke Abfragen und profitieren von den beeindruckenden Visualisierungen von Berichten
+
+Integrationen über ECID hinweg, [!DNL Analytics], und [!DNL Target] erfordern keine spezielle Verarbeitung für Analysen auf der Serverseite. Sobald Sie die ECID integriert haben, fügen Sie stattdessen `AppMeasurement.js` ([!DNL Analytics] -Bibliothek) auf der Client-Seite. [!DNL Analytics] verwendet dann die Besucherinstanz zum Synchronisieren mit [!DNL Target].
+
+```html {line-numbers="true"}
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ECID and Analytics integration Sample</title>
+  <script src="VisitorAPI.js"></script>
+  <script>
+    Visitor.getInstance("${organizationId}", {serverState: ${visitorState}});
+  </script>
+</head>
+<body>
+  <p>Sample content</p>
+  <script src="AppMeasurement.js"></script>
+  <script>var s_code=s.t();if(s_code)document.write(s_code);</script>
+</body>
+</html>
+```
+
+>[!BEGINTABS]
+
+>[!TAB Node.js]
+
+```js {line-numbers="true"}
+const express = require("express");
+const cookieParser = require("cookie-parser");
+const TargetClient = require("@adobe/target-nodejs-sdk");
+const CONFIG = {
+  client: "acmeclient",
+  organizationId: "1234567890@AdobeOrg"
+};
+const TEMPLATE = `
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ECID and Analytics integration Sample</title>
+  <script src="VisitorAPI.js"></script>
+  <script>
+    Visitor.getInstance("${organizationId}", {serverState: ${visitorState}});
+  </script>
+</head>
+<body>
+  <p>${content}</p>
+  <script src="AppMeasurement.js"></script>
+  <script>var s_code=s.t();if(s_code)document.write(s_code);</script>
+</body>
+</html>
+`;
+
+const app = express();
+const targetClient = TargetClient.create(CONFIG);
+
+app.use(cookieParser());
+// We assume that VisitorAPI.js and AppMeasurement.js are stored in "public" directory
+app.use(express.static(__dirname + "/public"));
+
+function saveCookie(res, cookie) {
+  if (!cookie) {
+    return;
+  }
+
+  res.cookie(cookie.name, cookie.value, {maxAge: cookie.maxAge * 1000});
+}
+
+const getResponseHeaders = () => ({
+  "Content-Type": "text/html",
+  "Expires": new Date().toUTCString()
+});
+
+function sendSuccessResponse(res, response) {
+  res.set(getResponseHeaders());
+
+  const result = TEMPLATE
+  .replace("${organizationId}", CONFIG.organizationId)
+  .replace("${visitorState}", JSON.stringify(response.visitorState))
+  .replace("${content}", response);
+
+  saveCookie(res, response.targetCookie);
+
+  res.status(200).send(result);
+}
+
+function sendErrorResponse(res, error) {
+  res.set(getResponseHeaders());
+
+  res.status(500).send(error);
+}
+
+app.get("/abtest", async (req, res) => {
+  const visitorCookie = req.cookies[TargetClient.getVisitorCookieName(CONFIG.organizationId)];
+  const targetCookie = req.cookies[TargetClient.TargetCookieName];
+  const request = {
+      execute: {
+        mboxes: [{
+          address: { url: req.headers.host + req.originalUrl },
+          name: "a1-serverside-ab"
+        }]
+      }};
+
+    try {
+      const response = await targetClient.getOffers({ request, visitorCookie, targetCookie });
+      sendSuccessResponse(res, response);
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+});
+
+app.listen(3000, function () {
+  console.log("Listening on port 3000 and watching!");
+});
+```
+
+>[!TAB Java ]
+
+```java {line-numbers="true"}
+@Controller
+public class TargetControllerSample {
+
+    @Autowired
+    private TargetClient targetJavaClient;
+
+    @GetMapping("/targetAnalytics")
+    public String targetMcid(Model model, HttpServletRequest request, HttpServletResponse response) {
+        Context context = getContext(request);
+        Map<String, CustomerState> customerIds = new HashMap<>();
+        customerIds.put("userid", CustomerState.authenticated("67312378756723456"));
+        customerIds.put("puuid", CustomerState.unknown("550e8400-e29b-41d4-a716-446655440000"));
+        TargetDeliveryRequest targetDeliveryRequest = TargetDeliveryRequest.builder()
+                .context(context)
+                .prefetch(getPrefetchRequest())
+                .cookies(getTargetCookies(request.getCookies()))
+                .customerIds(customerIds)
+                .trackingServer("imsbrims.sc.omtrds.net")
+                .build();
+
+        TargetDeliveryResponse targetResponse = targetJavaClient.getOffers(targetDeliveryRequest);
+        model.addAttribute("visitorState", targetResponse.getVisitorState());
+        model.addAttribute("organizationId", "0DD934B85278256B0A490D44@AdobeOrg");
+        setCookies(targetResponse.getCookies(), response);
+        return "targetAnalytics";
+    }
+```
+
+>[!ENDTABS]
