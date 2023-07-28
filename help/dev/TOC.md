@@ -2,9 +2,9 @@
 user-guide-title: Adobe Target-Entwicklerhandbuch
 breadcrumb-title: Target-Entwicklerhandbuch
 user-guide-description: Erfahren Sie, wie Sie das Kundenerlebnis so anpassen und personalisieren können, dass Sie den Umsatz Ihrer Websites, Mobile Sites, Mobile Apps, Social Media und anderer digitaler Kanäle maximieren können.
-source-git-commit: 5321ce43be26e8f0776da49e597ecb5f8dfb5984
+source-git-commit: 65cad3c558aa0f52c8007dcdb566c0ce3b29d8b7
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '739'
 ht-degree: 56%
 
 ---
@@ -217,5 +217,6 @@ ht-degree: 56%
       + [Initialisieren von SDKs](/help/dev/patterns/initialize-sdk.md)
       + [Datenerfassung konfigurieren](/help/dev/patterns/data-collection.md)
       + [Erlebnisse rendern](/help/dev/patterns/render-experiences.md)
+      + [Target benachrichtigen](/help/dev/patterns/notify-target.md)
 
 
