@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 18f070005685699e2d1feb12a31802faa17e35f3
+source-git-commit: ca3a3e5b8272c0db9e355abd2d16896251594b43
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1080'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 5%
 # Erlebnisse rendern
 
 Führen Sie die Schritte im Abschnitt *Render-Erlebnisse* -Diagramm, um sicherzustellen, dass alle erforderlichen Aufgaben zum Rendern von Erlebnissen in der richtigen Reihenfolge ausgeführt werden.
+
+>[!NOTE]
+>
+>Wenn Sie die automatische Seitenladeanforderung während der [Schritt &quot;Automatische Seitenladeanforderung konfigurieren&quot;](/help/dev/patterns/initialize-sdk.md#automatic) in *SDKS initialisieren* können Sie diese Aktivität überspringen, es sei denn, Sie möchten das Adobe Target SDK aufrufen, um zusätzliche Erlebnisse mithilfe einer regionalen Ortsanforderung zu rendern.
 
 >[!TIP]
 >
@@ -58,7 +62,7 @@ Hinzufügen beworbener Artikel und Steuern ihrer Platzierung in Target Recommend
 
 **Entitätsparameter erforderlich**
 
-* Das Elementattribut in Promotions muss bei Verwendung der Option &quot;Bewerben nach Attribut&quot;übergeben werden.
+* Elementattribute in Promotions müssen bei Verwendung der Option &quot;Bewerben nach Attribut&quot;übergeben werden.
 
 +++
 
@@ -90,7 +94,7 @@ Machen Sie Empfehlungen basierend auf den Inhalten des Warenkorbs des Benutzers.
 
 ## 3.3: Beliebtheitsbasierte Kriterien {#popularity}
 
-Machen Sie Empfehlungen basierend auf der allgemeinen Beliebtheit eines Artikels auf Ihrer Site oder auf der Beliebtheit von Artikeln in der bevorzugten oder am häufigsten angezeigten Kategorie, Marke, Genre usw. eines Benutzers.
+Machen Sie Empfehlungen basierend auf der allgemeinen Beliebtheit eines Artikels auf Ihrer Site oder auf der Beliebtheit von Artikeln in der bevorzugten oder am häufigsten angezeigten Kategorie, Marke, Genre usw. eines Besuchers.
 
 ++ + Siehe Details
 
@@ -168,7 +172,7 @@ Empfehlungen basierend auf dem Benutzerverhalten erstellen.
 
 ## 3.6: Benutzerdefinierte Kriterien {#custom}
 
-Empfehlungen basierend auf einer benutzerdefinierten Datei erstellen, die Sie hochladen
+Machen Sie Empfehlungen basierend auf einer benutzerdefinierten Datei, die Sie hochladen.
 
 ++ + Siehe Details
 
@@ -222,7 +226,7 @@ Empfehlungen basierend auf einer benutzerdefinierten Datei erstellen, die Sie ho
 
 * [Entitätsattribute](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-Sie können diesen Schritt auch durchführen, indem Sie Produkt-Feeds mit dem [!DNL Target] Benutzeroberfläche zum Aktualisieren des Produktkatalogs für [!DNL Recommendations].
+Sie können diesen Schritt auch durch Erstellen von [Produkt-Feeds](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} mithilfe der [!DNL Target] Benutzeroberfläche zum Aktualisieren des Produktkatalogs für [!DNL Recommendations].
 
 +++
 
@@ -244,7 +248,7 @@ Geben Sie die Profilattribute an, die als Schlüssel für Einschlussregeln in de
 
 ## 3.11: Seitenladeanforderung auslösen {#fire}
 
-Dieser Schritt Trigger eine [!DNL Delivery API] Aufruf mit `execute` > `pageLoad` Nutzlast in der Anfrage. Die `getOffers()` -Methode ruft das Erlebnis ab und `applyOffers()` rendert das Erlebnis auf der Seite. Die pageLoad-Anfrage ist zum Rendern von Erlebnissen erforderlich, die in der [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
+Dieser Schritt Trigger eine [!DNL Delivery API] Aufruf mit `execute` > `pageLoad` Nutzlast in der Anfrage. Die `getOffers()` -Methode ruft das Erlebnis ab und `applyOffers()` rendert das Erlebnis auf der Seite. Die `pageLoad` -Anfrage ist zum Rendern von Erlebnissen erforderlich, die in der [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
 
 ++ + Siehe Details
 
