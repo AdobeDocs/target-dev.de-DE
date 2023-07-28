@@ -4,10 +4,10 @@ description: Anzeigen einer Liste von Hosts, die Ihnen bei der Zulassungsliste d
 title: Wie kann ich eine Zulassungsliste vornehmen? [!DNL Target] Edge-Knoten?
 feature: Privacy & Security
 exl-id: a7e5d2fc-da8e-414d-a3da-2441ea21503d
-source-git-commit: 55deb12a59dc228ec7dcec17fc0ecb43e2900613
+source-git-commit: 3f4147d521b1fb3ee12e879e52a48d459f6b24b9
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 5%
+source-wordcount: '516'
+ht-degree: 6%
 
 ---
 
@@ -27,11 +27,7 @@ Sie können eine Zulassungsliste [!DNL Target] Kantenknoten, falls gewünscht.
 >
 >[!DNL Adobe Target] Die Infrastruktur wird aktualisiert und Kunden, die die Adressen in Zulassungslisten eintragen möchten, müssen beide IP-Sätze verwenden. Andernfalls werden Kunden beeinträchtigt, die serverseitige oder hybride Implementierungen verwenden, bei denen Target-API-Aufrufe zum Abrufen von Erlebnissen aus einem Netzwerk hinter einer Firewall stammen, die für die Verwendung einer Zulassungsliste konfiguriert ist.
 >
->Diese Aktualisierung erfolgt gemäß folgendem Zeitplan:
->
->* 22.-26. Mai: Europa, Naher Osten und Afrika (EMEA)
->* 22.-26. Mai: Region Asien-Pazifik (APAC)
->* 6.-10. Juni: Amerikanische Region
+>Alle Edge4 *x* Die Adressen, die in den beiden folgenden Tabellen aufgeführt sind, sollen am 9. August 2023 aktualisiert werden.
 
 ## IP-Adressen der NAT (Network Address Translation) von [!DNL Target] Kanten
 
