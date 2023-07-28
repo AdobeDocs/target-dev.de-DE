@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 65cad3c558aa0f52c8007dcdb566c0ce3b29d8b7
+source-git-commit: 1291a095a7befed5f795f34099e0411930788e29
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '335'
 ht-degree: 0%
 
 ---
@@ -31,13 +31,13 @@ Die Schrittnummer in der folgenden Abbildung entspricht dem folgenden Abschnitt.
 
 ## Feuer [!DNL Adobe Target] Tracking-API
 
-Dieser Schritt hilft Ihnen dabei sicherzustellen, dass alle Ereignisse, die an gesendet werden müssen [!DNL Target] werden mithilfe der Variablen `trackEvent` -Methode.
+Dieser Schritt hilft Ihnen dabei sicherzustellen, dass alle Ereignisse, an die gesendet werden müssen [!DNL Target] werden mithilfe der Variablen `trackEvent` -Methode.
 
 ++ + Siehe Details
 
 ![Adobe Target Track-API-Diagramm auslösen](/help/dev/patterns/assets/fire-adobe-target-track-api-diagram.png){width="100" zoomable="yes"}
 
-Sie senden die im Abschnitt Voraussetzung unten aufgeführten Bestellkonvertierungsattribute. Der Name der Mbox spielt keine Rolle, die Konversion erfolgt jedoch zur Verwendung `orderConfirmPage`.
+Sie senden die Auftragskonvertierungsattribute, wie im Abschnitt *Voraussetzungen* unten. Der Name der Mbox spielt keine Rolle, die Konversion erfolgt jedoch zur Verwendung `orderConfirmPage`.
 
 Sie müssen die Bestellkonvertierungsattribute nicht in diesen Aufruf aufnehmen. Diese Aufrufe zeichnen im Idealfall Erfolgsmetriken auf, die vor den wichtigsten Konversionsereignissen als Mini-Konversionsereignisse betrachtet werden können. `CardIds` muss in auf dem Warenkorb basierende Empfehlungen auf der Grundlage der `Add to Cart` -Ereignis.
 
@@ -46,7 +46,7 @@ Sie müssen die Bestellkonvertierungsattribute nicht in diesen Aufruf aufnehmen.
 * Treffen Sie sich mit Ihrem Geschäftsteam, um alle Ereignisse zu identifizieren, die als Konversions- oder Erfolgsmetriken betrachtet werden können. Sie müssen auch das Konversionsereignis identifizieren, das Umsatz generiert, damit diese Details an [!DNL Target] zusammen mit den Ereignisdaten.
 * Stellen Sie sicher, dass die folgenden Attribute in der Datenschicht verfügbar sind, damit Sie sie mit dem Konversionsereignis senden können. Das Konversionsereignis generiert Umsatz, z. B. einen Produktkauf oder das Ereignis &quot;Zum Warenkorb hinzufügen&quot;.
 
-   * `productPurchaseId`: Produkt-IDs, die im Rahmen der Bestellung erworben wurden. Kommagetrennte mehrere Produkte.
+   * `productPurchaseId`: Produkt-IDs, die im Rahmen der Bestellung erworben wurden. Trennen Sie mehrere Produkte durch Kommas.
    * `orderTotal`: Bestellsumme für den Kauf.
    * `orderId`: Bestell-ID des Kaufs.
 
