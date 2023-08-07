@@ -4,9 +4,9 @@ description: Details zu Änderungen in den einzelnen Versionen der [!DNL Adobe T
 title: Was ist in den einzelnen Versionen von at.js enthalten?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: dc7831e4c3eb7dfc4a11d440e55b3a116b6e28fc
 workflow-type: tm+mt
-source-wordcount: '4554'
+source-wordcount: '4603'
 ht-degree: 74%
 
 ---
@@ -15,9 +15,15 @@ ht-degree: 74%
 
 Details zu den Änderungen in den einzelnen Versionen der at.js-JavaScript-Bibliothek von [!DNL Adobe Target]
 
->[!WARNING]
+>[!IMPORTANT]
 >
->[!DNL Adobe Target] unterstützt beide at.js 1.*x* und at.js 2.*x*. Führen Sie ein Upgrade auf die neueste Aktualisierung einer der beiden Hauptversionen von at.js durch, um sicherzustellen, dass Sie eine unterstützte Version ausführen.
+>[!DNL Adobe Target] unterstützt beide at.js 1.*x* und at.js 2.*x*.
+>
+>at.js 1.*x*   in den Wartungsmodus versetzt wurde. Die [!DNL Target] Team veröffentlicht bei Bedarf Fehlerbehebungen und Sicherheits-Patches.
+>
+>Die [!DNL Target] -Team bietet vollständige Unterstützung für at.js 2.*x* und veröffentlicht fortlaufend Fehlerbehebungen, Sicherheits-Patches, Funktionen und Leistungsoptimierung.
+>
+>Sie sollten auf die neuesten Versionen von einem der beiden 1 aktualisieren.*x* las 2.*x* um Fehlerbehebungen und Sicherheits-Patches für Probleme zu erhalten, die in einer früheren Nebenversion der entsprechenden Hauptversion entdeckt wurden.
 
 Tags in [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) sind die bevorzugte Methode zum Aktualisieren von at.js. Erweiterungsentwickler fügen ihren Erweiterungen kontinuierlich neue Funktionen hinzu und beheben häufig Fehler. Diese Aktualisierungen werden in neuen Versionen einer Erweiterung zusammengefasst und im Adobe Experience Platform-Katalog als Aktualisierungen bereitgestellt. Weitere Informationen finden Sie unter [Erweiterungs-Upgrades](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) im *Übersicht über Tags* Handbuch.
 
