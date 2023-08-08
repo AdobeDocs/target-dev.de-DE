@@ -2,10 +2,10 @@
 user-guide-title: Adobe Target-Entwicklerhandbuch
 breadcrumb-title: Target-Entwicklerhandbuch
 user-guide-description: Erfahren Sie, wie Sie das Kundenerlebnis so anpassen und personalisieren können, dass Sie den Umsatz Ihrer Websites, Mobile Sites, Mobile Apps, Social Media und anderer digitaler Kanäle maximieren können.
-source-git-commit: 65cad3c558aa0f52c8007dcdb566c0ce3b29d8b7
+source-git-commit: eadb45877b13ac029dae6aaf172abebabb804983
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 56%
+source-wordcount: '707'
+ht-degree: 54%
 
 ---
 
@@ -168,12 +168,6 @@ ht-degree: 56%
    + [Mobile Target-Vorschau](implement/mobile/target-mobile-preview.md)
    + [Verwenden des Standortdienstes](implement/mobile/use-location-service.md)
    + [Target für mobile Apps – FAQs](implement/mobile/mobile-faq.md)
-   + Adobe Mobile SDK-Version 4.x {#version-4}
-      + [Funktionsweise von Target in Apps](implement/mobile/how-target-works-mobile-apps.md)
-      + [Aktivieren von Target im SDK](implement/mobile/enable-target-in-sdk.md)
-      + [iOS – Erstellen von Target-Standorten und Erfolgsmetriken](implement/mobile/mobile-create-location-and-metric.md)
-      + [iOS – Senden benutzerdefinierter Benutzerdaten](implement/mobile/mobile-custom-user-data.md)
-      + [Vorabruf des Angebotsinhalts](implement/mobile/prefetch-offer-content.md)
 + E-Mail-Implementierung {#implement-email}
    + [E-Mail: Target-Implementierung – Überblick](implement/email/overview.md)
    + [Erstellen einer AdBox für ein Bild](implement/email/testing-content-with-the-adbox.md)

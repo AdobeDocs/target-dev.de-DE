@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: ba53161b2ec51af3d90994773034790feb51099c
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1507'
 ht-degree: 1%
 
 ---
@@ -88,10 +88,9 @@ Die folgenden Ressourcen enthalten Beispiele für verschiedene nicht auf HTML fo
 | --- | --- |
 | [Adobe Target Überall - Implementieren Sie Server Side oder in das IoT](https://expleague.azureedge.net/labs/L733/index.html) | Adobe Summit 2019 Lab, das praktische Erfahrungen für eine React-Anwendung bietet, die serverseitige APIs von Adobe Target nutzt. |
 | [Adobe Target in einer mobilen App ohne Adobe SDK](https://community.tealiumiq.com/t5/Universal-Data-Hub/Adobe-Target-in-a-Mobile-App-Without-the-Adobe-SDK/ta-p/26753) | In diesem Handbuch erfahren Sie, wie Sie Adobe Target in Ihrer App einrichten, ohne das Adobe SDK zu installieren. Diese Lösung verwendet die Tealium SDK-Webansicht und das Remote Commands-Modul, um Anfragen an die Adobe Visitor API (Experience Cloud) und die Adobe Target-API zu senden und zu empfangen. |
-| [Funktionsweise von Adobe Target in mobilen Apps](../../implement/mobile/how-target-works-mobile-apps.md) | Funktionsweise von Target mit dem Mobile SDK |
 | [Konfigurieren der Target-Erweiterung in Experience Platform Launch und Implementieren von Target-APIs](https://developer.adobe.com/client-sdks/documentation/adobe-target/) | Schritte zum Konfigurieren der Target-Erweiterung in Experience Platform Launch, Hinzufügen der Target-Erweiterung zu Ihrer App und Implementieren von Target-APIs zum Anfordern von Aktivitäten, Vorabrufen von Angeboten und Wechseln zum visuellen Vorschaumodus. |
 | [Adobe Target Node Client](https://www.npmjs.com/package/@adobe/target-nodejs-sdk) | Open-Source-Target-SDK 1.0 Node.js |
-| [Übersicht über Server Side](../../implement/server-side/server-side-overview.md) | Informationen zu Server-seitigen Adobe Target-Bereitstellungs-APIs, Server-seitigen Batch-Bereitstellungs-APIs, Node.js-SDK und Adobe Target Recommendations-APIs. |
+| [Serverseitige Übersicht](../../implement/server-side/server-side-overview.md) | Informationen zu Server-seitigen Adobe Target-Bereitstellungs-APIs, Server-seitigen Batch-Bereitstellungs-APIs, Node.js-SDK und Adobe Target Recommendations-APIs. |
 | [Adobe Campaign Content Recommendations in E-Mail](https://medium.com/adobetech/adobe-campaign-content-recommendations-in-email-b51ced771d7f) | Blog, der beschreibt, wie Inhaltsempfehlungen in E-Mails über Adobe Target und Adobe I/O Runtime in Adobe Campaign genutzt werden können. |
 
 ## Verwalten der Recommendations-Einrichtung mit APIs
