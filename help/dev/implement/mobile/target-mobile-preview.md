@@ -4,10 +4,10 @@ description: Verwenden Sie Vorschaulinks für Mobilgeräte, um eine durchgängig
 title: Wie verwende ich den Vorschau-Link für Mobilgeräte in [!DNL Target] Mobil?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: cf39b35e208a99114b3f97df2e9ef7eb8a46e153
+source-git-commit: b678b69624963b4bdbce230a05a0355da96469f1
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 57%
+source-wordcount: '552'
+ht-degree: 51%
 
 ---
 
@@ -21,7 +21,7 @@ Mit der mobilen Vorschaufunktionalität können Sie Aktivitäten in Ihrer mobile
 
 ## Voraussetzungen 
 
-1. **Verwenden Sie eine unterstützte Version des SDK:** Für die mobile Vorschaufunktion ist es erforderlich, dass Sie die entsprechende Version 4.14 (oder später) des Adobe Mobile-SDK in Ihren jeweiligen Apps herunterladen.
+1. **Verwenden Sie eine unterstützte Version des SDK:** Für die mobile Vorschaufunktion müssen Sie die entsprechende Version des Adobe Mobile SDK in Ihre entsprechenden Apps herunterladen und installieren.
 
    Anweisungen zum Herunterladen des entsprechenden SDK finden Sie unter [Aktuelle SDK-Versionen](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} im *[!DNL Adobe Experience Platform Mobile SDK]* Dokumentation.
 
