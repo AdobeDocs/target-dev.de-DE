@@ -4,9 +4,9 @@ description: Verwenden Sie Vorschaulinks für Mobilgeräte, um eine durchgängig
 title: Wie verwende ich den Vorschau-Link für Mobilgeräte in [!DNL Target] Mobil?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: b678b69624963b4bdbce230a05a0355da96469f1
+source-git-commit: 97c96e63f9121793a83b445ad3dc33c5d094509a
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '555'
 ht-degree: 51%
 
 ---
@@ -34,7 +34,7 @@ Mit der mobilen Vorschaufunktionalität können Sie Aktivitäten in Ihrer mobile
    * **iOS**: Weitere Informationen zum Festlegen von URL-Schemas für iOS finden Sie unter [Definieren eines benutzerdefinierten URL-Schemas für Ihre App](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} auf der Apple Developer-Website.
    * **Android**: Weitere Informationen zum Festlegen von URL-Schemas für Android finden Sie unter [Erstellen von Deep-Links zu App-Inhalten](https://developer.android.com/training/app-links/deep-linking){target=_blank} auf der Android Developers-Website.
 
-1. **Einrichten `collectLaunchInfo` API**
+1. **Einrichten `collectLaunchInfo` API (nur i0S)**
 
    Weitere Informationen finden Sie unter [Visuelle Vorschau](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* im *[!DNL Adobe Experience Platform Mobile SDK]* Dokumentation.
 
