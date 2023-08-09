@@ -4,20 +4,16 @@ description: Verwenden Sie Vorschaulinks für Mobilgeräte, um eine durchgängig
 title: Wie verwende ich den Vorschau-Link für Mobilgeräte in [!DNL Target] Mobil?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: cf39b35e208a99114b3f97df2e9ef7eb8a46e153
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 68%
+source-wordcount: '554'
+ht-degree: 57%
 
 ---
 
 # [!DNL Target] mobile preview
 
 Verwenden Sie die Vorschau für mobile Apps, um mühelos eine ganzheitliche Qualitätssicherung für Aktivitäten von mobilen Apps durchzuführen und sich ohne spezielle Prüfmittel direkt auf Ihrem Gerät für verschiedene Erlebnisse anzumelden.
-
->[!NOTE]
->
->Für die Vorschaufunktion für die Mobilversion ist es erforderlich, dass Sie die entsprechende Version 4.14 (oder später) des Adobe Mobile-SDK herunterladen und installieren.
 
 ## Überblick
 
@@ -27,69 +23,24 @@ Mit der mobilen Vorschaufunktionalität können Sie Aktivitäten in Ihrer mobile
 
 1. **Verwenden Sie eine unterstützte Version des SDK:** Für die mobile Vorschaufunktion ist es erforderlich, dass Sie die entsprechende Version 4.14 (oder später) des Adobe Mobile-SDK in Ihren jeweiligen Apps herunterladen.
 
-   Eine Anleitung zum Herunterladen des erforderlichen SDK finden Sie unter:
-
-   * **iOS:** [Vorbereitung](https://experienceleague.adobe.com/docs/mobile-services/ios/getting-started-ios/requirements.html) im *Hilfe zu Mobile Services iOS*.
-   * **Android:** [Vorbereitung](https://experienceleague.adobe.com/docs/mobile-services/android/getting-started-android/requirements.html) im *Hilfe zu Mobile Services für Android*.
+   Anweisungen zum Herunterladen des entsprechenden SDK finden Sie unter [Aktuelle SDK-Versionen](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} im *[!DNL Adobe Experience Platform Mobile SDK]* Dokumentation.
 
 1. **URL-Schema einrichten:** Der Vorschau-Link öffnet Ihre App über ein URL-Schema. Sie müssen ein einzigartiges URL-Schema für die Vorschau festlegen.
 
-   Die folgende Illustration stellt ein Beispiel unter iOS dar:
+   Weitere Informationen finden Sie unter [Visuelle Vorschau](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* im *[!DNL Adobe Experience Platform Mobile SDK]* Dokumentation.
 
-   ![ALT-Bild](assets/mobile-preview-url-scheme-ios.png)
+   Die folgenden Links enthalten weitere Informationen:
 
-   Die folgende Illustration stellt ein Beispiel unter Android dar:
+   * **iOS**: Weitere Informationen zum Festlegen von URL-Schemas für iOS finden Sie unter [Definieren eines benutzerdefinierten URL-Schemas für Ihre App](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} auf der Apple Developer-Website.
+   * **Android**: Weitere Informationen zum Festlegen von URL-Schemas für Android finden Sie unter [Erstellen von Deep-Links zu App-Inhalten](https://developer.android.com/training/app-links/deep-linking){target=_blank} auf der Android Developers-Website.
 
-   ![ALT-Bild](assets/Android_Deeplink.png)
+1. **Einrichten `collectLaunchInfo` API**
 
-1. **Adobe DeepLink verfolgen**
-
-   **iOS:** Rufen Sie in App Delegate `[ADBMobile trackAdobeDeepLink:url` auf, wenn der Delegate dazu aufgefordert wird, die Ressource mit dem URL-Schema zu öffnen, das im vorherigen Schritt angegeben wurde.
-
-   Das folgende Code-Snippet dient als Beispiel:
-
-   ```javascript {line-numbers="true"}
-   - (BOOL) application:(UIApplication *)app openURL:(NSURL *)url 
-                options:(NSDictionary<NSString *,id> *)options { 
-   
-       if ([[url scheme] isEqualToString:@"com.adobe.targetmobile"]) { 
-           [ADBMobile trackAdobeDeepLink:url]; 
-           return YES; 
-       } 
-       return NO; 
-   } 
-   ```
-
-   **Android:** Rufen Sie in der App `Config.trackAdobeDeepLink(URL);` auf, wenn der Aufrufende dazu aufgefordert wird, die Ressource mit dem URL-Schema zu öffnen, das im vorherigen Schritt angegeben wurde.
-
-   ```javascript {line-numbers="true"}
-    private Boolean shouldOpenDeeplinkUrl() { 
-        Intent appLinkIntent = getIntent(); 
-        String appLinkAction = appLinkIntent.getAction(); 
-        Uri appLinkData = appLinkIntent.getData; 
-        if (appLinkData.toString().startsWith("com.adobe.targetmobile")) { 
-            Config.trackAdobeDeepLink(appLinkData); 
-            return true; 
-        } 
-        return false; 
-     }
-   ```
-
-   Damit die Mobile-Vorschau für Android funktioniert, müssen Sie außerdem das folgende Codefragment in AndroidManifest.xml hinzufügen, wenn Sie Version 5 des Adobe Mobile SDK verwenden:
-
-   ```javascript {line-numbers="true"}
-   <activity android:name="com.adobe.marketing.mobile.FullscreenMessageActivity" />
-   ```
-
-   Wenn Sie Version 4 des Adobe Mobile SDK verwenden, verwenden Sie folgendes Codefragment:
-
-   ```javascript {line-numbers="true"}
-   <activity android:name="com.adobe.mobile.MessageFullScreenActivity" />
-   ```
+   Weitere Informationen finden Sie unter [Visuelle Vorschau](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* im *[!DNL Adobe Experience Platform Mobile SDK]* Dokumentation.
 
 ## Einen Vorschau-Link erstellen
 
-1. Im [!DNL Target] Klicken Sie in der Benutzeroberfläche auf **[!UICONTROL Weitere Optionen]** Symbol (drei vertikale Ellipsen), und wählen Sie **[!UICONTROL Mobile Vorschau erstellen]**.
+1. Im [!DNL Target] Klicken Sie in der Benutzeroberfläche auf **[!UICONTROL Weitere Optionen]** Symbol (die vertikale Ellipse), und wählen Sie **[!UICONTROL Mobile Vorschau erstellen]**.
 
    ![ALT-Bild](assets/mobile-preview-create.png)
 
