@@ -2,10 +2,10 @@
 user-guide-title: Adobe Target-Entwicklerhandbuch
 breadcrumb-title: Target-Entwicklerhandbuch
 user-guide-description: Erfahren Sie, wie Sie das Kundenerlebnis so anpassen und personalisieren können, dass Sie den Umsatz Ihrer Websites, Mobile Sites, Mobile Apps, Social Media und anderer digitaler Kanäle maximieren können.
-source-git-commit: eadb45877b13ac029dae6aaf172abebabb804983
+source-git-commit: 2d1b1829a8f794e29bb054d1bfdcb5047d6b4acb
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 54%
+source-wordcount: '721'
+ht-degree: 53%
 
 ---
 
@@ -102,7 +102,7 @@ ht-degree: 54%
       + [Benutzerberechtigungen und -eigenschaften](implement/server-side/sdk-guides/core-principles/user-permissions-and-properties.md)
    + Integration {#integration}
       + [Integrationsübersicht](implement/server-side/sdk-guides/integration-with-experience-cloud/overview.md)
-      + [Experience Cloud-ID-Dienst (ECID)](implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md)
+      + [Experience Cloud ID-Dienst (ECID)](implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md)
       + [Berichterstellung von Analytics for Target (A4T)](implement/server-side/sdk-guides/integration-with-experience-cloud/a4t-reporting.md)
       + [AAM-Segmente](implement/server-side/sdk-guides/integration-with-experience-cloud/aam-segments.md)
    + On-Device Decisioning {#on-device-decisioning}
@@ -168,6 +168,7 @@ ht-degree: 54%
    + [Mobile Target-Vorschau](implement/mobile/target-mobile-preview.md)
    + [Verwenden des Standortdienstes](implement/mobile/use-location-service.md)
    + [Target für mobile Apps – FAQs](implement/mobile/mobile-faq.md)
+   + [Implementieren von Target mit dem AEP Mobile SDK in eine native App mit Webansichten](/help/dev/implement/mobile/native-app.md)
 + E-Mail-Implementierung {#implement-email}
    + [E-Mail: Target-Implementierung – Überblick](implement/email/overview.md)
    + [Erstellen einer AdBox für ein Bild](implement/email/testing-content-with-the-adbox.md)
