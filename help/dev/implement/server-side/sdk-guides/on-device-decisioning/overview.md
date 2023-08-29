@@ -4,9 +4,9 @@ description: Verwendung von [!UICONTROL [!UICONTROL On-Device Decisioning]] zum 
 title: Was ist On-Device Decisioning?
 feature: Implement Server-side
 exl-id: 22ed3072-56f0-4075-9d1a-d642afe3b649
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 79ffa3f58d780f587fe1202b82d3860395504dfe
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1214'
 ht-degree: 8%
 
 ---
@@ -59,7 +59,7 @@ Die On-Device-Entscheidungsfindung unterstützt die folgenden Zielgruppenregeln:
 
 | Zielgruppenregel | Gerätebezogene Entscheidungsfindung |
 | --- | --- |
-| [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | Ja |
+| [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | Ja<P>Bei der Verwendung der Entscheidungsfindung auf dem Gerät werden die folgenden Geo-Attribute unterstützt:<ul><li>Land/Region</li><li>Stadt</li><li>Breitengrad</li><li>Längengrad</li></ul> |
 | [Netzwerk](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | Nein |
 | [Mobile](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | Nein |
 | [Benutzerdefinierte Parameter](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | Ja |

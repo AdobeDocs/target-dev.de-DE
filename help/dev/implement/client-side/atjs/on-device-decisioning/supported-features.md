@@ -4,10 +4,10 @@ description: Erfahren Sie, für welche Funktionen [!UICONTROL on-device decision
 title: Welche Funktionen werden bei der On-Device-Entscheidungsfindung unterstützt?
 feature: at.js
 exl-id: bdd65658-6c4a-41ae-a222-59c00a11bdac
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 79ffa3f58d780f587fe1202b82d3860395504dfe
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 9%
+source-wordcount: '666'
+ht-degree: 10%
 
 ---
 
@@ -36,7 +36,7 @@ Die folgende Tabelle zeigt, für welche Zielgruppenregeln unterstützt oder nich
 
 | Zielgruppenregel | Unterstützt? |
 | --- | --- |
-| [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | Ja |
+| [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | Ja<P>Bei der Verwendung der Entscheidungsfindung auf dem Gerät werden die folgenden Geo-Attribute unterstützt:<ul><li>Land/Region</li><li>Stadt</li><li>Breitengrad</li><li>Längengrad</li></ul> |
 | [Netzwerk](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | Nein |
 | [Mobile](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | Nein |
 | [Benutzerdefinierte Parameter](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | Ja |
