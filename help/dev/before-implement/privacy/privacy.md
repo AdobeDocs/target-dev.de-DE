@@ -4,10 +4,10 @@ description: Erfahren Sie mehr [!DNL Adobe Target] erfüllt die geltenden Datens
 title: Wie behandelt Target Datenschutzprobleme, einschließlich PII?
 feature: Privacy & Security
 exl-id: 4330e034-2483-4a25-9c87-48dbef6fc9de
-source-git-commit: d9ac5bab3a09cf49b2178a62c06eebe733b9048d
+source-git-commit: 88bde40aa6dfb96e1d53e4db6ba5547d38dbbb99
 workflow-type: tm+mt
-source-wordcount: '865'
-ht-degree: 39%
+source-wordcount: '790'
+ht-degree: 42%
 
 ---
 
@@ -39,11 +39,9 @@ Die folgenden Einstellungen sind im [!DNL Target] Benutzeroberfläche durch Navi
 
 [!DNL Target] empfängt die vollständige IP-Adresse und verschleiert sie (wenn auf Letztes Oktett oder Ganze IP gesetzt) wie angegeben. [!DNL Target] speichert dann die verschleierte IP-Adresse nur während der aktuellen Sitzung im Speicher.
 
-### IP-Verschleierung auf Datenasterebene bei Verwendung der [!DNL Adobe Experience Platform Web SDK]
+### IP-Verschleierung auf Datenasterebene bei Verwendung der [!DNL Adobe Experience Platform Web SDK] {#aep}
 
-Bei Verwendung von [!DNL Platform Web SDK] (Version 23.4 oder höher) hat die Einstellung der IP-Verschleierung auf Datasterebene Vorrang vor allen IP-Verschleierungsoptionen, die in [!DNL Target]. Wenn beispielsweise die IP-Verschleierungsoption auf Datenasterebene auf [!UICONTROL Voll] und [!DNL Target] Die IP-Verschleierungsoption ist auf [!UICONTROL Verschleierung des letzten Oktetts], [!DNL Target] eine vollständig verschleierte IP-Adresse erhält. Da IP-Verschleierung in [!DNL Target] vor der Geolocation-Suche eintritt, hat die Einstellung für die IP-Verschleierung auf Datenasterebene keine Auswirkungen.
-
-Nachdem die IP-Verschleierung auf Datenasterebene festgelegt wurde und Ihre Daten über das Edge-Netzwerk verarbeitet werden, werden Anfragen an [!DNL Target] und [!DNL Adobe Audience Manager] (AAM) enthalten nur die verschleierte IP-Adresse und jede Logik, die auf der Client-IP basiert, wird von der Option IP-Verschleierung auf Datenasterebene beeinflusst. Alle in festgelegten IP-Verschleierungen [!DNL Target] oder AAM auf die bereits verschleierte IP angewendet wird.
+Bei Verwendung von [!DNL Platform Web SDK] (Version 23.4 oder höher) hat die Einstellung der IP-Verschleierung auf Datasterebene Vorrang vor allen IP-Verschleierungsoptionen, die in [!DNL Target]. Wenn beispielsweise die IP-Verschleierungsoption auf Datenasterebene auf [!UICONTROL Voll] und [!DNL Target] Die IP-Verschleierungsoption ist auf [!UICONTROL Verschleierung des letzten Oktetts], [!DNL Target] eine vollständig verschleierte IP-Adresse erhält.
 
 Weitere Informationen finden Sie unter [!UICONTROL IP-Verschleierung] in [Konfigurieren eines Datenspeichers](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html){target=_blank} im *[!DNL Adobe Experience Platfrom]Datastreams-Handbuch*.
 
