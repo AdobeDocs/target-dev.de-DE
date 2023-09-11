@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: c4b9dfed19e5e4a56bfeae26c4310b997a2d617e
+source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,10 @@ Beachten Sie, dass die Zahlen im Bild nicht die Reihenfolge der Vorgänge angebe
 
 Jedes Muster besteht aus verschiedenen Teilen. Jeder Teil entspricht einer kritischen Implementierungsanforderung für Ihre [!DNL Target] Implementierung.
 
-Jeder Teil wird auf einer separaten Seite in diesem Handbuch erläutert. Beispiel: die [!DNL Target] Implementierungsmuster enthält die folgenden Seiten:
+Jeder Teil wird auf einer separaten Seite in diesem Handbuch erläutert. Beispiel: die [[!DNL Recommendations] Implementierungsmuster mit at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md) enthält die folgenden Seiten:
 
 * SDK initialisieren
-* Profil anreichern
+* Datenerfassung konfigurieren
 * Render-Erlebnisse
 * Benachrichtigen [!DNL Target]
 
