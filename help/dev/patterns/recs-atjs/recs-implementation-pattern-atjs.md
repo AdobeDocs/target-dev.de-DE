@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
+source-git-commit: 752c52c0db5173f49fd828c297fa7afd7c53c6ce
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,24 @@ ht-degree: 0%
 
 Dieses Implementierungsmuster hilft Ihnen beim Verständnis und Erstellen Ihrer [!DNL Adobe Target Recommendations] Implementierung bei Verwendung der [JavaScript-Bibliothek &quot;at.js&quot;](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md).
 
-Dieses Muster enthält die folgenden Abschnitte:
+Klicken Sie auf Bild , um den Vollbildmodus zu erweitern.
+
+![Architekturdiagramm von Adobe Target](/help/dev/patterns/assets/architecture-chart.png){width="600" zoomable="yes"}
+
+Beachten Sie, dass die Zahlen im Bild nicht die Reihenfolge der Vorgänge angeben:
+
+1. Client-seitige SDKs für [!DNL Adobe Target] und [!DNL Experience Cloud ID Service]
+1. [!DNL Target Delivery API] call
+1. [!UICONTROL Experience Cloud-ID] (ECID)-Akquise-Aufruf
+1. Bulk-Profil-Update-API und [!DNL Customer Attributes] (CA)-Dienst
+1. Erfassung von Profildaten aus den Datenquellen des Kunden in [!DNL Target] Profilspeicher
+1. Erfassen von Profil- und Verhaltensdaten und Auswählen, welches Erlebnis dem Besucher angezeigt werden soll
+1. Erlebnisse werden auf der Seite dargestellt
+1. at.js rendert die Erlebnisse auf der Seite
+
+Jedes Muster besteht aus verschiedenen Teilen, wobei jedes Teil einer kritischen Implementierungsanforderung für Ihre [!DNL Target] Implementierung.
+
+Jeder Teil wird in einem separaten Artikel in diesem Handbuch erläutert:
 
 * [SDKS initialisieren](/help/dev/patterns/recs-atjs/initialize-sdk.md)
 * [Datenerfassung konfigurieren](/help/dev/patterns/recs-atjs/data-collection.md)
