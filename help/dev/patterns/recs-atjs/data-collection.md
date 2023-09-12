@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: c6d779f14a53193ff423678ebe96fdaacc57be5d
+source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 3%
@@ -46,7 +46,7 @@ Dieser Schritt stellt sicher, dass alle Daten, an die gesendet werden müssen, [
 
 +++Siehe Details
 
-![Diagramm für die Datenzuordnung konfigurieren](/help/dev/patterns/recs-atjs/assets/cofigure-data-mapping.png){width="300" zoomable="yes"}
+![Diagramm für die Datenzuordnung konfigurieren](/help/dev/patterns/recs-atjs/assets/cofigure-data-mapping.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
@@ -90,7 +90,7 @@ Dieser Schritt stellt sicher, dass alle Daten, an die gesendet werden müssen, [
 
 +++Siehe Details
 
-![Adobe Target Track-API-Diagramm auslösen](/help/dev/patterns/recs-atjs/assets/fire-track-api.png){width="300" zoomable="yes"}
+![Adobe Target Track-API-Diagramm auslösen](/help/dev/patterns/recs-atjs/assets/fire-track-api.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 

@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: e15513f5c52240536ccf41f16ba7f4dc6dbf9a04
+source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
 workflow-type: tm+mt
 source-wordcount: '1791'
 ht-degree: 8%
@@ -54,7 +54,7 @@ Dieser Schritt stellt sicher, dass `VisitorAPI.js` -Bibliothek korrekt geladen, 
 
 +++Siehe Details
 
-![Besucher-API-SDK-Diagramm laden](/help/dev/patterns/recs-atjs/assets/load-visitor-api-sdk.png){width="300" zoomable="yes"}
+![Besucher-API-SDK-Diagramm laden](/help/dev/patterns/recs-atjs/assets/load-visitor-api-sdk.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
@@ -90,7 +90,7 @@ Dieser Schritt stellt sicher, dass die bekannten IDs (CRM-ID, Benutzer-ID usw.) 
 
 +++Siehe Details
 
-![Kunden-ID festlegen](/help/dev/patterns/recs-atjs/assets/set-customer-id.png){width="300" zoomable="yes"}
+![Kunden-ID festlegen](/help/dev/patterns/recs-atjs/assets/set-customer-id.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
@@ -117,7 +117,7 @@ Dieser Schritt ermöglicht es at.js, alle Erlebnisse abzurufen, die beim Laden d
 
 +++Siehe Details
 
-![Automatische Seitenladeanforderung konfigurieren](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request.png){width="300" zoomable="yes"}
+![Automatische Seitenladeanforderung konfigurieren](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
@@ -146,7 +146,7 @@ Dieser Schritt stellt sicher, dass bei der Bereitstellung von Erlebnissen kein S
 
 +++Siehe Details
 
-![Flackern-Handling-Diagramm konfigurieren](/help/dev/patterns/recs-atjs/assets/flicker-handling.png){width="300" zoomable="yes"}
+![Flackern-Handling-Diagramm konfigurieren](/help/dev/patterns/recs-atjs/assets/flicker-handling.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
@@ -179,7 +179,7 @@ Dieser Schritt stellt sicher, dass alle Daten, an die gesendet werden müssen, [
 
 +++Siehe Details
 
-![Datenzuordnungsdiagramm](/help/dev/patterns/recs-atjs/assets/data-mapping.png){width="300" zoomable="yes"}
+![Datenzuordnungsdiagramm](/help/dev/patterns/recs-atjs/assets/data-mapping.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
@@ -399,7 +399,7 @@ Dieser Schritt stellt sicher, dass alle Daten, die an gesendet werden müssen [!
 
 +++Siehe Details
 
-![Diagramm zur Remote-Datenzuordnung](/help/dev/patterns/recs-atjs/assets/remote-data-mapping.png){width="300" zoomable="yes"}
+![Diagramm zur Remote-Datenzuordnung](/help/dev/patterns/recs-atjs/assets/remote-data-mapping.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
@@ -427,7 +427,7 @@ Dieser Schritt stellt sicher, dass die JavaScript-Bibliothek at.js geladen und i
 
 +++Siehe Details
 
-![Adobe Target Web SDK-Diagramm laden](/help/dev/patterns/recs-atjs/assets/load-web-sdk.png){width="300" zoomable="yes"}
+![Adobe Target Web SDK-Diagramm laden](/help/dev/patterns/recs-atjs/assets/load-web-sdk.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 

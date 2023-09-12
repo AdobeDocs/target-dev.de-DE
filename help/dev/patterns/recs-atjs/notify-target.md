@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
+source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Dieser Schritt hilft Ihnen dabei sicherzustellen, dass alle Ereignisse, an die g
 
 +++Siehe Details
 
-![Adobe Target Track-API-Diagramm auslösen](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram.png){width="300" zoomable="yes"}
+![Adobe Target Track-API-Diagramm auslösen](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram.png){width="400" zoomable="yes"}
 
 Sie senden die Auftragskonvertierungsattribute, wie im Abschnitt *Voraussetzungen* unten. Der Name der Mbox spielt keine Rolle, die Konversion erfolgt jedoch zur Verwendung `orderConfirmPage`.
 
