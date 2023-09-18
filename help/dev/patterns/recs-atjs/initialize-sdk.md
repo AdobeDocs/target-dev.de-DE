@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: a3644cd06c01d7b0d996aabbcb67272e1712b70c
+source-git-commit: 60b986b4d956972714cb485057484ee5d6eed2bb
 workflow-type: tm+mt
 source-wordcount: '1791'
 ht-degree: 8%
@@ -117,7 +117,7 @@ Dieser Schritt ermöglicht es at.js, alle Erlebnisse abzurufen, die beim Laden d
 
 +++Siehe Details
 
-![Automatische Seitenladeanforderung konfigurieren](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request.png){width="400" zoomable="yes"}
+![Automatische Seitenladeanforderung konfigurieren](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request-combined.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
@@ -146,7 +146,7 @@ Dieser Schritt stellt sicher, dass bei der Bereitstellung von Erlebnissen kein S
 
 +++Siehe Details
 
-![Flackern-Handling-Diagramm konfigurieren](/help/dev/patterns/recs-atjs/assets/flicker-handling.png){width="400" zoomable="yes"}
+![Flackern-Handling-Diagramm konfigurieren](/help/dev/patterns/recs-atjs/assets/flicker-handling-combined.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
