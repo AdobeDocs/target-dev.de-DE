@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
+source-git-commit: 85af1bad244dc0aa7665e2fbb627d82f6fabbf88
 workflow-type: tm+mt
 source-wordcount: '1080'
 ht-degree: 7%
@@ -252,7 +252,7 @@ Dieser Schritt Trigger eine [!DNL Delivery API] Aufruf mit `execute` > `pageLoad
 
 +++Siehe Details
 
-![Anforderungsdiagramm für Seitenladeanforderungen auslösen](/help/dev/patterns/recs-atjs/assets/fire-page-load-request.png){width="400" zoomable="yes"}
+![Anforderungsdiagramm für Seitenladeanforderungen auslösen](/help/dev/patterns/recs-atjs/assets/fire-page-load-request-combined.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
@@ -277,7 +277,7 @@ Dieser Schritt Trigger eine [!DNL Delivery API] Aufruf mit `execute` > `mboxes` 
 
 +++Siehe Details
 
-![Diagramm für regionale Standortanforderung auslösen](/help/dev/patterns/recs-atjs/assets/fire-regional-location-request.png){width="400" zoomable="yes"}
+![Diagramm für regionale Standortanforderung auslösen](/help/dev/patterns/recs-atjs/assets/fire-regional-location-request-combined.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
