@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: f2587af68a76eb700378076ad9f20844061164ae
+source-git-commit: a3644cd06c01d7b0d996aabbcb67272e1712b70c
 workflow-type: tm+mt
 source-wordcount: '1791'
 ht-degree: 8%
@@ -90,7 +90,7 @@ Dieser Schritt stellt sicher, dass die bekannten IDs (CRM-ID, Benutzer-ID usw.) 
 
 +++Siehe Details
 
-![Kunden-ID festlegen](/help/dev/patterns/recs-atjs/assets/set-customer-id.png){width="400" zoomable="yes"}
+![Kunden-ID festlegen](/help/dev/patterns/recs-atjs/assets/set-customer-id-combined.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
