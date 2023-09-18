@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 60b986b4d956972714cb485057484ee5d6eed2bb
+source-git-commit: a87f9a13fc1feb12c62f1b772975958541f7523a
 workflow-type: tm+mt
-source-wordcount: '1791'
+source-wordcount: '1790'
 ht-degree: 8%
 
 ---
@@ -179,7 +179,7 @@ Dieser Schritt stellt sicher, dass alle Daten, an die gesendet werden müssen, [
 
 +++Siehe Details
 
-![Datenzuordnungsdiagramm](/help/dev/patterns/recs-atjs/assets/data-mapping.png){width="400" zoomable="yes"}
+![Datenzuordnungsdiagramm](/help/dev/patterns/recs-atjs/assets/data-mapping-combined.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
@@ -399,7 +399,7 @@ Dieser Schritt stellt sicher, dass alle Daten, die an gesendet werden müssen [!
 
 +++Siehe Details
 
-![Diagramm zur Remote-Datenzuordnung](/help/dev/patterns/recs-atjs/assets/remote-data-mapping.png){width="400" zoomable="yes"}
+![Diagramm zur Remote-Datenzuordnung](/help/dev/patterns/recs-atjs/assets/remote-data-mapping-combined.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
@@ -427,7 +427,7 @@ Dieser Schritt stellt sicher, dass die JavaScript-Bibliothek at.js geladen und i
 
 +++Siehe Details
 
-![Adobe Target Web SDK-Diagramm laden](/help/dev/patterns/recs-atjs/assets/load-web-sdk.png){width="400" zoomable="yes"}
+![Adobe Target at.js-Diagramm laden](/help/dev/patterns/recs-atjs/assets/load-atjs-combined.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
