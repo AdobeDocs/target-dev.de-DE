@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 85af1bad244dc0aa7665e2fbb627d82f6fabbf88
+source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1104'
 ht-degree: 7%
 
 ---
@@ -29,7 +29,9 @@ Führen Sie die Schritte im Abschnitt *Render-Erlebnisse* -Diagramm, um sicherzu
 
 Die automatische standardmäßige Flackerbehandlung mit at.js ist nur dann sinnvoll, wenn Sie [!UICONTROL Automatische Seitenladeanforderung] aktiviert. Diese Option blendet den gesamten HTML-Textkörper aus, während die Erlebnisse abgerufen werden [!DNL Target]. In diesem Fall ist es Ihre Verantwortung, mit Flackern umzugehen. Suchen Sie nach Implementierungsmustern, die für die Flackerverarbeitung verfügbar sind, um Hinweise zu erhalten.
 
-Die Schrittnummern in der folgenden Abbildung entsprechen den folgenden Abschnitten.
+>[!NOTE]
+>
+>Die Schrittnummern in der folgenden Abbildung entsprechen den folgenden Abschnitten. Die Schrittzahlen sind nicht in einer bestimmten Reihenfolge und spiegeln nicht die Reihenfolge der Schritte wider, die in der [!DNL Target] Benutzeroberfläche beim Erstellen der Aktivität.
 
 ![Diagramm für Rendering-Erlebnisse](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
 

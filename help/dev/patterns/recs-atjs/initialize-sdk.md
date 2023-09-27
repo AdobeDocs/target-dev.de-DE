@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: a87f9a13fc1feb12c62f1b772975958541f7523a
+source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
 workflow-type: tm+mt
-source-wordcount: '1790'
+source-wordcount: '1814'
 ht-degree: 8%
 
 ---
@@ -25,7 +25,9 @@ Führen Sie die Schritte im Abschnitt *SDK initialisieren* Diagramm, um sicherzu
 
 Bei mehrseitigen Anwendungen erfolgt dieser Fluss jedes Mal, wenn die Seite neu geladen wird, oder der Besucher zu einer neuen Seite auf der Website navigiert.
 
-Die Schrittnummern in der folgenden Abbildung entsprechen den folgenden Abschnitten.
+>[!NOTE]
+>
+>Die Schrittnummern in der folgenden Abbildung entsprechen den folgenden Abschnitten. Die Schrittzahlen sind nicht in einer bestimmten Reihenfolge und spiegeln nicht die Reihenfolge der Schritte wider, die in der [!DNL Target] Benutzeroberfläche beim Erstellen der Aktivität.
 
 ![SDK-Diagramm initialisieren](/help/dev/patterns/recs-atjs/assets/diagram-initiaze-sdk.png){width="600" zoomable="yes"}
 
