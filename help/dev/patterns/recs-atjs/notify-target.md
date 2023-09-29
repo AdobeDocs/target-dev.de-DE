@@ -4,11 +4,9 @@ description: Stellen Sie sicher, dass alle Ereignisse, die verfolgt werden müss
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 013a49b92357cfb5d45f7e595b46b1b12ce91c65
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '359'
 ht-degree: 1%
 
 ---
@@ -49,6 +47,10 @@ Sie müssen die Bestellkonvertierungsattribute nicht in diesen Aufruf aufnehmen.
    * `productPurchaseId`: Produkt-IDs, die im Rahmen der Bestellung erworben wurden. Trennen Sie mehrere Produkte durch Kommas.
    * `orderTotal`: Bestellsumme für den Kauf.
    * `orderId`: Bestell-ID des Kaufs.
+
+  Die folgende Abbildung zeigt eine [Regel für [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} , die nur auf der [!UICONTROL Bestätigung] Seite.
+
+  ![Seite &quot;Aktionskonfiguration&quot;](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
 * Wenn Sie ein Ereignis zum Hinzufügen zum Warenkorb verfolgen, senden Sie `cartIds` als Parameter. Eine kommagetrennte Liste von Produkt-IDs kann für `cardIds`.
 

@@ -4,11 +4,9 @@ description: Stellen Sie sicher, dass alle für die Datenerfassung erforderliche
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 30634afc84877a4e88e08f3b2173d4c0727f4362
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '391'
 ht-degree: 3%
 
 ---
@@ -107,4 +105,6 @@ Verwendung [adobe.target.trackEvent() -Methode](/help/dev/implement/client-side/
 +++
 
 [Kehren Sie zum Diagramm oben auf dieser Seite zurück.](#diagram)
+
+Fahren Sie mit Schritt 3 fort: [Erlebnisse rendern](/help/dev/patterns/recs-atjs/render-experiences.md)
 

@@ -4,11 +4,9 @@ description: Stellen Sie sicher, dass alle erforderlichen Schritte zum Rendern v
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1124'
 ht-degree: 7%
 
 ---
@@ -52,7 +50,7 @@ Klicken Sie auf die folgenden Links, um zu den gewünschten Abschnitten zu navig
 
 ## 3.1. Promotion {#promotion}
 
-Hinzufügen beworbener Artikel und Steuern ihrer Platzierung in Target Recommendations [Designs](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}.
+Fügen Sie Promotionsartikel hinzu und steuern Sie deren Platzierung in Ihrem Empfehlungsentwurf, indem Sie im [!DNL Target] Benutzeroberfläche beim Erstellen der Aktivität.
 
 +++Siehe Details
 
@@ -65,6 +63,10 @@ Hinzufügen beworbener Artikel und Steuern ihrer Platzierung in Target Recommend
 **Entitätsparameter erforderlich**
 
 * Elementattribute in Promotions müssen bei Verwendung der Option &quot;Bewerben nach Attribut&quot;übergeben werden.
+
+**Lesungen**
+
+* [Hinzufügen von Promotions](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -297,3 +299,5 @@ Dieser Schritt Trigger eine [!DNL Delivery API] Aufruf mit `execute` > `mboxes` 
 +++
 
 [Kehren Sie zum Diagramm oben auf dieser Seite zurück.](#diagram)
+
+Fahren Sie mit Schritt 4 fort: [Target benachrichtigen](/help/dev/patterns/recs-atjs/notify-target.md).

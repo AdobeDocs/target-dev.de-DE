@@ -2,7 +2,7 @@
 user-guide-title: Adobe Target-Entwicklerhandbuch
 breadcrumb-title: Target-Entwicklerhandbuch
 user-guide-description: Erfahren Sie, wie Sie das Kundenerlebnis so anpassen und personalisieren können, dass Sie den Umsatz Ihrer Websites, Mobile Sites, Mobile Apps, Social Media und anderer digitaler Kanäle maximieren können.
-source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 55%
@@ -206,7 +206,7 @@ ht-degree: 55%
       + [Modelle-API](/help/dev/administer/models-api/models-api-overview.md)
    + [Adobe Admin Console-APIs](/help/dev/before-implement/delivery-api-overview/adobe-console-api.md)
    + [Adobe Experience Platform Edge Network Server-API](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
-+ Implementierungsmuster {#implementation-patterns} {#hidden}
++ Implementierungsmuster {#implementation-patterns}
    + [Übersicht über Implementierungsmuster](/help/dev/patterns/pattern-overview.md)
    + Recommendations-Implementierungsmuster mit at.js {#atjs}
       + [Recommendations-Implementierungsmuster mit at.js - Übersicht](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
