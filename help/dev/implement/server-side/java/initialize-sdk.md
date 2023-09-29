@@ -3,9 +3,9 @@ title: Initialisieren des Java-SDK mit der create-Methode
 description: Erfahren Sie, wie Sie mit der Methode create das Java SDK initialisieren und die [!UICONTROL TargetClient] , um [!DNL Adobe Target] für Experimente und personalisierte Erlebnisse.
 feature: APIs/SDKs
 exl-id: 0e0ddead-7de8-4549-b81c-e72598558e4b
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 1d080b5e402e5d55039bf06611b44678cc6c36de
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '462'
 ht-degree: 18%
 
 ---
@@ -39,11 +39,14 @@ ClientConfigBuilder ClientConfig.builder()
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
 | client | Zeichenfolge | Ja | Keine | [!UICONTROL Target-Client-ID] |
-| organizationId | Zeichenfolge | Ja | Keine | [!UICONTROL Organisations-ID des Experience Cloud] |
+| organizationId | Zeichenfolge | Ja | Keine | [!UICONTROL Experience Cloud-Organisations-ID] |
 | connectTimeout | Nummer | Nein | 10000 | Zeitüberschreitung bei der Verbindung für alle Anforderungen in Millisekunden |
 | socketTimeout | Nummer | Nein | 10000 | Socket-Timeout für alle Anforderungen in Millisekunden |
 | maxConnectionsPerHost | Nummer | Nein | 100 | Max. Verbindungen pro [!DNL Target] Host |
 | maxConnectionsTotal | Nummer | Nein | 200 | Max. Verbindungen einschließlich aller [!DNL Target] hosts |
+| connectionTlFrau | Nummer | Nein | -1 | &quot;Gesamte Lebensdauer&quot;(TTL) definiert die maximale Lebensdauer persistenter Verbindungen in Millisekunden. Standardmäßig bleiben Verbindungen unbegrenzt aktiv |
+| idleConnectionValidationMS | Nummer | Nein | 1000 | Inaktivitätszeitraum in Millisekunden, nach dem persistente Verbindungen vor der Wiederverwendung erneut validiert werden |
+| evictIdleConnectionsAfterSecs | Nummer | Nein | 20 | Die Zeit in Sekunden, um inaktive Verbindungen aus dem Verbindungspool zu entfernen. |
 | enableRetries | Boolesch | Nein | wahr | Automatische Wiederholungen für Socket-Timeouts (max. 4) |
 | logRequests | Boolesch | Nein | false | Protokoll [!DNL Target] Anforderungen und Antworten im Debugging |
 | logRequestStatus | Boolesch | Nein | false | Protokoll [!DNL Target] Antwortzeit, Status und URL |
