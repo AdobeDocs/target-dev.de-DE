@@ -1,46 +1,44 @@
 ---
 keywords: QS, Vorschau, Vorschau-Link, Mobile, mobile Vorschau
-description: Verwenden Sie Vorschaulinks für Mobilgeräte, um eine durchgängige Qualitätssicherung für Aktivitäten mobiler Apps durchzuführen. Sie können sich ohne spezielle Testgeräte für verschiedene Erlebnisse anmelden.
-title: Wie verwende ich den Vorschau-Link für Mobilgeräte in [!DNL Target] Mobil?
+description: Verwenden Sie Vorschaulinks für Mobilgeräte, um eine durchgängige Qualitätssicherung für Aktivitäten mobiler Apps durchzuführen.
+title: Verwenden von mobilen Vorschaulinks in [!DNL Adobe Target] Mobil?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: 97c96e63f9121793a83b445ad3dc33c5d094509a
+source-git-commit: 0bcfa16cb79644e7ce10e33daf6c8385104c197f
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 51%
+source-wordcount: '548'
+ht-degree: 27%
 
 ---
 
 # [!DNL Target] mobile preview
 
-Verwenden Sie die Vorschau für mobile Apps, um mühelos eine ganzheitliche Qualitätssicherung für Aktivitäten von mobilen Apps durchzuführen und sich ohne spezielle Prüfmittel direkt auf Ihrem Gerät für verschiedene Erlebnisse anzumelden.
+Verwenden Sie Vorschaulinks für Mobilgeräte, um eine einfache durchgängige Qualitätssicherung für Aktivitäten mobiler Apps durchzuführen und sich ohne spezielle Testgeräte bei verschiedenen Erlebnissen auf Ihrem Gerät anzumelden.
 
-## Überblick
-
-Mit der mobilen Vorschaufunktionalität können Sie Aktivitäten in Ihrer mobilen App vollständig testen, bevor Sie sie live schalten.
+Mit der mobilen Vorschaufunktion können Sie die Aktivitäten Ihrer Mobile App vollständig testen, bevor Sie sie live schalten.
 
 ## Voraussetzungen 
 
-1. **Verwenden Sie eine unterstützte Version des SDK:** Für die mobile Vorschaufunktion müssen Sie die entsprechende Version des Adobe Mobile SDK in Ihre entsprechenden Apps herunterladen und installieren.
+1. **Verwenden Sie eine unterstützte Version des SDK:** Für die mobile Vorschaufunktion müssen Sie die entsprechende Version der [!DNL Adobe Mobile SDK] in den entsprechenden Apps.
 
    Anweisungen zum Herunterladen des entsprechenden SDK finden Sie unter [Aktuelle SDK-Versionen](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} im *[!DNL Adobe Experience Platform Mobile SDK]* Dokumentation.
 
-1. **URL-Schema einrichten:** Der Vorschau-Link öffnet Ihre App über ein URL-Schema. Sie müssen ein einzigartiges URL-Schema für die Vorschau festlegen.
+1. **URL-Schema einrichten:** Der Vorschau-Link öffnet Ihre App über ein URL-Schema. Geben Sie ein eindeutiges URL-Schema für die Vorschau an.
 
-   Weitere Informationen finden Sie unter [Visuelle Vorschau](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* im *[!DNL Adobe Experience Platform Mobile SDK]* Dokumentation.
+   Weitere Informationen finden Sie unter [Visuelle Vorschau](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Konfigurieren der Target-Erweiterung in der Benutzeroberfläche &quot;Datenverbindung&quot;* im *[!DNL Mobile SDK]* Dokumentation.
 
    Die folgenden Links enthalten weitere Informationen:
 
-   * **iOS**: Weitere Informationen zum Festlegen von URL-Schemas für iOS finden Sie unter [Definieren eines benutzerdefinierten URL-Schemas für Ihre App](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} auf der Apple Developer-Website.
-   * **Android**: Weitere Informationen zum Festlegen von URL-Schemas für Android finden Sie unter [Erstellen von Deep-Links zu App-Inhalten](https://developer.android.com/training/app-links/deep-linking){target=_blank} auf der Android Developers-Website.
+   * **iOS**: Weitere Informationen zum Festlegen von URL-Schemas für iOS finden Sie unter [Definieren eines benutzerdefinierten URL-Schemas für Ihre App](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} auf *Apple-Entwickler* Website.
+   * **Android**: Weitere Informationen zum Festlegen von URL-Schemas für Android finden Sie unter [Erstellen von Deep-Links zu App-Inhalten](https://developer.android.com/training/app-links/deep-linking){target=_blank} auf *Android-Entwickler* Website.
 
-1. **Einrichten `collectLaunchInfo` API (nur i0S)**
+1. **Richten Sie die `collectLaunchInfo` API (nur i0S)**
 
-   Weitere Informationen finden Sie unter [Visuelle Vorschau](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* im *[!DNL Adobe Experience Platform Mobile SDK]* Dokumentation.
+   Weitere Informationen finden Sie unter [Visuelle Vorschau](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Konfigurieren der Target-Erweiterung in der Benutzeroberfläche &quot;Datenverbindung&quot;* im *[!DNL Mobile SDK]* Dokumentation.
 
 ## Einen Vorschau-Link erstellen
 
-1. Im [!DNL Target] Klicken Sie in der Benutzeroberfläche auf **[!UICONTROL Weitere Optionen]** Symbol (die vertikale Ellipse), und wählen Sie **[!UICONTROL Mobile Vorschau erstellen]**.
+1. Im [!DNL Target] Klicken Sie in der Benutzeroberfläche auf **[!UICONTROL Weitere Optionen]** Symbol (die vertikale Ellipse), und wählen Sie **[!UICONTROL Link zur mobilen Vorschau erstellen]**.
 
    ![ALT-Bild](assets/mobile-preview-create.png)
 
@@ -48,13 +46,13 @@ Mit der mobilen Vorschaufunktionalität können Sie Aktivitäten in Ihrer mobile
 
    >[!NOTE]
    >
-   >Es können nur formularbasierte AB- und XT-Aktivitäten ausgewählt werden.
+   >Sie können nur formularbasierte Elemente auswählen [!UICONTROL A/B-Test] und [!UICONTROL Erlebnis-Targeting] (XT).
 
    ![ALT-Bild](assets/mobile-preview-select-activities.png)
 
 1. Legen Sie das URL-Schema Ihrer App fest.
 
-   Dieses muss dem Schema in Ihrer iOS- oder Android-App entsprechen. Wiederholen Sie diesen Vorgang bei Bedarf einzeln für iOS und Android.
+   Das URL-Schema muss mit dem in Ihrer iOS- oder Android-App vorhandenen identisch sein. Wiederholen Sie diesen Vorgang bei Bedarf für iOS und Android separat.
 
    ![ALT-Bild](assets/mobile-preview-enter-url-scheme.png)
 
@@ -64,15 +62,15 @@ Mit der mobilen Vorschaufunktionalität können Sie Aktivitäten in Ihrer mobile
 
 ## Vorschau auf Ihrem Gerät
 
-Öffnen Sie den Link in einem mobilen Browser auf einem Gerät, auf dem Ihre App installiert ist. Bei dieser App kann es sich um die aus dem Apple App Store oder dem Google Play Store heruntergeladene Produktions-App handeln. Es muss keine speziell erstellte Version sein. Wenn Sie einen aktiven Vorschaulink haben, können Sie über das Gerät auf die Erlebnisse zugreifen.
+Öffnen Sie den Link in einem mobilen Browser auf einem Gerät, auf dem Ihre App installiert ist. Diese App kann die Produktions-App sein, die Sie von der [!DNL Apple App Store] oder [!DNL Google Play Store]. Die App muss kein spezieller Build sein. Wenn Sie über einen aktiven Vorschau-Link verfügen, können Sie die Erlebnisse auf dem Gerät anzeigen.
 
 1. Öffnen Sie den Link in Ihrem mobilen Browser.
 
-   Geben Sie den Link frei, den Sie im vorherigen Schritt aus dem [!DNL Target] Benutzeroberflächen auf Ihrem Mobilgerät auf bequeme Weise, z. B. durch die Verwendung von Text, E-Mail oder Slack.
+   Geben Sie den Link frei, den Sie im vorherigen Abschnitt aus dem [!DNL Target] Benutzeroberflächen auf Ihrem Mobilgerät bequem bereitstellen, z. B. mit Text, E-Mail oder [!DNL Slack].
 
    |![Vorschau Deep Link 1](assets/mobile-preview-open-deeplink.png)|![Vorschau Deep Link 2](assets/mobile-preview-open-app.png)|
 
-   Ihre App wird geöffnet und startet [!DNL Target] Mobile Vorschaumodus.
+   Ihre App wird geöffnet und startet [!DNL Target] [!UICONTROL Mobile Vorschaumodus].
 
 1. Wählen Sie die Kombination aus Erlebnissen aus, die Sie sehen möchten, und klicken Sie auf **[!UICONTROL Erlebnisse starten]**.
 
