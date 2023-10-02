@@ -4,9 +4,9 @@ description: Grundlegendes zur Verwendung von Implementierungsmustern
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+source-git-commit: 09dafc7c85ea7f3600fceac4e673e8f1901771a4
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Das folgende Muster ist derzeit verfügbar:
 
 * [[!DNL Recommendations] Implementierungsmuster mit at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
 
-Diese Implementierungsmuster zielen darauf ab, sich darauf zu konzentrieren, was zu tun ist, wann es zu tun ist und wo es zu tun ist, anstatt wie es zu tun ist. Detaillierte Flussdiagramme helfen Ihnen dabei, die Abfolge von Vorgängen zu verstehen, und Links zur entsprechenden Dokumentation enthalten kontextbezogene und schrittweise Anweisungen.
+Diese Implementierungsmuster konzentrieren sich auf das, was zu tun ist, wann es zu tun ist und wo es zu tun ist. Detaillierte Flussdiagramme helfen Ihnen dabei, die Abfolge von Vorgängen zu verstehen, und Links zur entsprechenden Dokumentation enthalten kontextbezogene und schrittweise Anweisungen.
 
 ## Vorschläge für neue Muster oder Korrekturen vorhandener Muster
 
