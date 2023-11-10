@@ -5,9 +5,9 @@ description: Wie implementiere und verwalte ich  [!DNL Adobe Target]  und arbeit
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: 1d834edf4da94614e3a4be665ebd97399439ec98
+source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '481'
 ht-degree: 14%
 
 ---
@@ -80,7 +80,7 @@ Diese *[!DNL Adobe Target]Entwicklerhandbuch* stellt Ressourcen und Handbücher 
 
 [**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): Abrufen [!UICONTROL A/B-Test] und [!UICONTROL Automated Personalization] Aktivitätsberichtdaten.
 
-[**[!DNL Target Recommendations API]**](http://developers.adobetarget.com/api/recommendations/): Verwenden Sie die [!DNL Target Recommendations] API.
+[**[!DNL Target Recommendations API]**](https://developer.adobe.com/target/administer/recommendations-api/): Verwenden Sie die [!DNL Target Recommendations] API.
 
 [**[!DNL Target Models API]**](administer/models-api/models-api-overview.md): Verwalten Sie Blockierungslisten, um die in verwendeten Funktionen zu definieren. [!DNL Target] Modelle für maschinelles Lernen.
 
