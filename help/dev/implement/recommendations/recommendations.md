@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie [!UICONTROL Recommendations] Aktivitäten in 
 title: Implementieren [!UICONTROL Recommendations] Aktivitäten?
 feature: Recommendations
 exl-id: af1e8b60-6dbb-451b-aa4f-e167d1800d1c
-source-git-commit: 1e1bfb556005f7ea998caf97685c834825372bd6
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1461'
 ht-degree: 29%
 
 ---
@@ -45,7 +45,7 @@ Bereitstellung hochwertiger Empfehlungen, [!UICONTROL Target] muss über die Pro
 | Methode | Was es ist | Einsatz | Zusätzliche Informationen |
 | --- | --- | --- | --- |
 | Katalog-Feed | Planen Sie einen Feed (CSV, Google Product XML oder Analytics Product Classifications), der täglich hochgeladen und erfasst werden soll. | Zum Senden von Informationen über mehrere Elemente gleichzeitig. Zum Senden von Informationen, die sich selten ändern. | Siehe [Feeds](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html). |
-| Entitäts-API | Rufen Sie eine API auf, um Aktualisierungen für ein einzelnes Element in Minutenschnelle zu senden. | Zum Versand von Updates, wenn sie jeweils etwa einen Artikel betreffen. Zum Senden von Informationen, die sich häufig ändern (z. B. Preis, Bestand/Lagerbestand). | Siehe [Entwicklerdokumentation für Entitäts-API](https://developers.adobetarget.com/api/recommendations/#tag/Entities). |
+| Entitäts-API | Rufen Sie eine API auf, um Aktualisierungen für ein einzelnes Element in Minutenschnelle zu senden. | Zum Versand von Updates, wenn sie jeweils etwa einen Artikel betreffen. Zum Senden von Informationen, die sich häufig ändern (z. B. Preis, Bestand/Lagerbestand). | Siehe [Entwicklerdokumentation für Entitäts-API](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities). |
 | Übergeben von Aktualisierungen auf der Seite | Senden Sie Aktualisierungen für ein einzelnes Element per JavaScript auf der Seite oder mithilfe der Bereitstellungs-API an die Minute. | Zum Versand von Updates, wenn sie jeweils etwa einen Artikel betreffen. Zum Senden von Informationen, die sich häufig ändern (z. B. Preis, Bestand/Lagerbestand). | Siehe [Artikelansichten/Produktseiten](#item-views-or-product-pages) unten. |
 
 Die meisten Kunden sollten mindestens einen Feed implementieren. Anschließend können Sie Ihren Feed mit Aktualisierungen für häufig geänderte Attribute oder Elemente ergänzen, indem Sie entweder die Entitäten-API oder die Seitenmethode verwenden.

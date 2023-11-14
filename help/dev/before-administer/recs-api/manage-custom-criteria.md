@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '939'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Um benutzerdefinierte Kriterien zu erstellen, definieren und importieren Sie die
 
 ## Erstellen benutzerdefinierter Kriterien
 
-So erstellen Sie benutzerdefinierte Kriterien mit dem [Benutzerdefinierte Kriterien-API erstellen](https://developers.adobetarget.com/api/recommendations/#operation/createCriteriaCustom)lautet die Syntax:
+So erstellen Sie benutzerdefinierte Kriterien mit dem [Benutzerdefinierte Kriterien-API erstellen](https://developer.adobe.com/target/administer/recommendations-api/#operation/createCriteriaCustom)lautet die Syntax:
 
 `POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
@@ -39,7 +39,7 @@ Fahren Sie erst dann mit den folgenden Schritten fort, nachdem Sie die oben steh
 
    ![CreateCustomCriteria1](assets/CreateCustomCriteria1.png)
 
-1. Fügen Sie Ihre **body** as **raw** JSON, das den Speicherort Ihrer CSV-Datei für benutzerdefinierte Kriterien definiert. Verwenden Sie das Beispiel im Abschnitt [Benutzerdefinierte Kriterien-API erstellen](https://developers.adobetarget.com/api/recommendations/#operation/getAllCriteriaCustom) Dokumentation als Vorlage, `environmentId` und anderen Werten nach Bedarf. Für dieses Beispiel verwenden wir LAST_PURCHASED als Schlüssel.
+1. Fügen Sie Ihre **body** as **raw** JSON, das den Speicherort Ihrer CSV-Datei für benutzerdefinierte Kriterien definiert. Verwenden Sie das Beispiel im Abschnitt [Benutzerdefinierte Kriterien-API erstellen](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom) Dokumentation als Vorlage, `environmentId` und anderen Werten nach Bedarf. Für dieses Beispiel verwenden wir LAST_PURCHASED als Schlüssel.
 
    ![CreateCustomCriteria2](assets/CreateCustomCriteria2.png)
 
@@ -55,7 +55,7 @@ In diesem Fall haben wir einen Fehler. Untersuchen wir den Fehler, indem wir die
 
 ## Benutzerdefinierte Kriterien auflisten
 
-Um eine Liste aller benutzerdefinierten Kriterien zusammen mit Details zu jedem abzurufen, verwenden Sie die [Benutzerdefinierte Kriterien-API auflisten](https://developers.adobetarget.com/api/recommendations/#operation/getAllCriteriaCustom). Die Syntax lautet:
+Um eine Liste aller benutzerdefinierten Kriterien zusammen mit Details zu jedem abzurufen, verwenden Sie die [Benutzerdefinierte Kriterien-API auflisten](https://developer.adobe.com/target/administer/recommendations-api/#operation/getAllCriteriaCustom). Die Syntax lautet:
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom`
 
@@ -66,7 +66,7 @@ In diesem Fall ist der Fehler aufgetreten, weil die Serverinformationen falsch s
 
 ## Benutzerdefinierte Kriterien bearbeiten
 
-Um die Details einer benutzerdefinierten Kriteriendefinition zu ändern, verwenden Sie die [Benutzerdefinierte Kriterien-API bearbeiten](https://developers.adobetarget.com/api/recommendations/#operation/updateCriteriaCustom). Die Syntax lautet:
+Um die Details einer benutzerdefinierten Kriteriendefinition zu ändern, verwenden Sie die [Benutzerdefinierte Kriterien-API bearbeiten](https://developer.adobe.com/target/administer/recommendations-api/#operation/updateCriteriaCustom). Die Syntax lautet:
 
 `POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
@@ -86,7 +86,7 @@ Um die Details einer benutzerdefinierten Kriteriendefinition zu ändern, verwend
 
 ## Abrufen benutzerdefinierter Kriterien
 
-Um benutzerdefinierte Kriteriendetails für ein bestimmtes benutzerdefiniertes Kriterium anzuzeigen, verwenden Sie die [Abrufen der API für benutzerdefinierte Kriterien](https://developers.adobetarget.com/api/recommendations/#operation/getCriteriaCustom). Die Syntax lautet:
+Um benutzerdefinierte Kriteriendetails für ein bestimmtes benutzerdefiniertes Kriterium anzuzeigen, verwenden Sie die [Abrufen der API für benutzerdefinierte Kriterien](https://developer.adobe.com/target/administer/recommendations-api/#operation/getCriteriaCustom). Die Syntax lautet:
 
 `GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
@@ -99,7 +99,7 @@ Um benutzerdefinierte Kriteriendetails für ein bestimmtes benutzerdefiniertes K
 
 ## Benutzerdefinierte Kriterien löschen
 
-Löschen Sie mithilfe der zuvor angegebenen Kriterien-ID Ihre benutzerdefinierten Kriterien mithilfe der [Benutzerdefinierte Kriterien-API löschen](https://developers.adobetarget.com/api/recommendations/#operation/deleteCriteriaCustom). Die Syntax lautet:
+Löschen Sie mithilfe der zuvor angegebenen Kriterien-ID Ihre benutzerdefinierten Kriterien mithilfe der [Benutzerdefinierte Kriterien-API löschen](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteCriteriaCustom). Die Syntax lautet:
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 

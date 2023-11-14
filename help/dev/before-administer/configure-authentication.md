@@ -3,9 +3,9 @@ title: Konfigurieren der Authentifizierung für [!DNL Adobe Target] APIs
 description: Wie generiere ich Authentifizierungstoken, die für eine erfolgreiche Interaktion mit [!DNL Adobe Target] APIs?
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1942'
 ht-degree: 2%
 
 ---
@@ -36,17 +36,17 @@ Im Folgenden finden Sie die ersten Schritte, die zum Generieren der Legacy-JWT-A
 | Ressource | Details |
 | --- | --- |
 | Postman | Um diese Schritte erfolgreich abzuschließen, rufen Sie die [Postman-App](https://www.postman.com/downloads/) für Ihr Betriebssystem. Postman Basic ist mit der Kontoerstellung kostenlos. Für die Verwendung von [!DNL Adobe Target] -APIs im Allgemeinen vereinfacht Postman API-Workflows und [!DNL Adobe Target] bietet mehrere Postman-Sammlungen, die die Ausführung der APIs und deren Funktionsweise erleichtern. Der Rest dieses Handbuchs setzt Grundkenntnisse in Postman voraus. Weitere Informationen finden Sie im Abschnitt [Postman-Dokumentation](https://learning.getpostman.com/). |
-| Verweise | Im Rest dieses Handbuchs wird davon ausgegangen, dass Sie mit den folgenden Ressourcen vertraut sind:<ul><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Dokumentation zur Target-Admin- und Profil-API](../administer/admin-api/admin-api-overview-new.md)</li><li>[Dokumentation zur Recommendations API](https://developers.adobetarget.com/api/recommendations/)</li></ul> |
+| Verweise | Im Rest dieses Handbuchs wird davon ausgegangen, dass Sie mit den folgenden Ressourcen vertraut sind:<ul><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Dokumentation zur Target-Admin- und Profil-API](../administer/admin-api/admin-api-overview-new.md)</li><li>[Dokumentation zur Recommendations API](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
 
 ## Erstellen eines Adobe I/O-Projekts
 
 In diesem Abschnitt greifen Sie auf die [!DNL Adobe Developer Console] und ein Projekt für [!DNL Adobe Target]. Weitere Informationen finden Sie unter [Dokumentation zu Projekten](https://developer.adobe.com/developer-console/docs/guides/projects/).
 
-&lt;!---(1. Generieren Sie Ihren privaten Schlüssel und Ihr öffentliches Zertifikat gemäß [Dokumentation zur Authentifizierung](https://developer.adobe.com/developer-console/docs/guides/authentication/). // [//]: # (wie beschrieben in **Schritt 1** von [Einrichten der Adobe IO: Authentifizierung - Schritt für Schritt](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html). Kehren Sie nach Abschluss von Schritt 1 zu diesem Handbuch zurück und fahren Sie mit Schritt 2 unten fort. // Das Ergebnis dieses Schritts sollte die Erstellung einer `private.key` und eine `certificate_pub.crt` -Datei. Kehren Sie nach der Erstellung dieser beiden Dateien zu diesem Handbuch zurück.)—>
+&lt;!---(1. Generieren Sie Ihren privaten Schlüssel und Ihr öffentliches Zertifikat gemäß [Dokumentation zur Authentifizierung](https://developer.adobe.com/developer-console/docs/guides/authentication/). // [//]: # (wie beschrieben in **Schritt 1** von [Einrichten von Adobe IO: Authentifizierung - Schritt für Schritt](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html). Kehren Sie nach Abschluss von Schritt 1 zu diesem Handbuch zurück und fahren Sie mit Schritt 2 unten fort. // Das Ergebnis dieses Schritts sollte die Erstellung einer `private.key` und eine `certificate_pub.crt` -Datei. Kehren Sie nach der Erstellung dieser beiden Dateien zu diesem Handbuch zurück.)—>
 
 1. Im [Adobe Admin Console](https://adminconsole.adobe.com/), stellen Sie sicher, dass [!DNL Adobe] Das Benutzerkonto wurde sowohl [Produktadministrator](https://helpx.adobe.com/enterprise/using/admin-roles.html) und [Entwickler](https://helpx.adobe.com/enterprise/using/manage-developers.html) Zugriff auf Ebene [!DNL Target].
 
-1. Im [Adobe Developer-Konsole](https://developer.adobe.com/console/home), wählen Sie die [!UICONTROL Organisation des Experience Cloud] für die Sie diese Integration erstellen möchten. (Beachten Sie, dass Sie wahrscheinlich nur Zugriff auf eine [!UICONTROL Organisation des Experience Cloud].
+1. Im [Adobe Developer-Konsole](https://developer.adobe.com/console/home), wählen Sie die [!UICONTROL Experience Cloud-Organisation] für die Sie diese Integration erstellen möchten. (Beachten Sie, dass Sie wahrscheinlich nur Zugriff auf eine [!UICONTROL Experience Cloud-Organisation].
 
    ![configure-io-target-createproject2.png](assets/configure-io-target-createproject2.png)
 
@@ -95,7 +95,7 @@ Es gibt viele Möglichkeiten, die Details Ihres Projekts in Postman anzugeben. I
 
 >[!NOTE]
 >
->Für Videoanleitungen, die für alle Experience Cloud-Lösungen gelten, einschließlich [!DNL Target], siehe [Verwenden von Postman mit Experience Platform-APIs](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html). Die folgenden Abschnitte sind für die [!DNL Target] APIs: 1. Erstellen und exportieren Sie die Experience Platform-API in Postman 2. Generieren Sie ein Zugriffstoken mit Postman. Diese Schritte werden im Folgenden beschrieben.
+>Für Videoanleitungen für alle Experience Cloud-Lösungen, einschließlich [!DNL Target], siehe [Verwenden von Postman mit Experience Platform-APIs](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html). Die folgenden Abschnitte sind für die [!DNL Target] APIs: 1. Erstellen und exportieren Sie die Experience Platform-API in Postman 2. Generieren Sie ein Zugriffstoken mit Postman. Diese Schritte werden im Folgenden beschrieben.
 
 1. Noch im [Adobe Developer-Konsole](https://developer.adobe.com/console/home), navigieren Sie zu , um die **[!UICONTROL Dienstkonto (JWT)]** Anmeldedaten. Verwenden Sie entweder die linke Navigation oder die **[!UICONTROL Anmeldeinformationen]** -Abschnitt angezeigt.
 
@@ -151,11 +151,11 @@ Es gibt viele Möglichkeiten, die Details Ihres Projekts in Postman anzugeben. I
 
 In diesem Abschnitt generieren Sie Ihr Bearer-Zugriffstoken, das zur Authentifizierung Ihrer Interaktion mit [!DNL Adobe Target] APIs. Um Ihr Bearer-Zugriffstoken zu generieren, müssen Sie Ihre Integrationsdetails (wie in den vorherigen Abschnitten beschrieben) an die [Adobe Identity Management Service (IMS)](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/AuthenticationGuide.md). Es gibt verschiedene Möglichkeiten, dies zu tun. In diesem Handbuch nutzen wir jedoch eine Postman-Sammlung mit einem vordefinierten IMS-Aufruf, der den Prozess direkt und einfach macht. Nachdem Sie die Sammlung importiert haben, können Sie sie bei Bedarf wiederverwenden, um neue Token zu generieren, nicht nur für [!DNL Adobe Target], aber auch andere Adobe-APIs.
 
-1. Navigieren Sie zum [Beispielaufrufe der Adobe Identity Management Service-API](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims).
+1. Navigieren Sie zum [Beispielaufrufe für Adobe Identity Management Service-API](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims).
 
    ![token1](assets/configure-io-target-generatetoken1.png)
 
-1. Klicken Sie auf **[!UICONTROL Postman-Erfassung zur Generierung von Adobe I/O Access Token]**.
+1. Klicken Sie auf **[!UICONTROL Postman-Sammlung zur Generierung von Adobe I/O-Zugriffstoken]**.
 
    ![token2](assets/configure-io-target-generatetoken2.png)
 
@@ -185,7 +185,7 @@ In diesem Abschnitt generieren Sie Ihr Bearer-Zugriffstoken, das zur Authentifiz
 
 Frage: Muss ich die Postman-Sammlung &quot;Adobe I/O Access Token Generation&quot;verwenden, um das JSON Web Token (JWT) und das Trägerzugriffstoken zu generieren?
 
-Antwort: Nein. Die Postman-Sammlung &quot;Adobe I/O Access Token Generation&quot;ist verfügbar, um das JWT- und Trägerzugriffstoken in Postman einfacher zu generieren. Alternativ können Sie Funktionen in der Adobe Developer-Konsole verwenden, um das Trägerzugriffstoken manuell zu generieren.
+Antwort: Nein. Die Postman-Sammlung zur Adobe I/O-Zugriffstoken-Generierung ist verfügbar, um das JWT- und Trägerzugriffstoken in Postman einfacher zu generieren. Alternativ können Sie Funktionen in der Adobe Developer-Konsole verwenden, um das Trägerzugriffstoken manuell zu generieren.
 
 ## Testen des Trägerzugriffs-Tokens
 
@@ -231,4 +231,4 @@ In dieser Übung verwenden Sie Ihr neues Bearer-Zugriffstoken, indem Sie eine AP
 
    ![testtoken6](assets/configure-io-target-testtoken6.png)
 
-Nachdem Sie die Authentifizierung Ihrer Adobe überprüft haben, können Sie damit interagieren [!DNL Adobe Target] APIs (sowie andere Adobe-APIs). Sie können beispielsweise [Verwenden von Recommendations-APIs](recs-api/overview.md) , um Empfehlungen zu erstellen oder zu verwalten, oder Sie können sie mit der [Target-Bereitstellungs-API](/help/dev/implement/delivery-api/overview.md).
+Nachdem Sie Ihre Adobe-Authentifizierung überprüft haben, können Sie damit interagieren [!DNL Adobe Target] APIs (sowie andere Adobe-APIs). Sie können beispielsweise [Verwenden von Recommendations-APIs](recs-api/overview.md) , um Empfehlungen zu erstellen oder zu verwalten, oder Sie können sie mit der [Target-Bereitstellungs-API](/help/dev/implement/delivery-api/overview.md).

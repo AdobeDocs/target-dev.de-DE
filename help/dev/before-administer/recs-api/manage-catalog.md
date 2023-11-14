@@ -6,10 +6,10 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '919'
-ht-degree: 2%
+source-wordcount: '924'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 Sie stellen sicher, dass Sie die [Anforderungen für die Verwendung der Recommendations-API](/help/dev/before-administer/recs-api/overview.md#prerequisites), haben Sie gelernt, wie [Zugriffstoken generieren](/help/dev/before-administer/configure-authentication.md) Verwenden des JWT-Authentifizierungsflusses zur Verwendung der [!DNL Adobe Target] Admin-APIs auf der [Adobe Developer-Konsole](https://developer.adobe.com/console/home).
 
-Sie können jetzt die [Recommendations-APIs](https://developers.adobetarget.com/api/recommendations/) , um Artikel in Ihrem Empfehlungskatalog hinzuzufügen, zu aktualisieren oder zu löschen. Wie bei den anderen Adobe Target Admin-APIs erfordern auch die Recommendations-APIs eine Authentifizierung.
+Sie können jetzt die [Recommendations-APIs](https://developer.adobe.com/target/administer/recommendations-api/) , um Artikel in Ihrem Empfehlungskatalog hinzuzufügen, zu aktualisieren oder zu löschen. Wie bei den anderen Adobe Target Admin-APIs erfordern auch die Recommendations-APIs eine Authentifizierung.
 
 >[!NOTE]
 >
@@ -25,11 +25,11 @@ Sie können jetzt die [Recommendations-APIs](https://developers.adobetarget.com/
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
-Bevor Sie fortfahren, rufen Sie die [Recommendations Postman-Sammlung](https://developers.adobetarget.com/api/recommendations/#section/Postman).
+Bevor Sie fortfahren, rufen Sie die [Recommendations Postman-Sammlung](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman).
 
 ## Erstellen und Aktualisieren von Elementen mit der API &quot;Entitäten speichern&quot;
 
-Um Ihre Recommendations-Produktdatenbank mit der API anstatt mit CSV-Produkt-Feed- oder Target-Anforderungen zu füllen, die auf Produktseiten ausgelöst werden, verwenden Sie die [Entitäten-API speichern](https://developers.adobetarget.com/api/recommendations/#operation/saveEntities). Diese Anfrage fügt ein Element in einer einzelnen Target-Umgebung hinzu oder aktualisiert es. Die Syntax lautet:
+Um Ihre Recommendations-Produktdatenbank mit der API anstatt mit CSV-Produkt-Feed- oder Target-Anforderungen zu füllen, die auf Produktseiten ausgelöst werden, verwenden Sie die [Entitäten-API speichern](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities). Diese Anfrage fügt ein Element in einer einzelnen Target-Umgebung hinzu oder aktualisiert es. Die Syntax lautet:
 
 ```
 POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
@@ -124,7 +124,7 @@ Sieht so aus, als gehören die letzten beiden Dinge nicht. Untersuchen wir sie m
 
 ## Abrufen von Elementdetails mit der Get Entity API
 
-Um die Details eines vorhandenen Elements abzurufen, verwenden Sie die [Entitäts-API abrufen](https://developers.adobetarget.com/api/recommendations/#operation/getEntity). Die Syntax lautet:
+Um die Details eines vorhandenen Elements abzurufen, verwenden Sie die [Entitäts-API abrufen](https://developer.adobe.com/target/administer/recommendations-api/#operation/getEntity). Die Syntax lautet:
 
 ```
 GET https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities/[entity.id]
@@ -163,7 +163,7 @@ Angenommen, Sie entscheiden, dass diese Entitäten aus Ihrem Katalog entfernt we
 
 ## Löschen von Elementen mit der API &quot;Entitäten löschen&quot;
 
-Um Elemente aus Ihrem Katalog zu entfernen, verwenden Sie die [Entitäten-API löschen](https://developers.adobetarget.com/api/recommendations/#operation/deleteEntities). Die Syntax lautet:
+Um Elemente aus Ihrem Katalog zu entfernen, verwenden Sie die [Entitäten-API löschen](https://developer.adobe.com/target/administer/recommendations-api/#operation/deleteEntities). Die Syntax lautet:
 
 ```
 DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimited-entity-ids]&environment=[environmentId]

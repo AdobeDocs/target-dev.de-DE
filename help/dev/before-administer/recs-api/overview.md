@@ -6,10 +6,10 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 0d03c650-0b00-44b8-a794-10e5d738e42c
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 2%
+source-wordcount: '339'
+ht-degree: 1%
 
 ---
 
@@ -38,7 +38,7 @@ Dieses Handbuch richtet sich an Entwickler, die mit Target-APIs oder Recommendat
 
 ## Voraussetzungen  {#prerequisites}
 
-Die Target Admin-APIs erfordern [Einrichtung der Adobe-Authentifizierung](../configure-authentication.md). Stellen Sie sicher, dass Sie diese Konfiguration vorgenommen haben, bevor Sie die Recommendations-API verwenden.
+Die Target Admin-APIs erfordern [Einrichten der Adobe-Authentifizierung](../configure-authentication.md). Stellen Sie sicher, dass Sie diese Konfiguration vorgenommen haben, bevor Sie die Recommendations-API verwenden.
 
 ## Ressourcen
 
@@ -47,4 +47,4 @@ Beachten Sie die folgenden Ressourcen, die erforderlich sind, um dieses Handbuch
 | Ressource | Details |
 | --- | --- |
 | Postman | Rufen Sie die [Postman-App](https://www.postman.com/downloads/) für Ihr Betriebssystem. Postman Basic ist mit der Kontoerstellung kostenlos. Postman ist zwar nicht erforderlich, um Adobe Target-APIs im Allgemeinen zu verwenden, erleichtert aber API-Workflows. Adobe Target bietet mehrere Postman-Sammlungen, die die Ausführung seiner APIs erleichtern und erfahren, wie sie funktionieren. Der Rest dieses Handbuchs setzt Grundkenntnisse in Postman voraus. Informationen zur Unterstützung finden Sie im Abschnitt [Postman-Dokumentation](https://learning.getpostman.com/). |
-| Verweise | Im Rest dieses Handbuchs wird davon ausgegangen, dass Sie mit den folgenden Ressourcen vertraut sind:<UL><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Dokumentation zur Target-Admin- und Profil-API](../../administer/admin-api/admin-api-overview-new.md)</li><li>[Dokumentation zur Recommendations API](https://developers.adobetarget.com/api/recommendations/)</li></UL> |
+| Verweise | Im Rest dieses Handbuchs wird davon ausgegangen, dass Sie mit den folgenden Ressourcen vertraut sind:<UL><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Dokumentation zur Target-Admin- und Profil-API](../../administer/admin-api/admin-api-overview-new.md)</li><li>[Dokumentation zur Recommendations API](https://developer.adobe.com/target/administer/recommendations-api/)</li></UL> |
