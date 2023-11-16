@@ -4,7 +4,7 @@ description: Daten abrufen [!DNL Target] mit der Bulk-Profil-Update-API.
 title: Wie erhalte ich Daten? [!DNL Target] Verwenden der Bulk-Profil-Update-API?
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: 3ae2391dea9994c0ddc1df39d74cccf6e067c1a4
+source-git-commit: 773f8a2f22cfbf740a5ce68809b38b33b621f3b5
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 57%
