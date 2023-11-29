@@ -4,38 +4,35 @@ description: Daten abrufen [!DNL Target] Verwendung der API für die Aktualisier
 title: Wie erhalte ich Daten? [!DNL Target] Verwenden der Single-Profile-Update-API?
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
-source-git-commit: 3ae2391dea9994c0ddc1df39d74cccf6e067c1a4
+source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
 workflow-type: tm+mt
 source-wordcount: '204'
-ht-degree: 30%
+ht-degree: 15%
 
 ---
 
-# API zur Aktualisierung von einzelnen Profilen
+# Single Profile Update API
 
 Fast identisch mit dem [!UICONTROL Bulk-Profil-Update-API] in [!DNL Adobe Target], jedoch wird jeweils ein Besucherprofil aktualisiert, und zwar in Übereinstimmung mit dem API-Aufruf anstelle der CSV-Datei.
 
 ## Format
 
-Der Besucher muss über die Variable [!DNL Target] mboxPC-Wert oder `mbox3rdPartyId` -Wert. Die Experience Cloud ID (ECID) wird nicht unterstützt.
+Der Besucher muss über die Variable [!DNL Target] `mboxPC` Wert oder `mbox3rdPartyId` -Wert. Die [!UICONTROL Experience Cloud-ID] (ECID) wird nicht unterstützt.
 
-## Beispielhafte Anwendungsfälle
+## Anwendungsbeispiele
 
 Sie möchten das Profil eines einzelnen Besuchers aktualisieren, der eine Offline-Aktion ausführt. Zu den Aktionen gehören das Erreichen eines Callcenters, die Finanzierung eines Darlehens, die Verwendung einer Treuekarte im Geschäft, der Zugriff auf einen Kiosk usw.
 
 ## Vorteile der Methode
 
-Keine Begrenzung der Anzahl der Profilattribute.
+* Keine Begrenzung der Anzahl der Profilattribute.*
+* Profilattribute, die über die Site gesendet werden, können über die API aktualisiert werden und umgekehrt.
 
-Profilattribute, die über die Website gesendet werden, können über die API aktualisiert werden und umgekehrt.
+## Einschränkungen 
 
-## Einschränkungen
-
-Begrenzung auf 1.000.000 (1 Million) API-Aufrufe pro 24-Stunden-Zeitraum
-
-Aktualisiert nur Profile. Profil kann nicht für einen potenziellen Benutzer erstellt werden [!DNL Target] hat noch nicht gesehen.
-
-Aktualisierungen treten in der Regel in weniger als einer Stunde auf, können jedoch bis zu 24 Stunden dauern, bis sie angezeigt werden.
+* Begrenzung auf 1.000.000 (1 Million) API-Aufrufe pro 24-Stunden-Zeitraum.
+* Aktualisiert nur Profile. Profil kann nicht für einen potenziellen Benutzer erstellt werden [!DNL Target] hat noch nicht gesehen.
+* Aktualisierungen treten in der Regel in weniger als einer Stunde auf, können jedoch bis zu 24 Stunden dauern, bis sie angezeigt werden.
 
 ## Codebeispiele
 

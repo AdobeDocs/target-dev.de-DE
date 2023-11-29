@@ -2,7 +2,7 @@
 user-guide-title: Adobe Target-Entwicklerhandbuch
 breadcrumb-title: Target-Entwicklerhandbuch
 user-guide-description: Erfahren Sie, wie Sie das Kundenerlebnis so anpassen und personalisieren können, dass Sie den Umsatz Ihrer Websites, Mobile Sites, Mobile Apps, Social Media und anderer digitaler Kanäle maximieren können.
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 55%
@@ -32,8 +32,8 @@ ht-degree: 55%
       + [In-Page-Profilattribute](before-implement/methods-to-get-data-into-target/in-page-profile-attributes.md)
       + [Skriptprofilattribute](before-implement/methods-to-get-data-into-target/script-profile-attributes.md)
       + [Datenanbieter](before-implement/methods-to-get-data-into-target/data-providers.md)
-      + [API zur Bulk-Aktualisierung von Profilen](before-implement/methods-to-get-data-into-target/bulk-profile-update-api.md)
-      + [API zur Aktualisierung von einzelnen Profilen](before-implement/methods-to-get-data-into-target/single-profile-update-api.md)
+      + [Bulk-Profil-Update-API](before-implement/methods-to-get-data-into-target/bulk-profile-update-api.md)
+      + [Single Profile Update API](before-implement/methods-to-get-data-into-target/single-profile-update-api.md)
       + [Kundenattribute](before-implement/methods-to-get-data-into-target/customer-attributes.md)
       + [Profil-API-Einstellungen](before-implement/methods-to-get-data-into-target/profile-api-settings.md)
    + [Target Sicherheitsübersicht](before-implement/target-security-overview.md)
@@ -132,7 +132,7 @@ ht-degree: 55%
    + Java SDK-Referenz {#java}
       + [Übersicht über das Java-SDK](implement/server-side/java/overview.md)
       + [Java SDK installieren](implement/server-side/java/install-sdk.md)
-      + [Initialisieren des Java-SDK](implement/server-side/java/initialize-sdk.md)
+      + [Initialisieren des Java SDK](implement/server-side/java/initialize-sdk.md)
       + [Angebote abrufen (Java)](implement/server-side/java/get-offers.md)
       + [Abrufen von Attributen (Java)](implement/server-side/java/get-attributes.md)
       + [Benachrichtigungen senden (Java)](implement/server-side/java/send-notifications.md)
@@ -209,10 +209,10 @@ ht-degree: 55%
 + Implementierungsmuster {#implementation-patterns}
    + [Übersicht über Implementierungsmuster](/help/dev/patterns/pattern-overview.md)
    + Recommendations-Implementierungsmuster mit at.js {#atjs}
-      + [Recommendations-Implementierungsmuster mit at.js - Übersicht](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
+      + [Recommendations-Implementierungsmuster mit at.js – Übersicht](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
       + [Initialisieren von SDKs](/help/dev/patterns/recs-atjs/initialize-sdk.md)
-      + [Datenerfassung konfigurieren](/help/dev/patterns/recs-atjs/data-collection.md)
-      + [Erlebnisse rendern](/help/dev/patterns/recs-atjs/render-experiences.md)
+      + [Konfigurieren der Datenerfassung](/help/dev/patterns/recs-atjs/data-collection.md)
+      + [Rendern von Erlebnissen](/help/dev/patterns/recs-atjs/render-experiences.md)
       + [Target benachrichtigen](/help/dev/patterns/recs-atjs/notify-target.md)
 
 
