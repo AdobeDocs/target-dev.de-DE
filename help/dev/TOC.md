@@ -2,10 +2,10 @@
 user-guide-title: Adobe Target-Entwicklerhandbuch
 breadcrumb-title: Target-Entwicklerhandbuch
 user-guide-description: Erfahren Sie, wie Sie das Kundenerlebnis so anpassen und personalisieren können, dass Sie den Umsatz Ihrer Websites, Mobile Sites, Mobile Apps, Social Media und anderer digitaler Kanäle maximieren können.
-source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
+source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 55%
+source-wordcount: '740'
+ht-degree: 54%
 
 ---
 
@@ -193,7 +193,10 @@ ht-degree: 55%
    + Admin-API {#admin-api}
       + [Übersicht über die Admin-API](before-administer/admin-api-overview/admin-api-overview.md)
       + [Adobe Target Admin-API](/help/dev/administer/admin-api/admin-api-overview-new.md)
-   + [Profiles API](/help/dev/administer/profile-api/profile-api-overview.md)
+   + Profil-APIs {#profile-apis}
+      + [Übersicht über Profiles APIs](/help/dev/administer/profile-api/profile-api-overview.md)
+      + [Single Profile Update API](/help/dev/administer/profile-api/profile-single-api.md)
+      + [Bulk-Profil-Update-API](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [Berichterstellungs-API](/help/dev/administer/reporting-api/reporting-api.md)
    + Recommendations-API {#recommendations-api}
       + [Übersicht über die Recommendations API](before-administer/recs-api/overview.md)

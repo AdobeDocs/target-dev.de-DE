@@ -4,10 +4,10 @@ description: Daten abrufen [!DNL Target] mithilfe der [!UICONTROL Bulk-Profil-Up
 title: Wie erhalte ich Daten? [!DNL Target] Verwenden der [!UICONTROL Bulk-Profil-Update-API]?
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
+source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 30%
+source-wordcount: '421'
+ht-degree: 23%
 
 ---
 
@@ -44,12 +44,10 @@ Ihr CRM-System oder ein anderes internes System speichert wertvolle Daten über 
 * Die Batch-Datei muss kleiner als 50 MB sein. Außerdem sollte die Gesamtzeilenzahl 500.000 Zeilen pro Upload nicht überschreiten.
 * Aktualisierungen treten in der Regel in weniger als einer Stunde auf, können jedoch bis zu 24 Stunden dauern, bis sie angezeigt werden.
 * Die Anzahl der Zeilen, die Sie über einen Zeitraum von 24 Stunden in nachfolgenden Batches hochladen können, ist nicht beschränkt. Allerdings kann der Importverlauf während der Geschäftszeiten gedrosselt werden, um sicherzustellen, dass andere Prozesse effizient ablaufen.
-* Aufeinanderfolgende [V2-Batchupdate-Aufrufe](https://developers.adobetarget.com/api/#updating-profiles)`thirdPartyIds` ohne dazwischenliegende Mbox-Aufrufe für dieselben überschreiben die Eigenschaften, die im ersten Batchupdate-Aufruf aktualisiert wurden.
+* Aufeinander folgende V2-Batch-Aktualisierungsaufrufe ohne dazwischen liegende Mbox-Aufrufe für denselben `thirdPartyIds` überschreiben die Eigenschaften, die beim ersten Batch-Aktualisierungsaufruf aktualisiert wurden.
 
-## Codebeispiele
+## Ressourcen
 
-Siehe [Update von Profilen](https://developers.adobetarget.com/api/#updating-profiles).
-
-### Links zu relevanten Informationen
-
-[Update von Profilen](https://developers.adobetarget.com/api/#updating-profiles)
+* [[!DNL Adobe Target Profile APIs overview]](/help/dev/administer/profile-api/profile-api-overview.md)
+* [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)
+* [[!DNL Adobe Target Bulk Profile Update API]](/help/dev/administer/profile-api/profile-bulk-api.md)
