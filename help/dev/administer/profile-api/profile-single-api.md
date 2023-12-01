@@ -3,18 +3,32 @@ title: Adobe Target Single Profile Update API
 description: Verwendung von [!DNL Adobe Target] [!UICONTROL Single Profile Update API] , um die Profildaten eines einzelnen Besuchers an [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 6f7d9875e3b73352ead3a55e40a4b2f81f3d4400
+source-git-commit: 81bff85a9d1fe28ca267c471a470da95568fd06d
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 2%
+source-wordcount: '349'
+ht-degree: 4%
 
 ---
 
 # [!DNL Adobe Target Single Profile Update API]
 
-Die [!DNL Adobe Target] [!UICONTROL Single Profile Update API] ermöglicht den Versand einer Profilaktualisierung an einen einzelnen Benutzer. Die [!UICONTROL Single Profile Update API] und wird im Allgemeinen verwendet, wenn eine Aktualisierung für eine Transaktion vorgenommen werden muss, die in einem Kanal erfolgt, der nicht implementiert wurde [!DNL Target].
+Die [!DNL Adobe Target] [!UICONTROL Single Profile Update API] ermöglicht den Versand einer Profilaktualisierung an einen einzelnen Benutzer. Die [!UICONTROL Single Profile Update API] ist fast identisch mit dem [!UICONTROL Bulk-Profil-Update-API], jedoch wird jeweils ein Besucherprofil aktualisiert, und zwar entsprechend dem API-Aufruf und nicht mit einer .cvs-Datei.
 
-Die [!UICONTROL Single Profile Update API] ist auf die Durchführung von 1 Million Aktualisierungen in einem beliebigen rollierenden 24-Stunden-Zeitraum beschränkt. Aktualisierungen treten in der Regel in weniger als einer Stunde auf, können jedoch bis zu 24 Stunden dauern, bis sie angezeigt werden. Wenn Sie weitere Aktualisierungen senden oder die Verarbeitung von Aktualisierungen in kürzeren Zeitrahmen erfordern, sollten Sie in Erwägung ziehen, Transaktionsprofilaktualisierungen über eine clientseitige Aktualisierung (empfohlen) oder über die Variable [!DNL Adobe Target] serverseitig [Bereitstellungs-API](/help/dev/implement/delivery-api/overview.md).
+Die [!UICONTROL Single Profile Update API] und wird im Allgemeinen verwendet, wenn eine Aktualisierung für eine Transaktion vorgenommen werden muss, die in einem Kanal erfolgt, der nicht implementiert wurde [!DNL Target]. Sie möchten beispielsweise das Profil eines einzelnen Besuchers aktualisieren, der eine Offline-Aktion ausführt. Zu den Aktionen gehören das Erreichen eines Callcenters, die Finanzierung eines Darlehens, die Verwendung einer Treuekarte im Geschäft, der Zugriff auf einen Kiosk usw.
+
+Vorteile der [!UICONTROL Single Profile Update API] include:
+
+* Keine Begrenzung der Anzahl der Profilattribute.
+* Profilattribute, die über die Site gesendet werden, können über die API aktualisiert werden und umgekehrt.
+
+## Einschränkungen 
+
+* Die [!UICONTROL Single Profile Update API] ist auf die Durchführung von 1 Million Aktualisierungen in einem beliebigen rollierenden 24-Stunden-Zeitraum beschränkt.
+* Aktualisierungen treten in der Regel in weniger als einer Stunde auf, können jedoch bis zu 24 Stunden dauern, bis sie angezeigt werden.
+
+  Wenn Sie weitere Aktualisierungen senden oder die Verarbeitung von Aktualisierungen in kürzeren Zeitrahmen erfordern, sollten Sie in Erwägung ziehen, Transaktionsprofilaktualisierungen über eine clientseitige Aktualisierung (empfohlen) oder über die Variable [!DNL Adobe Target] serverseitig [Bereitstellungs-API](/help/dev/implement/delivery-api/overview.md).
+
+## Format
 
 Geben Sie die Profilparameter im Format an `profile.paramName=value`.
 
