@@ -4,10 +4,10 @@ description: Daten abrufen [!DNL Target] Verwendung der API für die Aktualisier
 title: Wie erhalte ich Daten? [!DNL Target] Verwenden der [!UICONTROL Single Profile Update API]?
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
-source-git-commit: 81bff85a9d1fe28ca267c471a470da95568fd06d
+source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 2%
+source-wordcount: '150'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ Die [!DNL Adobe Target] [!UICONTROL Single Profile Update API] ermöglicht den V
 
 Die [!UICONTROL Single Profile Update API] und wird im Allgemeinen verwendet, wenn eine Aktualisierung für eine Transaktion vorgenommen werden muss, die in einem Kanal erfolgt, der nicht implementiert wurde [!DNL Target]. Sie möchten beispielsweise das Profil eines einzelnen Besuchers aktualisieren, der eine Offline-Aktion ausführt. Zu den Aktionen gehören das Erreichen eines Callcenters, die Finanzierung eines Darlehens, die Verwendung einer Treuekarte im Geschäft, der Zugriff auf einen Kiosk usw.
 
-Weitere Informationen finden Sie unter:
+## Ressourcen:
 
 * [[!DNL Adobe Target Profile APIs overview]](/help/dev/administer/profile-api/profile-api-overview.md)
 * [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)

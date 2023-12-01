@@ -3,9 +3,9 @@ title: Adobe Target Bulk-Profil-Update-API
 description: Verwendung von [!DNL Adobe Target] [!UICONTROL Bulk-Profil-Update-API] zum Senden mehrerer Besucherprofildaten an [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 6f7d9875e3b73352ead3a55e40a4b2f81f3d4400
+source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '722'
 ht-degree: 9%
 
 ---
@@ -24,6 +24,11 @@ Verwenden der [!UICONTROL Bulk-Profil-Update-API]können Sie detaillierte Besuch
 >[!NOTE]
 >
 >Version 2 (v2) der [!UICONTROL Bulk-Profil-Update-API] ist die aktuelle Version. Allerdings [!DNL Target] unterstützt weiterhin Version 1 (v1).
+
+## Vorteile der Bulk-Profil-Update-API
+
+* Keine Begrenzung der Anzahl der Profilattribute.
+* Profilattribute, die über die Site gesendet werden, können über die API aktualisiert werden und umgekehrt.
 
 ## Einschränkungen
 
