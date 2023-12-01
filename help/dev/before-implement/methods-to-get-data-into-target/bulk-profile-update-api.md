@@ -4,10 +4,10 @@ description: Daten abrufen [!DNL Target] mithilfe der [!UICONTROL Bulk-Profil-Up
 title: Wie erhalte ich Daten? [!DNL Target] Verwenden der [!UICONTROL Bulk-Profil-Update-API]?
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
+source-git-commit: 946e9431e6bde30f564b4ba1a4cf0a78d8c5c6bf
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 4%
+source-wordcount: '286'
+ht-degree: 5%
 
 ---
 
@@ -17,9 +17,11 @@ Die [!DNL Adobe Target] [!UICONTROL Bulk-Profil-Update-API] ermöglicht Ihnen, m
 
 Verwenden der [!UICONTROL Bulk-Profil-Update-API]können Sie detaillierte Besucherprofildaten in Form von Profilparametern für viele Benutzer an senden. [!DNL Target] aus einer beliebigen externen Quelle. Externe Quellen können beispielsweise CRM-Systeme (Customer Relationship Management) oder POS-Systeme (Point of Sale) sein, die normalerweise nicht auf einer Webseite verfügbar sind.
 
+Kontrast zum [!UICONTROL Bulk-Profil-Update-API] mit dem [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md).
+
 ## [!UICONTROL Kundenattribute] versus [!UICONTROL Bulk-Profil-Update-API]
 
-Diese Option ähnelt der [!UICONTROL Kundenattribute] mit einigen Unterschieden:
+Diese Option ähnelt der [[!UICONTROL Kundenattribute]](/help/dev/before-implement/methods-to-get-data-into-target/customer-attributes.md) mit einigen Unterschieden:
 
 * [!UICONTROL Kundenattribute] FTP-Upload verwenden. Die [!UICONTROL Bulk-Profil-Update-API für Target] verwendet eine HTTP-POST-API.
 * [!UICONTROL Kundenattribut] Daten können für [!DNL Analytics]. Die [!UICONTROL Massenprofilaktualisierung] ist nur in [!DNL Target].
@@ -31,6 +33,8 @@ Diese Option ähnelt der [!UICONTROL Kundenattribute] mit einigen Unterschieden:
 * Folgende Zeichen können nicht gesendet werden `mbox3rdPartyID`: Plus-Zeichen (+) und Schrägstrich (/).
 
 ## Ressourcen
+
+Weitere Informationen finden Sie unter:
 
 * [[!DNL Adobe Target Profile APIs overview]](/help/dev/administer/profile-api/profile-api-overview.md)
 * [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)
