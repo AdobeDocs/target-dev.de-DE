@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie mit Adobe Target Profile-APIs Besucherdaten a
 contributors: https://github.com/icaraps
 exl-id: 482a4175-1d02-47e9-a5c0-dd00e8560773
 feature: APIs/SDKs
-source-git-commit: 81bff85a9d1fe28ca267c471a470da95568fd06d
+source-git-commit: 1a1c3d96cf6ef5c337a63fdec8c700da695ff5d1
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '233'
 ht-degree: 1%
 
 ---
@@ -25,3 +25,5 @@ Es gibt zwei Möglichkeiten, Profile über API zu aktualisieren:
 
 * [API zur Aktualisierung von einzelnen Profilen](/help/dev/administer/profile-api/profile-single-api.md)
 * [Massenprofilaktualisierung über Batch](/help/dev/administer/profile-api/profile-bulk-api.md)
+
+Die alte Dokumentation zur Profiles API finden Sie hier: [https://developers.adobetarget.com/api/#profiles](https://developers.adobetarget.com/api/#profiles){target=_blank}
