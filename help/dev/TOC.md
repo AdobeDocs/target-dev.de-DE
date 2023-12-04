@@ -2,10 +2,10 @@
 user-guide-title: Adobe Target-Entwicklerhandbuch
 breadcrumb-title: Target-Entwicklerhandbuch
 user-guide-description: Erfahren Sie, wie Sie das Kundenerlebnis so anpassen und personalisieren können, dass Sie den Umsatz Ihrer Websites, Mobile Sites, Mobile Apps, Social Media und anderer digitaler Kanäle maximieren können.
-source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
+source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 54%
+source-wordcount: '744'
+ht-degree: 46%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 54%
       + [Single Profile Update API](before-implement/methods-to-get-data-into-target/single-profile-update-api.md)
       + [Kundenattribute](before-implement/methods-to-get-data-into-target/customer-attributes.md)
       + [Profil-API-Einstellungen](before-implement/methods-to-get-data-into-target/profile-api-settings.md)
-   + [Target Sicherheitsübersicht](before-implement/target-security-overview.md)
+   + [Target-Sicherheitsübersicht](before-implement/target-security-overview.md)
    + [Unterstützte Browser](before-implement/supported-browsers.md)
    + [Änderungen der TLS-Verschlüsselung (Transport Layer Security)](before-implement/tls-transport-layer-security-encryption.md)
    + [CNAME und Adobe Target](before-implement/implement-cname-support-in-target.md)
@@ -132,7 +132,7 @@ ht-degree: 54%
    + Java SDK-Referenz {#java}
       + [Übersicht über das Java-SDK](implement/server-side/java/overview.md)
       + [Java SDK installieren](implement/server-side/java/install-sdk.md)
-      + [Initialisieren des Java SDK](implement/server-side/java/initialize-sdk.md)
+      + [Initialisieren des Java-SDK](implement/server-side/java/initialize-sdk.md)
       + [Angebote abrufen (Java)](implement/server-side/java/get-offers.md)
       + [Abrufen von Attributen (Java)](implement/server-side/java/get-attributes.md)
       + [Benachrichtigungen senden (Java)](implement/server-side/java/send-notifications.md)
@@ -168,8 +168,8 @@ ht-degree: 54%
    + [Mobile Target-Vorschau](implement/mobile/target-mobile-preview.md)
    + [Verwenden des Standortdienstes](implement/mobile/use-location-service.md)
    + [Target für mobile Apps – FAQs](implement/mobile/mobile-faq.md)
-   + [Implementieren von Target mit dem AEP Mobile SDK in einer nativen App mit Web-Ansichten](/help/dev/implement/mobile/native-app.md)
-+ E-Mail-Implementierung {#implement-email}
+   + [Implementieren von Target mit dem AEP Mobile SDK in eine native App mit Webansichten](/help/dev/implement/mobile/native-app.md)
++ Email-Implementierung {#implement-email}
    + [E-Mail: Target-Implementierung – Überblick](implement/email/overview.md)
    + [Erstellen einer AdBox für ein Bild](implement/email/testing-content-with-the-adbox.md)
    + [Testen einer E-Mail-Bild-AdBox](implement/email/testing-email-image-adbox.md)
@@ -185,7 +185,7 @@ ht-degree: 54%
       + [Identifizieren von Besuchern](/help/dev/before-implement/delivery-api-overview/identifying-visitors.md)
       + [Einzelversand oder Batch-Bereitstellung](/help/dev/before-implement/delivery-api-overview/single-or-batch.md)
       + [Vorabruf](/help/dev/before-implement/delivery-api-overview/prefetch.md)
-      + [ Benachrichtigungen ](/help/dev/before-implement/delivery-api-overview/notifications.md)
+      + [Benachrichtigungen](/help/dev/before-implement/delivery-api-overview/notifications.md)
       + [Integration mit Experience Cloud](before-implement/delivery-api-overview/integration.md)
       + [Überlegungen und bekannte Einschränkungen](/help/dev/before-implement/delivery-api-overview/known-limitations.md)
       + [Client-Hinweise](/help/dev/before-implement/delivery-api-overview/client-hints.md)
@@ -193,8 +193,10 @@ ht-degree: 54%
    + Admin-API {#admin-api}
       + [Übersicht über die Admin-API](before-administer/admin-api-overview/admin-api-overview.md)
       + [Adobe Target Admin-API](/help/dev/administer/admin-api/admin-api-overview-new.md)
-   + Profil-APIs {#profile-apis}
-      + [Übersicht über Profiles APIs](/help/dev/administer/profile-api/profile-api-overview.md)
+   + Profil-API {#profile-apis}
+      + [Übersicht über die Profiles API](/help/dev/administer/profile-api/profiles-api.md)
+      + [Profile abrufen](/help/dev/administer/profile-api/profile-fetch.md)
+      + [Profilaktualisierung](/help/dev/administer/profile-api/profile-api-overview.md)
       + [Single Profile Update API](/help/dev/administer/profile-api/profile-single-api.md)
       + [Bulk-Profil-Update-API](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [Berichterstellungs-API](/help/dev/administer/reporting-api/reporting-api.md)
@@ -212,10 +214,10 @@ ht-degree: 54%
 + Implementierungsmuster {#implementation-patterns}
    + [Übersicht über Implementierungsmuster](/help/dev/patterns/pattern-overview.md)
    + Recommendations-Implementierungsmuster mit at.js {#atjs}
-      + [Recommendations-Implementierungsmuster mit at.js – Übersicht](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
+      + [Recommendations-Implementierungsmuster mit at.js - Übersicht](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
       + [Initialisieren von SDKs](/help/dev/patterns/recs-atjs/initialize-sdk.md)
-      + [Konfigurieren der Datenerfassung](/help/dev/patterns/recs-atjs/data-collection.md)
-      + [Rendern von Erlebnissen](/help/dev/patterns/recs-atjs/render-experiences.md)
+      + [Datenerfassung konfigurieren](/help/dev/patterns/recs-atjs/data-collection.md)
+      + [Erlebnisse rendern](/help/dev/patterns/recs-atjs/render-experiences.md)
       + [Target benachrichtigen](/help/dev/patterns/recs-atjs/notify-target.md)
 
 
