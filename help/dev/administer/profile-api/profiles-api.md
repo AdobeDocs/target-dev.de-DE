@@ -3,9 +3,9 @@ title: Adobe Target-Profiles-API
 description: Erfahren Sie, wie Sie mit Adobe Target Profile-APIs Besucherdaten an senden können. [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
+source-git-commit: 289299a52e5611c0da341f313aa4a447fcf3666a
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '149'
 ht-degree: 1%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 1%
 ## Profile [!DNL Postman] collection
 
 [!DNL Postman] ist eine Anwendung, die das Auslösen von API-Aufrufen erleichtert. Diese [!DNL Postman] -Sammlung enthält alle [!DNL Profile API] -Aufrufe. Klicks [Ausführen in Postman](https://www.getpostman.com/collections/ec7376f9028977ccaa99){target=_blank} , um die Profil-API-Sammlung zu importieren.
+
+## Alte API-Dokumentation zu Profilen .
+
+Die alte Dokumentation zur Profiles API finden Sie hier: [https://developers.adobetarget.com/api/#profiles](https://developers.adobetarget.com/api/#profiles){target=_blank}
 
 ## Struktur einer [!DNL Target] profile
 
