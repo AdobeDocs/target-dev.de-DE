@@ -1,14 +1,14 @@
 ---
 keywords: Target-Entwicklerhandbuch; Übersicht; Startseite
 title: Adobe Target-Entwicklerhandbuch
-description: Wie implementiere und verwalte ich  [!DNL Adobe Target]  und arbeite mit seinen APIs und SDKs?
+description: Implementieren und Verwalten von [!DNL Adobe Target] und mit ihren APIs und SDKs arbeiten?
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: a72d3ee76b25702b186565e86ec6b0e67c9d5d1b
+source-git-commit: dadc3804da4592dba4ad88b8c5c9f804c56e232b
 workflow-type: tm+mt
-source-wordcount: '477'
-ht-degree: 15%
+source-wordcount: '407'
+ht-degree: 5%
 
 ---
 
@@ -30,7 +30,7 @@ Diese *[!DNL Adobe Target]Entwicklerhandbuch* stellt Ressourcen und Handbücher 
 
 ## Erste Schritte mit der Implementierung
 
-**[](/help/dev/before-implement/considerations-before-you-implement-target.md)** Vor der Implementierung: Überlegungen, die Sie vor der Implementierung von  berücksichtigen sollten [!DNL Adobe Target].
+**[Vor der Implementierung](/help/dev/before-implement/considerations-before-you-implement-target.md)**: Überlegungen, die Sie vor der Implementierung ansprechen sollten [!DNL Adobe Target].
 
 ## Clientseitige Implementierung
 
@@ -76,7 +76,7 @@ Diese *[!DNL Adobe Target]Entwicklerhandbuch* stellt Ressourcen und Handbücher 
 
 [**[!DNL Target Admin API]**](administer/admin-api/admin-api-overview-new.md): Verwenden Sie die [!DNL Adobe Target] Admin-API zum Verwalten von Eigenschaften, Aktivitäten, Zielgruppen, Angeboten, Eigenschaften, Berichten, Mboxes, Hosts, Umgebungen und mehr.
 
-[**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profile-api-overview.md): Abrufen [!DNL Adobe Target] Benutzerprofilinformationen.
+[**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profiles-api.md): Abrufen [!DNL Adobe Target] Benutzerprofilinformationen.
 
 [**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): Abrufen [!UICONTROL A/B-Test] und [!UICONTROL Automated Personalization] Aktivitätsberichtdaten.
 
