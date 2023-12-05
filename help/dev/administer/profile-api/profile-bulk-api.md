@@ -3,10 +3,10 @@ title: Adobe Target Bulk-Profil-Update-API
 description: Verwendung von [!DNL Adobe Target] [!UICONTROL Bulk-Profil-Update-API] zum Senden mehrerer Besucherprofildaten an [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: b263fef6017dc6f840037cab9045c36b9e354cee
+source-git-commit: 38a5e82d3170fa64220bd63f505f1470af43e8a3
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 9%
+source-wordcount: '824'
+ht-degree: 8%
 
 ---
 
@@ -35,6 +35,7 @@ Verwenden der [!UICONTROL Bulk-Profil-Update-API]können Sie detaillierte Besuch
 * Die Batch-Datei muss kleiner als 50 MB sein. Außerdem sollte die Gesamtzeilenzahl 500.000 Zeilen pro Upload nicht überschreiten.
 * Die Anzahl der Zeilen, die Sie über einen Zeitraum von 24 Stunden in nachfolgenden Batches hochladen können, ist nicht beschränkt. Allerdings kann der Importverlauf während der Geschäftszeiten gedrosselt werden, um sicherzustellen, dass andere Prozesse effizient ablaufen.
 * Aufeinander folgende v2-Batch-Aktualisierungsaufrufe ohne dazwischen liegende Mbox-Aufrufe für dieselben thirdPartyIds überschreiben die Eigenschaften, die im ersten Batch-Aktualisierungsaufruf aktualisiert wurden.
+* [!DNL Adobe] garantiert nicht, dass 100 % der Batch-Profildaten in Target integriert und beibehalten werden und daher für die Verwendung beim Targeting verfügbar sind. Beim aktuellen Design besteht die Möglichkeit, dass ein kleiner Anteil der Daten (bis zu 0,1 % der großen Produktions-Batches) nicht integriert oder beibehalten wird.
 
 ## Batch-Datei
 
