@@ -3,10 +3,10 @@ title: Adobe Target Bulk-Profil-Update-API
 description: Verwendung von [!DNL Adobe Target] [!UICONTROL Bulk-Profil-Update-API] zum Senden mehrerer Besucherprofildaten an [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 8bc819823462fae71335ac3b6c871140158638fe
+source-git-commit: b263fef6017dc6f840037cab9045c36b9e354cee
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 8%
+source-wordcount: '773'
+ht-degree: 9%
 
 ---
 
@@ -72,27 +72,58 @@ Wenn Sie Ihren Clientcode nicht kennen, finden Sie im [!DNL Target] Benutzerober
 
 ### Inspect der Antwort
 
-v2 gibt den Status nach Profil zurück und v1 gibt nur den Gesamtstatus zurück. Die Antwort enthält einen Link zu einer anderen URL mit der Erfolgsmeldung &quot;Profil für Profil&quot;.
+Die Profiles API gibt den Sendestatus des Batches zur Verarbeitung zusammen mit einem Link unter &quot;batchStatus&quot;an eine andere URL zurück, die den Gesamtstatus des jeweiligen Batch-Auftrags anzeigt.
 
-### Beispielantwort
+### Beispiel-API-Antwort
+
+Der folgende Code wurde als Beispiel für eine Antwort der Profiles API verwendet:
 
 ```
-true http://mboxedge19.tt.omtrdc.net/m2/demo/v2/profile/batchStatus?batchId=demo-1845664501&m2Node=00 Batch submitted for processing
+<response>
+    <success>true</success>
+    <batchStatus>http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473848678-13029383</batchStatus>
+    <message>Batch submitted for processing</message>
+</response>
 ```
 
 Wenn ein Fehler auftritt, enthält die Antwort `success=false` und eine detaillierte Fehlermeldung.
 
-Eine erfolgreiche Antwort sieht wie folgt aus:
+### Standard-Batch-Statusantwort
 
-``````
-demo-1845664501 1436187396849-250353.03_03 success 2403081156529-351655.03_03 success 2403081156529-351656.03_03 success 1436187396849-250351.01_00 success 
-``````
+Eine erfolgreiche Standardantwort bei der obigen `batchStatus` Der URL-Link, auf den geklickt wird, sieht wie folgt aus:
+
+```
+<response><batchId>demo4-1701473848678-13029383</batchId><status>complete</status><batchSize>1</batchSize></response>
+```
 
 Die erwarteten Werte für die Statusfelder sind:
 
-**success**: Das Profil wurde aktualisiert. Wenn das Profil nicht gefunden wurde, wurde eines mit den Werten aus dem Batch erstellt.
-**error**: Das Profil wurde aufgrund eines Fehlers, einer Ausnahme oder eines Nachrichtenverlusts nicht aktualisiert oder erstellt.
-**pending**: Das Profil wurde noch nicht aktualisiert oder erstellt.
+| Status | Details |
+| --- | --- |
+| [!UICONTROL complete] | Die Anfrage zur Profil-Batch-Aktualisierung wurde erfolgreich abgeschlossen. |
+| [!UICONTROL unvollständig] | Die Anfrage zur Profil-Batch-Aktualisierung wird weiterhin verarbeitet und nicht abgeschlossen. |
+| [!UICONTROL hängenbleiben] | Die Anfrage zur Aktualisierung des Profil-Batches ist hängen geblieben und konnte nicht abgeschlossen werden. |
 
+### Detaillierte Antwort der Batch-Status-URL
 
+Eine detailliertere Antwort kann durch Übergabe eines Parameters abgerufen werden. `showDetails=true` der `batchStatus` URL weiter oben.
 
+Beispiel:
+
+```
+http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473848678-13029383&showDetails=true
+```
+
+#### Detaillierte Antwort
+
+```
+<response>
+    <batchId>demo4-1701473848678-13029383</batchId>
+    <status>complete</status>
+    <batchSize>1</batchSize>
+    <consumedCount>1</consumedCount>
+    <successfulUpdates>1</successfulUpdates>
+    <profilesNotFound>0</profilesNotFound>
+    <failedUpdates>0</failedUpdates>
+</response>
+```
