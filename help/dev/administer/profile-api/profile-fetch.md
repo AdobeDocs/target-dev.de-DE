@@ -3,7 +3,7 @@ title: Profile abrufen
 description: Erfahren Sie, wie Sie mit den Adobe Target-Profil-APIs Besucherdaten abrufen können, um sie in [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
+source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 1%
@@ -39,13 +39,13 @@ Siehe [Profile aktualisieren](/help/dev/administer/profile-api/profile-api-overv
 Das folgende Beispiel zeigt das Anforderungsformat zum Abrufen eines Profils mithilfe eines `thirdPartyId`:
 
 ```
-https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?<your-client-code>
+https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?client=<your-client-code>
 ```
 
 Ersetzen `<your-client-code>` und `your-thirdpartyid` und eine GET-Anfrage auslösen. Im Folgenden finden Sie ein Beispiel für einen Profilabruf mit einem [!UICONTROL thirdpartyid]:
 
 ```
-http://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>
+https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>
 ```
 
 Wenn dieser Aufruf erfolgt, [!DNL Target] versucht, das Profil zuerst im Cluster zu finden, das in der Edge-Anfrage angegeben ist, oder wo sich das Profil befindet, und den Inhalt zurückzugeben. Der Profilinhalt wird im JSON-Format zurückgegeben.
