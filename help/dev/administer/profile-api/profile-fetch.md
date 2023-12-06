@@ -3,16 +3,28 @@ title: Profile abrufen
 description: Erfahren Sie, wie Sie mit den Adobe Target-Profil-APIs Besucherdaten abrufen können, um sie in [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: ee53a8f0210480d9b70dc77a3a5cd8d92d2f2e3d
+source-git-commit: 49acf92bbe06dbcee36fef2b7394acd7ce37baad
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '293'
 ht-degree: 1%
 
 ---
 
 # Profilaktualisierung
 
-A [!DNL Target] Profile können auf zwei Arten abgerufen werden: mithilfe eines `tntid` oder `thirdPartyId`.
+A [!DNL Target] Profile können auf drei Arten abgerufen werden: mithilfe eines `[!DNL Experience Cloud Visitor ID]` (`ECID`), `tntid` oder `thirdPartyId`.
+
+## Verwenden eines [!DNL Experience Cloud Visitor ID] (ECID)
+
+Sie können ein Profil abrufen, das auf der `ECID`. Die HTTP-Methode muss GET sein.
+
+Die URL sieht wie folgt aus:
+
+```
+https://<clientCode>.tt.omtrdc.net/rest/v1/profiles/marketingCloudVisitorId/<ECID>?client=<clientCode>
+```
+
+Ersetzen `<clientCode>` mit [!DNL Target] [!UICONTROL Clientcode] und `<ECID>` mit [!DNL Experience Cloud Visitor ID] ([!DNL Marketing Cloud Visitor ID]).
 
 ## Verwenden einer tntid
 
@@ -24,7 +36,7 @@ Das folgende Beispiel zeigt das Anforderungsformat zum Abrufen eines Profils mit
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/your-tnt-id?client=<your-client-code>
 ```
 
-Ersetzen `<your-client-code>` und `your-tnt-id` und eine GET-Anfrage auslösen. Im Folgenden finden Sie ein Beispiel für einen Profilabruf mit einem `tntid`;
+Ersetzen `<your-client-code>` und `your-tnt-id` und eine GET-Anfrage auslösen. Im Folgenden finden Sie ein Beispiel für einen Profilabruf mit einem `tntid`:
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046?client=<your-client-code>
