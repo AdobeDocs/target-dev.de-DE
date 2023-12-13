@@ -4,10 +4,10 @@ description: Verwenden Sie die [!UICONTROL targetGlobalSettings()] -Funktion fü
 title: Wie verwende ich die [!UICONTROL targetGlobalSettings()] Funktion?
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
-source-git-commit: d5d25c6a559dafe446d26cca6c03d8e693cbd508
+source-git-commit: 12cf430b65695d38d1651f2a97df418d82d231f3
 workflow-type: tm+mt
-source-wordcount: '2521'
-ht-degree: 66%
+source-wordcount: '2568'
+ht-degree: 58%
 
 ---
 
@@ -18,6 +18,18 @@ Sie können Einstellungen in der at.js-Bibliothek mithilfe von `[!UICONTROL targ
 ## Einstellungen
 
 Folgende Einstellungen können überschrieben werden:
+
+### aepSandboxId
+
+* **Typ**: String
+* **Standardwert**: null
+* **Beschreibung**: Optionaler Parameter für das Senden [!DNL Adobe Experience Platform] Sandbox-ID zum Freigeben [!DNL Adobe Experience Platform] Ziele, die in der nicht standardmäßigen Sandbox mit [!DNL Target]. Wenn `aepSandboxId` nicht null ist, `aepSandboxName` müssen ebenfalls angegeben werden.
+
+### aepSandboxName
+
+* **Typ**: String
+* **Standardwert**: null
+* **Beschreibung**: Optionaler Parameter für das Senden [!DNL Adobe Experience Platform] Sandbox-Name zum Freigeben [!DNL Adobe Experience Platform] Ziele, die in der nicht standardmäßigen Sandbox mit [!DNL Target]. Wenn `aepSandboxName` nicht null ist, `aepSandboxId` müssen ebenfalls angegeben werden.
 
 ### artifactLocation
 
@@ -88,13 +100,13 @@ Folgende Einstellungen können überschrieben werden:
 
   **Nur Server-seitig**:
 
-  Nur Server-seitig ist die standardmäßige Entscheidungsmethode, die vorkonfiguriert ist, wenn at.js 2.5+ implementiert und in Ihren Web-Eigenschaften bereitgestellt wird.
+  Nur serverseitig ist die standardmäßige Entscheidungsmethode, die vorkonfiguriert ist, wenn at.js 2.5+ implementiert und in Ihren Webeigenschaften bereitgestellt wird.
 
-  Die Verwendung von Nur Server-seitig als Standardkonfiguration bedeutet, dass alle Entscheidungen im [!DNL Target]-Edge-Netzwerk getroffen werden, was einen blockierenden Server-Aufruf beinhaltet. Dieser Ansatz kann zu einer inkrementellen Latenz führen, bietet aber auch erhebliche Vorteile, wie z. B. die Möglichkeit, [!DNL Target]der maschinellen Lernfunktionen, zu denen [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) und [Automatisches Targeting](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) Aktivitäten.
+  Die Verwendung von nur serverseitig als Standardkonfiguration bedeutet, dass alle Entscheidungen auf der [!DNL Target] Edge-Netzwerk, das einen blockierenden Server-Aufruf umfasst. Dieser Ansatz kann zu einer inkrementellen Latenz führen, bietet aber auch erhebliche Vorteile, wie z. B. die Möglichkeit, [!DNL Target]der maschinellen Lernfunktionen, zu denen [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) und [Automatisches Targeting](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) Aktivitäten.
 
   Darüber hinaus können Sie Ihre personalisierten Erlebnisse durch Verwendung von [!DNL Target]Das Benutzerprofil von kann leistungsstarke Ergebnisse für Ihr Unternehmen liefern, das sitzungs- und kanalübergreifend beibehalten wird.
 
-  Schließlich erlaubt Ihnen Nur Server-seitig, die Adobe Experience Cloud zu verwenden und Zielgruppen anzupassen, die über Audience Manager- und Adobe Analytics-Segmente angesprochen werden können.
+  Schließlich können Sie nur serverseitig die Adobe Experience Cloud verwenden und Zielgruppen anpassen, die über Audience Manager- und Adobe Analytics-Segmente angesprochen werden können.
 
   **Nur auf dem Gerät**:
 
@@ -110,7 +122,7 @@ Folgende Einstellungen können überschrieben werden:
 
   Hybrid ist die Entscheidungsmethode, die in at.js 2.5 oder höher festgelegt werden muss, wenn sowohl Entscheidungen auf dem Gerät als auch Aktivitäten, die einen Netzwerkaufruf an die [!DNL Adobe Target] Das Edge-Netzwerk muss ausgeführt werden.
 
-  Wenn Sie sowohl Entscheidungsaktivitäten auf dem Gerät als auch Server-seitige Aktivitäten verwalten, kann es bei der Bereitstellung von [!DNL Target] auf Ihren Seiten etwas kompliziert und mühsam werden. Bei „Hybrid“ als Entscheidungsmethode weiß [!DNL Target], wann ein Server-Aufruf an das Edge-Netzwerk für Aktivitäten durchgeführt werden muss, für die eine Server-seitige Ausführung erforderlich ist, und wann nur Entscheidungen auf dem Gerät ausgeführt werden sollen.[!DNL Adobe Target]
+  Wenn Sie sowohl Entscheidungsaktivitäten auf dem Gerät als auch Server-seitige Aktivitäten verwalten, kann es bei der Bereitstellung von [!DNL Target] auf Ihren Seiten etwas kompliziert und mühsam werden. Mit Hybrid als Entscheidungsmethode [!DNL Target] weiß, wann der Server-Aufruf an die [!DNL Adobe Target] Edge-Netzwerk für Aktivitäten, für die eine serverseitige Ausführung erforderlich ist, und auch, wann nur Entscheidungen auf dem Gerät ausgeführt werden sollen.
 
   Das JSON-Regelartefakt enthält Metadaten, die at.js darüber informieren, ob eine Mbox eine Server-seitige Aktivität ausführt oder eine Entscheidungsaktivität auf dem Gerät aufweist. Diese Entscheidungsmethode stellt sicher, dass Aktivitäten, die Sie schnell bereitstellen möchten, über On-Device-Entscheidungsfindung durchgeführt werden und für Aktivitäten, die eine leistungsfähigere ML-gesteuerte Personalisierung erfordern, diese Aktivitäten über die [!DNL Adobe Target] Edge-Netzwerk.
 
@@ -166,7 +178,7 @@ Folgende Einstellungen können überschrieben werden:
 
 * **Typ**: Boolean
 * **Standardwert**: falsch
-* **Beschreibung**[!DNL Target]: Zeigt an, ob die Besucher-API-Funktion `isOptedOut()` aufrufen soll. Diese Funktion ist Teil der Aktivierung für Gerätediagramme.
+* **Beschreibung**: Gibt an, ob [!DNL Target] sollte die Besucher-API aufrufen `isOptedOut()` -Funktion. Diese Funktion ist Teil der Aktivierung für Gerätediagramme.
 
 ### overrideMboxEdgeServer
 
@@ -214,7 +226,7 @@ Folgende Einstellungen können überschrieben werden:
 
 * **Typ**: String
 * **Standardwert**: Wert, der über die Benutzeroberfläche festgelegt wird.
-* **Beschreibung**[!DNL Target]: Stellt den Edge-Server dar.
+* **Beschreibung**: Stellt die [!DNL Target] Edge-Server.
 
 ### serverState
 
@@ -226,7 +238,7 @@ Folgende Einstellungen können überschrieben werden:
 
 * **Typ**: Boolean
 * **Standardwert**: wahr
-* **Beschreibung**: Wenn diese Option aktiviert ist, erfasst Adobe die Nutzung von SDK-Funktionen und Leistungstelemetrikdaten. Personenbezogene Daten werden nicht erfasst.
+* **Beschreibung**: Wenn diese Option aktiviert ist, erfasst Adobe SDK-Funktionsnutzung und Leistungstelemetrikdaten. Personenbezogene Daten werden nicht erfasst.
 
 ### Zeitüberschreitung
 
@@ -244,7 +256,7 @@ Folgende Einstellungen können überschrieben werden:
 
 * **Typ**: Zahl
 * **Standardwert**: 2000 ms = 2 s
-* **Beschreibung**: Steht für die Anfrage-Zeitüberschreitung der Besucher-API.
+* **Beschreibung**: Stellt die Zeitüberschreitung bei der Besucher-API-Anfrage dar.
 
 ## Nutzung
 
@@ -284,7 +296,7 @@ Jeder Datenanbieter weist die folgende Struktur auf:
 | name | Zeichenfolge | Name des Anbieters. |
 | version | Zeichenfolge | Anbieterversion. Dieser Schlüssel wird für die Anbieterentwicklung verwendet. |
 | Zeitüberschreitung | Nummer | Gibt die Anbieter-Zeitüberschreigung an, wenn es sich hierbei um eine Netzwerkanfrage handelt.  Dieser Schlüssel ist optional. |
-| provider | Funktion | Die Funktion, welche die Logik zum Abrufen der Anbieterdaten enthält.<p>Die Funktion weist einen einzigen erforderlichen Parameter auf: `callback`. Der Parameter „callback“ ist eine Funktion, die nur aufgerufen werden sollte, wenn die Daten erfolgreich abgerufen wurden oder ein Fehler vorliegt.<p>Der Callback erwartet zwei Parameter:<ul><li>error: Gibt an, ob ein Fehler aufgetreten ist. Wenn alles in Ordnung ist, sollte dieser Parameter auf „null“ festgelegt sein.</li><li>params: Ein JSON-Objekt, das die Parameter darstellt, die in einer [!DNL Target] -Anfrage.</li></ul> |
+| provider | Funktion | Die Funktion, welche die Logik zum Abrufen der Anbieterdaten enthält.<p>Die Funktion verfügt über einen einzelnen erforderlichen Parameter: `callback`. Der Parameter „callback“ ist eine Funktion, die nur aufgerufen werden sollte, wenn die Daten erfolgreich abgerufen wurden oder ein Fehler vorliegt.<p>Der Callback erwartet zwei Parameter:<ul><li>error: Gibt an, ob ein Fehler aufgetreten ist. Wenn alles in Ordnung ist, sollte dieser Parameter auf „null“ festgelegt sein.</li><li>params: Ein JSON-Objekt, das die Parameter darstellt, die in einer [!DNL Target] -Anfrage.</li></ul> |
 
 Im folgenden Beispiel wird gezeigt, wo der Datenanbieter die Synchronisierungsausführung verwendet:
 
@@ -402,7 +414,7 @@ Nachher `cspScriptNonce` und `cspStyleNonce` -Einstellungen festgelegt sind, leg
 
 ## Hybride Personalisierung
 
-`serverState`[!DNL Target] ist eine in at.js v2.2+ verfügbare Einstellung zur Optimierung der Seitenleistung, wenn eine Hybrid-Integration von implementiert ist. Hybride Integration bedeutet, dass Sie sowohl at.js v2.2+ auf Client-Seite als auch die Bereitstellungs-API oder eine [!DNL Target] SDK auf Server-Seite, um Erlebnisse bereitzustellen. `serverState` ermöglicht at.js v2.2+, Erlebnisse direkt aus Inhalten anzuwenden, die auf Serverseite abgerufen und als Teil der bereitzustellenden Seite an den Client zurückgegeben wurden.
+`serverState` ist eine Einstellung in at.js v2.2+, die zur Optimierung der Seitenleistung verwendet werden kann, wenn eine hybride Integration von [!DNL Target] implementiert wurde. Hybride Integration bedeutet, dass Sie sowohl at.js v2.2+ auf Client-Seite als auch die Bereitstellungs-API oder eine [!DNL Target] SDK auf Server-Seite, um Erlebnisse bereitzustellen. `serverState` ermöglicht at.js v2.2+, Erlebnisse direkt aus Inhalten anzuwenden, die auf Serverseite abgerufen und als Teil der bereitzustellenden Seite an den Client zurückgegeben wurden.
 
 ### Voraussetzungen
 
@@ -529,9 +541,9 @@ Beachten Sie bei der Verwendung von `serverState` Folgendes:
 
    * **Hinweis**: Derzeit werden auf der Server-Seite abgerufene mboxes in `serverState` nicht unterstützt.
 
-* Bei der Anwendung von `serverState`-Angeboten berücksichtigt at.js die Einstellungen `pageLoadEnabled` und `viewsEnabled`. Seitenladeangebote werden beispielsweise nicht angewendet, wenn die `pageLoadEnabled`-Einstellung auf „falsch“ gesetzt ist.
+* Bei Anwendung `serverState` Angebote, bei denen at.js berücksichtigt `pageLoadEnabled` und `viewsEnabled` -Einstellungen, z. B. werden Seitenladeangebote nicht angewendet, wenn die `pageLoadEnabled` auf &quot;false&quot;gesetzt ist.
 
-  Um diese Einstellungen zu aktivieren, aktivieren Sie den Umschalter in **Administration > Implementierung > Bearbeiten > Seitenladen aktiviert**.
+  Um diese Einstellungen zu aktivieren, aktivieren Sie die Umschaltung in **Administration > Implementierung > Bearbeiten > Seitenladeaktivierung**.
 
   ![Einstellungen für „Seitenladen aktiviert“](../../assets/page-load-enabled-setting.png)
 
