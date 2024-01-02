@@ -3,7 +3,8 @@ title: Adobe Target Bulk-Profil-Update-API
 description: Verwendung von [!DNL Adobe Target] [!UICONTROL Bulk-Profil-Update-API] zum Senden mehrerer Besucherprofildaten an [!DNL Target] zur Verwendung beim Targeting.
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: a6f47c99cfc419771c1a6674990c415a2035ab4e
+exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
+source-git-commit: 32a6d14c911b977aea96b0fb6832929892d70d5d
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 8%
@@ -18,8 +19,8 @@ Verwenden der [!UICONTROL Bulk-Profil-Update-API]können Sie detaillierte Besuch
 
 | Version  | URL-Beispiel | Funktionen |
 | --- | --- | --- |
-| v1 | `http://CLIENTCODE.tt.omtrdc.net/m2/ CLIENTCODE/profile/batchUpdate` | Nur Unterstützung für Massenaktualisierung von Profilen. |
-| v2 | `http://CLIENTCODE.tt.omtrdc.net/m2/ CLIENTCODE/v2/profile/batchUpdate` | <ul><li>Erstellen Sie ein Profil, falls nicht gefunden.</li><li>Aktualisierung des Zeilenstatus.</li></ul> |
+| v1 | `http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/profile/batchUpdate` | Nur Unterstützung für Massenaktualisierung von Profilen. |
+| v2 | `http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate` | <ul><li>Erstellen Sie ein Profil, falls nicht gefunden.</li><li>Aktualisierung des Zeilenstatus.</li></ul> |
 
 >[!NOTE]
 >
