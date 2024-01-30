@@ -3,9 +3,9 @@ title: Fehlerbehebung bei geräteübergreifenden Entscheidungen
 description: Erfahren Sie, wie Sie Fehler beheben können. [!UICONTROL on-device decisioning]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 1d892d4d4d6f370f7772d0308ee0dd0d5c12e700
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ Durch das Aktivieren von Traces werden zusätzliche Informationen aus [!DNL Adob
    }};
    ```
 
-   **Java **
+   **Java**
 
    ```js {line-numbers="true"}
    Trace trace = new Trace()
@@ -115,7 +115,7 @@ Durch das Aktivieren von Traces werden zusätzliche Informationen aus [!DNL Adob
 
 ## 3. Überprüfen Sie die [!UICONTROL on-device decisioning] *Regelartefakt* wurde gemäß dem definierten Abrufintervall abgerufen und zwischengespeichert.
 
-1. Warten Sie die Dauer des Abrufintervalls (standardmäßig 5 Minuten) und stellen Sie sicher, dass das Artefakt vom SDK abgerufen wird. Es werden dieselben Terminalprotokolle ausgegeben.
+1. Warten Sie die Dauer des Abrufintervalls (standardmäßig 20 Minuten) und stellen Sie sicher, dass das Artefakt vom SDK abgerufen wird. Es werden dieselben Terminalprotokolle ausgegeben.
 
    Darüber hinaus erhalten Sie Informationen aus dem[!DNL Target]Trace sollte mit Details zum Regel-Artefakt an das Terminal ausgegeben werden.
 
@@ -137,7 +137,7 @@ Durch das Aktivieren von Traces werden zusätzliche Informationen aus [!DNL Adob
 
 ## 4. Validieren Sie die Inhaltsbereitstellung über das zwischengespeicherte Regel-Artefakt durch Erstellung eines Tests [!UICONTROL on-device decisioning] Aktivität durch den formularbasierten Experience Composer
 
-1. Navigieren Sie zum[!DNL Target]Benutzeroberfläche in Experience Cloud
+1. Navigieren Sie zum[!DNL Target]Benutzeroberfläche im Experience Cloud
 
    ![ALT-Bild](assets/asset-target-ui-1.png)
 
