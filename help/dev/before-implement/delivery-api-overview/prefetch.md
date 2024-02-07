@@ -4,9 +4,9 @@ description: Wie verwende ich den Vorabruf im [!UICONTROL Adobe Target-Bereitste
 keywords: Versandschnittstelle
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 91592a86957770c4d189115fd3ebda61ed52dd38
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -121,6 +121,51 @@ Innerhalb der `prefetch` -Feld ein oder mehrere `mboxes` Sie möchten für einen
 ```
 
 In der Antwort sehen Sie die `content` -Feld, das das Erlebnis enthält, das dem Benutzer für eine bestimmte `mbox`. Dies ist sehr nützlich, wenn sie auf Ihrem Server zwischengespeichert wird, sodass, wenn ein Benutzer innerhalb einer Sitzung mit Ihrer Web- oder Mobile-App interagiert und eine `mbox` auf einer bestimmten Seite Ihrer Anwendung kann das Erlebnis aus dem Cache bereitgestellt werden, anstatt eine andere [!UICONTROL Adobe Target-Bereitstellungs-API] aufrufen. Wenn dem Benutzer jedoch ein Erlebnis von der `mbox`, a `notification` wird über einen Versand-API-Aufruf gesendet, damit die Impressions-Protokollierung erfolgt. Dies liegt an der Antwort von `prefetch` -Aufrufe zwischengespeichert werden. Das bedeutet, dass der Benutzer die Erlebnisse zum Zeitpunkt der `prefetch` -Aufruf erfolgt. Um mehr über die `notification` Prozess, siehe [Benachrichtigungen](notifications.md).
+
+## Vorabruf-mboxes mit ClickTrack-Metriken bei Verwendung von [!UICONTROL Analytics for Target] (A4T)
+
+[[!UICONTROL Adobe Analytics für Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) ist eine lösungsübergreifende Integration, mit der Sie Aktivitäten basierend auf [!DNL Analytics] Konversionsmetriken und Zielgruppensegmente.
+
+Mit dem folgenden Codeausschnitt können Sie eine Mbox, die `clickTrack` Zu benachrichtigende Metriken [!DNL Analytics] dass auf ein Angebot geklickt wurde:
+
+```
+{
+  "prefetch": {
+    "mboxes": [
+      {
+        "index": 0,
+        "name": "<mboxName>",
+        "options": [
+           ...
+        ],
+        "metrics": [
+          {
+            "type": "click",
+            "eventToken": "<eventToken>",
+             "analytics": {
+               "payload": {
+                 "pe": "tnt",
+                 "tnta": "..."
+               }
+             }
+          },
+          }
+        ],
+        "analytics": {
+          "payload": {
+            "pe": "tnt",
+            "tnta": "347565:1:0|2,347565:1:0|1"
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+>[!NOTE]
+>
+>Der Vorabruf für eine Mbox enthält die [!DNL Analytics] Nutzlast nur für qualifizierte Aktivitäten. Das Vorabrufen von Erfolgsmetriken für noch nicht qualifizierte Aktivitäten führt zu Inkonsistenzen bei der Berichterstellung.
 
 ## Ansichten vorab abrufen
 
