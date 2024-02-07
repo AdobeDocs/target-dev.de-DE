@@ -4,9 +4,9 @@ description: Wie verwende ich den Vorabruf im [!UICONTROL Adobe Target-Bereitste
 keywords: Versandschnittstelle
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 803723d95d50cc39101d1646232446fbb0254385
+source-git-commit: 9a3068b0765c238daa2f9af904c0f6f15b57cc24
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -126,7 +126,7 @@ In der Antwort sehen Sie die `content` -Feld, das das Erlebnis enthält, das dem
 
 [[!UICONTROL Adobe Analytics für Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) ist eine lösungsübergreifende Integration, mit der Sie Aktivitäten basierend auf [!DNL Analytics] Konversionsmetriken und Zielgruppensegmente.
 
-Das folgende Codefragment ist eine Antwort von einer mbox, die `clickTrack` Zu benachrichtigende Metriken [!DNL Analytics] dass auf ein Angebot geklickt wurde:
+Das folgende Codefragment ist eine Antwort aus einem Vorabruf einer Mbox, die `clickTrack` Zu benachrichtigende Metriken [!DNL Analytics] dass auf ein Angebot geklickt wurde:
 
 ```
 {
