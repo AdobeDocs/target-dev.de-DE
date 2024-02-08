@@ -4,28 +4,28 @@ description: Wie verwende ich den Vorabruf im [!UICONTROL Adobe Target-Bereitste
 keywords: Versandschnittstelle
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 9a3068b0765c238daa2f9af904c0f6f15b57cc24
+source-git-commit: 901b56a91c69c9c5a2bd322aa999d45c47058a5e
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
 
 # Vorabruf
 
-Durch den Vorabruf können Clients wie mobile Apps und Server Inhalte für mehrere Mboxes oder Ansichten in einer Anfrage abrufen, lokal zwischenspeichern und später benachrichtigen [!DNL Target] wenn der Benutzer diese Mboxes oder Ansichten besucht.
+Durch den Vorabruf können Clients wie mobile Apps und Server Inhalte für mehrere Mboxes oder Ansichten in einer Anfrage abrufen, lokal zwischenspeichern und später benachrichtigen [!DNL Target] wenn der Besucher diese Mboxes oder Ansichten besucht.
 
-Bei der Verwendung des Vorabrufs ist es wichtig, mit den folgenden Begriffen vertraut zu sein:
+Bei der Verwendung von Prefetch müssen Sie sich mit den folgenden Begriffen vertraut machen:
 
 | Feldname | Beschreibung |
 | --- | --- |
-| `prefetch` | Liste der Mboxes und Ansichten, die abgerufen, aber nicht als besucht markiert werden sollten. Die [!DNL Target] Edge gibt eine `eventToke`n für jede Mbox oder Ansicht, die im Vorabruf-Array vorhanden sind. |
+| `prefetch` | Liste der Mboxes und Ansichten, die abgerufen, aber nicht als besucht markiert werden sollten. Die [!DNL Target] Edge gibt eine `eventToken` für jede Mbox oder Ansicht, die im Vorabruf-Array vorhanden sind. |
 | `notifications` | Liste der mboxes und Ansichten, die zuvor vorabgerufen wurden und als besucht markiert werden sollen. |
 | `eventToken` | Ein Hash-verschlüsseltes Token, das zurückgegeben wird, wenn Inhalt vorab abgerufen wird. Dieses Token sollte zurück an [!DNL Target] im `notifications` Array. |
 
 ## Vorabruf-mboxes
 
-Clients wie mobile Apps und Server können mehrere Mboxes für einen bestimmten Benutzer in einer Sitzung vorab abrufen und zwischenspeichern, um mehrere Aufrufe an zu vermeiden [!UICONTROL Adobe Target-Bereitstellungs-API].
+Clients wie mobile Apps und Server können mehrere Mboxes für einen bestimmten Besucher innerhalb einer Sitzung vorab abrufen und zwischenspeichern, um mehrere Aufrufe an die [!UICONTROL Adobe Target-Bereitstellungs-API].
 
 ```
 curl -X POST \
@@ -69,7 +69,7 @@ curl -X POST \
 }'
 ```
 
-Innerhalb der `prefetch` -Feld ein oder mehrere `mboxes` Sie möchten für einen Benutzer in einer Sitzung gleichzeitig vorab abrufen. Sobald Sie diese `mboxes` Sie erhalten die folgende Antwort:
+Innerhalb der `prefetch` -Feld ein oder mehrere `mboxes` Sie möchten mindestens einmal für einen Besucher während einer Sitzung vorab abrufen. Nach dem Vorabruf `mboxes`, erhalten Sie die folgende Antwort:
 
 ```
 {
@@ -120,9 +120,9 @@ Innerhalb der `prefetch` -Feld ein oder mehrere `mboxes` Sie möchten für einen
 }
 ```
 
-In der Antwort sehen Sie die `content` -Feld, das das Erlebnis enthält, das dem Benutzer für eine bestimmte `mbox`. Dies ist sehr nützlich, wenn sie auf Ihrem Server zwischengespeichert wird, sodass, wenn ein Benutzer innerhalb einer Sitzung mit Ihrer Web- oder Mobile-App interagiert und eine `mbox` auf einer bestimmten Seite Ihrer Anwendung kann das Erlebnis aus dem Cache bereitgestellt werden, anstatt eine andere [!UICONTROL Adobe Target-Bereitstellungs-API] aufrufen. Wenn dem Benutzer jedoch ein Erlebnis von der `mbox`, a `notification` wird über einen Versand-API-Aufruf gesendet, damit die Impressions-Protokollierung erfolgt. Dies liegt an der Antwort von `prefetch` -Aufrufe zwischengespeichert werden. Das bedeutet, dass der Benutzer die Erlebnisse zum Zeitpunkt der `prefetch` -Aufruf erfolgt. Um mehr über die `notification` Prozess, siehe [Benachrichtigungen](notifications.md).
+In der Antwort sehen Sie die `content` -Feld, das das Erlebnis enthält, das dem Besucher für ein bestimmtes `mbox`. Dies ist sehr nützlich, wenn sie auf Ihrem Server zwischengespeichert wird, sodass, wenn ein Besucher innerhalb einer Sitzung mit Ihrer Web- oder Mobile-App interagiert und eine `mbox` auf einer bestimmten Seite Ihrer Anwendung kann das Erlebnis aus dem Cache bereitgestellt werden, anstatt eine andere [!UICONTROL Adobe Target-Bereitstellungs-API] aufrufen. Wenn dem Besucher jedoch ein Erlebnis von der `mbox`, a `notification` wird über einen Versand-API-Aufruf gesendet, um die Impressions-Protokollierung durchzuführen. Dies liegt an der Antwort von `prefetch` -Aufrufe zwischengespeichert werden. Das bedeutet, dass der Besucher die Erlebnisse zum Zeitpunkt der `prefetch` -Aufruf erfolgt. Weitere Informationen zum `notification` -Prozess, siehe [Benachrichtigungen](notifications.md).
 
-## Vorabruf-mboxes mit ClickTrack-Metriken bei Verwendung von [!UICONTROL Analytics for Target] (A4T)
+## mboxes vorab abrufen mit `clickTrack` Metriken bei Verwendung von [!UICONTROL Analytics for Target] (A4T)
 
 [[!UICONTROL Adobe Analytics für Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) ist eine lösungsübergreifende Integration, mit der Sie Aktivitäten basierend auf [!DNL Analytics] Konversionsmetriken und Zielgruppensegmente.
 
@@ -169,7 +169,7 @@ Das folgende Codefragment ist eine Antwort aus einem Vorabruf einer Mbox, die `c
 
 ## Ansichten vorab abrufen
 
-Ansichten unterstützen Single Page Applications (SPA) und Mobile Apps nahtloser. Ansichten können als logische Gruppe visueller Elemente betrachtet werden, aus denen ein SPA oder ein mobiles Erlebnis besteht. Über die Bereitstellungs-API erstellte VEC jetzt AB- und XT-Aktivitäten mit Änderungen in [Ansichten für SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) kann jetzt vorabgerufen werden.
+Ansichten unterstützen Single Page Applications (SPA) und mobile Anwendungen nahtloser. Ansichten können als logische Gruppe visueller Elemente betrachtet werden, aus denen ein SPA oder ein mobiles Erlebnis besteht. Über die Bereitstellungs-API erstellte VEC jetzt AB- und XT-Aktivitäten mit Änderungen in [Ansichten für SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) kann jetzt vorabgerufen werden.
 
 ```
 curl -X POST \
