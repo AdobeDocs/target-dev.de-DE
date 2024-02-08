@@ -4,9 +4,9 @@ description: Wie verwende ich den Vorabruf im [!UICONTROL Adobe Target-Bereitste
 keywords: Versandschnittstelle
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 901b56a91c69c9c5a2bd322aa999d45c47058a5e
+source-git-commit: 4ff2746b8b485fe3d845337f06b5b0c1c8d411ad
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Bei der Verwendung von Prefetch müssen Sie sich mit den folgenden Begriffen ver
 
 Clients wie mobile Apps und Server können mehrere Mboxes für einen bestimmten Besucher innerhalb einer Sitzung vorab abrufen und zwischenspeichern, um mehrere Aufrufe an die [!UICONTROL Adobe Target-Bereitstellungs-API].
 
-```
+```shell shell-session
 curl -X POST \
 'https://demo.tt.omtrdc.net/rest/v1/delivery?client=demo&sessionId=7abf6304b2714215b1fd39a870f01afc#1555632114' \
 -H 'Content-Type: application/json' \
@@ -71,7 +71,7 @@ curl -X POST \
 
 Innerhalb der `prefetch` -Feld ein oder mehrere `mboxes` Sie möchten mindestens einmal für einen Besucher während einer Sitzung vorab abrufen. Nach dem Vorabruf `mboxes`, erhalten Sie die folgende Antwort:
 
-```
+```JSON {line-numbers="true"}
 {
     "status": 200,
     "requestId": "5efee0d8-3779-4b12-a74e-e04848faf191",
@@ -128,7 +128,7 @@ In der Antwort sehen Sie die `content` -Feld, das das Erlebnis enthält, das dem
 
 Das folgende Codefragment ist eine Antwort aus einem Vorabruf einer Mbox, die `clickTrack` Zu benachrichtigende Metriken [!DNL Analytics] dass auf ein Angebot geklickt wurde:
 
-```
+```JSON {line-numbers="true"}
 {
   "prefetch": {
     "mboxes": [
@@ -169,9 +169,9 @@ Das folgende Codefragment ist eine Antwort aus einem Vorabruf einer Mbox, die `c
 
 ## Ansichten vorab abrufen
 
-Ansichten unterstützen Single Page Applications (SPA) und mobile Anwendungen nahtloser. Ansichten können als logische Gruppe visueller Elemente betrachtet werden, aus denen ein SPA oder ein mobiles Erlebnis besteht. Über die Bereitstellungs-API erstellte VEC jetzt AB- und XT-Aktivitäten mit Änderungen in [Ansichten für SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) kann jetzt vorabgerufen werden.
+Ansichten unterstützen Single Page Applications (SPA) und mobile Anwendungen nahtloser. Ansichten können als logische Gruppe visueller Elemente betrachtet werden, aus denen ein SPA oder ein mobiles Erlebnis besteht. Jetzt über die Bereitstellungs-API erstellt VEC-created [[!UICONTROL A/B-Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} and [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T-Aktivitäten mit Änderungen an [Ansichten für SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) kann jetzt vorabgerufen werden.
 
-```
+```shell  {line-numbers="true"}
 curl -X POST \
   'https://demo.tt.omtrdc.net/rest/v1/delivery?client=demo&sessionId=a3e7368c62d944c0855d424cd7a03ab0' \
   -H 'Content-Type: application/json' \
@@ -199,9 +199,9 @@ curl -X POST \
 }'
 ```
 
-Der obige Beispielaufruf ruft alle Ansichten, die über den SPA VEC für AB- und XT-Aktivitäten erstellt wurden, für die Anzeige im Internet vor `channel`. Beachten Sie im -Aufruf, dass wir alle Ansichten aus den AB- oder XT-Aktivitäten abrufen möchten, mit denen ein Besucher `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` der die `url`:`https://target.enablementadobe.com/react/demo/#/` qualifiziert.
+Der obige Beispielaufruf ruft alle Ansichten vorab ab, die über den SPA VEC für [!UICONTROL A/B-Test] und XT-Aktivitäten zur Anzeige im Internet `channel`. Beachten Sie, dass der -Aufruf alle Ansichten aus der [!UICONTROL A/B-Test] oder XT-Aktivitäten, mit denen ein Besucher `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` der die `url`:`https://target.enablementadobe.com/react/demo/#/` qualifiziert.
 
-```
+```JSON  {line-numbers="true"}
 {
     "status": 200,
     "requestId": "14ce028e-d2d2-4504-b3da-32740fa8dd61",
@@ -280,4 +280,4 @@ Der obige Beispielaufruf ruft alle Ansichten, die über den SPA VEC für AB- und
 }
 ```
 
-Im `content` Felder der Antwort, Notiz-Metadaten wie `type`, `selector`, `cssSelector`, und `content`, die zum Rendern des Erlebnisses für Ihren Endbenutzer verwendet werden, wenn ein Benutzer Ihre Seite besucht. Beachten Sie Folgendes: `prefetched` Inhalte können bei Bedarf zwischengespeichert und für den Benutzer gerendert werden.
+Im `content` Felder der Antwort, Notiz-Metadaten wie `type`, `selector`, `cssSelector`, und `content`, die verwendet werden, um das Erlebnis für Ihren Besucher zu rendern, wenn ein Benutzer Ihre Seite besucht. Beachten Sie Folgendes: `prefetched` Inhalte können bei Bedarf zwischengespeichert und für den Benutzer gerendert werden.
