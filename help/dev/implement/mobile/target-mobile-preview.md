@@ -4,10 +4,10 @@ description: Verwenden Sie Vorschaulinks für Mobilgeräte, um eine durchgängig
 title: Verwenden von mobilen Vorschaulinks in [!DNL Adobe Target] Mobil?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: 0bcfa16cb79644e7ce10e33daf6c8385104c197f
+source-git-commit: 15e42d0fb049f9243ff5468ff5f22a8e79c55c79
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 27%
+source-wordcount: '508'
+ht-degree: 23%
 
 ---
 
@@ -38,25 +38,25 @@ Mit der mobilen Vorschaufunktion können Sie die Aktivitäten Ihrer Mobile App v
 
 ## Einen Vorschau-Link erstellen
 
-1. Im [!DNL Target] Klicken Sie in der Benutzeroberfläche auf **[!UICONTROL Weitere Optionen]** Symbol (die vertikale Ellipse), und wählen Sie **[!UICONTROL Link zur mobilen Vorschau erstellen]**.
+1. Im [!DNL Target] Klicken Sie in der Benutzeroberfläche auf **[!UICONTROL More Options]** Symbol (die vertikale Ellipse), und wählen Sie **[!UICONTROL Create Mobile Preview Link]**.
 
    ![ALT-Bild](assets/mobile-preview-create.png)
 
-1. Wählen Sie die Aktivitäten aus, die Sie in der Vorschau anzeigen möchten, und klicken Sie auf **[!UICONTROL Link zur mobilen Vorschau erstellen]**.
+1. Wählen Sie die Aktivitäten aus, die Sie in der Vorschau anzeigen möchten, und klicken Sie auf **[!UICONTROL Generate Mobile Preview Link]**.
 
    >[!NOTE]
    >
-   >Sie können nur formularbasierte Elemente auswählen [!UICONTROL A/B-Test] und [!UICONTROL Erlebnis-Targeting] (XT).
+   >Sie können nur formularbasierte Elemente auswählen [!UICONTROL A/B Test] und [!UICONTROL Experience Targeting] (XT).
 
    ![ALT-Bild](assets/mobile-preview-select-activities.png)
 
 1. Legen Sie das URL-Schema Ihrer App fest.
 
-   Das URL-Schema muss mit dem in Ihrer iOS- oder Android-App vorhandenen identisch sein. Wiederholen Sie diesen Vorgang bei Bedarf für iOS und Android separat.
+   Das URL-Schema muss mit dem in Ihrer iOS- oder Android-App vorhandenen übereinstimmen. Wiederholen Sie diesen Vorgang bei Bedarf für iOS und Android separat.
 
    ![ALT-Bild](assets/mobile-preview-enter-url-scheme.png)
 
-1. Klicken Sie auf **[!UICONTROL Vorschaulink für Mobilversion erzeugen]** und kopieren Sie den Link.
+1. Klicks **[!UICONTROL Generate Mobile Preview Link]**, und kopieren Sie dann den Link.
 
    ![ALT-Bild](assets/mobile-preview-generate-and-copy.png)
 
@@ -70,14 +70,14 @@ Mit der mobilen Vorschaufunktion können Sie die Aktivitäten Ihrer Mobile App v
 
    |![Vorschau Deep Link 1](assets/mobile-preview-open-deeplink.png)|![Vorschau Deep Link 2](assets/mobile-preview-open-app.png)|
 
-   Ihre App wird geöffnet und startet [!DNL Target] [!UICONTROL Mobile Vorschaumodus].
+   Ihre App wird geöffnet und startet [!DNL Target] [!UICONTROL Mobile Preview Mode].
 
-1. Wählen Sie die Kombination aus Erlebnissen aus, die Sie sehen möchten, und klicken Sie auf **[!UICONTROL Erlebnisse starten]**.
+1. Wählen Sie die Kombination aus Erlebnissen aus, die Sie sehen möchten, und klicken Sie dann auf **[!UICONTROL Launch Experiences]**.
 
    |![mobile preview 1](assets/mobile-preview-experience-selection-1.png)|![mobile Vorschau 2](assets/mobile-preview-experience-result-1-france.png)|![mobile Vorschau 3](assets/mobile-preview-experience-result-1-shipfree.png)|
 |![mobile Vorschau 4](assets/mobile-preview-experience-selection-2.png)|![mobile Vorschau 5](assets/mobile-preview-experience-result-2-aus.png)|![mobile Vorschau 6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## Einschränkungen  
 
-* Die Ansicht muss erneut laden, damit der neue Inhalt angezeigt werden kann, nachdem die Schaltfläche **[!UICONTROL Erlebnisse starten]** aktiviert wurde. Die einfachste Möglichkeit ist, zu einem anderen Bildschirm zu wechseln und danach zu dem Bildschirm zurückzukehren, auf dem die Änderung bewirkt werden soll.
+* Die Ansicht muss erneut geladen werden, damit der neue Inhalt nach dem **[!UICONTROL Launch Experiences]** auf klicken. Die einfachste Möglichkeit ist, zu einem anderen Bildschirm zu wechseln und danach zu dem Bildschirm zurückzukehren, auf dem die Änderung bewirkt werden soll.
 * Die mobile Vorschau wird nicht für frühere Android-Versionen als API-19 (KitKat) unterstützt.
