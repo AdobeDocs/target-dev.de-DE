@@ -4,16 +4,22 @@ description: Informationen zum [!DNL Adobe Target] Server-seitige Bereitstellung
 title: Informationen darüber [!DNL Target] Serverseitige Bereitstellungs-APIs und SDKs?
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 75af30045684b95d5989b0a1f877ba95bb8cd883
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 14%
+source-wordcount: '569'
+ht-degree: 13%
 
 ---
 
 # Server-seitig: Implementierung [!DNL Target]
 
 Informationen über [!DNL Adobe Target] Server-seitige Bereitstellungs-APIs, SDKs und [!DNL Target Recommendations] APIs.
+
+>[!NOTE]
+>
+>Wenn Ihre Implementierung at.js und [!DNL AppMeasurement] clientseitig sollten Sie die [!UICONTROL Target Delivery API] und serverseitige SDKs, die nachfolgend beschrieben werden.
+>
+>Wenn Ihre Implementierung [!UICONTROL Adobe Experience Platform Web SDK], sollten Sie die [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
 
 Der folgende Prozess wird in einer Server-seitigen Implementierung von [!DNL Target] ausgeführt:
 
@@ -42,7 +48,7 @@ Durch die [!DNL Target] Die Bereitstellungs-API bietet folgende Möglichkeiten:
 * Stellen Sie Erlebnisse von jeder Server-seitigen Plattform oder Anwendung bereit, die HTTP/s-Aufrufe durchführen kann.
 * Bereitstellen konsistenter und personalisierter Erlebnisse für einen Besucher, unabhängig davon, welcher Kanal oder welche Geräte der Besucher für die Interaktion mit Ihrem Unternehmen verwendet hat.
 * Zwischenspeichern von Erlebnissen für einen Besucher innerhalb einer Sitzung auf Ihrem Server, sodass mehrere API-Aufrufe vermieden werden können, wodurch eine bessere Leistung erzielt wird.
-* Nahtlose Integration mit Adobe Experience Cloud-Produkten wie Adobe Analytics, Adobe Audience Manager (AAM) und dem Experience Cloud-ID-Dienst vom Server aus.
+* Nahtlose Integration mit Adobe Experience Cloud-Produkten wie Adobe Analytics, Adobe Audience Manager (AAM) und dem Experience Cloud ID-Dienst vom Server aus.
 
 ## Server-seitige SDKs
 
@@ -58,7 +64,7 @@ bis [!DNL Adobe Target]Server-seitige SDKs verwenden, können Sie:
 * Ausführen und Ausführen **Funktionskennzeichnung**, **Rollouts**, und **A/B-Experimente** at **Latenz nahe null**.
 * Erlebnisse für alle **Web**, einschließlich **SPA**, und **mobile Kanäle** sowie nicht browserbasierter **Geräte des Internets der Dinge (IoT)** z. B. ein vernetzter TV-, Kiosk- oder In-store-digitaler Bildschirm.
 * Versand **Von maschinellem Lernen (ML) gesteuerte personalisierte Erlebnisse** für einen Benutzer, unabhängig davon, welcher Kanal oder welches Gerät der Benutzer mit Ihrem Unternehmen verbunden hat.
-* **Nahtlose Integration mit Adobe Experience Cloud** Produkte wie **Adobe Analytics**, **Adobe Audience Manager** und die **Experience Cloud-ID-Dienst** vom Server aus.
+* **Nahtlose Integration mit Adobe Experience Cloud** Produkte wie **Adobe Analytics**, **Adobe Audience Manager** und die **Experience Cloud ID-Dienst** vom Server aus.
 
 Siehe [Erste Schritte](sdk-guides/getting-started/getting-started.md) Seite , auf der Sie erfahren, wie Sie einen einfachen Anwendungsfall beim Kennzeichnen von Funktionen über [on-device decisioning](sdk-guides/on-device-decisioning/overview.md).
 
