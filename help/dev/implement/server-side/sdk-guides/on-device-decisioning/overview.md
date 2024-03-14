@@ -1,13 +1,13 @@
 ---
 keywords: Server-seitig, Server-seitig, SDK, SDK, On-Device, Entscheidungsfindung, auf Gerät, Gerät, Gerät, Nulllatenz, Latenz, nahe null, node.js, Server-seitig3
-description: Verwendung von [!UICONTROL [!UICONTROL On-Device Decisioning]] zum Zwischenspeichern Ihrer [!DNL Target] A/B- und MVT-Aktivitäten auf Ihrem Server, um speicherinterne Entscheidungen bei nahezu Nulllatenz durchzuführen.
+description: Verwendung von [!UICONTROL [!UICONTROL on-device decisioning]] zum Zwischenspeichern Ihrer [!DNL Target] A/B- und MVT-Aktivitäten auf Ihrem Server, um speicherinterne Entscheidungen bei nahezu Nulllatenz durchzuführen.
 title: Was ist On-Device Decisioning?
 feature: Implement Server-side
 exl-id: 22ed3072-56f0-4075-9d1a-d642afe3b649
-source-git-commit: 79ffa3f58d780f587fe1202b82d3860395504dfe
+source-git-commit: ff0becf3fe3a6fd6694e13243b6a93b910316434
 workflow-type: tm+mt
-source-wordcount: '1214'
-ht-degree: 8%
+source-wordcount: '1022'
+ht-degree: 9%
 
 ---
 
@@ -44,7 +44,7 @@ Das folgende Diagramm zeigt die [!UICONTROL on-device decisioning] Architektur. 
 
 Die On-Device-Entscheidungsfindung unterstützt die folgenden Aktivitätstypen, die von der [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html):
 
-* [!UICONTROL A/B-Test]
+* [!UICONTROL A/B Test]
 * [!UICONTROL Experience Targeting] (XT)
 
 ### Zuordnungsmethode
@@ -73,7 +73,7 @@ Die On-Device-Entscheidungsfindung unterstützt die folgenden Zielgruppenregeln:
 
 ## Wie stelle ich meinem Kunden die Verwendung von [!UICONTROL on-device decisioning]?
 
-Die Entscheidung auf dem Gerät ist für alle [!DNL Adobe Target] Kunden, die [!DNL Adobe Target] Server-seitige SDKs. Navigieren Sie zur Aktivierung dieser Funktion zu **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** > **[!UICONTROL Kontodetails]** im [!DNL Adobe Target] Benutzeroberfläche verwenden und die **[!UICONTROL On-Device Decisioning]** umschalten.
+Die Entscheidung auf dem Gerät ist für alle [!DNL Adobe Target] Kunden, die [!DNL Adobe Target] Server-seitige SDKs. Navigieren Sie zur Aktivierung dieser Funktion zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** im [!DNL Adobe Target] Benutzeroberfläche verwenden und die **[!UICONTROL On-Device Decisioning]** umschalten.
 
 >[!NOTE]
 >
@@ -95,23 +95,23 @@ Umschalten **off** bedeutet, dass Sie alle [!UICONTROL on-device decisioning] -A
 
 ## Woher weiß ich, dass eine Aktivität [!UICONTROL on-device decisioning] fähig?
 
-Nachdem Sie eine Aktivität erstellt haben, wird die Bezeichnung **[!UICONTROL Entscheidungsmethode]**, der auf der Detailseite der Aktivität angezeigt wird, zeigt an, ob die Aktivität [!UICONTROL on-device decisioning] geeignet.
+Nachdem Sie eine Aktivität erstellt haben, wird die Bezeichnung **[!UICONTROL Decisioning Method]**, der auf der Detailseite der Aktivität angezeigt wird, zeigt an, ob die Aktivität [!UICONTROL on-device decisioning] geeignet.
 
 ![ALT-Bild](assets/asset-odd9.png)
 
-Sie können auch alle Aktivitäten sehen, die [!UICONTROL on-device decisioning] auf **[!UICONTROL Tätigkeiten]** Seite durch Hinzufügen der Spalte **[!UICONTROL Entscheidungsmethode]** zur Aktivitätenliste.
+Sie können auch alle Aktivitäten sehen, die [!UICONTROL on-device decisioning] auf **[!UICONTROL Activities]** Seite durch Hinzufügen der Spalte **[!UICONTROL Decisioning Method]** zur Aktivitätenliste.
 
 ![ALT-Bild](assets/asset-odd7.png)
 
 >[!NOTE]
 >
->Nach dem Erstellen und Aktivieren einer Aktivität, die [!UICONTROL on-device decisioning] kann es 5-10 Minuten dauern, bis es in das Regelartefakt aufgenommen wird, das generiert und an die Akamai CDN PoPs übertragen wird.
+>Nach dem Erstellen und Aktivieren einer Aktivität, die [!UICONTROL on-device decisioning] kann es 20 Minuten dauern, bis es in das Regelartefakt aufgenommen wird, das generiert und an die Akamai CDN PoPs übertragen wird.
 
 ## Wie lauten die Schritte, die ich ausführen muss, um sicherzustellen, dass meine [!UICONTROL on-device decisioning] -Aktivitäten wurden erfolgreich bereitgestellt über [!DNL Adobe Target]Server-seitiges SDK?
 
-1. Zugriff auf [!DNL Adobe Target] Benutzeroberfläche und Navigation **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** > **[!UICONTROL Kontodetails]** um die **[!UICONTROL On-Device Decisioning]** umschalten.
-1. Aktivieren Sie die **[!UICONTROL Alle vorhandenen einschließen [!UICONTROL on-device decisioning] qualifizierte Tätigkeiten im Artefakt]** umschalten.
-1. Erstellen und aktivieren Sie einen Aktivitätstyp, der von [!UICONTROL on-device decisioning]und stellen Sie sicher, dass die **[!UICONTROL Entscheidungsmethode]** is **[!UICONTROL On-Device Decisioning]** für diese Aktivität.
+1. Zugriff auf [!DNL Adobe Target] Benutzeroberfläche und Navigation **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** um die **[!UICONTROL On-Device Decisioning]** umschalten.
+1. Aktivieren Sie die **[!UICONTROL Include all existing [!UICONTROL on-device decisioning] qualified activities in the artifact]** umschalten.
+1. Erstellen und aktivieren Sie einen Aktivitätstyp, der von [!UICONTROL on-device decisioning]und stellen Sie sicher, dass die **[!UICONTROL Decisioning Method]** is **[!UICONTROL On-Device Decisioning]** für diese Aktivität.
 1. Installieren und initialisieren Sie die [Node.js](../../node-js/overview.md) oder [Java](../../java/overview.md) SDK mit `decisioningMethod = on-device`.
 1. Implementierung `getOffers()` oder `getAttributes()` in Ihrem Code, um ein Erlebnis auf dem Gerät abzurufen.
 1. Stellen Sie Ihren Code bereit.
