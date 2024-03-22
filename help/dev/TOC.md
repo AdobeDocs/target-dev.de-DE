@@ -2,7 +2,7 @@
 user-guide-title: Adobe Target-Entwicklerhandbuch
 breadcrumb-title: Target-Entwicklerhandbuch
 user-guide-description: Erfahren Sie, wie Sie das Kundenerlebnis so anpassen und personalisieren können, dass Sie den Umsatz Ihrer Websites, Mobile Sites, Mobile Apps, Social Media und anderer digitaler Kanäle maximieren können.
-source-git-commit: 49b6572c0d414ab304712691c97794bb0b1e3781
+source-git-commit: 54647001c4e5dc5ce208430c7fea103a720b0980
 workflow-type: tm+mt
 source-wordcount: '753'
 ht-degree: 45%
@@ -22,7 +22,7 @@ ht-degree: 45%
       + [Vorschriften zur Privatsphäre und zum Datenschutz](before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md)
       + [Cookies in Target](before-implement/privacy/cookie-behavior.md)
       + [Löschen des Target-Cookies](before-implement/privacy/cookie-deleting.md)
-      + [Auswirkungen der Einstellung von Drittanbieter-Cookies auf Target (at.js)](/help/dev/before-implement/privacy/third_party_cookie_deprecation)
+      + [Auswirkungen der Einstellung von Drittanbieter-Cookies auf Target (at.js)](/help/dev/before-implement/privacy/third-party-cookie-deprecation.md)
       + [SameSite-Cookie-Richtlinien von Google Chrome](before-implement/privacy/google-chrome-samesite-cookie-policies.md)
       + [Apple Intelligent Tracking Prevention (ITP) 2.x](before-implement/privacy/apple-itp-2x.md)
       + [Richtlinien zur Content Security Policy (CSP)](before-implement/privacy/content-security-policy.md)
