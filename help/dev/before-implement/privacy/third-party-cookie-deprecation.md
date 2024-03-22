@@ -3,7 +3,7 @@ keywords: Übersicht und Referenz, Cookies, Erstanbieter, Drittanbieter, Erstanb
 description: Erfahren Sie mehr über die Auswirkungen der Einstellung von Drittanbieter-Cookies in [!DNL Adobe Target] (at.js)
 title: Auswirkungen der Einstellung von Drittanbieter-Cookies auf [!DNL Adobe Target] (at.js)
 feature: at.js
-source-git-commit: 54647001c4e5dc5ce208430c7fea103a720b0980
+source-git-commit: 705b94d60690a6e32185908c4bc53d8a3cee70bb
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%
