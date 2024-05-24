@@ -2,9 +2,9 @@
 user-guide-title: Adobe Target-Entwicklerhandbuch
 breadcrumb-title: Target-Entwicklerhandbuch
 user-guide-description: Erfahren Sie, wie Sie das Kundenerlebnis so anpassen und personalisieren können, dass Sie den Umsatz Ihrer Websites, Mobile Sites, Mobile Apps, Social Media und anderer digitaler Kanäle maximieren können.
-source-git-commit: 54647001c4e5dc5ce208430c7fea103a720b0980
+source-git-commit: c963a070a7a4c5e7dc2915eb5ac7d60895340705
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '756'
 ht-degree: 45%
 
 ---
@@ -164,6 +164,7 @@ ht-degree: 45%
       + [Logger (Python)](implement/server-side/python/logger.md)
 + [Hybridimplementierung](implement/hybrid/hybrid-overview.md)
 + [Recommendations-Implementierung](implement/recommendations/recommendations.md)
++ [Beta-Implementierung von Recommendations](/help/dev/implement/recommendations/recommendations-beta.md)
 + Implementierung mobiler Apps {#mobile-apps}
    + [Target für mobile Apps – Überblick](implement/mobile/overview.md)
    + [Mobile Target-Vorschau](implement/mobile/target-mobile-preview.md)
