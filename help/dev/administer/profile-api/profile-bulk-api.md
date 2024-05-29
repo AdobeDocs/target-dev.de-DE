@@ -1,21 +1,21 @@
 ---
 title: Adobe Target Bulk-Profil-Update-API
-description: Verwendung von [!DNL Adobe Target] [!UICONTROL Bulk-Profil-Update-API] zum Senden mehrerer Besucherprofildaten an [!DNL Target] zur Verwendung beim Targeting.
+description: Verwendung von [!DNL Adobe Target] [!UICONTROL Bulk Profile Update API] zum Senden mehrerer Besucherprofildaten an [!DNL Target] zur Verwendung beim Targeting.
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 3d90616b0a920abea380d4cfcd1227eafde86adb
+source-git-commit: 2934fbaa1dc3cd92bc5a434937e5db9a617009a9
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '828'
 ht-degree: 8%
 
 ---
 
 # [!DNL Adobe Target Bulk Profile Update API]
 
-Die [!DNL Adobe Target] [!UICONTROL Bulk-Profil-Update-API] ermöglicht Ihnen, mithilfe einer Batch-Datei Benutzerprofile für mehrere Besucher einer Website stapelweise zu aktualisieren.
+Die [!DNL Adobe Target] [!UICONTROL Bulk Profile Update API] ermöglicht Ihnen, mithilfe einer Batch-Datei Benutzerprofile für mehrere Besucher einer Website stapelweise zu aktualisieren.
 
-Verwenden der [!UICONTROL Bulk-Profil-Update-API]können Sie detaillierte Besucherprofildaten in Form von Profilparametern für viele Benutzer an senden. [!DNL Target] aus einer beliebigen externen Quelle. Externe Quellen können beispielsweise CRM-Systeme (Customer Relationship Management) oder POS-Systeme (Point of Sale) sein, die normalerweise nicht auf einer Webseite verfügbar sind.
+Verwenden der [!UICONTROL Bulk Profile Update API]können Sie detaillierte Besucherprofildaten in Form von Profilparametern für viele Benutzer an senden. [!DNL Target] aus einer beliebigen externen Quelle. Externe Quellen können beispielsweise CRM-Systeme (Customer Relationship Management) oder POS-Systeme (Point of Sale) sein, die normalerweise nicht auf einer Webseite verfügbar sind.
 
 | Version  | URL-Beispiel | Funktionen |
 | --- | --- | --- |
@@ -24,7 +24,7 @@ Verwenden der [!UICONTROL Bulk-Profil-Update-API]können Sie detaillierte Besuch
 
 >[!NOTE]
 >
->Version 2 (v2) der [!UICONTROL Bulk-Profil-Update-API] ist die aktuelle Version. Allerdings [!DNL Target] unterstützt weiterhin Version 1 (v1).
+>Version 2 (v2) der [!UICONTROL Bulk Profile Update API] ist die aktuelle Version. Allerdings [!DNL Target] unterstützt weiterhin Version 1 (v1).
 
 ## Vorteile der Bulk-Profil-Update-API
 
@@ -44,16 +44,24 @@ Verwenden der [!UICONTROL Bulk-Profil-Update-API]können Sie detaillierte Besuch
 Um Profildaten stapelweise zu aktualisieren, erstellen Sie eine Batch-Datei. Die Batch-Datei ist eine Textdatei mit durch Kommas getrennten Werten, die der folgenden Beispieldatei ähneln.
 
 ``````
-batch=pcId, param1, param2, param3, param4 123, value1 124, value1,,, value4 125,, value2 126, value1, value2, value3, value4
+batch=pcId,param1,param2,param3,param4
+123,value1
+124,value1,,,value4
+125,,value2
+126,value1,value2,value3,value4
 ``````
+
+>[!NOTE]
+>
+>Die `batch=` -Parameter erforderlich ist und am Anfang der Datei angegeben werden muss.
 
 Sie verweisen auf diese Datei im POST-Aufruf an [!DNL Target] -Server zur Verarbeitung der Datei. Beachten Sie beim Erstellen der Batch-Datei Folgendes:
 
 * In der ersten Zeile der Datei müssen Spaltenüberschriften angegeben werden.
-* Die erste Kopfzeile sollte entweder eine `pcId` oder `thirdPartyId`. Die [!UICONTROL Marketing Cloud-Besucher-ID] wird nicht unterstützt. [!UICONTROL pcId] ist [!DNL Target]-generierte visitorID. `thirdPartyId` ist eine von der Clientanwendung angegebene ID, die an [!DNL Target] durch einen Mbox-Aufruf als `mbox3rdPartyId`. Es muss hier als `thirdPartyId`.
+* Die erste Kopfzeile sollte entweder eine `pcId` oder `thirdPartyId`. Die [!UICONTROL Marketing Cloud visitor ID] wird nicht unterstützt. [!UICONTROL pcId] ist [!DNL Target]-generierte visitorID. `thirdPartyId` ist eine von der Clientanwendung angegebene ID, die an [!DNL Target] durch einen Mbox-Aufruf als `mbox3rdPartyId`. Es muss hier als `thirdPartyId`.
 * Die in der Batch-Datei angegebenen Parameter und Werte müssen aus Sicherheitsgründen mit UTF-8 URL-kodiert werden. Parameter und Werte können zur Verarbeitung über HTTP-Anforderungen an andere Edge-Knoten weitergeleitet werden.
 * Die Parameter müssen im Format `paramName` nur. Die Parameter werden in [!DNL Target] as `profile.paramName`.
-* Wenn Sie [!UICONTROL Bulk-Profil-Update-API] v2: Sie müssen nicht alle Parameterwerte für jede `pcId`. Profile werden für alle `pcId` oder `mbox3rdPartyId` das nicht in [!DNL Target]. Wenn Sie v1 verwenden, werden Profile nicht für fehlende pcIds oder mbox3rdPartyIds erstellt.
+* Wenn Sie [!UICONTROL Bulk Profile Update API] v2: Sie müssen nicht alle Parameterwerte für jede `pcId`. Profile werden für alle `pcId` oder `mbox3rdPartyId` das nicht in [!DNL Target]. Wenn Sie v1 verwenden, werden Profile nicht für fehlende pcIds oder mbox3rdPartyIds erstellt.
 * Die Batch-Datei muss kleiner als 50 MB sein. Darüber hinaus sollte die Gesamtanzahl der Zeilen 500.000 nicht überschreiten. Diese Beschränkung stellt sicher, dass Server nicht mit zu vielen Anfragen überflutet werden.
 * Sie können mehrere Dateien senden. Die Gesamtsumme der Zeilen aller Dateien, die Sie an einen Tag senden, sollte jedoch für jeden Kunden nicht mehr als eine Million betragen.
 * Die Anzahl der Attribute, die Sie hochladen, ist unbegrenzt. Die Gesamtgröße eines Profils einschließlich der Systemdaten sollte jedoch 2000 KB nicht überschreiten. [!DNL Adobe] empfiehlt, weniger als 1000 KB Speicher für Profilattribute zu verwenden.
@@ -71,7 +79,7 @@ Wo:
 
 BATCH.TXT ist der Dateiname. CLIENTCODE: [!DNL Target] Client-Code.
 
-Wenn Sie Ihren Clientcode nicht kennen, finden Sie im [!DNL Target] Benutzeroberflächen-Klick **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]**. Der Clientcode wird im [!UICONTROL Kontodetails] Abschnitt.
+Wenn Sie Ihren Clientcode nicht kennen, finden Sie im [!DNL Target] Benutzeroberflächen-Klick **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**. Der Clientcode wird im [!UICONTROL Account Details] Abschnitt.
 
 ### Inspect der Antwort
 
@@ -104,8 +112,8 @@ Die erwarteten Werte für die Statusfelder sind:
 | Status | Details |
 | --- | --- |
 | [!UICONTROL complete] | Die Anfrage zur Profil-Batch-Aktualisierung wurde erfolgreich abgeschlossen. |
-| [!UICONTROL unvollständig] | Die Anfrage zur Profil-Batch-Aktualisierung wird weiterhin verarbeitet und nicht abgeschlossen. |
-| [!UICONTROL hängenbleiben] | Die Anfrage zur Aktualisierung des Profil-Batches ist hängen geblieben und konnte nicht abgeschlossen werden. |
+| [!UICONTROL incomplete] | Die Anfrage zur Profil-Batch-Aktualisierung wird weiterhin verarbeitet und nicht abgeschlossen. |
+| [!UICONTROL stuck] | Die Anfrage zur Aktualisierung des Profil-Batches ist hängen geblieben und konnte nicht abgeschlossen werden. |
 
 ### Detaillierte Antwort der Batch-Status-URL
 
