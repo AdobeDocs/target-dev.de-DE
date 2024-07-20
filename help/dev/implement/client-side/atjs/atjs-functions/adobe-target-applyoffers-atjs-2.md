@@ -1,13 +1,13 @@
 ---
 keywords: adobe.target.applyOffers, applyOffers, applyoffer, apply offer, at.js, features, function,
-description: Verwenden Sie die [!UICONTROL adobe.target.applyOffers()] -Funktion für [!DNL Adobe Target] JavaScript-Bibliothek at.js , um mehrere Angebote in der Antwort anzuwenden. (at.js 2.x)
-title: Wie verwende ich die [!UICONTROL adobe.target.applyOffers()] Funktion?
+description: Verwenden Sie die Funktion [!UICONTROL adobe.target.applyOffers()] für die JavaScript-Bibliothek [!DNL Adobe Target] at.js , um mehrere Angebote in der Antwort anzuwenden. (at.js 2.x)
+title: Wie verwende ich die Funktion "[!UICONTROL adobe.target.applyOffers()]"?
 feature: at.js
 exl-id: c391e3f4-fdf1-4e33-8dcb-6bf46e390538
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '813'
-ht-degree: 79%
+source-wordcount: '808'
+ht-degree: 80%
 
 ---
 
@@ -21,14 +21,14 @@ Mit dieser Funktion können Sie mehr als ein Angebot, das von `adobe.target.getO
 
 | Schlüssel | Typ | Erforderlich? | Beschreibung |
 | --- | --- | --- | --- |
-| selector | Zeichenfolge | Nein | HTML-Element oder „selector“ in CSS wird dazu verwendet, das HTML-Element zu identifizieren, in dem [!DNL Target] die Angebotsinhalte platzieren soll. Wenn kein Selektor bereitgestellt wird, [!DNL Target] geht davon aus, dass das zu verwendende HTML-Element HTML HEAD ist. |
+| selector | Zeichenfolge | Nein | HTML-Element oder „selector“ in CSS wird dazu verwendet, das HTML-Element zu identifizieren, in dem [!DNL Target] die Angebotsinhalte platzieren soll. Wenn kein Selektor angegeben ist, geht [!DNL Target] davon aus, dass das zu verwendende HTML-Element HTML-HEAD ist. |
 | Antwort | Objekt | Ja | Antwortobjekt von `getOffers()`.<br />Siehe Anfragetabelle unten. |
 
 ## Antwort
 
 >[!NOTE]
 >
->Lesen Sie die [Dokumentation zur Bereitstellungs-API](/help/dev/implement/delivery-api/overview.md) für Informationen zu den akzeptablen Typen für alle unten aufgeführten Felder.
+>Informationen zu den akzeptablen Typen für alle unten aufgeführten Felder finden Sie in der Dokumentation zur Bereitstellungs-API](/help/dev/implement/delivery-api/overview.md) .[
 
 | Feldname | Beschreibung |
 | --- | --- |
@@ -36,7 +36,7 @@ Mit dieser Funktion können Sie mehr als ein Angebot, das von `adobe.target.getO
 | Antwort > Vorab abrufen > Ansichten > Optionen > Typ | Optionstyp. Spiegelt den Typ des Feldes „Inhalt“ wider. Der unterstützte Typ ist „Aktionen“. |
 | Antwort > Vorab abrufen > Ansichten > Status | Ein Status-Token „verdunkelte Ansicht“, das mit der Anzeigebenachrichtigung für die Ansicht weitergeleitet werden sollte |
 | Antwort > Vorab abrufen > Ansichten > Optionen > responseTokens | Enthält die Zuordnung von `responseTokens`, die gesammelt wurden, währen die aktuelle Option verarbeitet wurde. |
-| Antwort > Vorab abrufen > Ansichten > Analyse > Nutzlast | [!DNL Analytics] Nutzlast für Client-seitige Integration, die an gesendet werden soll [!DNL Analytics] nachdem die Ansicht angewendet wurde. |
+| Antwort > Vorab abrufen > Ansichten > Analyse > Nutzlast | [!DNL Analytics] Nutzlast für Client-seitige Integration, die nach Anwendung der Ansicht an [!DNL Analytics] gesendet werden sollte. |
 | Antwort > Vorab abrufen > Ansichten > Verfolgen | Das Objekt, das alle Trace-Daten für den Vorab-Aufruf pro Ansicht enthält.<br />Das Trace-Objekt enthält auch eine Version für die Nachverfolgung.<br />Das Trace-Objekt enthält auch Details zur aktuellen Ansicht. |
 | Antwort > Vorab abrufen > Ansichten > Optionen > eventToken | Die Ereignisprotokollierung erfolgt pro Option. Für jede angewendete Option sollte das entsprechende Ereignis-Token zur Liste der Benachrichtigungs-Token hinzugefügt werden. Beachten Sie, dass eine Ansicht aus mehreren Optionen besteht. Wenn alle Optionen angewendet und angezeigt wurden, müssen alle `eventTokens` in die Benachrichtigung einbezogen werden. |
 | Antwort > Vorab abrufen > Ansichten > Name | Der für Menschen lesbare Anzeigename. |
@@ -61,16 +61,16 @@ Mit dieser Funktion können Sie mehr als ein Angebot, das von `adobe.target.getO
 | Antwort > Ausführen > Mboxes > Mbox > Metriken | Enthält eine Liste der `clickThrough`-Metriken. |
 | Antwort > Ausführen > Mboxes > Mbox > Mbox | Der Name der Mbox. |
 | Antwort > Ausführen > Mboxes > Mbox > Index | Gibt an, dass mit diesem Index der Anfrage die Antwort für Mbox ist. |
-| Antwort > Ausführen > Mboxes > Mbox > Analyse > Nutzlast | [!DNL Analytics] Nutzlast für Client-seitige Integration, die an gesendet werden soll [!DNL Analytics] nachdem die Mbox angewendet wurde. (Siehe Abschnitt „Kampagnen mit A4T“.) |
+| Antwort > Ausführen > Mboxes > Mbox > Analyse > Nutzlast | [!DNL Analytics] Nutzlast für Client-seitige Integration, die nach Anwendung der Mbox an [!DNL Analytics] gesendet werden sollte. (Siehe Abschnitt „Kampagnen mit A4T“.) |
 | Antwort > Ausführen > Mboxes | Liste der ausgeführten Mboxes. |
 | Antwort > Ausführen > pageLoad > Optionen > Inhalt | Beachten Sie, dass der Inhalt von „Option“ nicht klar definiert ist und direkt vom Optionstyp/von der Vorlagenstruktur abhängt. |
 | Antwort > Ausführen > pageLoad > Optionen > Typ | Optionstyp. Spiegelt den Typ des Feldes „Inhalt“ wider. Unterstützt werden: HTML, Redirect, JSON, dynamisch und Aktionen. |
 | Antwort > Ausführen > pageLoad > Optionen | Optionen, die nicht nach Ansichten gruppiert werden (target-global-mbox + Optionen von Aktivitäten mit Ansichten, die nicht nach Ansichten gruppiert werden). |
 | Antwort > Ausführen > pageLoad > Metriken | Klicken Sie auf Metriken, die nicht einer bestimmten Ansicht zugeordnet wurden. |
 | Antwort > Ausführen > pageLoad > Verfolgen | Das Objekt, das alle Trace-Daten für die pageLoad-Anfrage enthält. |
-| Antwort > Ausführen > pageLoad > Analyse > Nutzlast | [!DNL Analytics] Nutzlast für Client-seitige Integration, die an gesendet werden soll [!DNL Analytics] nachdem der Seitenladeinhalt angewendet wurde. (Siehe Abschnitt „Kampagnen mit A4T“.) |
+| Antwort > Ausführen > pageLoad > Analyse > Nutzlast | [!DNL Analytics] Nutzlast für Client-seitige Integration, die nach Anwendung des Seitenladeinhalts an [!DNL Analytics] gesendet werden soll. (Siehe Abschnitt „Kampagnen mit A4T“.) |
 
-## Beispiel [!UICONTROL applyOffers()] call
+## Beispiel-Aufruf [!UICONTROL applyOffers()]
 
 ```javascript {line-numbers="true"}
 adobe.target.applyOffers({response:{
@@ -116,7 +116,7 @@ adobe.target.getOffers({...})
 .catch(error => console.log("Error", error));
 ```
 
-Weitere Beispiele zur Verwendung von getOffers() finden Sie in den getOffers [Dokumentation](adobe-target-getoffers-atjs-2.md)
+Weitere Beispiele zur Verwendung von getOffers() finden Sie in der getOffers [Dokumentation](adobe-target-getoffers-atjs-2.md)
 
 ### Beispiel für Seitenladeanforderung
 

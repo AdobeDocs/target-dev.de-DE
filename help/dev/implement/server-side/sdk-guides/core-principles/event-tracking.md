@@ -1,30 +1,30 @@
 ---
 title: Ereignis-Tracking
-description: Verwendung [!DNL Adobe Target]Die Ereignisverfolgungsfunktionen von , um Metriken effektiv zu messen, die für Ihr Unternehmen und Ihre Anwendungsfälle am wichtigsten sind.
+description: Verwenden Sie die Ereignisverfolgungsfunktionen von [!DNL Adobe Target], um Metriken effektiv zu messen, die für Ihr Unternehmen und Ihre Anwendungsfälle am wichtigsten sind.
 exl-id: a47fa692-c633-4c53-82da-878b1e451a3f
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
 source-wordcount: '527'
-ht-degree: 3%
+ht-degree: 2%
 
 ---
 
 # Ereignis-Tracking
 
-Verwendung [!DNL Adobe Target]Die Ereignisverfolgungsfunktionen von , um Metriken effektiv zu messen, die für Ihr Unternehmen und Ihre Anwendungsfälle am wichtigsten sind. Das Tracking von Ereignissen ist der Schlüssel zur Messung des Erfolgs Ihrer Experimentierungs- oder Personalisierungsaktivitäten, da sie Ihnen mitteilen, welche Variante oder welches Erlebnis gewinnt oder verliert. Dies hilft Ihnen zu verstehen, wie Ihre Benutzer mit Ihrem Produkt interagieren oder sich in einer sich ständig ändernden Landschaft entwickeln.
+Verwenden Sie die Ereignisverfolgungsfunktionen von [!DNL Adobe Target], um Metriken effektiv zu messen, die für Ihr Geschäft und Ihre Anwendungsfälle am wichtigsten sind. Das Tracking von Ereignissen ist der Schlüssel zur Messung des Erfolgs Ihrer Experimentierungs- oder Personalisierungsaktivitäten, da sie Ihnen mitteilen, welche Variante oder welches Erlebnis gewinnt oder verliert. Dies hilft Ihnen zu verstehen, wie Ihre Benutzer mit Ihrem Produkt interagieren oder sich in einer sich ständig ändernden Landschaft entwickeln.
 
-So verfolgen Sie Ereignisse bis [!DNL Adobe Target]-SDKs folgen Sie diesem zweistufigen Prozess:
+Um Ereignisse über die SDK von [!DNL Adobe Target] zu verfolgen, führen Sie diesen zweistufigen Prozess aus:
 
-1. Installieren Sie das SDK und stellen Sie den Code bereit, der Ereignisse an sendet. [!DNL Adobe Target].
+1. Installieren Sie das SDK und stellen Sie den Code bereit, der Ereignisse an [!DNL Adobe Target] sendet.
 
-1. Erstellen und Aktivieren einer [!DNL Adobe Target] -Aktivität mit einer Zielmetrik in der Benutzeroberfläche.
+1. Erstellen und aktivieren Sie eine [!DNL Adobe Target] -Aktivität mit einer Zielmetrik in der Benutzeroberfläche.
 
-   ![ALT-Bild](./assets/report-settings.png)
+   ![alt image](./assets/report-settings.png)
 
 ## Zielmetriken und -ereignisse
 
-Die folgende Tabelle definiert die Kombination aus Zielen und Ereignissen, die Sie definieren und mit einer [!DNL Target] Aktivität verwenden [!DNL Target]Reporting-Funktionen:
+Die folgende Tabelle definiert die Kombination von Zielen und Ereignissen, die Sie mithilfe der Berichterstellungsfunktionen von [!DNL Target] definieren und mit einer [!DNL Target] -Aktivität messen können:
 
 | Primäres Ziel | Ereignis- |
 | --- | --- |
@@ -34,7 +34,7 @@ Die folgende Tabelle definiert die Kombination aus Zielen und Ereignissen, die S
 
 ## Auslösen von Impressionen
 
-Target SDKs rufen die zugrunde liegende [Bereitstellungs-API](/help/dev/implement/delivery-api/overview.md). Wenn sich ein execute -Objekt mit erforderlichen Parametern in der Anfrage selbst befindet, wird die Impression für qualifizierte Aktivitäten automatisch erhöht. SDK-Methoden, die eine Impression automatisch erhöhen, sind:
+Target-SDKs rufen die zugrunde liegende [Bereitstellungs-API](/help/dev/implement/delivery-api/overview.md) auf. Wenn sich ein execute -Objekt mit erforderlichen Parametern in der Anfrage selbst befindet, wird die Impression für qualifizierte Aktivitäten automatisch erhöht. SDK-Methoden, die eine Impression automatisch erhöhen, sind:
 
 * getOffers()
 * getAttributes()
@@ -43,17 +43,17 @@ Target SDKs rufen die zugrunde liegende [Bereitstellungs-API](/help/dev/implemen
 >
 >Wenn ein Vorabruf-Objekt innerhalb der Anfrage übergeben wird, wird die Impression nicht automatisch für die Aktivitäten mit Mboxes innerhalb des Vorabruf-Objekts erhöht.
 
-Die `sendNotifications` -Methode verwendet werden, um Ereignisse manuell an zu senden [!DNL Adobe Target] und Trigger eine Impression.
+Die `sendNotifications` -Methode kann verwendet werden, um Ereignisse manuell an [!DNL Adobe Target] zu senden und eine Impression an den Trigger zu senden.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 TargetClient.sendNotifications(options: Object): Promise
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 ResponseStatus TargetClient.sendNotifications(TargetDeliveryRequest request)
@@ -67,17 +67,17 @@ Die folgenden Codebeispiele funktionieren für alle Zielmetriktypen, unabhängig
 
 ### Anzeigen einer Seite oder Mbox
 
-Dieses Beispiel ruft zunächst ein Target-Mbox-Angebot mit `getOffers`. Anschließend wird eine Anfrage mit einer Benachrichtigung erstellt, die auf diesem Mbox-Angebot basiert.
+In diesem Beispiel wird zunächst ein Ziel-Mbox-Angebot mit `getOffers` abgerufen. Anschließend wird eine Anfrage mit einer Benachrichtigung erstellt, die auf diesem Mbox-Angebot basiert.
 
-Benachrichtigung `type` -Eigenschaft auf `display`.
+Die Eigenschaft notification `type` ist auf `display` festgelegt.
 
 Um anzugeben, dass eine Seite angezeigt wurde, müssen Sie das Adressobjekt in der Benachrichtigungs-Payload angeben. Stellen Sie die URL entsprechend ein.
 
-Bei Mboxes müssen Sie die mbox-Eigenschaft auf das Benachrichtigungsobjekt festlegen und basierend auf dem Optionsfeld im `targetResult`.
+Bei Mboxes müssen Sie die mbox-Eigenschaft im Benachrichtigungsobjekt festlegen und basierend auf dem Optionsfeld in `targetResult` ein Array von Token bereitstellen.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -132,7 +132,7 @@ async function onTargetReady() {
 }
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 ClientConfig clientConfig = ClientConfig.builder()
@@ -184,15 +184,15 @@ targetJavaClient.sendNotifications(notificationRequest);
 
 ### Auf eine mbox geklickt
 
-Dieses Beispiel ruft zunächst ein Target-Mbox-Angebot mit `getOffers`. Anschließend wird eine Anfrage mit einer Benachrichtigung erstellt, die auf diesem Mbox-Angebot basiert.
+In diesem Beispiel wird zunächst ein Ziel-Mbox-Angebot mit `getOffers` abgerufen. Anschließend wird eine Anfrage mit einer Benachrichtigung erstellt, die auf diesem Mbox-Angebot basiert.
 
-Benachrichtigung `type` -Eigenschaft auf `click`.
+Die Eigenschaft notification `type` ist auf `click` festgelegt.
 
-Sie müssen die `mbox` -Eigenschaft auf dem Benachrichtigungsobjekt und stellen Sie basierend auf dem Metriken-Array im `targetResult`.
+Sie müssen die Eigenschaft `mbox` im Benachrichtigungsobjekt festlegen und ein Array von Token basierend auf dem Metriken-Array in `targetResult` angeben.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -249,7 +249,7 @@ async function onTargetReady() {
 }
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 ClientConfig clientConfig = ClientConfig.builder()
@@ -304,15 +304,15 @@ targetJavaClient.sendNotifications(notificationRequest);
 
 ### Anzeigen einer Ansicht
 
-Dieses Beispiel ruft zunächst mithilfe von Zielansichten ab. `getOffers`. Anschließend wird basierend auf diesen Ansichten eine Anfrage mit einer Benachrichtigung erstellt.
+Dieses Beispiel ruft zunächst Zielansichten mit `getOffers` ab. Anschließend wird basierend auf diesen Ansichten eine Anfrage mit einer Benachrichtigung erstellt.
 
-Benachrichtigung `type` -Eigenschaft auf `display`.
+Die Eigenschaft notification `type` ist auf `display` festgelegt.
 
-Für Ansichten müssen Sie die `view` -Eigenschaft auf dem Benachrichtigungsobjekt und stellen Sie basierend auf dem Optionsfeld im targetResult-Objekt ein Array von Token bereit.
+Bei Ansichten müssen Sie die Eigenschaft `view` im Benachrichtigungsobjekt festlegen und basierend auf dem Optionsarray im targetResult ein Array von Token angeben.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -362,7 +362,7 @@ async function onTargetReady() {
 }
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 ClientConfig clientConfig = ClientConfig.builder()
@@ -414,15 +414,15 @@ targetJavaClient.sendNotifications(notificationRequest);
 
 ### Klicken auf eine Ansicht
 
-Dieses Beispiel ruft zunächst mithilfe von Zielansichten ab. `getOffers`. Anschließend wird eine Anfrage mit Benachrichtigungen basierend auf diesen Ansichten erstellt.
+Dieses Beispiel ruft zunächst Zielansichten mit `getOffers` ab. Anschließend wird eine Anfrage mit Benachrichtigungen basierend auf diesen Ansichten erstellt.
 
-Benachrichtigung `type` -Eigenschaft auf `click`.
+Die Eigenschaft notification `type` ist auf `click` festgelegt.
 
-Sie müssen die `view` -Eigenschaft auf dem Benachrichtigungsobjekt und geben Sie ein Array von Token an, die auf dem Metriken-Array im targetResult basieren.
+Sie müssen die `view` -Eigenschaft für das Benachrichtigungsobjekt festlegen und ein Array von Token bereitstellen, die auf dem Metriken-Array im targetResult basieren.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -474,7 +474,7 @@ async function onTargetReady() {
 }
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 ClientConfig clientConfig = ClientConfig.builder()

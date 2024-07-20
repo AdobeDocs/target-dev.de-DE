@@ -1,6 +1,6 @@
 ---
-title: Implementieren der Proxy-Konfiguration im [!DNL Adobe Target] Java-SDK
-description: Erfahren Sie, wie Sie die TargetClient-Proxy-Konfiguration im [!DNL Adobe Target] Java-SDK.
+title: Proxy-Konfiguration im [!DNL Adobe Target] Java-SDK implementieren
+description: Erfahren Sie, wie Sie die TargetClient-Proxy-Konfiguration im Java SDK [!DNL Adobe Target] konfigurieren.
 feature: APIs/SDKs
 exl-id: 32e8277d-3bba-4621-b9c7-3a49ac48a466
 source-git-commit: 59ab3f53e2efcbb9f7b1b2073060bbd6a173e380
@@ -29,7 +29,7 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 ## Authentifizierung
 
-Wenn eine Proxy-Authentifizierung erforderlich ist, können die Anmeldeinformationen als Parameter an die `ClientProxyConfig` -Konstruktor, wie im folgenden Beispiel gezeigt. Beachten Sie, dass dies nur für einfache Benutzername/Kennwort-Proxy-Authentifizierung funktioniert.
+Wenn eine Proxy-Authentifizierung erforderlich ist, können die Anmeldeinformationen gemäß dem folgenden Beispiel als Parameter an den `ClientProxyConfig` -Konstruktor übergeben werden. Beachten Sie, dass dies nur für einfache Benutzername/Kennwort-Proxy-Authentifizierung funktioniert.
 
 ### Grundlegende Proxy-Authentifizierung
 
@@ -44,7 +44,7 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 ## Geräteinterne Entscheidungsfindung
 
-Für Anfragen zum Abrufen des Regelartefakts sollte Ihr Proxy so konfiguriert sein, dass die Antwort nicht zwischengespeichert wird. Wenn es jedoch nicht möglich ist, den Cache-Mechanismus des Proxys für diese Anforderung zu konfigurieren, verwenden Sie eine Konfigurationsoption als Problemumgehung, um den Cache auf Proxyebene zu umgehen. Diese Problemumgehung fügt die `Authorization` -Kopfzeile mit einem leeren Zeichenfolgenwert zur Regelanforderung, die dem Proxy anzeigen sollte, dass die Antwort nicht zwischengespeichert werden soll.
+Für Anfragen zum Abrufen des Regelartefakts sollte Ihr Proxy so konfiguriert sein, dass die Antwort nicht zwischengespeichert wird. Wenn es jedoch nicht möglich ist, den Cache-Mechanismus des Proxys für diese Anforderung zu konfigurieren, verwenden Sie eine Konfigurationsoption als Problemumgehung, um den Cache auf Proxyebene zu umgehen. Diese Problemumgehung fügt die Kopfzeile `Authorization` mit einem leeren Zeichenfolgenwert zur Regelanforderung hinzu, was dem Proxy anzeigen sollte, dass die Antwort nicht zwischengespeichert werden soll.
 
 Um diese Problemumgehung zu aktivieren, legen Sie Folgendes fest:
 

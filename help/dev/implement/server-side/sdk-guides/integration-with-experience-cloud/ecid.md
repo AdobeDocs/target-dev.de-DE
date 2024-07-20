@@ -1,22 +1,22 @@
 ---
 title: Experience Cloud ID-Dienst (ECID)
-description: Obwohl die [!DNL Target] SDKs zum Abrufen von Inhalten aus [!DNL Target] kann leistungsstark sein, der Mehrwert der Verwendung der [!UICONTROL Experience Cloud-ID] (ECID) für die Benutzerverfolgung über die Adobe hinaus [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud] Produkte und Funktionen wie A4T-Reporting und [!DNL Adobe Audience Manager] (AAM) Segmente.
+description: Die Verwendung der [!DNL Target] SDKs zum Abrufen von Inhalten aus  [!DNL Target]  kann zwar leistungsstark sein, der Mehrwert der Verwendung der [!UICONTROL Experience Cloud ID] (ECID) für die Benutzerverfolgung reicht jedoch über Adobe [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud] Produkte und Funktionen wie A4T-Reporting und  [!DNL Adobe Audience Manager] (AAM)-Segmente hinaus.
 exl-id: fd7e5c3e-51c1-4965-ab6a-f50a6b0c910b
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 1%
+source-wordcount: '264'
+ht-degree: 0%
 
 ---
 
-# [!UICONTROL Experience Cloud-ID] (ECID)-Dienst
+# [!UICONTROL Experience Cloud ID] (ECID)-Dienst
 
-## [!UICONTROL Experience Cloud-ID] (ECID)-Integration
+## Integration von [!UICONTROL Experience Cloud ID] (ECID)
 
-Obwohl die [!DNL Target] SDKs zum Abrufen von Inhalten aus [!DNL Target] kann leistungsstark sein, der Mehrwert der Verwendung der [!UICONTROL Experience Cloud-ID] (ECID) für die Benutzerverfolgung geht über [!DNL Adobe Target]. Mit der ECID können Sie [!DNL Adobe Experience Cloud] Produkte und Funktionen wie A4T-Reporting und [!DNL Adobe Audience Manager] (AAM) Segmente.
+Die Verwendung der [!DNL Target] SDKs zum Abrufen von Inhalten aus [!DNL Target] kann zwar leistungsstark sein, der Mehrwert der Verwendung der [!UICONTROL Experience Cloud ID] (ECID) für das Benutzer-Tracking reicht jedoch über [!DNL Adobe Target] hinaus. Mit der ECID können Sie [!DNL Adobe Experience Cloud] -Produkte und -Funktionen, wie z. B. A4T-Reporting und [!DNL Adobe Audience Manager] -AAM, nutzen.
 
-Die ECID wird von `visitor.js`, der seinen eigenen Status behält. Die `visitor.js` erstellt ein Cookie mit dem Namen `AMCV_{organizationId}`, das von [!DNL Target] SDK für die ECID-Integration. Wenn die Variable [!DNL Target] zurückgegeben wird, müssen Sie die Besucherinstanz clientseitig mit `thevisitorState` zurückgegeben von [!DNL Target] SDKs
+Die ECID wird von `visitor.js` generiert und gepflegt, der seinen eigenen Status behält. Die Datei `visitor.js` erstellt ein Cookie mit dem Namen `AMCV_{organizationId}`, das von [!DNL Target] SDKs für die ECID-Integration verwendet wird. Wenn die Antwort [!DNL Target] zurückgegeben wird, müssen Sie die Besucherinstanz auf der Clientseite mit dem von den [!DNL Target] SDK zurückgegebenen Wert `thevisitorState` aktualisieren.
 
 ```html {line-numbers="true"}
 <!doctype html>
@@ -37,7 +37,7 @@ Die ECID wird von `visitor.js`, der seinen eigenen Status behält. Die `visitor.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 const express = require("express");
@@ -114,7 +114,7 @@ app.get("/abtest", async (req, res) => {
       }};
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"
   console.log("Request", request);
@@ -158,7 +158,7 @@ public class TargetControllerSample {
 
 ## ECID mit Kunden-ID-Integration
 
-Um Besucherbenutzerkonten und Anmeldestatusdetails zu verfolgen, müssen Sie `customerIds` kann über [!DNL Target] SDKs
+Um Benutzerkonten und Details zum Anmeldestatus von Besuchern zu verfolgen, kann `customerIds` über [!DNL Target] SDKs übergeben werden.
 
 ```html {line-numbers="true"
 <!doctype html>
@@ -179,7 +179,7 @@ Um Besucherbenutzerkonten und Anmeldestatusdetails zu verfolgen, müssen Sie `cu
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 const express = require("express");
@@ -274,7 +274,7 @@ app.listen(3000, function () {
 });
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 @Controller
@@ -307,18 +307,18 @@ public class TargetControllerSample {
 
 >[!ENDTABS]
 
-## ECID und [!DNL Analytics] Integration
+## ECID- und [!DNL Analytics]-Integration
 
-Optimale Nutzung der [!DNL Target] SDKs und zur Verwendung der leistungsstarken Analysefunktionen, die von [!DNL Adobe Analytics], können Sie Integrationen über ECID hinweg verwenden, [!DNL Analytics], und [!DNL Target].
+Um die [!DNL Target] SDKs optimal zu nutzen und die leistungsstarken Analysefunktionen von [!DNL Adobe Analytics] zu nutzen, können Sie Integrationen mit ECID, [!DNL Analytics] und [!DNL Target] verwenden.
 
-Integration über ECID hinweg [!DNL Analytics], und [!DNL Target] ermöglicht Folgendes:
+Durch die Verwendung von Integrationen mit ECID, [!DNL Analytics] und [!DNL Target] können Sie:
 
 * Segmente aus Adobe Audience Manager verwenden (AAM)
-* Benutzererlebnis basierend auf dem aus abgerufenen Inhalt anpassen [!DNL Target]
-* Stellen Sie sicher, dass alle Ereignisse und Erfolgsmetriken in [!DNL Analytics]
-* Verwendung [!DNL Analytics]&#39; leistungsstarke Abfragen und profitieren von den beeindruckenden Visualisierungen von Berichten
+* Anpassen des Benutzererlebnisses basierend auf dem von [!DNL Target] abgerufenen Inhalt
+* Stellen Sie sicher, dass alle Ereignisse und Erfolgsmetriken in [!DNL Analytics] erfasst werden.
+* Verwenden Sie die leistungsstarken Abfragen von [!DNL Analytics] und profitieren Sie von den beeindruckenden Berichtvisualisierungen
 
-Integrationen über ECID hinweg, [!DNL Analytics], und [!DNL Target] erfordern keine spezielle Verarbeitung für Analysen auf der Serverseite. Sobald Sie die ECID integriert haben, fügen Sie stattdessen `AppMeasurement.js` ([!DNL Analytics] -Bibliothek) auf der Client-Seite. [!DNL Analytics] verwendet dann die Besucherinstanz zum Synchronisieren mit [!DNL Target].
+Integrationen über ECID, [!DNL Analytics] und [!DNL Target] hinweg erfordern keine spezielle Verarbeitung für Analysen auf der Serverseite. Sobald Sie die ECID integriert haben, fügen Sie stattdessen auf der Client-Seite die Bibliothek `AppMeasurement.js` ([!DNL Analytics] ) hinzu. [!DNL Analytics] verwendet dann die Besucherinstanz zum Synchronisieren mit [!DNL Target].
 
 ```html {line-numbers="true"}
 <!doctype html>
@@ -341,7 +341,7 @@ Integrationen über ECID hinweg, [!DNL Analytics], und [!DNL Target] erfordern k
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 const express = require("express");
@@ -433,7 +433,7 @@ app.listen(3000, function () {
 });
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 @Controller

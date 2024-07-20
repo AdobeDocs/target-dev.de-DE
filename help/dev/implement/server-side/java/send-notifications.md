@@ -1,11 +1,11 @@
 ---
-title: Anzeigen- oder Klickbenachrichtigungen senden an [!DNL Adobe Target] Verwenden des Java-SDK
-description: Erfahren Sie, wie Sie mit sendNotifications() Anzeigen- oder Klickbenachrichtigungen an senden können. [!DNL Adobe Target] für die Messung und Berichterstellung.
+title: Senden von Anzeigen- oder Klickbenachrichtigungen an [!DNL Adobe Target] mithilfe des Java SDK
+description: Erfahren Sie, wie Sie mit sendNotifications() Anzeigen- oder Klickbenachrichtigungen an [!DNL Adobe Target] für Messungen und Berichte senden können.
 feature: APIs/SDKs
 exl-id: 9231b480-f50f-40d1-ab06-0b9f2a2d79e3
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '230'
 ht-degree: 2%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 2%
 
 ## Beschreibung
 
-`sendNotifications()` wird verwendet, um Anzeigen- oder Klickbenachrichtigungen an zu senden [!DNL Adobe Target] für die Messung und Berichterstellung.
+`sendNotifications()` wird verwendet, um Anzeigen- oder Klickbenachrichtigungen für Messungen und Berichte an [!DNL Adobe Target] zu senden.
 
 >[!NOTE]
 >
->Wenn ein `execute` -Objekt mit erforderlichen Parametern in der Anfrage selbst enthalten ist, wird die Impression für qualifizierte Aktivitäten automatisch inkrementiert.
+>Wenn sich ein `execute` -Objekt mit erforderlichen Parametern in der Anfrage selbst befindet, wird die Impression für qualifizierte Aktivitäten automatisch erhöht.
 
 SDK-Methoden, die eine Impression automatisch erhöhen, sind:
 
 * `getOffers()`
 * `getAttributes()`
 
-Wenn eine `prefetch` -Objekt innerhalb der Anfrage übergeben wird, wird die Impression nicht automatisch für die Aktivitäten mit Mboxes innerhalb der `prefetch` -Objekt. `sendNotifications()` muss für vorab abgerufene Erlebnisse zur Erhöhung von Impressionen und Konversionen verwendet werden.
+Wenn ein `prefetch` -Objekt innerhalb der Anfrage übergeben wird, wird die Impression für Aktivitäten mit Mboxes innerhalb des `prefetch` -Objekts nicht automatisch erhöht. `sendNotifications()` muss für vorab abgerufene Erlebnisse zum Erhöhen von Impressionen und Konversionen verwendet werden.
 
 ## Methode
 
@@ -37,7 +37,7 @@ ResponseStatus TargetClient.sendNotifications(TargetDeliveryRequest request)
 
 ## Beispiel
 
-Erstellen wir zunächst die [!DNL Target Delivery API] Anfrage zum Vorabruf von Inhalten für die `home` und `product1` Mboxes verwenden.
+Erstellen wir zunächst die [!DNL Target Delivery API] -Anfrage für den Vorabruf von Inhalten für die Mboxes `home` und `product1`.
 
 ### Vorabruf
 
@@ -51,7 +51,7 @@ PrefetchRequest prefetchMboxesRequest = new PrefetchRequest().setMboxes(mboxRequ
 TargetDeliveryResponse targetResponse = targetJavaClient.getOffers(targetDeliveryRequest);
 ```
 
-Eine erfolgreiche Antwort enthält eine [!UICONTROL Target-Bereitstellungs-API] Antwortobjekt, das vorab abgerufenen Inhalt für die angeforderten Mboxes enthält. Beispiel `targetResponse.response` -Objekt kann wie folgt aussehen:
+Eine erfolgreiche Antwort enthält ein [!UICONTROL Target Delivery API] -Antwortobjekt, das vorab abgerufenen Inhalt für die angeforderten Mboxes enthält. Ein Beispiel für ein `targetResponse.response` -Objekt kann wie folgt aussehen:
 
 ### Antwort
 
@@ -109,7 +109,7 @@ Eine erfolgreiche Antwort enthält eine [!UICONTROL Target-Bereitstellungs-API] 
 }
 ```
 
-Beachten Sie die mbox. `name` und `state` sowie die `eventToken` in jedem der [!DNL Target] Inhaltsoptionen. Diese sollten im `sendNotifications()` anfordern, sobald die einzelnen Inhaltsoptionen angezeigt werden. Nehmen wir einmal an, die `product1` Mbox wurde auf einem Nicht-Browser-Gerät angezeigt. Die Benachrichtigungsanfrage sieht wie folgt aus:
+Beachten Sie die Felder mbox `name` und `state` sowie das Feld `eventToken` in jeder der Inhaltsoptionen von [!DNL Target]. Diese sollten in der `sendNotifications()` -Anfrage bereitgestellt werden, sobald jede Inhaltsoption angezeigt wird. Angenommen, die mbox `product1` wurde auf einem Nicht-Browser-Gerät angezeigt. Die Benachrichtigungsanfrage sieht wie folgt aus:
 
 ### Anfrage
 
@@ -128,7 +128,7 @@ TargetDeliveryRequest mboxNotificationRequest = TargetDeliveryRequest.builder().
 }}).build();
 ```
 
-Beachten Sie, dass wir sowohl den Mbox-Status als auch das Ereignis-Token, das dem [!DNL Target] Angebot, das in der Vorabruf-Antwort bereitgestellt wird. Nachdem wir die Benachrichtigungsanfrage erstellt haben, können wir sie an senden [!DNL Target] via `sendNotifications()` API-Methode:
+Beachten Sie, dass wir sowohl den Mbox-Status als auch das Ereignis-Token eingeschlossen haben, das dem in der Vorabruf-Antwort bereitgestellten Angebot [!DNL Target] entspricht. Nachdem wir die Benachrichtigungsanforderung erstellt haben, können wir sie über die API-Methode `sendNotifications()` an [!DNL Target] senden:
 
 ### Antwort
 

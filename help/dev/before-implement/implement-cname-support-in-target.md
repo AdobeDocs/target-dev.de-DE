@@ -1,27 +1,27 @@
 ---
 keywords: Client Care, CNAME, Zertifikatsprogramm, kanonischer Name, Cookies, Zertifikat, amc, adobe managed certificate, digicert, Domain Control Validation, dcv, Client Care2
-description: Arbeiten mit [!UICONTROL Adobe Client Care] zur Implementierung der CNAME-Unterstützung (Canonical Name) in [!DNL Adobe Target] um Probleme mit der Anzeigenblockierung zu beheben.
+description: Arbeiten Sie mit [!UICONTROL Adobe Client Care] zusammen, um die CNAME-Unterstützung (Canonical Name) in [!DNL Adobe Target]  zu implementieren, um Probleme mit der Anzeigenblockierung zu beheben.
 title: Wie verwende ich CNAME in Target?
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1164'
 ht-degree: 1%
 
 ---
 
 # CNAME und Target
 
-Anweisungen für die Arbeit mit [!DNL Adobe Client Care] zur Implementierung der CNAME-Unterstützung (Canonical Name) in [!DNL Adobe Target]. Verwenden Sie CNAME, um Probleme mit der Anzeigenblockierung oder ITP-bezogene Cookie-Richtlinien (Intelligent Tracking Prevention) zu verarbeiten. Mit CNAME werden Aufrufe an eine Domäne gesendet, die dem Kunden gehört, und nicht an eine Domäne, die der Adobe gehört.
+Anweisungen zum Arbeiten mit [!DNL Adobe Client Care] zur Implementierung der CNAME-Unterstützung (Canonical Name) in [!DNL Adobe Target]. Verwenden Sie CNAME, um Probleme mit der Anzeigenblockierung oder ITP-bezogene Cookie-Richtlinien (Intelligent Tracking Prevention) zu verarbeiten. Mit CNAME werden Aufrufe an eine Domäne gesendet, die dem Kunden gehört, und nicht an eine Domäne, die im Besitz von Adobe ist.
 
 ## Unterstützung von CNAME anfordern in Target
 
 1. Bestimmen Sie die Liste der Hostnamen, die Sie für Ihr SSL-Zertifikat benötigen (siehe FAQ unten).
 
-1. Erstellen Sie für jeden Hostnamen einen CNAME-Eintrag in Ihrem DNS, der auf Ihren regulären Namen verweist. [!DNL Target] hostname `clientcode.tt.omtrdc.net`.
+1. Erstellen Sie für jeden Hostnamen einen CNAME-Eintrag in Ihrem DNS, der auf Ihren normalen [!DNL Target] Hostnamen `clientcode.tt.omtrdc.net` verweist.
 
-   Wenn Ihr Clientcode beispielsweise &quot;cnameccustomer&quot;lautet und Ihr Hostname vorgeschlagen wird, lautet `target.example.com`, sieht Ihr DNS-CNAME-Eintrag ähnlich aus:
+   Wenn Ihr Clientcode beispielsweise &quot;cnameccustomer&quot;lautet und Ihr Hostname `target.example.com` lautet, sieht der DNS-CNAME-Eintrag ähnlich aus wie:
 
    ```
    target.example.com.  IN  CNAME  cnamecustomer.tt.omtrdc.net.
@@ -29,11 +29,11 @@ Anweisungen für die Arbeit mit [!DNL Adobe Client Care] zur Implementierung der
 
    >[!WARNING]
    >
-   >Die Zertifizierungsstelle der Adobe, DigiCert, kann erst nach Abschluss dieses Schritts ein Zertifikat ausstellen. Daher kann Adobe Ihre Anfrage nach einer CNAME-Implementierung erst nach Abschluss dieses Schritts erfüllen.
+   >Adobe-Zertifizierungsstelle, DigiCert, kann erst nach Abschluss dieses Schritts ein Zertifikat ausstellen. Daher kann Adobe Ihre Anfrage nach einer CNAME-Implementierung erst erfüllen, wenn dieser Schritt abgeschlossen ist.
 
-1. [Füllen Sie dieses Formular aus](assets/FPC_Request_Form.xlsx) und fügen Sie ihn bei [ein Adobe-Kundenunterstützungs-Ticket öffnen, in dem CNAME-Support angefordert wird](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C):
+1. [Füllen Sie dieses Formular aus](assets/FPC_Request_Form.xlsx) und fügen Sie es ein, wenn Sie [ein Adobe Client Care-Ticket öffnen, in dem CNAME-Unterstützung angefordert wird](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C):
 
-   * [!DNL Adobe Target] client code:
+   * [!DNL Adobe Target] Client-Code:
    * SSL-Zertifikat-Hostnamen (Beispiel: `target.example.com target.example.org`):
    * SSL-Zertifikatkäufer (Adobe wird dringend empfohlen, siehe FAQ): Adobe/Kunde
    * Wenn der Kunde das Zertifikat kauft, auch bekannt als &quot;Bring Your Own Certificate&quot;(BYOC), füllen Sie diese zusätzlichen Details aus:
@@ -43,13 +43,13 @@ Anweisungen für die Arbeit mit [!DNL Adobe Client Care] zur Implementierung der
       * Zertifikatstaat/-region (Beispiel: Kalifornien):
       * Zertifikatstadt (Beispiel: San Jose):
 
-1. Wenn Adobe das Zertifikat kauft, kauft und stellt Adobe Ihr Zertifikat auf den Produktionsservern der Adobe bereit.
+1. Wenn Adobe das Zertifikat kauft, arbeitet Adobe mit DigiCert zusammen, um Ihr Zertifikat auf Adobe-Produktionsservern zu kaufen und bereitzustellen.
 
-   Wenn der Kunde das Zertifikat (BYOC) kauft, sendet Ihnen der Adobe-Kundendienst die Certificate Signing Request (CSR). Verwenden Sie die CSR, wenn Sie das Zertifikat über Ihre Zertifizierungsstelle Ihrer Wahl erwerben. Nachdem das Zertifikat ausgestellt wurde, senden Sie eine Kopie des Zertifikats und etwaiger Zwischenzertifikate zur Bereitstellung an die Adobe Client Care.
+   Wenn der Kunde das Zertifikat (BYOC) kauft, sendet Ihnen der Adobe Client Care die Certificate Signing Request (CSR). Verwenden Sie die CSR, wenn Sie das Zertifikat über Ihre Zertifizierungsstelle Ihrer Wahl erwerben. Nachdem das Zertifikat ausgestellt wurde, senden Sie eine Kopie des Zertifikats und etwaiger Zwischenzertifikate zur Bereitstellung an die Adobe Client Care.
 
-   Adobe Der Kundendienst benachrichtigt Sie, wenn Ihre Implementierung fertig ist.
+   Adobe Client Care benachrichtigt Sie, wenn Ihre Implementierung bereit ist.
 
-1. Aktualisieren Sie die `serverDomain` [Dokumentation](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverdomain) auf den neuen CNAME-Hostnamen und legen Sie `overrideMboxEdgeServer` nach `false` [Dokumentation](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#overridemboxedgeserver) in Ihrer at.js-Konfiguration.
+1. Aktualisieren Sie die `serverDomain` [Dokumentation](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverdomain) auf den neuen CNAME-Hostnamen und legen Sie `overrideMboxEdgeServer` in Ihrer at.js-Konfiguration auf `false` [Dokumentation](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#overridemboxedgeserver) fest.
 
 ## Häufig gestellte Fragen  
 
@@ -57,35 +57,35 @@ Die folgenden Informationen beantworten häufig gestellte Fragen zum Anfordern u
 
 ### Kann ich ein eigenes Zertifikat bereitstellen (Eigenes Zertifikat mitbringen oder BYOC)?
 
-Sie können Ihr eigenes Zertifikat bereitstellen. Diese Vorgehensweise wird von Adobe jedoch nicht empfohlen. Die Verwaltung des SSL-Zertifikatslebenszyklus ist sowohl für die Adobe als auch für Sie einfacher, wenn die Adobe das Zertifikat kauft und steuert. SSL-Zertifikate müssen jedes Jahr erneuert werden. Daher muss sich der Kundendienst von Adobe jedes Jahr an Sie wenden, um rechtzeitig ein neues Zertifikat zu erhalten. Einige Kunden können Schwierigkeiten haben, ein neues Zertifikat zeitnah zu erstellen. Ihre [!DNL Target] -Implementierung wird gefährdet, wenn das Zertifikat abläuft, da Browser Verbindungen ablehnen.
+Sie können Ihr eigenes Zertifikat bereitstellen. Adobe empfiehlt diese Vorgehensweise jedoch nicht. Die Verwaltung des SSL-Zertifikatlebenszyklus ist sowohl für Adobe als auch für Sie einfacher, wenn Adobe das Zertifikat kauft und steuert. SSL-Zertifikate müssen jedes Jahr erneuert werden. Daher muss sich Adobe Client Care jedes Jahr an Sie wenden, um ein neues Zertifikat rechtzeitig zu erhalten. Einige Kunden können Schwierigkeiten haben, ein neues Zertifikat zeitnah zu erstellen. Ihre [!DNL Target] -Implementierung ist gefährdet, wenn das Zertifikat abläuft, da Browser Verbindungen ablehnen.
 
 >[!WARNING]
 >
->Wenn Sie eine [!DNL Target] die Implementierung des CNAME-Zertifikats für Ihr eigenes Zertifikat mitbringen, sind Sie dafür verantwortlich, der Adobe Client Care jedes Jahr neue Zertifikate zur Verfügung zu stellen. Wenn Sie zulassen, dass Ihr CNAME-Zertifikat abläuft, bevor Adobe ein neues Zertifikat bereitstellen kann, tritt für Ihre spezifischen [!DNL Target] Implementierung.
+>Wenn Sie eine Implementierung mit dem CNAME-Eintrag [!DNL Target] für Ihr eigenes Zertifikat anfordern, sind Sie dafür verantwortlich, der Adobe Client Care jährlich erneuerte Zertifikate zur Verfügung zu stellen. Wenn Sie zulassen, dass Ihr CNAME-Zertifikat abläuft, bevor Adobe ein erneuertes Zertifikat bereitstellen kann, tritt für Ihre spezifische [!DNL Target] -Implementierung ein Ausfall auf.
 
 ### Wie lange dauert es, bis mein neues SSL-Zertifikat abläuft?
 
-Alle von der Adobe erworbenen Zertifikate sind ein Jahr gültig. Siehe [Artikel von DigiCert zu 1-Jahres-Zertifikaten](https://www.digicert.com/blog/position-on-1-year-certificates) für weitere Informationen.
+Alle von Adobe erworbenen Zertifikate sind ein Jahr gültig. Weitere Informationen finden Sie im Artikel von [DigiCert zu 1-Jahres-Zertifikaten](https://www.digicert.com/blog/position-on-1-year-certificates) .
 
 ### Welche Hostnamen sollte ich wählen? Wie viele Hostnamen pro Domäne sollte ich wählen?
 
 Target-CNAME-Implementierungen erfordern nur einen Hostnamen pro Domäne auf dem SSL-Zertifikat und im DNS des Kunden. Adobe empfiehlt einen Hostnamen pro Domäne. Einige Kunden benötigen für ihre eigenen Zwecke (z. B. Tests im Staging) mehr Hostnamen pro Domäne, was unterstützt wird.
 
-Die meisten Kunden wählen einen Hostnamen wie `target.example.com`. Adobe empfiehlt, dieser Praxis zu folgen, aber die Wahl liegt letztendlich bei Ihnen. Fordern Sie keinen Hostnamen eines vorhandenen DNS-Eintrags an. Dies führt zu einem Konflikt und verzögert die Behebung Ihrer [!DNL Target] CNAME-Anfrage.
+Die meisten Kunden wählen einen Hostnamen wie `target.example.com`. Adobe empfiehlt, dieser Praxis zu folgen, aber die Wahl liegt letztendlich bei Ihnen. Fordern Sie keinen Hostnamen eines vorhandenen DNS-Eintrags an. Dies führt zu einem Konflikt und verzögert die Zeit für die Lösung Ihrer [!DNL Target] CNAME-Anfrage.
 
 ### Ich habe bereits eine CNAME-Implementierung für Adobe Analytics. Kann ich dasselbe Zertifikat oder denselben Hostnamen verwenden?
 
 Nein, [!DNL Target] erfordert einen separaten Hostnamen und ein separates Zertifikat.
 
-### Ist meine aktuelle Implementierung von [!DNL Target] von ITP 2.x beeinflusst?
+### Hat meine aktuelle Implementierung von [!DNL Target] Auswirkungen auf ITP 2.x?
 
-Apple Intelligent Tracking Prevention (ITP) Version 2.3 führte die CNAME Cloaking Mitigation-Funktion ein, die in der Lage ist, [!DNL Target] CNAME-Implementierungen und reduzieren die Gültigkeit des Cookies auf sieben Tage. Aktuell [!DNL Target] gibt keine Problemumgehung für die CNAME-Cloaking-Abmilderung von ITP. Weitere Informationen zu ITP finden Sie unter [Apple Intelligent Tracking Prevention (ITP) 2.x](../before-implement/privacy/apple-itp-2x.md).
+Apple Intelligent Tracking Prevention (ITP) Version 2.3 hat die CNAME Cloaking Mitigation-Funktion eingeführt, mit der [!DNL Target] CNAME-Implementierungen erkannt und die Gültigkeit des Cookies auf sieben Tage reduziert werden kann. Derzeit gibt es für die CNAME-Cloaking-Abmilderung durch ITP keine Problemumgehung. [!DNL Target] Weitere Informationen zu ITP finden Sie unter [Apple Intelligent Tracking Prevention (ITP) 2.x](../before-implement/privacy/apple-itp-2x.md).
 
 ### Welche Arten von Dienstunterbrechungen kann ich erwarten, wenn meine CNAME-Implementierung bereitgestellt wird?
 
 Bei der Bereitstellung des Zertifikats gibt es keine Dienstunterbrechung (einschließlich Zertifikatsverlängerungen).
 
-Nachdem Sie jedoch den Hostnamen in Ihrem [!DNL Target] Implementierungscode (`serverDomain` in at.js) auf den neuen CNAME-Hostnamen (`target.example.com`), behandeln Webbrowser wiederkehrende Besucher als neue Besucher. Die Profildaten der zurückgegebenen Besucher gehen verloren, da der Zugriff auf das vorherige Cookie unter dem alten Hostnamen (`clientcode.tt.omtrdc.net`). Der Zugriff auf das vorherige Cookie ist aufgrund von Browser-Sicherheitsmodellen nicht möglich. Diese Störung tritt nur beim ersten Cut-over auf den neuen CNAME auf. Zertifikatverlängerungen haben nicht die gleiche Wirkung, da sich der Hostname nicht ändert.
+Nachdem Sie jedoch den Hostnamen im [!DNL Target]-Implementierungscode (`serverDomain` in at.js) in den neuen CNAME-Hostnamen (`target.example.com`) geändert haben, behandeln Webbrowser wiederkehrende Besucher als neue Besucher. Die wiedergegebenen Besucherprofildaten gehen verloren, da der Zugriff auf das vorherige Cookie unter dem alten Hostnamen (`clientcode.tt.omtrdc.net`) nicht möglich ist. Der Zugriff auf das vorherige Cookie ist aufgrund von Browser-Sicherheitsmodellen nicht möglich. Diese Störung tritt nur beim ersten Cut-over auf den neuen CNAME auf. Zertifikatverlängerungen haben nicht die gleiche Wirkung, da sich der Hostname nicht ändert.
 
 ### Welcher Schlüsseltyp und welcher Zertifikatsignaturalgorithmus wird für meine CNAME-Implementierung verwendet?
 
@@ -257,13 +257,13 @@ Verwenden Sie den folgenden Befehlssatz (im Befehlszeilen-Terminal von macOS ode
    }
    ```
 
-1. Fügen Sie diesen Befehl ein (ersetzen `target.example.com` mit Ihrem Hostnamen):
+1. Fügen Sie diesen Befehl ein (ersetzen Sie `target.example.com` durch Ihren Hostnamen):
 
    ```
    adobeTargetCnameValidation target.example.com
    ```
 
-   Wenn die Implementierung bereit ist, sehen Sie die Ausgabe wie unten dargestellt. Wichtig ist, dass alle Validierungsstatuszeilen `✅` anstelle von `🚫`. Jeder CNAME-Shard der Target-Edge sollte `CN=target.example.com`, der mit dem primären Hostnamen im angeforderten Zertifikat übereinstimmt (zusätzliche SAN-Hostnamen auf dem Zertifikat werden in dieser Ausgabe nicht gedruckt).
+   Wenn die Implementierung bereit ist, sehen Sie die Ausgabe wie unten dargestellt. Wichtig ist, dass alle Validierungsstatuszeilen den Wert `✅` anstelle von `🚫` aufweisen. Jeder CNAME-Shard der Target-Edge sollte &quot;`CN=target.example.com`&quot;aufweisen, der dem primären Hostnamen auf dem angeforderten Zertifikat entspricht (zusätzliche SAN-Hostnamen auf dem Zertifikat werden in dieser Ausgabe nicht gedruckt).
 
    ```
    $ adobeTargetCnameValidation target.example.com
@@ -327,16 +327,16 @@ Verwenden Sie den folgenden Befehlssatz (im Befehlszeilen-Terminal von macOS ode
 
 >[!NOTE]
 >
->Wenn dieser Überprüfungsbefehl bei der DNS-Validierung fehlschlägt, Sie jedoch bereits die erforderlichen DNS-Änderungen vorgenommen haben, müssen Sie möglicherweise warten, bis Ihre DNS-Updates vollständig propagiert werden. DNS-Einträge sind mit [TTL (Time-to-Live)](https://en.wikipedia.org/wiki/Time_to_live#DNS_records) die die Cache-Ablaufzeit für DNS-Antworten dieser Datensätze vorgibt. Daher müssen Sie möglicherweise mindestens so lange warten, wie Ihre TTLs sind. Sie können die `dig target.example.com` Befehl oder [G Suite Toolbox](https://toolbox.googleapps.com/apps/dig/#CNAME) , um Ihre spezifischen TTLs nachzuschlagen. Informationen zur weltweiten DNS-Verbreitung finden Sie unter [whatsmydns.net](https://whatsmydns.net/#CNAME).
+>Wenn dieser Überprüfungsbefehl bei der DNS-Validierung fehlschlägt, Sie jedoch bereits die erforderlichen DNS-Änderungen vorgenommen haben, müssen Sie möglicherweise warten, bis Ihre DNS-Updates vollständig propagiert werden. DNS-Einträge haben eine zugewiesene [TTL (Time-to-Live)](https://en.wikipedia.org/wiki/Time_to_live#DNS_records) -Kennung, die die Cache-Ablaufzeit für DNS-Antworten dieser Datensätze vorschreibt. Daher müssen Sie möglicherweise mindestens so lange warten, wie Ihre TTLs sind. Sie können den Befehl `dig target.example.com` oder [die G Suite Toolbox](https://toolbox.googleapps.com/apps/dig/#CNAME) verwenden, um Ihre spezifischen TTLs nachzuschlagen. Informationen zum Überprüfen der DNS-Verbreitung auf der ganzen Welt finden Sie unter [whatsmydns.net](https://whatsmydns.net/#CNAME).
 
 ### Wie verwende ich einen Ausschluss-Link mit CNAME?
 
-Wenn Sie CNAME verwenden, sollte der Ausschluss-Link den Wert &quot;client=&quot;enthalten.`clientcode` -Parameter, beispielsweise:
-`https://my.cname.domain/optout?client=clientcode`.
+Wenn Sie CNAME verwenden, sollte der Ausschluss-Link den Parameter &quot;client=`clientcode`&quot;enthalten, z. B.:
+`https://my.cname.domain/optout?client=clientcode`
 
-Ersetzen `clientcode` mit Ihrem Clientcode verwenden, fügen Sie dann den Text oder das Bild hinzu, der/das mit der [Ausschluss-URL](privacy/privacy.md).
+Ersetzen Sie `clientcode` durch Ihren Clientcode und fügen Sie dann den Text oder das Bild hinzu, das mit der [Ausschluss-URL](privacy/privacy.md) verknüpft werden soll.
 
 ## Bekannte Einschränkungen
 
 * Der QA-Modus ist nicht fixierbar, wenn Sie CNAME und at.js 1.x verwenden, da er auf einem Drittanbieter-Cookie basiert. Um dieses Problem zu umgehen, fügen Sie jeder URL, zu der Sie navigieren, die Vorschauparameter hinzu. Der QS-Modus hängt bei CNAME und at.js 2.x an.
-* Bei Verwendung von CNAME wird es wahrscheinlicher, dass die Größe des Cookie-Headers für [!DNL Target] -Aufrufe zunehmen. Adobe empfiehlt, die Cookie-Größe unter 8 KB zu halten.
+* Bei Verwendung von CNAME erhöht sich wahrscheinlich die Größe des Cookie-Headers für [!DNL Target] -Aufrufe. Adobe empfiehlt, die Cookie-Größe unter 8 KB zu halten.

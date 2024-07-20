@@ -11,17 +11,17 @@ ht-degree: 45%
 
 ---
 
-# Vorbereiten der Implementierung [!DNL Target]
+# Vorbereiten der Implementierung von [!DNL Target]
 
-Abgeschlossene Aufgaben und bei der Vorbereitung der Implementierung zu erfassende Informationen [!DNL Adobe Target].
+Aufgaben, die abgeschlossen werden sollen, und Informationen, die bei der Vorbereitung der Implementierung von [!DNL Adobe Target] erfasst werden sollen.
 
-Die Befolgung dieser Richtlinien und das Ausfüllen der bereitgestellten Fragebögen helfen Ihnen bei der Umsetzung [!DNL Target], unabhängig davon, ob Sie die Implementierung selbst durchführen oder mit [!DNL Adobe Consulting] (empfohlen).
+Das Befolgen dieser Richtlinien und das Ausfüllen der bereitgestellten Fragebögen helfen Ihnen bei der Implementierung von [!DNL Target], unabhängig davon, ob Sie die Implementierung selbst durchführen oder mit [!DNL Adobe Consulting] arbeiten (empfohlen).
 
-Wenn Sie mit einem Adobe Consultant zusammenarbeiten, ist es nicht erforderlich, dass Sie die Informationen in diesen Dokumenten vor der Implementierung [!DNL Target]. Kenntnis der von der Consulting-Abteilung erstellten Dokumente sowie Beantwortung ihrer Fragen helfen bei der Beschleunigung der Implementierungsvorbereitung. Diese Dokumente werden in Zukunft möglicherweise überarbeitet.
+Wenn Sie mit einem Adobe-Berater zusammenarbeiten, ist es nicht erforderlich, dass Sie die Informationen in diesen Dokumenten vor der Implementierung von [!DNL Target] kennen. Kenntnis der von der Consulting-Abteilung erstellten Dokumente sowie Beantwortung ihrer Fragen helfen bei der Beschleunigung der Implementierungsvorbereitung. Diese Dokumente werden in Zukunft möglicherweise überarbeitet.
 
-## [!DNL Adobe Target] geschäftliche Informationsanfrage
+## [!DNL Adobe Target] Geschäftliche Informationsanfrage
 
-Dieser Abschnitt enthält das Dokument Geschäftliche Informationsanfrage (RFI) , das vom Kunden vor der [!DNL Target] Implementierungsaufruf.
+Dieser Abschnitt enthält das Dokument Geschäftliche Informationsanfrage (Business Request for Information, RFI) , das vom Kunden vor dem Kick-off-Aufruf der [!DNL Target] -Implementierung ausgefüllt werden sollte.
 
 Folgende Ziele werden mit dem geschäftlichen RFI-Dokument verfolgt:
 
@@ -30,9 +30,9 @@ Folgende Ziele werden mit dem geschäftlichen RFI-Dokument verfolgt:
 
 Laden Sie sich das [Dokument für geschäftliche Informationsanfragen](assets/business-rfi.docx) herunter.
 
-## [!DNL Adobe Target] technische Informationsanfrage
+## [!DNL Adobe Target] Technische Informationsanfrage
 
-Dieser Abschnitt enthält das Dokument zur technischen Informationsanfrage (Technical Request for Information, RFI), das unser Beratungsteam bei der Entwicklung eines [!DNL Target] Implementierung, die die geschäftlichen und technischen Anforderungen des Kunden erfüllt. Mittels der in diesem Dokument gestellten Fragen werden versteckte Hürden oder Hindernisse aufgedeckt, sodass das Risiko einer Implementierungsrevision minimiert oder gar vermieden wird.
+Dieser Abschnitt enthält das Dokument zur technischen Informationsanfrage (Technical Request for Information, RFI), das unserem Beratungsteam dabei hilft, eine Implementierung vom Typ &quot;[!DNL Target]&quot; zu entwickeln, die den geschäftlichen und technischen Anforderungen des Kunden entspricht. Mittels der in diesem Dokument gestellten Fragen werden versteckte Hürden oder Hindernisse aufgedeckt, sodass das Risiko einer Implementierungsrevision minimiert oder gar vermieden wird.
 
 Folgende Ziele werden mit dem technischen RFI-Dokument verfolgt:
 

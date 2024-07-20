@@ -108,7 +108,7 @@ ht-degree: 45%
       + [AAM-Segmente](implement/server-side/sdk-guides/integration-with-experience-cloud/aam-segments.md)
    + On-Device Decisioning {#on-device-decisioning}
       + [Übersicht über On-device Decisioning](implement/server-side/sdk-guides/on-device-decisioning/overview.md)
-      + Regelartefakt {#rule-artifact}
+      + Regel-Artefakt {#rule-artifact}
          + [Übersicht über Regelartefakte](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)
          + [Herunterladen über das Adobe Target SDK](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-sdk.md)
          + [Download über JSON-Payload](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-json.md)
@@ -165,13 +165,13 @@ ht-degree: 45%
 + [Hybridimplementierung](implement/hybrid/hybrid-overview.md)
 + [Recommendations-Implementierung](implement/recommendations/recommendations.md)
 + [Beta-Implementierung von Recommendations](/help/dev/implement/recommendations/recommendations-beta.md)
-+ Implementierung mobiler Apps {#mobile-apps}
++ Implementierung der Mobile App {#mobile-apps}
    + [Target für mobile Apps – Überblick](implement/mobile/overview.md)
    + [Mobile Target-Vorschau](implement/mobile/target-mobile-preview.md)
    + [Verwenden des Standortdienstes](implement/mobile/use-location-service.md)
    + [Target für mobile Apps – FAQs](implement/mobile/mobile-faq.md)
    + [Implementieren von Target mit dem AEP Mobile SDK in eine native App mit Webansichten](/help/dev/implement/mobile/native-app.md)
-+ Email-Implementierung {#implement-email}
++ E-Mail-Implementierung {#implement-email}
    + [E-Mail: Target-Implementierung – Überblick](implement/email/overview.md)
    + [Erstellen einer AdBox für ein Bild](implement/email/testing-content-with-the-adbox.md)
    + [Testen einer E-Mail-Bild-AdBox](implement/email/testing-email-image-adbox.md)
@@ -202,7 +202,7 @@ ht-degree: 45%
       + [Single Profile Update API](/help/dev/administer/profile-api/profile-single-api.md)
       + [Bulk-Profil-Update-API](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [Berichterstellungs-API](/help/dev/administer/reporting-api/reporting-api.md)
-   + Recommendations-API {#recommendations-api}
+   + Recommendations API {#recommendations-api}
       + [Übersicht über die Recommendations API](before-administer/recs-api/overview.md)
       + [Verwalten Ihres Katalogs mit APIs](before-administer/recs-api/manage-catalog.md)
       + [Benutzerdefinierte Kriterien verwalten](before-administer/recs-api/manage-custom-criteria.md)

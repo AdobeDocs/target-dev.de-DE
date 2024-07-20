@@ -1,19 +1,19 @@
 ---
 keywords: Google, SameSite, Cookies, Chrome 80, ietf
-description: Erfahren Sie mehr darüber, wie  [!DNL Adobe Target]  den SameSite-IETF-Standard handhabt, der mit Google Chrome Version 80 eingeführt wird, und was Sie tun müssen, um diese Richtlinien zu erfüllen.
+description: Erfahren Sie, wie [!DNL Adobe Target] den mit Google Chrome Version 80 eingeführten SameSite-IETF-Standard verarbeitet und was Sie tun müssen, um diese Richtlinien zu erfüllen.
 title: Wie handhabt  [!DNL Target]  die SameSite-Cookie-Richtlinien von Google?
 feature: Privacy & Security
 exl-id: 58a83def-9625-4d44-914f-203509c6c434
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1950'
-ht-degree: 70%
+source-wordcount: '1973'
+ht-degree: 68%
 
 ---
 
 # SameSite-Cookie-Richtlinien von Google Chrome
 
-Google implementierte mit der Release von Chrome 80 Anfang 2020 neue Cookie-Richtlinien für Benutzer. In diesem Artikel erfahren Sie alles, was Sie über die neuen SameSite-Cookie-Richtlinien wissen müssen, und wie [!DNL Adobe Target] unterstützt diese Richtlinien und wie Sie [!DNL Target] , um die neuen SameSite-Cookie-Richtlinien von Google Chrome einzuhalten.
+Google implementierte mit der Release von Chrome 80 Anfang 2020 neue Cookie-Richtlinien für Benutzer. In diesem Artikel erfahren Sie alles, was Sie über die neuen SameSite-Cookie-Richtlinien wissen müssen, wie [!DNL Adobe Target] diese Richtlinien unterstützt und wie Sie mit [!DNL Target] die neuen SameSite-Cookie-Richtlinien von Google Chrome einhalten können.
 
 Ab Chrome 80 müssen Web-Entwickler explizit angeben, welche Cookies Website-übergreifend genutzt werden. Dies ist die erste von vielen Ankündigungen, die Google zur Verbesserung des Datenschutzes und der Sicherheit im Internet plant.
 
@@ -31,7 +31,7 @@ Nehmen wir an, ein hypothetisches Social-Media-Unternehmen namens &quot;Freunde&
 
 Damit das möglich ist, ruft der Browser beim Laden des Nachrichtenartikels die Freigabe-Schaltfläche der Friends-Website von `platform.friends.com` ab. Im Zuge dieses Prozesses hängt der Browser Friends-Cookies, die die Anmeldedaten des Benutzers enthalten, an die Anfrage an die Friends-Server an. Auf diese Weise können Freunde den Newsartikel im Feed im Namen des Benutzers posten, ohne dass der Benutzer sich anmelden muss.
 
-Dies ist alles durch die Verwendung von Drittanbieter-Cookies möglich. In diesem Fall wird das Drittanbieter-Cookie im Browser für `platform.friends.com`, sodass `platform.friends.com` kann den Beitrag in der Friends-App im Namen des Benutzers erstellen.
+Dies ist alles durch die Verwendung von Drittanbieter-Cookies möglich. In diesem Fall wird das Drittanbieter-Cookie im Browser für `platform.friends.com` gespeichert, sodass `platform.friends.com` den Beitrag in der Friends-App im Namen des Benutzers erstellen kann.
 
 Wenn Sie sich einen Moment vorstellen, wie dieses Szenario ohne Drittanbieter-Cookies aussehen würde, müsste der Benutzer viele manuelle Schritte ausführen. Zunächst müsste der Benutzer den Link zum Nachrichtenartikel kopieren. Dann müsste sich der Benutzer bei der Friends-App anmelden. Anschließend müsste der Benutzer auf die Schaltfläche „Beitrag erstellen“ klicken. Danach müsste der Benutzer den Link in das Textfeld kopieren und abschließend auf „Posten“ klicken. Wie Sie sehen, verbessern Drittanbieter-Cookies die Benutzerfreundlichkeit erheblich, da die manuellen Schritte drastisch reduziert werden können.
 
@@ -43,9 +43,9 @@ Obwohl Cookies Benutzererlebnisse verbessern und die Schaltung von Werbeanzeigen
 
 ## Wie verwendet [!DNL Target] Cookies?
 
-Lassen Sie uns mit all dem sehen, wie [!DNL Target] verwendet Cookies. Damit Sie [!DNL Target] überhaupt verwenden können, müssen Sie die [!DNL Target] JavaScript-Bibliothek auf Ihrer Site installieren. Dadurch können Sie ein Erstanbieter-Cookie im Browser des Benutzers platzieren, der Ihre Site besucht. Wenn Ihr Benutzer mit Ihrer Website interagiert, können Sie die Verhaltens- und Interessendaten des Benutzers an [!DNL Target] durch die JavaScript-Bibliothek. Die [!DNL Target] Die JavaScript-Bibliothek verwendet Erstanbieter-Cookies, um Identifizierungsinformationen über den Benutzer zu extrahieren und diese den Verhaltens- und Interessensdaten des Benutzers zuzuordnen. Diese Daten werden dann von [!DNL Target] für Ihre Personalisierungsaktivitäten verwendet.
+Bei all dem sehen wir, wie [!DNL Target] Cookies verwendet. Damit Sie [!DNL Target] überhaupt verwenden können, müssen Sie die [!DNL Target] JavaScript-Bibliothek auf Ihrer Site installieren. Dadurch können Sie ein Erstanbieter-Cookie im Browser des Benutzers platzieren, der Ihre Site besucht. Wenn Ihr Benutzer mit Ihrer Website interagiert, können Sie die Verhaltens- und Interessendaten des Benutzers über die JavaScript-Bibliothek an [!DNL Target] übergeben. Die JavaScript-Bibliothek &quot;[!DNL Target]&quot;verwendet Erstanbieter-Cookies, um Identifizierungsinformationen über den Benutzer zu extrahieren und diese den Verhaltens- und Interessensdaten des Benutzers zuzuordnen. Diese Daten werden dann von [!DNL Target] für Ihre Personalisierungsaktivitäten verwendet.
 
-Target verwendet auch (manchmal) Drittanbieter-Cookies. Wenn Sie über mehrere Websites verfügen, die sich auf unterschiedlichen Domains befinden, und die Journey eines Benutzers auf diesen Websites verfolgen möchten, können Sie Drittanbieter-Cookies verwenden, indem Sie Domain-übergreifendes Tracking nutzen. Wenn Sie Domain-übergreifendes Tracking in der [!DNL Target] JavaScript-Bibliothek aktivieren, verwendet Ihr Konto Drittanbieter-Cookies. Wenn ein Benutzer von einer Domäne zu einer anderen wechselt, kommuniziert der Browser mit dem Backend-Server von Target. Dabei wird ein Drittanbieter-Cookie erstellt und im Browser des Benutzers platziert. Durch das Drittanbieter-Cookie, das im Browser des Benutzers gespeichert ist, [!DNL Target] kann für einen einzelnen Benutzer ein konsistentes Erlebnis über verschiedene Domänen hinweg bereitstellen.
+Target verwendet auch (manchmal) Drittanbieter-Cookies. Wenn Sie über mehrere Websites verfügen, die sich auf unterschiedlichen Domains befinden, und die Journey eines Benutzers auf diesen Websites verfolgen möchten, können Sie Drittanbieter-Cookies verwenden, indem Sie Domain-übergreifendes Tracking nutzen. Wenn Sie Domain-übergreifendes Tracking in der [!DNL Target] JavaScript-Bibliothek aktivieren, verwendet Ihr Konto Drittanbieter-Cookies. Wenn ein Benutzer von einer Domäne zu einer anderen wechselt, kommuniziert der Browser mit dem Backend-Server von Target. Dabei wird ein Drittanbieter-Cookie erstellt und im Browser des Benutzers platziert. Mit dem Drittanbieter-Cookie, das im Browser des Benutzers gespeichert ist, kann [!DNL Target] für einen einzelnen Benutzer ein konsistentes domänenübergreifendes Erlebnis bereitstellen.
 
 ## Neues Cookie-Rezept von Google
 
@@ -63,16 +63,16 @@ Zusammengefasst werden mit Chrome 80 zwei unabhängige Einstellungen für Benutz
 
 ![SameSite-Dialogfeld](../assets/samesite.png)
 
-* **Standard-SameSite-Cookies**: Wenn festgelegt, werden alle Cookies, die das Attribut &quot;SameSite&quot;nicht angeben, automatisch zur Verwendung von `SameSite = Lax`.
+* **Standard-SameSite-Cookies**: Wenn festgelegt, werden alle Cookies, die das Attribut &quot;SameSite&quot;nicht angeben, automatisch gezwungen, `SameSite = Lax` zu verwenden.
 * **Cookies ohne SameSite müssen sicher sein**: Wenn diese Einstellung ausgewählt ist, müssen Cookies ohne das SameSite-Attribut oder mit `SameSite = None` sicher sein. „Sicher“ bedeutet in diesem Zusammenhang, dass alle Browser-Anfragen dem HTTPS-Protokoll folgen müssen. Cookies, die diese Anforderung nicht erfüllen, werden abgelehnt. Alle Websites sollten HTTPS verwenden, um diese Anforderung zu erfüllen.
 
-## [!DNL Target] unterstützt die bewährten Sicherheitsverfahren von Google
+## [!DNL Target] befolgt die Best Practices für die Sicherheit von Google
 
-Wir möchten in der Adobe stets die neuesten Best Practices der Branche für Sicherheit und Datenschutz unterstützen. Deshalb freuen wir uns, Ihnen mitteilen zu können, dass [!DNL Target] die neuen von Google eingeführten Sicherheits- und Datenschutzeinstellungen unterstützt.
+Bei Adobe wollen wir stets die neuesten Best Practices der Branche für Sicherheit und Datenschutz unterstützen. Deshalb freuen wir uns, Ihnen mitteilen zu können, dass [!DNL Target] die neuen von Google eingeführten Sicherheits- und Datenschutzeinstellungen unterstützt.
 
 Für die Einstellung „Standard-SameSite-Cookies“ stellt [!DNL Target] weiterhin Personalisierungen bereit, ohne dass dies Auswirkungen auf Sie hat oder Eingriffe Ihrerseits erfordert. [!DNL Target] verwendet Erstanbieter-Cookies und funktioniert weiterhin ordnungsgemäß, da das Flag `SameSite = Lax` von Google Chrome angewendet wird.
 
-Für die Option &quot;Cookies ohne SameSite müssen sicher sein&quot;müssen die Erstanbieter-Cookies in [!DNL Target] wird weiterhin funktionieren.
+Bei der Option &quot;Cookies ohne SameSite müssen sicher sein&quot;funktionieren die Erstanbieter-Cookies in [!DNL Target] weiterhin, wenn Sie sich nicht für die domänenübergreifende Tracking-Funktion in Target anmelden.
 
 Wenn Sie sich jedoch für die Verwendung des Domain-übergreifenden Trackings entscheiden, um [!DNL Target] in mehreren Domains zu nutzen, verlangt Chrome die Verwendung der Flags `SameSite = None` und „Sicher“ für Drittanbieter-Cookies. Sie müssen also sicherstellen, dass Ihre Websites das HTTPS-Protokoll verwenden. Client-seitige Bibliotheken in [!DNL Target] verwenden automatisch das HTTPS-Protokoll und hängen die Flags `SameSite = None` und „Sicher“ an Drittanbieter-Cookies in [!DNL Target] an, um sicherzustellen, dass alle Aktivitäten weiterhin ausgeführt werden.
 
@@ -86,8 +86,8 @@ Um zu verstehen, was Sie tun müssen, damit [!DNL Target] weiterhin für Benutze
 
 | Target JavaScript-Bibliothek | Standard-SameSite-Cookies = Aktiviert | Cookies ohne SameSite müssen sicher sein = Aktiviert |
 | --- | --- | --- |
-| at.js 1.*x*   mit Erstanbieter-Cookie. | Keine Auswirkung. | Keine Auswirkung, wenn Sie kein Domain-übergreifendes Tracking verwenden. |
-| at.js 1.*x*   mit aktiviertem Domain-übergreifendem Tracking. | Keine Auswirkung. | Sie müssen das HTTPS-Protokoll für ihre Website aktivieren.<br />Target verwendet ein Drittanbieter-Cookie zur Benutzerverfolgung und Google erfordert, dass Drittanbieter-Cookies `SameSite = None` und Sichere Markierung. Das Flag „Sicher“ erfordert, dass Ihre Sites das HTTPS-Protokoll verwenden. |
+| at.js 1.*x* mit Erstanbieter-Cookie. | Keine Auswirkung. | Keine Auswirkung, wenn Sie kein Domain-übergreifendes Tracking verwenden. |
+| at.js 1.*x* mit aktiviertem domänenübergreifenden Tracking. | Keine Auswirkung. | Sie müssen das HTTPS-Protokoll für ihre Website aktivieren.<br />Target verwendet ein Drittanbieter-Cookie zur Benutzerverfolgung, und Google erfordert, dass Drittanbieter-Cookies über die Kennzeichnung `SameSite = None` und &quot;Sicher&quot;verfügen. Das Flag „Sicher“ erfordert, dass Ihre Sites das HTTPS-Protokoll verwenden. |
 | at.js 2.*x*  | Keine Auswirkung. | Keine Auswirkung. |
 
 ## Was muss [!DNL Target] tun?
@@ -96,8 +96,8 @@ Was mussten wir also in unserer Plattform tun, damit Sie die neuen SameSite-Cook
 
 | Target JavaScript-Bibliothek | Standard-SameSite-Cookies = Aktiviert | Cookies ohne SameSite müssen sicher sein = Aktiviert |
 | --- | --- | --- |
-| at.js 1.*x*   mit Erstanbieter-Cookie. | Keine Auswirkung. | Keine Auswirkung, wenn Sie kein Domain-übergreifendes Tracking verwenden. |
-| at.js 1.*x*   mit aktiviertem Domain-übergreifendem Tracking. | Keine Auswirkung. | at.js 1.*x*   mit aktiviertem Domain-übergreifendem Tracking. |
+| at.js 1.*x* mit Erstanbieter-Cookie. | Keine Auswirkung. | Keine Auswirkung, wenn Sie kein Domain-übergreifendes Tracking verwenden. |
+| at.js 1.*x* mit aktiviertem domänenübergreifenden Tracking. | Keine Auswirkung. | at.js 1.*x* mit aktiviertem domänenübergreifenden Tracking. |
 | at.js 2.*x*  | Keine Auswirkung. | Keine Auswirkung. |
 
 ## Wie wirkt sich das aus, wenn Sie nicht mit dem HTTPS-Protokoll fortfahren?
@@ -106,4 +106,4 @@ Das einzige Szenario, das eine Auswirkung auf Sie hat, ist, wenn Sie über at.js
 
 ## Schlussfolgerung 
 
-Da die Branche Fortschritte bei der Schaffung eines sichereren Webs für die Verbraucher macht, ist Adobe fest entschlossen, unseren Kunden zu helfen, personalisierte Erlebnisse auf eine Weise bereitzustellen, die die Sicherheit und den Datenschutz für die Endbenutzer gewährleistet. Sie müssen lediglich die oben genannten Best Practices befolgen und von [!DNL Target] , um die neuen SameSite-Cookie-Richtlinien von Google Chrome einzuhalten.
+Da die Branche Fortschritte bei der Schaffung eines sicheren Webs für die Verbraucher macht, ist Adobe fest entschlossen, unseren Kunden zu helfen, personalisierte Erlebnisse auf eine Weise bereitzustellen, die die Sicherheit und Privatsphäre der Endbenutzer gewährleistet. Sie müssen lediglich die oben genannten Best Practices befolgen und [!DNL Target] nutzen, um die neuen SameSite-Cookie-Richtlinien von Google Chrome einzuhalten.

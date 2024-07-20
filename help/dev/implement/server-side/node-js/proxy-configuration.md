@@ -1,11 +1,11 @@
 ---
-title: Implementieren der Proxy-Konfiguration im [!DNL Adobe Target] Node.js-SDK
-description: Erfahren Sie, wie Sie die [!UICONTROL TargetClient] Proxy-Konfiguration in der [!DNL Adobe Target] Node.js-SDK.
+title: Proxy-Konfiguration im [!DNL Adobe Target] Node.js-SDK implementieren
+description: Erfahren Sie, wie Sie die [!UICONTROL TargetClient] -Proxy-Konfiguration im SDK [!DNL Adobe Target] Node.js konfigurieren.
 feature: APIs/SDKs
 exl-id: c9f04e81-3fa3-4e64-a974-379420b0518a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '94'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Um einen Proxy für die HTTP-Anfragen des Node SDK zu konfigurieren, überschreiben Sie die Abruf-API, die vom SDK während der Initialisierung verwendet wird.
 
-Im Folgenden finden Sie ein grundlegendes Beispiel für die Außerkraftsetzung von `fetchApi` während der `TargetClient` Initialisierung zum Hinzufügen eines Proxys:
+Das folgende Beispiel zeigt, wie Sie `fetchApi` während der Initialisierung von `TargetClient` überschreiben, um einen Proxy hinzuzufügen:
 
 ```javascript {line-numbers="true"}
 const { ProxyAgent } = require("undici");
@@ -33,6 +33,6 @@ client = TargetClient.create({
 });
 ```
 
-Beachten Sie, dass dies nur für die Knotenversionen 18.2+ funktioniert, in denen `undici.fetch` ist der Standardwert `fetch` für Knoten.
-Besuchen Sie die [Node SDK samples repo](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/proxy-configuration)
+Beachten Sie, dass dies nur für Knotenversionen ab Version 18.2 funktioniert, wobei `undici.fetch` der Standardwert `fetch` für Knoten ist.
+Besuchen Sie den [Knoten SDK samples repo](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/proxy-configuration) .
 für Beispiele zur Proxy-Konfiguration für ältere Versionen von Knoten und weitere Informationen.

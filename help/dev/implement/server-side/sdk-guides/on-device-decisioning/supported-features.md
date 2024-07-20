@@ -5,14 +5,14 @@ feature: APIs/SDKs
 exl-id: 15d9870f-6c58-4da0-bfe5-ef23daf7d273
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 10%
+source-wordcount: '474'
+ht-degree: 13%
 
 ---
 
 # Übersicht über unterstützte Funktionen
 
-[!DNL Adobe Target]Die Server-seitigen SDKs von geben Entwicklern die Flexibilität, sich für Entscheidungen zwischen Leistung und Aktualisierung von Daten zu entscheiden. Sollte Ihnen also die Bereitstellung der relevantesten und ansprechendsten personalisierten Inhalte über maschinelles Lernen am wichtigsten sein, sollte ein Live-Server-Aufruf durchgeführt werden. Wenn die Leistung jedoch kritischer ist, sollte eine Entscheidung auf dem Gerät getroffen werden. Für [!UICONTROL on-device decisioning] Informationen zur Verwendung finden Sie in der folgenden Liste unterstützter Funktionen:
+Die serverseitigen SDKs von [!DNL Adobe Target] geben Entwicklern die Flexibilität, zwischen Leistung und Aktualisierung von Daten für Entscheidungen zu wählen. Sollte Ihnen also die Bereitstellung der relevantesten und ansprechendsten personalisierten Inhalte über maschinelles Lernen am wichtigsten sein, sollte ein Live-Server-Aufruf durchgeführt werden. Wenn die Leistung jedoch kritischer ist, sollte eine Entscheidung auf dem Gerät getroffen werden. Damit [!UICONTROL on-device decisioning] funktioniert, lesen Sie die folgende Liste unterstützter Funktionen:
 
 * Aktivitätstypen
 * Zielgruppen-Targeting
@@ -20,9 +20,9 @@ ht-degree: 10%
 
 ## Aktivitätstypen 
 
-Die folgende Tabelle zeigt, [Aktivitätstypen](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) erstellt mithilfe der [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?) werden unterstützt oder nicht unterstützt für [!UICONTROL on-device decisioning].
+Die folgende Tabelle zeigt, welche [Aktivitätstypen](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html), die mit dem [formularbasierten Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?) erstellt wurden, für [!UICONTROL on-device decisioning] unterstützt oder nicht unterstützt werden.
 
-| Aktivitätstyp | Unterstützt |
+| Aktivitätstyp | „Unterstützt“ |
 | --- | --- |
 | [A/B-Test](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html) | Ja |
 | [Automatische Zuordnung](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html) | Nein |
@@ -36,7 +36,7 @@ Die folgende Tabelle zeigt, [Aktivitätstypen](https://experienceleague.adobe.co
 
 ## Zielgruppen-Targeting
 
-Die folgende Tabelle zeigt, für welche Zielgruppenregeln unterstützt oder nicht unterstützt werden [!UICONTROL on-device decisioning].
+Die folgende Tabelle zeigt, welche Zielgruppenregeln für [!UICONTROL on-device decisioning] unterstützt werden oder nicht.
 
 | Zielgruppenregel | Gerätebezogene Entscheidungsfindung |
 | --- | --- |
@@ -50,15 +50,15 @@ Die folgende Tabelle zeigt, für welche Zielgruppenregeln unterstützt oder nich
 | [Besucherprofil](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | Nein |
 | [Traffic-Quellen](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | Nein |
 | [Zeitrahmen](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | Ja |
-| [Experience Cloud Audiences](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (Zielgruppen aus Adobe Audience Manager, Adobe Analytics und Adobe Experience Manager) | Nein |
+| [Experience Cloud-Zielgruppen](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (Zielgruppen aus Adobe Audience Manager, Adobe Analytics und Adobe Experience Manager) | Nein |
 
 ### Geotargeting für [!UICONTROL on-device decisioning]
 
-Um eine nahezu Nulllatenz für [!UICONTROL on-device decisioning] -Aktivitäten mit geo-basierten Zielgruppen verwenden, empfiehlt Adobe, die Geowerte selbst im -Aufruf an anzugeben. `getOffers`. Legen Sie dazu die `Geo` -Objekt im `Context` des Antrags. Dies bedeutet, dass Ihr Server eine Möglichkeit benötigt, den Standort der einzelnen Endbenutzer zu ermitteln. Beispielsweise kann Ihr Server mithilfe eines von Ihnen konfigurierten Dienstes eine IP-zu-Geo-Suche durchführen. Einige Hosting-Provider, wie z. B. Google Cloud, bieten diese Funktionalität über benutzerdefinierte Header in jedem `HttpServletRequest`.
+Um eine nahezu Nulllatenz für [!UICONTROL on-device decisioning] -Aktivitäten mit geo-basierten Zielgruppen zu gewährleisten, empfiehlt Adobe, die Geowerte selbst im Aufruf von `getOffers` anzugeben. Setzen Sie dazu das Objekt `Geo` in das Objekt `Context` der Anfrage. Dies bedeutet, dass Ihr Server eine Möglichkeit benötigt, den Standort der einzelnen Endbenutzer zu ermitteln. Beispielsweise kann Ihr Server mithilfe eines von Ihnen konfigurierten Dienstes eine IP-zu-Geo-Suche durchführen. Einige Hosting-Provider, wie z. B. Google Cloud, stellen diese Funktionalität über benutzerdefinierte Header in jedem `HttpServletRequest` bereit.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```csharp {line-numbers="true"}
 const CONFIG = {
@@ -87,7 +87,7 @@ targetClient.getOffers({
 })
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```javascript {line-numbers="true"}
 public class TargetRequestUtils {
@@ -114,12 +114,12 @@ public class TargetRequestUtils {
 
 >[!ENDTABS]
 
-Wenn Sie jedoch nicht die Möglichkeit haben, IP-zu-Geo-Suchen auf Ihrem Server durchzuführen, aber dennoch [!UICONTROL on-device decisioning] für `getOffers` Anforderungen, die geobasierte Zielgruppen enthalten, wird dies ebenfalls unterstützt. Der Nachteil dieses Ansatzes besteht darin, dass eine Remote-IP-zu-Geo-Suche verwendet wird, die zu jedem `getOffers` aufrufen. Diese Latenz sollte kleiner als eine Remote-Latenz sein. `getOffers` aufrufen, da es ein CDN trifft, das sich in der Nähe Ihres Servers befindet. Sie dürfen nur die Variable `ipAddress` im Feld `Geo` -Objekt im `Context` Ihrer Anfrage verwenden, damit das SDK den geografischen Standort der IP-Adresse Ihres Benutzers abrufen kann. Wenn ein anderes Feld zusätzlich zum `ipAddress` wird angegeben, [!DNL Target] Das SDK ruft die Metadaten für den geografischen Standort nicht zur Auflösung ab.
+Wenn Sie jedoch keine IP-zu-Geo-Suchen auf Ihrem Server durchführen können, aber dennoch [!UICONTROL on-device decisioning] für `getOffers` -Anforderungen ausführen möchten, die geobasierte Zielgruppen enthalten, wird dies ebenfalls unterstützt. Der Nachteil dieses Ansatzes besteht darin, dass eine Remote-IP-zu-Geo-Suche verwendet wird, wodurch jedem `getOffers` -Aufruf Latenzzeiten hinzugefügt werden. Diese Latenz sollte kleiner als ein Remote-Aufruf von `getOffers` sein, da er ein CDN trifft, das sich in der Nähe Ihres Servers befindet. Sie dürfen das Feld `ipAddress` nur im Objekt `Geo` in der `Context` Ihrer Anfrage angeben, damit das SDK den geografischen Standort der IP-Adresse Ihres Benutzers abruft. Wenn ein anderes Feld zusätzlich zum `ipAddress` angegeben wird, ruft das [!DNL Target]-SDK die Metadaten für den geografischen Standort nicht zur Auflösung ab.
 
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```csharp {line-numbers="true"}
 const CONFIG = {
@@ -144,7 +144,7 @@ targetClient.getOffers({
 })
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```javascript {line-numbers="true"}
 public class TargetRequestUtils {
@@ -165,9 +165,9 @@ public class TargetRequestUtils {
 
 ## Zuordnungsmethode
 
-Die folgende Tabelle zeigt, welche Zuordnungsmethoden unterstützt oder nicht unterstützt werden [!UICONTROL on-device decisioning].
+Die folgende Tabelle zeigt, welche Zuordnungsmethoden für [!UICONTROL on-device decisioning] unterstützt werden oder nicht.
 
-| Zuordnungsmethode | Unterstützt |
+| Zuordnungsmethode | „Unterstützt“ |
 | --- | --- |
 | Manuell | Ja |
 | [Automatisch dem besten Erlebnis zuordnen](https://experienceleague.adobe.com/docs/target/using/activities/auto-allocate/automated-traffic-allocation.html) | Nein |

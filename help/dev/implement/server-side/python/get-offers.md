@@ -1,12 +1,12 @@
 ---
-title: Verwenden Sie getOffers() in [!DNL Adobe Target] bei Verwendung des Python SDK
-description: Erfahren Sie, wie Sie mit getOffers() eine Entscheidung ausführen und ein Erlebnis abrufen können aus [!DNL Adobe Target].
+title: Verwenden Sie getOffers() in [!DNL Adobe Target] bei der Verwendung des Python-SDK.
+description: Erfahren Sie, wie Sie mit getOffers() eine Entscheidung ausführen und ein Erlebnis aus  [!DNL Adobe Target] abrufen können.
 feature: APIs/SDKs
 exl-id: 9539b806-e070-430e-80cf-cf632ce3f207
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 13%
+source-wordcount: '348'
+ht-degree: 12%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 13%
 
 ## Beschreibung
 
-`get_offers()` wird zum Ausführen einer Entscheidung und zum Abrufen eines Erlebnisses aus verwendet [!DNL Adobe Target].
+`get_offers()` wird verwendet, um eine Entscheidung auszuführen und ein Erlebnis aus [!DNL Adobe Target] abzurufen.
 
 
 ## Methode
@@ -27,48 +27,48 @@ target_client_instance.get_offers(options)
 
 ## Parameter
 
-Die `options` dict weist die folgende Struktur auf:
+Das `options` -Wörterbuch weist die folgende Struktur auf:
 
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
-| Anfrage | DeliveryRequest | Ja | Keine | Entspricht dem [[!DNL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) Anfrage |
-| target_cookie | str | no | Keine | [!DNL Target] Cookie |
+| Anfrage | DeliveryRequest | Ja | Keine | Konformität mit der [[!DNL Target Delivery API]](/help/dev/implement/delivery-api/overview.md)-Anforderung |
+| target_cookie | str | no | Keine | [!DNL Target] -Cookie |
 | target_location_hint | str | no | Keine | [!DNL Target] Standorthinweis |
 | consumer_id | str | no | Keine | Beim Zuordnen mehrerer Aufrufe sollten unterschiedliche Kunden-IDs angegeben werden |
-| customer_ids | Liste[CustomerId] | no | Keine | Eine Liste der Kunden-IDs im mit VisitorId kompatiblen Format |
+| customer_ids | list[CustomerId] | no | Keine | Eine Liste der Kunden-IDs im mit VisitorId kompatiblen Format |
 | session_id | str | no | Keine | Wird zum Verknüpfen mehrerer Anforderungen verwendet |
 | callback | callable | no | Keine | Wenn die Anfrage asynchron verarbeitet wird, wird der Callback aufgerufen, wenn die Antwort bereit ist |
 | err_callback | callable | no | Keine | Wenn die Anfrage asynchron verarbeitet wird, wird beim Auslösen einer Ausnahme der Fehler-Callback aufgerufen |
 
-## Rückgabe
+## Rückgaben
 
-Gibt eine `TargetDeliveryResponse` wenn synchron aufgerufen wird (Standard) oder eine `AsyncResult` , wenn mit einem Rückruf aufgerufen wird. `TargetDeliveryResponse` weist die folgende Struktur auf:
+Gibt eine `TargetDeliveryResponse` zurück, wenn synchron aufgerufen wird (Standard), oder eine `AsyncResult`, wenn mit einem Rückruf aufgerufen wird. `TargetDeliveryResponse` weist die folgende Struktur auf:
 
 | Name | Typ | Beschreibung |
 | --- | --- | --- |
-| response | DeliveryResponse | Entspricht dem [[!UICONTROL Target-Bereitstellungs-API]](/help/dev/implement/delivery-api/overview.md) response |
-| target_cookie | dict | [!DNL Target] Cookie |
-| target_location_hint_cookie | dict | [!DNL Target] Standorthinweis-Cookie |
-| analytics_details | Liste[AnalyticsResponse] | Analytics-Nutzlast bei clientseitiger Analytics-Nutzung |
-| trace | Liste[dict] | Aggregierte Trace-Daten für alle Anfrage-Mboxes/Ansichten |
-| response_tokens | Liste[dict] | Liste der &#x200B;[Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) |
+| response | DeliveryResponse | Konformität mit der Antwort [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) |
+| target_cookie | dict | [!DNL Target] -Cookie |
+| target_location_hint_cookie | dict | [!DNL Target] location hint cookie |
+| analytics_details | list[AnalyticsResponse] | Analytics-Nutzlast bei clientseitiger Analytics-Nutzung |
+| trace | list[dict] | Aggregierte Trace-Daten für alle Anfrage-Mboxes/Ansichten |
+| response_tokens | list[dict] | Eine Liste der &#x200B;[Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) |
 | Meta | dict | Zusätzliche Entscheidungsmetadaten für die Verwendung mit on-device-Decisioning |
 
-`target_cookie` und `target_location_hint_cookie` -Objekte, die zum Zurückgeben von Daten an den Browser verwendet werden, weisen die folgende Struktur auf:
+Die Objekte `target_cookie` und `target_location_hint_cookie`, die zum Zurückgeben von Daten an den Browser verwendet werden, weisen die folgende Struktur auf:
 
 | Name | Typ | Beschreibung |
 | --- | --- | --- |
 | name | str | Cookie-Name |
 | value | any | Cookie-Wert, wird der Wert in eine Zeichenfolge konvertiert |
-| max_age | int | Die `max_age option` ist eine einfache Möglichkeit, das Festlegen von Läuft relativ zur aktuellen Zeit in Sekunden vorzunehmen |
+| max_age | int | Die Einstellung &quot;`max_age option`&quot; ist eine praktische Methode, um die Ablaufzeit relativ zur aktuellen Zeit in Sekunden festzulegen. |
 
-Die `meta` -Objekt zur Angabe des Status der Zielantwort weist die folgende Struktur auf:
+Das `meta` -Objekt, das zur Angabe des Status der Zielantwort verwendet wird, weist die folgende Struktur auf:
 
 | Name | Typ | Beschreibung |
 | --- | --- | --- |
 | decisioning_method | str | Welche Entscheidungsmethode wurde verwendet: auf dem Gerät oder serverseitig |
-| remote_mboxes | befindet`[str]` | Wenn die Entscheidungsmethode `on-device`, wird ein Array von Mbox-Namen angegeben, die nicht vollständig auf dem Gerät festgelegt werden konnten. Mit anderen Worten: ein [[!UICONTROL Target-Bereitstellungs-API]](/help/dev/implement/delivery-api/overview.md) -Anfrage erforderlich. |
-| remote_views | befindet`[str]` | Wenn die Entscheidungsmethode auf dem Gerät ausgeführt wird, wird ein Array von Ansichtsnamen angegeben, die nicht vollständig auf dem Gerät festgelegt werden konnten. Mit anderen Worten: ein [[!UICONTROL Target-Bereitstellungs-API]](/help/dev/implement/delivery-api/overview.md) -Anfrage erforderlich. |
+| remote_mboxes | list`[str]` | Wenn die Entscheidungsmethode &quot;`on-device`&quot; lautet, wird ein Array von Mbox-Namen angegeben, über die auf dem Gerät nicht vollständig entschieden werden konnte. Anders ausgedrückt: Es ist eine [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) -Anfrage erforderlich. |
+| remote_views | list`[str]` | Wenn die Entscheidungsmethode auf dem Gerät ausgeführt wird, wird ein Array von Ansichtsnamen angegeben, die nicht vollständig auf dem Gerät festgelegt werden konnten. Anders ausgedrückt: Es ist eine [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) -Anfrage erforderlich. |
 
 ## Beispiel
 

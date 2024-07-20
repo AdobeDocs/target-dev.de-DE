@@ -4,20 +4,21 @@ description: Stellen Sie sicher, dass alle erforderlichen Schritte zum Rendern v
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 7%
+source-wordcount: '908'
+ht-degree: 4%
 
 ---
 
 # Erlebnisse rendern
 
-Führen Sie die Schritte im Abschnitt *Render-Erlebnisse* -Diagramm, um sicherzustellen, dass alle erforderlichen Aufgaben zum Rendern von Erlebnissen in der richtigen Reihenfolge ausgeführt werden.
+Führen Sie die Schritte im Diagramm *Render Erlebnisse* aus, um sicherzustellen, dass alle erforderlichen Aufgaben zum Rendern von Erlebnissen in der richtigen Reihenfolge ausgeführt werden.
 
 >[!NOTE]
 >
->Wenn Sie die automatische Seitenladeanforderung während der [Schritt &quot;Automatische Seitenladeanforderung konfigurieren&quot;](/help/dev/patterns/recs-atjs/initialize-sdk.md#automatic) in *SDKS initialisieren* können Sie diese Aktivität überspringen, es sei denn, Sie möchten das Adobe Target SDK aufrufen, um zusätzliche Erlebnisse mithilfe einer regionalen Ortsanforderung zu rendern.
+>Wenn Sie die automatische Seitenladeanforderung während des Schritts [Automatische Seitenladeanforderung konfigurieren](/help/dev/patterns/recs-atjs/initialize-sdk.md#automatic) in *Initialize SDKS* aktiviert haben, können Sie diese Aktivität überspringen, es sei denn, Sie möchten das Adobe Target SDK aufrufen, um zusätzliche Erlebnisse mithilfe einer regionalen Ortsanforderung zu rendern.
 
 >[!TIP]
 >
@@ -25,13 +26,13 @@ Führen Sie die Schritte im Abschnitt *Render-Erlebnisse* -Diagramm, um sicherzu
 
 ## Diagramm für Rendering-Erlebnisse {#diagram}
 
-Die automatische standardmäßige Flackerbehandlung mit at.js ist nur dann sinnvoll, wenn Sie [!UICONTROL Automatische Seitenladeanforderung] aktiviert. Diese Option blendet den gesamten HTML-Textkörper aus, während die Erlebnisse abgerufen werden [!DNL Target]. In diesem Fall ist es Ihre Verantwortung, mit Flackern umzugehen. Suchen Sie nach Implementierungsmustern, die für die Flackerverarbeitung verfügbar sind, um Hinweise zu erhalten.
+Die automatische standardmäßige Flackerbehandlung, die mit at.js verfügbar ist, ist nur sinnvoll, wenn Sie [!UICONTROL Automatic Page Load Request] aktiviert haben. Diese Option blendet den gesamten HTML-Textkörper aus, während die Erlebnisse aus [!DNL Target] abgerufen werden. In diesem Fall ist es Ihre Verantwortung, mit Flackern umzugehen. Suchen Sie nach Implementierungsmustern, die für die Flackerverarbeitung verfügbar sind, um Hinweise zu erhalten.
 
 >[!NOTE]
 >
->Die Schrittnummern in der folgenden Abbildung entsprechen den folgenden Abschnitten. Die Schrittzahlen sind nicht in einer bestimmten Reihenfolge und spiegeln nicht die Reihenfolge der Schritte wider, die in der [!DNL Target] Benutzeroberfläche beim Erstellen der Aktivität.
+>Die Schrittnummern in der folgenden Abbildung entsprechen den folgenden Abschnitten. Die Schrittnummern sind nicht in einer bestimmten Reihenfolge und spiegeln nicht die Reihenfolge der Schritte wider, die in der Benutzeroberfläche von [!DNL Target] beim Erstellen der Aktivität unternommen wurden.
 
-![Diagramm für Rendering-Erlebnisse](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
+![Diagramm für Render-Erlebnisse](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
 
 Klicken Sie auf die folgenden Links, um zu den gewünschten Abschnitten zu navigieren:
 
@@ -50,7 +51,7 @@ Klicken Sie auf die folgenden Links, um zu den gewünschten Abschnitten zu navig
 
 ## 3.1. Promotion {#promotion}
 
-Fügen Sie Promotionsartikel hinzu und steuern Sie deren Platzierung in Ihrem Empfehlungsentwurf, indem Sie im [!DNL Target] Benutzeroberfläche beim Erstellen der Aktivität.
+Fügen Sie Promotionsartikel hinzu und steuern Sie deren Platzierung in Ihrem Empfehlungsentwurf, indem Sie während der Erstellung der Aktivität Vorwärts- oder Rückwärts-Promotions in der Benutzeroberfläche von [!DNL Target] auswählen.
 
 +++Siehe Details
 
@@ -60,7 +61,7 @@ Fügen Sie Promotionsartikel hinzu und steuern Sie deren Platzierung in Ihrem Em
 * [Hervorheben nach Sammlung](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
 * [Hervorheben nach Attribut](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-**Entitätsparameter erforderlich**
+**Erforderliche Entitätsparameter**
 
 * Elementattribute in Promotions müssen bei Verwendung der Option &quot;Bewerben nach Attribut&quot;übergeben werden.
 
@@ -80,17 +81,17 @@ Machen Sie Empfehlungen basierend auf den Inhalten des Warenkorbs des Benutzers.
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL Personen, die diese ansahen, sahen diese an]
-* [!UICONTROL Personen, die diese ansahen, kauften diese]
-* [!UICONTROL Personen, die diese kauften, kauften diese]
+* [!UICONTROL People Who Viewed These, Viewed Those]
+* [!UICONTROL People Who Viewed These, Bought Those]
+* [!UICONTROL People Who Bought These, Bought Those]
 
-**Entitätsparameter erforderlich**
+**Erforderliche Entitätsparameter**
 
 * cartIds
 
 **Lesungen**
 
-* [Warenkorbbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Warenkorb-basiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -104,22 +105,22 @@ Machen Sie Empfehlungen basierend auf der allgemeinen Beliebtheit eines Artikels
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL Am häufigsten angezeigt auf der gesamten Site]
-* [!UICONTROL Am häufigsten angezeigt nach Kategorie]
-* [!UICONTROL Am häufigsten nach Elementattribut angezeigt]
-* [!UICONTROL Topverkäufe auf der gesamten Site]
-* [!UICONTROL Topverkäufe nach Kategorie]
-* [!UICONTROL Topverkäufe nach Elementattribut]
-* [!UICONTROL Top nach Analytics-Metrik]
+* [!UICONTROL Most Viewed Across the Site]
+* [!UICONTROL Most Viewed by Category]
+* [!UICONTROL Most Viewed by Item Attribute]
+* [!UICONTROL Top Sellers Across the Site]
+* [!UICONTROL Top Sellers by Category]
+* [!UICONTROL Top Sellers by Item Attribute]
+* [!UICONTROL Top by Analytics Metric]
 
-**Entitätsparameter erforderlich**
+**Erforderliche Entitätsparameter**
 
 * `entity.categoryId` oder das Elementattribut für die Beliebtheit, wenn das Kriterium auf dem aktuellen Attribut oder dem Elementattribut basiert.
 * Für die am häufigsten angezeigten/am häufigsten verkauften Artikel auf der Site muss nichts übergeben werden.
 
 **Lesungen**
 
-* [Popularitätsbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Beliebtheitsbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -133,19 +134,19 @@ Empfehlungen aussprechen, die darauf basieren, ähnliche Artikel wie ein Artikel
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL Personen, die das ansahen, sahen auch dies an]
-* [!UICONTROL Personen, die das ansahen, kauften dies]
-* [!UICONTROL Personen, die das kauften, kauften dies]
-* [!UICONTROL Elemente mit ähnlichen Attributen]
+* [!UICONTROL People Who Viewed This, Viewed That]
+* [!UICONTROL People Who Viewed This, Bought That]
+* [!UICONTROL People Who Bought This, Bought That]
+* [!UICONTROL Items with Similar Attributes]
 
-**Entitätsparameter erforderlich**
+**Erforderliche Entitätsparameter**
 
 * `entity.id`
 * Wenn ein Profilattribut als Schlüssel verwendet wird
 
 **Lesungen**
 
-* [Artikelbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Elementbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -159,10 +160,10 @@ Empfehlungen basierend auf dem Benutzerverhalten erstellen.
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL Vor Kurzem aufgerufene Artikel ]
-* [!UICONTROL Empfohlen für Sie]
+* [!UICONTROL Recently Viewed Items]
+* [!UICONTROL Recommended for You]
 
-**Entitätsparameter erforderlich**
+**Erforderliche Entitätsparameter**
 
 * `entity.id`
 
@@ -182,9 +183,9 @@ Machen Sie Empfehlungen basierend auf einer benutzerdefinierten Datei, die Sie h
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL Benutzerspezifischer Algorithmus]
+* [!UICONTROL Custom algorithm]
 
-**Entitätsparameter erforderlich**
+**Erforderliche Entitätsparameter**
 
 `entity.id` oder das Attribut, das als Schlüssel für den benutzerspezifischen Algorithmus verwendet wird
 
@@ -222,7 +223,7 @@ Machen Sie Empfehlungen basierend auf einer benutzerdefinierten Datei, die Sie h
 
 [Kehren Sie zum Diagramm oben auf dieser Seite zurück.](#diagram)
 
-## 3.9: Stellen Sie Entitätsattribute bereit, um den Produktkatalog für [!DNL Recommendations] {#entity-attributes}
+## 3.9: Stellen Sie Entitätsattribute bereit, um den Produktkatalog für [!DNL Recommendations] zu aktualisieren {#entity-attributes}
 
 +++Siehe Details
 
@@ -230,7 +231,7 @@ Machen Sie Empfehlungen basierend auf einer benutzerdefinierten Datei, die Sie h
 
 * [Entitätsattribute](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-Sie können diesen Schritt auch durch Erstellen von [Produkt-Feeds](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} mithilfe der [!DNL Target] Benutzeroberfläche zum Aktualisieren des Produktkatalogs für [!DNL Recommendations].
+Sie können diesen Schritt auch durchführen, indem Sie [Produkt-Feeds](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} erstellen und mithilfe der [!DNL Target] -Benutzeroberfläche den Produktkatalog für [!DNL Recommendations] aktualisieren.
 
 +++
 
@@ -252,15 +253,15 @@ Geben Sie die Profilattribute an, die als Schlüssel für Einschlussregeln in de
 
 ## 3.11: Seitenladeanforderung auslösen {#fire}
 
-Dieser Schritt Trigger eine [!DNL Delivery API] Aufruf mit `execute` > `pageLoad` Nutzlast in der Anfrage. Die `getOffers()` -Methode ruft das Erlebnis ab und `applyOffers()` rendert das Erlebnis auf der Seite. Die `pageLoad` -Anfrage ist zum Rendern von Erlebnissen erforderlich, die in der [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
+Dieser Schritt Trigger einen [!DNL Delivery API] -Aufruf mit `execute` > `pageLoad` Payload in der Anfrage. Die Methode `getOffers()` ruft das Erlebnis ab und `applyOffers()` rendert das Erlebnis auf der Seite. Die `pageLoad` -Anfrage ist zum Rendern von Erlebnissen erforderlich, die im [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC) erstellt wurden.
 
 +++Siehe Details
 
-![Anforderungsdiagramm für Seitenladeanforderungen auslösen](/help/dev/patterns/recs-atjs/assets/fire-page-load-request-combined.png){width="400" zoomable="yes"}
+![ Anforderungsdiagramm für Seitenladeanforderungen auslösen](/help/dev/patterns/recs-atjs/assets/fire-page-load-request-combined.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
-* Die gesamte Datenzuordnung muss mit dem `targetPageParams` -Funktion.
+* Die gesamte Datenzuordnung muss mit der Funktion `targetPageParams` erfolgen.
 
 **Lesungen**
 
@@ -269,7 +270,7 @@ Dieser Schritt Trigger eine [!DNL Delivery API] Aufruf mit `execute` > `pageLoad
 
 **Aktionen**
 
-* Verwenden Sie die `getOffers` und `applyOffers` -Methoden, um das Erlebnis mithilfe eines API-Aufrufs für Seitenladeanfragen abzurufen.
+* Verwenden Sie die Methoden `getOffers` und `applyOffers` , um das Erlebnis mithilfe eines API-Aufrufs für Seitenladeanfragen abzurufen.
 
 +++
 
@@ -277,15 +278,15 @@ Dieser Schritt Trigger eine [!DNL Delivery API] Aufruf mit `execute` > `pageLoad
 
 ## 3.12: Regionale Standortanforderung auslösen (#location)
 
-Dieser Schritt Trigger eine [!DNL Delivery API] Aufruf mit `execute` > `mboxes` Nutzlast in der Anfrage. Die `getOffers` -Methode ruft das Erlebnis ab und `applyOffers` rendert das Erlebnis auf der Seite. Sie können mehr als eine Mbox unter der `execute` > `mboxes` Nutzlast.
+Dieser Schritt Trigger einen [!DNL Delivery API] -Aufruf mit `execute` > `mboxes` Payload in der Anfrage. Die Methode `getOffers` ruft das Erlebnis ab und `applyOffers` rendert das Erlebnis auf der Seite. Sie können mehr als eine Mbox unter der Payload `execute` > `mboxes` senden.
 
 +++Siehe Details
 
-![Diagramm für regionale Standortanforderung auslösen](/help/dev/patterns/recs-atjs/assets/fire-regional-location-request-combined.png){width="400" zoomable="yes"}
+![Diagramm für regionale Ortsanforderung auslösen](/help/dev/patterns/recs-atjs/assets/fire-regional-location-request-combined.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
-* Die gesamte Datenzuordnung muss mit dem `targetPageParams` -Funktion.
+* Die gesamte Datenzuordnung muss mit der Funktion `targetPageParams` erfolgen.
 
 **Lesungen**
 
@@ -294,10 +295,10 @@ Dieser Schritt Trigger eine [!DNL Delivery API] Aufruf mit `execute` > `mboxes` 
 
 **Aktionen**
 
-* Verwenden Sie die `getOffers` und `applyOffers` -Methoden, um das Erlebnis mithilfe eines API-Aufrufs für Seitenladeanfragen abzurufen.
+* Verwenden Sie die Methoden `getOffers` und `applyOffers` , um das Erlebnis mithilfe eines API-Aufrufs für Seitenladeanfragen abzurufen.
 
 +++
 
 [Kehren Sie zum Diagramm oben auf dieser Seite zurück.](#diagram)
 
-Fahren Sie mit Schritt 4 fort: [Target benachrichtigen](/help/dev/patterns/recs-atjs/notify-target.md).
+Fahren Sie mit Schritt 4 fort: [Benachrichtigen Sie Target](/help/dev/patterns/recs-atjs/notify-target.md).

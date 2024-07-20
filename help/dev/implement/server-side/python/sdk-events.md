@@ -1,11 +1,11 @@
 ---
-title: Abonnieren Sie Ereignisse im [!DNL Adobe Target] Python SDK
-description: Erfahren Sie, wie Sie mithilfe des [!UICONTROL OnDeviceDecisioningHandler] -Objekt.
+title: Abonnieren von Ereignissen im  [!DNL Adobe Target] Python-SDK
+description: Erfahren Sie, wie Sie mithilfe des Objekts [!UICONTROL OnDeviceDecisioningHandler] verschiedene Ereignisse abonnieren, die im Python-SDK auftreten.
 feature: APIs/SDKs
 exl-id: 4e32e3b5-6072-4703-b09d-abb467aa1304
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '165'
 ht-degree: 3%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## Beschreibung
 
-Wann [Initialisieren des SDK](initialize-sdk.md), die `options["events"]` dict ist ein optionales Objekt mit Ereignisnamenschlüsseln und Callback-Funktionswerten. Sie kann zum Abonnieren verschiedener Ereignisse im SDK verwendet werden. Beispielsweise wird die `client_ready` -Ereignis kann mit einer Callback-Funktion verwendet werden, die aufgerufen wird, wenn das SDK für Methodenaufrufe bereit ist.
+Beim [ Initialisieren des SDK](initialize-sdk.md) ist das `options["events"]` -Attribut ein optionales Objekt mit Ereignisnamenschlüsseln und Callback-Funktionswerten. Sie kann zum Abonnieren verschiedener Ereignisse im SDK verwendet werden. Beispielsweise kann das `client_ready` -Ereignis mit einer Callback-Funktion verwendet werden, die aufgerufen wird, wenn das SDK für Methodenaufrufe bereit ist.
 
-Wenn die Variable `callback` aufgerufen wird, wird ein Ereignisobjekt übergeben. Jedes Ereignis verfügt über eine `type` dem Ereignisnamen entsprechen, und einige Ereignisse enthalten zusätzliche Eigenschaften mit relevanten Informationen.
+Wenn die Funktion `callback` aufgerufen wird, wird ein Ereignisobjekt übergeben. Jedes Ereignis hat einen `type` -Wert, der dem Ereignisnamen entspricht, und einige Ereignisse enthalten zusätzliche Eigenschaften mit relevanten Informationen.
 
 ## Ereignis- 
 

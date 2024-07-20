@@ -1,11 +1,11 @@
 ---
 title: Personalisierung mit Adobe Target SDKs bereitstellen
-description: Erfahren Sie, wie Sie mithilfe von Personalisierung bereitstellen. [!UICONTROL on-device decisioning].
+description: Erfahren Sie, wie Sie die Personalisierung mit [!UICONTROL on-device decisioning] bereitstellen.
 feature: APIs/SDKs
 exl-id: bac64c78-0d3a-40d7-ae2b-afa0f1b8dc4f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
@@ -14,79 +14,79 @@ ht-degree: 0%
 
 ## Zusammenfassung der Schritte
 
-1. Aktivieren [!UICONTROL on-device decisioning] für Ihre Organisation
-1. Erstellen Sie eine [!UICONTROL Erlebnis-Targeting] (XT)-Aktivität
+1. [!UICONTROL on-device decisioning] für Ihre Organisation aktivieren
+1. Erstellen einer [!UICONTROL Experience Targeting] -Aktivität (XT)
 1. Definieren eines personalisierten Erlebnisses pro Zielgruppe
 1. Überprüfen des personalisierten Erlebnisses pro Zielgruppe
 1. Berichterstellung einrichten
 1. Metriken zur Verfolgung von KPIs hinzufügen
 1. Personalisierte Angebote in Ihre Anwendung implementieren
 1. Implementieren von Code zur Verfolgung von Konversionsereignissen
-1. Aktivieren Ihrer [!UICONTROL Erlebnis-Targeting] (XT) Personalisierungsaktivität
+1. Aktivieren Sie Ihre [!UICONTROL Experience Targeting] (XT)-Personalisierungsaktivität.
 
 Nehmen wir an, Sie sind ein Tourenunternehmen. Sie möchten ein personalisiertes Angebot mit 25 % Rabatt auf bestimmte Reisepakete anbieten. Damit das Angebot bei Ihren Benutzern ankommt, möchten Sie ein Wahrzeichen der Zielstadt anzeigen. Sie möchten auch sicherstellen, dass die Bereitstellung Ihrer personalisierten Angebote mit einer Latenz von nahezu null ausgeführt wird, damit sich dies nicht negativ auf Benutzererlebnisse auswirkt und die Ergebnisse verfälscht.
 
-## 1. Aktivieren [!UICONTROL on-device decisioning] für Ihre Organisation
+## 1. Aktivieren Sie [!UICONTROL on-device decisioning] für Ihre Organisation
 
-1. Durch die Aktivierung der Entscheidungsfindung auf dem Gerät wird sichergestellt, dass eine A/B-Aktivität mit nahezu Nulllatenz ausgeführt wird. Navigieren Sie zur Aktivierung dieser Funktion zu **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** > **[!UICONTROL Kontodetails]** in [!DNL Adobe Target]und aktivieren Sie die **[!UICONTROL On-Device Decisioning]** umschalten.
+1. Durch die Aktivierung der Entscheidungsfindung auf dem Gerät wird sichergestellt, dass eine A/B-Aktivität mit nahezu Nulllatenz ausgeführt wird. Um diese Funktion zu aktivieren, navigieren Sie in [!DNL Adobe Target] zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** und aktivieren Sie den Umschalter **[!UICONTROL On-Device Decisioning]** .
 
-   ![ALT-Bild](assets/asset-odd-toggle.png)
+   ![alt image](assets/asset-odd-toggle.png)
 
    >[!NOTE]
    >
-   >Sie müssen über einen Administrator oder Genehmiger verfügen. [Benutzerrolle](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) , um die [!UICONTROL On-Device Decisioning] umschalten.
+   >Sie müssen über die Benutzerrolle &quot;Admin&quot;oder &quot;Genehmiger&quot;[Benutzer](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) verfügen, um den Umschalter [!UICONTROL On-Device Decisioning] zu aktivieren oder zu deaktivieren.
 
-   Nach der Aktivierung der **[!UICONTROL On-Device Decisioning]** Umschalten, [!DNL Adobe Target] beginnt zu generieren *ruleArtefakte* für Ihren Client.
+   Nachdem Sie den Umschalter **[!UICONTROL On-Device Decisioning]** aktiviert haben, beginnt [!DNL Adobe Target] mit der Generierung von *Regel-Artefakten* für Ihren Client.
 
-## 2. Erstellen Sie eine [!UICONTROL Erlebnis-Targeting] (XT)-Aktivität
+## 2. Erstellen Sie eine [!UICONTROL Experience Targeting] -Aktivität (XT)
 
-1. In [!DNL Adobe Target], navigieren Sie zum **[!UICONTROL Tätigkeiten]** Seite und wählen Sie **[!UICONTROL Aktivität erstellen]** > **[!UICONTROL Erlebnis-Targeting]**.
+1. Navigieren Sie in [!DNL Adobe Target] zur Seite **[!UICONTROL Activities]** und wählen Sie dann **[!UICONTROL Create Activity]** > **[!UICONTROL Experience Targeting]** aus.
 
-   ![ALT-Bild](assets/asset-xt.png)
+   ![alt image](assets/asset-xt.png)
 
-1. Im **[!UICONTROL Erstellen einer Erlebnis-Targeting-Aktivität]** modal, Behalten Sie die Standardeinstellung bei **[!UICONTROL Web]** ausgewählte Option (1), wählen Sie **[!UICONTROL Formular]** als Experience Composer (2) einen Arbeitsbereich und eine Eigenschaft (3) auswählen und auf **[!UICONTROL Nächste]** 4.
+1. Behalten Sie im Modal **[!UICONTROL Create Experience Targeting Activity]** die Standardoption **[!UICONTROL Web]** bei (1), wählen Sie **[!UICONTROL Form]** als Ihren Experience Composer (2), wählen Sie einen Arbeitsbereich und eine Eigenschaft (3) aus und klicken Sie auf **[!UICONTROL Next]** (4).
 
-   ![ALT-Bild](assets/asset-xt-next.png)
+   ![alt image](assets/asset-xt-next.png)
 
 ## 3. Personalisierte Erlebnisse pro Zielgruppe definieren
 
-1. Im **[!UICONTROL Erlebnisse]** Schritt der Aktivitätserstellung, klicken Sie auf **[!UICONTROL Zielgruppe ändern]** , um eine Audience der Besucher zu erstellen, die nach San Francisco, Kalifornien, reisen möchten.
+1. Klicken Sie im Schritt **[!UICONTROL Experiences]** der Aktivitätserstellung auf **[!UICONTROL Change Audience]** , um eine Audience der Besucher zu erstellen, die nach San Francisco, Kalifornien, reisen möchten.
 
-   ![ALT-Bild](assets/asset-change-audience.png)
+   ![alt image](assets/asset-change-audience.png)
 
-1. Im **[!UICONTROL Zielgruppe erstellen]** modal definieren, definieren Sie eine benutzerdefinierte Regel, bei der `destinationCity = San Francisco`. Dies definiert die Gruppe von Benutzern, die nach San Francisco reisen möchten.
+1. Definieren Sie im Modal **[!UICONTROL Create Audience]** eine benutzerdefinierte Regel mit dem Wert `destinationCity = San Francisco`. Dies definiert die Gruppe von Benutzern, die nach San Francisco reisen möchten.
 
-   ![ALT-Bild](assets/asset-audience-sf.png)
+   ![alt image](assets/asset-audience-sf.png)
 
-1. Noch im **[!UICONTROL Erlebnisse]** Geben Sie den Namen des Ortes (1) in Ihrer Anwendung ein, an dem Sie ein Sonderangebot für die Golden Gate Bridge rendern möchten, jedoch nur für diejenigen, die nach San Francisco fahren. In dem hier gezeigten Beispiel ist homepage der Ort, der für das HTML-Angebot (2) ausgewählt wurde, das im **[!UICONTROL Inhalt]** Bereich.
+1. Geben Sie im Schritt **[!UICONTROL Experiences]** den Namen des Orts (1) in Ihrer Anwendung ein, an dem Sie ein Sonderangebot zum Golden Gate Bridge rendern möchten, jedoch nur für diejenigen, die nach San Francisco fahren. In dem hier gezeigten Beispiel ist Startseite der für das HTML-Angebot (2) ausgewählte Ort, der im Bereich **[!UICONTROL Content]** definiert ist.
 
-   ![ALT-Bild](assets/asset-content-sf.png)
+   ![alt image](assets/asset-content-sf.png)
 
-1. Fügen Sie eine weitere Zielgruppe hinzu, indem Sie auf **[!UICONTROL Hinzufügen von Erlebnis-Targeting]**. Legen Sie dieses Mal eine Zielgruppe fest, die nach New York reisen möchte, indem Sie eine Zielgruppenregel definieren, in der `destinationCity = New York`. Definieren Sie den Ort in Ihrer Anwendung, an dem Sie ein Sonderangebot zum Empire State Building unterbreiten möchten. In dem hier gezeigten Beispiel: `homepage` der für das HTML-Angebot ausgewählte Ort (2), der in der Variablen **[!UICONTROL Inhalt]** Bereich.
+1. Fügen Sie durch Klicken auf **[!UICONTROL Add Experience Targeting]** eine weitere Zielgruppe hinzu. Legen Sie diesmal eine Zielgruppe, die nach New York reisen möchte, mit `destinationCity = New York` als Zielgruppenregel fest. Definieren Sie den Ort in Ihrer Anwendung, an dem Sie ein Sonderangebot zum Empire State Building unterbreiten möchten. In dem hier gezeigten Beispiel ist `homepage` der für das HTML-Angebot (2) ausgewählte Ort, der im Bereich **[!UICONTROL Content]** definiert ist.
 
-   ![ALT-Bild](assets/asset-content-ny.png)
+   ![alt image](assets/asset-content-ny.png)
 
 ## 4. Überprüfen des personalisierten Erlebnisses pro Zielgruppe
 
-Im **[!UICONTROL Targeting]** Schritt, überprüfen Sie, ob Sie das gewünschte personalisierte Erlebnis pro Zielgruppe konfiguriert haben.
+Überprüfen Sie im Schritt **[!UICONTROL Targeting]** , ob Sie das gewünschte personalisierte Erlebnis pro Zielgruppe konfiguriert haben.
 
-![ALT-Bild](assets/asset-verify-sf-ny.png)
+![alt image](assets/asset-verify-sf-ny.png)
 
 ## 5. Einrichten von Berichten
 
-Im **[!UICONTROL Ziele und Einstellungen]** Schritt auswählen **[!UICONTROL Adobe Target]** als **[!UICONTROL Berichtsquelle]** um die Aktivitätsergebnisse in der [!DNL Adobe Target] Benutzeroberfläche oder wählen Sie **[!UICONTROL Adobe Analytics]** , um sie in der Adobe Analytics-Benutzeroberfläche anzuzeigen.
+Wählen Sie im Schritt **[!UICONTROL Goals & Settings]** die Option **[!UICONTROL Adobe Target]** als den Wert **[!UICONTROL Reporting Source]**, um die Aktivitätsergebnisse in der Benutzeroberfläche von [!DNL Adobe Target] anzuzeigen, oder wählen Sie **[!UICONTROL Adobe Analytics]**, um sie in der Adobe Analytics-Benutzeroberfläche anzuzeigen.
 
-![ALT-Bild](assets/asset-reporting-sf-ny.png)
+![alt image](assets/asset-reporting-sf-ny.png)
 
 ## 6. Hinzufügen von Metriken zur Verfolgung von KPIs
 
-Wählen Sie eine **[!UICONTROL Zielmetrik]** , um den Erfolg der Aktivität zu messen. In diesem Beispiel basiert eine erfolgreiche Konversion darauf, ob der Benutzer auf das personalisierte Zielangebot klickt.
+Wählen Sie **[!UICONTROL Goal Metric]** aus, um den Erfolg der Aktivität zu messen. In diesem Beispiel basiert eine erfolgreiche Konversion darauf, ob der Benutzer auf das personalisierte Zielangebot klickt.
 
 ## 7. Personalisierte Angebote in Ihre Anwendung implementieren
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -113,7 +113,7 @@ targetClient.getOffers({
 .catch(console.error);
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -150,7 +150,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 //... Code removed for brevity
@@ -173,7 +173,7 @@ TargetClient.sendNotifications({
 })
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"
 ClientConfig config = ClientConfig.builder()
@@ -221,4 +221,4 @@ notificationDeliveryService.sendNotification(request);
 
 ## 9. Aktivität &quot;Erlebnis-Targeting&quot;(XT) aktivieren
 
-![ALT-Bild](assets/asset-xt-activate.png)
+![alt image](assets/asset-xt-activate.png)

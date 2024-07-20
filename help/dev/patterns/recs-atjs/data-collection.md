@@ -4,16 +4,17 @@ description: Stellen Sie sicher, dass alle für die Datenerfassung erforderliche
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+exl-id: 66e0f18d-c78c-463b-8c47-132ef6332927
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 3%
+source-wordcount: '384'
+ht-degree: 2%
 
 ---
 
 # Datenerfassung konfigurieren
 
-Führen Sie die Schritte im Abschnitt *Datenerfassung* -Diagramm, um sicherzustellen, dass alle für die Datenerfassung erforderlichen Aufgaben in der richtigen Reihenfolge ausgeführt werden.
+Führen Sie die Schritte im Diagramm *Datenerfassung* aus, um sicherzustellen, dass alle für die Datenerfassung erforderlichen Aufgaben in der richtigen Reihenfolge ausgeführt werden.
 
 >[!TIP]
 >
@@ -21,10 +22,10 @@ Führen Sie die Schritte im Abschnitt *Datenerfassung* -Diagramm, um sicherzuste
 
 Die Datenschicht ist beim Laden der Seite bereit oder die Datenschicht ändert sich nach dem Laden der Seite.
 
-Wenn Sie bereits Daten während der [SDK-Phase initialisieren](/help/dev/patterns/recs-atjs/initialize-sdk.md)müssen Sie die Schritte in diesem Diagramm ausführen, wenn:
+Wenn Sie während der [Initialize SDK-Phase](/help/dev/patterns/recs-atjs/initialize-sdk.md) bereits Daten zugeordnet haben, müssen Sie die Schritte in diesem Diagramm ausführen, wenn:
 
-* Ihre Datenschicht wird auf beliebige Weise auf derselben Seite erweitert und Sie möchten diese zusätzlichen Daten an senden [!DNL Target]
-* Sie möchten Produktkatalogdaten an senden [!DNL Target Recommendations]
+* Ihre Datenschicht wird auf beliebige Weise auf derselben Seite erweitert und Sie möchten diese zusätzlichen Daten an [!DNL Target] senden
+* Sie möchten Produktkatalogdaten an [!DNL Target Recommendations] senden.
 
 ## Datendiagramm abrufen {#diagram}
 
@@ -40,15 +41,15 @@ Klicken Sie auf die folgenden Links, um zu den gewünschten Abschnitten zu navig
 
 ## 2.1: Konfigurieren der Datenzuordnung {#configure}
 
-Dieser Schritt stellt sicher, dass alle Daten, an die gesendet werden müssen, [!DNL Adobe Target] festgelegt ist.
+Dieser Schritt stellt sicher, dass alle Daten, die an [!DNL Adobe Target] gesendet werden müssen, festgelegt sind.
 
 +++Siehe Details
 
-![Diagramm für die Datenzuordnung konfigurieren](/help/dev/patterns/recs-atjs/assets/configure-data-mapping-combined.png){width="400" zoomable="yes"}
+![Diagramm zur Datenzuordnung konfigurieren](/help/dev/patterns/recs-atjs/assets/configure-data-mapping-combined.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
-* Die Datenschicht sollte alle Daten enthalten, die an gesendet werden müssen. [!DNL Target].
+* Die Datenschicht sollte mit allen Daten fertig sein, die an [!DNL Target] gesendet werden müssen.
 
 **Lesungen**
 
@@ -56,7 +57,7 @@ Dieser Schritt stellt sicher, dass alle Daten, an die gesendet werden müssen, [
 
 **Aktionen**
 
-Verwenden Sie die `targetPageParams()` -Funktion zum Festlegen aller erforderlichen Daten, die an gesendet werden müssen [!DNL Target].
+Verwenden Sie die Funktion `targetPageParams()` , um alle erforderlichen Daten festzulegen, die an [!DNL Target] gesendet werden müssen.
 
 +++
 
@@ -74,9 +75,9 @@ Link zu Entitätsattributen zur Aktualisierung des Produktkatalogs für [!DNL Ta
 
 **Zu beachten**
 
-* Eine alternative Methode zur Weitergabe von Entitätsattributen besteht darin, den Produktkatalog im [!DNL Target] Zu verwendende Benutzeroberfläche [Recommendations-Produkt-Feeds](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}.
+* Eine alternative Methode zur Übergabe von Entitätsattributen besteht darin, den Produktkatalog in der Benutzeroberfläche von [!DNL Target] zu aktualisieren, um [Recommendations-Produkt-Feeds](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} zu verwenden.
 * Die Übergabe von Entitätsattributen ist nur auf Seiten möglich, auf denen Produktkatalogdaten in der Datenschicht verfügbar sind.
-* Übergeben der `entity.event.detailsOnly=true` -Parameter in jedem -Aufruf hat Priorität.
+* Die Übergabe des Parameters `entity.event.detailsOnly=true` bei jedem Aufruf hat Priorität.
 
 +++
 
@@ -84,15 +85,15 @@ Link zu Entitätsattributen zur Aktualisierung des Produktkatalogs für [!DNL Ta
 
 ## 2.3 Adobe Target Track-API auslösen {#fire-api}
 
-Dieser Schritt stellt sicher, dass alle Daten, an die gesendet werden müssen, [!DNL Target] gesendet.
+Dieser Schritt stellt sicher, dass alle Daten, die an [!DNL Target] gesendet werden müssen, gesendet werden.
 
 +++Siehe Details
 
-![Adobe Target Track-API-Diagramm auslösen](/help/dev/patterns/recs-atjs/assets/fire-track-api-combined.png){width="400" zoomable="yes"}
+![Adobe Target Tracking-API-Diagramm auslösen](/help/dev/patterns/recs-atjs/assets/fire-track-api-combined.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
-* Die gesamte Datenzuordnung muss mit dem [targetPageParams-Funktion](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md).
+* Die gesamte Datenzuordnung muss mit der Funktion [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) durchgeführt worden sein.
 
 **Lesungen**
 
@@ -100,11 +101,10 @@ Dieser Schritt stellt sicher, dass alle Daten, an die gesendet werden müssen, [
 
 **Aktionen**
 
-Verwendung [adobe.target.trackEvent() -Methode](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) , um alle Daten zu senden, die an [!DNL Target].
+Verwenden Sie [adobe.target.trackEvent() method](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) , um alle Daten zu senden, die an [!DNL Target] gesendet werden müssen.
 
 +++
 
 [Kehren Sie zum Diagramm oben auf dieser Seite zurück.](#diagram)
 
 Fahren Sie mit Schritt 3 fort: [Erlebnisse rendern](/help/dev/patterns/recs-atjs/render-experiences.md)
-

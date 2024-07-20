@@ -1,19 +1,19 @@
 ---
 keywords: implementieren, implementieren, einrichten, einrichten, Datenanbieter
-description: Daten abrufen [!DNL Target] Datenanbieter verwenden.
-title: Wie erhalte ich Daten? [!DNL Target] Verwenden von Datenanbietern?
+description: Daten mithilfe von Datenanbietern in [!DNL Target] abrufen.
+title: Wie kann ich Daten mithilfe von Datenanbietern in [!DNL Target] einbringen?
 feature: Implementation
 exl-id: 9971bd96-f736-4965-afe2-b4901c12d006
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 53%
+source-wordcount: '287'
+ht-degree: 55%
 
 ---
 
 # Datenanbieter
 
-Datenanbieter sind eine Funktion, mit der Sie Daten von Drittanbietern einfach an weitergeben können. [!DNL Adobe Target].
+Datenanbieter sind eine Funktion, mit der Sie Daten von Drittanbietern einfach an [!DNL Adobe Target] übergeben können.
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ Erfassen Sie Daten von Drittanbietern, wie z. B. einem Wetterdienst, einem DMP 
 
 ## Vorteile der Methode
 
-Mit dieser Einstellung können Kunden Daten von Drittanbietern (wie Demandbase, BlueKai und benutzerdefinierten Diensten) erfassen und die Daten an übergeben. [!DNL Target] als Mbox-Parameter in der globalen Mbox-Anfrage.
+Mit dieser Einstellung können Kunden Daten von Drittanbieter erfassen, z. B. Demandbase, BlueKai und benutzerdefinierte Dienste, und die Daten als Mbox-Parameter in der globalen Mbox-Anfrage an [!DNL Target] übergeben.
 
 Sie unterstützt die Sammlung von Daten von mehreren Anbietern über asynchrone und synchrone Anfragen.
 
@@ -39,7 +39,7 @@ Mit diesem Ansatz ist es ein Leichtes, Flicker- oder Standardinhalte zu verwalte
 
 ## Einschränkungen
 
-Wenn Datenanbieter zu `window.targetGlobalSettings.dataProviders` asynchron sind, werden sie parallel ausgeführt. Die Besucher-API-Anfrage wird parallel mit den Funktionen ausgeführt, die zu `window.targetGlobalSettings.dataProviders` um eine minimale Wartezeit zu ermöglichen.
+Wenn die zu `window.targetGlobalSettings.dataProviders` hinzugefügten Datenanbieter asynchron sind, werden sie parallel ausgeführt. Die Besucher-API-Anfrage wird parallel mit den Funktionen ausgeführt, die zu `window.targetGlobalSettings.dataProviders` hinzugefügt werden, um eine minimale Wartezeit zu ermöglichen.
 
 at.js versucht nicht, die Daten zwischenzuspeichern. Wenn der Datenanbieter die Daten nur einmal abruft, sollte er sicherstellen, dass die Daten zwischengespeichert werden, und die Cachedaten für den zweiten Aufruf verarbeiten, wenn die Anbieterfunktion aufgerufen wird.
 

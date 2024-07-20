@@ -6,8 +6,8 @@ feature: at.js
 exl-id: e0d87d95-ee95-4ca9-8632-222ae1fb9a91
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1208'
-ht-degree: 74%
+source-wordcount: '1162'
+ht-degree: 72%
 
 ---
 
@@ -160,14 +160,14 @@ Im Folgenden finden Sie eine Tabelle der Client-Hinweise und der zugehörigen An
 
 | Client-Hint-Kopfzeile | Entropie | Zielgruppenattribut | Nutzung von Profilskripten |
 | --- | --- | --- | --- |
-| [Sec-CH-UA](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA) | Niedrig | Browser | `user.clientHint('sec-ch-ua')` |
-| [Sec-CH-UA-Arch](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Arch) | Hoch | Benutzern über Profilskripte zur Verfügung gestellt | `user.clientHint('sec-ch-ua-arch')` |
-| [Sec-CH-UA-Bitness](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Bitness) | Hoch | Benutzern über Profilskripte zur Verfügung gestellt | `user.clientHint('sec-ch-ua-bitness')` |
-| [Sec-CH-UA-Full-Version-List](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Full-Version-List) | Hoch | Browser | `user.clientHint('sec-ch-ua-full-version-list')` |
-| [Sec-CH-UA-Mobile](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Mobile) | Niedrig | Mobile | `user.clientHint('sec-ch-ua-mobile')` |
-| [Sec-CH-UA-Model](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Model) | Hoch | Mobile | `user.clientHint('sec-ch-ua-model')` |
-| [Sec-CH-UA-Platform](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform) | Niedrig | Betriebssystem | `user.clientHint('sec-ch-ua-platform')` |
-| [Sec-CH-UA-Platform-Version](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform-Version) | Hoch | Benutzern über Profilskripte zur Verfügung gestellt | `user.clientHint('sec-ch-ua-platform-version')` |
+| [SEC-CH-UA](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA) | Niedrig | Browser | `user.clientHint('sec-ch-ua')` |
+| [SEC-CH-UA-Arch](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Arch) | Hoch | Benutzern über Profilskripte zur Verfügung gestellt | `user.clientHint('sec-ch-ua-arch')` |
+| [SEC-CH-UA-Bitness](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Bitness) | Hoch | Benutzern über Profilskripte zur Verfügung gestellt | `user.clientHint('sec-ch-ua-bitness')` |
+| [SEC-CH-UA-Full-Version-List](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Full-Version-List) | Hoch | Browser | `user.clientHint('sec-ch-ua-full-version-list')` |
+| [SEC-CH-UA-Mobile](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Mobile) | Niedrig | Mobile | `user.clientHint('sec-ch-ua-mobile')` |
+| [SEC-CH-UA-Model](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Model) | Hoch | Mobile | `user.clientHint('sec-ch-ua-model')` |
+| [SEC-CH-UA-Platform](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform) | Niedrig | Betriebssystem | `user.clientHint('sec-ch-ua-platform')` |
+| [SEC-CH-UA-Platform-Version](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform-Version) | Hoch | Benutzern über Profilskripte zur Verfügung gestellt | `user.clientHint('sec-ch-ua-platform-version')` |
 
 ## Weiterleiten von Client-Hinten an Adobe Target
 
@@ -175,7 +175,7 @@ In den folgenden Abschnitten finden Sie weitere Informationen zum Übergeben von
 
 ### at.js-Version 2.9.0 (oder höher)
 
-Ab at.js 2.9.0 werden Benutzeragenten-Client-Hinweise automatisch vom Browser erfasst und an Target gesendet, wenn `getOffer/getOffers()` aufgerufen wird. Standardmäßig erfasst at.js nur Client Hints mit niedriger Entropie. Wenn Sie eine Zielgruppensegmentierung durchführen oder Profilskripte verwenden, die auf Daten basieren, die in den vorhergehenden Abschnitten als „Hohe Entropie“ bezeichnet wurden, müssen Sie at.js so konfigurieren, dass im Browser Client Hints mit „hoher Entropie“ über `targetGlobalSettings` erfasst werden.
+Ab at.js 2.9.0 werden Benutzeragent-Client-Hinweise automatisch vom Browser erfasst und an Target gesendet, wenn `getOffer/getOffers()` aufgerufen wird. Standardmäßig erfasst at.js nur Client Hints mit niedriger Entropie. Wenn Sie eine Zielgruppensegmentierung durchführen oder Profilskripte verwenden, die auf Daten basieren, die in den vorhergehenden Abschnitten als „Hohe Entropie“ bezeichnet wurden, müssen Sie at.js so konfigurieren, dass im Browser Client Hints mit „hoher Entropie“ über `targetGlobalSettings` erfasst werden.
 
 ```
 window.targetGlobalSettings = { allowHighEntropyClientHints: true };
@@ -183,4 +183,4 @@ window.targetGlobalSettings = { allowHighEntropyClientHints: true };
 
 ### Server-seitige SDKs
 
-Weitere Informationen zum Übergeben von Client-Hints über Server-seitige SDKs finden Sie unter [Client-Hinweise](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints) unter Dokumentation zur serverseitigen Implementierung .
+Weitere Informationen zum Übergeben von Client-Hints über Server-seitige SDKs finden Sie unter [Client-Hints](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints) in der Dokumentation zur serverseitigen Implementierung.

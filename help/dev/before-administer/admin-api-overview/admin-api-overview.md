@@ -1,36 +1,36 @@
 ---
 title: Übersicht über die Adobe Target Admin-API
-description: Übersicht über die [!DNL Adobe Target Admin API]
+description: Überblick über den  [!DNL Adobe Target Admin API]
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 3%
+source-wordcount: '1312'
+ht-degree: 2%
 
 ---
 
 # Target Admin-API - Übersicht
 
-Dieser Artikel bietet einen Überblick über Hintergrundinformationen, die zum Verständnis und zur Verwendung von [!DNL Adobe Target Admin API]erfolgreich ist. Im folgenden Inhalt wird davon ausgegangen, dass Sie wissen, wie [Authentifizierung konfigurieren](../configure-authentication.md) für [!DNL Adobe Target Admin API]s.
+Dieser Artikel bietet einen Überblick über Hintergrundinformationen, die zum erfolgreichen Verständnis und Verwenden von [!DNL Adobe Target Admin API]s erforderlich sind. Im folgenden Inhalt wird davon ausgegangen, dass Sie verstehen, wie Sie die Authentifizierung [konfigurieren](../configure-authentication.md) für [!DNL Adobe Target Admin API]s.
 
 >[!NOTE]
 >
->Wenn Sie [!DNL Target] über die Benutzeroberfläche sehen Sie die [Abschnitt *Handbuch für Adobe Target Business Practices*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).
+>Wenn Sie [!DNL Target] über die Benutzeroberfläche verwalten möchten, lesen Sie den Abschnitt [Administration des *Adobe Target Business Practices Guide*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).
 >
 >Die Admin-APIs und Profil-APIs werden häufig kollektiv bezeichnet (&quot;Admin- und Profil-APIs&quot;), können aber auch separat referenziert werden (&quot;Admin-APIs&quot;und &quot;Profil-APIs&quot;). Die Recommendations-API ist eine spezifische Implementierung einer [!DNL Target] Admin-API.
 
 ## Vorabinformationen 
 
-In allen Codebeispielen für [Admin-APIs](../../administer/admin-api/admin-api-overview-new.md), ersetzen {tenant} mit Ihrem Mandantenwert, `your-bearer-token` mit dem Zugriffstoken, das Sie mit Ihrem JWT generieren, und `your-api-key` mit Ihrem API-Schlüssel aus der [Adobe Developer-Konsole](https://developer.adobe.com/console/home). Weitere Informationen zu Mandanten und JWTs finden Sie im Artikel zum [Authentifizierung konfigurieren](../configure-authentication.md) für Adobe [!DNL Target] Admin-APIs.
+Ersetzen Sie in allen Codebeispielen, die für die [Admin-APIs](../../administer/admin-api/admin-api-overview-new.md) bereitgestellt werden, {tenant} durch Ihren Mandantenwert, `your-bearer-token` durch das Zugriffstoken, das Sie mit Ihrem JWT generieren, und `your-api-key` durch Ihren API-Schlüssel aus dem [Adobe Developer Console](https://developer.adobe.com/console/home). Weitere Informationen zu Mandanten und JWTs finden Sie im Artikel zum [Konfigurieren der Authentifizierung](../configure-authentication.md) für Adobe [!DNL Target] Admin-APIs.
 
 ## Versionierung
 
 Alle APIs verfügen über eine zugehörige Version. Es ist wichtig, die richtige Version der API bereitzustellen, die Sie verwenden möchten.
 
-Wenn die Anfrage eine Payload enthält (POST oder PUT), wird die `Content-Type` -Kopfzeile der Anfrage wird verwendet, um die Version anzugeben.
+Wenn die Anfrage eine Payload enthält (POST oder PUT), wird die Version mit dem Header `Content-Type` der Anfrage angegeben.
 
-Wenn die Anfrage keine Payload enthält (GET, DELETE oder OPTIONS), wird die `Accept` -Kopfzeile wird verwendet, um die Version anzugeben.
+Wenn die Anfrage keine Payload enthält (GET, DELETE oder OPTIONS), wird die Version mit der Kopfzeile `Accept` angegeben.
 
 Wenn keine Version bereitgestellt wird, wird für den Aufruf standardmäßig V1 (application/vnd.adobe.target.v1+json) verwendet.
 
@@ -56,7 +56,7 @@ Fehlermeldung für nicht unterstützte Funktionen
 
 Admin Postman-Sammlung
 
-Postman ist eine Anwendung, die das Auslösen von API-Aufrufen erleichtert. Diese [Postman-Sammlung für Target-Admin-API](https://developers.adobetarget.com/api/#admin-postman-collection) enthält alle Target Admin-API-Aufrufe, für die eine Authentifizierung mithilfe von Aktivitäten, Zielgruppen, Angeboten, Berichten, Mboxes und Umgebungen erforderlich ist
+Postman ist eine Anwendung, die das Auslösen von API-Aufrufen erleichtert. Diese [Postman-Sammlung der Target-Admin-API](https://developers.adobetarget.com/api/#admin-postman-collection) enthält alle Target-Admin-API-Aufrufe, für die eine Authentifizierung mithilfe von Aktivitäten, Zielgruppen, Angeboten, Berichten, Mboxes und Umgebungen erforderlich ist.
 
 ## Antwortcodes
 
@@ -64,11 +64,11 @@ Hier finden Sie die gebräuchlichen Antwort-Codes für die Target Admin-APIs.
 
 | Status | Beschreibung | Beschreibung |
 | --- | --- | --- |
-| 200 | [OK](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) |  OK- |  |
-| 400 | [Unzulässige Anfrage](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | Unzulässige Anfrage. Wahrscheinlich sind die in der Anfrage angegebenen Daten ungültig. |  |
-| 401 | [Nicht aktualisieren](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | Der Benutzer darf diesen Vorgang nicht ausführen. |  |
-| 403 | [Nicht erlaubt](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | Der Zugriff auf diese Ressource ist verboten. |  |
-| 404 | [nicht gefunden](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | Die referenzierte Ressource wurde nicht gefunden. |  |
+| 200 | [OK](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) | OK |  |
+| 400 | [Ungültige Anfrage](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | Ungültige Anfrage. Wahrscheinlich sind die in der Anfrage angegebenen Daten ungültig. |  |
+| 401 | [Unauthorized](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | Der Benutzer darf diesen Vorgang nicht ausführen. |  |
+| 403 | [Verboten](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | Der Zugriff auf diese Ressource ist verboten. |  |
+| 404 | [Nicht gefunden](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | Die referenzierte Ressource wurde nicht gefunden. |  |
 
 ## Aktivitäten
 
@@ -78,7 +78,7 @@ Mit einer Aktivität können Sie Inhalte für Ihre Benutzer testen oder personal
 * [Erlebnis-Targeting (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)
 * [Recommendations](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html)
 * [Automatisierte Personalisierung](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
-* [Multivariate Tests (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [Multivarianz-Test (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 
 ## Batch-Aktualisierungen
 

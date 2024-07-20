@@ -1,6 +1,6 @@
 ---
 title: Profilaktualisierung
-description: Erfahren Sie, wie Sie mit Adobe Target Profile-APIs Besucherdaten an senden können. [!DNL Target].
+description: Erfahren Sie, wie Sie mit Adobe Target-Profil-APIs Besucherdaten an  [!DNL Target] senden können.
 contributors: https://github.com/icaraps
 exl-id: 482a4175-1d02-47e9-a5c0-dd00e8560773
 feature: APIs/SDKs
@@ -17,9 +17,9 @@ Ein Benutzerprofil enthält demografische und verhaltensbezogene Informationen e
 
 Die Profilinformationen für jeden Besucher werden entweder in Cookies oder in Drittanbieter-Apps gespeichert.
 
-Wenn Ihre Webseite die [!DNL Target] code ([at.js](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md) oder [Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk.md)), werden die Profilinformationen aus den Cookies an [!DNL Target] unter Verwendung von Profilparametern. [!DNL Target] identifiziert jeden Besucher eindeutig über eine `pcID` die in den Cookies des Besuchers generiert wird. Sie können Profilparameter jedoch von einer externen App über Mbox-Aufrufe mit `mbox3rdPartyIds`.
+Wenn Ihre Webseite den [!DNL Target] -Code ([at.js](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md) oder das [Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk.md)) implementiert, werden die Profilinformationen aus den Cookies mithilfe von Profilparametern an [!DNL Target] übergeben. [!DNL Target] identifiziert jeden Besucher eindeutig über einen `pcID`, den er in den Cookies des Besuchers generiert. Sie können Profilparameter jedoch mit `mbox3rdPartyIds` von einer externen App über Mbox-Aufrufe übergeben.
 
-Verwenden Sie die [!DNL Adobe Target] Profil-APIs, wenn Sie Profildaten zu Ihren Besuchern haben, die an gesendet werden sollen [!DNL Target] , die Sie im Rahmen Ihrer seitenbasierten Integration mit [!DNL Target]. Dies können Daten aus einem CRM-System (Customer Relationship Management) oder POS-System (Point of Sale) sein, die nicht auf der Seite verfügbar sind. Oder diese Daten sind möglicherweise empfindlicher, sodass es nicht sinnvoll ist, sie auf der Seite weiterzugeben.
+Verwenden Sie die [!DNL Adobe Target]-Profil-APIs, wenn Sie Profildaten zu Ihren Besuchern an [!DNL Target] senden möchten, die Sie im Rahmen Ihrer seitenbasierten Integration mit [!DNL Target] entweder nicht senden können oder nicht senden möchten. Dies können Daten aus einem CRM-System (Customer Relationship Management) oder POS-System (Point of Sale) sein, die nicht auf der Seite verfügbar sind. Oder diese Daten sind möglicherweise empfindlicher, sodass es nicht sinnvoll ist, sie auf der Seite weiterzugeben.
 
 Es gibt zwei Möglichkeiten, Profile über API zu aktualisieren:
 

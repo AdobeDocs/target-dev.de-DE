@@ -1,13 +1,13 @@
 ---
 keywords: Cloud-Instanzen, öffentliche Suffix-Liste, öffentliches Suffix, Cookie, Erstanbieter-Cookie, Erstanbieter-Cookie, azurewebsites.net, cloudapp.net, amazonaws.com, cloudfront.net, herokuapp.com, firebaseapp.com,, targetGlobalSettings, cookieDomain, cloud instances5, cloud instances6, cloud instances7, cloud instances8, cloud instances9, public suffix list0, public suffix list1, public suffix list2, public , öffentliche Suffix list4, öffentliche Suffix list5
-description: Erkunden Sie Probleme (mit Lösungen), die Kunden beim Verwenden Cloud-basierter Instanzen zum Testen haben. [!DNL Adobe Target] oder zu Machbarkeitszwecken.
-title: Kann ich [!DNL Target] mit Cloud-basierten Instanzen?
+description: Erfahren Sie mehr über Probleme (mit Lösungen), mit denen Kunden konfrontiert sind, wenn sie Cloud-basierte Instanzen zum Testen von [!DNL Adobe Target] oder zu Machbarkeitszwecken verwenden.
+title: Kann ich [!DNL Target] mit Cloud-basierten Instanzen verwenden?
 feature: at.js
 exl-id: 4b24fdc0-6c74-4b29-bbf9-7a761d4564a2
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 49%
+source-wordcount: '190'
+ht-degree: 45%
 
 ---
 
@@ -23,6 +23,6 @@ Diese Domänen sind neben vielen anderen Teil der [öffentlichen Suffix-Liste](h
 
 **Problem:** Moderne Browser speichern keine Cookies, wenn Sie diese Domänen verwenden.
 
-Die JavaScript-Bibliothek at.js verwendet Cookies zur Benutzerverfolgung, um sicherzustellen, dass [!DNL [!DNL Target]] weist immer ein konsistentes Erlebnis auf. Wenn die Variable [!DNL Target] Cookies können nicht in der JavaScript-Bibliothek gespeichert werden. Target-Anforderungen sind deaktiviert.
+Die JavaScript-Bibliothek at.js verwendet Cookies zum Verfolgen von Benutzern, um sicherzustellen, dass [!DNL [!DNL Target]] stets ein konsistentes Erlebnis präsentiert. Wenn die JavaScript-Bibliothek [!DNL Target] keine Cookies speichern kann, werden Target-Anforderungen deaktiviert.
 
 **Lösung:** Wenn Sie Cloud-basierte Instanzen mit in der öffentlichen Suffix-Liste enthaltenen Domänen verwenden möchten, hat es sich bewährt, die `cookieDomain`-Einstellung anzupassen. Weitere Informationen finden Sie unter [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).

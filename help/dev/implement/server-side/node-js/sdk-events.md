@@ -1,11 +1,11 @@
 ---
-title: Abonnieren Sie Ereignisse im [!DNL Adobe Target] Node.js-SDK
-description: Erfahren Sie, wie Sie mithilfe der Variablen [!UICONTROL OnDeviceDecisioningHandler] -Objekt.
+title: Abonnieren von Ereignissen im SDK [!DNL Adobe Target] Node.js
+description: Erfahren Sie, wie Sie mithilfe des Objekts [!UICONTROL OnDeviceDecisioningHandler] verschiedene Ereignisse abonnieren, die im Node.js-SDK auftreten.
 feature: APIs/SDKs
 exl-id: 40c53840-a560-4819-ae04-f527c36b22fe
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '163'
 ht-degree: 2%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 2%
 
 ## Beschreibung
 
-Wann [Initialisieren des SDK](initialize-sdk.md), die `options.events` -Objekt ist ein optionales Objekt mit Ereignisnamenschlüsseln und Callback-Funktionswerten. Sie kann zum Abonnieren verschiedener Ereignisse im SDK verwendet werden. Beispiel: `clientReady` -Ereignis kann mit einer Callback-Funktion verwendet werden, die aufgerufen wird, wenn das SDK für Methodenaufrufe bereit ist.
+Beim [ Initialisieren des SDK](initialize-sdk.md) ist das `options.events` -Objekt ein optionales Objekt mit Ereignisnamenschlüsseln und Callback-Funktionswerten. Sie kann zum Abonnieren verschiedener Ereignisse im SDK verwendet werden. Beispielsweise kann das `clientReady` -Ereignis mit einer Callback-Funktion verwendet werden, die aufgerufen wird, wenn das SDK für Methodenaufrufe bereit ist.
 
-Wenn die Rückruffunktion aufgerufen wird, wird ein Ereignisobjekt übergeben. Jedes Ereignis verfügt über eine `type` entspricht dem Ereignisnamen. Einige Ereignisse enthalten zusätzliche Eigenschaften mit relevanten Informationen.
+Wenn die Rückruffunktion aufgerufen wird, wird ein Ereignisobjekt übergeben. Jedes Ereignis hat einen `type` -Wert, der dem Ereignisnamen entspricht. Einige Ereignisse enthalten zusätzliche Eigenschaften mit relevanten Informationen.
 
 ## Ereignis- 
 
 | Ereignisname (Typ) | Beschreibung | Zusätzliche Ereigniseigenschaften |
 | --- | --- | --- |
-| clientReady | Wird ausgegeben, wenn das Artefakt heruntergeladen wurde und das SDK bereit für `getOffers` -Aufrufe. Wird bei Verwendung der Entscheidungsmethode auf dem Gerät empfohlen. |
+| clientReady | Wird ausgegeben, wenn das Artefakt heruntergeladen wurde und das SDK für `getOffers` -Aufrufe bereit ist. Wird bei Verwendung der Entscheidungsmethode auf dem Gerät empfohlen. |
 | artifactDownloadSucceeded | Wird jedes Mal gesendet, wenn ein neues Artefakt heruntergeladen wird. | artifactPayload, artifactLocation |
 | artifactDownloadFailed | Wird jedes Mal gesendet, wenn ein Artefakt nicht heruntergeladen werden kann. | artifactLocation, error |
 

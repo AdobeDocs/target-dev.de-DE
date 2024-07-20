@@ -5,8 +5,8 @@ feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 1%
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
@@ -46,13 +46,13 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. Importieren Sie zunächst das SDK. Importieren Sie in dieselbe Datei, von der Sie die Serverstart-Funktion steuern können.
 
-   **Node.js**
+   **node.js**
 
    ```javascript {line-numbers="true"}
    const TargetClient = require("@adobe/target-nodejs-sdk");
    ```
 
-   **Java **
+   **Java**
 
    ```javascript {line-numbers="true"}
    import com.adobe.target.edge.client.ClientConfig;
@@ -61,7 +61,7 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. Verwenden Sie zum Konfigurieren des SDK die Methode create .
 
-   **Node.js**
+   **node.js**
 
    ```javascript {line-numbers="true"}
    const CONFIG = {
@@ -90,7 +90,7 @@ npm i @adobe/target-nodejs-sdk -P
    }
    ```
 
-   **Java **
+   **Java**
 
    ```javascript {line-numbers="true"}
    package com.adobe.target.edge.client.model.ondevice.OnDeviceDecisioningHandler;
@@ -113,10 +113,10 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. Sowohl Client als auch `organizationId` kann abgerufen werden von [!DNL Adobe Target]durch Navigation zu **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]**, wie hier dargestellt.
+1. Sowohl Client als auch `organizationId` können von [!DNL Adobe Target]abgerufen werden, indem Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** navigieren, wie hier dargestellt.
 
    &lt;!— Fügen Sie image-client-code.png —>
-   ![ALT-Bild](assets/asset-rule-artifact-3.png)
+   ![alt image](assets/asset-rule-artifact-3.png)
 
 ## 3. Speichern und testen Sie die JSON-Payload
 
@@ -124,7 +124,7 @@ Der Mechanismus zum Speichern der JSON-Payload hängt von Ihrer Systemarchitektu
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```javascript {line-numbers="true"}
 //... Code removed for brevity
@@ -147,7 +147,7 @@ function onArtifactDownloadFailed(event) {
 //... Code removed for brevity
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```javascript {line-numbers="true"}
 MboxRequest mbox = new MboxRequest().name("homepage").index(0);
@@ -162,13 +162,13 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->Durch Initialisierung der [!DNL Adobe Target]SDK über die JSON-Payload verwenden, ist Ihr Server bereit, Anfragen sofort mit Entscheidungsaktivitäten auf dem Gerät zu bedienen, da die Variable [!DNL Adobe Target]Das SDK muss nicht warten, bis das Regelartefakt heruntergeladen wurde.
+>Durch Initialisierung des [!DNL Adobe Target]SDK über die JSON-Payload kann Ihr Server Anforderungen sofort mit Entscheidungsaktivitäten auf dem Gerät bereitstellen, da das [!DNL Adobe Target]SDK nicht warten muss, bis das Regel-Artefakt heruntergeladen wird.
 
 Im Folgenden finden Sie ein Beispiel für die JSON-Funktion zur Payload-Initialisierung.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```javascript {line-numbers="true"}
 const express = require("express");
@@ -255,7 +255,7 @@ function startWebServer() {
 }
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```javascript {line-numbers="true"}
 import com.adobe.target.edge.client.ClientConfig;

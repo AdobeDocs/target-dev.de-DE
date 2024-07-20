@@ -1,7 +1,7 @@
 ---
 keywords: serverseitig, serverseitig, api, sdk, node.js, nodejs, node js, recommendations api, api, apis, server side1
-description: Informationen zum [!DNL Adobe Target] Server-seitige Bereitstellungs-APIs, SDKs und [!DNL Target Recommendations] APIs.
-title: Informationen darüber [!DNL Target] Serverseitige Bereitstellungs-APIs und SDKs?
+description: Erfahren Sie mehr über die  [!DNL Adobe Target] Server-seitigen Bereitstellungs-APIs, SDKs und [!DNL Target Recommendations] APIs.
+title: Wo erhalte ich Informationen zu den serverseitigen Bereitstellungs-APIs und SDKs? [!DNL Target]
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
 source-git-commit: 75af30045684b95d5989b0a1f877ba95bb8cd883
@@ -11,15 +11,15 @@ ht-degree: 13%
 
 ---
 
-# Server-seitig: Implementierung [!DNL Target]
+# Server-seitig: Implementierung von [!DNL Target]
 
-Informationen über [!DNL Adobe Target] Server-seitige Bereitstellungs-APIs, SDKs und [!DNL Target Recommendations] APIs.
+Informationen zu [!DNL Adobe Target] Server-seitigen Bereitstellungs-APIs, SDKs und [!DNL Target Recommendations] -APIs.
 
 >[!NOTE]
 >
->Wenn Ihre Implementierung at.js und [!DNL AppMeasurement] clientseitig sollten Sie die [!UICONTROL Target Delivery API] und serverseitige SDKs, die nachfolgend beschrieben werden.
+>Wenn Ihre Implementierung at.js und [!DNL AppMeasurement] clientseitig verwendet, sollten Sie die unten beschriebenen [!UICONTROL Target Delivery API] und serverseitigen SDKs verwenden.
 >
->Wenn Ihre Implementierung [!UICONTROL Adobe Experience Platform Web SDK], sollten Sie die [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
+>Wenn Ihre Implementierung den [!UICONTROL Adobe Experience Platform Web SDK] verwendet, sollten Sie den [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network Server API]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank} verwenden.
 
 Der folgende Prozess wird in einer Server-seitigen Implementierung von [!DNL Target] ausgeführt:
 
@@ -32,7 +32,7 @@ Das Erlebnis muss nicht in einem Browser angezeigt werden. Das Erlebnis kann in 
 
 >[!NOTE]
 >
->Ein erstmaliger Besucher kann nur clientseitig initialisiert werden. Erstmaliger Besucher *cannot* Server-seitig initialisiert werden. Dies liegt an der ECID, die vom Drittanbieter-demdex-Cookie abhängt und daher über die Besucher-API.js in einer Implementierung initialisiert werden muss, in der der Browser involviert ist.
+>Ein erstmaliger Besucher kann nur clientseitig initialisiert werden. Ein erstmaliger Besucher *kann nicht* serverseitig initialisiert werden. Dies liegt an der ECID, die vom Drittanbieter-demdex-Cookie abhängt und daher über die Besucher-API.js in einer Implementierung initialisiert werden muss, in der der Browser involviert ist.
 
 In den folgenden Abschnitten finden Sie weitere Informationen zu den verschiedenen serverseitigen APIs und SDKs:
 
@@ -42,7 +42,7 @@ Link: [Server-seitige Bereitstellungs-APIs](/help/dev/implement/delivery-api/ove
 
 `/rest/v1/delivery`
 
-Durch die [!DNL Target] Die Bereitstellungs-API bietet folgende Möglichkeiten:
+Mit der Bereitstellungs-API [!DNL Target] können Sie:
 
 * Bereitstellung von Erlebnissen über das Internet, einschließlich SPA- und Mobilkanälen sowie Nicht-Browser-basierte IoT-Geräte, wie z. B. angeschlossene TVs, Kiosks oder digitale Bildschirme im Store.
 * Stellen Sie Erlebnisse von jeder Server-seitigen Plattform oder Anwendung bereit, die HTTP/s-Aufrufe durchführen kann.
@@ -52,26 +52,26 @@ Durch die [!DNL Target] Die Bereitstellungs-API bietet folgende Möglichkeiten:
 
 ## Server-seitige SDKs
 
-Die [!DNL Adobe Target] Die serverseitige SDK-Dokumentation hilft Ihnen bei der Implementierung von [!DNL Target] auf Ihren Servern in Ihrer gewünschten Sprache.
+Die Dokumentation zum Server-seitigen SDK [!DNL Adobe Target] hilft Ihnen bei der Implementierung von [!DNL Target] auf Ihren Servern in Ihrer bevorzugten Sprache.
 
 * [Node.js](node-js/overview.md)
 * [Java](java/overview.md)
 * [.NET](net/overview.md)
 * [Python](python/overview.md)
 
-bis [!DNL Adobe Target]Server-seitige SDKs verwenden, können Sie:
+Über die Server-seitigen SDKs von [!DNL Adobe Target] können Sie:
 
-* Ausführen und Ausführen **Funktionskennzeichnung**, **Rollouts**, und **A/B-Experimente** at **Latenz nahe null**.
-* Erlebnisse für alle **Web**, einschließlich **SPA**, und **mobile Kanäle** sowie nicht browserbasierter **Geräte des Internets der Dinge (IoT)** z. B. ein vernetzter TV-, Kiosk- oder In-store-digitaler Bildschirm.
-* Versand **Von maschinellem Lernen (ML) gesteuerte personalisierte Erlebnisse** für einen Benutzer, unabhängig davon, welcher Kanal oder welches Gerät der Benutzer mit Ihrem Unternehmen verbunden hat.
-* **Nahtlose Integration mit Adobe Experience Cloud** Produkte wie **Adobe Analytics**, **Adobe Audience Manager** und die **Experience Cloud ID-Dienst** vom Server aus.
+* Führen Sie **Feature Flags**, **Rollouts** und **A/B-Experimente** bei **Latenz nahe null** aus und führen Sie sie aus.
+* Stellen Sie Erlebnisse für **Web** bereit, einschließlich **SPA** und **Mobile Kanäle** sowie nicht browserbasierter **IoT-Geräte** (z. B. angeschlossene TV-, Kiosk- oder digitale Bildschirme im Geschäft).
+* Bereitstellen von durch maschinelles Lernen (ML) gesteuerten personalisierten Erlebnissen **für einen Benutzer, unabhängig davon, welcher Kanal oder welches Gerät der Benutzer für Ihr Unternehmen genutzt hat.**
+* **Nahtlose Integration mit Adobe Experience Cloud**-Produkten wie **Adobe Analytics**, **Adobe Audience Manager** und dem **Experience Cloud ID-Dienst** vom Server.
 
-Siehe [Erste Schritte](sdk-guides/getting-started/getting-started.md) Seite , auf der Sie erfahren, wie Sie einen einfachen Anwendungsfall beim Kennzeichnen von Funktionen über [on-device decisioning](sdk-guides/on-device-decisioning/overview.md).
+Auf der Seite [Erste Schritte](sdk-guides/getting-started/getting-started.md) erfahren Sie, wie Sie eine einfache Funktion ausführen, die einen Anwendungsfall kennzeichnet, indem Sie [on-device decisioning](sdk-guides/on-device-decisioning/overview.md) verwenden.
 
-Sehen Sie sich unsere [Beispiel-Apps](sdk-guides/sample-apps/sample-apps.md) um Spaß zu haben und herumzuspielen!
+Sehen Sie sich unsere [Beispiel-Apps](sdk-guides/sample-apps/sample-apps.md) an, um Spaß zu haben und zu spielen!
 
 ## [!DNL Target Recommendations]-APIs
 
-Link: [Target Recommendations-APIs](https://developers.adobetarget.com/api/recommendations) und [Übersicht über die Adobe Recommendations API](../../before-administer/recs-api/overview.md).
+Link: [Target Recommendations APIs](https://developers.adobetarget.com/api/recommendations) und [Adobe Recommendations API Overview](../../before-administer/recs-api/overview.md).
 
-Mit den Recommendations-APIs können Sie programmatisch mit [!DNL Target] Recommendations-Server. Diese APIs können in eine Reihe von Anwendungsstacks integriert werden, um Funktionen auszuführen, die Sie normalerweise über die [!DNL Target] -Benutzeroberfläche.
+Mit den Recommendations-APIs können Sie programmatisch mit [!DNL Target] Recommendations-Servern interagieren. Diese APIs können in eine Reihe von Anwendungsstacks integriert werden, um Funktionen auszuführen, die Sie normalerweise über die [!DNL Target] -Benutzeroberfläche ausführen würden.

@@ -1,13 +1,13 @@
 ---
 keywords: registerExtension, registerExtension, register-Erweiterung, at.js, Funktionen, function, clientCode, serverDomain, globalMboxName, globalMboxAutoCreate, timeout, registerExtension2
-description: Verwenden Sie die [!UICONTROL registerExtension()] -Funktion für [!DNL Adobe Target] JavaScript-Bibliothek at.js , um eine bestimmte Erweiterung zu registrieren. (at.js 1.x)
-title: Wie verwende ich die [!UICONTROL registerExtension()] Funktion?
+description: Verwenden Sie die Funktion [!UICONTROL registerExtension()] für die JavaScript-Bibliothek [!DNL Adobe Target] at.js , um eine bestimmte Erweiterung zu registrieren. (at.js 1.x)
+title: Wie verwende ich die Funktion "[!UICONTROL registerExtension()]"?
 feature: at.js
 exl-id: 71decf00-84c5-4914-b0cd-bb061fa6265f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 76%
+source-wordcount: '265'
+ht-degree: 69%
 
 ---
 
@@ -32,7 +32,7 @@ Hinweise:
 * Wird einer dieser Parameter nicht bereitgestellt, wird eine Ausnahme generiert.
 * Ist das Modul-Array leer, wird eine Ausnahme generiert.
 
-Weitere Informationen und Beispiele zur Verwendung von `[!UICONTROL registerExtension]` finden Sie auf der Seite [Adobe Experience Cloud at.js-Erweiterungen](https://github.com/Adobe-Marketing-Cloud/target-atjs-extensions) auf GitHub.
+Weitere Informationen und Beispiele zur Verwendung von `[!UICONTROL registerExtension]` finden Sie auf der Seite [Adobe Experience Cloud Target at.js-Erweiterungen](https://github.com/Adobe-Marketing-Cloud/target-atjs-extensions) auf GitHub.
 
 ## Methoden für Einstellungsmodule
 
@@ -40,7 +40,7 @@ Weitere Informationen und Beispiele zur Verwendung von `[!UICONTROL registerExte
 |--- |--- |--- |
 | clientCode | Zeichenfolge | Clientcode |
 | serverDomain | Zeichenfolge | Edgeserverdomäne |
-| globalMboxName | Zeichenfolge | [!DNL Target] Name der globalen Mbox |
+| globalMboxName | Zeichenfolge | [!DNL Target] globaler Mbox-Name |
 | globalMboxAutoCreate | Boolesch | Zeigt an, ob die automatische Erstellung aktiviert oder deaktiviert ist. |
 | Zeitüberschreitung | Nummer | Zeitüberschreitung der Abfrage |
 

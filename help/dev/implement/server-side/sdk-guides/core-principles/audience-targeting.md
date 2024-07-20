@@ -5,8 +5,8 @@ exl-id: df1bd856-e848-452c-90a0-abf29e7a2313
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '967'
-ht-degree: 21%
+source-wordcount: '702'
+ht-degree: 26%
 
 ---
 
@@ -14,11 +14,12 @@ ht-degree: 21%
 
 ## Überblick
 
-Mit Zielgruppen können Sie Ihre Experimentierungs- und Personalisierungsaktivitäten auswählen. [!DNL Adobe Target] unterstützt standardmäßig unzählige leistungsstarke Zielgruppen-Targeting-Funktionen. Die folgenden Attribute stehen zur Verfügung für [Zielgruppen-Targeting](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html):
+Mit Zielgruppen können Sie Ihre Experimentierungs- und Personalisierungsaktivitäten auswählen. [!DNL Adobe Target] unterstützt standardmäßig unzählige leistungsstarke Zielgruppen-Targeting-Funktionen. Die folgenden Attribute sind für das [Zielgruppen-Targeting](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html) verfügbar:
 
 ### [!DNL Target] Bibliothek
 
-Weitere Informationen finden Sie unter [[!DNL Target] Bibliothek](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html). &#x200B;
+Weitere Informationen finden Sie unter [[!DNL Target] Bibliothek](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html).
+&#x200B;
 * Verwiesen von Bing
 * Chrome-Browser
 * Firefox-Browser
@@ -36,7 +37,7 @@ Weitere Informationen finden Sie unter [[!DNL Target] Bibliothek](https://experi
 ### Geo
 
 Weitere Informationen finden Sie unter [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html).
-&#x200B;&#x200B;
+&#x200B; &#x200B;
 * Land/Region
 * Land
 * Stadt
@@ -84,7 +85,7 @@ Weitere Informationen finden Sie unter [Betriebssystem](https://experienceleague
 
 ### Seiten der Site
 
-Weitere Informationen finden Sie unter [Site-Seiten](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html).
+Weitere Informationen finden Sie unter [Seiten der Site](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html).
 
 * Aktuelle Seite
 * Vorherige Seite
@@ -119,17 +120,17 @@ Weitere Informationen finden Sie unter [Traffic-Quellen](https://experienceleagu
 
 ### Zeitrahmen
 
-Weitere Informationen finden Sie unter [Zeitraum.](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html)
+Weitere Informationen finden Sie unter [Zeitraum](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html).
 
 * Startdatum / Enddatum
 
 ## Client-Hinweise
 
-[!DNL Adobe Target] erfordert Client Hints für die korrekte Segmentierung der Zielgruppenattribute von Browser, Betriebssystem und Mobil sowie bestimmter Instanzen von Profilskripten. Weitere Hintergrundinformationen finden Sie unter [Benutzeragent und Client-Hinweise](../../../client-side/atjs/user-agent-and-client-hints.md).
+[!DNL Adobe Target] erfordert Client-Hinweise zur korrekten Segmentierung der Zielgruppenattribute von Browser, Betriebssystem und Mobil sowie bestimmter Instanzen von Profilskripten. Weitere Hintergrundinformationen finden Sie unter [Benutzeragent und Client-Hinweise](../../../client-side/atjs/user-agent-and-client-hints.md).
 
 ### Übergeben von Client-Hinweisen an [!DNL Adobe Target]
 
-Ab Node.js SDK v2.4.0 und Java SDK v2.3.0 können Client-Hinweise an gesendet werden. [!DNL Target] via `getOffers()` -Aufrufe. Client-Hinweise sollten im `request.context` -Objekt zusammen mit dem Benutzeragenten.
+Ab Node.js SDK v2.4.0 und Java SDK v2.3.0 können Client-Hinweise über `getOffers()` -Aufrufe an [!DNL Target] gesendet werden. Client-Hinweise sollten zusammen mit dem Benutzeragenten im Objekt `request.context` enthalten sein.
 
 >[!BEGINTABS]
 
@@ -206,11 +207,11 @@ Die folgende Tabelle zeigt, welche Zielgruppenregeln für die Entscheidungsfindu
 | [Besucherprofil](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | Nein |
 | [Traffic-Quellen](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | Nein |
 | [Zeitrahmen](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | Ja |
-| [Experience Cloud Audiences](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (Zielgruppen aus Adobe Audience Manager, Adobe Analytics und Adobe Experience Manager) | Nein |
+| [Experience Cloud-Zielgruppen](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (Zielgruppen aus Adobe Audience Manager, Adobe Analytics und Adobe Experience Manager) | Nein |
 
 ### Geotargeting für Entscheidungen auf Geräten
 
-Um eine nahezu Nulllatenz für Entscheidungsaktivitäten auf dem Gerät mit geo-basierten Zielgruppen zu gewährleisten, empfiehlt Adobe, die Geowerte selbst im -Aufruf an anzugeben. `getOffers`. Legen Sie dazu die `Geo` -Objekt im `Context` des Antrags. Dies bedeutet, dass Ihr Server eine Möglichkeit benötigt, den Standort der einzelnen Endbenutzer zu ermitteln. Beispielsweise kann Ihr Server mithilfe eines von Ihnen konfigurierten Dienstes eine IP-zu-Geo-Suche durchführen. Einige Hosting-Provider, wie z. B. Google Cloud, bieten diese Funktionalität über benutzerdefinierte Header in jedem `HttpServletRequest`.
+Um eine nahezu Nulllatenz für Entscheidungsaktivitäten auf dem Gerät bei geobasierten Zielgruppen zu gewährleisten, empfiehlt Adobe, die Geowerte selbst im Aufruf von `getOffers` anzugeben. Setzen Sie dazu das Objekt `Geo` in das Objekt `Context` der Anfrage. Dies bedeutet, dass Ihr Server eine Möglichkeit benötigt, den Standort der einzelnen Endbenutzer zu ermitteln. Beispielsweise kann Ihr Server mithilfe eines von Ihnen konfigurierten Dienstes eine IP-zu-Geo-Suche durchführen. Einige Hosting-Provider, wie z. B. Google Cloud, stellen diese Funktionalität über benutzerdefinierte Header in jedem `HttpServletRequest` bereit.
 
 >[!BEGINTABS]
 
@@ -269,7 +270,7 @@ public class TargetRequestUtils {
 
 >[!ENDTABS]
 
-Wenn Sie jedoch nicht die Möglichkeit haben, IP-zu-Geo-Suchen auf Ihrem Server durchzuführen, aber dennoch eine geräteübergreifende Entscheidungsfindung für `getOffers` Anforderungen, die geobasierte Zielgruppen enthalten, wird dies ebenfalls unterstützt. Der Nachteil dieses Ansatzes besteht darin, dass eine Remote-IP-zu-Geo-Suche verwendet wird, die zu jedem `getOffers` aufrufen. Diese Latenz sollte kleiner als eine Remote-Latenz sein. `getOffers` aufrufen, da es ein CDN trifft, das sich in der Nähe Ihres Servers befindet. Sie müssen **only** bereitstellen `ipAddress` im Feld `Geo` -Objekt im `Context` Ihrer Anfrage verwenden, damit das SDK den geografischen Standort der IP-Adresse Ihres Benutzers abrufen kann. Wenn ein anderes Feld zusätzlich zum `ipAddress` wird angegeben, [!DNL Target] Das SDK ruft die Metadaten für den geografischen Standort nicht zur Auflösung ab.
+Wenn Sie jedoch keine IP-zu-Geo-Suchen auf Ihrem Server durchführen können, aber dennoch eine geräteübergreifende Entscheidungsfindung für `getOffers` -Anforderungen mit geobasierten Zielgruppen durchführen möchten, wird dies ebenfalls unterstützt. Der Nachteil dieses Ansatzes besteht darin, dass eine Remote-IP-zu-Geo-Suche verwendet wird, wodurch jedem `getOffers` -Aufruf Latenzzeiten hinzugefügt werden. Diese Latenz sollte kleiner als ein Remote-Aufruf von `getOffers` sein, da er ein CDN trifft, das sich in der Nähe Ihres Servers befindet. Sie dürfen das Feld `ipAddress` nur **im Objekt `Geo` in der Anfrage `Context` angeben, damit das SDK den geografischen Standort der IP-Adresse Ihres Benutzers abruft.** Wenn ein anderes Feld zusätzlich zum `ipAddress` angegeben wird, ruft das [!DNL Target]-SDK die Metadaten für den geografischen Standort nicht zur Auflösung ab.
 
 >[!BEGINTABS]
 
@@ -333,4 +334,4 @@ Die folgende Tabelle zeigt, welche Zielgruppenregeln für serverseitige Entschei
 | [Besucherprofil](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | Ja |
 | [Traffic-Quellen](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | Ja |
 | [Zeitrahmen](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | Ja |
-| [Experience Cloud Audiences](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (Zielgruppen aus Adobe Audience Manager, Adobe Analytics und Adobe Experience Manager) | Ja |
+| [Experience Cloud-Zielgruppen](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (Zielgruppen aus Adobe Audience Manager, Adobe Analytics und Adobe Experience Manager) | Ja |

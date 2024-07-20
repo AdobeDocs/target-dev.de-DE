@@ -4,8 +4,8 @@ description: Integration mit Experience Cloud
 keywords: Versandschnittstelle
 source-git-commit: f16903556954d2b1854acd429f60fbf6fc2920de
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 8%
+source-wordcount: '467'
+ht-degree: 7%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 8%
 
 # Integration mit Experience Cloud
 
-## Adobe Analytics für Target (A4T)
+## Adobe Analytics for Target (A4T)
 
 Wenn ein Target-Bereitstellungs-API-Aufruf vom Server ausgelöst wird, gibt Adobe Target das Erlebnis für diesen Benutzer zurück. Zusätzlich gibt Adobe Target entweder die Adobe Analytics-Payload an den Aufrufer zurück oder leitet sie automatisch an Adobe Analytics weiter. Damit Target-Aktivitätsinformationen serverseitig an Adobe Analytics gesendet werden können, müssen einige Voraussetzungen erfüllt sein:
 
@@ -26,7 +26,7 @@ Wenn ein Target-Bereitstellungs-API-Aufruf vom Server ausgelöst wird, gibt Adob
 Adobe Target kann die Analytics-Nutzlast automatisch über die Server-Seite an Adobe Analytics weiterleiten, wenn die folgenden IDs bereitgestellt werden:
 
 1. `supplementalDataId` - Die ID, die zum Zuordnen zwischen Adobe Analytics und Adobe Target verwendet wird
-1. `trackingServer` - Adobe Analytics-Server Damit Adobe Target und Adobe Analytics die Daten korrekt zusammenführen können, müssen die gleichen `supplementalDataId` müssen an Adobe Target und Adobe Analytics übergeben werden.
+1. `trackingServer` - Der Adobe Analytics-Server Damit Adobe Target und Adobe Analytics die Daten korrekt zusammenfügen können, muss derselbe `supplementalDataId` an Adobe Target und Adobe Analytics übergeben werden.
 
 ```
 curl -X POST \
@@ -73,7 +73,7 @@ curl -X POST \
 
 ### Analytics-Nutzlast von Adobe Target abrufen
 
-Verbraucher der Adobe Target-Bereitstellungs-API können die Adobe Analytics-Payload für eine entsprechende Mbox abrufen, damit der Verbraucher die Payload über die [Dateneinfüge-API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Wenn ein Server-seitiger Adobe Target-Aufruf ausgelöst wird, übergeben Sie `client_side` der `logging` in der Anfrage. Dies gibt wiederum eine Payload zurück, wenn die Mbox in einer Aktivität vorhanden ist, die Analytics als Berichtsquelle verwendet.
+Verbraucher der Adobe Target-Bereitstellungs-API können die Adobe Analytics-Payload für eine entsprechende Mbox abrufen, damit der Verbraucher die Payload über die [Dateneinfüge-API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) an Adobe Analytics senden kann. Wenn ein Server-seitiger Adobe Target-Aufruf ausgelöst wird, übergeben Sie `client_side` an das Feld `logging` in der Anfrage. Dies gibt wiederum eine Payload zurück, wenn die Mbox in einer Aktivität vorhanden ist, die Analytics als Berichtsquelle verwendet.
 
 ```
 curl -X POST \
@@ -121,7 +121,7 @@ curl -X POST \
     }'
 ```
 
-Einmal angegeben `logging` = `client_side`, erhalten Sie die Payload in der `mbox` wie unten dargestellt.
+Nachdem Sie `logging` = `client_side` angegeben haben, erhalten Sie die Payload im Feld `mbox` wie unten dargestellt.
 
 ```
 {
@@ -176,7 +176,7 @@ Einmal angegeben `logging` = `client_side`, erhalten Sie die Payload in der `mbo
 }
 ```
 
-Wenn die Antwort von Target etwas im `analytics` -> `payload` -Eigenschaft, leiten Sie sie unverändert an Adobe Analytics weiter. Analytics weiß, wie diese Payload verarbeitet wird. Dies kann in einer GET-Anfrage im folgenden Format erfolgen:
+Wenn die Antwort von Target etwas in der Eigenschaft `analytics` -> `payload` enthält, leiten Sie sie unverändert an Adobe Analytics weiter. Analytics weiß, wie diese Payload verarbeitet wird. Dies kann in einer GET-Anfrage im folgenden Format erfolgen:
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
@@ -187,8 +187,8 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 | Feldname | Erforderlich | Beschreibung |
 | --- | --- | --- |
 | `rsid` | Ja | Die Report Suite-ID |
-| `pe` | Ja | Seitenereignis. Immer auf `tnt` |
-| `tnta` | Ja | Analytics-Nutzlast, die vom Target-Server in zurückgegeben wird `analytics` -> `payload` -> `tnta` |
+| `pe` | Ja | Seitenereignis. Immer auf `tnt` setzen |
+| `tnta` | Ja | Analytics-Nutzlast, die vom Target-Server in `analytics` -> `payload` -> `tnta` zurückgegeben wird |
 | `mid` | Marketing Cloud-Besucher-ID |
 
 ### Erforderliche Kopfzeilenwerte

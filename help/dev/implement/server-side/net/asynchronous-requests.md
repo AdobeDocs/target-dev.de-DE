@@ -1,6 +1,6 @@
 ---
-title: Verwendung asynchroner Anforderungen in der [!DNL Adobe Target] .NET SDK
-description: Erfahren Sie mehr [!DNL Target] Java SDK unterstützt asynchrone Anfragen, wodurch die effektive Zielzeit auf null reduziert werden kann.
+title: Verwendung asynchroner Anforderungen im [!DNL Adobe Target] .NET SDK
+description: Erfahren Sie, wie das Java-SDK [!DNL Target] asynchrone Anforderungen unterstützt, wodurch die effektive Zielzeit auf null reduziert werden kann.
 feature: APIs/SDKs
 exl-id: fd36cc7b-a884-4e57-93c2-8aff8256109a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Beschreibung
 
-Ein Vorteil der Server-seitigen Integration besteht darin, dass man die enorme Bandbreite und die Rechenressourcen, die auf Server-Seite verfügbar sind, mit Parallelismus nutzen kann. [!DNL Target] .NET SDK unterstützt asynchrone Anforderungen, wodurch die Integration vereinfacht wird [!DNL Target] in den vorhandenen asynchronen Workflow einer App.
+Ein Vorteil der Server-seitigen Integration besteht darin, dass man die enorme Bandbreite und die Rechenressourcen, die auf Server-Seite verfügbar sind, mit Parallelismus nutzen kann. [!DNL Target] .NET SDK unterstützt asynchrone Anforderungen, wodurch die Integration von [!DNL Target] in den vorhandenen asynchronen Workflow einer App vereinfacht wird.
 
 ## Unterstützte Methoden
 
@@ -53,4 +53,4 @@ var notificationRequest = new TargetDeliveryRequest.Builder()
 var notificationResponse = await this.targetClient.SendNotificationsAsync(notificationRequest);
 ```
 
-In diesem Beispiel wird davon ausgegangen, dass [initialisiert das SDK](initialize-sdk.md).
+In diesem Beispiel wird davon ausgegangen, dass Sie [das SDK](initialize-sdk.md) initialisiert haben.

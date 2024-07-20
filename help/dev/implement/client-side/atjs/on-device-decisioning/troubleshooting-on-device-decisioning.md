@@ -1,23 +1,23 @@
 ---
 keywords: Implementierung, JavaScript-Bibliothek, JS, at.js, Entscheidungsfindung auf dem Gerät, Geräteentscheidung, at.js, auf dem Gerät, auf dem Gerät, Fehlerbehebung, Problembehebung, Implementierung2
-description: Erfahren Sie, wie Sie Fehler beheben können. [!UICONTROL on-device decisioning] mit der at.js-Bibliothek.
+description: Erfahren Sie, wie Sie mit der at.js-Bibliothek eine Fehlerbehebung für [!UICONTROL on-device decisioning] durchführen.
 title: Wie kann ich eine Fehlerbehebung bei der On-Device-Entscheidungsfindung mit der JavaScript-Bibliothek at.js durchführen?
 feature: at.js
 exl-id: b9530cc7-5e83-4fdf-bde9-b2492e0861ff
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
 
 # Fehlerbehebung [!UICONTROL on-device decisioning] für at.js
 
-Führen Sie zur Fehlerbehebung die folgenden Schritte aus [!UICONTROL on-device decisioning] in [!UICONTROL Adobe Target] mit der JavaScript-Bibliothek at.js:
+Führen Sie die folgenden Schritte aus, um eine Fehlerbehebung bei [!UICONTROL on-device decisioning] in [!UICONTROL Adobe Target] mit der JavaScript-Bibliothek at.js durchzuführen:
 
 ## Schritt 1: Aktivieren des Konsolenprotokolls für at.js
 
-Anfügen des URL-Parameters `mboxDebug=1` ermöglicht at.js das Drucken von Nachrichten in der Browser-Konsole.
+Wenn Sie den URL-Parameter `mboxDebug=1` anhängen, kann at.js Nachrichten in der Browser-Konsole drucken.
 
 Alle Nachrichten enthalten das Präfix &quot;AT:&quot;, um einen einfachen Überblick zu erhalten. Um sicherzustellen, dass ein Artefakt erfolgreich geladen wurde, sollte Ihr Konsolenprotokoll Meldungen ähnlich den folgenden enthalten:
 
@@ -30,7 +30,7 @@ Die folgende Abbildung zeigt diese Meldungen im Konsolenprotokoll:
 
 (Klicken Sie auf Bild , um die volle Breite zu vergrößern.)
 
-![Konsolenprotokoll mit Artefaktmeldungen](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/browser-console.png "Konsolenprotokoll mit Artefaktmeldungen"){zoomable=&quot;yes&quot;}
+![Konsolenprotokoll mit Artefaktmeldungen](/help/dev/implement/client-side/atjs/on-device-decisioning/assets/browser-console.png "Konsolenprotokoll mit Artefaktmeldungen"){zoomable="yes"}
 
 ## Schritt 2: Überprüfen des Herunterladens des Regelartefakts auf der Registerkarte &quot;Netzwerk&quot;Ihres Browsers
 
@@ -44,11 +44,11 @@ So öffnen Sie beispielsweise DevTools in Google Chrome:
 
    Darüber hinaus können Sie nach &quot;/delivery|rules.json/&quot;filtern, um alle Target-Aufrufe und die Datei &quot;artifact rules.json&quot;anzuzeigen.
 
-   ![Registerkarte &quot;Netzwerk&quot;in Google Chrome](assets/rule-json.png)
+   Registerkarte &quot;Netzwerk&quot;in Google Chrome](assets/rule-json.png)![
 
 ## Schritt 3: Überprüfen des Herunterladens des Regelartefakts mithilfe benutzerdefinierter at.js-Ereignisse
 
-Die at.js-Bibliothek sendet zwei neue benutzerspezifische Ereignisse, um die [!UICONTROL on-device decisioning].
+Die at.js-Bibliothek sendet zwei neue benutzerspezifische Ereignisse, um [!UICONTROL on-device decisioning] zu unterstützen.
 
 * `adobe.target.event.ARTIFACT_DOWNLOAD_SUCCEEDED`
 * `adobe.target.event.ARTIFACT_DOWNLOAD_FAILED`

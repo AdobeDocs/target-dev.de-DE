@@ -1,25 +1,25 @@
 ---
 keywords: TLS, TLS 1.0, Transport Layer Security, Verschlüsselung, TLS 1.1, TLS 1.2
-description: Erfahren Sie mehr [!DNL Target] verwendet das TLS-Protokoll (Transport Layer Security), um die höchsten Sicherheitsstandards zu erfüllen und die Sicherheit Ihrer Kundendaten zu fördern.
-title: Funktionsweise [!DNL Target] Verwenden Sie TLS, um Sicherheit zu bieten?
+description: Erfahren Sie, wie [!DNL Target] das TLS-Protokoll (Transport Layer Security) verwendet, um die höchsten Sicherheitsstandards einzuhalten und die Sicherheit Ihrer Kundendaten zu fördern.
+title: Wie stellt [!DNL Target] mithilfe von TLS Sicherheit bereit?
 feature: Privacy & Security
 exl-id: f5ea2272-27ab-49c9-b096-b15dd277d4e5
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1147'
-ht-degree: 50%
+source-wordcount: '1197'
+ht-degree: 47%
 
 ---
 
 # Änderungen der TLS-Verschlüsselung (Transport Layer Security)
 
-Informationen zu Änderungen bei der [!DNL Adobe] und [!DNL Adobe Target] Verwenden Sie TLS (Transport Layer Security), um die höchsten Sicherheitsstandards zu erfüllen und die Sicherheit von Kundendaten zu fördern.
+Informationen zu Änderungen, die daran vorgenommen wurden, wie [!DNL Adobe] und [!DNL Adobe Target] TLS (Transport Layer Security) verwenden, um die höchsten Sicherheitsstandards zu erfüllen und die Sicherheit von Kundendaten zu fördern.
 
-Transport Layer Security (TLS) ist das am weitesten verbreitete Sicherheitsprotokoll, das aktuell in Webbrowsern und anderen Anwendungen Verwendung findet, bei denen über ein Netzwerk übertragene Daten geschützt werden müssen. Um die Sicherheitsstandards von Adobe einzuhalten, muss die Unterstützung für ältere Protokolle beendet und durch TLS 1.2 als obligatorisches Sicherheitsprotokoll ersetzt werden, damit die Daten durch die neueste und sicherste Version des Protokolls geschützt sind.
+Transport Layer Security (TLS) ist das am weitesten verbreitete Sicherheitsprotokoll, das aktuell in Webbrowsern und anderen Anwendungen Verwendung findet, bei denen über ein Netzwerk übertragene Daten geschützt werden müssen. Adobe verfügt über Sicherheitsstandards, die das Ende der Lebensdauer älterer Protokolle erfordern, und schreibt die Verwendung von TLS 1.2 vor, um die aktuellste und sicherste Version zu verwenden.
 
 >[!WARNING]
 >
->Ab 1. März 2020 gilt Folgendes: [!DNL Target] unterstützt nicht mehr die TLS 1.1-Verschlüsselung für Visual Experience Composer (VEC), Enhanced Experience Composer (EEC), Aktivitätsbereitstellung, APIs usw. Führen Sie ein Upgrade auf TLS 1.2 durch, um Probleme zu vermeiden.
+>Ab dem 1. März 2020 unterstützt [!DNL Target] keine TLS 1.1-Verschlüsselung mehr für Visual Experience Composer (VEC), Enhanced Experience Composer (EEC), Aktivitätsbereitstellung, APIs usw. Führen Sie ein Upgrade auf TLS 1.2 durch, um Probleme zu vermeiden.
 
 Wir gehen davon aus, dass dies keine wesentlichen Auswirkungen auf Kundendaten oder die Berichterstattung haben wird.
 
@@ -29,15 +29,15 @@ TLS 1.2 ist die Standardeinstellung ab dem 1. März 2020 und TLS 1.1 wird nicht 
 
 Adobe führt TLS 1.2 schrittweise ein. Kunden, deren Domänen bereits mit 1.2 konform sind, müssen beim Übergang zu TLS 1.2 keine Änderungen vornehmen. Die meisten Kundendomänen unterstützen bereits TLS 1.2. Wenn Ihre Domäne TLS 1.2 nicht unterstützt, werden diese Domänen wie heute (bis März 2020) auf TLS 1.1 beibehalten.
 
-In dieser Übergangsphase sollten keine Probleme auftreten. Wenn der VEC eine Site, die zuvor funktioniert hat, nicht mehr lädt,  [senden Sie eine Anfrage an den Kundendienst](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C). Geben Sie den Übergang zu TLS 1.2 als mögliche Ursache an.
+In dieser Übergangsphase sollten keine Probleme auftreten. Wenn der VEC eine zuvor funktionierende Site nicht mehr lädt, [öffnen Sie ein Kundenunterstützungs-Ticket](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C), in dem diese Migration als mögliche Ursache genannt wird.
 
-Wenn Sie jedoch zu den Kunden gehören, die TSL 1.1 verwenden, ohne TLS 1.2 zu unterstützen, sollten Sie die Umstellung Ihrer Domänen/Infrastruktur auf TLS 1.2 planen. Wir werden das TLS 1.1-Protokoll bis zum 1. März 2020 weiterhin unterstützen. Ab dem 1. März 2020 [!DNL Target] unterstützt das TLS 1.1-Protokoll nicht, das für VEC über die Enhanced Experience Composer-Funktion verwendet werden soll.
+Wenn Sie zu den Kunden gehören, deren Domain/Infrastruktur nur TSL 1.1 unterstützt, nicht jedoch TLS 1.2, sollten Sie eine Umstellung auf TLS 1.2 planen. Das Protokoll TLS 1.1 wird noch bis zum Montag, 1. März 2020 unterstützt. Ab dem 1. März 2020 unterstützt [!DNL Target] das TLS 1.1-Protokoll nicht mehr für VEC über die Funktion Enhanced Experience Composer.
 
-Auch wenn allen Kunden der Umstieg auf TLS 1.2 empfohlen wird – falls Sie als neuer Kunde TLS 1.2 *NICHT* unterstützen, teilen Sie dem Kundendienst mit, dass Sie TLS 1.1 für Enhanced Experience Composer verwenden müssen. Planen Sie jedoch den Wechsel zu TLS 1.2 ein, da Sie auch nach dem 1. März 2020 nicht mehr unterstützt werden.
+Auch wenn allen Kunden der Umstieg auf TLS 1.2 empfohlen wird – falls Sie als neuer Kunde TLS 1.2 *NICHT* unterstützen, teilen Sie dem Kundendienst mit, dass Sie TLS 1.1 für Enhanced Experience Composer verwenden müssen. Planen Sie jedoch den Übergang zu TLS 1.2 ein, da TLS 1.0 nur noch bis zum Montag, 1. März 2020 unterstützt wird.
 
 ## Aktivitätsbereitstellung
 
-Ab dem 1. März 2020 [!DNL Target] -Server unterstützen TLS 1.1 nicht mehr. Mit dieser Änderung [!DNL Target] -Server akzeptieren keine Anforderungen mehr von Besuchern mit älteren Geräten oder Webbrowsern, die TLS 1.2 (oder höher) nicht unterstützen. Daher erhalten ältere Geräte und Browser, die nur TLS 1.1 unterstützen (oder standardmäßig TLS 1.1 unterstützen), keine Aktivitätsinhalte von Adobe Target. Standardinhalte der Site werden gerendert.
+Ab dem 1. März 2020 werden [!DNL Target]-Server TLS 1.1 nicht mehr unterstützen. Mit dieser Änderung akzeptieren [!DNL Target] -Server keine Anforderungen mehr von Besuchern mit älteren Geräten oder Webbrowsern, die TLS 1.2 (oder höher) nicht unterstützen. Daher erhalten ältere Geräte und Browser, die nur TLS 1.1 unterstützen (oder standardmäßig TLS 1.1 unterstützen), keine Aktivitätsinhalte von Adobe Target. Standardinhalte der Site werden gerendert.
 
 Zu den betroffenen älteren Geräten und Browsern gehören:
 
@@ -49,32 +49,32 @@ Zu den betroffenen älteren Geräten und Browsern gehören:
 * Internet Explorer 10 unter Windows Phone 8.0
 * Safari 6.0.4/OS X 10.8.4 und frühere Versionen
 
-Beachten Sie bei der Planung dieser Änderung Folgendes (beachten Sie, dass der Termin am 1. März 2020 alle diese Punkte betrifft):
+Berücksichtigen Sie Folgendes bei der Planung für diese Änderung (beachten Sie, dass der Termin am Montag, 1. März 2020 für alle Punkte gilt):
 
 * Sie müssen sicherstellen, dass Ihre Standardsite vorbereitet ist und auf kompatiblen Geräten und Browsern genutzt werden kann.
-* Beachten Sie, dass die Anzahl der Besucher in [!DNL Target] -Berichte können möglicherweise einen geringfügigen Rückgang der Besucherzahl erkennen.
+* Beachten Sie, dass die Anzahl der Besucher in Ihren [!DNL Target] -Berichten möglicherweise einen geringfügigen Rückgang der Besucherzahl erkennen kann.
 * Möglicherweise müssen Sie Zielgruppen ändern, die speziell für ältere Geräte oder Browser erstellt wurden, die TLS 1.2 nicht unterstützen. Die Bereitstellung auf diesen Geräten und Browsern funktioniert nicht mehr.
 
-Weitere Informationen zu unterstützten Browsern und Versionen finden Sie unter  [Unterstützte Browser](supported-browsers.md).
+Weitere Informationen zu unterstützten Browsern und deren Versionen finden Sie unter [Unterstützte Browser](supported-browsers.md).
 
 ## [!DNL Adobe Target]-APIs
 
-Ab dem 1. März 2020 [!DNL Target] APIs unterstützen die Verschlüsselung mit TLS 1.1 nicht mehr. Kunden, die auf die API zugreifen, sollten sicherstellen, dass sie nicht von den Auswirkungen betroffen sind.
+Ab dem 1. März 2020 unterstützen [!DNL Target] -APIs keine Verschlüsselung mit TLS 1.1 mehr. Kunden, die auf die API zugreifen, sollten sicherstellen, dass sie nicht von den Auswirkungen betroffen sind.
 
-* Für API-Clients, die Java 7 mit den Standardeinstellungen verwenden, sind Änderungen erforderlich, damit TLS 1.2 unterstützt wird. Weitere Informationen finden Sie unter „[Changing default TLS protocol version for client end points: TLS 1.0 to TLS 1.2](https://www.java.com/en/configure_crypto.html)“ auf der Java-Website.
+* Für API-Clients, die Java 7 mit den Standardeinstellungen verwenden, müssen Änderungen zur Unterstützung von TLS 1.2 vorgenommen werden. Weitere Informationen finden Sie unter &quot;[Changing default TLS protocol version for client end points: TLS 1.0 to TLS 1.2](https://www.java.com/en/configure_crypto.html)&quot;auf der Java-Website.
 * API-Clients, die Java 8 verwenden, sollten nicht beeinträchtigt werden, da die Standardeinstellung TLS 1.2 ist.
 * Bei API-Clients, die andere Frameworks verwenden, müssen Sie die Details zur Unterstützung von TLS 1.2 beim jeweiligen Anbieter erfragen.
 
-## Zugriff auf die Benutzeroberflächen von Experience Cloud Solutions
+## Zugriff auf Experience Cloud Solutions-Schnittstellen
 
-Da die [!DNL Target] Für die Standard/Premium-Benutzeroberfläche ist bereits eine [moderner Webbrowser](supported-browsers.md), erwarten wir keine Probleme. Wenn Sie keine Verbindung zu Target herstellen können, sollten Sie Ihren Browser auf die neueste Version aktualisieren.
+Da für die Benutzeroberfläche von [!DNL Target] Standard/Premium bereits ein [moderner Webbrowser](supported-browsers.md) erforderlich ist, werden keine Probleme erwartet. Wenn Sie keine Verbindung zu Target herstellen können, sollten Sie Ihren Browser auf die neueste Version aktualisieren.
 
 ## Überprüfen der TLS-Version, die Ihr Browser verwendet
 
-So überprüfen Sie die TLS-Version auf Ihrer Website mit Google Chrome:
+So überprüfen Sie die TLS-Version auf Ihrer Website mithilfe von Google Chrome:
 
 1. Öffnen Sie die betroffene Website in Chrome.
-1. Klicken Sie im Chrome-Menü (den drei vertikalen Ellipsen) auf Mehr Tools > Entwicklertools .
+1. Klicken Sie im Menü Chrome (die drei vertikalen Ellipsen) auf Mehr Tools > Entwicklertools .
 
    ![Chrome Developer Tools](assets/chrome-developer-tools.png)
 
@@ -100,7 +100,7 @@ In diesem Abschnitt wird beschrieben, was mit Browsern zu erwarten ist, die TLS-
 
 | [!DNL Target] JavaScript-Implementierung | Details |
 |--- |--- |
-| Adobe Experience Platform Web-SDK | Bei aktiviertem TLS 1.0 oder TLS 1.1:<ul><li>Mit Browser-Entwicklungstools wird auf der Registerkarte „Netzwerk“ die Meldung „200 OK“ angezeigt. Das bedeutet, dass die Anfrage erfolgreich war.</li><li>Benutzer sehen die Meldung „Keine sichere Verbindung zu dieser Seite möglich“. In der Nachricht wird erläutert, dass dies möglicherweise daran liegt, dass die Site veraltete oder unsichere TLS-Sicherheitseinstellungen verwendet.</li><li>Es wird kein Konsolenfehler angezeigt.</li><li>Der Standardinhalt wird bereitgestellt.</li></ul>Bei aktiviertem TLS 1.2:<ul><li>Der Angebotsinhalt wird bereitgestellt.</li></ul> |
+| Adobe Experience Platform Web SDK | Bei aktiviertem TLS 1.0 oder TLS 1.1:<ul><li>Mit Browser-Entwicklungstools wird auf der Registerkarte „Netzwerk“ die Meldung „200 OK“ angezeigt. Das bedeutet, dass die Anfrage erfolgreich war.</li><li>Benutzer sehen die Meldung „Keine sichere Verbindung zu dieser Seite möglich“. In der Nachricht wird erläutert, dass dies möglicherweise daran liegt, dass die Site veraltete oder unsichere TLS-Sicherheitseinstellungen verwendet.</li><li>Es wird kein Konsolenfehler angezeigt.</li><li>Der Standardinhalt wird bereitgestellt.</li></ul>Bei aktiviertem TLS 1.2:<ul><li>Der Angebotsinhalt wird bereitgestellt.</li></ul> |
 | at.js | Bei aktiviertem TLS 1.0 oder TLS 1.1:<ul><li>Mit Browser-Entwicklungstools wird auf der Registerkarte „Netzwerk“ die Meldung „200 OK“ angezeigt. Das bedeutet, dass die Anfrage erfolgreich war.</li><li>Benutzer sehen die Meldung „Keine sichere Verbindung zu dieser Seite möglich“. In der Nachricht wird erläutert, dass dies möglicherweise daran liegt, dass die Site veraltete oder unsichere TLS-Sicherheitseinstellungen verwendet.</li><li>Es wird kein Konsolenfehler angezeigt.</li><li>Der Standardinhalt wird bereitgestellt.</li></ul>Bei aktiviertem TLS 1.2:<ul><li>Der Angebotsinhalt wird bereitgestellt.</li></ul> |
 
 ### Aktivitäten, die auf eine Browserversion-Audience ausgerichtet sind (Internet Explorer, Versionen 6, 7 oder 8)
@@ -109,5 +109,5 @@ Zielgruppen funktionieren nicht mehr.
 
 | [!DNL Target] JavaScript-Implementierung | Details |
 |--- |--- |
-| Adobe Experience Platform Web-SDK | Das Platform SDK wird in Internet Explorer-Versionen vor Version 10 nicht unterstützt. |
+| Adobe Experience Platform Web SDK | Das Platform SDK wird in Internet Explorer-Versionen vor Version 10 nicht unterstützt. |
 | at.js | „at.js“ wird erst ab Internet Explorer 10 unterstützt. |

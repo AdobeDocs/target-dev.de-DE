@@ -1,25 +1,25 @@
 ---
 keywords: implementieren, implementieren, einrichten, einrichten, Skript-Profilattribute
-description: Daten abrufen [!DNL Target] Verwendung von Skript-Profilattributen.
-title: Wie erhalte ich Daten? [!DNL Target] Verwenden von Skript-Profilattributen?
+description: Rufen Sie Daten mithilfe von Skript-Profilattributen in [!DNL Target] ab.
+title: Wie erhalte ich Daten mithilfe von Skript-Profilattributen in [!DNL Target] ?
 feature: Implementation
 exl-id: ba11f1de-e68b-4505-8e3e-cd4d46ef59a2
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 69%
+source-wordcount: '283'
+ht-degree: 74%
 
 ---
 
 # Skriptprofilattribute
 
-Skript-Profilattribute sind Name/Wert-Paare, die in [!DNL Adobe Target] -Lösung. Der Wert wird durch die Ausführung eines JavaScript-Snippets auf dem Target-Server über den Server-Aufruf ermittelt.
+Skript-Profilattribute sind Name/Wert-Paare, die in der [!DNL Adobe Target] -Lösung definiert sind. Der Wert wird durch die Ausführung eines JavaScript-Snippets auf dem Target-Server über den Server-Aufruf ermittelt.
 
 Benutzer schreiben kleine Code-Snippets, die pro Mbox-Aufruf ausgeführt werden, bevor ein Besucher für eine Zielgruppenmitgliedschaft und -aktivität ausgewertet wird.
 
 ## Format
 
-Skript-Profilattribute werden im Abschnitt „Zielgruppen“ von Target erstellt. Jeder Attributname ist gültig und der Wert ist das Ergebnis einer JavaScript-Funktion, die von der [!DNL Target] Benutzer. Den Attributnamen wird in Target automatisch ein „user. &quot;in [!DNL Target] , um sie von den Profilattributen innerhalb der Seite zu unterscheiden.
+Skript-Profilattribute werden im Abschnitt „Zielgruppen“ von Target erstellt. Jeder Attributname ist gültig und der Wert ist das Ergebnis einer JavaScript-Funktion, die vom Benutzer [!DNL Target] geschrieben wurde. Den Attributnamen wird in Target automatisch ein „user. &quot; in &quot;[!DNL Target]&quot;, um sie von den Profilattributen auf der Seite zu unterscheiden.
 
 Das Code-Snippet ist in der Sprache Rhino JS geschrieben und kann Token und andere Werte referenzieren.
 

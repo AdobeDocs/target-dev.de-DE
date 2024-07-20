@@ -1,11 +1,11 @@
 ---
-title: Anzeigen- oder Klickbenachrichtigungen senden an [!DNL Adobe Target] Verwenden des Python-SDK
-description: Erfahren Sie, wie Sie mit sendNotifications() Anzeigen- oder Klickbenachrichtigungen an senden können. [!DNL Adobe Target] für die Messung und Berichterstellung.
+title: Senden von Anzeigen- oder Klickbenachrichtigungen an [!DNL Adobe Target] mithilfe des Python SDK
+description: Erfahren Sie, wie Sie mit sendNotifications() Anzeigen- oder Klickbenachrichtigungen an [!DNL Adobe Target] für Messungen und Berichte senden können.
 feature: APIs/SDKs
 exl-id: 03827b18-a546-4ec8-8762-391fcb3ac435
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '405'
 ht-degree: 8%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 8%
 
 ## Beschreibung
 
-`send_notifications()` wird verwendet, um Anzeigen- oder Klickbenachrichtigungen an zu senden [!DNL Adobe Target] für die Messung und Berichterstellung.
+`send_notifications()` wird verwendet, um Anzeigen- oder Klickbenachrichtigungen für Messungen und Berichte an [!DNL Adobe Target] zu senden.
 
 >[!NOTE]
 >
->Wenn ein `execute` -Objekt mit erforderlichen Parametern in der Anfrage selbst enthalten ist, wird die Impression für qualifizierte Aktivitäten automatisch inkrementiert.
+>Wenn sich ein `execute` -Objekt mit erforderlichen Parametern in der Anfrage selbst befindet, wird die Impression für qualifizierte Aktivitäten automatisch erhöht.
 
 SDK-Methoden, die eine Impression automatisch erhöhen, sind:
 
 * `get_offers()`
 * `get_attributes()`
 
-Wenn eine `prefetch` -Objekt innerhalb der Anfrage übergeben wird, wird die Impression nicht automatisch für die Aktivitäten mit Mboxes innerhalb der `prefetch` -Objekt. `Send_notifications()` muss für vorab abgerufene Erlebnisse zur Erhöhung von Impressionen und Konversionen verwendet werden.
+Wenn ein `prefetch` -Objekt innerhalb der Anfrage übergeben wird, wird die Impression für Aktivitäten mit Mboxes innerhalb des `prefetch` -Objekts nicht automatisch erhöht. `Send_notifications()` muss für vorab abgerufene Erlebnisse zum Erhöhen von Impressionen und Konversionen verwendet werden.
 
 ## Methode
 
@@ -41,32 +41,32 @@ target_client.send_notifications(options)
 
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
-| Anfrage | DeliveryRequest | Ja | Keine | Entspricht dem [[!UICONTROL Target-Bereitstellungs-API]](/help/dev/implement/delivery-api/overview.md) Anfrage |
-| target_cookie | str | no | Keine | [!DNL Target] Cookie |
+| Anfrage | DeliveryRequest | Ja | Keine | Konformität mit der [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md)-Anforderung |
+| target_cookie | str | no | Keine | [!DNL Target] -Cookie |
 | target_location_hint | str | no | Keine | [!DNL Target] Standorthinweis |
 | consumer_id | str | no | Keine | Beim Zuordnen mehrerer Aufrufe sollten unterschiedliche Kunden-IDs angegeben werden |
-| customer_ids | Liste[CustomerId] | no | Keine | Eine Liste der Kunden-IDs im mit VisitorId kompatiblen Format |
+| customer_ids | list[CustomerId] | no | Keine | Eine Liste der Kunden-IDs im mit VisitorId kompatiblen Format |
 | session_id | str | no | Keine | Wird zum Verknüpfen mehrerer Anforderungen verwendet |
 | callback | callable | no | Keine | Wenn die Anfrage asynchron verarbeitet wird, wird der Callback aufgerufen, wenn die Antwort bereit ist |
 | err_callback | callable | no | Keine | Wenn die Anfrage asynchron verarbeitet wird, wird beim Auslösen einer Ausnahme der Fehler-Callback aufgerufen |
 
-## Rückgabe
+## Rückgaben
 
-`Returns` a `TargetDeliveryResponse` wenn synchron aufgerufen wird (Standard) oder eine `AsyncResult` , wenn mit einem Rückruf aufgerufen wird. `TargetDeliveryResponse` weist die folgende Struktur auf:
+`Returns` a `TargetDeliveryResponse` , wenn synchron aufgerufen wird (Standard), oder eine `AsyncResult` , wenn mit einem Rückruf aufgerufen. `TargetDeliveryResponse` weist die folgende Struktur auf:
 
 | Name | Typ | Beschreibung |
 | --- | --- | --- |
-| response | DeliveryResponse | Entspricht dem [[!DNL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) response |
-| target_cookie | dict | [!DNL Target] Cookie |
-| target_location_hint_cookie | dict | [!DNL Target] Standorthinweis-Cookie |
-| analytics_details | Liste[AnalyticsResponse] | [!DNL Analytics] Nutzlast bei clientseitiger [!DNL Analytics] usage |
-| trace |  | Liste[dict] | Aggregierte Trace-Daten für alle Anfrage-Mboxes/Ansichten |
-| response_tokens | Liste[dict] | Eine Liste von [&#x200B; Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) |
+| response | DeliveryResponse | Konformität mit der Antwort [[!DNL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) |
+| target_cookie | dict | [!DNL Target] -Cookie |
+| target_location_hint_cookie | dict | [!DNL Target] location hint cookie |
+| analytics_details | list[AnalyticsResponse] | [!DNL Analytics] Nutzlast bei clientseitiger [!DNL Analytics] Nutzung |
+| trace |  | list[dict] | Aggregierte Trace-Daten für alle Anfrage-Mboxes/Ansichten |
+| response_tokens | list[dict] | Eine Liste mit [ &#x200B; Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) |
 | Meta | dict | Zusätzliche Entscheidungsmetadaten für die Verwendung mit on-device-Decisioning |
 
 ## Beispiel
 
-Erstellen wir zunächst die [!UICONTROL Target-Bereitstellungs-API] Anfrage zum Vorabruf von Inhalten für die `home` und `product1` Mboxes verwenden.
+Erstellen wir zunächst die [!UICONTROL Target Delivery API] -Anfrage für den Vorabruf von Inhalten für die Mboxes `home` und `product1`.
 
 ### Python
 
@@ -80,7 +80,7 @@ delivery_request = DeliveryRequest(prefetch=prefetch)
 response = target_client.get_offers({ "request": delivery_request })
 ```
 
-Eine erfolgreiche Antwort enthält eine [!UICONTROL Target-Bereitstellungs-API] Antwortobjekt, das vorab abgerufenen Inhalt für die angeforderten Mboxes enthält. Beispiel `target_response["response"]` -Objekt (formatiert als Dict) kann wie folgt aussehen:
+Eine erfolgreiche Antwort enthält ein [!UICONTROL Target Delivery API] -Antwortobjekt, das vorab abgerufenen Inhalt für die angeforderten Mboxes enthält. Ein Beispiel für ein `target_response["response"]` -Objekt (formatiert als Dict) kann wie folgt aussehen:
 
 ### Python
 
@@ -138,7 +138,7 @@ Eine erfolgreiche Antwort enthält eine [!UICONTROL Target-Bereitstellungs-API] 
 }
 ```
 
-Beachten Sie die mbox. `name` und `state` sowie die `eventToken` in den einzelnen Target-Inhaltsoptionen. Diese sollten im `send_notifications()` anfordern, sobald die einzelnen Inhaltsoptionen angezeigt werden. Nehmen wir einmal an, die `product1` Mbox wurde auf einem Nicht-Browser-Gerät angezeigt. Die Benachrichtigungsanfrage wird wie folgt angezeigt:
+Beachten Sie die Felder mbox `name` und `state` sowie das Feld `eventToken` in jeder der Target-Inhaltsoptionen. Diese sollten in der `send_notifications()` -Anfrage bereitgestellt werden, sobald jede Inhaltsoption angezeigt wird. Angenommen, die mbox `product1` wurde auf einem Nicht-Browser-Gerät angezeigt. Die Benachrichtigungsanfrage wird wie folgt angezeigt:
 
 ### Python
 
@@ -155,7 +155,7 @@ notification = Notification(
 notification_request = DeliveryRequest(notifications=[notification])
 ```
 
-Beachten Sie, dass wir sowohl den Mbox-Status als auch das Ereignis-Token, das dem [!DNL Target] Angebot, das in der Vorabruf-Antwort bereitgestellt wird. Nachdem wir die Benachrichtigungsanfrage erstellt haben, können wir sie an senden [!DNL Target] über die `send_notifications()` API-Methode:
+Beachten Sie, dass wir sowohl den Mbox-Status als auch das Ereignis-Token eingeschlossen haben, das dem in der Vorabruf-Antwort bereitgestellten Angebot [!DNL Target] entspricht. Nachdem wir die Benachrichtigungsanforderung erstellt haben, können wir sie über die API-Methode `send_notifications()` an [!DNL Target] senden:
 
 ### Python
 

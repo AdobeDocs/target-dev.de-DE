@@ -1,25 +1,25 @@
 ---
 title: Adobe Target-Bereitstellungs-API - Einzelversand oder Batch-Bereitstellung
-description: Verwendung [!UICONTROL Adobe Target-Bereitstellungs-API] Einzelne oder Batch-Bereitstellungsaufrufe?
+description: Wie verwende ich [!UICONTROL Adobe Target Delivery API] einzelne oder Batch-Bereitstellungsaufrufe?
 keywords: Versandschnittstelle
 exl-id: 525cd1f2-616a-486c-8f49-8117615500bb
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '448'
 ht-degree: 0%
 
 ---
 
 # Einzelversand oder Batch-Bereitstellung
 
-Die [!UICONTROL Adobe Target-Bereitstellungs-API] unterstützt einen einzelnen oder Batch-Bereitstellungsaufruf. Es kann eine Server-Anfrage für Inhalte für einzelne oder mehrere Mboxes gestellt werden.
+Der [!UICONTROL Adobe Target Delivery API] unterstützt einen einzelnen oder Batch-Bereitstellungsaufruf. Es kann eine Server-Anfrage für Inhalte für einzelne oder mehrere Mboxes gestellt werden.
 
 Berücksichtigen Sie die Leistungskosten bei der Entscheidung, einen einzelnen Aufruf vorzunehmen, im Vergleich zu einem Batch-Aufruf. Wenn Sie alle Inhalte kennen, die für einen Benutzer angezeigt werden müssen, empfiehlt es sich, Inhalte für alle Mboxes mit einem einzelnen Batch-Bereitstellungsaufruf abzurufen, um zu vermeiden, dass mehrere einzelne Bereitstellungsaufrufe durchgeführt werden.
 
 ## Einzelversand-Aufruf
 
-Sie können ein Erlebnis abrufen, das dem Benutzer für eine Mbox über die [!UICONTROL Adobe Target-Bereitstellungs-API]. Beachten Sie, dass Sie bei einem einzelnen Bereitstellungsaufruf einen weiteren Server-Aufruf starten müssen, um zusätzliche Inhalte für eine Mbox für einen Benutzer abzurufen. Dies kann im Laufe der Zeit sehr kostspielig werden. Beurteilen Sie daher Ihren Ansatz bei der Verwendung des einzelnen Versand-API-Aufrufs.
+Sie können ein Erlebnis abrufen, das dem Benutzer für eine Mbox über die [!UICONTROL Adobe Target Delivery API] angezeigt wird. Beachten Sie, dass Sie bei einem einzelnen Bereitstellungsaufruf einen weiteren Server-Aufruf starten müssen, um zusätzliche Inhalte für eine Mbox für einen Benutzer abzurufen. Dies kann im Laufe der Zeit sehr kostspielig werden. Beurteilen Sie daher Ihren Ansatz bei der Verwendung des einzelnen Versand-API-Aufrufs.
 
 ```
 curl -X POST \
@@ -55,7 +55,7 @@ curl -X POST \
 }'
 ```
 
-Im Beispiel für einen einzelnen Versand-Aufruf oben wird das Erlebnis abgerufen, das dem Benutzer mit `tntId`: `abcdefghijkl00023.1_1` für `mbox`:`SummerOffer` im Webkanal. Dieser einzelne Bereitstellungsaufruf generiert die folgende Antwort:
+Im Beispiel für einen einzelnen Versand-Aufruf oben wird das Erlebnis abgerufen, das dem Benutzer mit `tntId`: `abcdefghijkl00023.1_1` für eine `mbox`:`SummerOffer` im Webkanal angezeigt wird. Dieser einzelne Bereitstellungsaufruf generiert die folgende Antwort:
 
 ```
 {
@@ -83,11 +83,11 @@ Im Beispiel für einen einzelnen Versand-Aufruf oben wird das Erlebnis abgerufen
 }
 ```
 
-Beachten Sie in der Antwort die `content` -Feld enthält die HTML, die das Erlebnis beschreibt, das dem Benutzer für das Web angezeigt werden soll, das der Mbox SummerOffer entspricht.
+Beachten Sie in der Antwort, dass das Feld `content` die HTML enthält, die das Erlebnis beschreibt, das dem Benutzer für das Web angezeigt werden soll, das der Mbox SummerOffer entspricht.
 
 ### Ausführen des Seitenladevorgangs
 
-Wenn es Erlebnisse gibt, die angezeigt werden sollen, wenn eine Seite im Webkanal geladen wird, z. B. A-Tests für die Schriftarten in der Fußzeile oder Kopfzeile, können Sie Folgendes festlegen: `pageLoad` im `execute` -Feld, um alle Änderungen abzurufen, die angewendet werden sollen.
+Wenn Erlebnisse vorhanden sind, die beim Laden einer Seite im Webkanal angezeigt werden sollen, z. B. A-Tests für die Schriftarten in der Fußzeile oder Kopfzeile, können Sie im Feld `execute` den Wert `pageLoad` angeben, um alle Änderungen abzurufen, die angewendet werden sollen.
 
 ```
 curl -X POST \
@@ -117,7 +117,7 @@ curl -X POST \
 }'
 ```
 
-Der obige Beispielaufruf ruft alle Erlebnisse ab, um einen Benutzer bei der Seite anzuzeigen `https://target.enablementadobe.com/react/demo/#/` lädt.
+Der obige Beispielaufruf ruft alle Erlebnisse ab, um einen Benutzer anzuzeigen, wenn die Seite `https://target.enablementadobe.com/react/demo/#/` geladen wird.
 
 ```
 {
@@ -155,7 +155,7 @@ Der obige Beispielaufruf ruft alle Erlebnisse ab, um einen Benutzer bei der Seit
   }
 ```
 
-Im `content` -Feld die Änderung, die beim Laden einer Seite angewendet werden muss, kann abgerufen werden. Im obigen Beispiel muss ein Link in der Kopfzeile benannt werden. *Geänderte Startseite*.
+Im Feld `content` kann die Änderung abgerufen werden, die beim Laden einer Seite vorgenommen werden muss. Beachten Sie im obigen Beispiel, dass ein Link auf der Kopfzeile den Namen *Geänderte Startseite* haben muss.
 
 ## Batch-Bereitstellungsaufruf
 
@@ -203,7 +203,7 @@ curl -X POST \
 }'
 ```
 
-Im obigen Beispiel für einen Batch-Bereitstellungsaufruf werden Erlebnisse abgerufen, die für den Benutzer mit `tntId`: `abcdefghijkl00023.1_1` für mehrere `mbox`:`SummerOffer`, `SummerShoesOffer`, und `SummerDressOffer`. Da wir wissen, dass wir für diesen Benutzer ein Erlebnis für mehrere Mboxes anzeigen müssen, können wir diese Anfragen in einem Batch-Vorgang speichern und einen Server-Aufruf anstelle von drei individuellen Bereitstellungsaufrufen durchführen.
+Im obigen Beispiel für einen Batch-Bereitstellungsaufruf werden Erlebnisse abgerufen, die für den Benutzer mit `tntId`: `abcdefghijkl00023.1_1` für mehrere `mbox`:`SummerOffer`, `SummerShoesOffer` und `SummerDressOffer` angezeigt werden. Da wir wissen, dass wir für diesen Benutzer ein Erlebnis für mehrere Mboxes anzeigen müssen, können wir diese Anfragen in einem Batch-Vorgang speichern und einen Server-Aufruf anstelle von drei individuellen Bereitstellungsaufrufen durchführen.
 
 ```
 {
@@ -252,4 +252,4 @@ Im obigen Beispiel für einen Batch-Bereitstellungsaufruf werden Erlebnisse abge
 }
 ```
 
-In der obigen Antwort sehen Sie dies in der `content` -Feld jeder Mbox, kann die HTML-Darstellung des Erlebnisses abgerufen werden, das dem Benutzer für jede Mbox angezeigt wird.
+In der obigen Antwort können Sie sehen, dass im Feld `content` jeder mbox die HTML-Darstellung des Erlebnisses abgerufen werden kann, das dem Benutzer für jede mbox angezeigt wird.

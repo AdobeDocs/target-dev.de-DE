@@ -1,25 +1,25 @@
 ---
 keywords: implementieren, implementieren, einrichten, einrichten, Seitenparameter
-description: Daten abrufen [!DNL Target] Verwendung von Profilattributen innerhalb der Seite.
-title: Wie erhalte ich Daten? [!DNL Target] Verwenden von Profilattributen in der Seite?
+description: Rufen Sie Daten mithilfe von Profilattributen innerhalb der Seite in [!DNL Target] ab.
+title: Wie erhalte ich Daten mithilfe von In-Page-Profilattributen nach [!DNL Target] ?
 feature: Implementation
 exl-id: c19fd746-21a2-4eb5-8c2a-c24806e09324
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 45%
+source-wordcount: '283'
+ht-degree: 43%
 
 ---
 
 # In-Page-Profilattribute
 
-Profilattribute auf der Seite in [!DNL Adobe Target] (auch &quot;In-mbox-Profilattribute&quot;genannt) sind Name/Wert-Paare, die direkt über den Seiten-Code übergeben werden und im Profil des Besuchers zur zukünftigen Verwendung gespeichert werden.
+In-Page-Profilattribute in [!DNL Adobe Target] (auch &quot;In-mbox-Profilattribute&quot;genannt) sind Name/Wert-Paare, die direkt über den Seiten-Code übergeben werden und im Profil des Besuchers zur zukünftigen Verwendung gespeichert werden.
 
 Die Profilattribute auf der Seite erlauben es, benutzerspezifische Daten im Profil von Target zu speichern, um sie später für ein Targeting gezielt zu segmentieren.
 
 ## Format
 
-In-Page-Profilattribute werden an [!DNL Target] über einen Server-Aufruf als ein Zeichenfolgen-Name/Wert-Paar mit dem Präfix &quot;profile&quot;. vor dem Attributnamen an Target übergeben.
+Profilattribute auf der Seite werden über einen Server-Aufruf als Name-Wert-Paar-Zeichenfolge mit dem Präfix &quot;profile&quot;an [!DNL Target] übergeben. vor dem Attributnamen an Target übergeben.
 
 Attributnamen und -werte sind anpassbar (obwohl es einige „reservierte Namen“ für bestimmte Verwendungszwecke gibt).
 
@@ -30,13 +30,13 @@ Im Folgenden finden Sie einige Beispiele für In-Page-Profilattribute:
 
 ## Anwendungsbeispiele
 
-* **Anmeldeinformationen:**[!DNL Target] nicht personenbezogene Daten, die auf dem Login des Benutzers basieren, an weitergeben. Diese Daten können Mitgliedsstatus, Bestellverlauf oder mehr sein.
+* **Anmeldeinformationen**: Geben Sie nicht personenbezogene Daten (non-PII) basierend auf der Anmeldung des Benutzers an [!DNL Target] weiter. Diese Daten können Mitgliedsstatus, Bestellverlauf oder mehr sein.
 * **Store-Info:** verfolgen, welcher Store der bevorzugte Standort dieses Benutzers ist.
 * **Bisherige Interaktionen**: verfolgen, was der Benutzer zuvor auf der Site getan hat, um die künftige Personalisierung vorzubereiten.
 
 ## Vorteile der Methode
 
-Daten werden an gesendet [!DNL Target] in Echtzeit und kann für denselben Server-Aufruf verwendet werden, für den die Daten eingehen.
+Daten werden in Echtzeit an [!DNL Target] gesendet und können für denselben Server-Aufruf verwendet werden, bei dem die Daten eingehen.
 
 ## Einschränkungen
 

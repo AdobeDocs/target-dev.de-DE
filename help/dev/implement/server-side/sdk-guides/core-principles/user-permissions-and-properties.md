@@ -5,14 +5,14 @@ exl-id: 612faf1a-e8f9-4321-b831-90fba69ead3a
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 9%
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 # Benutzerberechtigungen und Eigenschaften
 
-Die [!DNL Target] SDKs enthalten Unterstützung für Benutzerberechtigungen und Eigenschaften. Wenn Sie nicht genau wissen, wie [!DNL Adobe Target] verarbeitet Unternehmensberechtigungen über Arbeitsbereiche und Eigenschaften. Weitere Informationen dazu finden Sie unter [Berechtigungen für Unternehmensbenutzer](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=de).
+Die [!DNL Target] SDKs enthalten Unterstützung für Benutzerberechtigungen und Eigenschaften. Wenn Sie nicht genau wissen, wie [!DNL Adobe Target] Unternehmensberechtigungen über Arbeitsbereiche und Eigenschaften handhabt, können Sie mehr darüber in [Berechtigungen für Unternehmensbenutzer](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=de) erfahren.
 
 Der Client kann ein Eigenschafts-Token auf zwei Arten verwenden.
 
@@ -20,7 +20,7 @@ Der Client kann ein Eigenschafts-Token auf zwei Arten verwenden.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 const CONFIG = {
@@ -34,7 +34,7 @@ const targetClient = TargetClient.create(CONFIG);
 targetClient.getOffers({...})
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 ClientConfig clientConfig = ClientConfig.builder()
@@ -50,11 +50,11 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 ## Incident Property Token im getOffers-Aufruf
 
-Ein Eigenschafts-Token kann auch in einem einzelnen `getOffers` aufrufen. Dazu fügen Sie der Anforderung ein Eigenschaftsobjekt hinzu. Ein auf diese Weise angegebenes Eigenschafts-Token hat Vorrang vor einem Satz in der Konfiguration.
+Ein Eigenschafts-Token kann auch in einem einzelnen `getOffers` -Aufruf angegeben werden. Dazu fügen Sie der Anforderung ein Eigenschaftsobjekt hinzu. Ein auf diese Weise angegebenes Eigenschafts-Token hat Vorrang vor einem Satz in der Konfiguration.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 const CONFIG = {
@@ -76,7 +76,7 @@ targetClient.getOffers({
 })
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 ExecuteRequest executeRequest = new ExecuteRequest()

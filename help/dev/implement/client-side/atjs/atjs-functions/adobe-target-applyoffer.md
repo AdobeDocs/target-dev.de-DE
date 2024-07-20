@@ -1,12 +1,12 @@
 ---
 keywords: adobe.target.applyOffer, applyOffer, applyoffer, apply offer, at.js, features, function, $8
-description: Verwenden Sie die [!UICONTROL adobe.target.applyOffer()] -Funktion für [!DNL Adobe Target] JavaScript-Bibliothek at.js , um den Antwortinhalt anzuwenden.
-title: Wie verwende ich die [!UICONTROL adobe.target.applyOffer()] Funktion?
+description: Verwenden Sie die Funktion [!UICONTROL adobe.target.applyOffer()] für die JavaScript-Bibliothek [!DNL Adobe Target] at.js , um den Antwortinhalt anzuwenden.
+title: Wie verwende ich die Funktion "[!UICONTROL adobe.target.applyOffer()]"?
 feature: at.js
 exl-id: 957bbe92-8012-4bd5-95d6-1ae38b72bb16
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '172'
 ht-degree: 69%
 
 ---

@@ -7,14 +7,14 @@ exl-id: 332f90bd-4079-4653-aa38-b35837631c94
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
 
 # Benutzerberechtigungen (Premium)
 
-[!DNL Adobe] ermöglicht Kunden die Verwaltung von Benutzerberechtigungen bei der Verwendung von Adobe Target. Für einen erfolgreichen [!UICONTROL Adobe Target-Bereitstellungs-API] aufrufen, muss ein Token mit den richtigen Berechtigungen innerhalb des API-Aufrufs übergeben werden. Um mehr über die Benutzerberechtigungen und das Abrufen des Token-Besuchs zu erfahren [diese Dokumentation](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
+Mit [!DNL Adobe] können Kunden bei der Verwendung von Adobe Target Benutzerberechtigungen verwalten. Um einen erfolgreichen [!UICONTROL Adobe Target Delivery API] -Aufruf durchzuführen, muss ein Token mit den richtigen Berechtigungen innerhalb des API-Aufrufs übergeben werden. Um mehr über die Benutzerberechtigungen und das Abrufen des Tokens zu erfahren, besuchen Sie [diese Dokumentation](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
 
 ```
 curl -X POST \
@@ -49,7 +49,7 @@ curl -X POST \
     }'
 ```
 
-Sobald Sie über das entsprechende Token verfügen, übergeben Sie es an `property` -> `token` für jeden API-Aufruf. Wenn die Variable `property` -> `token` nicht bei jedem API-Aufruf weitergegeben wird, erhalten Sie keine `content` zurück von Adobe Target.
+Sobald Sie über das entsprechende Token verfügen, übergeben Sie es für jeden API-Aufruf an `property` -> `token`. Wenn die `property` -> `token` nicht bei jedem API-Aufruf übergeben wird, erhalten Sie keine `content` zurück von Adobe Target.
 
 ```
 {
@@ -71,4 +71,4 @@ Sobald Sie über das entsprechende Token verfügen, übergeben Sie es an `proper
 }
 ```
 
-Wie Sie oben sehen können, ohne die `property` -> `token`, erhalten Sie keine Inhalte zurück. Wenn Sie Inhalte von Ihrem API-Aufruf erwarten, jedoch keine aus der Antwort abrufen, liegt das wahrscheinlich daran, dass entweder  `property` -> `token` nicht bereitgestellt oder ohne die richtigen Berechtigungen weitergegeben werden.
+Wie Sie oben sehen können, ohne die `property` -> `token` zu übergeben, erhalten Sie keine Inhalte zurück. Wenn Sie Inhalte von Ihrem API-Aufruf erwarten, aber keine aus der Antwort abrufen, liegt das wahrscheinlich daran, dass entweder `property` -> `token` nicht bereitgestellt wird oder dass es ohne die richtigen Berechtigungen weitergegeben wird.

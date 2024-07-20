@@ -1,13 +1,13 @@
 ---
 title: Integration in Experience Cloud A4T Reporting
-description: Integration in Experience Cloud, A4T-Reporting, Analytics for Target-Integration
+description: Integration mit Experience Cloud, A4T Reporting, Analytics for Target-Integration
 keywords: Bereitstellungs-API, Server-seitig, serverseitig, Integration, a4t
 exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '360'
-ht-degree: 8%
+source-wordcount: '342'
+ht-degree: 7%
 
 ---
 
@@ -15,28 +15,28 @@ ht-degree: 8%
 
 [!DNL Adobe Target] unterstützt A4T-Berichte für Entscheidungen auf dem Gerät und für serverseitige Target-Aktivitäten. Es gibt zwei Konfigurationsoptionen für die Aktivierung der A4T-Berichterstellung:
 
-* [!DNL Adobe Target] leitet die Analytics-Nutzlast automatisch an [!DNL Adobe Analytics]oder
-* Der Benutzer fordert die Analytics-Nutzlast von [!DNL Adobe Target]. ([!DNL Adobe Target] gibt die [!DNL Adobe Analytics] Nutzlast an den Aufrufer zurück.)
+* [!DNL Adobe Target] leitet die Analytics-Nutzlast automatisch an [!DNL Adobe Analytics] weiter oder
+* Der Benutzer fordert die Analytics-Nutzlast von [!DNL Adobe Target] an. ([!DNL Adobe Target] gibt die [!DNL Adobe Analytics]-Payload zurück an den Aufrufer.)
 
 >[!NOTE]
 >
->Die Entscheidungsfindung auf dem Gerät unterstützt nur A4T-Berichte, von denen [!DNL Adobe Target] leitet die Analytics-Nutzlast automatisch an [!DNL Adobe Analytics]. Analytics-Nutzlast abrufen von [!DNL Adobe Target] wird nicht unterstützt.
+>Die Entscheidungsfindung auf dem Gerät unterstützt nur die A4T-Berichterstellung, von der [!DNL Adobe Target] die Analyse-Payload automatisch an [!DNL Adobe Analytics] weiterleitet. Das Abrufen der Analytics-Nutzlast von [!DNL Adobe Target] wird nicht unterstützt.
 
 ## Voraussetzungen
 
-1. Konfigurieren Sie die Aktivität im [!DNL Adobe Target] Benutzeroberfläche mit [!DNL Adobe Analytics] als Berichtsquelle verwenden und sicherstellen, dass die Konten für A4T aktiviert sind.
+1. Konfigurieren Sie die Aktivität in der [!DNL Adobe Target] -Benutzeroberfläche mit [!DNL Adobe Analytics] als Berichtsquelle und stellen Sie sicher, dass die Konten für A4T aktiviert sind.
 1. Der API-Benutzer generiert die Adobe Marketing Cloud-Besucher-ID und stellt sicher, dass diese ID verfügbar ist, wenn die Target-Anforderung ausgeführt wird.
 
 ## [!DNL Adobe Target] leitet die Analytics-Payload automatisch weiter
 
-[!DNL Adobe Target] kann die Analyse-Payload automatisch an weiterleiten [!DNL Adobe Analytics] wenn die folgenden Kennungen angegeben sind:
+[!DNL Adobe Target] kann die Analytics-Payload automatisch an [!DNL Adobe Analytics] weiterleiten, wenn die folgenden IDs bereitgestellt werden:
 
-1. `supplementalDataId`: Die ID, die zum Zuordnen zwischen verwendet wird [!DNL Adobe Analytics] und [!DNL Adobe Target]. Zur [!DNL Adobe Target] und [!DNL Adobe Analytics] zum korrekten Zusammenfügen von Daten, das gleiche `supplementalDataId` muss an beide übergeben werden [!DNL Adobe Target] und [!DNL Adobe Analytics].
-1. `trackingServer`: Die [!DNL Adobe Analytics] Server.
+1. `supplementalDataId`: Die ID, die zum Zuordnen zwischen [!DNL Adobe Analytics] und [!DNL Adobe Target] verwendet wird. Damit [!DNL Adobe Target] und [!DNL Adobe Analytics] Daten korrekt zusammenfügen können, müssen dieselben `supplementalDataId` sowohl an [!DNL Adobe Target] als auch an [!DNL Adobe Analytics] übergeben werden.
+1. `trackingServer`: Der [!DNL Adobe Analytics] -Server.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -73,7 +73,7 @@ targetClient.getOffers({
 .catch(console.error);
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -113,13 +113,13 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-## Benutzer ruft die Analytics-Nutzlast von ab [!DNL Adobe Target]
+## Benutzer ruft die Analytics-Nutzlast von [!DNL Adobe Target] ab
 
-Ein Benutzer kann die [!DNL Adobe Analytics] Nutzlast für eine bestimmte Mbox und anschließender Versand an [!DNL Adobe Analytics] über die [Dateneinfüge-API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Wenn ein [!DNL Adobe Target] Anfrage wird ausgelöst, Übergeben `client_side` der `logging` in der Anfrage. Dadurch wird eine Payload zurückgegeben, wenn die angegebene Mbox in einer Aktivität vorhanden ist, die Analytics als Berichtsquelle verwendet.
+Ein Benutzer kann die [!DNL Adobe Analytics] -Payload für eine bestimmte Mbox abrufen und sie dann über die [Dateneinfüge-API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) an [!DNL Adobe Analytics] senden. Wenn eine [!DNL Adobe Target] -Anfrage ausgelöst wird, übergeben Sie `client_side` an das Feld `logging` in der Anfrage. Dadurch wird eine Payload zurückgegeben, wenn die angegebene Mbox in einer Aktivität vorhanden ist, die Analytics als Berichtsquelle verwendet.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -151,7 +151,7 @@ targetClient.getOffers({
 .catch(console.error);
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -189,9 +189,9 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-Einmal angegeben `logging = client_side`, erhalten Sie die Payload im mbox -Feld.
+Nachdem Sie `logging = client_side` angegeben haben, erhalten Sie die Payload im mbox-Feld.
 
-Wenn die Antwort von Target etwas im `analytics -> payload` -Eigenschaft, leiten Sie sie wie gewünscht an [!DNL Adobe Analytics]. [!DNL Adobe Analytics] weiß, wie diese Payload verarbeitet wird. Dies kann in einer GET-Anfrage im folgenden Format erfolgen:
+Wenn die Antwort von Target etwas in der Eigenschaft `analytics -> payload` enthält, leiten Sie sie unverändert an [!DNL Adobe Analytics] weiter. [!DNL Adobe Analytics] weiß, wie diese Payload verarbeitet wird. Dies kann in einer GET-Anfrage im folgenden Format erfolgen:
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
@@ -202,15 +202,15 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 | Feldname | Erforderlich | Beschreibung |
 | --- | --- | --- |
 | `rsid` | Ja | Die Report Suite-ID |
-| `pe` | Ja | Seitenereignis. Immer auf `tnt` |
-| `tnta` | Ja | Analytics-Nutzlast, die vom Target-Server in zurückgegeben wird `analytics -> payload -> tnta` |
+| `pe` | Ja | Seitenereignis. Immer auf `tnt` setzen |
+| `tnta` | Ja | Analytics-Nutzlast, die vom Target-Server in `analytics -> payload -> tnta` zurückgegeben wird |
 | `mid` | Ja | Marketing Cloud-Besucher-ID |
 
 ### Erforderliche Kopfzeilenwerte
 
 | Header-Name | Header-Wert |
 | --- | --- |
-| Host | Analytics-Datenerfassungsserver (z. B.: `adobeags421.sc.omtrdc.net`) |
+| Host | Analytics-Datenerfassungsserver (z. B. `adobeags421.sc.omtrdc.net`) |
 
 ### Beispiel für einen HTTP-Abruf zum Einfügen von A4T-Daten
 

@@ -12,7 +12,7 @@ ht-degree: 3%
 
 # Übersicht über die Grundprinzipien
 
-[!DNL Adobe Target] arbeitet nach verschiedenen Kernprinzipien, die für eine effektive Experimentierungs- oder Personalisierungsaktivität verständlich sind. Diese Grundsätze sind:
+[!DNL Adobe Target] arbeitet nach verschiedenen Kernprinzipien, die für eine effektive Experimentierungs- oder Personalisierungsaktivität wichtig sind. Diese Grundsätze sind:
 
 * [Benutzeridentifizierung und -zusammenfassung](user-identification-and-bucketing.md)
 

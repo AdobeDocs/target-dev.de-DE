@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Benutzerdefinierte HTTP-Client-Konfiguration (Java)
 
-Wenn für die Anwendung, die das SDK ausführt, ein benutzerdefinierter HTTP-Client erforderlich ist, um Funktionen wie das Konfigurieren von SSL oder das Hinzufügen von Standardkopfzeilen zu Anforderungen zu aktivieren, muss die `TargetClient` muss konfiguriert werden mit `ClientConfig.builder().httpClient()`:
+Wenn für die Anwendung, die das SDK ausführt, ein benutzerdefinierter HTTP-Client erforderlich ist, um Funktionen wie das Konfigurieren von SSL oder das Hinzufügen von Standardkopfzeilen zu Anforderungen zu aktivieren, muss der `TargetClient` mit `ClientConfig.builder().httpClient()` konfiguriert werden:
 
 ## Grundlegende benutzerdefinierte HTTP-Client-Konfiguration
 
-Das SDK unterstützt derzeit HTTP-Clients, die die `org.apache.http.client.HttpClient` -Schnittstelle.
+Das SDK unterstützt derzeit HTTP-Clients, die die `org.apache.http.client.HttpClient` -Schnittstelle implementieren.
 
 ### Grundlegende Implementierung
 
@@ -32,7 +32,7 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 ## Benutzerdefinierte HTTP-Client-Konfiguration mit SSL-Konfiguration
 
-Im Folgenden finden Sie ein Beispiel für die Konfiguration von SSL im `TargetClient` durch Anpassung der `HttpClient` an die `ClientConfig`. Das folgende Codefragment verwendet Klassen aus der `org.apache.http.conn.ssl` Paket für die SSL-Konfiguration.
+Im Folgenden finden Sie ein Beispiel für die Konfiguration von SSL im `TargetClient` durch Anpassen des `HttpClient`, der an den `ClientConfig` übergeben wird. Das folgende Codefragment verwendet Klassen aus dem `org.apache.http.conn.ssl` -Paket für die SSL-Konfiguration.
 
 ### SSL-Implementierung
 

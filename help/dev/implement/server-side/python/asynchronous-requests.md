@@ -1,11 +1,11 @@
 ---
-title: Verwendung asynchroner Anforderungen in der [!DNL Adobe Target] Python SDK
-description: Erfahren Sie mehr [!DNL Target] Python SDK unterstützt asynchrone Anfragen, wodurch die effektive Zielzeit auf null reduziert werden kann.
+title: Verwendung asynchroner Anforderungen im  [!DNL Adobe Target] Python-SDK
+description: Erfahren Sie, wie das Python-SDK asynchrone Anfragen unterstützt, wodurch die effektive Zielzeit auf null reduziert werden kann. [!DNL Target]
 feature: APIs/SDKs
 exl-id: 44ab74e5-3c1a-49cf-9fff-fe523b0c2592
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '133'
 ht-degree: 4%
 
 ---
@@ -28,7 +28,7 @@ get_attributes(mbox_names, options)
 
 ## Beispiel
 
-Eine Beispielanwendung, die die `asyncio` async/await des Moduls in Python 3.9+ könnte wie folgt aussehen:
+Eine Beispielanwendung, die das async/await des `asyncio`-Moduls in Python 3.9+ verwendet, könnte wie folgt aussehen:
 
 ### Python
 
@@ -52,4 +52,4 @@ mboxes = [MboxRequest(name="a1-serverside-ab", index=1)]
 return asyncio.run(get_target_delivery_response(mboxes)
 ```
 
-In diesem Beispiel wird davon ausgegangen, dass Sie Python 3.9+ verwenden. Bei Verwendung einer älteren Python-Version können Sie weiterhin asynchrone Anfragen senden, indem Sie `options.callback` nach `get_offers`. Weitere Informationen zur asynchronen Ausführung mit Callbacks oder Async/await finden Sie in der Flask-Beispielanwendung. [here](https://github.com/adobe/target-python-sdk/blob/main/samples/app.py).
+In diesem Beispiel wird davon ausgegangen, dass Sie Python 3.9+ verwenden. Wenn Sie eine ältere Version von Python verwenden, können Sie weiterhin asynchrone Anfragen senden, indem Sie `options.callback` an `get_offers` übergeben. Weitere Informationen zur asynchronen Ausführung mit Callbacks oder async/await, [hier](https://github.com/adobe/target-python-sdk/blob/main/samples/app.py), finden Sie in der Flask-Beispielanwendung.

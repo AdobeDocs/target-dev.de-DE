@@ -1,12 +1,12 @@
 ---
-title: Verwendung asynchroner Anforderungen in der [!DNL Adobe Target] Python SDK
-description: Erfahren Sie mehr [!DNL Target] Python SDK unterstützt asynchrone Anfragen, wodurch die effektive Zielzeit auf null reduziert werden kann.
+title: Verwendung asynchroner Anforderungen im  [!DNL Adobe Target] Python-SDK
+description: Erfahren Sie, wie das Python-SDK asynchrone Anfragen unterstützt, wodurch die effektive Zielzeit auf null reduziert werden kann. [!DNL Target]
 feature: APIs/SDKs
 exl-id: fafb9e28-5ac5-41c1-8e7f-f40550b6749f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 14%
+source-wordcount: '123'
+ht-degree: 16%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 14%
 
 ## Beschreibung
 
-`get_attributes()` wird zum Abrufen von Experimenten und personalisierten Erlebnissen aus [!DNL Target] und extrahieren Sie Attributwerte.
+`get_attributes()` wird verwendet, um Experimente und personalisierte Erlebnisse aus [!DNL Target] abzurufen und Attributwerte zu extrahieren.
 
 
 ## Methode
@@ -29,18 +29,18 @@ target_client_instance.get_attributes(mbox_names, options)
 
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
-| mbox_names | Liste[str] | Ja | Keine | Eine Liste der Mbox-Namen |
-| options | dict | Nein | Keine | Die gleichen Optionen wie für [Angebote abrufen](get-offers.md) |
+| mbox_names | list[str] | Ja | Keine | Eine Liste der Mbox-Namen |
+| options | dict | Nein | Keine | Dieselben Optionen wie für [Angebote abrufen](get-offers.md) |
 
 ## AttributesProvider
 
-Die `AttributesProvider` zurückgegeben `target_client.get_attributes()` verfügt über die folgenden Methoden:
+Der von `target_client.get_attributes()` zurückgegebene `AttributesProvider`-Wert weist die folgenden Methoden auf:
 
 | Methode | Rückgabetyp | Beschreibung |
 | --- | --- | --- |
 | get_value(mbox_name, key) | any | Gibt den Wert für einen angegebenen Mbox-Namen und Attributschlüssel aus |
 | as_object(mbox_name) | dict | Gibt ein einfaches JSON-Objekt mit Schlüsselwertpaaren zurück |
-| get_response() | [TargetDeliveryResponse](https://github.com/adobe/target-python-sdk/blob/main/target_python_sdk/types/target_delivery_response.py) | Gibt das Antwortobjekt zurück, das normalerweise von `get_offers` |
+| get_response() | [TargetDeliveryResponse](https://github.com/adobe/target-python-sdk/blob/main/target_python_sdk/types/target_delivery_response.py) | Gibt das Antwortobjekt zurück, das normalerweise von `get_offers` zurückgegeben wird |
 
 ## Beispiel
 

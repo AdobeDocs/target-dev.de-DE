@@ -1,18 +1,18 @@
 ---
 title: Automatisches Herunterladen, Speichern und Aktualisieren des auf dem Gerät vorhandenen Entscheidungsregel-Artefakts
-description: Erfahren Sie, wie Sie beim Initialisieren des [!DNL Adobe Target] SDK.
+description: Erfahren Sie, wie Sie beim Initialisieren des [!DNL Adobe Target] SDK mit dem auf dem Gerät vorhandenen Entscheidungsregel-Artefakt arbeiten.
 feature: APIs/SDKs
 exl-id: be41a723-616f-4aa3-9a38-8143438bd18a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '346'
-ht-degree: 1%
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
-# Herunterladen, Speichern und Aktualisieren des Regelartefakts automatisch über das [!DNL Adobe Target] SDK
+# Herunterladen, Speichern und Aktualisieren des Regelartefakts automatisch über das [!DNL Adobe Target]-SDK
 
-Dieser Ansatz empfiehlt sich am besten, wenn Sie die [!DNL Adobe Target] SDK gleichzeitig initialisieren und starten Sie Ihren Webserver. Das Regelartefakt wird vom [!DNL Adobe Target] SDK und im Speicher zwischengespeichert, bevor Ihre Webserver-Anwendung mit der Verarbeitung von Anforderungen beginnt. Sobald Ihre Webanwendung ausgeführt wird, werden alle [!DNL Adobe Target] -Entscheidungen werden mit dem speicherinternen Regelartefakt ausgeführt. Das zwischengespeicherte Regelartefakt wird basierend auf der `pollingInterval` Sie während des SDK-Initialisierungsschritts angeben.
+Dieser Ansatz ist am besten, wenn Sie das SDK [!DNL Adobe Target] gleichzeitig initialisieren und Ihren Webserver starten können. Das Regelartefakt wird vom SDK [!DNL Adobe Target] heruntergeladen und im Speicher zwischengespeichert, bevor Ihre Webserver-Anwendung mit der Verarbeitung von Anforderungen beginnt. Sobald Ihre Webanwendung ausgeführt wird, werden alle [!DNL Adobe Target] -Entscheidungen mithilfe des im Speicher befindlichen Regelartefakts ausgeführt. Das zwischengespeicherte Regelartefakt wird basierend auf dem `pollingInterval` aktualisiert, den Sie während des SDK-Initialisierungsschritts angegeben haben.
 
 ## Zusammenfassung der Schritte
 
@@ -46,13 +46,13 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. Importieren Sie zunächst das SDK. Importieren Sie in dieselbe Datei, von der Sie die Serverstart-Funktion steuern können.
 
-   **Node.js**
+   **node.js**
 
    ```javascript {line-numbers="true"}
    const TargetClient = require("@adobe/target-nodejs-sdk");
    ```
 
-   **Java **
+   **Java**
 
    ```javascript {line-numbers="true"}
    import com.adobe.target.edge.client.ClientConfig;
@@ -61,7 +61,7 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. Verwenden Sie zum Konfigurieren des SDK die Methode create .
 
-   **Node.js**
+   **node.js**
 
    ```javascript {line-numbers="true"}
    const CONFIG = {
@@ -82,7 +82,7 @@ npm i @adobe/target-nodejs-sdk -P
    }
    ```
 
-   **Java **
+   **Java**
 
    ```javascript {line-numbers="true"}
    ClientConfig config = ClientConfig.builder()
@@ -92,7 +92,7 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. Sowohl client als auch organizationId können aus abgerufen werden. [!DNL Adobe Target] durch Navigation zu **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]**, wie hier dargestellt.
+1. Sowohl client als auch organizationId können aus [!DNL Adobe Target] abgerufen werden, indem Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** navigieren, wie hier dargestellt.
 
    &lt;!— Fügen Sie image-client-code.png —>
    ![Implementierungsseite unter &quot;Administration&quot;in Target](assets/asset-rule-artifact-3.png)
@@ -103,7 +103,7 @@ Sie müssen das Regelartefakt nicht selbst verwalten und das Aufrufen der SDK-Me
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```javascript {line-numbers="true"}
 //req is the request object from the server request listener method
@@ -131,7 +131,7 @@ TargetClient.getOffers({
 })
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 MboxRequest mbox = new MboxRequest().name("homepage").index(0);
@@ -146,13 +146,13 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->Im obigen Codebeispiel wird die `TargetClient` -Objekt enthält einen Verweis auf das speicherinterne Regelartefakt. Wenn Sie dieses Objekt zum Aufrufen von Standard-SDK-Methoden verwenden, wird für die Entscheidungsfindung das speicherinterne Regelartefakt verwendet. Wenn Ihre Anwendung so strukturiert ist, dass Sie die SDK-Methoden in anderen Dateien als den aufrufen müssen, der Client-Anforderungen initialisiert und überwacht, und wenn diese Dateien keinen Zugriff auf das TargetClient-Objekt haben, können Sie die JSON-Payload herunterladen und in einer lokalen JSON-Datei speichern, die für andere Dateien verwendet werden soll, die das SDK initialisieren müssen. Dies wird im nächsten Abschnitt unter [Herunterladen des Regelartefakts mit einer JSON-Payload](rule-artifact-json.md).
+>Im obigen Codebeispiel enthält das `TargetClient` -Objekt einen Verweis auf das im Arbeitsspeicher vorhandene Regelartefakt. Wenn Sie dieses Objekt zum Aufrufen von Standard-SDK-Methoden verwenden, wird für die Entscheidungsfindung das speicherinterne Regelartefakt verwendet. Wenn Ihre Anwendung so strukturiert ist, dass Sie die SDK-Methoden in anderen Dateien als den aufrufen müssen, der Client-Anforderungen initialisiert und überwacht, und wenn diese Dateien keinen Zugriff auf das TargetClient-Objekt haben, können Sie die JSON-Payload herunterladen und in einer lokalen JSON-Datei speichern, die für andere Dateien verwendet werden soll, die das SDK initialisieren müssen. Dies wird im nächsten Abschnitt zum Herunterladen des Regel-Artefakts mit einer JSON-Payload ](rule-artifact-json.md) erläutert.[
 
-Im Folgenden finden Sie ein Beispiel, das eine Webanwendung startet, nachdem die [!DNL Adobe Target] SDK.
+Hier ist ein Beispiel, das eine Webanwendung startet, nachdem das [!DNL Adobe Target] SDK initialisiert wurde.
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```javascript {line-numbers="true"}
 const express = require("express");
@@ -223,7 +223,7 @@ function startWebServer() {
 }
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 import com.adobe.target.edge.client.ClientConfig;

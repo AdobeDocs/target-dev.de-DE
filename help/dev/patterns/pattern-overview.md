@@ -4,18 +4,19 @@ description: Grundlegendes zur Verwendung von Implementierungsmustern
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 09dafc7c85ea7f3600fceac4e673e8f1901771a4
+exl-id: 65fd369a-6034-4b51-8ddf-e53e526a795d
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
 
 # Übersicht über Implementierungsmuster
 
-Die [!DNL Adobe Target] Implementierungsmuster bieten Anleitungen zur Implementierung [!DNL Target] Best Practices einzuhalten und Implementierungsprobleme für Kunden und Berater zu reduzieren.
+Die Implementierungsmuster von [!DNL Adobe Target] enthalten Anleitungen zur Implementierung von [!DNL Target] unter Einhaltung der Best Practices und zur Reduzierung von Implementierungsproblemen für Kunden und Berater.
 
-Da der Implementierungsprozess [!DNL Target] variiert mit verschiedenen Frameworks und Plattformen, die [!DNL Target] -Team plant Implementierungsmuster für verschiedene Frameworks, Plattformen und Integrationen.
+Da der Implementierungsprozess von [!DNL Target] mit verschiedenen Frameworks und Plattformen variiert, plant das [!DNL Target]-Team, Implementierungsmuster für verschiedene Frameworks, Plattformen und Integrationen zu erstellen.
 
 Das folgende Muster ist derzeit verfügbar:
 
@@ -25,9 +26,9 @@ Diese Implementierungsmuster konzentrieren sich auf das, was zu tun ist, wann es
 
 ## Vorschläge für neue Muster oder Korrekturen vorhandener Muster
 
-Die [!DNL Target] -Team plant, verschiedene Implementierungsmuster für verschiedene Frameworks, Plattformen und Integrationen zu erstellen. Das Team begrüßt auch Vorschläge zur Verbesserung bestehender Muster.
+Das [!DNL Target]-Team plant, verschiedene Implementierungsmuster für verschiedene Frameworks, Plattformen und Integrationen zu erstellen. Das Team begrüßt auch Vorschläge zur Verbesserung bestehender Muster.
 
-Um dem Team bei der Erstellung neuer Muster oder der Verbesserung vorhandener Muster zu helfen, verwenden Sie die **Feedback-Optionen** -Funktion am Ende aller Artikel in *[!DNL Adobe Experience League]*.
+Um dem Team beim Erstellen neuer Muster oder beim Verbessern vorhandener Muster zu helfen, verwenden Sie die Funktion **Feedback-Optionen** am unteren Rand aller Artikel in *[!DNL Adobe Experience League]*.
 
 1. Um Ideen für neue Muster vorzuschlagen, scrollen Sie zum unteren Rand dieses Artikels, um das Modal Feedback-Optionen anzuzeigen.
 
@@ -39,37 +40,24 @@ Um dem Team bei der Erstellung neuer Muster oder der Verbesserung vorhandener Mu
 
    >[!TIP]
    >
-   >Sie müssen angemeldet sein bei `github.com` , um ein Problem in [!DNL Experience League]. Überprüfen Sie die Richtlinien und Verhaltensregeln für Beiträge, wenn Sie zum ersten Mal ein Problem öffnen.
+   >Sie müssen bei `github.com` angemeldet sein, um ein Problem in [!DNL Experience League] zu öffnen. Überprüfen Sie die Richtlinien und Verhaltensregeln für Beiträge, wenn Sie zum ersten Mal ein Problem öffnen.
 
-1. (Bedingt) Um eine Idee für ein neues Muster oder Verbesserungen an vorhandenen Mustern vorzuschlagen, klicken Sie auf **[!UICONTROL Detaillierte Feedback-Optionen]** Klicken Sie auf **[!UICONTROL Problem melden]**.
+1. (Bedingt) Um eine Idee für ein neues Muster oder Verbesserungen an vorhandenen Mustern vorzuschlagen, klicken Sie auf **[!UICONTROL Detailed feedback options]** und dann auf **[!UICONTROL Report an issue]**.
 
    1. Geben Sie einen Titel ein und geben Sie Ihre Kommentare in das Textfeld ein.
 
       Fügen Sie bei Bedarf Dateien oder Screenshots an.
 
-   1. Klicks **[!UICONTROL Neues Problem melden]** wenn fertig.
+   1. Klicken Sie zum Abschluss auf **[!UICONTROL Submit new issue]** .
 
-1. (Bedingt) Um Text für ein vorhandenes Muster zu bearbeiten, klicken Sie im Modell Feedback-Optionen des entsprechenden Artikels auf **[!UICONTROL Vorschlagen und Bearbeiten]** und klicken Sie dann auf **[!UICONTROL Bearbeiten]** -Symbol (Stiftsymbol).
+1. (Bedingt) Um Text für ein vorhandenes Muster zu bearbeiten, klicken Sie im Modell Feedback-Optionen des entsprechenden Artikels auf **[!UICONTROL Suggest an edit]** und dann auf das Symbol **[!UICONTROL Edit]** (das Stiftsymbol).
 
    1. Nehmen Sie Änderungen mithilfe der Markdown-Syntax vor.
 
-   1. Klicks **[!UICONTROL Zusagen von Änderungen]** wenn fertig.
+   1. Klicken Sie zum Abschluss auf **[!UICONTROL Commit changes]** .
 
-Die [!DNL Target] Das Team kann Ihre Kommentare oder Bearbeitungen überprüfen und mit Ihnen über diese Funktion kommunizieren, um zusätzliche Informationen zu sammeln oder bei Bedarf weitere Klarstellungen zu erhalten.
+Das [!DNL Target]-Team kann Ihre Kommentare oder Bearbeitungen überprüfen und mit Ihnen über diese Funktion kommunizieren, um zusätzliche Informationen zu sammeln oder bei Bedarf weitere Klarstellungen zu erhalten.
 
 >[!NOTE]
 >
->[!DNL Adobe] -Mitarbeiter können *Implementierungsmuster für [!DNL Adobe Target] Implementierung* Wiki für weitere Informationen zum Beitrag zu Designmustern. Befolgen Sie die oben stehenden Anweisungen, wie Sie eine Idee vorschlagen, und fragen Sie dann nach dem Link und dem [!DNL Target] -Team kann einen Link zu [!DNL Adobe] Wiki.
-
-
-
-
-
-
-
-
-
-
-
-
-
+>Mitarbeiter von [!DNL Adobe] können das Wiki *Implementierungsmuster für [!DNL Adobe Target] Implementierung* verwenden, um weitere Informationen zum Beitrag zu Designmustern zu erhalten. Befolgen Sie die oben stehenden Anweisungen, wie Sie eine Idee vorschlagen, und fragen Sie dann nach dem Link, und das [!DNL Target]-Team kann einen Link zum internen [!DNL Adobe]-Wiki bereitstellen.

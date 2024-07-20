@@ -1,11 +1,11 @@
 ---
 title: Verwalten von Rollouts für Funktionstests
-description: Erfahren Sie, wie Sie Rollouts für Funktionstests mit [!UICONTROL on-device decisioning].
+description: Erfahren Sie, wie Sie Rollouts für Funktionstests mit [!UICONTROL on-device decisioning] verwalten.
 feature: APIs/SDKs
 exl-id: caa91728-6ac0-4583-a594-0c8fe616342d
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '513'
 ht-degree: 0%
 
 ---
@@ -14,71 +14,71 @@ ht-degree: 0%
 
 ## Zusammenfassung der Schritte
 
-1. Aktivieren [!UICONTROL on-device decisioning] für Ihre Organisation
-1. Erstellen Sie eine [!UICONTROL A/B-Test] activity
+1. [!UICONTROL on-device decisioning] für Ihre Organisation aktivieren
+1. Erstellen einer [!UICONTROL A/B Test] -Aktivität
 1. Definieren Sie Ihre Funktionen und Rollout-Einstellungen
 1. Funktion in Ihre Anwendung implementieren und rendern
 1. Implementieren des Trackings für Ereignisse in Ihrer Anwendung
 1. A/B-Aktivität aktivieren
 1. Passen Sie die Rollout- und Traffic-Zuordnung nach Bedarf an
 
-## 1. Aktivieren [!UICONTROL on-device decisioning] für Ihre Organisation
+## 1. Aktivieren Sie [!UICONTROL on-device decisioning] für Ihre Organisation
 
-Durch die Aktivierung der Entscheidungsfindung auf dem Gerät wird sichergestellt, dass eine A/B-Aktivität mit nahezu Nulllatenz ausgeführt wird. Navigieren Sie zur Aktivierung dieser Funktion zu **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** > **[!UICONTROL Kontodetails]** in [!DNL Adobe Target]und aktivieren Sie die **[!UICONTROL On-Device Decisioning]** umschalten.
+Durch die Aktivierung der Entscheidungsfindung auf dem Gerät wird sichergestellt, dass eine A/B-Aktivität mit nahezu Nulllatenz ausgeführt wird. Um diese Funktion zu aktivieren, navigieren Sie in [!DNL Adobe Target] zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** und aktivieren Sie den Umschalter **[!UICONTROL On-Device Decisioning]** .
 
-![ALT-Bild](assets/asset-odd-toggle.png)
+![alt image](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->Sie müssen über einen Administrator oder Genehmiger verfügen. [Benutzerrolle](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) , um die [!UICONTROL On-Device Decisioning] umschalten.
+>Sie müssen über die Benutzerrolle &quot;Admin&quot;oder &quot;Genehmiger&quot;[Benutzer](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) verfügen, um den Umschalter [!UICONTROL On-Device Decisioning] zu aktivieren oder zu deaktivieren.
 
-Nach der Aktivierung der [!UICONTROL On-Device Decisioning] Umschalten, [!DNL Adobe Target] beginnt zu generieren *ruleArtefakte* für Ihren Client.
+Nachdem Sie den Umschalter [!UICONTROL On-Device Decisioning] aktiviert haben, beginnt [!DNL Adobe Target] mit der Generierung von *Regel-Artefakten* für Ihren Client.
 
-## 2. Erstellen Sie eine [!UICONTROL A/B-Test] activity
+## 2. Erstellen einer [!UICONTROL A/B Test] -Aktivität
 
-1. In [!DNL Adobe Target], navigieren Sie zum **[!UICONTROL Tätigkeiten]** Seite und wählen Sie **[!UICONTROL Aktivität erstellen]** > **[!UICONTROL A/B-Test]**.
+1. Navigieren Sie in [!DNL Adobe Target] zur Seite **[!UICONTROL Activities]** und wählen Sie dann **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]** aus.
 
-   ![ALT-Bild](assets/asset-ab.png)
+   ![alt image](assets/asset-ab.png)
 
-1. Im **[!UICONTROL A/B-Test-Aktivität erstellen]** modal, Behalten Sie die Standardeinstellung bei **[!UICONTROL Web]** ausgewählte Option (1), wählen Sie **[!UICONTROL Formular]** Wählen Sie als Experience Composer (2) **[!UICONTROL Standardarbeitsbereich]** mit **[!UICONTROL Keine Eigenschaftenbeschränkungen]** (3) und klicken Sie auf **[!UICONTROL Nächste]** 4.
+1. Behalten Sie im Modal **[!UICONTROL Create A/B Test Activity]** die standardmäßig ausgewählte Option **[!UICONTROL Web]** bei (1), wählen Sie **[!UICONTROL Form]** als Ihren Experience Composer (2), wählen Sie **[!UICONTROL Default Workspace]** mit **[!UICONTROL No Property Restrictions]** (3) und klicken Sie auf **[!UICONTROL Next]** (4).
 
-   ![ALT-Bild](assets/asset-form.png)
+   ![alt image](assets/asset-form.png)
 
 ## 3. Definieren Sie Ihre Funktionen und Rollout-Einstellungen.
 
-Im **[!UICONTROL Erlebnisse]** Schritt der Aktivitätserstellung einen Namen für Ihre Aktivität angeben (1). Geben Sie den Namen des Speicherorts (2) in Ihrer Anwendung ein, in dem Sie Rollouts für Ihre Funktion verwalten möchten. Beispiel:  `ondevice-rollout` oder `homepage-addtocart-rollout` sind Ortsnamen, die die Ziele für die Verwaltung von Funktions-Rollouts angeben. Im folgenden Beispiel: `ondevice-rollout` ist der für Erlebnis A definierte Ort. Sie können optional Zielgruppenverfeinerungen (4) hinzufügen, um die Qualifizierung auf die Aktivität zu beschränken.
+Geben Sie im Schritt **[!UICONTROL Experiences]** der Aktivitätserstellung einen Namen für Ihre Aktivität ein (1). Geben Sie den Namen des Speicherorts (2) in Ihrer Anwendung ein, in dem Sie Rollouts für Ihre Funktion verwalten möchten. Beispielsweise sind `ondevice-rollout` oder `homepage-addtocart-rollout` Standortnamen, die die Ziele für die Verwaltung von Funktions-Rollouts angeben. Im folgenden Beispiel ist `ondevice-rollout` der für Erlebnis A definierte Ort. Sie können optional Zielgruppenverfeinerungen (4) hinzufügen, um die Qualifizierung auf die Aktivität zu beschränken.
 
-![ALT-Bild](assets/asset-location-rollout.png)
+![alt image](assets/asset-location-rollout.png)
 
-1. Im **[!UICONTROL Inhalt]** auf derselben Seite ein und wählen Sie **[!UICONTROL JSON-Angebot erstellen]** in der Dropdown-Liste (1) angezeigt.
+1. Wählen Sie im Abschnitt **[!UICONTROL Content]** auf derselben Seite **[!UICONTROL Create JSON Offer]** in der Dropdown-Liste (1) aus, wie unten dargestellt.
 
-   ![ALT-Bild](assets/asset-offer.png)
+   ![alt image](assets/asset-offer.png)
 
-1. Im **[!UICONTROL JSON-Daten]** eingeben, die Variable für die Feature Flag für die Funktion eingeben, die Sie mit dieser Aktivität in Erlebnis A (1) mit einem gültigen JSON-Objekt (2) einführen möchten.
+1. Geben Sie in das angezeigte Textfeld **[!UICONTROL JSON Data]** die Variable für das Feature Flag für die Funktion ein, die Sie für diese Aktivität in Erlebnis A (1) mithilfe eines gültigen JSON-Objekts (2) einführen möchten.
 
-   ![ALT-Bild](assets/asset-json-a-rollout.png)
+   ![alt image](assets/asset-json-a-rollout.png)
 
-1. Klicks **[!UICONTROL Nächste]** 1. **[!UICONTROL Targeting]** Schritt der Aktivitätserstellung.
+1. Klicken Sie auf **[!UICONTROL Next]** (1) , um zum Schritt **[!UICONTROL Targeting]** der Aktivitätserstellung zu gelangen.
 
-   ![ALT-Bild](assets/asset-next-2-t-rollout.png)
+   ![alt image](assets/asset-next-2-t-rollout.png)
 
-1. Im **[!UICONTROL Targeting]** halten Sie die **[!UICONTROL Alle Besucher]** Zielgruppe (1) aus Gründen der Einfachheit. Die Traffic-Zuordnung (2) sollte jedoch auf 10 % angepasst werden. Dadurch wird die Funktion auf nur 10 % der Site-Besucher beschränkt. Klicken Sie auf Weiter (3) , um zum **[!UICONTROL Ziele und Einstellungen]** Schritt.
+1. Behalten Sie im Schritt **[!UICONTROL Targeting]** die Zielgruppe **[!UICONTROL All Visitors]** (1) bei, um sie zu vereinfachen. Die Traffic-Zuordnung (2) sollte jedoch auf 10 % angepasst werden. Dadurch wird die Funktion auf nur 10 % der Site-Besucher beschränkt. Klicken Sie auf Weiter (3) , um zum Schritt **[!UICONTROL Goals & Settings]** zu gelangen.
 
-   ![ALT-Bild](assets/asset-next-2-g-rollout.png)
+   ![alt image](assets/asset-next-2-g-rollout.png)
 
-1. Im **[!UICONTROL Ziele und Einstellungen]** Schritt auswählen **[!UICONTROL Adobe Target]** 1. als **[!UICONTROL Berichtsquelle]** um Ihre Aktivitätsergebnisse im [!DNL Adobe Target] Benutzeroberfläche.
+1. Wählen Sie im Schritt **[!UICONTROL Goals & Settings]** **[!UICONTROL Adobe Target]** (1) als **[!UICONTROL Reporting Source]** aus, um Ihre Aktivitätsergebnisse in der Benutzeroberfläche von [!DNL Adobe Target] anzuzeigen.
 
-1. Wählen Sie eine **[!UICONTROL Zielmetrik]** , um die Aktivität zu messen. In diesem Beispiel basiert eine erfolgreiche Konvertierung darauf, ob der Benutzer einen Artikel kauft, was daran erkennbar ist, ob der Benutzer den Speicherort orderConfirm (2) erreicht hat.
+1. Wählen Sie **[!UICONTROL Goal Metric]** aus, um die Aktivität zu messen. In diesem Beispiel basiert eine erfolgreiche Konvertierung darauf, ob der Benutzer einen Artikel kauft, was daran erkennbar ist, ob der Benutzer den Speicherort orderConfirm (2) erreicht hat.
 
-1. Klicks **[!UICONTROL Speichern und schließen]** (3) , um die Aktivität zu speichern.
+1. Klicken Sie auf **[!UICONTROL Save & Close]** (3) , um die Aktivität zu speichern.
 
-   ![ALT-Bild](assets/asset-conv-rollout.png)
+   ![alt image](assets/asset-conv-rollout.png)
 
 ## 4. Implementieren und Rendern der Funktion in Ihrer Anwendung
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 targetClient.getAttributes(["ondevice-rollout"]).then(function(attributes) {
@@ -90,7 +90,7 @@ targetClient.getAttributes(["ondevice-rollout"]).then(function(attributes) {
     });
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
     Attributes attrs = targetJavaClient.getAttributes(targetDeliveryRequest, "ondevice-rollout");
@@ -109,7 +109,7 @@ Nachdem Sie die Variable &quot;Feature Flag&quot;in der Anwendung verfügbar gem
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 //... Code removed for brevity
@@ -131,7 +131,7 @@ else {
 }
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 //... Code removed for brevity
@@ -157,7 +157,7 @@ else {
 
 ## 6. Aktivieren Sie Ihre Rollout-Aktivität
 
-![ALT-Bild](assets/asset-activate-rollout.png)
+![alt image](assets/asset-activate-rollout.png)
 
 ## 7. Passen Sie bei Bedarf Rollout und Traffic-Zuordnung an
 
@@ -165,4 +165,4 @@ Nachdem Sie Ihre Aktivität aktiviert haben, bearbeiten Sie sie jederzeit, um di
 
 Erhöhung der Traffic-Zuordnung von 10 % auf 50 % aufgrund des Erfolgs des ersten Rollouts.
 
-![ALT-Bild](assets/asset-adjust-rollout.png)
+![alt image](assets/asset-adjust-rollout.png)

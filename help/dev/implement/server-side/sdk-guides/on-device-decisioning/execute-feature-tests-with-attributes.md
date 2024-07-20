@@ -5,7 +5,7 @@ feature: APIs/SDKs
 exl-id: c89d337c-20a9-454c-930c-79d9217e23b6
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '877'
 ht-degree: 0%
 
 ---
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 ## Zusammenfassung der Schritte
 
-1. Aktivieren [!UICONTROL on-device decisioning] für Ihre Organisation
-1. Erstellen Sie eine [!UICONTROL A/B-Test] activity
+1. [!UICONTROL on-device decisioning] für Ihre Organisation aktivieren
+1. Erstellen einer [!UICONTROL A/B Test] -Aktivität
 1. A und B definieren
 1. Hinzufügen einer Zielgruppe
 1. Traffic-Zuordnung festlegen
@@ -30,97 +30,97 @@ ht-degree: 0%
 >
 >Angenommen, Sie sind ein E-Commerce-Einzelhandelsunternehmen. Sie möchten die Konversionsrate erhöhen, wenn Kunden Ihren Produktkatalog durchsuchen und sortieren. Sie haben die Hypothese, dass bestimmte Sortierungsalgorithmen und Paginierungsstrategien bessere Ergebnisse liefern als andere. Um diese Theorie zu testen, führen Sie einen Funktionstest durch, bei dem das Sortierungs-Widget mit verschiedenen Sortierungsoptionen für Ihre Endbenutzer neu gestaltet wird. Sie möchten sicherstellen, dass dieser Funktionstest bei nahezu null Latenz ausgeführt wird, sodass er keine negativen Auswirkungen auf Benutzererlebnisse hat und die Ergebnisse verfälscht.
 
-## 1. Aktivieren [!UICONTROL on-device decisioning] für Ihre Organisation
+## 1. Aktivieren Sie [!UICONTROL on-device decisioning] für Ihre Organisation
 
-Durch die Aktivierung der Entscheidungsfindung auf dem Gerät wird sichergestellt, dass eine A/B-Aktivität mit nahezu Nulllatenz ausgeführt wird. Navigieren Sie zur Aktivierung dieser Funktion zu **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** > **[!UICONTROL Kontodetails]** in [!DNL Adobe Target]und aktivieren Sie die **[!UICONTROL On-Device Decisioning]** umschalten.
+Durch die Aktivierung der Entscheidungsfindung auf dem Gerät wird sichergestellt, dass eine A/B-Aktivität mit nahezu Nulllatenz ausgeführt wird. Um diese Funktion zu aktivieren, navigieren Sie in [!DNL Adobe Target] zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** und aktivieren Sie den Umschalter **[!UICONTROL On-Device Decisioning]** .
 
-![ALT-Bild](assets/asset-odd-toggle.png)
+![alt image](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->Sie müssen über einen Administrator oder Genehmiger verfügen. [Benutzerrolle](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) , um die **[!UICONTROL On-Device Decisioning]** umschalten.
+>Sie müssen über die Benutzerrolle &quot;Admin&quot;oder &quot;Genehmiger&quot;[Benutzer](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) verfügen, um den Umschalter **[!UICONTROL On-Device Decisioning]** zu aktivieren oder zu deaktivieren.
 
-Nach der Aktivierung der **[!UICONTROL On-Device Decisioning]** Umschalten, [!DNL Adobe Target] beginnt zu generieren *ruleArtefakte* für Ihren Client.
+Nachdem Sie den Umschalter **[!UICONTROL On-Device Decisioning]** aktiviert haben, beginnt [!DNL Adobe Target] mit der Generierung von *Regel-Artefakten* für Ihren Client.
 
-## 2. Erstellen Sie eine [!UICONTROL A/B-Test] activity
+## 2. Erstellen einer [!UICONTROL A/B Test] -Aktivität
 
-1. In [!DNL Adobe Target], navigieren Sie zum **[!UICONTROL Tätigkeiten]** Seite und wählen Sie **[!UICONTROL Aktivität erstellen]** > **[!UICONTROL A/B-Test]**.
+1. Navigieren Sie in [!DNL Adobe Target] zur Seite **[!UICONTROL Activities]** und wählen Sie dann **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]** aus.
 
-   ![ALT-Bild](assets/asset-ab.png)
+   ![alt image](assets/asset-ab.png)
 
-1. Im **[!UICONTROL A/B-Test-Aktivität erstellen]** modal, Behalten Sie die Standardeinstellung bei **[!UICONTROL Web]** ausgewählte Option (1), wählen Sie **[!UICONTROL Formular]** Wählen Sie als Experience Composer (2) **[!UICONTROL Standardarbeitsbereich]** mit **[!UICONTROL Keine Eigenschaftenbeschränkungen]** (3) und klicken Sie auf **[!UICONTROL Nächste]** 4.
+1. Behalten Sie im Modal **[!UICONTROL Create A/B Test Activity]** die standardmäßig ausgewählte Option **[!UICONTROL Web]** bei (1), wählen Sie **[!UICONTROL Form]** als Ihren Experience Composer (2), wählen Sie **[!UICONTROL Default Workspace]** mit **[!UICONTROL No Property Restrictions]** (3) und klicken Sie auf **[!UICONTROL Next]** (4).
 
-   ![ALT-Bild](assets/asset-form.png)
+   ![alt image](assets/asset-form.png)
 
 ## 3. Definieren Sie Ihre A und B
 
-1. Im **[!UICONTROL Erlebnisse]** Schritt der Aktivitätserstellung einen Namen für Ihre Aktivität angeben (1) und ein zweites Erlebnis, Erlebnis B, hinzufügen, indem Sie auf die **[!UICONTROL Erlebnis hinzufügen]** (2). Geben Sie den Namen des Speicherorts (3) in Ihrer Anwendung ein, an dem Sie Ihren Funktionstest mit Attributen ausführen möchten. Im folgenden Beispiel: `product-results-page` der für Erlebnis A definierte Ort (er ist auch der für Erlebnis B definierte Ort)
+1. Geben Sie im Schritt **[!UICONTROL Experiences]** der Aktivitätserstellung einen Namen für Ihre Aktivität (1) ein und fügen Sie ein zweites Erlebnis, Erlebnis B, hinzu, indem Sie auf die Schaltfläche **[!UICONTROL Add Experience]** (2) klicken. Geben Sie den Namen des Speicherorts (3) in Ihrer Anwendung ein, an dem Sie Ihren Funktionstest mit Attributen ausführen möchten. Im folgenden Beispiel ist `product-results-page` der für Erlebnis A definierte Ort (es ist auch der für Erlebnis B definierte Ort).
 
-   ![ALT-Bild](assets/asset-location.png)
+   ![alt image](assets/asset-location.png)
 
-   **[!UICONTROL Erlebnis A]** enthält die JSON-Datei, die Ihre Geschäftslogik für Folgendes signalisiert:
+   **[!UICONTROL Experience A]** enthält die JSON-Datei, die Ihre Geschäftslogik für Folgendes signalisiert:
 
-   * Initiieren der Sortierungsalgorithmus-Funktion über die `test_sorting` Feature Flag
-   * Führen Sie den empfohlenen Sortieralgorithmus aus, der im `sorting_algorithm _**_attribute`
-   * Gibt 50 Produkte pro Seite zurück, wie durch die in der Variablen `pagination_limit`
+   * Initiieren der Sortierungsalgorithmus-Funktion über das Feature Flag `test_sorting`
+   * Führen Sie den empfohlenen Sortieralgorithmus aus, der im `sorting_algorithm _**_attribute` definiert ist.
+   * Gibt 50 Produkte pro Seite zurück, wie durch die Paginierungsstrategie definiert, die in `pagination_limit` definiert ist.
 
-1. Klicken Sie in Erlebnis A auf , um den Inhalt von **[!UICONTROL Standardinhalt]** durch Auswahl von **[!UICONTROL JSON-Angebot erstellen]** wie unten gezeigt (1).
+1. Klicken Sie in Erlebnis A auf , um den Inhalt von **[!UICONTROL Default Content]** in die JSON zu ändern, indem Sie **[!UICONTROL Create JSON Offer]** wie unten gezeigt (1) auswählen.
 
-   ![ALT-Bild](assets/asset-offer.png)
+   ![alt image](assets/asset-offer.png)
 
-1. Definieren Sie die JSON mit `test_sorting`, `sorting_algorithm`, und `pagination_limit` Flags und Attribute, mit denen der empfohlene Sortieralgorithmus mit einer Paginierungsgrenze von 50 Produkten initiiert wird.
+1. Definieren Sie die JSON-Datei mit den Flags und Attributen `test_sorting`, `sorting_algorithm` und `pagination_limit`, die verwendet werden, um den empfohlenen Sortieralgorithmus mit einer Paginierungsgrenze von 50 Produkten zu initiieren.
 
    >[!NOTE]
    >
-   >Wann [!DNL Adobe Target] erfasst einen Benutzer, um Erlebnis A anzuzeigen, wird die JSON mit den definierten Attributen im Beispiel zurückgegeben. In Ihrem Code müssen Sie den Wert des Feature Flag überprüfen `test_sorting` , um zu sehen, ob die Sortierfunktion aktiviert werden soll. Wenn ja, verwenden Sie den empfohlenen Wert der `sorting_algorithm` -Attribut, um die empfohlenen Produkte in der Produktlistenansicht anzuzeigen. Die Produktbegrenzung, die für Ihre Anwendung angezeigt werden soll, beträgt 50, da dies der Wert der Variablen `pagination_limit` -Attribut.
+   >Wenn [!DNL Adobe Target] einen Benutzer erfasst, um Erlebnis A anzuzeigen, wird die JSON mit den definierten Attributen im Beispiel zurückgegeben. In Ihrem Code müssen Sie den Wert des Feature Flag `test_sorting` überprüfen, um zu sehen, ob die Sortierfunktion aktiviert werden soll. Wenn dies der Fall ist, verwenden Sie den empfohlenen Wert des Attributs `sorting_algorithm` , um empfohlene Produkte in der Produktlistenansicht anzuzeigen. Die Anzahl der Produkte, die für Ihre Anwendung angezeigt werden sollen, beträgt 50, da dies der Wert des Attributs `pagination_limit` ist.
 
-   ![ALT-Bild](assets/asset-sorting.png)
+   ![alt image](assets/asset-sorting.png)
 
-   **[!UICONTROL Erlebnis B]** definiert die JSON-Datei, die Ihre Geschäftslogik für Folgendes signalisiert:
+   **[!UICONTROL Experience B]** definiert die JSON, die Ihre Geschäftslogik für Folgendes signalisiert:
 
    * Initiieren der Sortierungsalgorithmus-Funktion über das Feature Flag test_sort
-   * Führen Sie die `best_sellers` Sortieralgorithmus, der im `sorting_algorithm _**_attribute`
-   * Gibt 50 Produkte pro Seite zurück, wie durch die in der Variablen `pagination_limit`
+   * Führen Sie den im `sorting_algorithm _**_attribute` definierten Sortierungsalgorithmus `best_sellers` aus.
+   * Gibt 50 Produkte pro Seite zurück, wie durch die Paginierungsstrategie definiert, die in `pagination_limit` definiert ist.
 
    >[!NOTE]
    >
-   >Wann [!DNL Adobe Target] einen Benutzer erfasst, um Erlebnis B anzuzeigen, wird die JSON mit den definierten Attributen im Beispiel zurückgegeben. In Ihrem Code müssen Sie den Wert des Feature Flag überprüfen `test_sorting` , um zu sehen, ob die Sortierfunktion aktiviert werden soll. Wenn ja, verwenden Sie die `best_sellers` Wert der `sorting_algorithm` -Attribut verwenden, um Produkte mit dem besten Verkauf in der Produktlistenansicht anzuzeigen. Die Produktbegrenzung, die für Ihre Anwendung angezeigt werden soll, beträgt 50, da dies der Wert der Variablen `pagination_limit` -Attribut.
+   >Wenn [!DNL Adobe Target] einen Benutzer erfasst, um Erlebnis B anzuzeigen, wird die JSON mit den definierten Attributen im Beispiel zurückgegeben. In Ihrem Code müssen Sie den Wert des Feature Flag `test_sorting` überprüfen, um zu sehen, ob die Sortierfunktion aktiviert werden soll. Wenn dies der Fall ist, verwenden Sie den Wert `best_sellers` des Attributs `sorting_algorithm`, um die am besten verkauften Produkte in der Produktlistenansicht anzuzeigen. Die Anzahl der Produkte, die für Ihre Anwendung angezeigt werden sollen, beträgt 50, da dies der Wert des Attributs `pagination_limit` ist.
 
-   ![ALT-Bild](assets/asset-sorting-b.png)
+   ![alt image](assets/asset-sorting-b.png)
 
 ## 4. Audience hinzufügen
 
-Im **[!UICONTROL Targeting]** halten Sie die **[!UICONTROL Alle Besucher]** Zielgruppe. Auf diese Weise können Sie die Auswirkungen Ihrer Sortierfunktion sowie den am besten beeinflussenden Algorithmus und die Anzahl der Elemente nachvollziehen.
+Behalten Sie im Schritt **[!UICONTROL Targeting]** die Zielgruppe **[!UICONTROL All Visitors]** bei. Auf diese Weise können Sie die Auswirkungen Ihrer Sortierfunktion sowie den am besten beeinflussenden Algorithmus und die Anzahl der Elemente nachvollziehen.
 
-![ALT-Bild](assets/asset-audience-b.png)
+![alt image](assets/asset-audience-b.png)
 
 ## 5. Traffic-Zuordnung festlegen
 
 Definieren Sie den Prozentsatz Ihrer Besucher, mit dem Sie Ihre Sortieralgorithmen und Paginierungsstrategie testen möchten. Mit anderen Worten, zu welchem Prozentsatz Ihrer Benutzer möchten Sie diesen Test einführen? Um diesen Test für alle angemeldeten Benutzer bereitzustellen, halten Sie die Traffic-Zuordnung in diesem Beispiel bei 100 %.
 
-![ALT-Bild](assets/asset-allocation-100.png)
+![alt image](assets/asset-allocation-100.png)
 
 ## 6. Traffic-Verteilung auf Varianten festlegen
 
 Definieren Sie den Prozentsatz Ihrer Besucher, denen der empfohlene Algorithmus zur Sortierung der besten Verkäufer angezeigt wird, mit einer Beschränkung von 50 Produkten pro Seite. Behalten Sie in diesem Beispiel die Traffic-Verteilung als 50/50-Aufteilung zwischen den Erlebnissen A und B bei.
 
-![ALT-Bild](assets/asset-variations-50.png)
+![alt image](assets/asset-variations-50.png)
 
 ## 7. Einrichten von Berichten
 
-Im **[!UICONTROL Ziele und Einstellungen]** Schritt auswählen **[!UICONTROL Adobe Target]** als **[!UICONTROL Berichtsquelle]** um Ihre A/B-Testergebnisse im [!DNL Adobe Target] Benutzeroberfläche oder wählen Sie **[!UICONTROL Adobe Analytics]** , um sie in der Adobe Analytics-Benutzeroberfläche anzuzeigen.
+Wählen Sie im Schritt **[!UICONTROL Goals & Settings]** die Option **[!UICONTROL Adobe Target]** als **[!UICONTROL Reporting Source]**, um Ihre A/B-Testergebnisse in der Benutzeroberfläche von [!DNL Adobe Target] anzuzeigen, oder wählen Sie **[!UICONTROL Adobe Analytics]**, um sie in der Adobe Analytics-Benutzeroberfläche anzuzeigen.
 
-![ALT-Bild](assets/asset-reporting-b.png)
+![alt image](assets/asset-reporting-b.png)
 
 ## 8. Hinzufügen von Metriken zur Verfolgung von KPIs
 
-Wählen Sie eine **[!UICONTROL Zielmetrik]** , um den Funktionstest mit Attributen zu messen. In diesem Beispiel basiert der Erfolg darauf, ob der Benutzer ein Produkt kauft, je nach dem angezeigten Sortieralgorithmus und der angezeigten Paginierungsstrategie.
+Wählen Sie eine **[!UICONTROL Goal Metric]** aus, um den Funktionstest mit Attributen zu messen. In diesem Beispiel basiert der Erfolg darauf, ob der Benutzer ein Produkt kauft, je nach dem angezeigten Sortieralgorithmus und der angezeigten Paginierungsstrategie.
 
 ## 9. Implementieren von Funktionstests mit Attributen in Ihre Anwendung
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -143,7 +143,7 @@ function targetClientReady() {
 }
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 import com.adobe.target.edge.client.ClientConfig;
@@ -177,7 +177,7 @@ String paginationLimit = attributes.getString("product-results-page", "paginatio
 
 >[!BEGINTABS]
 
->[!TAB Node.js]
+>[!TAB node.js]
 
 ```js {line-numbers="true"}
 //... Code removed for brevity
@@ -200,7 +200,7 @@ TargetClient.sendNotifications({
 })
 ```
 
->[!TAB Java ]
+>[!TAB Java]
 
 ```java {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -244,4 +244,4 @@ String paginationLimit = attributes.getString("product-results-page", "paginatio
 
 ## 11. Aktivieren Sie Ihre Funktionstests mit Attributen
 
-![ALT-Bild](assets/asset-activate.png)
+![alt image](assets/asset-activate.png)

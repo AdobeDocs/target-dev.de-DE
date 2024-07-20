@@ -1,31 +1,31 @@
 ---
 keywords: flackern, at.js, Implementierung, asynchron, asynchron, synchron, synchron, $8
-description: Erfahren Sie, wie at.js und [!DNL Target] Vermeiden Sie Flackern (Standardinhalt wird vorübergehend angezeigt, bevor er durch Aktivitätsinhalte ersetzt wird) während des Seiten- oder App-Ladevorgangs.
+description: Erfahren Sie, wie at.js und [!DNL Target] Flackern verhindern (Standardinhalt wird vorübergehend angezeigt, bevor er durch Aktivitätsinhalte ersetzt wird) während des Ladens von Seiten oder Apps.
 title: Wie verwaltet at.js Flackern?
 feature: at.js
 exl-id: 8aacf254-ec3d-4831-89bb-db7f163b3869
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 63%
+source-wordcount: '699'
+ht-degree: 57%
 
 ---
 
 # Verwaltung von Flackern mit „at.js“
 
-Informationen zur [!DNL Adobe Target] at.js-JavaScript-Bibliothek verhindert ein Flackern beim Laden von Seiten oder Apps.
+Informationen dazu, wie mit der JavaScript-Bibliothek &quot;[!DNL Adobe Target] at.js&quot;beim Laden von Seiten oder Apps ein Flackern verhindert wird.
 
 Ein Flackern tritt dann auf, wenn Besuchern vorübergehend Standardinhalt angezeigt wird, bevor dieser durch den Inhalt der entsprechenden Aktivität ersetzt werden konnte. Das Auftreten eines solchen Flackerns ist nicht wünschenswert, da es die Besucher möglicherweise verwirrt.
 
 ## Verwenden einer automatisch erstellten globalen Mbox
 
-Wenn Sie die Einstellung [Globale Mbox automatisch erstellen](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md) bei der Konfigurierung von at.js aktivieren, reduziert at.js Flackern durch Ändern der Deckkrafteinstellung beim Laden der Seite. Wenn at.js geladen wird, wird die Deckkraft des `<body>` Elements auf „0“ gesetzt, wodurch die Seite für Besucher anfänglich unsichtbar gemacht wird. Nach einer Antwort von [!DNL Target] empfangen wird - oder wenn ein Fehler mit der [!DNL Target] -Anfrage erkannt wird - at.js setzt die Deckkraft auf &quot;1&quot;zurück. So wird gewährleistet, dass der Besucher die Seite erst sieht, nachdem der Inhalt Ihrer Aktivitäten angewendet wurde.
+Wenn Sie die Einstellung [Globale Mbox automatisch erstellen](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md) bei der Konfigurierung von at.js aktivieren, reduziert at.js Flackern durch Ändern der Deckkrafteinstellung beim Laden der Seite. Beim Laden von at.js ändert sich die Deckkrafteinstellung des Elements `<body>` in &quot;0&quot;, wodurch die Seite für Besucher anfänglich unsichtbar wird. Nach Erhalt einer Antwort von [!DNL Target] - oder wenn ein Fehler mit der [!DNL Target] -Anfrage erkannt wird - setzt at.js die Deckkraft auf &quot;1&quot; zurück. So wird gewährleistet, dass der Besucher die Seite erst sieht, nachdem der Inhalt Ihrer Aktivitäten angewendet wurde.
 
-Wenn Sie die Einstellung bei der Konfiguration von at.js aktivieren, wird die Deckkraft des HTML-BODY von at.js auf 0 gesetzt. Nach einer Antwort von [!DNL Target] empfangen wird, setzt at.js die HTML-BODY-Deckkraft auf 1 zurück.
+Wenn Sie die Einstellung bei der Konfiguration von at.js aktivieren, wird die Deckkraft des HTML-BODY von at.js auf 0 gesetzt. Nachdem eine Antwort von [!DNL Target] empfangen wurde, setzt at.js die HTML-BODY-Deckkraft auf 1 zurück.
 
 Mit einer Deckkraft von 0 ist der Seiteninhalt nicht sichtbar, sodass Flackern verhindert wird. Der Browser kann die Seite jedoch bereits rendern und lädt alle nötigen Assets wie CSS, Bilder usw.
 
-Wenn `opacity: 0` funktioniert nicht in Ihrer Implementierung, können Sie Flackern auch durch Anpassen von `bodyHiddenStyle` und legen Sie `body {visibility:hidden !important}`. Sie können entweder `body {opacity:0 !important}` oder `body {visibility:hidden !important}`, je nachdem, was für Ihre spezifische Situation am besten geeignet ist.
+Wenn `opacity: 0` in Ihrer Implementierung nicht funktioniert, können Sie Flackern auch verhindern, indem Sie `bodyHiddenStyle` anpassen und auf `body {visibility:hidden !important}` festlegen. Sie können entweder `body {opacity:0 !important}` oder `body {visibility:hidden !important}` verwenden, je nachdem, was für Ihre jeweilige Situation am besten geeignet ist.
 
 Die folgende Abbildung zeigt die Aufrufe „Hide Body“ und „Show Body“ sowohl in at.js 1.*x* als auch in at.js 2.x.
 
@@ -33,13 +33,13 @@ Die folgende Abbildung zeigt die Aufrufe „Hide Body“ und „Show Body“ sow
 
 (Klicken Sie auf Bild , um die volle Breite zu vergrößern.)
 
-![Target-Ablauf: at.js-Seitenladeanforderung](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png "Target-Ablauf: at.js-Seitenladeanforderung"){zoomable=&quot;yes&quot;}
+![Target-Ablauf: at.js-Seitenladeanforderung](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png "Target-Ablauf: at.js-Seitenladeanforderung"){zoomable="yes"}
 
 **at.js 1.*x***  
 
 (Klicken Sie auf Bild , um die volle Breite zu vergrößern.)
 
-![Target-Ablauf: automatisch erstellte globale Mbox](/help/dev/implement/client-side/atjs/how-atjs-works/assets/target-flow2.png "Zielfluss: automatisch erstellte globale Mbox"){zoomable=&quot;yes&quot;}
+![Target-Ablauf: automatisch erstellte globale Mbox](/help/dev/implement/client-side/atjs/how-atjs-works/assets/target-flow2.png "Ziel-Fluss: automatisch erstellte globale Mbox"){zoomable="yes"}
 
 Weitere Informationen zum Überschreiben mit `bodyHiddenStyle` finden Sie unter [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 
@@ -47,7 +47,7 @@ Weitere Informationen zum Überschreiben mit `bodyHiddenStyle` finden Sie unter 
 
 Das asynchrone Laden von at.js eignet sich hervorragend, um zu verhindern, dass das Rendern des Browsers blockiert wird. Bei dieser Technik kann es jedoch zu Flackereffekten auf der Webseite kommen.
 
-Sie können das Flackern verhindern, indem Sie einen vorab ausgeblendeten Ausschnitt verwenden, der sichtbar ist, nachdem die relevanten HTML-Elemente von Target personalisiert wurden.
+Sie können ein Flackern verhindern, indem Sie einen vorab ausgeblendeten Ausschnitt verwenden, der sichtbar ist, nachdem die entsprechenden HTML-Elemente von Target personalisiert wurden.
 
 at.js kann asynchron geladen werden, entweder direkt auf der Seite eingebettet oder über einen Tag-Manager (z. B. Adobe Experience Platform Launch).
 

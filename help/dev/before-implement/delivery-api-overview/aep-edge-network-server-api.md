@@ -2,19 +2,19 @@
 title: Übersicht über die Adobe Experience Platform Edge Network Server-API
 description: Erfahren Sie, wie Sie die Adobe Experience Platform Edge Network Server-API verwenden.
 keywords: Adobe Experience Platform Edge Network Server-API
-exl-id: 87019cad-cb0d-4de5-b116-d8c7ef1e4049
+exl-id: ccd43ece-ab97-4592-ab19-705feff29dff
 feature: APIs/SDKs, Recommendations, Administration & Configuration
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '91'
 ht-degree: 0%
 
 ---
 
-# [!UICONTROL Adobe Experience Platform Edge Network Server-API] Übersicht
+# [!UICONTROL Adobe Experience Platform Edge Network Server API] Übersicht
 
-Die [!UICONTROL Adobe Experience Platform Edge Network] bietet eine optimierte Möglichkeit für Kunden, mit [!DNL Adobe Experience Cloud] oder [!UICONTROL Adobe Experience Platform Edge] Dienste.
+Der [!UICONTROL Adobe Experience Platform Edge Network] bietet eine optimierte Möglichkeit für Kunden, mit beliebigen [!DNL Adobe Experience Cloud] - oder [!UICONTROL Adobe Experience Platform Edge] -Diensten zu interagieren.
 
-Die [!UICONTROL Edge Network Server-API] kann für eine Vielzahl von Anwendungsfällen zur Datenerfassung, Personalisierung, Werbung und Marketing verwendet werden. Die Server-API kann auf Servern, IoT-Geräten, Set-Top-Boxen und verschiedenen anderen Geräten verwendet werden.
+Der [!UICONTROL Edge Network Server API] kann für eine Vielzahl von Anwendungsfällen zur Datenerfassung, Personalisierung, Werbung und Marketing verwendet werden. Die Server-API kann auf Servern, IoT-Geräten, Set-Top-Boxen und verschiedenen anderen Geräten verwendet werden.
 
-Weitere Informationen finden Sie unter [Übersicht über die Edge Network Server-API](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html){target=_blank} im *Dokumentation zur Edge Server-API*.
+Weitere Informationen finden Sie unter [Übersicht über die Edge Network-Server-API](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html){target=_blank} in der *Dokumentation zur Edge-Server-API*.

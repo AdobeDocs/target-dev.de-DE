@@ -1,19 +1,19 @@
 ---
 keywords: adobe.target.triggerView, triggerView, triggerview, Trigger view, at.js, features, function, viewName, viewname, Ansichtsname, adobe.target.triggerView1
-description: Verwenden Sie die Funktion adobe.target.triggerView() für die [!DNL Adobe Target] at.js-JavaScript-Bibliothek zur Verwendung in Einzelseiten-Apps (SPA). (at.js 2.x)
+description: Verwenden Sie die Funktion adobe.target.triggerView() für die JavaScript-Bibliothek [!DNL Adobe Target] at.js zur Verwendung in Einzelseiten-Apps (SPA). (at.js 2.x)
 title: Wie verwende ich die Funktion adobe.target.triggerView()?
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 29%
+source-wordcount: '326'
+ht-degree: 26%
 
 ---
 
 # adobe.target.triggerView (viewName, options) - at.js 2.x
 
-Diese Funktion kann immer aufgerufen werden, wenn eine neue Seite geladen wird oder wenn eine Komponente auf einer Seite erneut wiedergegeben wird. `adobe.target.triggerView()` sollte für Einzelseitenanwendungen (SPA) implementiert werden, um die [!UICONTROL Visual Experience Composer] (VEC) zu erstellen [!UICONTROL A/B-Test] und [!UICONTROL Erlebnis-Targeting] (XT). Wenn `[!UICONTROL adobe.target.triggerView()]` nicht auf der Site implementiert ist, kann VEC nicht für SPA verwendet werden. Weitere Informationen finden Sie unter [Implementieren von Einzelseiten-Apps](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Diese Funktion kann immer aufgerufen werden, wenn eine neue Seite geladen wird oder wenn eine Komponente auf einer Seite erneut wiedergegeben wird. `adobe.target.triggerView()` sollte für Einzelseitenanwendungen (SPA) implementiert werden, um die [!UICONTROL Visual Experience Composer] (VEC) zur Erstellung von [!UICONTROL A/B Test] - und [!UICONTROL Experience Targeting] (XT) -Aktivitäten zu verwenden. Wenn `[!UICONTROL adobe.target.triggerView()]` nicht auf der Site implementiert ist, kann VEC nicht für SPA verwendet werden. Weitere Informationen finden Sie unter [Implementieren von Einzelseiten-Apps](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 >[!NOTE]
 >
@@ -21,13 +21,13 @@ Diese Funktion kann immer aufgerufen werden, wenn eine neue Seite geladen wird o
 
 | Parameter | Typ | Erforderlich? | Beschreibung |
 | --- | --- | --- | --- |
-| viewName | Zeichenfolge | Ja | Geben Sie eine beliebige Zeichenfolge als Namen für Ihre Ansicht an. Der Name dieser Ansicht wird im [!UICONTROL Änderungen] Bedienfeld des VEC für Marketing-Experten, um Aktionen zu erstellen und ihre [!UICONTROL A/B-Test] und [!UICONTROL Erlebnis-Targeting] XT-Aktivitäten. |
+| viewName | Zeichenfolge | Ja | Geben Sie eine beliebige Zeichenfolge als Namen für Ihre Ansicht an. Der Name dieser Ansicht wird im Bedienfeld [!UICONTROL Modifications] des VEC angezeigt, damit Marketing-Experten Aktionen erstellen und ihre XT-Aktivitäten [!UICONTROL A/B Test] und [!UICONTROL Experience Targeting] ausführen können. |
 | options | Objekt | Nein |  |
-| Optionen > Seite | Boolesch | Nein | **TRUE:** Der Standardwert der Seite ist „wahr“. Bei page=true werden Benachrichtigungen zum Erhöhen der Impressions-Anzahl an das [!DNL Target]-Backend gesendet.<P>Eine Benachrichtigung wird immer standardmäßig gesendet, wenn eine `[!UICONTROL triggerView]` aufgerufen wird, außer wenn options > page auf false festgelegt ist.<P>**FALSE:** Bei page=false werden keine Benachrichtigungen zum Erhöhen der Impressions-Anzahl gesendet. Dieser Ansatz sollte verwendet werden, wenn Sie nur eine Komponente auf einer Seite mit einem Angebot erneut rendern möchten.<P>**Hinweis**: Angebote mit benutzerspezifischem Code im VEC werden nicht erneut gerendert, wenn `[!UICONTROL triggerView()]` aufgerufen wird mit `{page: false}` als Option. |
+| Optionen > Seite | Boolesch | Nein | **TRUE:** Der Standardwert der Seite ist „wahr“. Bei page=true werden Benachrichtigungen zum Erhöhen der Impressions-Anzahl an das [!DNL Target]-Backend gesendet.<P>Eine Benachrichtigung wird immer standardmäßig gesendet, wenn ein `[!UICONTROL triggerView]` aufgerufen wird, außer wenn &quot;options&quot;> &quot;page&quot;auf &quot;false&quot;gesetzt ist.<P>**FALSE:** Bei page=false werden keine Benachrichtigungen zur Erhöhung der Impressions-Anzahl gesendet. Dieser Ansatz sollte verwendet werden, wenn Sie nur eine Komponente auf einer Seite mit einem Angebot erneut rendern möchten.<P>**Hinweis**: Angebote mit benutzerspezifischem Code im VEC werden nicht erneut gerendert, wenn `[!UICONTROL triggerView()]` mit `{page: false}` als Option aufgerufen wird. |
 
 ## Beispiel: True
 
-`[!UICONTROL triggerView()]` Aufruf zum Senden einer Benachrichtigung an die [!DNL Target] Backend zur Erhöhung von Aktivitätsimpressionen und anderen Metriken.
+`[!UICONTROL triggerView()]` -Aufruf zum Senden einer Benachrichtigung an das [!DNL Target] -Backend zur Erhöhung der Aktivitätsimpressionen und anderer Metriken.
 
 ```javascript {line-numbers="true"}
 adobe.target.triggerView("homeView")
@@ -35,15 +35,15 @@ adobe.target.triggerView("homeView")
 
 ## Beispiel: False
 
-`[!UICONTROL triggerView()]` Aufruf zum Senden von Benachrichtigungen an die [!DNL Target] Backend für Impressions-Zählung.
+`[!UICONTROL triggerView()]` -Aufruf, um keine Benachrichtigungen zur Impressions-Zählung an das [!DNL Target] -Backend zu senden.
 
 ```javascript {line-numbers="true"}
 adobe.target.triggerView("homeView", {page: false})
 ```
 
-## Beispiel: Versprechen verketten mit `getoffers()` und `applyOffers()`
+## Beispiel: Versprechen, Verketten mit `getoffers()` und `applyOffers()`
 
-Ausführen `triggerView()` wenn die `getOffers()` Versprechen aufgelöst wurde, ist es wichtig, `triggerView()` im letzten Block, wie im folgenden Beispiel gezeigt. Dies ist erforderlich, damit VEC `Views` im Authoring-Modus.
+Um `triggerView()` auszuführen, wenn das `getOffers()`-Versprechen aufgelöst wird, ist es wichtig, `triggerView()` auf dem letzten Block auszuführen, wie im folgenden Beispiel gezeigt. Dies ist erforderlich, damit VEC `Views` im Authoring-Modus erkennen kann.
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
