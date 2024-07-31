@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über das [!DNL Target] Cookie-Verhalten (Erstanb
 title: Wo finde ich Informationen zu [!DNL Target] Cookies?
 feature: at.js
 exl-id: d44e02ce-8920-4130-bcad-699ca77c0dad
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 39f390a0e5eedf8c6957333759d31d96ed11b321
 workflow-type: tm+mt
 source-wordcount: '1581'
 ht-degree: 50%
@@ -120,6 +120,7 @@ Das Cookie enthält verschiedene Werte, um zu verwalten, wie Ihre Besucher Kampa
 |--- |--- |
 | Erstanbieter-Domänen | Die standardmäßige Implementierung für [!DNL Target] -Kunden. Die „Mbox“-Cookies werden in der Domain des Kunden festgelegt. |
 | Drittanbieter-Tracking | Das Tracking von Drittanbietern ist für Anwendungsfälle für Werbung und Targeting in [!DNL Target] und in [!DNL Adobe Audience Manager] (AAM) wichtig. Für das Drittanbieter-Tracking sind Site-übergreifende Skriptmethoden erforderlich. [!DNL Target] verwendet zwei Cookies, &quot;mboxSession&quot;und &quot;mboxPC&quot;, die in der Domäne `clientcode.tt.omtrd.net` festgelegt sind. |
+
 **Welchen Ansatz verfolgt Apple?**
 
 Von Apple (übersetzter Auszug):

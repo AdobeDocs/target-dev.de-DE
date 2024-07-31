@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über das Verhalten von Target-Cookies (Erstanbie
 title: Wo finde ich Informationen über Target-Cookies?
 feature: at.js
 role: Developer
-source-git-commit: 34e8625798121e236a04646dfcf049f9c2b6f9d0
+source-git-commit: 39f390a0e5eedf8c6957333759d31d96ed11b321
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 53%
@@ -118,6 +118,7 @@ Das Cookie enthält verschiedene Werte, um zu verwalten, wie Ihre Besucher Kampa
 |--- |--- |
 | Erstanbieter-Domänen | Die standardmäßige Implementierung für Target-Kunden. Die „Mbox“-Cookies werden in der Domain des Kunden festgelegt. |
 | Drittanbieter-Tracking | Das Tracking von Drittanbietern ist für Anwendungsfälle für Werbung und Targeting in Target und in Adobe Audience Manager (AAM) wichtig. Für das Drittanbieter-Tracking sind Site-übergreifende Skriptmethoden erforderlich. Target verwendet zwei Cookies, „mboxSession“ und „mboxPC“, die in der Domain `clientcode.tt.omtrd.net` festgelegt sind. |
+
 **Welchen Ansatz verfolgt Apple?**
 
 Von Apple (übersetzter Auszug):
