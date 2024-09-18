@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie mit  [!DNL Adobe Target] [!UICONTROL Bulk Pro
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 2934fbaa1dc3cd92bc5a434937e5db9a617009a9
+source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '829'
 ht-degree: 8%
 
 ---
@@ -64,7 +64,7 @@ Sie verweisen auf diese POST im Dateiaufruf an [!DNL Target] -Server, um die Dat
 * Wenn Sie [!UICONTROL Bulk Profile Update API] v2 verwenden, müssen Sie nicht alle Parameterwerte für jeden `pcId` angeben. Profile werden für alle `pcId` oder `mbox3rdPartyId` erstellt, die nicht in [!DNL Target] gefunden werden. Wenn Sie v1 verwenden, werden Profile nicht für fehlende pcIds oder mbox3rdPartyIds erstellt.
 * Die Batch-Datei muss kleiner als 50 MB sein. Darüber hinaus sollte die Gesamtanzahl der Zeilen 500.000 nicht überschreiten. Diese Beschränkung stellt sicher, dass Server nicht mit zu vielen Anfragen überflutet werden.
 * Sie können mehrere Dateien senden. Die Gesamtsumme der Zeilen aller Dateien, die Sie an einen Tag senden, sollte jedoch für jeden Kunden nicht mehr als eine Million betragen.
-* Die Anzahl der Attribute, die Sie hochladen, ist unbegrenzt. Die Gesamtgröße eines Profils einschließlich der Systemdaten sollte jedoch 2000 KB nicht überschreiten. [!DNL Adobe] empfiehlt, weniger als 1000 KB Speicher für Profilattribute zu verwenden.
+* Die Anzahl der Attribute, die Sie hochladen können, ist nicht beschränkt. Die Gesamtgröße der externen Profildaten, einschließlich Kundenattributen, Profil-API, In-Mbox-Profilparametern und Profilskriptausgabe, darf jedoch 64 KB nicht überschreiten.
 * Bei Parametern und Werten wird zwischen Groß- und Kleinschreibung unterschieden.
 
 ## HTTP-POST-Anfrage
