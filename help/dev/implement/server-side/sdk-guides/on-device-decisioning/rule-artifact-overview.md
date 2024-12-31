@@ -1,6 +1,6 @@
 ---
-title: Grundlegendes zum Entscheidungsregel-Artefakt auf dem Gerät
-description: Erfahren Sie, wie Sie das Regel-Artefakt verwenden, das eine JSON-Darstellung Ihrer [!DNL Adobe Target] [!UICONTROL on-device decisioning] -Aktivitäten ist.
+title: Verstehen des Artefakts der geräteinternen Entscheidungsregel
+description: Erfahren Sie, wie Sie das Regelartefakt verwenden, das eine JSON-Darstellung Ihrer -Aktivitäten  [!DNL Adobe Target] [!UICONTROL on-device decisioning].
 feature: APIs/SDKs
 exl-id: 3dfb08df-eaa9-43d4-b009-e5f64c3a96d7
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -12,30 +12,30 @@ ht-degree: 0%
 
 # Übersicht über Regelartefakte
 
-Das Regelartefakt ist eine JSON-Darstellung Ihrer [!DNL Adobe Target] [!UICONTROL on-device decisioning] -Aktivitäten. Sie wird von [!DNL Adobe Target] generiert und an das Akamai-CDN weitergeleitet, um sicherzustellen, dass Ihren Endbenutzern ein Regel-Artefakt so nah wie möglich zur Verfügung steht. Es enthält Metadaten, die die präzise Ausführung und Bereitstellung Ihrer Aktivitäten sicherstellen und gleichzeitig Echtzeitanalysen über das Ereignis-Tracking ermöglichen. Die [!DNL Adobe Target] -SDKs können so konfiguriert werden, dass sie eine automatische Verwaltung des Regelartefakts ermöglichen, sodass es gemäß einem benutzerdefinierten Zeitintervall heruntergeladen oder aktualisiert werden kann. Darüber hinaus können Sie Ihre eigene lokale Kopie des Regelartefakts mithilfe eines dezentralen Speicherzwischenspeichersystems wie [Memcached](https://memcached.org/) verwalten, um das [!DNL Adobe Target]-SDK zu initialisieren, sodass Ihre statuslosen Server Anfragen sofort bedienen können. Weitere Informationen zu diesen Optionen finden Sie in den folgenden Handbüchern:
+Das Regelartefakt ist eine JSON-Darstellung Ihrer [!DNL Adobe Target] [!UICONTROL on-device decisioning]. Sie wird von [!DNL Adobe Target] generiert und an das Akamai-CDN weitergegeben, um sicherzustellen, dass ein Regelartefakt so nah wie möglich bei Ihren Endbenutzern verfügbar ist. Sie enthält Metadaten, die eine präzise Ausführung und Bereitstellung Ihrer Aktivitäten sicherstellen und gleichzeitig über die Ereignisverfolgung Echtzeit-Analysen ermöglichen. Die [!DNL Adobe Target] SDKs können so konfiguriert werden, dass das Regelartefakt automatisch verwaltet werden kann. Dabei kann es in einem benutzerdefinierten Zeitintervall heruntergeladen oder aktualisiert werden. Darüber hinaus können Sie auch Ihre eigene lokale Kopie des Regelartefakts mithilfe eines verteilten Arbeitsspeicher-Caching-Systems wie [Memcached](https://memcached.org/) verwalten, um das [!DNL Adobe Target] SDK zu initialisieren, damit Ihre statuslosen Server Anfragen sofort bereitstellen können. Weitere Informationen zu diesen Optionen finden Sie in den folgenden Handbüchern:
 
-* [Herunterladen, Speichern und Aktualisieren des Regelartefakts automatisch über das [!DNL Adobe Target] SDK](rule-artifact-sdk.md)
+* [Automatisches Herunterladen, Speichern und Aktualisieren des Regelartefakts über die  [!DNL Adobe Target] SDK](rule-artifact-sdk.md)
 * [Herunterladen, Speichern und Aktualisieren des Regelartefakts über die JSON-Payload](rule-artifact-json.md)
 
-## Beispielregel-Artefakt
+## Beispiel für ein Regelartefakt
 
-Klicken Sie hier für ein Beispiel des [Regel-Artefakts](rule-artifact-example.md).
+Klicken Sie hier, um ein Beispiel für das [Regelartefakt](rule-artifact-example.md) zu sehen.
 
 ## Anzeigen des Regelartefakts für Ihren Client
 
-Durch das Aktivieren von Traces werden zusätzliche Informationen von [!DNL Adobe Target] in Bezug auf das Regel-Artefakt, insbesondere die URL, ausgegeben.
+Durch die Aktivierung von Traces werden zusätzliche Informationen aus [!DNL Adobe Target] in Bezug auf das Regelartefakt ausgegeben, insbesondere die URL.
 
 1. Navigieren Sie zur Target-Benutzeroberfläche.
 
-   &lt;!— Fügen Sie image-target-ui-1.png —>
-   ![alt image](assets/asset-rule-artifact-1.png)
+   &lt;!— Einfügen image-target-ui-1.png —>
+   ![ALT-Bild](assets/asset-rule-artifact-1.png)
 
 1. Navigieren Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** und klicken Sie auf **[!UICONTROL Generate New Authorization Token]**.
 
-   &lt;!— Fügen Sie image-target-ui-2.png —>
-   ![alt image](assets/asset-rule-artifact-2.png)
+   &lt;!— insert image-target-ui-2.png —>
+   ![ALT-Bild](assets/asset-rule-artifact-2.png)
 
-1. Kopieren Sie das neu generierte Autorisierungstoken in die Zwischenablage und fügen Sie es zu Ihrer Target-Anfrage hinzu.
+1. Kopieren Sie das neu generierte Autorisierungs-Token in die Zwischenablage und fügen Sie es Ihrer Target-Anfrage hinzu.
 
    ```javascript {line-numbers="true"}
    const request = {
@@ -50,7 +50,7 @@ Durch das Aktivieren von Traces werden zusätzliche Informationen von [!DNL Adob
    }};
    ```
 
-1. Geben Sie die Zielspur über das Terminal aus, um Details zum Artefakt anzuzeigen. Auf die URL kann über die Variable `artifactLocation` zugegriffen werden.
+1. Geben Sie den Target-Trace über das Terminal aus, um Details zum Artefakt anzuzeigen. Die URL ist über die Variable `artifactLocation` zugänglich.
 
    ```
    "trace": {

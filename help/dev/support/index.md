@@ -1,6 +1,6 @@
 ---
 title: Support - Adobe Analytics
-description: Dies ist die Supportseite von Adobe Analytics
+description: Dies ist die Support-Seite von Adobe Analytics
 source-git-commit: a5bcf98b586c655a36a9ae8800a8f31978d68646
 workflow-type: tm+mt
 source-wordcount: '92'
@@ -15,7 +15,7 @@ Erfahren Sie, wo Sie Fragen stellen, Fehler melden, Funktionsanfragen stellen un
 
 ## Feedback 
 
-Du hast einen Ort, um Diskussionen zu beginnen.
+Sie haben einen Ort, um mit Diskussionen zu beginnen.
 
 ![Adobe Experience Cloud](experience_cloud.png)
 
@@ -23,25 +23,25 @@ Du hast einen Ort, um Diskussionen zu beginnen.
 
 [Erste Schritte](https://adobe.io)
 
-Offene Diskussion und Unterstützung mit Community-Experten und Adobe-Mitarbeitern
+Offene Diskussion und Unterstützung mit Community-Experten und Adobe-Mitarbeitern.
 
-[Erlebnisklasse](https://adobe.io)
+[Experience League](https://adobe.io)
 
-Tutorials und Videos für die gesamte Community.
+Tutorials und Videos für die ganze Community.
 
-[Erlebnisforum](https://adobe.io)
+[Experience-Forum](https://adobe.io)
 
 Forum, um Hilfe zu erhalten und anderen zu helfen
 
 ## Community
 
-Du hast einen Ort, an dem du dich unterhalten kannst.
+Sie haben einen Ort, an dem Sie mitreden können.
 
-![Überlauf des Stapels](stack-overflow.png)
+![Stapelüberlauf](stack-overflow.png)
 
 ### Stapelüberlauf
 
-[Explore](https://adobe.io)
+[Erkunden](https://adobe.io)
 
-Fragen und Antworten für Entwickler mit einem bestimmten Tag.
+Fragen und Antworten von Entwicklern mit einem bestimmten Tag.
 

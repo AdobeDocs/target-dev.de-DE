@@ -1,6 +1,6 @@
 ---
-title: Beispiel für ein Artefakt einer Entscheidungsregel
-description: Anzeigen eines Beispielregelartefakts für die Entscheidungsfindung auf dem Gerät.
+title: Beispiel für ein Entscheidungsregel-Artefakt
+description: Sehen Sie sich ein Beispiel für ein Regelartefakt für die geräteinterne Entscheidungsfindung an.
 feature: APIs/SDKs
 exl-id: 0e138b78-4ea9-4d17-a6fa-609ad23c4ca8
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -10,7 +10,7 @@ ht-degree: 0%
 
 ---
 
-# Beispielregel-Artefakt
+# Beispiel für ein Regelartefakt
 
 ```json {line-numbers="true"}
 {

@@ -1,6 +1,6 @@
 ---
-title: Fehlerbehebung bei geräteübergreifenden Entscheidungen
-description: Erfahren Sie, wie Sie die Fehlerbehebung für [!UICONTROL on-device decisioning] durchführen.
+title: Fehlerbehebung bei der geräteinternen Entscheidungsfindung
+description: Informationen zur Fehlerbehebung bei [!UICONTROL on-device decisioning]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
 source-git-commit: 1d892d4d4d6f370f7772d0308ee0dd0d5c12e700
@@ -12,23 +12,23 @@ ht-degree: 0%
 
 # Fehlerbehebung [!UICONTROL on-device decisioning]
 
-## Validieren der Konfiguration
+## Konfiguration wird validiert
 
 ### Zusammenfassung der Schritte
 
-1. Stellen Sie sicher, dass `logger` konfiguriert ist.
-1. Stellen Sie sicher, dass [!DNL Target] Traces aktiviert ist.
-1. Stellen Sie sicher, dass das [!UICONTROL on-device decisioning] *Regel-Artefakt* abgerufen und gemäß dem definierten Abrufintervall zwischengespeichert wurde.
-1. Validieren Sie die Inhaltsbereitstellung über das zwischengespeicherte Regel-Artefakt, indem Sie eine Test- [!UICONTROL on-device decisioning] -Aktivität über den formularbasierten Experience Composer erstellen.
-1. Inspect sendet Benachrichtigungsfehler
+1. Stellen Sie sicher, dass die `logger` konfiguriert ist
+1. Stellen Sie sicher, dass [!DNL Target] Traces aktiviert ist
+1. Stellen Sie sicher[!UICONTROL on-device decisioning] dass *Regelartefakt* gemäß dem definierten Abrufintervall abgerufen und zwischengespeichert wurde.
+1. Validieren der Inhaltsbereitstellung über das zwischengespeicherte Regelartefakt durch Erstellen einer Test-[!UICONTROL on-device decisioning]-Aktivität über den formularbasierten Experience Composer.
+1. Inspect - Fehler beim Senden von Benachrichtigungen
 
-## 1. Stellen Sie sicher, dass der Logger konfiguriert ist.
+## 1. Stellen Sie sicher, dass der Logger konfiguriert ist
 
-Stellen Sie beim Initialisieren des SDK sicher, dass Sie die Protokollierung aktivieren.
+Stellen Sie bei der Initialisierung von SDK sicher, dass Sie die Protokollierung aktivieren.
 
-**node.js**
+**Node.js**
 
-Für das Node.js-SDK sollte ein `logger` -Objekt bereitgestellt werden.
+Für Node.js-SDK sollte ein `logger`-Objekt angegeben werden.
 
 ```js {line-numbers="true"}
 const CONFIG = {
@@ -38,9 +38,9 @@ const CONFIG = {
 };
 ```
 
-**Java-SDK**
+**Java SDK**
 
-Für Java-SDK `logRequests` sollte die `ClientConfig` aktiviert sein.
+Für Java sollte SDK `logRequests` auf dem `ClientConfig` aktiviert sein.
 
 ```js {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -50,27 +50,27 @@ ClientConfig config = ClientConfig.builder()
   .build();
 ```
 
-Außerdem sollte die JVM mit dem folgenden Befehlszeilenparameter gestartet werden:
+Außerdem sollte JVM mit dem folgenden Befehlszeilenparameter gestartet werden:
 
 ```bash {line-numbers="true"}
 java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 ```
 
-## 2. Stellen Sie sicher, dass [!DNL Target]Traces aktiviert ist.
+## 2. Stellen Sie sicher[!DNL Target] dass „Traces“ aktiviert ist
 
-Durch das Aktivieren von Traces werden zusätzliche Informationen von [!DNL Adobe Target] in Bezug auf das Regelartefakt ausgegeben.
+Durch Aktivieren von Traces werden zusätzliche Informationen aus [!DNL Adobe Target] in Bezug auf das Regelartefakt ausgegeben.
 
-1. Navigieren Sie in [!DNL Experience Cloud] zur UI[!DNL Target].
+1. Navigieren Sie zur [!DNL Target]-Benutzeroberfläche in [!DNL Experience Cloud].
 
-   ![alt image](assets/asset-target-ui-1.png)
+   ![ALT-Bild](assets/asset-target-ui-1.png)
 
 1. Navigieren Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** und klicken Sie auf **[!UICONTROL Generate New Authorization Token]**.
 
-   ![alt image](assets/asset-target-ui-2.png)
+   ![ALT-Bild](assets/asset-target-ui-2.png)
 
-1. Kopieren Sie das neu generierte Autorisierungstoken in die Zwischenablage und fügen Sie es zu Ihrer[!DNL Target]Anfrage hinzu:
+1. Kopieren Sie das neu generierte Autorisierungs-Token in die Zwischenablage und fügen Sie es Ihrer [!DNL Target] hinzu:
 
-   **node.js**
+   **Node.js**
 
    ```js {line-numbers="true"}
    const request = {
@@ -104,7 +104,7 @@ Durch das Aktivieren von Traces werden zusätzliche Informationen von [!DNL Adob
      .build();
    ```
 
-1. Starten Sie Ihre App, während Sie die Protokollfunktion eingerichtet haben, und überwachen Sie das Server-Terminal. Die folgende Ausgabe der Protokollfunktion bestätigt, dass das Regelartefakt abgerufen wurde:
+1. Starten Sie mit dem Logger und dem Trace Ihre App und überwachen Sie das Server-Terminal. Die folgende Ausgabe der Protokollierung bestätigt, dass das Regelartefakt abgerufen wurde:
 
    **Node.js-SDK**
 
@@ -113,11 +113,11 @@ Durch das Aktivieren von Traces werden zusätzliche Informationen von [!DNL Adob
      AT: LD.ArtifactProvider artifact received - status=200
    ```
 
-## 3. Stellen Sie sicher, dass das [!UICONTROL on-device decisioning] *Regel-Artefakt* abgerufen und gemäß dem definierten Abrufintervall zwischengespeichert wurde.
+## 3. Stellen Sie sicher[!UICONTROL on-device decisioning] dass *Regelartefakt* gemäß dem definierten Abrufintervall abgerufen und zwischengespeichert wurde.
 
-1. Warten Sie die Dauer des Abrufintervalls (standardmäßig 20 Minuten) und stellen Sie sicher, dass das Artefakt vom SDK abgerufen wird. Es werden dieselben Terminalprotokolle ausgegeben.
+1. Warten Sie die Dauer des Abrufintervalls (standardmäßig 20 Minuten) und stellen Sie sicher, dass das Artefakt vom SDK abgerufen wird. Dieselben Terminal-Protokolle werden ausgegeben.
 
-   Darüber hinaus sollten Informationen aus der[!DNL Target]Ablaufverfolgung mit Details zum Regelartefakt an das Terminal ausgegeben werden.
+   Darüber hinaus sollten Informationen aus dem [!DNL Target]-Trace mit Details zum Regelartefakt an das Terminal ausgegeben werden.
 
    ```text {line-numbers="true"}
    "trace": {
@@ -135,25 +135,25 @@ Durch das Aktivieren von Traces werden zusätzliche Informationen von [!DNL Adob
      },
    ```
 
-## 4. Validieren Sie die Inhaltsbereitstellung über das zwischengespeicherte Regel-Artefakt, indem Sie eine Test [!UICONTROL on-device decisioning] -Aktivität über den formularbasierten Experience Composer erstellen
+## 4. Validieren der Inhaltsbereitstellung über das zwischengespeicherte Regelartefakt durch Erstellen einer Test-[!UICONTROL on-device decisioning]-Aktivität über den formularbasierten Experience Composer
 
-1. Navigieren Sie zur[!DNL Target]UI im Experience Cloud.
+1. Navigieren Sie zur [!DNL Target]-Benutzeroberfläche in Experience Cloud
 
-   ![alt image](assets/asset-target-ui-1.png)
+   ![ALT-Bild](assets/asset-target-ui-1.png)
 
-1. Erstellen Sie mit dem formularbasierten Experience Composer eine neue XT-Aktivität.
+1. Erstellen Sie eine neue XT -Aktivität mit dem formularbasierten Experience Composer.
 
-   ![alt image](assets/asset-form-base-composer-ui.png)
+   ![ALT-Bild](assets/asset-form-base-composer-ui.png)
 
-1. Geben Sie den in Ihrer[!DNL Target]Anfrage verwendeten Mbox-Namen als Speicherort für die XT-Aktivität ein (beachten Sie, dass dies ein eindeutiger Mbox-Name sein sollte, der speziell für Entwicklungszwecke verwendet wird).
+1. Geben Sie den in Ihrer -Anfrage [!DNL Target] Mbox-Namen als Speicherort für die XT-Aktivität ein (beachten Sie, dass es sich hierbei um einen eindeutigen Mbox-Namen speziell für Entwicklungszwecke handeln sollte).
 
-   ![alt image](assets/asset-mbox-location-ui.png)
+   ![ALT-Bild](assets/asset-mbox-location-ui.png)
 
-1. Ändern Sie den Inhalt in ein HTML- oder JSON-Angebot. Dies wird in der [!DNL Target]Anfrage an Ihre Anwendung zurückgegeben. Belassen Sie das Targeting für die Aktivität auf &quot;Alle Besucher&quot;und wählen Sie eine beliebige Metrik aus. Benennen Sie die Aktivität, speichern Sie sie und aktivieren Sie sie, um sicherzustellen, dass die verwendete Mbox/Position nur für die Entwicklung verwendet wird.
+1. Ändern Sie den Inhalt entweder in ein HTML- oder JSON-Angebot. Dieser wird in der [!DNL Target] an Ihr Programm zurückgegeben. Belassen Sie die Zielgruppenbestimmung für die Aktivität auf „Alle Besucher“ und wählen Sie eine beliebige Metrik aus, die Sie verwenden möchten. Benennen Sie die Aktivität, speichern Sie sie, und aktivieren Sie sie dann, um sicherzustellen, dass die verwendete mbox/location nur für die Entwicklung vorgesehen ist.
 
-   ![alt image](assets/asset-target-content-ui.png)
+   ![ALT-Bild](assets/asset-target-content-ui.png)
 
-1. Fügen Sie in Ihrer Anwendung Protokollanweisungen für den Inhalt hinzu, der in der Antwort von Ihrer[!DNL Target]Anfrage empfangen wurde
+1. Fügen Sie in Ihrer Anwendung Protokollanweisungen für den Inhalt hinzu, der in der Antwort von Ihrer -[!DNL Target] empfangen wurde
 
    **Node.js-SDK**
 
@@ -166,7 +166,7 @@ Durch das Aktivieren von Traces werden zusätzliche Informationen von [!DNL Adob
    }
    ```
 
-   **Java-SDK**
+   **Java SDK**
 
    ```js {line-numbers="true"}
    try {
@@ -191,9 +191,9 @@ Durch das Aktivieren von Traces werden zusätzliche Informationen von [!DNL Adob
    }
    ```
 
-1. Überprüfen Sie die Protokolle in Ihrem Terminal, um sicherzustellen, dass Ihr Inhalt bereitgestellt und über das Regelartefakt auf Ihrem Server bereitgestellt wird. Das Objekt `LD.DeciscionProvider` wird ausgegeben, wenn die Aktivitätsqualifikation und die Entscheidungsfindung auf dem Gerät basierend auf dem Regelartefakt bestimmt wurden. Darüber hinaus sollte Ihnen aufgrund der Protokollierung von `content` `<div>test</div>` angezeigt werden oder Sie haben sich entschieden, dass die Antwort beim Erstellen der Testaktivität sein soll.
+1. Überprüfen Sie die Protokolle in Ihrem Terminal, um sicherzustellen, dass Ihr Inhalt bereitgestellt wird und dass er über das Regelartefakt auf Ihrem Server bereitgestellt wurde. Das `LD.DeciscionProvider`-Objekt wird ausgegeben, wenn die Aktivitätsqualifizierung und die Entscheidungsfindung auf dem Gerät basierend auf dem Regelartefakt bestimmt wurden. Darüber hinaus sollten Sie aufgrund der Protokollierung der `content` bei der Erstellung der Testaktivität `<div>test</div>` sehen oder aber Sie haben entschieden, wie die Antwort aussehen soll.
 
-   **Logger output**
+   **Logger-Ausgabe**
 
    ```text {line-numbers="true"}
    AT: LD.DecisionProvider {...}
@@ -201,9 +201,9 @@ Durch das Aktivieren von Traces werden zusätzliche Informationen von [!DNL Adob
    Response:  <div>test</div>
    ```
 
-## Inspect sendet Benachrichtigungsfehler
+## Inspect - Fehler beim Senden von Benachrichtigungen
 
-Bei der Verwendung der Entscheidungsfindung auf dem Gerät werden Benachrichtigungen automatisch für die Ausführung von Anfragen durch getOffers gesendet. Diese Anfragen werden still im Hintergrund gesendet. Alle Fehler können durch Abonnieren eines Ereignisses mit dem Namen `sendNotificationError` überprüft werden. Hier finden Sie ein Codebeispiel, das zeigt, wie Sie mit dem Node.js-SDK Benachrichtigungsfehler abonnieren können.
+Bei Verwendung der geräteinternen Entscheidungsfindung werden Benachrichtigungen für GET-Angebote automatisch gesendet, um Anforderungen auszuführen. Diese Anfragen werden im Hintergrund ohne Nachfrage gesendet. Sie können alle Fehler überprüfen, indem Sie ein Ereignis namens `sendNotificationError` abonnieren. Hier ist ein Codebeispiel, das zeigt, wie Benachrichtigungsfehler mit der Node.js-SDK abonniert werden.
 
 ```js {line-numbers="true"}
 const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -237,17 +237,17 @@ client = TargetClient.create({
 });
 ```
 
-## Allgemeine Fehlerbehebungsszenarien
+## Häufige Fehlerbehebungsszenarien
 
-Beachten Sie bei Problemen unbedingt die [unterstützten Funktionen](supported-features.md) für [!UICONTROL on-device decisioning] .
+Überprüfen Sie die [unterstützten Funktionen](supported-features.md) auf [!UICONTROL on-device decisioning], wenn Probleme auftreten.
 
-### Entscheidungsaktivitäten auf dem Gerät werden aufgrund nicht unterstützter Zielgruppe oder Aktivität nicht ausgeführt
+### Entscheidungsaktivitäten auf dem Gerät werden aufgrund von nicht unterstützten Zielgruppen oder Aktivitäten nicht ausgeführt
 
-Ein häufiges Problem, das auftreten kann, sind [!UICONTROL on-device decisioning] -Aktivitäten, die aufgrund der verwendeten Zielgruppe oder des nicht unterstützten Aktivitätstyps nicht ausgeführt werden.
+Ein häufiges Problem besteht darin, dass [!UICONTROL on-device decisioning] Aktivitäten nicht ausgeführt werden, da die verwendete Zielgruppe oder der Aktivitätstyp nicht unterstützt wird.
 
-(1) Überprüfen Sie mithilfe der Protokollausgabe die Einträge in der Eigenschaft &quot;trace&quot;in Ihrem Antwortobjekt. Ermitteln Sie insbesondere die Kampagneneigenschaft:
+(1) Überprüfen Sie mithilfe der Logger-Ausgabe die Einträge in der Trace-Eigenschaft in Ihrem Antwortobjekt. Geben Sie insbesondere die Eigenschaft Kampagnen an:
 
-**Spurenausgabe**
+**Trace-Ausgabe**
 
 ```text {line-numbers="true"}
   "execute": {
@@ -264,11 +264,11 @@ Ein häufiges Problem, das auftreten kann, sind [!UICONTROL on-device decisionin
     }
 ```
 
-Sie werden feststellen, dass die Aktivität, für die Sie sich qualifizieren möchten, nicht in der Eigenschaft `campaigns` enthalten ist, da die Zielgruppe oder der Aktivitätstyp nicht unterstützt wird. Wenn die Aktivität unter der Eigenschaft `campaigns` aufgeführt ist, liegt Ihr Problem nicht an einer nicht unterstützten Zielgruppe oder einem nicht unterstützten Aktivitätstyp.
+Sie werden feststellen, dass die Aktivität, für die Sie sich qualifizieren möchten, nicht in der `campaigns`-Eigenschaft enthalten ist, da die Zielgruppe oder der Aktivitätstyp nicht unterstützt wird. Wenn die Aktivität unter der Eigenschaft `campaigns` aufgeführt ist, ist das Problem nicht auf eine nicht unterstützte Zielgruppe oder einen nicht unterstützten Aktivitätstyp zurückzuführen.
 
-(2) Suchen Sie außerdem die Datei &quot;`rules.json`&quot;, indem Sie in Ihrer Logger-Ausgabe die Datei &quot;`trace` > `artifact` > `artifactLocation`&quot;ansehen und feststellen, dass Ihre Aktivität in der Eigenschaft `rules` > `mboxes` fehlt:
+(2) Suchen Sie außerdem die `rules.json`-Datei, indem Sie sich die `trace` > `artifact` > `artifactLocation` in Ihrer Logger-Ausgabe ansehen. Sie werden feststellen, dass Ihre Aktivität in der Eigenschaft `rules` > `mboxes` fehlt:
 
-**Logger output**
+**Logger-Ausgabe**
 
 ```text {line-numbers="true"}
  ...
@@ -278,17 +278,17 @@ Sie werden feststellen, dass die Aktivität, für die Sie sich qualifizieren mö
  }
 ```
 
-Navigieren Sie schließlich zur Benutzeroberfläche[!DNL Target]und suchen Sie die betreffende Aktivität: [experience.adobe.com/target](https://experience.adobe.com/target)
+Navigieren Sie abschließend zur [!DNL Target]-Benutzeroberfläche und suchen Sie nach der betreffenden Aktivität: [experience.adobe.com/target](https://experience.adobe.com/target)
 
 Überprüfen Sie die in der Zielgruppe verwendeten Regeln und stellen Sie sicher, dass Sie nur die oben genannten verwenden, die unterstützt werden. Stellen Sie außerdem sicher, dass der Aktivitätstyp entweder A/B oder XT ist.
 
-![alt image](assets/asset-target-audience-ui.png)
+![ALT-Bild](assets/asset-target-audience-ui.png)
 
-### Entscheidungsaktivitäten auf dem Gerät werden aufgrund einer nicht qualifizierten Zielgruppe nicht ausgeführt
+### Entscheidungsaktivitäten auf dem Gerät werden aufgrund nicht qualifizierter Zielgruppe nicht ausgeführt
 
-Wenn eine Entscheidungsaktivität auf dem Gerät nicht ausgeführt wird, Sie jedoch überprüft haben, ob die Datei rules.json die Aktivität enthält, führen Sie die folgenden Schritte aus:
+Wenn eine Entscheidungsaktivität auf dem Gerät nicht ausgeführt wird, Sie jedoch überprüft haben, ob Ihre rules.json-Datei die Aktivität enthält, führen Sie die folgenden Schritte aus:
 
-(1) Stellen Sie sicher, dass die Mbox, die Sie in Ihrer Anwendung ausführen, mit der von der Aktivität verwendeten übereinstimmt:
+(1) Stellen Sie sicher, dass die Mbox, die Sie in Ihrer Anwendung ausführen, mit der der Aktivität übereinstimmt:
 
 >[!BEGINTABS]
 
@@ -320,7 +320,7 @@ Wenn eine Entscheidungsaktivität auf dem Gerät nicht ausgeführt wird, Sie jed
    }};
 ```
 
->[!TAB Java-SDK]
+>[!TAB Java SDK]
 
 ```js {line-numbers="true"}
 Context context = new Context()
@@ -342,9 +342,9 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-(2) Stellen Sie sicher, dass Sie für die Audience für Ihre Aktivität qualifiziert sind, indem Sie die Eigenschaft `matchedRuleConditions` oder `unmatchedRuleConditions` Ihrer Trace-Ausgabe überprüfen:
+(2) Stellen Sie sicher, dass Sie für die Zielgruppe für Ihre Aktivität qualifiziert sind, indem Sie die `matchedRuleConditions` oder `unmatchedRuleConditions` Eigenschaft Ihrer Ablaufverfolgungsausgabe überprüfen:
 
-**Spurenausgabe**
+**Trace-Ausgabe**
 
 ```text {line-numbers="true"}
 ...
@@ -369,15 +369,15 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
     ...
 ```
 
-Wenn Sie nicht übereinstimmende Regelbedingungen haben, sind Sie für die Aktivität nicht qualifiziert und die Aktivität wird daher nicht ausgeführt. Überprüfen Sie die Regeln in Ihrer Zielgruppe, um zu sehen, warum Sie sich nicht qualifizieren.
+Wenn nicht übereinstimmende Regelbedingungen vorliegen, sind Sie nicht für die Aktivität qualifiziert und die Aktivität wird daher nicht ausgeführt. Überprüfen Sie die Regeln in Ihrer Zielgruppe, um zu sehen, warum Sie sich nicht qualifizieren.
 
-### Die Entscheidungsaktivität auf dem Gerät wird nicht ausgeführt, die Ursache ist jedoch nicht offensichtlich
+### Entscheidungsaktivität auf dem Gerät wird nicht ausgeführt, aber Grund nicht erkennbar
 
-Es kann nicht leicht erkennbar sein, warum eine Entscheidungsaktivität auf dem Gerät nicht ausgeführt wird. Führen Sie in diesem Fall die folgenden Schritte zur Fehlerbehebung aus, um das Problem zu ermitteln:
+Es ist möglicherweise nicht ohne weiteres ersichtlich, warum eine Entscheidungsaktivität auf dem Gerät nicht ausgeführt wird. Führen Sie in diesem Fall die folgenden Schritte zur Fehlerbehebung aus, um das Problem zu identifizieren:
 
-(1) Lesen Sie die Protokollverfolgungsausgabe in Ihrer Konsole durch und identifizieren Sie die Artefakteigenschaft, die in etwa wie folgt aussieht:
+(1) Lesen Sie die Logger-Ablaufverfolgungsausgabe in Ihrer Konsole und identifizieren Sie die Artefakteigenschaft, die in etwa wie folgt aussieht:
 
-**Spurenausgabe**
+**Trace-Ausgabe**
 
 ```text {line-numbers="true"}
 ...
@@ -394,11 +394,11 @@ Es kann nicht leicht erkennbar sein, warum eine Entscheidungsaktivität auf dem 
 ...
 ```
 
-Sehen Sie sich das Datum `artifactLastRetrieved` des Artefakts an und stellen Sie sicher, dass Sie die neueste `rules.json`-Datei in Ihre App heruntergeladen haben.
+Sehen Sie sich das `artifactLastRetrieved` des Artefakts an und stellen Sie sicher, dass Sie die neueste `rules.json`-Datei in Ihre App heruntergeladen haben.
 
-(2) Suchen Sie die Eigenschaft `evaluatedCampaignTargets` in Ihrer Protokollausgabe:
+(2) Suchen Sie die `evaluatedCampaignTargets` Eigenschaft in Ihrer Logger-Ausgabe:
 
-**Logger output**
+**Logger-Ausgabe**
 
 ```text {line-numbers="true"}
 ...
@@ -470,24 +470,24 @@ Sehen Sie sich das Datum `artifactLastRetrieved` des Artefakts an und stellen Si
 ...
 ```
 
-(3) Überprüfen Sie die `context`-, `page`- und `referring`-Daten, um sicherzustellen, dass sie erwartungsgemäß sind, da dies die Zielgruppenqualifizierung der Aktivität beeinflussen kann.
+(3) Überprüfen Sie die `context`-, `page`- und `referring`, um sicherzustellen, dass sie den Erwartungen entsprechen, die sich auf die Zielgruppenqualifizierung der Aktivität auswirken können.
 
-(4) Überprüfen Sie die `campaignId` , um sicherzustellen, dass die Aktivitäten, die Sie erwarten, ausgeführt zu werden, ausgewertet werden. Der `campaignId` entspricht der Aktivitäts-ID auf der Registerkarte &quot;Aktivitätsübersicht&quot;in der [!DNL Target]UI:
+(4) Überprüfen Sie die `campaignId`, um sicherzustellen, dass die Aktivität oder Aktivitäten, deren Ausführung Sie erwarten, ausgewertet werden. Der `campaignId` entspricht der Aktivitäts-ID auf der Registerkarte Aktivitätsübersicht in der [!DNL Target]-Benutzeroberfläche:
 
-![alt image](assets/asset-activity-id-target-ui.png)
+![ALT-Bild](assets/asset-activity-id-target-ui.png)
 
-(5) Überprüfen Sie die `matchedRuleConditions` und `unmatchedRuleConditions`, um Probleme zu identifizieren, die bei der Qualifizierung für die Zielgruppenregeln für eine bestimmte Aktivität auftreten.
+(5) Überprüfen Sie die `matchedRuleConditions` und `unmatchedRuleConditions`, um Probleme zu identifizieren, die die Qualifizierung für die Zielgruppenregeln für eine bestimmte Aktivität beeinträchtigen.
 
-(6) Überprüfen Sie die neueste `rules.json` -Datei, um sicherzustellen, dass die Aktivitäten, die Sie lokal ausführen möchten, eingeschlossen sind. Der Speicherort wird oben in Schritt 1 referenziert.
+(6) Überprüfen Sie die neueste `rules.json`-Datei, um sicherzustellen, dass die Aktivität oder Aktivitäten, die Sie lokal ausführen möchten, enthalten sind. Der Ort wird oben in Schritt 1 referenziert.
 
-(7) Stellen Sie sicher, dass Sie in Ihrer Anforderung und in Ihren Aktivitäten dieselben Mbox-Namen verwenden.
+(7) Stellen Sie sicher, dass Sie dieselben Mbox-Namen in Ihrer Anfrage und in Ihren Aktivitäten verwenden.
 
-(8) Stellen Sie sicher, dass Sie unterstützte Zielgruppenregeln und unterstützte Aktivitätstypen verwenden.
+(8) Stellen Sie sicher, dass Sie unterstützte Zielgruppenregeln und Aktivitätstypen verwenden.
 
-### Ein Server-Aufruf erfolgt, obwohl in der Aktivitäts-Einrichtung unter einer Mbox in der Benutzeroberfläche von [!DNL Target]die Meldung &quot;On Device Decisioning Eligible&quot;angezeigt wird.
+### Ein Server-Aufruf erfolgt, obwohl in der Aktivitätseinrichtung unter einer Mbox in der Benutzeroberfläche von „On Device Decisioning [!DNL Target]&quot; steht
 
-Es gibt einige Gründe, warum ein Server-Aufruf erfolgt, obwohl das Gerät für eine geräteübergreifende Entscheidungsfindung qualifiziert ist:
+Es gibt einige Gründe, warum ein Server-Aufruf erfolgt, obwohl das Gerät für die geräteinterne Entscheidungsfindung geeignet ist:
 
-* Wenn die Mbox, die für die Aktivität &quot;Zu Geräteentscheidungen berechtigt&quot;verwendet wird, auch für andere Aktivitäten verwendet wird, die nicht &quot;Zu Geräteentscheidungen berechtigt&quot;sind, wird die Mbox im Abschnitt `remoteMboxes` des Artefakts `rules.json` aufgelistet. Wenn eine Mbox unter `remoteMboxes` aufgeführt wird, führen alle `getOffer(s)` -Aufrufe an diese Mbox zu einem Server-Aufruf.
+* Wenn die Mbox, die für eine Aktivität vom Typ „Entscheidungsfindung auf dem Gerät zulässig“ verwendet wird, auch für andere Aktivitäten verwendet wird, die nicht vom Typ „Entscheidungsfindung auf dem Gerät zulässig“ sind, wird die Mbox unter dem Abschnitt &quot;`remoteMboxes`&quot; im `rules.json` Artefakt aufgeführt. Wenn eine Mbox unter `remoteMboxes` aufgeführt ist, führen alle `getOffer(s)` Aufrufe an diese Mbox zu einem Server-Aufruf.
 
-* Wenn Sie eine Aktivität unter einem Arbeitsbereich/einer Eigenschaft einrichten und beim Konfigurieren des SDK nicht dasselbe einschließen, kann dies dazu führen, dass der `rules.josn` des Standardarbeitsbereichs heruntergeladen wird, wodurch die Mbox unter dem Abschnitt `remoteMboxes` verwendet werden kann.
+* Wenn Sie eine Aktivität unter einem Arbeitsbereich/einer Eigenschaft einrichten und diese beim Konfigurieren der SDK nicht mit einbeziehen, kann dies dazu führen, dass der `rules.josn` des Standardarbeitsbereichs heruntergeladen wird, der die Mbox unter dem Abschnitt `remoteMboxes` verwenden kann.

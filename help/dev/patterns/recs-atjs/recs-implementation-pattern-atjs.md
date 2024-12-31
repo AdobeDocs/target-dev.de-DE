@@ -1,6 +1,6 @@
 ---
-title: Recommendations-Implementierungsmuster mit at.js
-description: Grundlegendes zur Verwendung des Implementierungsmusters für Recommendations mit at.js
+title: Recommendations-Implementierungsmuster unter Verwendung von at.js
+description: Erfahren Sie, wie Sie das Implementierungsmuster für Recommendations mit at.js verwenden
 feature: APIs/SDKs
 level: Experienced
 role: Developer
@@ -12,30 +12,30 @@ ht-degree: 0%
 
 ---
 
-# [!DNL Recommendations] Implementierungsmuster mit at.js - Übersicht
+# [!DNL Recommendations] von Implementierungsmustern mit at.js - Überblick
 
-Dieses Implementierungsmuster hilft Ihnen beim Verständnis und Erstellen Ihrer [!DNL Adobe Target Recommendations] -Implementierung bei der Verwendung der [at.js JavaScript-Bibliothek](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md).
+Dieses Implementierungsmuster hilft Ihnen, Ihre [!DNL Adobe Target Recommendations] Implementierung zu verstehen und zu erstellen, wenn Sie die [at.js-JavaScript-Bibliothek verwenden](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md).
 
-Klicken Sie auf Bild , um den Vollbildmodus zu erweitern.
+Klicken Sie auf Bild , um es auf den Vollbildmodus zu erweitern.
 
-![Adobe Target-Architekturdiagramm](/help/dev/patterns/assets/architecture-chart.png){width="600" zoomable="yes"}
+![Architekturdiagramm für Adobe Target](/help/dev/patterns/assets/architecture-chart.png){width="600" zoomable="yes"}
 
 Beachten Sie, dass die Zahlen im Bild nicht die Reihenfolge der Vorgänge angeben:
 
 1. Client-seitige SDKs für [!DNL Adobe Target] und [!DNL Experience Cloud ID Service]
-1. [!DNL Target Delivery API] Aufruf
-1. Akquise-Aufruf [!UICONTROL Experience Cloud ID] (ECID)
-1. Bulk-Profil-Update-API und -Dienst [!DNL Customer Attributes] (CA)
-1. Profildatenerfassung aus den Datenquellen des Kunden in den [!DNL Target] Profilspeicher
-1. Erfassen von Profil- und Verhaltensdaten und Auswählen, welches Erlebnis dem Besucher angezeigt werden soll
-1. Erlebnisse werden auf der Seite dargestellt
+1. [!DNL Target Delivery API]
+1. [!UICONTROL Experience Cloud ID] (ECID)-Akquise-Aufruf
+1. API- und [!DNL Customer Attributes]-Service (CA) für die Massenaktualisierung von Profilen
+1. Profildatenaufnahme aus den Datenquellen des Kunden in [!DNL Target] Profilspeicher
+1. Erfassen von Profil- und Verhaltensdaten und Festlegen des Erlebnisses, das dem Besucher angezeigt werden soll
+1. Erlebnisse auf der Seite rendern
 1. at.js rendert die Erlebnisse auf der Seite
 
-Jedes Muster besteht aus verschiedenen Teilen, wobei jeder Teil einer kritischen Implementierungsanforderung für Ihre [!DNL Target] -Implementierung entspricht.
+Jedes Muster besteht aus verschiedenen Teilen, wobei jeder Teil einer kritischen Implementierungsanforderung für Ihre [!DNL Target] Implementierung entspricht.
 
 Jeder Teil wird in einem separaten Artikel in diesem Handbuch erläutert:
 
 * [SDKS initialisieren](/help/dev/patterns/recs-atjs/initialize-sdk.md)
-* [Datenerfassung konfigurieren](/help/dev/patterns/recs-atjs/data-collection.md)
-* [Erlebnisse rendern](/help/dev/patterns/recs-atjs/render-experiences.md)
-* [Target benachrichtigen](/help/dev/patterns/recs-atjs/notify-target.md)
+* [Konfigurieren der Datenerfassung](/help/dev/patterns/recs-atjs/data-collection.md)
+* [Rendern von Erlebnissen](/help/dev/patterns/recs-atjs/render-experiences.md)
+* [Zielgruppe benachrichtigen](/help/dev/patterns/recs-atjs/notify-target.md)

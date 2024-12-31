@@ -1,6 +1,6 @@
 ---
-title: Automatisches Herunterladen, Speichern und Aktualisieren des auf dem Gerät vorhandenen Entscheidungsregel-Artefakts
-description: Erfahren Sie, wie Sie beim Initialisieren des [!DNL Adobe Target] SDK mit dem auf dem Gerät vorhandenen Entscheidungsregel-Artefakt arbeiten.
+title: Automatisches Herunterladen, Speichern und Aktualisieren des Artefakts der geräteinternen Entscheidungsregel
+description: Erfahren Sie, wie Sie beim Initialisieren der  [!DNL Adobe Target] SDK mit dem Artefakt „Entscheidungsregel auf dem Gerät“ arbeiten.
 feature: APIs/SDKs
 exl-id: be41a723-616f-4aa3-9a38-8143438bd18a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -10,17 +10,17 @@ ht-degree: 0%
 
 ---
 
-# Herunterladen, Speichern und Aktualisieren des Regelartefakts automatisch über das [!DNL Adobe Target]-SDK
+# Automatisches Herunterladen, Speichern und Aktualisieren des Regelartefakts über die [!DNL Adobe Target] SDK
 
-Dieser Ansatz ist am besten, wenn Sie das SDK [!DNL Adobe Target] gleichzeitig initialisieren und Ihren Webserver starten können. Das Regelartefakt wird vom SDK [!DNL Adobe Target] heruntergeladen und im Speicher zwischengespeichert, bevor Ihre Webserver-Anwendung mit der Verarbeitung von Anforderungen beginnt. Sobald Ihre Webanwendung ausgeführt wird, werden alle [!DNL Adobe Target] -Entscheidungen mithilfe des im Speicher befindlichen Regelartefakts ausgeführt. Das zwischengespeicherte Regelartefakt wird basierend auf dem `pollingInterval` aktualisiert, den Sie während des SDK-Initialisierungsschritts angegeben haben.
+Dieser Ansatz eignet sich am besten, wenn Sie die [!DNL Adobe Target] SDK initialisieren können, während Sie gleichzeitig Ihren Webserver initialisieren und starten. Das Regelartefakt wird von der [!DNL Adobe Target] SDK heruntergeladen und im Arbeitsspeicher zwischengespeichert, bevor die Webserveranwendung mit der Bereitstellung von Anfragen beginnt. Sobald Ihre Web-Anwendung ausgeführt wird, werden alle [!DNL Adobe Target] Entscheidungen mit dem In-Memory-Regel-Artefakt ausgeführt. Das zwischengespeicherte Regelartefakt wird basierend auf dem `pollingInterval` aktualisiert, den Sie beim SDK-Initialisierungsschritt angeben.
 
 ## Zusammenfassung der Schritte
 
-1. SDK installieren
-1. Initialisieren des SDK
+1. Installieren von SDK
+1. SDK initialisieren
 1. Speichern und Verwenden des Regelartefakts
 
-## 1. Installieren des SDK
+## 1. Installieren des SDKS
 
 >[!BEGINTABS]
 
@@ -42,11 +42,11 @@ npm i @adobe/target-nodejs-sdk -P
 
 >[!ENDTABS]
 
-## 2. Initialisieren des SDK
+## 2. SDK initialisieren
 
-1. Importieren Sie zunächst das SDK. Importieren Sie in dieselbe Datei, von der Sie die Serverstart-Funktion steuern können.
+1. Importieren Sie zunächst die SDK. Importieren Sie in dieselbe Datei, von der aus Sie den Serverstart steuern können.
 
-   **node.js**
+   **Node.js**
 
    ```javascript {line-numbers="true"}
    const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -59,9 +59,9 @@ npm i @adobe/target-nodejs-sdk -P
    import com.adobe.target.edge.client.TargetClient;
    ```
 
-1. Verwenden Sie zum Konfigurieren des SDK die Methode create .
+1. Verwenden Sie zum Konfigurieren der SDK die Create-Methode.
 
-   **node.js**
+   **Node.js**
 
    ```javascript {line-numbers="true"}
    const CONFIG = {
@@ -92,18 +92,18 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. Sowohl client als auch organizationId können aus [!DNL Adobe Target] abgerufen werden, indem Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** navigieren, wie hier dargestellt.
+1. Sowohl die Client- als auch die Organisations-ID können aus [!DNL Adobe Target] abgerufen werden, indem Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** navigieren, wie hier dargestellt.
 
-   &lt;!— Fügen Sie image-client-code.png —>
-   ![Implementierungsseite unter &quot;Administration&quot;in Target](assets/asset-rule-artifact-3.png)
+   &lt;!— insert image-client-code.png —>
+   ![Implementierungsseite unter „Administration“ in Target](assets/asset-rule-artifact-3.png)
 
-## 3. Speichern und Verwenden des Regelartefakts
+## 3. Speichern und verwenden Sie das Regelartefakt
 
-Sie müssen das Regelartefakt nicht selbst verwalten und das Aufrufen der SDK-Methoden sollte unkompliziert sein.
+Sie müssen das Regelartefakt nicht selbst verwalten, und der Aufruf der SDK-Methoden sollte unkompliziert sein.
 
 >[!BEGINTABS]
 
->[!TAB node.js]
+>[!TAB Node.js]
 
 ```javascript {line-numbers="true"}
 //req is the request object from the server request listener method
@@ -146,13 +146,13 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->Im obigen Codebeispiel enthält das `TargetClient` -Objekt einen Verweis auf das im Arbeitsspeicher vorhandene Regelartefakt. Wenn Sie dieses Objekt zum Aufrufen von Standard-SDK-Methoden verwenden, wird für die Entscheidungsfindung das speicherinterne Regelartefakt verwendet. Wenn Ihre Anwendung so strukturiert ist, dass Sie die SDK-Methoden in anderen Dateien als den aufrufen müssen, der Client-Anforderungen initialisiert und überwacht, und wenn diese Dateien keinen Zugriff auf das TargetClient-Objekt haben, können Sie die JSON-Payload herunterladen und in einer lokalen JSON-Datei speichern, die für andere Dateien verwendet werden soll, die das SDK initialisieren müssen. Dies wird im nächsten Abschnitt zum Herunterladen des Regel-Artefakts mit einer JSON-Payload ](rule-artifact-json.md) erläutert.[
+>Im obigen Codebeispiel enthält das `TargetClient`-Objekt einen Verweis auf das speicherinterne Regelartefakt. Wenn Sie dieses Objekt zum Aufrufen von SDK-Standardmethoden verwenden, verwendet es das speicherinterne Regelartefakt für die Entscheidungsfindung. Wenn Ihre Anwendung so strukturiert ist, dass Sie die SDK-Methoden in anderen Dateien als derjenigen aufrufen müssen, die Client-Anfragen initialisiert und abhört, und wenn diese Dateien keinen Zugriff auf das TargetClient-Objekt haben, können Sie die JSON-Payload herunterladen und in einer lokalen JSON-Datei speichern, die für andere Dateien verwendet werden soll, die die SDK initialisieren müssen. Dies wird im nächsten Abschnitt bezüglich des [Herunterladens des Regelartefakts mithilfe einer JSON-Payload) ](rule-artifact-json.md).
 
-Hier ist ein Beispiel, das eine Webanwendung startet, nachdem das [!DNL Adobe Target] SDK initialisiert wurde.
+Im Folgenden finden Sie ein Beispiel, das eine Web-Anwendung nach der Initialisierung der [!DNL Adobe Target] SDK startet.
 
 >[!BEGINTABS]
 
->[!TAB node.js]
+>[!TAB Node.js]
 
 ```javascript {line-numbers="true"}
 const express = require("express");

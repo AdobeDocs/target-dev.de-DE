@@ -1,6 +1,6 @@
 ---
-title: Herunterladen, Speichern und Aktualisieren des auf dem Gerät vorhandenen Entscheidungsregel-Artefakts über die JSON-Payload
-description: Dieser Ansatz ist am besten, wenn Ihre Anwendung so strukturiert ist, dass das SDK in jeder Datei initialisiert werden muss, in der SDK-Methoden verwendet werden.
+title: Herunterladen, Speichern und Aktualisieren des Artefakts der geräteinternen Entscheidungsregel über JSON-Payload
+description: Dieser Ansatz empfiehlt sich, wenn die Anwendung so strukturiert ist, dass die SDK für jede Datei initialisiert werden muss, in der sie SDK-Methoden verwendet.
 feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # Herunterladen, Speichern und Aktualisieren des Regelartefakts über die JSON-Payload
 
-Dieser Ansatz ist am besten, wenn Ihre Anwendung so strukturiert ist, dass das SDK in jeder Datei initialisiert werden muss, in der SDK-Methoden verwendet werden. Bevor Ihre Webanwendung die JSON-Payload des Regelartefakts während der SDK-Initialisierung verwenden kann, müssen Sie sicherstellen, dass die JSON-Payload heruntergeladen wurde und für Ihre Anwendung verfügbar ist.
+Dieser Ansatz empfiehlt sich, wenn die Anwendung so strukturiert ist, dass die SDK für jede Datei initialisiert werden muss, in der sie SDK-Methoden verwendet. Bevor Ihre Web-Anwendung die JSON-Payload des Regelartefakts während der SDK-Initialisierung verwenden kann, sollten Sie sicherstellen, dass die JSON-Payload heruntergeladen wurde und für Ihre Anwendung verfügbar ist.
 
 ## Zusammenfassung der Schritte
 
-1. SDK installieren
-1. Initialisieren des SDK
+1. Installieren von SDK
+1. SDK initialisieren
 1. Speichern und Verwenden der JSON-Payload
 
-## 1. Installieren des SDK
+## 1. Installieren des SDKS
 
 >[!BEGINTABS]
 
@@ -42,11 +42,11 @@ npm i @adobe/target-nodejs-sdk -P
 
 >[!ENDTABS]
 
-## 2. Initialisieren des SDK
+## 2. SDK initialisieren
 
-1. Importieren Sie zunächst das SDK. Importieren Sie in dieselbe Datei, von der Sie die Serverstart-Funktion steuern können.
+1. Importieren Sie zunächst die SDK. Importieren Sie in dieselbe Datei, von der aus Sie den Serverstart steuern können.
 
-   **node.js**
+   **Node.js**
 
    ```javascript {line-numbers="true"}
    const TargetClient = require("@adobe/target-nodejs-sdk");
@@ -59,9 +59,9 @@ npm i @adobe/target-nodejs-sdk -P
    import com.adobe.target.edge.client.TargetClient;
    ```
 
-1. Verwenden Sie zum Konfigurieren des SDK die Methode create .
+1. Verwenden Sie zum Konfigurieren der SDK die Create-Methode.
 
-   **node.js**
+   **Node.js**
 
    ```javascript {line-numbers="true"}
    const CONFIG = {
@@ -113,18 +113,18 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. Sowohl Client als auch `organizationId` können von [!DNL Adobe Target]abgerufen werden, indem Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** navigieren, wie hier dargestellt.
+1. Sowohl der Client als auch die `organizationId` können von abgerufen werden[!DNL Adobe Target] indem Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** navigieren, wie hier dargestellt.
 
-   &lt;!— Fügen Sie image-client-code.png —>
-   ![alt image](assets/asset-rule-artifact-3.png)
+   &lt;!— insert image-client-code.png —>
+   ![ALT-Bild](assets/asset-rule-artifact-3.png)
 
-## 3. Speichern und testen Sie die JSON-Payload
+## 3. Speichern und Wiederverwenden der JSON-Payload
 
-Der Mechanismus zum Speichern der JSON-Payload hängt von Ihrer Systemarchitektur ab. Sie können eine lokale Datei, eine Datenbank oder ein Speicherobjektzwischenspeicherungssystem wie Memcached verwenden. Sie müssen in der Lage sein, diese JSON aus Ihrer Anwendung für den Gebrauch zu lesen. In diesem Handbuch verwenden wir eine lokale Datei als Speicher.
+Der Mechanismus zum Speichern der JSON-Payload hängt von Ihrer Systemarchitektur ab. Sie können eine lokale Datei, eine Datenbank oder ein Speicherobjekt-Caching-System wie Memcached verwenden. Sie müssen in der Lage sein, diese JSON aus Ihrer Anwendung für den Verbrauch zu lesen. In diesem Handbuch verwenden wir eine lokale Datei als Speicher.
 
 >[!BEGINTABS]
 
->[!TAB node.js]
+>[!TAB Node.js]
 
 ```javascript {line-numbers="true"}
 //... Code removed for brevity
@@ -162,13 +162,13 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->Durch Initialisierung des [!DNL Adobe Target]SDK über die JSON-Payload kann Ihr Server Anforderungen sofort mit Entscheidungsaktivitäten auf dem Gerät bereitstellen, da das [!DNL Adobe Target]SDK nicht warten muss, bis das Regel-Artefakt heruntergeladen wird.
+>Durch die Initialisierung der [!DNL Adobe Target]SDK über die JSON-Payload kann Ihr Server Anfragen sofort mit Entscheidungsaktivitäten auf dem Gerät bereitstellen, da die [!DNL Adobe Target]SDK nicht warten muss, bis das Regelartefakt heruntergeladen wird.
 
-Im Folgenden finden Sie ein Beispiel für die JSON-Funktion zur Payload-Initialisierung.
+Im Folgenden finden Sie ein Beispiel, das die JSON-Payload-Initialisierungsfunktion veranschaulicht.
 
 >[!BEGINTABS]
 
->[!TAB node.js]
+>[!TAB Node.js]
 
 ```javascript {line-numbers="true"}
 const express = require("express");

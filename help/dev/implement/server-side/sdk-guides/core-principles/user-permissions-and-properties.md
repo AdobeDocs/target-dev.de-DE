@@ -1,6 +1,6 @@
 ---
 title: Benutzerberechtigungen und Eigenschaften
-description: Die [!DNL Target] SDKs enthalten Unterstützung für Benutzerberechtigungen und Eigenschaften.
+description: Die  [!DNL Target] SDKs unterstützen Benutzerberechtigungen und Eigenschaften.
 exl-id: 612faf1a-e8f9-4321-b831-90fba69ead3a
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Benutzerberechtigungen und Eigenschaften
 
-Die [!DNL Target] SDKs enthalten Unterstützung für Benutzerberechtigungen und Eigenschaften. Wenn Sie nicht genau wissen, wie [!DNL Adobe Target] Unternehmensberechtigungen über Arbeitsbereiche und Eigenschaften handhabt, können Sie mehr darüber in [Berechtigungen für Unternehmensbenutzer](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=de) erfahren.
+Die [!DNL Target]-SDKs unterstützen Benutzerberechtigungen und Eigenschaften. Wenn Sie nicht genau wissen, wie [!DNL Adobe Target] mit Unternehmensberechtigungen über Arbeitsbereiche und Eigenschaften umgeht, können Sie mehr darüber in [Berechtigungen für Unternehmensbenutzer“ ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=de).
 
 Der Client kann ein Eigenschafts-Token auf zwei Arten verwenden.
 
@@ -20,7 +20,7 @@ Der Client kann ein Eigenschafts-Token auf zwei Arten verwenden.
 
 >[!BEGINTABS]
 
->[!TAB node.js]
+>[!TAB Node.js]
 
 ```js {line-numbers="true"}
 const CONFIG = {
@@ -48,13 +48,13 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 >[!ENDTABS]
 
-## Incident Property Token im getOffers-Aufruf
+## Token für zufällige Eigenschaften im getOffers-Aufruf
 
-Ein Eigenschafts-Token kann auch in einem einzelnen `getOffers` -Aufruf angegeben werden. Dazu fügen Sie der Anforderung ein Eigenschaftsobjekt hinzu. Ein auf diese Weise angegebenes Eigenschafts-Token hat Vorrang vor einem Satz in der Konfiguration.
+Ein Eigenschafts-Token kann auch in einem einzelnen `getOffers`-Aufruf angegeben werden. Dies geschieht durch Hinzufügen eines Eigenschaftenobjekts zur Anfrage. Ein auf diese Weise angegebenes Eigenschafts-Token hat Vorrang vor einem in der Konfiguration festgelegten Token.
 
 >[!BEGINTABS]
 
->[!TAB node.js]
+>[!TAB Node.js]
 
 ```js {line-numbers="true"}
 const CONFIG = {
