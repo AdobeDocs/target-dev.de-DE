@@ -1,6 +1,6 @@
 ---
-title: Adobe Target Single Profile Update API
-description: Erfahren Sie, wie Sie mit  [!DNL Adobe Target] [!UICONTROL Single Profile Update API] die Profildaten eines einzelnen Besuchers an  [!DNL Target] senden können.
+title: Adobe Target-API zur Aktualisierung von einzelnen Profilen
+description: Erfahren Sie, wie Sie  [!DNL Adobe Target] [!UICONTROL Single Profile Update API] verwenden, um die Profildaten eines einzelnen Besuchers an zu senden [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 4e022db3-215f-461b-9222-38ce2f2dbc28
@@ -13,46 +13,46 @@ ht-degree: 3%
 
 # [!DNL Adobe Target Single Profile Update API]
 
-Mit dem Wert [!DNL Adobe Target] [!UICONTROL Single Profile Update API] können Sie ein Profil-Update für einen einzelnen Benutzer senden. Der [!UICONTROL Single Profile Update API] ist fast identisch mit dem [!UICONTROL Bulk Profile Update API], aber ein Besucherprofil wird gleichzeitig aktualisiert, entsprechend dem API-Aufruf und nicht mit einer .cvs-Datei.
+Mit dem [!DNL Adobe Target] [!UICONTROL Single Profile Update API] können Sie eine Profilaktualisierung für einen einzelnen Benutzer senden. Der [!UICONTROL Single Profile Update API] ist fast identisch mit dem [!UICONTROL Bulk Profile Update API], aber es wird jeweils ein Besucherprofil aktualisiert, und zwar inline mit dem API-Aufruf anstelle mit einer .cvs-Datei.
 
-Der Wert [!UICONTROL Single Profile Update API] und wird im Allgemeinen verwendet, wenn eine Aktualisierung in Bezug auf eine Transaktion vorgenommen werden muss, die in einem Kanal stattfindet, der [!DNL Target] nicht implementiert hat. Sie möchten beispielsweise das Profil eines einzelnen Besuchers aktualisieren, der eine Offline-Aktion ausführt. Zu den Aktionen gehören das Erreichen eines Callcenters, die Finanzierung eines Darlehens, die Verwendung einer Treuekarte im Geschäft, der Zugriff auf einen Kiosk usw.
+Die [!UICONTROL Single Profile Update API] und werden im Allgemeinen verwendet, wenn eine Aktualisierung in Bezug auf eine Transaktion erfolgen muss, die in einem Kanal stattfindet, der [!DNL Target] nicht implementiert wurde. Sie möchten beispielsweise das Profil eines einzelnen Besuchers aktualisieren, der eine Offline-Aktion ausführt. Aktionen können das Erreichen eines Callcenters, ein Kredit wird finanziert, eine Kundenkarte im Geschäft verwenden, auf einen Kiosk zugreifen und so weiter.
 
-Zu den Vorteilen von [!UICONTROL Single Profile Update API] gehören:
+Zu den Vorteilen des [!UICONTROL Single Profile Update API] gehören:
 
 * Keine Begrenzung der Anzahl der Profilattribute.
 * Profilattribute, die über die Site gesendet werden, können über die API aktualisiert werden und umgekehrt.
 
 ## Einschränkungen 
 
-* Der [!UICONTROL Single Profile Update API] ist auf die Durchführung von 1 Million Aktualisierungen in einem beliebigen rollierenden 24-Stunden-Zeitraum beschränkt.
-* Aktualisierungen treten in der Regel in weniger als einer Stunde auf, können jedoch bis zu 24 Stunden dauern, bis sie angezeigt werden.
+* Die [!UICONTROL Single Profile Update API] ist auf die Durchführung von 1 Million Aktualisierungen in einem rollierenden Zeitraum von 24 Stunden beschränkt.
+* Aktualisierungen werden im Allgemeinen in weniger als einer Stunde durchgeführt, es kann jedoch bis zu 24 Stunden dauern, bis sie widergespiegelt werden.
 
-  Wenn Sie weitere Aktualisierungen senden oder die Verarbeitung von Aktualisierungen in kürzeren Zeitrahmen erfordern, sollten Sie in Erwägung ziehen, Transaktionsprofilaktualisierungen über eine clientseitige Aktualisierung (empfohlen) oder über die serverseitige [!DNL Adobe Target] -API für die Bereitstellung[zu senden.](/help/dev/implement/delivery-api/overview.md)
+  Wenn Sie mehr Aktualisierungen senden müssen oder Aktualisierungen in kürzeren Zeitrahmen verarbeitet werden müssen, sollten Sie Transaktionsprofilaktualisierungen über Client-seitige Aktualisierungen (bevorzugt) oder über die [!DNL Adobe Target] Server-seitige [Bereitstellungs-API) ](/help/dev/implement/delivery-api/overview.md).
 
-* Die [!UICONTROL Single Profile Update API] ist eine Server-zu-Server-API und ist nicht für die Arbeit auf einer Webseite vorgesehen. Um ein Besucherprofil über Ihre Webseite zu aktualisieren, können Sie die Funktion [trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) oder die [Bereitstellungs-API](/help/dev/implement/delivery-api/overview.md) verwenden.
+* Die [!UICONTROL Single Profile Update API] ist eine Server-zu-Server-API und nicht für die Verwendung auf einer Web-Seite konzipiert. Um ein Besucherprofil auf Ihrer Web-Seite zu aktualisieren, können Sie die Funktion [trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) oder die [Bereitstellungs-API](/help/dev/implement/delivery-api/overview.md) verwenden.
 
 ## Format
 
-Geben Sie die Profilparameter im Format `profile.paramName=value` an.
+Geben Sie die Profilparameter im `profile.paramName=value` Format an.
 
-Um das Profil für einen `pcId` zu aktualisieren, verwenden Sie:
+Um das Profil für eine `pcId` zu aktualisieren, verwenden Sie:
 
 ``````
 https://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mboxPC=1368007744041-575948.01_00&profile.attr=0&profile.attr2=1...
 ``````
 
-Um das Profil für einen `mbox3rdPartyId` zu aktualisieren, verwenden Sie:
+Um das Profil für eine `mbox3rdPartyId` zu aktualisieren, verwenden Sie:
 
 ``````
 shell http://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPartyId=123456&profile.attr=0&profile.attr2=1...
 ``````
 
-Der [!UICONTROL Single Profile Update API] dient nur Updates. Wenn nichts gefunden wird, wird kein Profil erstellt.
+Die [!UICONTROL Single Profile Update API] ist nur für Aktualisierungen vorgesehen. Wenn nichts gefunden wird, wird kein Profil erstellt.
 
 ## Hinweise
 
-* Parameter und Werte müssen mit UTF-8 URL-kodiert werden.
-* Das Parameterformat ist `profile.paramName`.
+* Parameter und Werte müssen mit UTF-8 URL-codiert sein.
+* Parameterformat ist `profile.paramName`.
 * Es müssen nicht alle Parameterwerte für alle pcIds und mbox3rdPartyIds vorhanden sein.
 * Bei Parametern und Werten wird zwischen Groß- und Kleinschreibung unterschieden.
 * Sowohl GET als auch POST werden unterstützt.
@@ -60,8 +60,8 @@ Der [!UICONTROL Single Profile Update API] dient nur Updates. Wenn nichts gefund
 
 ## Antwort
 
-Eine Beispielantwort für die oben genannten Anforderungen sieht wie folgt aus:
+Eine Beispielantwort für die oben genannten Anfragen sieht wie folgt aus:
 
 `trueRequest successfully submitted`
 
-Diese Antwort gibt an, dass die Antwort gesendet wurde und bald verarbeitet wird.
+Diese Antwort zeigt an, dass die Antwort übermittelt wurde und in Kürze verarbeitet wird.

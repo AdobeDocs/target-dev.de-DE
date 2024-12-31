@@ -1,8 +1,8 @@
 ---
-title: Benutzerberechtigungen für Adobe Target Delivery API
-description: Benutzerberechtigungen für Adobe Target Delivery API
-badgePremium: label="Premium" type="Positive" url="https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=en#premium newtab=true" tooltip="Erfahren Sie, was in Target Premium enthalten ist."
-keywords: Versandschnittstelle
+title: Benutzerberechtigungen für die Adobe Target-Bereitstellungs-API
+description: Benutzerberechtigungen für die Adobe Target-Bereitstellungs-API
+badgePremium: label="Premium" type="Positive" url="https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=en#premium newtab=true" tooltip="Hier finden Sie Informationen zum Lieferumfang von Target Premium."
+keywords: Bereitstellungs-API
 exl-id: 332f90bd-4079-4653-aa38-b35837631c94
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Benutzerberechtigungen (Premium)
 
-Mit [!DNL Adobe] können Kunden bei der Verwendung von Adobe Target Benutzerberechtigungen verwalten. Um einen erfolgreichen [!UICONTROL Adobe Target Delivery API] -Aufruf durchzuführen, muss ein Token mit den richtigen Berechtigungen innerhalb des API-Aufrufs übergeben werden. Um mehr über die Benutzerberechtigungen und das Abrufen des Tokens zu erfahren, besuchen Sie [diese Dokumentation](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
+[!DNL Adobe] ermöglicht Kunden die Verwaltung von Benutzerberechtigungen bei der Verwendung von Adobe Target. Um einen erfolgreichen [!UICONTROL Adobe Target Delivery API]-Aufruf durchzuführen, muss innerhalb des API-Aufrufs ein Token mit den richtigen Berechtigungen übergeben werden. Weitere Informationen zu Benutzerberechtigungen und zum Abrufen des Tokens finden Sie unter [diese Dokumentation](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
 
 ```
 curl -X POST \
@@ -49,7 +49,7 @@ curl -X POST \
     }'
 ```
 
-Sobald Sie über das entsprechende Token verfügen, übergeben Sie es für jeden API-Aufruf an `property` -> `token`. Wenn die `property` -> `token` nicht bei jedem API-Aufruf übergeben wird, erhalten Sie keine `content` zurück von Adobe Target.
+Sobald Sie das entsprechende Token haben, übergeben Sie es für jeden API-Aufruf an `property` -> `token`. Wenn die `token` `property` -> nicht bei jedem API-Aufruf übergeben wird, erhalten Sie keine `content` von Adobe Target zurück.
 
 ```
 {
@@ -71,4 +71,4 @@ Sobald Sie über das entsprechende Token verfügen, übergeben Sie es für jeden
 }
 ```
 
-Wie Sie oben sehen können, ohne die `property` -> `token` zu übergeben, erhalten Sie keine Inhalte zurück. Wenn Sie Inhalte von Ihrem API-Aufruf erwarten, aber keine aus der Antwort abrufen, liegt das wahrscheinlich daran, dass entweder `property` -> `token` nicht bereitgestellt wird oder dass es ohne die richtigen Berechtigungen weitergegeben wird.
+Wie Sie oben sehen können, erhalten Sie keine Inhalte zurück, ohne den `token` `property` -> zu übergeben. Wenn Sie Inhalte von Ihrem API-Aufruf erwarten, aber keine Inhalte aus der Antwort abrufen, liegt das höchstwahrscheinlich daran, dass entweder die `token` `property` -> nicht bereitgestellt wird oder dass sie ohne die richtigen Berechtigungen übergeben wird.

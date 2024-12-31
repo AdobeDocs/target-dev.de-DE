@@ -1,6 +1,6 @@
 ---
-keywords: hybride Implementierung, hybride, serverseitige, serverseitige, serverseitige, Client-seitige, Client-seitige, hybride Implementierung, hybride Implementierung0
-description: Erfahren Sie mehr über das einzigartige Hybrid-Bereitstellungsmodell von [!DNL Adobe Target] für die Personalisierung, wobei Client- und Server-seitige Implementierungen miteinander kombiniert werden.
+keywords: Hybride Bereitstellung, Hybrid, Server-seitig, Server-seitig, Server-seitig, Client-seitig, Client-seitig, Client-seitig, Hybride Implementierung, Hybride Bereitstellung0
+description: Erfahren Sie mehr über  [!DNL Adobe Target] einzigartiges Hybrid-Bereitstellungsmodell von für Personalisierung und die Kombination von Client- und Server-seitigen Implementierungen.
 title: Was ist eine Hybrid [!DNL Target] Implementierung?
 feature: Implementation
 exl-id: 7961565b-a2ac-4d9c-b579-735c6167c949
@@ -13,6 +13,6 @@ ht-degree: 3%
 
 # Hybridimplementierung
 
-[!DNL Adobe Target] bietet ein einzigartiges Hybrid-Bereitstellungsmodell für die Personalisierung, das Client- und Server-seitige Implementierungen miteinander kombiniert. Dieses Hybridmodell ermöglicht es nichttechnischen Benutzern, mithilfe von WYSIWYG [!UICONTROL Visual Experience Composer] (VEC) eine Experiment- oder Personalisierungsaktivität zu erstellen und das Erlebnis serverseitig für einen leistungsstarken Versand ausführen, ausliefern und wiedergeben zu lassen.
+[!DNL Adobe Target] bietet ein einzigartiges Hybrid-Bereitstellungsmodell für die Personalisierung, bei dem Client- und Server-seitige Implementierungen kombiniert werden. Mit diesem Hybridmodell können technisch nicht versierte Benutzende ein Experiment oder eine Personalisierungsaktivität mit dem WYSIWYG [!UICONTROL Visual Experience Composer] (VEC) erstellen und das Erlebnis für einen hochleistungsfähigen Versand Server-seitig ausführen, bereitstellen und rendern lassen.
 
-Weitere Informationen finden Sie unter [Adobe Hybrid-Implementierung](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/hybrid-deployment.html) in [Adobe Target-Tutorials](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=de).
+Weitere Informationen finden Sie unter [Adobe-Hybridbereitstellung](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/hybrid-deployment.html) in [Adobe Target Tutorials](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=de).

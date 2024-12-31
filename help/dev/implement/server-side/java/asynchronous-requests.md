@@ -1,6 +1,6 @@
 ---
-title: Verwendung asynchroner Anforderungen im Java-SDK [!DNL Adobe Target] Java
-description: Erfahren Sie, wie das Java-SDK [!DNL Target] asynchrone Anforderungen unterstützt, wodurch die effektive Zielzeit auf null reduziert werden kann.
+title: Verwenden asynchroner Anforderungen in der Java [!DNL Adobe Target] SDK
+description: Erfahren Sie [!DNL Target]  wie Java SDK asynchrone Anforderungen unterstützt, wodurch die effektive Zielzeit auf null reduziert werden kann.
 feature: APIs/SDKs
 exl-id: e11f8d16-76f6-4d39-822a-34a1cf7f623f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 ## Beschreibung
 
-Ein Vorteil der serverseitigen Integration besteht darin, dass Sie die enorme Bandbreite und die Computerressourcen, die auf Server-Seite verfügbar sind, mit Parallelismus nutzen können. [!DNL Target] Java SDK unterstützt asynchrone Anfragen, wodurch die effektive Zielzeit auf null reduziert werden kann.
+Ein Vorteil der Server-seitigen Integration besteht darin, dass die auf der Server-Seite verfügbaren enormen Bandbreite- und Rechenressourcen durch die Verwendung von Parallelität genutzt werden können. [!DNL Target] Java SDK unterstützt asynchrone Anfragen, die die effektive Zielzeit auf null reduzieren können.
 
 ## Unterstützte Methoden
 
@@ -28,9 +28,9 @@ CompletableFuture<Attributes> getAttributesAsync(TargetDeliveryRequest targetReq
 
 ## Beispiel
 
-Ein Beispiel für einen `Spring`-Anwendungscontroller könnte wie folgt aussehen:
+Ein Beispiel für `Spring` Anwendungs-Controller könnte wie folgt aussehen:
 
-### Beispiel-Controller
+### Stichprobenkontroller
 
 ```javascript {line-numbers="true"}
 @RestController
@@ -73,6 +73,6 @@ public class TargetRestController {
 }
 ```
 
-In diesem Beispiel wird davon ausgegangen, dass Sie [das SDK](initialize-sdk.md) als Frühjahrsbean initialisiert haben und über [Dienstprogrammmethoden](utility-methods.md) verfügen.
+In diesem Beispiel wird davon ausgegangen[ dass Sie SDK als ](initialize-sdk.md)-Bean initialisiert haben und [Dienstprogrammmethoden](utility-methods.md) verfügbar sind.
 
-Die [!DNL Target] -Anfrage wird vor `simulateIO` ausgelöst und bis zum Zeitpunkt der Ausführung sollte das Zielergebnis ebenfalls bereit sein. Auch wenn dies nicht der Fall ist, werden Sie in den meisten Fällen erhebliche Einsparungen erzielen.
+Die [!DNL Target]-Anfrage wird vor dem `simulateIO` ausgelöst und zum Zeitpunkt ihrer Ausführung sollte auch das Zielergebnis bereit sein. Selbst wenn dies nicht der Fall ist, werden Sie in den meisten Fällen erhebliche Einsparungen erzielen.

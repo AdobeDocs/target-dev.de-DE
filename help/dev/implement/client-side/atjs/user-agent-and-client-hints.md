@@ -1,6 +1,6 @@
 ---
-keywords: at.js, Browser-Benutzeragent, Benutzeragent, Clienthinweise, Benutzeragent
-description: Erfahren Sie, wie Adobe Target mit dem Benutzeragenten und Client Hints Besucher für die Segmentierung und Personalisierung qualifiziert.
+keywords: at.js, Browser-Benutzeragent, Benutzeragent, Client Hints, Benutzeragent
+description: Erfahren Sie, wie Adobe Target den user-agent und Client Hints verwendet, um Besucher für die Segmentierung und Personalisierung zu qualifizieren.
 title: User Agent und Client Hints
 feature: at.js
 exl-id: e0d87d95-ee95-4ca9-8632-222ae1fb9a91
@@ -13,13 +13,13 @@ ht-degree: 72%
 
 # User-agent und Client Hints
 
-Adobe Target verwendet den Benutzeragenten, um Besucher für die Segmentierung und Personalisierung zu qualifizieren.
+Adobe Target verwendet den user-agent, um Besucher für die Segmentierung und Personalisierung zu qualifizieren.
 
 >[!NOTE]
 >
 >Die Informationen in diesem Artikel gelten für [at.js-Version 2.9.0](target-atjs-versions.md) (oder höher).
 
-Jedes Mal, wenn ein Webbrowser eine Anforderung an einen Server sendet, werden Informationen über den Browser und die Umgebung, in der der Browser ausgeführt wird, in die Kopfzeile der Anfrage aufgenommen. Seit den frühen Tagen des Internets wurden diese Daten in einer Zeichenfolge zusammengefasst, dem sogenannten user-agent.
+Jedes Mal, wenn ein Webbrowser eine Anfrage an einen Server sendet, werden Informationen über den Browser und die Umgebung, in der der Browser ausgeführt wird, in die -Kopfzeile der Anfrage aufgenommen. Seit den frühen Tagen des Internets wurden diese Daten in einer Zeichenfolge zusammengefasst, dem sogenannten user-agent.
 
 Der folgende Text ist ein Beispiel für einen user-agent eines Mac OS X-Computers, der einen Safari-Browser verwendet:
 
@@ -44,11 +44,11 @@ Im Laufe der Jahre ist die Menge der Browser- und Geräteinformationen, die in d
 
 ## Anwendungsfälle für User-Agent
 
-Mit Benutzeragenten erhalten Marketing- und Entwicklungsteams seit langem wichtige Einblicke in die Darstellung von Site-Inhalten durch Browser, Betriebssysteme und Geräte sowie in die Interaktion der Benutzer mit Websites. User-agents werden auch verwendet, um Spam zu blockieren und Bots zu filtern, die Sites aus verschiedenen Gründen durchsuchen.
+User-agents werden seit langem verwendet, um Marketing- und Entwicklungs-Teams wichtige Einblicke in die Anzeige von Website-Inhalten durch Browser, Betriebssysteme und Geräte sowie in die Interaktion zwischen Benutzern und Websites zu bieten. User-agents werden auch verwendet, um Spam zu blockieren und Bots zu filtern, die Sites aus verschiedenen Gründen durchsuchen.
 
 Doch in den letzten Jahren nutzten manche Site-Eigentümer und Marketing-Anbieter den user-agent zusammen mit anderen in Anfrage-Headern enthaltenen Informationen, um digitale Fingerabdrücke zu erstellen, die zur Identifizierung von Benutzern ohne deren Wissen verwendet werden können. Trotz des wichtigen Zwecks, den der user-agent für Site-Eigentümer erfüllt, beschlossen Browser-Entwickler, Änderungen an der Funktionsweise von user-agents vorzunehmen, um potenzielle Datenschutzprobleme für Site-Besucher zu vermeiden.
 
-Browser-Entwickler haben Benutzeragenten-Client-Hinweise als Lösung für diese Herausforderung erstellt. Client Hints ermöglicht es Sites weiterhin, die erforderlichen Browser-, Betriebssystem- und Geräteinformationen zu erfassen und bietet gleichzeitig einen besseren Schutz vor verdeckten Tracking-Methoden wie dem Fingerabdruck.
+Browser-Entwickler haben User-Agent Client Hints als Lösung für diese Herausforderung erstellt. Client Hints ermöglichen es Sites weiterhin, die erforderlichen Browser-, Betriebssystem- und Geräteinformationen zu erfassen, bieten aber gleichzeitig einen besseren Schutz vor verdeckten Tracking-Methoden wie dem Fingerabdruck.
 
 ## Client-Hinweise
 
@@ -56,9 +56,9 @@ User-Agent Client Hints bieten Website-Inhabern die Möglichkeit, auf einen Gro�
 
 User-Agent Client Hints sind in Chrome seit Version 89 verfügbar. Aktuelle Versionen von Chromium-basierten Browsern wie Microsoft Edge, Opera, Brave, Chrome Android, Opera Android und Samsung Internet unterstützen ebenfalls die Client Hints-API.
 
-Client Hints in den Headern der ersten vom Browser an einen Webserver gerichteten Anfrage enthalten die Browser-Marke, die Hauptversion des Browsers und einen Hinweis darauf, ob es sich bei dem Client um ein Mobilgerät handelt. Jedes Datenelement hat einen eigenen Header-Wert, anstatt in eine einzelne Benutzer-Agent-Zeichenfolge gruppiert zu werden.
+Client Hints in den Headern der ersten vom Browser an einen Webserver gerichteten Anfrage enthalten die Browser-Marke, die Hauptversion des Browsers und einen Hinweis darauf, ob es sich bei dem Client um ein Mobilgerät handelt. Jedes Datenelement verfügt über einen eigenen Kopfzeilenwert, anstatt in einer einzelnen Benutzeragenten-Zeichenfolge zusammengefasst zu werden.
 
-Hier sind beispielsweise einige Client-Hinweise:
+Im Folgenden finden Sie einige Client Hints:
 
 ```
 Sec-CH-UA: "Chromium";v="101", "Google Chrome";v="101", " Not;A Brand";v="99" 
@@ -66,7 +66,7 @@ Sec-CH-UA-Mobile: ?0
 Sec-CH-UA-Platform: "macOS"
 ```
 
-... in der Erwägung, dass dies der Benutzeragent für denselben Browser ist:
+…während dies der user-agent für denselben Browser ist:
 
 ```
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36 
@@ -138,7 +138,7 @@ Die folgenden Anwendungsfälle in Target erfordern Client Hints:
 
 ### Zielgruppenattribute
 
-Wenn Sie Target-Zielgruppen verwenden und eines der folgenden Zielgruppenattribute verwenden, erfordert Target die Ausführung der korrekten Segmentierung durch Client Hints:
+Wenn Sie Target-Zielgruppen verwenden und eines der folgenden Zielgruppenattribute verwenden, erfordert Target, dass Client Hints die richtige Segmentierung durchführen:
 
 * Browser
 * Betriebssystem
@@ -156,26 +156,26 @@ Das folgende Beispiel zeigt, wie ein Windows-Betriebssystem in einem Profilskrip
 (user.clientHint('sec-ch-ua-platform') === 'Windows')));" 
 ```
 
-Im Folgenden finden Sie eine Tabelle der Client-Hinweise und der zugehörigen Anwendungssemantik für Profilskripte.
+Im Folgenden finden Sie eine Tabelle mit Client-Hinweisen und der entsprechenden Semantik für die Verwendung von Profilskripten.
 
-| Client-Hint-Kopfzeile | Entropie | Zielgruppenattribut | Nutzung von Profilskripten |
+| Client-Hint-Kopfzeile | Entropie | Zielgruppenattribut | Verwendung von Profilskripten |
 | --- | --- | --- | --- |
-| [SEC-CH-UA](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA) | Niedrig | Browser | `user.clientHint('sec-ch-ua')` |
-| [SEC-CH-UA-Arch](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Arch) | Hoch | Benutzern über Profilskripte zur Verfügung gestellt | `user.clientHint('sec-ch-ua-arch')` |
-| [SEC-CH-UA-Bitness](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Bitness) | Hoch | Benutzern über Profilskripte zur Verfügung gestellt | `user.clientHint('sec-ch-ua-bitness')` |
-| [SEC-CH-UA-Full-Version-List](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Full-Version-List) | Hoch | Browser | `user.clientHint('sec-ch-ua-full-version-list')` |
-| [SEC-CH-UA-Mobile](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Mobile) | Niedrig | Mobile | `user.clientHint('sec-ch-ua-mobile')` |
-| [SEC-CH-UA-Model](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Model) | Hoch | Mobile | `user.clientHint('sec-ch-ua-model')` |
-| [SEC-CH-UA-Platform](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform) | Niedrig | Betriebssystem | `user.clientHint('sec-ch-ua-platform')` |
-| [SEC-CH-UA-Platform-Version](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform-Version) | Hoch | Benutzern über Profilskripte zur Verfügung gestellt | `user.clientHint('sec-ch-ua-platform-version')` |
+| [Sek.-CH-UA](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA) | Niedrig | Browser | `user.clientHint('sec-ch-ua')` |
+| [Sec-CH-UA-Arch](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Arch) | Hoch | Benutzern über Profilskripte bereitgestellt werden | `user.clientHint('sec-ch-ua-arch')` |
+| [Sek-CH-UA-Bitness](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Bitness) | Hoch | Benutzern über Profilskripte bereitgestellt werden | `user.clientHint('sec-ch-ua-bitness')` |
+| [Sec-CH-UA-Full-Version-List](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Full-Version-List) | Hoch | Browser | `user.clientHint('sec-ch-ua-full-version-list')` |
+| [Sec-CH-UA-Mobile](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Mobile) | Niedrig | Mobile | `user.clientHint('sec-ch-ua-mobile')` |
+| [Sec-CH-UA-Model](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Model) | Hoch | Mobile | `user.clientHint('sec-ch-ua-model')` |
+| [Sec-CH-UA-Platform](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform) | Niedrig | Betriebssystem | `user.clientHint('sec-ch-ua-platform')` |
+| [Sec-CH-UA-Platform-Version](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Sec-CH-UA-Platform-Version) | Hoch | Benutzern über Profilskripte bereitgestellt werden | `user.clientHint('sec-ch-ua-platform-version')` |
 
-## Weiterleiten von Client-Hinten an Adobe Target
+## Weitergeben von Client Hints an Adobe Target
 
-In den folgenden Abschnitten finden Sie weitere Informationen zum Übergeben von Client-Hinten in Abhängigkeit von Ihrer Target-Implementierung.
+In den folgenden Abschnitten finden Sie weitere Informationen darüber, wie Sie je nach Target-Implementierung Client Hints weitergeben.
 
 ### at.js-Version 2.9.0 (oder höher)
 
-Ab at.js 2.9.0 werden Benutzeragent-Client-Hinweise automatisch vom Browser erfasst und an Target gesendet, wenn `getOffer/getOffers()` aufgerufen wird. Standardmäßig erfasst at.js nur Client Hints mit niedriger Entropie. Wenn Sie eine Zielgruppensegmentierung durchführen oder Profilskripte verwenden, die auf Daten basieren, die in den vorhergehenden Abschnitten als „Hohe Entropie“ bezeichnet wurden, müssen Sie at.js so konfigurieren, dass im Browser Client Hints mit „hoher Entropie“ über `targetGlobalSettings` erfasst werden.
+Ab at.js 2.9.0 werden User Agent Client Hints automatisch im Browser erfasst und an Target gesendet, wenn `getOffer/getOffers()` aufgerufen wird. Standardmäßig erfasst at.js nur Client Hints mit niedriger Entropie. Wenn Sie eine Zielgruppensegmentierung durchführen oder Profilskripte verwenden, die auf Daten basieren, die in den vorhergehenden Abschnitten als „Hohe Entropie“ bezeichnet wurden, müssen Sie at.js so konfigurieren, dass im Browser Client Hints mit „hoher Entropie“ über `targetGlobalSettings` erfasst werden.
 
 ```
 window.targetGlobalSettings = { allowHighEntropyClientHints: true };
@@ -183,4 +183,4 @@ window.targetGlobalSettings = { allowHighEntropyClientHints: true };
 
 ### Server-seitige SDKs
 
-Weitere Informationen zum Übergeben von Client-Hints über Server-seitige SDKs finden Sie unter [Client-Hints](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints) in der Dokumentation zur serverseitigen Implementierung.
+Weitere Informationen zum Übergeben von Client Hints über Server-seitige SDKs finden Sie unter [Client Hints](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints) unter Dokumentation zur Server-seitigen Implementierung.

@@ -1,7 +1,7 @@
 ---
 title: Übersicht über die Adobe Target-Bereitstellungs-API
 description: Übersicht über die Adobe Target-Bereitstellungs-API
-keywords: Versandschnittstelle
+keywords: Bereitstellungs-API
 exl-id: e760bddc-b1ae-4b7b-bff2-aba81c6b6d34
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -17,14 +17,14 @@ Die [!DNL Adobe Target Delivery API] basiert auf REST. In dieser Dokumentation w
 
 Mit [!UICONTROL Adobe Target's Delivery API] können Sie:
 
-* Erlebnisse für alle Web-Kanäle, einschließlich SPA- und Mobilkanäle sowie Nicht-Browser-basierte IoT-Geräte wie einen vernetzten TV-, Kiosk- oder In-Store-Digitalbildschirm bereitstellen.
-* Stellen Sie Erlebnisse von jeder Server-seitigen Plattform oder Anwendung bereit, die HTTP/s-Aufrufe durchführen kann.
-* Bereitstellen konsistenter und personalisierter Erlebnisse für Benutzer, unabhängig davon, welche Kanäle oder Geräte der Benutzer für Ihr Unternehmen genutzt hat.
-* Zwischenspeichern von Erlebnissen für einen Benutzer innerhalb einer Sitzung auf Ihrem Server, sodass mehrere API-Aufrufe vermieden und so eine bessere Leistung erzielt werden können.
-* Nahtlose Integration mit [!DNL Adobe Experience Cloud] -Produkten wie [!DNL Adobe Analytics], [!DNL Adobe Audience Manager] und dem [!DNL Experience Cloud ID Service] vom Server.
+* Bereitstellen von Erlebnissen über Web, einschließlich SPA- und Mobilkanäle sowie nicht browserbasierte IoT-Geräte wie vernetzte TV-Geräte, Kiosks oder digitale Bildschirme im Geschäft.
+* Bereitstellen von Erlebnissen von jeder Server-seitigen Plattform oder Anwendung, die HTTP/s-Aufrufe ausführen kann.
+* Bereitstellen konsistenter und personalisierter Erlebnisse für Benutzer, unabhängig davon, über welchen Kanal oder welche Geräte der Benutzer mit Ihrem Unternehmen interagiert hat.
+* Speichern Sie Erlebnisse für einen Benutzer innerhalb einer Sitzung auf Ihrem Server zwischen, damit mehrere API-Aufrufe vermieden werden können und so eine bessere Leistung erzielt wird.
+* Nahtlose Integration mit [!DNL Adobe Experience Cloud] Produkten wie [!DNL Adobe Analytics], [!DNL Adobe Audience Manager] und dem [!DNL Experience Cloud ID Service] von der Serverseite aus.
 
-Weitere Informationen finden Sie in der Dokumentation zu [[!UICONTROL Adobe Target Delivery API]](https://developer.adobe.com/target/implement/delivery-api/){target=_blank} .
+Weitere Informationen finden Sie in der [[!UICONTROL Adobe Target Delivery API]](https://developer.adobe.com/target/implement/delivery-api/){target=_blank}.
 
 >[!NOTE]
 >
->Sie können weiterhin auf die [ältere /v1/mbox- und /v2/batchmbox-API-Dokumentation](https://developers.adobetarget.com/api/legacy-api/index.html) zugreifen. Funktionen werden jedoch in der Bereitstellungs-API entwickelt (wie hier dokumentiert), die nicht in die veralteten APIs zurückportiert werden.
+>Sie können weiterhin auf die [alte /v1/mbox- und /v2/batchmbox-API-Dokumentation](https://developers.adobetarget.com/api/legacy-api/index.html) zugreifen. Funktionen werden jedoch in der Bereitstellungs-API entwickelt (wie hier dokumentiert) und nicht in die Legacy-APIs rückportiert.

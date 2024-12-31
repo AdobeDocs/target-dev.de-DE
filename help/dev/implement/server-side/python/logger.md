@@ -1,6 +1,6 @@
 ---
-title: Initialisieren des  [!DNL Adobe Target] Python-SDK zum Protokollieren von Anforderungen
-description: Erfahren Sie, wie Sie Anfragen im  [!DNL Adobe Target] Python-SDK protokollieren.
+title: Initialisieren der  [!DNL Adobe Target] -Python-SDK zum Protokollieren von Anforderungen
+description: Erfahren Sie, wie Sie Anfragen in der  [!DNL Adobe Target] -SDK protokollieren.
 feature: APIs/SDKs
 exl-id: 0b3792a5-a9a7-4768-a429-598b49f1fd93
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## Beschreibung
 
-Beim [ Initialisieren des SDK](initialize-sdk.md) ist das `options["logger"]` -Objekt ein optionales Objekt. Standardmäßig wird eine INFO-Level-Logger unter dem Namespace `adobe.target` erstellt. Um jedoch die Protokollebene anzupassen oder beim Auftreten eines Problems effektiv zu debuggen, kann beim Initialisieren des SDK ein `logger` -Objekt bereitgestellt werden.
+Beim [Initialisieren der SDK](initialize-sdk.md) ist das `options["logger"]`-Objekt ein optionales Objekt. Standardmäßig wird unter dem Namespace `adobe.target` eine Protokollierung auf INFO-Ebene erstellt. Um jedoch die Protokollebene anzupassen oder effektiv zu debuggen, wenn ein Problem auftritt, kann bei der Initialisierung von SDK ein `logger` bereitgestellt werden.
 
-Es wird erwartet, dass das `logger` -Objekt eine `debug()` - und eine `error()` -Methode aufweist. Wenn eine entsprechende Protokollfunktion bereitgestellt wird, werden [!DNL Target] -Anfragen und -Antworten protokolliert.
+Es wird erwartet, dass das `logger`-Objekt eine `debug()` und eine `error()` Methode aufweist. Wenn ein entsprechender Logger bereitgestellt wird, werden [!DNL Target] Anfragen und Antworten protokolliert.
 
 ## Beispiel
 

@@ -1,6 +1,6 @@
 ---
-title: Proxy-Konfiguration im [!DNL Adobe Target] Node.js-SDK implementieren
-description: Erfahren Sie, wie Sie die [!UICONTROL TargetClient] -Proxy-Konfiguration im SDK [!DNL Adobe Target] Node.js konfigurieren.
+title: Implementieren der Proxy-Konfiguration in der  [!DNL Adobe Target] .js-SDK
+description: Erfahren Sie, wie Sie die [!UICONTROL TargetClient]-Proxy-Konfiguration in der  [!DNL Adobe Target] .js-SDK konfigurieren.
 feature: APIs/SDKs
 exl-id: c9f04e81-3fa3-4e64-a974-379420b0518a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -12,9 +12,9 @@ ht-degree: 0%
 
 # Proxy-Konfiguration (Node.js)
 
-Um einen Proxy für die HTTP-Anfragen des Node SDK zu konfigurieren, überschreiben Sie die Abruf-API, die vom SDK während der Initialisierung verwendet wird.
+Um einen Proxy für die HTTP-Anfragen des SDK-Knotens zu konfigurieren, überschreiben Sie die Abruf-API, die von der SDK während der Initialisierung verwendet wird.
 
-Das folgende Beispiel zeigt, wie Sie `fetchApi` während der Initialisierung von `TargetClient` überschreiben, um einen Proxy hinzuzufügen:
+Im Folgenden finden Sie ein einfaches Beispiel, das zeigt, wie `fetchApi` während der `TargetClient`-Initialisierung überschrieben werden können, um einen Proxy hinzuzufügen:
 
 ```javascript {line-numbers="true"}
 const { ProxyAgent } = require("undici");
@@ -33,6 +33,6 @@ client = TargetClient.create({
 });
 ```
 
-Beachten Sie, dass dies nur für Knotenversionen ab Version 18.2 funktioniert, wobei `undici.fetch` der Standardwert `fetch` für Knoten ist.
-Besuchen Sie den [Knoten SDK samples repo](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/proxy-configuration) .
-für Beispiele zur Proxy-Konfiguration für ältere Versionen von Knoten und weitere Informationen.
+Beachten Sie, dass dies nur für Knotenversionen 18.2+ funktioniert, in denen `undici.fetch` der `fetch` für den Knoten ist.
+Besuchen Sie das [Node SDK-Beispielrepo](https://github.com/adobe/target-nodejs-sdk-samples/tree/master/proxy-configuration)
+Beispiele für die Proxy-Konfiguration für ältere Versionen des Knotens und weitere Informationen.

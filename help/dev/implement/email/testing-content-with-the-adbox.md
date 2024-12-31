@@ -1,6 +1,6 @@
 ---
-keywords: Implementierung, Nicht-JavaScript, Mbox, AdBox
-description: Verwenden Sie eine AdBox, um Bilder in einer Offsite-Implementierung mit  [!DNL Adobe Target] bereitzustellen. Eine AdBox ist wie eine Mbox, wird jedoch von einer URL anstelle von JavaScript gesteuert.
+keywords: Implementierung, nicht JavaScript, mbox, adbox
+description: Verwenden Sie eine AdBox, um Bilder in einer Offsite-Implementierung mit bereitzustellen [!DNL Adobe Target]. Eine AdBox ist wie eine Mbox, wird aber von einer URL statt von JavaScript gesteuert.
 title: Wie erstelle ich eine AdBox für ein Bild?
 feature: Implement Email
 exl-id: ad1eb6c4-7a16-4054-ae76-57971261e931
@@ -13,11 +13,11 @@ ht-degree: 71%
 
 # Erstellen einer AdBox für ein Bild
 
-Verwenden Sie eine AdBox, um Bilder in einer Offsite-Implementierung mit [!DNL Adobe Target] bereitzustellen.
+Verwenden Sie eine AdBox, um Bilder in einer Offsite-Implementierung mithilfe von [!DNL Adobe Target] bereitzustellen.
 
 Eine AdBox funktioniert wie eine Mbox, wird aber mithilfe einer URL statt mit JavaScript gesteuert. AdBoxes werden mit einer speziellen AdBox-URL erstellt, die eine „Werbeanzeigen“-Mbox (oder AdBox) in Ihr Adobe-Konto lädt. Verwenden Sie diese AdBox anstelle der Mbox für Ihre Aktivitäten. Verwenden Sie die AdBox-URL anstelle eines direkten Bildverweises in E-Mail- oder anderen Nicht-JavaScript-Implementierungen.
 
-Hilfe zur Auswahl der richtigen Einrichtung finden Sie unter [Nicht-JavaScript-basierte Implementierungen](/help/dev/implement/email/overview.md).
+Hilfe bei der Auswahl des richtigen Setups [ Sie unter (Nicht-JavaScript-basierte Implementierungen](/help/dev/implement/email/overview.md).
 
 1. Erstellen der AdBox-URL:
 
@@ -29,7 +29,7 @@ Hilfe zur Auswahl der richtigen Einrichtung finden Sie unter [Nicht-JavaScript-b
 
    * Bei `myClientCode` handelt es sich um den Clientcode Ihres Unternehmens. Der Clientcode Ihres Unternehmens enthält ausschließlich Kleinbuchstaben und keine Sonderzeichen.
 
-     Ihr Clientcode ist oben auf der Seite **[!UICONTROL Administation]** > **[!UICONTROL Implementation]** der Benutzeroberfläche von [!DNL Target] verfügbar.
+     Der Client-Code ist oben auf der Seite **[!UICONTROL Administation]** > **[!UICONTROL Implementation]** der [!DNL Target]-Benutzeroberfläche verfügbar.
 
    * Bei `image` handelt es sich um den Aufruftyp. In diesem Fall handelt es sich um ein Bild.
 
@@ -37,7 +37,7 @@ Hilfe zur Auswahl der richtigen Einrichtung finden Sie unter [Nicht-JavaScript-b
 
    * Bei `http%3A%2F%2Fwww%2Eyourcompany%2Ecom%2Fimg%2Flogo%2Egif` handelt es sich um den Standardinhalt der Mbox. Dabei muss es sich um ein Bild handeln.
 
-     Hierbei muss es sich um einen URL-kodierten, absoluten Verweis handeln. Sie können die [HTML URL Encoding Reference](https://www.w3schools.com/tags/ref_urlencode.asp) verwenden, um Ihre URLs schnell zu kodieren.
+     Hierbei muss es sich um einen URL-kodierten, absoluten Verweis handeln. Sie können die [HTML-URL-Codierungsreferenz](https://www.w3schools.com/tags/ref_urlencode.asp) verwenden, um Ihre URLs schnell zu codieren.
 
 1. Erstellen Sie [Weiterleitungsangebote](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html) für alle alternativen Bilder.
 

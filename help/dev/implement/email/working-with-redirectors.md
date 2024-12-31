@@ -1,6 +1,6 @@
 ---
 keywords: Implementierung, mbox.js-Nicht-JavaScript, Weiterleitung, Kosten pro Klick, Umsatz pro Klick
-description: Erfahren Sie, wie Sie Weiterleitungen in E-Mail-Implementierungen verwenden, ähnlich wie bei der Verwendung einer Mbox in Ihren [!DNL Adobe Target] Aktivitäten.
+description: Erfahren Sie, wie Sie in E-Mail-Implementierungen Weiterleitungen verwenden, ähnlich wie bei der Verwendung einer Mbox in Ihren - [!DNL Adobe Target] .
 title: Wie arbeite ich mit Weiterleitungen?
 feature: Implement Email
 exl-id: 072368ff-9f17-4709-ac2d-c9e1f0d888bb
@@ -17,7 +17,7 @@ Verwenden Sie eine Weiterleitung auf ähnliche Weise, wie Sie eine Mbox für Ihr
 
 Weiterleitungen werden mit einer speziellen Weiterleitungs-URL erstellt, die eine Weiterleitungs-Mbox (Weiterleitung) in Ihr Konto lädt. Verwenden Sie diese Weiterleitung auf ähnliche Weise, wie Sie eine Mbox für Ihre Tests verwenden. Senden Sie die Weiterleitungs-URL als Ziel-Link der Werbung an Ihr Werbenetzwerk.
 
-Verwenden Sie die Weiterleitung, um Folgendes zu tun:
+Verwenden Sie den Redirector für Folgendes:
 
 * Klicks von Ihren Display-Anzeigen auf Ihre Seite zu verfolgen
 * Einen einzigen, zentralisierten Bericht zur Verfolgung von Klicks auf Display-Anzeigen in mehreren Werbenetzwerken zu erstellen
@@ -27,9 +27,9 @@ Verwenden Sie die Weiterleitung, um Folgendes zu tun:
 
 * Finden Sie heraus, welche Landingpage die meisten Konversionen bringt.
 
-Hilfe zur Entscheidung über die richtige Einrichtung finden Sie unter [Nicht-JavaScript-basierte Implementierungen](/help/dev/implement/email/overview.md).
+Hilfe bei der Entscheidung über die richtige Einrichtung [ Sie unter (Nicht-JavaScript-basierte Implementierungen](/help/dev/implement/email/overview.md).
 
-## Erstellen einer Weiterleitung
+## Erstellen eines Redirectors
 
 Bevor Sie eine Weiterleitung verwenden können, müssen Sie diese erst erstellen.
 
@@ -44,7 +44,7 @@ Bevor Sie eine Weiterleitung verwenden können, müssen Sie diese erst erstellen
 
    * Bei `yourclientcode` handelt es sich um den Clientcode Ihres Unternehmens. Der Clientcode Ihres Unternehmens enthält ausschließlich Kleinbuchstaben und keine Sonderzeichen.
 
-     Ihr Clientcode ist oben auf der Seite **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** der Benutzeroberfläche von [!DNL Target] verfügbar.
+     Der Client-Code ist oben auf der Seite **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** der [!DNL Target]-Benutzeroberfläche verfügbar.
 
    * `redirectorlink_456` ist der Name der Weiterleitungs-mbox, die in Ihrem Konto zur Verwendung für Kampagnen und Tests angezeigt wird.
 
@@ -52,14 +52,14 @@ Bevor Sie eine Weiterleitung verwenden können, müssen Sie diese erst erstellen
 
    * `http%3A%2F%2Fwww%2Eyourcompany%2Ecom%2Fusualdestination%2Ehtm` ist das Standardziel.
 
-     Hierbei muss es sich um einen URL-kodierten, absoluten Verweis handeln. Sie können die [HTML URL Encoding Reference](https://www.w3schools.com/tags/ref_urlencode.asp) verwenden, um Ihre URLs schnell zu kodieren.
+     Hierbei muss es sich um einen URL-kodierten, absoluten Verweis handeln. Sie können die [HTML-URL-Codierungsreferenz verwenden](https://www.w3schools.com/tags/ref_urlencode.asp) um Ihre URLs schnell zu codieren.
 
    >[!WARNING]
    >
-   >Beachten Sie, dass Sie bei der Weiterleitung einem Risiko einer Open Redirect-Schwachstelle ausgesetzt sein können. Um die unbefugte Verwendung von Weiterleitungs-Links durch Dritte zu vermeiden, empfiehlt Adobe, &quot;autorisierte Hosts&quot;zur Zulassungsliste der Standard-Umleitungs-URL-Domänen zu verwenden. [!DNL Target] verwendet Hosts zum Zulassungsliste von Domänen, zu denen Sie Umleitungen zulassen möchten. Weitere Informationen finden Sie unter [Erstellen von Zulassungslisten, die Hosts angeben, die Mbox-Aufrufe an  [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) senden dürfen, in *Hosts* .
+   >Beachten Sie, dass Sie mit Redirector einem Risiko für eine Open Redirect-Schwachstelle ausgesetzt sein können. Zur Vermeidung einer unbefugten Nutzung von Weiterleitungs-Links durch Dritte empfiehlt Adobe die Verwendung von „autorisierten Hosts“ zur Zulassungsliste der Standard-Umleitungs-URL-Domains. [!DNL Target] verwendet Hosts, um Domains auf die Zulassungsliste setzen, zu denen Umleitungen erlaubt sein sollen. Auf die Zulassungsliste setzen Weitere Informationen finden Sie unter [Erstellen von Hosts, die autorisiert sind, Mbox-Aufrufe an zu senden [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) in *Hosts*.
 
 1. Validieren Sie die Weiterleitung.
-   1. *Best Practice für die Sicherheit*: Stellen Sie sicher, dass die in der Weiterleitung verwendete Domäne auf die Zulassungsliste gesetzt ist, wie oben angegeben. Wenn Sie eine Domäne verwenden, die nicht auf die Zulassungsliste gesetzt ist, blockiert Adobe alle Aufrufe an diese Domäne, um zu verhindern, dass böswillige Akteure die Weiterleitung verwenden, um zu potenziell schädlichen Domänen umzuleiten.
+   1. *Best Practice für die Sicherheit*: Stellen Sie sicher, dass die im Redirector verwendete Domain wie oben angegeben auf die Zulassungsliste gesetzt ist. Wenn Sie eine Domain verwenden, die nicht auf die Zulassungsliste gesetzt ist, blockiert Adobe alle Aufrufe an diese Domain, um böswillige Akteure daran zu hindern, den Redirector zu verwenden, um zu potenziell böswilligen Domains umzuleiten.
    2. Fügen Sie die Weiterleitungs-URL in eine Browserzeile ein, und aktualisieren Sie den Browser.
    3. Melden Sie sich bei Ihrem Konto an, aktualisieren Sie Ihre Mbox-Liste, und überprüfen Sie, ob die neue Weiterleitung als Mbox aufgelistet wird.
 1. Um verschiedene Ziele für eine Anzeige zu testen, erstellen Sie [Weiterleitungsangebote](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html) für jede Version.
@@ -80,11 +80,11 @@ Bevor Sie eine Weiterleitung verwenden können, müssen Sie diese erst erstellen
 
    >[!NOTE]
    >
-   >Weiterleitungen werden von der Angebotsvorschau oder Mbox-Suche nicht unterstützt. Erlebnisvorschau direkt in einem Browser. Außerdem funktioniert `mboxDebug` nicht mit Weiterleitungen.
+   >Weiterleitungen werden von der Angebotsvorschau oder Mbox-Suche nicht unterstützt. Anzeigen einer Vorschau von Erlebnissen direkt in einem Browser. Außerdem funktioniert `mboxDebug` nicht mit Weiterleitungen.
 
 1. Senden Sie die vollständige Weiterleitungs-URL als Zielort der Display-Anzeige an Ihr Display-Anzeigenetzwerk.
 
-## Verwenden einer Weiterleitung, um Kosten pro Klick und Umsatz pro Klick weiterzugeben
+## Weiterleitung verwenden, um Kosten pro Klick und Umsatz pro Klick weiterzugeben
 
 Informationen zum Verwenden einer Weiterleitung zum Übergeben der Kosten pro Klick und vom Umsatz pro Klick.
 
@@ -94,7 +94,7 @@ Verwenden Sie eine Weiterleitung, um die Kosten pro Klick weiterzugeben.
 
 >[!NOTE]
 >
->Es empfiehlt sich, den Kostenwert mithilfe der Interaktionsmetrik **[!UICONTROL Score per visit]** zu bestimmen.
+>Best Practice ist es, den Kostenwert mithilfe der **[!UICONTROL Score per visit]** Interaktionsmetrik zu bestimmen.
 
 Fügen Sie `&mboxPageValue=-value` zur URL hinzu. Beachten Sie den Negativwert.
 
@@ -111,7 +111,7 @@ Verwenden Sie eine Weiterleitung, um den Umsatz pro Klick weiterzugeben.
 
 >[!NOTE]
 >
->Es empfiehlt sich, den Umsatzwert mithilfe der Interaktionsmetrik **[!UICONTROL Score per visit]** zu bestimmen.
+>Best Practice ist es, den Umsatzwert mithilfe der Metrik Interaktion mit **[!UICONTROL Score per visit]** zu bestimmen.
 
 Fügen Sie `&mboxPageValue=value` zur URL hinzu.
 

@@ -1,5 +1,5 @@
 ---
-keywords: Systemdiagramm, Flackern, at.js, Implementierung, JavaScript-Bibliothek, js, at.js, $8
+keywords: Systemdiagramm, Flimmern, at.js, Implementierung, JavaScript-Bibliothek, js, atjs, $8
 description: Erfahren Sie, wie die  [!DNL Target] -JavaScript-Bibliothek (at.js), einschließlich Systemdiagrammen, funktioniert. Dies hilft Ihnen auch, den Workflow zum Laden von Seiten besser zu verstehen.
 title: Wie funktioniert die JavaScript-Bibliothek at.js?
 feature: at.js
@@ -19,11 +19,11 @@ Bei Client-seitigen Implementierungen von [!DNL Adobe Target] stellt [!DNL Targe
 
 ## Was ist at.js?
 
-Die at.js-Bibliothek ist die Implementierungsbibliothek für die clientseitige Implementierung von [!DNL Adobe Target]. Die at.js-Bibliothek sorgt für kürzere Seitenladezeiten bei Web-Implementierungen und bietet bessere Implementierungsoptionen für Single-Page-Anwendungen. „at.js“ ist die empfohlene Implementierungsbibliothek und wird häufig mit neuen Funktionen aktualisiert. Wir empfehlen allen Kunden, die [neueste Version von at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md) zu implementieren oder zu migrieren.
+Die at.js-Bibliothek ist die Implementierungsbibliothek für die Client-seitige Implementierung von [!DNL Adobe Target]. Die at.js-Bibliothek sorgt für kürzere Seitenladezeiten bei Web-Implementierungen und bietet bessere Implementierungsoptionen für Single-Page-Anwendungen. „at.js“ ist die empfohlene Implementierungsbibliothek und wird häufig mit neuen Funktionen aktualisiert. Es wird empfohlen, dass alle -Kunden die [neueste Version von at.js) implementieren oder ](/help/dev/implement/client-side/atjs/target-atjs-versions.md).
 
 Weitere Informationen finden Sie unter [JavaScript-Bibliotheken in Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#libraries).
 
-In der unten dargestellten [!DNL Target]Implementierung sind die folgenden Adobe Experience Cloud-Lösungen implementiert: [!DNL Analytics], Target und [!DNL Audience Manager]. Darüber hinaus werden die folgenden [!DNL Experience Cloud] Core Services implementiert: [!DNL Adobe Experience Platform], [!UICONTROL Audiences] und [!UICONTROL Visitor ID Service].
+In der [!DNL Target]unten dargestellten Implementierung sind die folgenden Adobe Experience Cloud-Lösungen implementiert: [!DNL Analytics], Target und [!DNL Audience Manager]. Darüber hinaus werden die folgenden [!DNL Experience Cloud] Core Services implementiert: [!DNL Adobe Experience Platform], [!UICONTROL Audiences] und [!UICONTROL Visitor ID Service].
 
 ## Was ist der Unterschied zwischen at.js 1.*x*- und at.js 2.x-Workflow-Diagrammen?
 
@@ -32,41 +32,41 @@ Weitere Informationen zu den Unterschieden, die in 2.x im Vergleich zu 1.x einge
 Grob betrachtet gibt es einige Unterschiede zwischen den beiden Versionen:
 
 * at.js 2.x hat kein globales Mbox-Anfragekonzept, sondern stellt Anfragen beim Laden der Seite. Eine Anfrage beim Laden der Seite kann als Anfrage zum Abrufen von Inhalten verstanden werden, die beim ersten Laden Ihrer Website angewendet werden soll.
-* at.js 2.x verwaltet Konzepte namens [!UICONTROL Views], die für Einzelseiten-Apps (SPA) verwendet werden. at.js 1.*x* kennt dieses Konzept nicht.
+* at.js 2.x verwaltet ein Konzept mit dem Namen [!UICONTROL Views], das für Einzelseitenanwendungen (SPA) verwendet wird. at.js 1.*x* kennt dieses Konzept nicht.
 
 ## Diagramme in at.js 2.x
 
-Die folgenden Diagramme helfen Ihnen dabei, den Arbeitsablauf von at.js 2.x mit [!UICONTROL Views] zu verstehen und wie dieser die SPA-Integration verbessert. Eine bessere Einführung in die in at.js 2.x verwendeten Konzepte finden Sie unter [Implementieren von Einzelseiten-Apps](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Die folgenden Diagramme helfen Ihnen, den Workflow von at.js 2.x mit [!UICONTROL Views] zu verstehen und zu verstehen, wie dies die SPA-Integration verbessert. Eine bessere Einführung in die in at.js 2.x verwendeten Konzepte finden Sie unter [Implementieren von Einzelseiten-Apps](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
-(Klicken Sie auf Bild , um die volle Breite zu vergrößern.)
+(Klicken Sie auf das Bild, um es auf die volle Breite zu erweitern.)
 
-![Target-Ablauf mit at.js 2.x](/help/dev/implement/client-side/assets/system-diagram-atjs-20.png "Target-Ablauf mit at.js 2.x"){zoomable="yes"}
+![Target-Fluss mit at.js 2.x](/help/dev/implement/client-side/assets/system-diagram-atjs-20.png "Target-Fluss mit at.js 2.x"){zoomable="yes"}
 
 | Schritt | Details |
 | --- | --- |
 | 1 | Ein Aufruf gibt die [!UICONTROL Experience Cloud ID] zurück, falls sich der Benutzer authentifiziert hat. Bei einem weiteren Aufruf wird die Kunden-ID synchronisiert. |
 | 2 | Die Bibliothek at.js wird synchron geladen und im Dokumentenkörper verborgen.<br />at.js kann auch asynchron mit einem optionalen Pre-hiding-Snippet geladen werden, das auf der Seite implementiert wird. |
 | 3 | Es wird eine Seitenlade-Anfrage durchgeführt, in der alle konfigurierten Parameter (MCID, SDID und Kunden-ID) enthalten sind. |
-| 4 | Profilskripte werden ausgeführt und dann in den [!UICONTROL Profile Store] eingespeist. Store ruft geeignete Zielgruppen von [!UICONTROL Audience Library] ab (z. B. über [!DNL Adobe Analytics], [!DNL Audience Manager] usw. freigegebene Zielgruppen).<br />Kundenattribute werden in einem Batch-Prozess an [!UICONTROL Profile Store] übermittelt. |
+| 4 | Profilskripte werden ausgeführt und fließen dann in die [!UICONTROL Profile Store] ein. Der Store fordert qualifizierte Zielgruppen aus dem [!UICONTROL Audience Library] an (z. B. Zielgruppen, die von [!DNL Adobe Analytics], [!DNL Audience Manager] freigegeben wurden usw.).<br />Kundenattribute werden in einem Batch-Prozess an [!UICONTROL Profile Store] übermittelt. |
 | 5 | Basierend auf den URL-Anfrageparametern und den Profildaten entscheidet [!DNL Target], welche Aktivitäten und Erlebnisse für die aktuelle Seite und zukünftige Ansichten an den Besucher zurückgegeben werden sollen. |
 | 6 | Zielgerichteter Inhalt wird zurück an die Seite übermittelt. Dieser enthält optional Profilwerte für eine weitere Personalisierung.<br />Die zielgerichteten Inhalte auf der aktuellen Seite werden so schnell wie möglich bereitgestellt, ohne dass Standardinhalte aufflackern.<br />Zielgerichtete Inhalte für Ansichten, die als Ergebnis von Benutzeraktionen in einer SPA angezeigt werden, werden im Browser zwischengespeichert, sodass die SPA sofort ohne zusätzlichen Server-Aufruf angezeigt werden kann, wenn die Ansichten durch `triggerView()` ausgelöst werden. |
-| 7 | Analytics-Daten werden an [!UICONTROL Data Collection]-Server gesendet. |
-| 8 | Zielgruppendaten werden über die SDID mit Analytics-Daten abgeglichen und in den Berichterstellungsspeicher [!DNL Analytics] verarbeitet.<br />[!DNL Analytics] -Daten können dann sowohl in [!DNL Analytics] als auch in [!DNL Target] über (A4T)-Berichte angezeigt werden. |
+| 7 | Analytics-Daten werden an [!UICONTROL Data Collection] Server gesendet. |
+| 8 | Zielgruppendaten werden über die SDID mit Analytics-Daten abgeglichen und in den [!DNL Analytics]-Reporting-Speicher verarbeitet.<br />[!DNL Analytics] Daten können dann sowohl in [!DNL Analytics] als auch in [!DNL Target] über (A4T)-Berichte angezeigt werden. |
 
-Egal, wo `triggerView()` auf Ihrer SPA implementiert ist, werden die Aktionen [!UICONTROL Views] und aus dem Cache abgerufen und dem Benutzer ohne Serveraufruf angezeigt. `triggerView()` sendet außerdem eine Benachrichtigungsanfrage an das [!DNL Target]-Backend, um Impressions-Zählungen zu erhöhen und aufzuzeichnen. Weitere Informationen zu at.js für SPAs mit Ansichten finden Sie unter [Implementieren von Einzelseiten-Apps](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Wo immer `triggerView()` auf Ihrer SPA implementiert ist, werden die [!UICONTROL Views] und Aktionen jetzt aus dem Cache abgerufen und den Benutzenden ohne Serveraufruf angezeigt. `triggerView()` sendet außerdem eine Benachrichtigungsanfrage an das [!DNL Target]-Backend, um Impressions-Zählungen zu erhöhen und aufzuzeichnen. Weitere Informationen zu at.js für SPAs mit Ansichten finden Sie unter [Implementieren von Einzelseiten-Apps](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
-(Klicken Sie auf Bild , um die volle Breite zu vergrößern.)
+(Klicken Sie auf das Bild, um es auf die volle Breite zu erweitern.)
 
-![Target-Ablauf at.js 2.x triggerView](/help/dev/implement/client-side/assets/atjs-20-triggerview.png "Target-Ablauf at.js 2.x triggerView"){zoomable="yes"}
+![Target flow at.js 2.x triggerView](/help/dev/implement/client-side/assets/atjs-20-triggerview.png "Target flow at.js 2.x triggerView"){zoomable="yes"}
 
 | Schritt | Details |
 | --- | --- |
-| 1 | `triggerView()` wird im SPA aufgerufen, um die [!UICONTROL View] zu rendern und Aktionen anzuwenden, um visuelle Elemente zu ändern. |
+| 1 | `triggerView()` wird in der SPA aufgerufen, um die [!UICONTROL View] zu rendern und Aktionen zum Ändern visueller Elemente anzuwenden. |
 | 2 | Gezielte Inhalte für die Ansicht werden aus dem Cache gelesen. |
 | 3 | Die zielgerichteten Inhalte werden so schnell wie möglich bereitgestellt, ohne dass Standardinhalte aufflackern. |
-| 4 | Die Benachrichtigungsanfrage wird an die [!DNL Target] [!UICONTROL Profile Store] gesendet, um den Besucher in der Aktivität zu zählen und die Metriken zu erhöhen. |
-| 5 | [!DNL Analytics] Daten, die an [!UICONTROL Data Collection Servers] gesendet werden. |
-| 6 | [!DNL Target] -Daten werden über die SDID mit [!DNL Analytics] -Daten abgeglichen und in den [!DNL Analytics] -Berichtspeicher verarbeitet. [!DNL Analytics] -Daten können dann sowohl in [!DNL Analytics] als auch in [!DNL Target] über A4T-Berichte angezeigt werden. |
+| 4 | Eine Benachrichtigungsanfrage wird an die [!DNL Target] [!UICONTROL Profile Store] gesendet, um den Besucher in der Aktivitäts- und Inkrementmetrik zu zählen. |
+| 5 | [!DNL Analytics] Daten an [!UICONTROL Data Collection Servers] gesendet. |
+| 6 | [!DNL Target] Daten werden über die SDID mit [!DNL Analytics] Daten abgeglichen und in den [!DNL Analytics]-Reporting-Speicher verarbeitet. [!DNL Analytics] Daten können dann sowohl in [!DNL Analytics] als auch [!DNL Target] über A4T-Berichte angezeigt werden. |
 
 ### Video: Architekturdiagramm von at.js 2.x
 
@@ -78,22 +78,22 @@ Weitere Informationen finden Sie unter [Funktionsweise von at.js 2.x](https://ex
 
 ## at.js 1.x-Diagramm
 
-Die folgenden Diagramme helfen Ihnen, den Arbeitsablauf von at.js 1.x zu verstehen.
+Die folgenden Diagramme helfen Ihnen, den Workflow von at.js 1.x besser zu verstehen.
 
-(Klicken Sie auf Bild , um die volle Breite zu vergrößern.)
+(Klicken Sie auf das Bild, um es auf die volle Breite zu erweitern.)
 
-![Target-Ablauf at.js 1.x](/help/dev/implement/client-side/assets/target-flow.png "Target-Ablauf at.js 1.x"){zoomable="yes"}
+![Target-Fluss at.js 1.x](/help/dev/implement/client-side/assets/target-flow.png "Target-Fluss at.js 1.x"){zoomable="yes"}
 
 | Schritt | Beschreibung | Aufruf | Beschreibung |
 |--- |--- |--- |--- |
-| 1 | Ein Aufruf gibt die Experience Cloud-ID (MCID) zurück, wenn der Benutzer authentifiziert ist. Bei einem weiteren Aufruf wird die Kunden-ID synchronisiert. | 2 | Die Bibliothek at.js wird synchron geladen und im Dokumentenkörper verborgen. |
-| 3 | Es wird ein globaler Mbox-Aufruf durchgeführt, in dem alle konfigurierten Parameter, MCID, SDID und Kunden-IDs enthalten sind (optional). | 4 | Profilskripte werden ausgeführt und anschließend in den Profilspeicher eingespeist. Der Store ruft geeignete Zielgruppen aus der Zielgruppenbibliothek ab (z. B. über Adobe Analytics freigegebene Zielgruppen, Audience Manager usw.).<br />Kundenattribute werden in einem Batch-Prozess an den Profilspeicher übermittelt. |
+| 1 | Ein Aufruf gibt die Experience Cloud-ID (MCID) zurück, wenn der Benutzer authentifiziert ist; ein anderer Aufruf synchronisiert die Kunden-ID. | 2 | Die Bibliothek at.js wird synchron geladen und im Dokumentenkörper verborgen. |
+| 3 | Es wird ein globaler Mbox-Aufruf durchgeführt, in dem alle konfigurierten Parameter, MCID, SDID und Kunden-IDs enthalten sind (optional). | 4 | Profilskripte werden ausgeführt und anschließend in den Profilspeicher eingespeist. Der Store fordert qualifizierte Zielgruppen aus der Zielgruppenbibliothek an (z. B. von Adobe Analytics freigegebene Zielgruppen, Audience Manager usw.).<br />Kundenattribute werden in einem Batch-Prozess an den Profilspeicher übermittelt. |
 | 5 | Basierend auf URL, Mbox-Parametern und Profildaten wird von [!DNL Target] entschieden, welche Aktivitäten und Erlebnisse dem Besucher angezeigt werden sollen. | 6 | Zielgerichteter Inhalt wird zurück an die Seite übermittelt. Dieser enthält optional Profilwerte für eine weitere Personalisierung.<br />Das Erlebnis wird so schnell wie möglich ohne ein Flackern der Standardinhalte bereitgestellt. |
-| 7 | Analytics-Daten werden an Datenerfassungsserver übermittelt. | 8 | Target-Daten werden über die SDID mit Analytics-Daten abgeglichen und im Analytics-Berichtspeicher verarbeitet.<br />Analytics-Daten können dann sowohl in Analytics als auch in [!DNL Target] über [!UICONTROL Analytics for Target] (A4T)-Berichte angezeigt werden. |
+| 7 | Analytics-Daten werden an Datenerfassungsserver übermittelt. | 8 | Zieldaten werden über die SDID mit Analytics-Daten abgeglichen und in den Analytics-Reporting-Speicher verarbeitet.<br />Analytics-Daten können dann sowohl in Analytics als auch in [!DNL Target] über [!UICONTROL Analytics for Target] (A4T)-Berichte angezeigt werden. |
 
 ### Video – Office Hours: Tipps und Übersicht zu at.js (26. Juni 2019)
 
-Dieses Video ist eine Aufzeichnung von &quot;Office Hours&quot;, einer Initiative, die vom [!UICONTROL Adobe Customer Care]-Team geleitet wird.
+Dieses Video ist eine Aufzeichnung von „Office Hours“, einer Initiative, die vom [!UICONTROL Adobe Customer Care]-Team geleitet wird.
 
 * Vorteile der Verwendung von at.js
 * at.js-Einstellungen

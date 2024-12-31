@@ -1,7 +1,7 @@
 ---
-keywords: registerExtension, registerExtension, register-Erweiterung, at.js, Funktionen, function, clientCode, serverDomain, globalMboxName, globalMboxAutoCreate, timeout, registerExtension2
-description: Verwenden Sie die Funktion [!UICONTROL registerExtension()] für die JavaScript-Bibliothek [!DNL Adobe Target] at.js , um eine bestimmte Erweiterung zu registrieren. (at.js 1.x)
-title: Wie verwende ich die Funktion "[!UICONTROL registerExtension()]"?
+keywords: registerExtension, registerExtension, registerExtension, at.js, Funktionen, Funktion, clientCode, serverDomain, globalMboxName, globalMboxAutoCreate, timeout, registerExtension2
+description: Verwenden Sie die [!UICONTROL registerExtension()]-Funktion für die  [!DNL Adobe Target] .js-JavaScript-Bibliothek , um eine bestimmte Erweiterung zu registrieren. (at.js 1.x)
+title: Wie verwende ich die [!UICONTROL registerExtension()]?
 feature: at.js
 exl-id: 71decf00-84c5-4914-b0cd-bb061fa6265f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -17,7 +17,7 @@ Stellt eine Standardart zur Registrierung bestimmter Erweiterungen dar.
 
 >[!NOTE]
 >
->Diese Funktion steht nur für at.js, Version 1.*x*, zur Verfügung. Diese Funktion wurde mit der Veröffentlichung von at.js 2 eingestellt.*x*. Diese Funktion gibt Standardinhalte zurück, wenn sie mit at.js 2.x verwendet wird.
+>Diese Funktion steht nur für at.js, Version 1.*x*, zur Verfügung. Diese Funktion wird seit der Veröffentlichung von at.js 2 nicht mehr unterstützt.*x*. Diese Funktion gibt Standardinhalte zurück, wenn sie mit at.js 2.x verwendet wird.
 
 Der Optionsparameter ist obligatorisch und hat die folgende Struktur:
 
@@ -32,7 +32,7 @@ Hinweise:
 * Wird einer dieser Parameter nicht bereitgestellt, wird eine Ausnahme generiert.
 * Ist das Modul-Array leer, wird eine Ausnahme generiert.
 
-Weitere Informationen und Beispiele zur Verwendung von `[!UICONTROL registerExtension]` finden Sie auf der Seite [Adobe Experience Cloud Target at.js-Erweiterungen](https://github.com/Adobe-Marketing-Cloud/target-atjs-extensions) auf GitHub.
+Weitere Informationen und Beispiele zur Verwendung von `[!UICONTROL registerExtension]` finden Sie auf der Seite [Adobe Experience Cloud Target atjs-Erweiterungen](https://github.com/Adobe-Marketing-Cloud/target-atjs-extensions) auf GitHub.
 
 ## Methoden für Einstellungsmodule
 
@@ -40,7 +40,7 @@ Weitere Informationen und Beispiele zur Verwendung von `[!UICONTROL registerExte
 |--- |--- |--- |
 | clientCode | Zeichenfolge | Clientcode |
 | serverDomain | Zeichenfolge | Edgeserverdomäne |
-| globalMboxName | Zeichenfolge | [!DNL Target] globaler Mbox-Name |
+| globalMboxName | Zeichenfolge | Globaler Mbox-Name [!DNL Target] |
 | globalMboxAutoCreate | Boolesch | Zeigt an, ob die automatische Erstellung aktiviert oder deaktiviert ist. |
 | Zeitüberschreitung | Nummer | Zeitüberschreitung der Abfrage |
 

@@ -1,6 +1,6 @@
 ---
-title: Erste Schritte mit dem [!DNL Adobe Target] Node.js-SDK
-description: Erfahren Sie, wie Kunden das Node.js-SDK installieren, initialisieren und verwenden können. [!DNL Adobe Target]
+title: Erste Schritte mit der  [!DNL Adobe Target] .js-SDK
+description: Erfahren Sie [!DNL Adobe Target]  wie Kunden die Node.js-SDK installieren, initialisieren und verwenden können.
 feature: APIs/SDKs
 exl-id: 74f31f6f-6ada-49c5-9b61-98a91288347f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -10,9 +10,9 @@ ht-degree: 5%
 
 ---
 
-# Übersicht über das Node.js-SDK
+# Übersicht über Node.js SDK
 
-Dieses Referenzhandbuch zeigt, wie [!DNL Adobe Target] -Kunden das Node.js-SDK installieren, initialisieren und verwenden können.
+Dieses Referenzhandbuch zeigt, wie [!DNL Adobe Target] Kunden die Node.js-SDK installieren, initialisieren und verwenden können.
 
 ## Voraussetzungen
 
@@ -20,21 +20,21 @@ Alle derzeit gepflegten Versionen von Node.js werden unterstützt (einschließli
 
 ## Erste Schritte
 
-Um zu sehen, wie Sie mit der Verwendung des Node.js-SDK beginnen können, navigieren Sie zum [Erste Schritte mit dem Target SDK](../sdk-guides/getting-started/getting-started.md) .
+Um zu sehen, wie Sie mit der Node.js-SDK beginnen können, navigieren Sie zum [Target SDK - Erste Schritte](../sdk-guides/getting-started/getting-started.md).
 
-## Beispielanwendung
+## Beispiel-App
 
-Testen Sie das Node.js-SDK:
+Testen Sie die Node.js-SDK:
 
-* Durch Besuch der Demosite ](https://github.com/adobe/on-device-decisioning-demo-site) über die Entscheidungsfindung auf dem Gerät [[!DNL Adobe Target] 
+* Durch den Besuch [[!DNL Adobe Target]  Demo-Site zur geräteinternen Entscheidungsfindung](https://github.com/adobe/on-device-decisioning-demo-site)
 * In einer [Beispielanwendung](../sdk-guides/sample-apps/sample-apps.md).
 
 ## Referenz
 
-Um die Referenz-Dokumentation zum Node.js-SDK zu lesen und zu verstehen, beginnen Sie mit [SDK installieren](install-sdk.md).
+Um die Referenzdokumentation zur Node.js-SDK zu lesen und zu verstehen, beginnen Sie mit der [Installation von SDK](install-sdk.md).
 
 ## Source-Dateien
 
 * [Node.js SDK GitHub Repo](https://github.com/adobe/target-nodejs-sdk)
 * [Changelog](https://github.com/adobe/target-nodejs-sdk/blob/main/CHANGELOG.md)
-&#x200B; &#x200B;
+&#x200B;&#x200B;

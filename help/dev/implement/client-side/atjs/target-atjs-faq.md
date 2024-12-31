@@ -1,6 +1,6 @@
 ---
 keywords: Häufig gestellte Fragen zu at.js, at.js-FAQ, häufig gestellte Fragen, Flackern, Ladeprogramm, Loader, Seitenlader, domänenübergreifend, Dateigröße, x-Domäne, at.js und mbox.js, nur x, Safari, Single-Page-App, fehlende Selektoren, Selektoren, Single-Page-Anwendung, Einzelseiten-Anwendung, tt.omtrdc.net, SPA, Adobe Experience Manager, AEM, IP-Adresse, IP, httponly, HttpOnly, Secure, IP, Cookie-Domäne
-description: Lesen Sie Antworten auf häufig gestellte Fragen zur JavaScript-Bibliothek [!DNL Adobe Target] at.js .
+description: Antworten auf häufig gestellte Fragen zur  [!DNL Adobe Target] .js-JavaScript-Bibliothek.
 title: Was sind häufige Fragen und Antworten zu at.js?
 feature: at.js
 exl-id: 362ccc5b-8731-46c0-bc52-3e55c273e216
@@ -17,27 +17,27 @@ Antworten auf häufig gestellte Fragen über die [!DNL Adobe Target] zur at.js-J
 
 ## Welche Vorteile hat die Verwendung von at.js gegenüber mbox.js?
 
-Die Bibliothek at.js ersetzt mbox.js. Die mbox.js-Bibliothek wird nicht mehr unterstützt. Für die meisten Benutzer birgt at.js jedoch Vorteile gegenüber mbox.js.
+Die at.js-Bibliothek ersetzt mbox.js. Die Bibliothek „mbox.js“ wird nicht mehr unterstützt. Für die meisten Benutzer bietet at.js jedoch Vorteile gegenüber mbox.js.
 
-Neben anderen Vorteilen sorgt at.js für kürzere Ladezeiten von Seiten bei Webimplementierungen, bessere Sicherheit und bessere Implementierungsoptionen für Einzelseitenanwendungen.
+Neben anderen Vorteilen verbessert at.js die Seitenladezeiten für Web-Implementierungen, verbessert die Sicherheit und bietet bessere Implementierungsoptionen für Single-Page-Anwendungen.
 
 Im folgenden Diagramm wird die Seitenladeleistung von mbox.js und at.js verglichen.
 
-(Klicken Sie auf Bild , um die volle Breite zu vergrößern.)
+(Klicken Sie auf das Bild, um es auf die volle Breite zu erweitern.)
 
-![Seitenleistungsdiagramm zum Vergleich von mbox.js mit at.js](/help/dev/implement/client-side/atjs/assets/atjs_versus_mboxjs.png "Seitenleistungsdiagramm zum Vergleich von mbox.js mit at.js"){zoomable="yes"}
+![Leistungsdiagramm für die Seite zum Vergleich von mbox.js mit at.js](/help/dev/implement/client-side/atjs/assets/atjs_versus_mboxjs.png "Leistungsdiagramm für die Seite zum Vergleich von mbox.js mit at.js"){zoomable="yes"}
 
 Wie oben gezeigt, werden Seiteninhalte bei der Verwendung von mbox.js erst geladen, wenn der Aufruf von [!DNL Target] abgeschlossen wurde. Bei der Verwendung von at.js werden Seiteninhalte schon geladen, wenn der Aufruf von [!DNL Target] eingeleitet wird, nicht erst nach Abschluss des Vorgangs.
 
 ## Wie wirkt sich at.js und mbox.js auf Seitenladezeiten aus?
 
-Viele Kunden und Berater möchten wissen, welche Auswirkungen at.js und mbox.js auf die Seitenladezeit haben, insbesondere im Zusammenhang mit neuen und wiederkehrenden Benutzern. Leider ist es schwierig, zu messen, wie sich at.js oder mbox.js auf die Seitenladezeit auswirken, und genaue Zahlen dazu anzugeben, was die Implementierung der einzelnen Kunden erfordert.
+Viele Kunden und Berater möchten wissen, wie sich at.js und mbox.js auf die Ladezeit von Seiten auswirken, insbesondere im Kontext von neuen oder wiederkehrenden Benutzenden. Leider ist es schwierig, zu messen und konkrete Zahlen darüber zu geben, wie at.js oder mbox.js die Seitenladezeit aufgrund der Implementierung jedes Kunden beeinflussen.
 
-Wenn die Besucher-API jedoch auf der Seite vorhanden ist, kann [!DNL Target] besser verstehen, wie at.js und mbox.js die Seitenladezeit beeinflussen.
+Wenn die Besucher-API jedoch auf der Seite vorhanden ist, können [!DNL Target] besser verstehen, wie at.js und mbox.js die Ladezeit der Seite beeinflussen.
 
 >[!NOTE]
 >
->Die Besucher-API und at.js oder mbox.js wirken sich nur dann auf die Seitenladezeit aus, wenn Sie die globale Mbox verwenden (dies liegt an der Technik, mit der der Haupttext ausgeblendet wird). Regionale Mboxes sind von der Besucher-API-Integration nicht betroffen.
+>Die Besucher-API und at.js oder mbox.js wirken sich nur dann auf die Seitenladezeit aus, wenn Sie die globale Mbox verwenden (aufgrund der Technik zum Ausblenden des Textkörpers). Regionale Mboxes sind von der Besucher-API-Integration nicht betroffen.
 
 In den folgenden Abschnitten wird die Aktionssequenz für neue und zurückkehrende Besucher beschrieben:
 
@@ -48,9 +48,9 @@ In den folgenden Abschnitten wird die Aktionssequenz für neue und zurückkehren
 1. Wenn die automatische Erstellung der globalen Mbox aktiviert ist, gilt für die [!DNL Target] JavaScript-Bibliothek:
 
    * Sie wird das Besucher-Objekt instanziieren.
-   * Die [!DNL Target]-Bibliothek versucht, Experience Cloud-Besucher-ID-Daten abzurufen.
+   * Die [!DNL Target] versucht, Experience Cloud-Besucher-ID-Daten abzurufen.
    * Weil es sich um einen neuen Besucher handelt, versendet die Besucher-API eine domänenübergreifende Anfrage an demdex.net.
-   * Nachdem Experience Cloud Besucher-ID-Daten abgerufen wurden, wird eine Anfrage an [!DNL Target] ausgelöst.
+   * Nachdem Experience Cloud-Besucher-ID-Daten abgerufen wurden, wird eine Anfrage an [!DNL Target] ausgelöst.
 
 ### Zurückkehrende Besucher
 
@@ -59,30 +59,30 @@ In den folgenden Abschnitten wird die Aktionssequenz für neue und zurückkehren
 1. Wenn die automatische Erstellung der globalen Mbox aktiviert ist, gilt für die [!DNL Target] JavaScript-Bibliothek:
 
    * Sie wird das Besucher-Objekt instanziieren.
-   * Die [!DNL Target]-Bibliothek versucht, Experience Cloud-Besucher-ID-Daten abzurufen.
+   * Die [!DNL Target] versucht, Experience Cloud-Besucher-ID-Daten abzurufen.
    * Die Besucher-API ruft Cookie-Daten ab.
-   * Nachdem Experience Cloud Besucher-ID-Daten abgerufen wurden, wird eine Anfrage an [!DNL Target] ausgelöst.
+   * Nachdem Experience Cloud-Besucher-ID-Daten abgerufen wurden, wird eine Anfrage an [!DNL Target] ausgelöst.
 
 >[!NOTE]
 >
->Bei neuen Besuchern muss [!DNL Target] die Besucher-API mehrmals durchlaufen, um sicherzustellen, dass [!DNL Target] -Anfragen Experience Cloud-Besucher-ID-Daten enthalten. Bei zurückkehrenden Besuchern geht [!DNL Target] nur über die Verbindung zu [!DNL Target], um den personalisierten Inhalt abzurufen.
+>Wenn die Besucher-API vorhanden ist, müssen [!DNL Target] bei neuen Besuchern mehrfach über die Verbindung gehen, um sicherzustellen, dass [!DNL Target]-Anfragen Experience Cloud-Besucher-ID-Daten enthalten. Bei zurückkehrenden Besuchern geht [!DNL Target] nur über die Verbindung zu [!DNL Target], um den personalisierten Inhalt abzurufen.
 
 ## Warum sind die Antwortzeiten nach einem Upgrade von einer vorherigen Version von at.js auf Version 1.0.0 scheinbar langsamer?
 
-at.js , Version 1.0.0 und neuer löst alle Anforderungen parallel aus. In den vorherigen Versionen werden die Anforderungen sequenziell ausgeführt, d. h. die Anforderungen werden in eine Warteschlange verschoben, und [!DNL Target] wartet auf den Abschluss der ersten Anforderung, bevor der Vorgang mit der nächsten Anforderung fortgesetzt wird.
+at.js ab Version 1.0.0 löst alle Anforderungen parallel aus. In den vorherigen Versionen werden die Anforderungen sequenziell ausgeführt, d. h. die Anforderungen werden in eine Warteschlange verschoben, und [!DNL Target] wartet auf den Abschluss der ersten Anforderung, bevor der Vorgang mit der nächsten Anforderung fortgesetzt wird.
 
-Die Art und Weise, wie frühere Versionen von at.js Anforderungen ausführen, ist für das so genannte &quot;Head of Line Blocking&quot;anfällig. In at.js 1.0.0 und höher wechselte [!DNL Target] zur parallelen Anforderungsausführung.
+Die Art und Weise, wie in früheren Versionen von at.js Anforderungen ausgeführt werden, unterliegt dem so genannten „Head of Line Blocking“. In at.js 1.0.0 und höher ist [!DNL Target] zur parallelen Anforderungsausführung gewechselt.
 
-Wenn Sie sich beispielsweise das Wasserfallmodell der Netzwerkregisterkarte für at.js 0.9.1 ansehen, werden Sie feststellen, dass die nächste [!DNL Target]-Anfrage erst gestartet wird, nachdem die vorherige fertig gestellt wurde. Diese Sequenz ist bei at.js 1.0.0 und höher nicht der Fall, wo alle Anforderungen im Grunde genommen gleichzeitig beginnen.
+Wenn Sie sich beispielsweise das Wasserfallmodell der Netzwerkregisterkarte für at.js 0.9.1 ansehen, werden Sie feststellen, dass die nächste [!DNL Target] erst gestartet wird, nachdem die vorherige fertig gestellt wurde. Bei at.js 1.0.0 und höher ist dies nicht der Fall. Dort beginnen alle Anforderungen grundsätzlich zu derselben Zeit.
 
 Auf die Antwortzeit bezogen kann dies mathematisch wie folgt betrachtet werden:
 
 <ul class="simplelist"> 
- <li> at.js 0.9.1: Antwortzeit aller [!DNL Target] Anforderungen = Summe der Antwortzeiten von Anforderungen </li> 
- <li> at.js 1.0.0 und höher: Antwortzeit aller [!DNL Target] Anforderungen = maximale Antwortzeit von Anforderungen </li> 
+ <li> at.js 0.9.1: Antwortzeit aller [!DNL Target]-Anforderungen = Summe der Antwortzeit der Anforderungen </li> 
+ <li> at.js 1.0.0 und höher: Antwortzeit aller [!DNL Target] Anforderungen = Maximum der Antwortzeit der Anforderungen </li> 
 </ul>
 
-Die at.js-Bibliotheksversion 1.0.0 führt die Anforderungen schneller aus. Darüber hinaus sind at.js-Anforderungen asynchron, sodass [!DNL Target] das Rendern von Seiten nicht blockiert. Selbst wenn der Abschluss von Anforderungen mehrere Sekunden dauert, wird die gerenderte Seite angezeigt. Lediglich einige Teile der Seite bleiben leer, bis [!DNL Target] eine Antwort vom [!DNL Target]-Edge erhält.
+Die at.js-Bibliothek Version 1.0.0 führt die Anforderungen schneller aus. Zudem laufen at.js-Anforderungen asynchron, sodass [!DNL Target] das Rendern der Seite nicht blockiert. Selbst wenn der Abschluss von Anforderungen mehrere Sekunden dauert, wird die gerenderte Seite angezeigt. Lediglich einige Teile der Seite bleiben leer, bis [!DNL Target] eine Antwort vom [!DNL Target]-Edge erhält.
 
 ## Kann ich die [!DNL Target]-Bibliothek asynchron laden?
 
@@ -90,7 +90,7 @@ In at.js 1.0.0 kann die [!DNL Target]-Bibliothek asynchron geladen werden.
 
 So laden Sie at.js asynchron:
 
-* Der empfohlene Ansatz erfolgt über -Tags in Adobe Experience Platform.
+* Der empfohlene Ansatz erfolgt über Tags in Adobe Experience Platform.
 * Sie können at.js auch asynchron laden, indem Sie dem Skript-Tag zum Laden von at.js das asynchrone Attribut hinzufügen. Verwenden Sie etwas wie:
 
   ```
@@ -118,11 +118,11 @@ Weitere Informationen finden Sie unter [Verwaltung von Flackern mit „at.js“]
 
 ## Ist at.js mit der [!DNL Adobe Experience Manager]-Integration (Experience Manager) kompatibel?
 
-[!DNL Adobe Experience Manager] 6.2 mit FP-11577 (oder höher) unterstützt jetzt at.js-Implementierungen mit ihrer [!UICONTROL Adobe Target Cloud Services]-Integration.
+[!DNL Adobe Experience Manager] 6.2 mit FP-11577 (oder höher) unterstützt jetzt at.js-Implementierungen mit ihrer [!UICONTROL Adobe Target Cloud Services].
 
 ## Wie kann ich mit at.js ein Flackern beim Laden von Seiten verhindern ?
 
-[!DNL Target] bietet mehrere Möglichkeiten, ein Flackern beim Laden von Seiten zu verhindern. Weitere Informationen finden Sie unter [Vermeiden von Flackern mit at.js](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
+[!DNL Target] bietet mehrere Möglichkeiten, ein Flackern beim Laden von Seiten zu verhindern. Weitere Informationen finden Sie unter &quot;[ mit at.js verhindern](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
 
 ## Wie groß ist at.js?
 
@@ -130,7 +130,7 @@ Die at.js-Datei hat beim Download eine Größe von etwa 109 KB. Da die meisten 
 
 ## Warum ist at.js größer als mbox.js?
 
-at.js-Implementierungen verwenden eine einzelne Bibliothek ( at.js), während mbox.js-Implementierungen tatsächlich zwei Bibliotheken verwenden ( mbox.js und target.js). Es wäre also gerechter, at.js mit mbox.js *und* `target.js` zu vergleichen. Beim Vergleich der komprimierten Größen der beiden Versionen ist ersichtlich, dass die at.js-Version 1.2 34 KB groß ist und die mbox.js-Version 63 eine Größe von 26,2 KB hat. ``
+at.js-Implementierungen verwenden eine einzelne Bibliothek ( at.js), während mbox.js-Implementierungen tatsächlich zwei Bibliotheken ( mbox.js und target.js) verwenden. Es wäre also gerechter, at.js mit mbox.js *und* `target.js` zu vergleichen. Beim Vergleich der komprimierten Größen der beiden Versionen ist ersichtlich, dass die at.js-Version 1.2 34 KB groß ist und die mbox.js-Version 63 eine Größe von 26,2 KB hat. ``
 
 at.js ist deshalb größer, weil im Vergleich zu mbox.js deutlich mehr DOM-Parsing durchgeführt wird. Dies ist erforderlich, da at.js „Rohdaten“ in der JSON-Antwort erhält und diese zunächst verarbeiten muss. mbox.js verwendet `document.write()`, das Parsing wird vom Browser übernommen.
 
@@ -142,9 +142,9 @@ at.js nutzt derzeit Teile von jQuery, deshalb wird Ihnen oben in at.js der MIT-L
 
 ## Unterstützt „at.js“ Safari und domänenübergreifende Einstellungen, die als „nur x“ eingestellt sind?
 
-Nein, wenn domänenübergreifend auf &quot;nur x&quot;festgelegt ist und in Safari Drittanbieter-Cookies deaktiviert sind, setzen sowohl mbox.js als auch at.js ein deaktiviertes Cookie und es werden keine Mbox-Anfragen für die Domäne dieses Kunden ausgeführt.
+Nein, ist die domänenübergreifende Einstellung auf „nur x“ festgelegt und sind Drittanbieter-Cookies in Safari deaktiviert, setzen sowohl mbox.js als auch at.js ein deaktiviertes Cookie und es werden für diese Kundendomäne keine mbox-Anforderungen ausgeführt.
 
-Um Safari-Besucher zu unterstützen, wäre eine bessere X-Domäne &quot;deaktiviert&quot;(setzt nur ein Erstanbieter-Cookie) oder &quot;aktiviert&quot;(setzt in Safari nur ein Erstanbieter-Cookie, während in anderen Browsern Erst- und Drittanbieter-Cookies gesetzt werden).
+Um Safari-Besucher zu unterstützen, wäre eine bessere X-Domain „deaktiviert“ (setzt nur ein Erstanbieter-Cookie) oder „aktiviert“ (setzt in Safari nur ein Erstanbieter-Cookie, während in anderen Browsern Erst- und Drittanbieter-Cookies gesetzt werden).
 
 ## Kann ich Target [!UICONTROL Visual Experience Composer] (VEC) in meinen Einzelseitenanwendungen verwenden?
 
@@ -162,11 +162,11 @@ Ja, genau wie bei mbox.js.
 
 [!DNL Target]-Kunden verwenden mitunter Cloud-basierte Instanzen mit [!DNL Target] zum Testen oder für einfache Machbarkeitsprüfungen. Diese Domänen sind neben vielen anderen Teil der [öffentlichen Suffix-Liste](https://publicsuffix.org/list/public_suffix_list.dat).
 
-Moderne Browser speichern keine Cookies, wenn Sie diese Domänen verwenden - es sei denn, Sie passen die Einstellung `cookieDomain` mit targetGlobalSettings() an. Weitere Informationen finden Sie unter [Verwenden Cloud-basierter Instanzen mit  [!DNL Target]](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md).
+Moderne Browser speichern keine Cookies, wenn Sie diese Domänen verwenden - es sei denn, Sie passen die Einstellung `cookieDomain` mit targetGlobalSettings() an. Weitere Informationen finden Sie unter [Verwenden Cloud-basierter Instanzen mit [!DNL Target]](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md).
 
 ## Können IP-Adressen bei der Verwendung von at.js als Cookie-Domäne dienen?
 
-Ja, wenn Sie [at.js, Version 1.2 oder neuer](/help/dev/implement/client-side/atjs/target-atjs-versions.md) verwenden. Adobe empfiehlt jedoch dringend, dass Sie mit der neuesten Version auf dem Laufenden bleiben.
+Ja, wenn Sie [at.js, Version 1.2 oder neuer](/help/dev/implement/client-side/atjs/target-atjs-versions.md) verwenden. Adobe empfiehlt jedoch dringend, immer die neueste Version zu verwenden.
 
 >[!NOTE]
 >
@@ -196,21 +196,21 @@ if (/^123\.456\.78\..*/g.test(window.location.hostname)) {
 
 ## Warum werden mir Warnhinweise wie zum Beispiel „Aktionen mit fehlenden Selektoren“ angezeigt? 
 
-Diese Meldungen beziehen sich nicht auf die at.js-Funktionalität. Die at.js-Bibliothek versucht, alles zu melden, das nicht im DOM zu finden ist.
+Diese Nachrichten stehen in keiner Verbindung zur at.js-Funktionalität. Die at.js-Bibliothek versucht, alles zu melden, was nicht im DOM gefunden werden kann.
 
 Nachfolgend finden Sie mögliche Grundursachen für diesen Warnhinweis:
 
 * Die Seite wird dynamisch erstellt und at.js kann das Element nicht finden.
 * Die Seite wird langsam erstellt (aufgrund eines langsamen Netzwerks) und at.js kann den Selektor im DOM nicht finden.
 * Die Seitenstruktur, auf der diese Aktivität ausgeführt wird, wurde geändert. Wenn Sie die Aktivität erneut im Visual Experience Composer (VEC) öffnen, sollte Ihnen ein Warnhinweis angezeigt werden. Sie sollten die Aktivität aktualisieren, damit alle erforderlichen Elemente gefunden werden können.
-* Die zugrunde liegende Seite ist Teil einer Einzelseiten-App (SPA) oder die Seite enthält Elemente, die weiter unten auf der Seite auftauchen und der at.js-&quot;Selektor-Polling-Mechanismus&quot;kann diese Elemente nicht finden. Es ist unter Umständen hilfreich, den `selectorsPollingTimeout` zu erhöhen. Weitere Informationen finden Sie unter [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
+* Die zugrunde liegende Seite ist Teil eines Einzelseiten-Programms (Single Page Application, SPA) oder die Seite enthält Elemente, die weiter unten auf der Seite auftauchen und der „at.js-Selektor-Polling-Mechanismus“ kann diese Elemente nicht finden. Es ist unter Umständen hilfreich, den `selectorsPollingTimeout` zu erhöhen. Weitere Informationen finden Sie unter [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 * Eine beliebige Klick-Tracking-Metrik versucht, sich zu jeder Seite hinzuzufügen, unabhängig von der URL, in der die Metrik eingerichtet wurde. Diese Situation ist zwar harmlos, hat aber viele dieser Warnhinweise zur Folge.
 
-  Die besten Ergebnisse erzielen Sie, wenn Sie die [neueste Version von at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md) herunterladen und verwenden. Weitere Informationen zum Herunterladen von at.js finden Sie im Artikel [at.js mithilfe der  [!DNL Target] Schnittstelle](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface) herunterladen im Abschnitt [*Bereitstellen von at.js* > *Implementieren von [!DNL Target] ohne Tag-Manager*](how-to-deployatjs/implement-target-without-a-tag-manager.md) .
+  Um die bestmöglichen Ergebnisse zu erzielen, laden Sie bitte die [neueste Version von at.js) herunter ](/help/dev/implement/client-side/atjs/target-atjs-versions.md) verwenden Sie sie. Weitere Informationen zum Herunterladen von at.js finden Sie im Abschnitt [Herunterladen von at.js mithilfe der  [!DNL Target] -Schnittstelle](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface) im Artikel [*Bereitstellen von at.js* > *Implementieren von [!DNL Target] ohne Tag-Manager*](how-to-deployatjs/implement-target-without-a-tag-manager.md).
 
 ## Was ist die Domain tt.omtrdc.net, zu der die Aufrufe des [!DNL Target]-Servers gehen?
 
-tt.omtrdc.net ist der Domänenname für das EDGE-Netzwerk, mit dem alle Server-Aufrufe für [!DNL Target] empfangen werden.
+tt.omtrdc.net ist der Domänenname für das Adobe-EDGE-Netzwerk, mit dem alle Server-Aufrufe für [!DNL Target] empfangen werden.
 
 ## Warum verwendet at.js nicht immer die Cookie-Flags „HttpOnly“und „Secure“?
 
@@ -222,29 +222,29 @@ Um sicherzustellen, dass [!DNL Target] Benutzer ordnungsgemäß verfolgen kann u
 
 ## Wie behandelt at.js Sicherheitsprobleme wie XSS- und MITM-Angriffe?
 
-Die Kommunikation mit dem Adobe Edge-Netzwerk, das von at.js aktiviert wird, erfolgt nur über HTTPS, solange die `secureOnly` -Option in der Funktion targetGlobalSettings() ([targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)) auf true gesetzt ist. Andernfalls darf at.js basierend auf dem Seitenprotokoll zwischen HTTP und HTTPS wechseln.
+Die Kommunikation mit dem Adobe Edge-Netzwerk, das durch at.js aktiviert wird, erfolgt nur über HTTPS, solange die `secureOnly` Option in der Funktion targetGlobalSettings() auf „true“ ([targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)) festgelegt ist. Andernfalls darf at.js basierend auf dem Seitenprotokoll zwischen HTTP und HTTPS wechseln.
 
-Die folgenden Header werden standardmäßig erzwungen:
-* HTTP Strict Transport Security (HSTS)
+Die folgenden Kopfzeilen werden standardmäßig erzwungen:
+* HTTP - Strict Transport Security (HSTS)
 * X-XSS-Schutz
-* X Content-Typ-Optionen
-* Referrer-Richtlinie
+* x Content-Typ-Optionen
+* Referrer-Policy
 
-Alle Header, die bereits in Client-Seiten verwendet werden, können erzwungen werden. Eine gängige Methode hierfür ist die &quot;HTTP Request Header Authorization&quot;. Die Adobe-Kundenunterstützung kann weitere Informationen zu Best Practices erhalten.
+Alle Kopfzeilen, die bereits auf Client-Seiten verwendet werden, können erzwungen werden. Eine gängige Methode dazu ist die „HTTP-Anfrage-Header-Autorisierung“. Die Adobe-Kundenunterstützung kann Sie hinsichtlich Best Practices und Methoden weiter beraten.
 
-Darüber hinaus sind Anfragen an das Adobe Edge-Netzwerk öffentlich (da sie für Besucherbrowser konzipiert sind) und enthalten keine sichtbaren Besucherdetails (sie enthalten nur eine Besucher-ID). Diese Anforderungen stellen Besuchern Erlebnisse bereit und enthalten Details dazu, was ein Besucher auf der Seite sehen sollte.
+Darüber hinaus sind Anfragen an das Adobe Edge-Netzwerk öffentlich (da sie von Besucherbrowsern aus gesendet werden sollen) und sie enthalten keine sichtbaren Besucherdetails (sie enthalten nur eine Besucher-ID). Diese Anfragen liefern Besuchern Erlebnisse und enthalten Details dazu, was ein Besucher auf der Seite sehen sollte.
 
-Beachten Sie, dass für Antwort-Token und Sitzungs-IDs, die in diesen Anfragen übertragen werden, Folgendes gilt:
+Beachten Sie bei Antwort-Token und Sitzungs-IDs, die in diesen Anfragen übertragen werden:
 
 * Sie verfolgen Kommunikationssitzungen
 * Sie bestehen aus zufälligen Zeichen
-* Sitzungs-IDs sind 30 Minuten lang gültig.
+* Sitzungs-IDs sind 30 Minuten lang gültig
 * Antwort-Token können deaktiviert werden ([Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html))
 * Sie sind nur in der Umgebung von Adobe-Lösungen nützlich.
 
-Es wird erwartet, dass in at.js-Anfragen die Kopfzeile &quot;*&quot; mit dem Wert &quot;*&quot; angezeigt wird, da sie öffentlich sind, keine Authentifizierung erforderlich ist und der Zugriff auf das Adobe Edge-Netzwerk über JavaScript-Aufrufe von jeder Domäne aus erfolgen muss.`Access-Control-Allow-Origin`
+Es wird erwartet, dass der `Access-Control-Allow-Origin`-Header mit dem Wert &quot;*&quot; in at.js-Anfragen angezeigt wird, da sie öffentlich sind, keine Authentifizierung erforderlich ist und der Zugriff auf das Adobe Edge-Netzwerk von jeder Domain über JavaScript-Aufrufe erfolgen muss.
 
-Content Security Policy (CSP) muss jedoch auf der Seite erzwungen werden. Weitere Informationen zu CSP-Anforderungen für at.js finden Sie unter [Content Security Policy](/help/dev/before-implement/privacy/content-security-policy.md) und [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
+Die Content Security Policy (CSP) muss jedoch auf der Seite erzwungen werden. Weitere Informationen zu CSP-Anforderungen für at.js finden Sie unter [Content Security Policy](/help/dev/before-implement/privacy/content-security-policy.md) und [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 
 ## Wie oft sendet at.js Netzwerkanfragen? 
 

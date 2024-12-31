@@ -1,6 +1,6 @@
 ---
-keywords: flackern, at.js, Implementierung, asynchron, asynchron, synchron, synchron, $8
-description: Erfahren Sie, wie at.js und [!DNL Target] Flackern verhindern (Standardinhalt wird vorübergehend angezeigt, bevor er durch Aktivitätsinhalte ersetzt wird) während des Ladens von Seiten oder Apps.
+keywords: Flimmern, at.js, Implementierung, asynchron, asynchron, synchron, synchron, $8
+description: Erfahren Sie, wie at.js und [!DNL Target] Flimmern verhindern (Standardinhalt wird vorübergehend angezeigt, bevor er durch Aktivitätsinhalte ersetzt wird) beim Laden von Seiten oder Apps.
 title: Wie verwaltet at.js Flackern?
 feature: at.js
 exl-id: 8aacf254-ec3d-4831-89bb-db7f163b3869
@@ -13,33 +13,33 @@ ht-degree: 57%
 
 # Verwaltung von Flackern mit „at.js“
 
-Informationen dazu, wie mit der JavaScript-Bibliothek &quot;[!DNL Adobe Target] at.js&quot;beim Laden von Seiten oder Apps ein Flackern verhindert wird.
+Informationen dazu, wie die [!DNL Adobe Target] at.js-JavaScript-Bibliothek Flackern beim Laden von Seiten oder Apps verhindert.
 
 Ein Flackern tritt dann auf, wenn Besuchern vorübergehend Standardinhalt angezeigt wird, bevor dieser durch den Inhalt der entsprechenden Aktivität ersetzt werden konnte. Das Auftreten eines solchen Flackerns ist nicht wünschenswert, da es die Besucher möglicherweise verwirrt.
 
 ## Verwenden einer automatisch erstellten globalen Mbox
 
-Wenn Sie die Einstellung [Globale Mbox automatisch erstellen](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md) bei der Konfigurierung von at.js aktivieren, reduziert at.js Flackern durch Ändern der Deckkrafteinstellung beim Laden der Seite. Beim Laden von at.js ändert sich die Deckkrafteinstellung des Elements `<body>` in &quot;0&quot;, wodurch die Seite für Besucher anfänglich unsichtbar wird. Nach Erhalt einer Antwort von [!DNL Target] - oder wenn ein Fehler mit der [!DNL Target] -Anfrage erkannt wird - setzt at.js die Deckkraft auf &quot;1&quot; zurück. So wird gewährleistet, dass der Besucher die Seite erst sieht, nachdem der Inhalt Ihrer Aktivitäten angewendet wurde.
+Wenn Sie die Einstellung [Globale Mbox automatisch erstellen](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md) bei der Konfigurierung von at.js aktivieren, reduziert at.js Flackern durch Ändern der Deckkrafteinstellung beim Laden der Seite. Beim Laden von at.js wird die Deckkrafteinstellung des `<body>`-Elements in „0“ geändert, sodass die Seite für Besuchende zunächst unsichtbar wird. Nachdem eine Antwort von [!DNL Target] eingegangen ist - oder wenn ein Fehler mit der [!DNL Target]-Anfrage erkannt wird - setzt at.js die Deckkraft auf „1“ zurück. So wird gewährleistet, dass der Besucher die Seite erst sieht, nachdem der Inhalt Ihrer Aktivitäten angewendet wurde.
 
-Wenn Sie die Einstellung bei der Konfiguration von at.js aktivieren, wird die Deckkraft des HTML-BODY von at.js auf 0 gesetzt. Nachdem eine Antwort von [!DNL Target] empfangen wurde, setzt at.js die HTML-BODY-Deckkraft auf 1 zurück.
+Wenn Sie die Einstellung bei der Konfiguration von at.js aktivieren, wird die Deckkraft des HTML-BODY von at.js auf 0 gesetzt. Nachdem eine Antwort von [!DNL Target] eingegangen ist, setzt at.js die Deckkraft des HTML-Textkörpers auf 1 zurück.
 
 Mit einer Deckkraft von 0 ist der Seiteninhalt nicht sichtbar, sodass Flackern verhindert wird. Der Browser kann die Seite jedoch bereits rendern und lädt alle nötigen Assets wie CSS, Bilder usw.
 
-Wenn `opacity: 0` in Ihrer Implementierung nicht funktioniert, können Sie Flackern auch verhindern, indem Sie `bodyHiddenStyle` anpassen und auf `body {visibility:hidden !important}` festlegen. Sie können entweder `body {opacity:0 !important}` oder `body {visibility:hidden !important}` verwenden, je nachdem, was für Ihre jeweilige Situation am besten geeignet ist.
+Wenn `opacity: 0` in Ihrer Implementierung nicht funktioniert, können Sie Flackern auch handhaben, indem Sie `bodyHiddenStyle` anpassen und auf `body {visibility:hidden !important}` setzen. Sie können entweder `body {opacity:0 !important}` oder `body {visibility:hidden !important}` verwenden, je nachdem, was für Ihre spezifischen Umstände am besten geeignet ist.
 
 Die folgende Abbildung zeigt die Aufrufe „Hide Body“ und „Show Body“ sowohl in at.js 1.*x* als auch in at.js 2.x.
 
 **at.js 2.x**
 
-(Klicken Sie auf Bild , um die volle Breite zu vergrößern.)
+(Klicken Sie auf das Bild, um es auf die volle Breite zu erweitern.)
 
-![Target-Ablauf: at.js-Seitenladeanforderung](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png "Target-Ablauf: at.js-Seitenladeanforderung"){zoomable="yes"}
+![Target-Fluss: at.js-Seitenladeanfrage](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png "Target-Fluss: at.js-Seitenladeanfrage"){zoomable="yes"}
 
 **at.js 1.*x***  
 
-(Klicken Sie auf Bild , um die volle Breite zu vergrößern.)
+(Klicken Sie auf das Bild, um es auf die volle Breite zu erweitern.)
 
-![Target-Ablauf: automatisch erstellte globale Mbox](/help/dev/implement/client-side/atjs/how-atjs-works/assets/target-flow2.png "Ziel-Fluss: automatisch erstellte globale Mbox"){zoomable="yes"}
+![Target-Fluss: Automatisch erstellte globale Mbox](/help/dev/implement/client-side/atjs/how-atjs-works/assets/target-flow2.png "Target-Fluss: Automatisch erstellte globale Mbox"){zoomable="yes"}
 
 Weitere Informationen zum Überschreiben mit `bodyHiddenStyle` finden Sie unter [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 
@@ -47,11 +47,11 @@ Weitere Informationen zum Überschreiben mit `bodyHiddenStyle` finden Sie unter 
 
 Das asynchrone Laden von at.js eignet sich hervorragend, um zu verhindern, dass das Rendern des Browsers blockiert wird. Bei dieser Technik kann es jedoch zu Flackereffekten auf der Webseite kommen.
 
-Sie können ein Flackern verhindern, indem Sie einen vorab ausgeblendeten Ausschnitt verwenden, der sichtbar ist, nachdem die entsprechenden HTML-Elemente von Target personalisiert wurden.
+Um ein Flackern zu vermeiden, können Sie ein pre-hiding-Snippet verwenden, das angezeigt wird, nachdem die entsprechenden HTML-Elemente von Target personalisiert wurden.
 
-at.js kann asynchron geladen werden, entweder direkt auf der Seite eingebettet oder über einen Tag-Manager (z. B. Adobe Experience Platform Launch).
+at.js kann asynchron geladen werden, entweder direkt in die Seite eingebettet oder über einen Tag-Manager (z. B. Adobe Experience Platform Launch).
 
-Wenn at.js auf der Seite eingebettet ist, muss das Snippet vor dem Laden von at.js hinzugefügt werden. Wenn Sie at.js über einen Tag-Manager laden, der ebenfalls asynchron geladen wird, müssen Sie das Snippet hinzufügen, bevor Sie den Tag-Manager laden. Wenn der Tag-Manager synkronisch geladen wird, kann das Skript vor at.js im Tag-Manager enthalten sein.
+Wenn at.js auf der Seite eingebettet ist, muss das Snippet vor dem Laden von at.js hinzugefügt werden. Wenn Sie at.js über einen Tag-Manager laden, der ebenfalls asynchron geladen wird, müssen Sie das Snippet hinzufügen, bevor Sie den Tag-Manager laden. Wenn der Tag-Manager synchron geladen wird, kann das Skript vor „at.js“ im Tag-Manager enthalten sein.
 
 Der Code für den vorab ausgeblendeten Ausschnitt lautet wie folgt:
 
@@ -109,11 +109,11 @@ Anstelle der Standardeinstellung:
 body {opacity: 0 !important}
 ```
 
-## Flackern in at.js 2.x für triggerView() verwalten
+## Verwalten von Flackern in at.js 2.x für triggerView()
 
 Wenn Sie `triggerView()` benutzen, um zielgerichtete Inhalte in Ihrer SPA anzuzeigen, wird das Flackern vorkonfiguriert gehandhabt. Das bedeutet, dass die Pre-hiding-Logik nicht manuell hinzugefügt werden muss. Stattdessen blendet at.js 2.x im Voraus den Ort aus, an dem Ihre Ansicht angezeigt werden muss, bevor der zielgerichtete Inhalt angewendet wird.
 
-## Beheben von Flackern mit getOffer() und applyOffer()
+## Verwalten von Flackern mit getOffer() und applyOffer()
 
 Da es sich sowohl bei `getOffer()` als auch bei `applyOffer()` um einfache APIs handelt, sind keine Mechanismen zur Flackerverhinderung integriert. Sie können einen Selektor oder ein HTML-Element als Option an `applyOffer()` übermitteln. In diesem Fall fügt `applyOffer()` den Aktivitätsinhalt diesem Element zu, wobei Sie jedoch gewährleisten müssen, dass das Element vor dem Aufruf von `getOffer()` und `applyOffer()` vollständig ausgeblendet wurde.
 

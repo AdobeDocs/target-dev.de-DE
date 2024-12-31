@@ -1,7 +1,7 @@
 ---
-keywords: implementieren, implementieren, einrichten, einrichten, Skript-Profilattribute
-description: Rufen Sie Daten mithilfe von Skript-Profilattributen in [!DNL Target] ab.
-title: Wie erhalte ich Daten mithilfe von Skript-Profilattributen in [!DNL Target] ?
+keywords: Implementieren, Implementieren, Einrichten, Einrichten, Skript-Profilattribute
+description: Abrufen von Daten in  [!DNL Target] mithilfe von Skriptprofilattributen
+title: Wie integriere ich Daten in  [!DNL Target]  mit Skript-Profilattributen?
 feature: Implementation
 exl-id: ba11f1de-e68b-4505-8e3e-cd4d46ef59a2
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -13,13 +13,13 @@ ht-degree: 74%
 
 # Skriptprofilattribute
 
-Skript-Profilattribute sind Name/Wert-Paare, die in der [!DNL Adobe Target] -Lösung definiert sind. Der Wert wird durch die Ausführung eines JavaScript-Snippets auf dem Target-Server über den Server-Aufruf ermittelt.
+Skriptprofilattribute sind Name/Wert-Paare, die in der [!DNL Adobe Target]-Lösung definiert sind. Der Wert wird durch die Ausführung eines JavaScript-Snippets auf dem Target-Server über den Server-Aufruf ermittelt.
 
 Benutzer schreiben kleine Code-Snippets, die pro Mbox-Aufruf ausgeführt werden, bevor ein Besucher für eine Zielgruppenmitgliedschaft und -aktivität ausgewertet wird.
 
 ## Format
 
-Skript-Profilattribute werden im Abschnitt „Zielgruppen“ von Target erstellt. Jeder Attributname ist gültig und der Wert ist das Ergebnis einer JavaScript-Funktion, die vom Benutzer [!DNL Target] geschrieben wurde. Den Attributnamen wird in Target automatisch ein „user. &quot; in &quot;[!DNL Target]&quot;, um sie von den Profilattributen auf der Seite zu unterscheiden.
+Skript-Profilattribute werden im Abschnitt „Zielgruppen“ von Target erstellt. Jeder Attributname ist gültig und der Wert ist das Ergebnis einer JavaScript-Funktion, die vom [!DNL Target] geschrieben wurde. Den Attributnamen wird in Target automatisch ein „user. &quot;, [!DNL Target] sie von In-Page-Profilattributen zu unterscheiden.
 
 Das Code-Snippet ist in der Sprache Rhino JS geschrieben und kann Token und andere Werte referenzieren.
 
@@ -28,7 +28,7 @@ Das Code-Snippet ist in der Sprache Rhino JS geschrieben und kann Token und and
 * **Warenkorbabbruch:** das Profilskript auf 1 setzen, wenn der Besucher den Einkaufswagen erreicht. Wenn der Besucher einen Kauf durchführt, setzen Sie ihn auf 0 zurück. Ist der Wert =1, dann hat der Besucher einen Artikel im Warenkorb.
 * **Besuchsanzahl:** bei jedem neuen Besuch die Anzahl um 1 erhöhen, um zu verfolgen, wie oft ein Besucher zur Site zurückkehrt.
 
-## Vorteile der Methode
+## Vorteile der -Methode
 
 Keine Seiten-Code-Updates erforderlich.
 
@@ -44,7 +44,7 @@ Die Ausführungsreihenfolge von Profilskripten kann nicht garantiert werden, sod
 
 Kann schwierig zu debuggen sein.
 
-## Codebeispiele
+## Code-Beispiele
 
 Profilskripte sind ziemlich flexibel:
 

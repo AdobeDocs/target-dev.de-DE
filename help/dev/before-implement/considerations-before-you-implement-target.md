@@ -1,5 +1,5 @@
 ---
-description: Machen Sie sich mit den Überlegungen vertraut, die Sie vor der Implementierung von [!DNL Adobe Target] berücksichtigen sollten.
+description: Machen Sie sich mit den Überlegungen vertraut, die Sie vor der Implementierung berücksichtigen sollten [!DNL Adobe Target].
 title: Was sollte ich vor der Implementierung wissen?
 feature: Implementation
 exl-id: b93579cf-e46f-464e-96b3-3bd4085f427f
@@ -12,13 +12,13 @@ ht-degree: 26%
 
 # Vor der Implementierung
 
-Überlegungen vor der Implementierung von [!DNL Adobe Target].
+Überlegungen, die Sie vor der Implementierung von [!DNL Adobe Target] berücksichtigen sollten.
 
-Dieser Abschnitt enthält Informationen für Entwickler, die für ihre Implementierung spezifisch sind und die diese sammeln müssen, Überlegungen zum Datenschutz, eine Diskussion über Cookies, eine Liste der verschiedenen Methoden, mit denen Daten in [!DNL Target] übertragen werden können, Sicherheitsüberlegungen, Informationen zur TLS-Verschlüsselung (Transport Layer Security), zum CNAME und mehr.
+Dieser Abschnitt enthält Informationen für Entwickler, die speziell für ihre Implementierung verantwortlich sind und die sie sammeln müssen, Überlegungen zum Datenschutz, eine Diskussion über Cookies, eine Liste der verschiedenen Methoden, die verwendet werden können, um Daten in [!DNL Target] zu übertragen, Sicherheitsüberlegungen, Informationen zur TLS (Transport Layer Security)-Verschlüsselung, CNAME und mehr.
 
 >[!WARNING]
 >
->Änderungen an at.js oder [!DNL Adobe Experience Platform Web SDK] werden von der Adobe-Kundenunterstützung nicht unterstützt.
+>Änderungen an at.js oder der [!DNL Adobe Experience Platform Web SDK] werden von der Adobe-Kundenunterstützung nicht unterstützt.
 
 - [Vorbereiten der Target-Implementierung](prepare-to-implement-target.md)
 - [Datenschutz](privacy/privacy.md)

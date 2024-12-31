@@ -1,6 +1,6 @@
 ---
-title: Senden von Anzeigen- oder Klickbenachrichtigungen an [!DNL Adobe Target] mithilfe des .NET SDK
-description: Erfahren Sie, wie Sie mit sendNotifications() Anzeigen- oder Klickbenachrichtigungen an [!DNL Adobe Target] für Messungen und Berichte senden können.
+title: Senden von Anzeige- oder Klickbenachrichtigungen an [!DNL Adobe Target] mithilfe von .NET SDK
+description: Erfahren Sie, wie Sie mit sendNotifications() Anzeigen- oder Klick-Benachrichtigungen an senden können [!DNL Adobe Target]  um Messungen und Berichte durchzuführen.
 feature: APIs/SDKs
 exl-id: 724e787c-af53-4152-8b20-136f7b5452e1
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,18 +14,18 @@ ht-degree: 1%
 
 ## Beschreibung
 
-`SendNotifications()` wird verwendet, um Anzeigen- oder Klickbenachrichtigungen für Messungen und Berichte an [!DNL Adobe Target] zu senden.
+`SendNotifications()` wird verwendet, um Anzeige- oder Klick-Benachrichtigungen zur Messung und Berichterstellung an [!DNL Adobe Target] zu senden.
 
 >[!NOTE]
 >
->Wenn sich ein `Execute` -Objekt mit erforderlichen Parametern in der Anfrage selbst befindet, wird die Impression für qualifizierte Aktivitäten automatisch erhöht.
+>Wenn sich ein `Execute` mit erforderlichen Parametern in der Anfrage selbst befindet, wird die Impression automatisch für qualifizierte Aktivitäten inkrementiert.
 
-SDK-Methoden, die eine Impression automatisch erhöhen, sind:
+SDK-Methoden, die eine Impression automatisch inkrementieren:
 
 * `GetOffers()`
 * `GetAttributes()`
 
-Wenn ein `Prefetch` -Objekt innerhalb der Anfrage übergeben wird, wird die Impression für Aktivitäten mit Mboxes innerhalb des `Prefetch` -Objekts nicht automatisch erhöht. `SendNotifications()` muss für vorab abgerufene Erlebnisse zum Erhöhen von Impressionen und Konversionen verwendet werden.
+Wenn ein `Prefetch` innerhalb der Anfrage übergeben wird, wird die Impression für die Aktivitäten mit Mboxes innerhalb des `Prefetch`-Objekts nicht automatisch inkrementiert. `SendNotifications()` müssen für vorab abgerufene Erlebnisse verwendet werden, um Impressionen und Konversionen zu erhöhen.
 
 ## Methode
 
@@ -37,7 +37,7 @@ TargetDeliveryResponse TargetClient.SendNotifications(TargetDeliveryRequest requ
 
 ## Beispiel
 
-Erstellen wir zunächst die [!UICONTROL Target Delivery API] -Anfrage für den Vorabruf von Inhalten für die Mboxes `home` und `product1`.
+Erstellen wir zunächst die [!UICONTROL Target Delivery API] Anfrage zum Vorabrufen von Inhalten für die `home`- und `product1`-Mboxes.
 
 ### \.NET
 
@@ -56,7 +56,7 @@ var targetDeliveryRequest = new TargetDeliveryRequest.Builder()
 var targetResponse = targetClient.GetOffers(targetDeliveryRequest);
 ```
 
-Eine erfolgreiche Antwort enthält ein [!DNL Target Delivery API] -Antwortobjekt, das vorab abgerufenen Inhalt für die angeforderten Mboxes enthält. Ein Beispiel für ein `targetResponse.Response` -Objekt kann wie folgt aussehen:
+Eine erfolgreiche Antwort enthält ein [!DNL Target Delivery API] Antwortobjekt, das vorab abgerufene Inhalte für die angeforderten Mboxes enthält. Ein Beispiel für ein `targetResponse.Response` kann wie folgt aussehen:
 
 ### \.NET
 
@@ -114,7 +114,7 @@ Eine erfolgreiche Antwort enthält ein [!DNL Target Delivery API] -Antwortobjekt
 }
 ```
 
-Beachten Sie die Felder `mbox` name und `state` sowie das Feld `eventToken` in jeder der Inhaltsoptionen von [!DNL Target]. Diese sollten in der `SendNotifications()` -Anfrage bereitgestellt werden, sobald jede Inhaltsoption angezeigt wird. Angenommen, die mbox `product1` wurde auf einem Nicht-Browser-Gerät angezeigt. Die Benachrichtigungsanfrage wird wie folgt angezeigt:
+Beachten Sie die Felder `mbox` und `state` sowie das Feld `eventToken` in jeder der [!DNL Target] Inhaltsoptionen. Diese sollten in der `SendNotifications()`-Anfrage angegeben werden, sobald jede Inhaltsoption angezeigt wird. Angenommen, die `product1`-Mbox wurde auf einem Nicht-Browser-Gerät angezeigt. Die Benachrichtigungsanfrage wird wie folgt angezeigt:
 
 ### \.NET
 
@@ -131,7 +131,7 @@ var mboxNotificationRequest = new TargetDeliveryRequest.Builder()
     .Build();
 ```
 
-Beachten Sie, dass wir sowohl den Mbox-Status als auch das Ereignis-Token eingeschlossen haben, das dem in der Vorabruf-Antwort bereitgestellten Angebot [!DNL Target] entspricht. Nachdem wir die Benachrichtigungsanforderung erstellt haben, können wir sie über die API-Methode `SendNotifications()` an [!DNL Target] senden:
+Beachten Sie, dass wir sowohl den Mbox-Status als auch das Ereignis-Token entsprechend dem [!DNL Target] Angebot in der Prefetch-Antwort eingeschlossen haben. Nachdem wir die Benachrichtigungsanfrage erstellt haben, können wir sie über die `SendNotifications()`-API-Methode an [!DNL Target] senden:
 
 ### \.NET
 

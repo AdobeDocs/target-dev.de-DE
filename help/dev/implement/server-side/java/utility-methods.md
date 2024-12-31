@@ -1,6 +1,6 @@
 ---
-title: Verwenden von Dienstprogrammmethoden im Java-SDK [!DNL Adobe Target] Java
-description: Erfahren Sie, wie Sie Hilfsmethoden verwenden, die über mehrere Controller hinweg wiederverwendbar sind und in eine separate Dienstprogrammklasse verschoben werden können.
+title: Verwenden von Dienstprogrammmethoden in der  [!DNL Adobe Target] -Java-SDK
+description: Erfahren Sie, wie Sie Hilfsmethoden verwenden, die über Controller hinweg wiederverwendet werden können und in eine separate Dienstprogrammklasse verschoben werden können.
 feature: APIs/SDKs
 exl-id: 19418126-c4d8-4e6b-bb84-036b7fe0e6ec
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # Dienstprogrammmethoden (Java)
 
-Diese Hilfsmethoden können über mehrere Controller hinweg wiederverwendet und in eine separate Dienstprogrammklasse verschoben werden.
+Diese Hilfsmethoden sind über Controller hinweg wiederverwendbar und können in eine separate Dienstprogrammklasse verschoben werden.
 
 ## Methoden
 

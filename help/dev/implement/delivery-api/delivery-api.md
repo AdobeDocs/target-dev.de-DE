@@ -1,7 +1,7 @@
 ---
 title: Adobe Target-Bereitstellungs-API
 description: Adobe Target-Bereitstellungs-API
-keywords: Versandschnittstelle
+keywords: Bereitstellungs-API
 feature: APIs/SDKs
 exl-id: c01b79d7-a14b-49d9-8f28-753fa85a5b39
 source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7

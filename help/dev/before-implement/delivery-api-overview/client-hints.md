@@ -1,6 +1,6 @@
 ---
 title: Client-Hinweise zur Adobe Target-Bereitstellungs-API
-description: Wie verwende ich Client-Hinweise in der [!DNL Adobe Target] Bereitstellungs-API?
+description: Wie verwende ich Client Hints in der  [!DNL Adobe Target] -Bereitstellungs-API?
 exl-id: 317b9d7d-5b98-464e-9113-08b899ee1455
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -10,21 +10,21 @@ ht-degree: 0%
 
 ---
 
-# Client-Hinweise und der [!UICONTROL Adobe Target Delivery API]
+# Client Hints und die [!UICONTROL Adobe Target Delivery API]
 
-Client-Hinweise müssen bei der Angebotsanforderung an [!DNL Adobe Target] gesendet werden.
+Client Hints müssen bei der Angebotsanfrage an [!DNL Adobe Target] gesendet werden.
 
-Im Allgemeinen wird empfohlen, alle verfügbaren Client-Hinweise an [!DNL Target] zu senden. Weitere Informationen finden Sie unter [Benutzeragent und Client-Hinweise](/help/dev/implement/client-side/atjs/user-agent-and-client-hints.md) im Abschnitt [Client-seitige Implementierung](../../implement/client-side/overview.md) .
+Im Allgemeinen wird empfohlen, alle verfügbaren Client Hints an [!DNL Target] zu senden. Weitere Informationen finden Sie [User-agent und Client Hints](/help/dev/implement/client-side/atjs/user-agent-and-client-hints.md) im Abschnitt [Client-seitige Implementierung](../../implement/client-side/overview.md).
 
-## Direkte Aufrufe der Bereitstellungs-API
+## Bereitstellungs-API - Direktaufrufe
 
-### Über den Browser
+### Vom Browser
 
-In diesem Fall sendet der Browser über Anforderungsheader automatisch entropy-Client-Hinweise an [!DNL Target]. Bei dieser Implementierung gibt es jedoch einige Einschränkungen auf Browserebene. Zuerst werden vom Browser keine Client Hints-Header gesendet, es sei denn, die Anfrage wird über HTTPS gesendet. Zweitens: Client-Hinweise werden bei der ersten Anfrage nicht an [!DNL Target] auf der Seite gesendet. Client Hints-Header werden nur bei der zweiten Anforderung und anschließend bei allen Anfragen gesendet. Das bedeutet, dass die Zielgruppensegmentierung und Personalisierung nicht durch [!DNL Target] beim ersten Seitenbesuch durchgeführt werden kann. Um diese beiden Einschränkungen zu umgehen, empfehlen wir dringend, die User Agent Client Hints-API im Browser zu verwenden, um die Client-Hinweise direkt zu erfassen und in der Anfrage-Payload zu senden.
+In diesem Fall sendet der Browser Client Hints mit niedriger Entropie automatisch über Anfrage-Header an [!DNL Target]. Es gibt jedoch einige Einschränkungen auf Browser-Ebene bei dieser Implementierung. Erstens - es werden keine Client Hints-Header vom Browser gesendet, es sei denn, die Anfrage erfolgt über HTTPS. Zweitens - Client-Hinweise werden bei der ersten Anforderung nicht an [!DNL Target] auf der Seite gesendet. Client Hints-Header werden nur bei der zweiten Anfrage und danach bei allen Anfragen gesendet. Dies bedeutet, dass die Zielgruppensegmentierung und Personalisierung vom [!DNL Target] beim ersten Seitenbesuch nicht durchgeführt werden kann. Um diese beiden Einschränkungen zu umgehen, empfehlen wir dringend, die User Agent Client Hints-API im Browser zu verwenden, um die Client Hints direkt zu erfassen und über die Anfrage-Payload zu senden.
 
 ### Von einem Server
 
-In diesem Fall müssen die Client-Hinweise in der Anfrage der Bereitstellungs-API manuell vom Browser an [!DNL Target] weitergeleitet werden.
+In diesem Fall müssen die Client Hints manuell vom Browser an [!DNL Target] auf der Bereitstellungs-API-Anfrage weitergeleitet werden.
 
 ```
 curl -X POST 'http://mboxedge28.tt.omtrdc.net/rest/v1/delivery?client=myClientCode&sessionId=abcdefghijkl00014' -d '{
@@ -52,4 +52,4 @@ curl -X POST 'http://mboxedge28.tt.omtrdc.net/rest/v1/delivery?client=myClientCo
 
 ## Formatierung
 
-Die Header &quot;Client Hints&quot;Sec-CH-UA und Sec-CH-UA-Full-Version-List haben ein anderes Format als die Ergebnisse der Browser-API &quot;Client Hints&quot;(navigator.userAgentData.brands/navigator.userAgentData.getHighEntropyValues). Beide Formate werden von der Bereitstellungs-API akzeptiert. Die Bereitstellungs-API normalisiert die Werte in dem Format, das in den Anforderungsheadern verwendet wird. Beachten Sie dies beim Zugriff auf Client-Hints in Profilskripten.
+Die Client Hints-Header Sec-CH-UA und Sec-CH-UA-Full-Version-List haben ein anderes Format als die Ergebnisse aus der Browser-API für Client Hints (navigator.userAgentData.brands/navigator.userAgentData.getHighEntropyValues). Beide Formate werden von der Bereitstellungs-API akzeptiert. Die Bereitstellungs-API normalisiert die Werte in das in den Anfragekopfzeilen verwendete Format. Dies ist wichtig, wenn Sie in Profilskripten auf Client-Hinweise zugreifen.

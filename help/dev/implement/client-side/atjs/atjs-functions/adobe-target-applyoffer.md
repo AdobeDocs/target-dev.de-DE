@@ -1,7 +1,7 @@
 ---
-keywords: adobe.target.applyOffer, applyOffer, applyoffer, apply offer, at.js, features, function, $8
-description: Verwenden Sie die Funktion [!UICONTROL adobe.target.applyOffer()] für die JavaScript-Bibliothek [!DNL Adobe Target] at.js , um den Antwortinhalt anzuwenden.
-title: Wie verwende ich die Funktion "[!UICONTROL adobe.target.applyOffer()]"?
+keywords: adobe.target.applyOffer, applyOffer, applyOffer, apply offer, at.js, Funktionen, Funktion, $8
+description: Verwenden Sie die [!UICONTROL adobe.target.applyOffer()]-Funktion für die  [!DNL Adobe Target] .js-JavaScript-Bibliothek , um den Antwortinhalt anzuwenden.
+title: Wie verwende ich die [!UICONTROL adobe.target.applyOffer()]?
 feature: at.js
 exl-id: 957bbe92-8012-4bd5-95d6-1ae38b72bb16
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -13,7 +13,7 @@ ht-degree: 69%
 
 # [!UICONTROL adobe.target.applyOffer(options)]
 
-Diese Funktion dient zum Anwenden des Antwortinhalts mit [!DNL Adobe Target].
+Diese Funktion dient zum Anwenden des Antwortinhalts auf [!DNL Adobe Target].
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ Der Optionsparameter ist obligatorisch und hat die folgende Struktur:
 | Schlüssel | Typ | Erforderlich | Beschreibung |
 |--- |--- |--- |--- |
 | mbox | Zeichenfolge | Ja | Name der Mbox<br />Bei at.js 1.3.0 (und höher) erzwingt Target die Verwendung des Mbox-Schlüssels. Dieser Schlüssel war früher erforderlich. Target erzwingt seine Verwendung jedoch nun, um sicherzustellen, dass Target ordnungsgemäß validiert ist und Kunden die Funktion richtig verwenden. |
-| selector | Zeichenfolge oder DOM-Element | Nein | HTML-Element oder „selector“ in CSS wird dazu verwendet, das HTML-Element zu identifizieren, in dem die Angebotsinhalte platziert werden sollten. Wenn der Selektor nicht angegeben ist, geht Target davon aus, dass das HTML-Element HTML-HEAD verwenden sollte. |
+| selector | Zeichenfolge oder DOM-Element | Nein | HTML-Element oder „selector“ in CSS wird dazu verwendet, das HTML-Element zu identifizieren, in dem die Angebotsinhalte platziert werden sollten. Wenn kein Selektor bereitgestellt wird, geht Target davon aus, dass das HTML-Element HTML-HEAD verwenden sollte. |
 | Angebot | Array | Ja | Eine Reihe von Aktionen, die auf das Element angewendet werden sollen |
 
 ## Beispiel

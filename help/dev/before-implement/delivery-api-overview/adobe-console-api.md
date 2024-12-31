@@ -13,6 +13,6 @@ ht-degree: 0%
 
 # Adobe Admin Console-APIs
 
-Verwalten Sie Benutzer und Produktberechtigungen über die [!UICONTROL Adobe User Management] und die [!UICONTROL User Sync API]s.
+Verwalten Sie Benutzer und Produktberechtigungen über die [!UICONTROL Adobe User Management] und [!UICONTROL User Sync API].
 
-Weitere Informationen finden Sie unter [Verwalten von Benutzern und Produktberechtigungen, der API-Methode](https://developer.adobe.com/umapi/){target=_blank} auf der Website *Adobe Developer* .
+Weitere Informationen finden Sie unter [Verwalten von Benutzern und Produktberechtigungen, auf die ](https://developer.adobe.com/umapi/){target=_blank}-Weise *auf der* Adobe Developer-Website.

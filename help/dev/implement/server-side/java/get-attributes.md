@@ -1,6 +1,6 @@
 ---
-title: Verwenden von getAttributes in [!DNL Adobe Target] mit dem Java-SDK
-description: Erfahren Sie, wie Sie mit getAttributes() Experimente und personalisierte Erlebnisse aus  [!DNL Target]  abrufen und Attributwerte extrahieren können.
+title: Verwenden von getAttributes in  [!DNL Adobe Target]  mit der Java-SDK
+description: Erfahren Sie, wie Sie mit getAttributes() Experimente und personalisierte Erlebnisse aus abrufen  [!DNL Target]  Attributwerte extrahieren können.
 feature: APIs/SDKs
 exl-id: e493e1b9-7180-4a7c-b98d-be84cc3a57c3
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -28,22 +28,22 @@ Attributes TargetClient.getAttributes(TargetDeliveryRequest targetRequest, Strin
 
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
-| targetRequest | TargetDeliveryRequest | Ja | Keine | Dieselbe Zielanforderung wie für [Angebote abrufen &#x200B;](get-offers.md) |
-| mboxNames | var-args-Array | Nein | Keine | Ein var-args-Array mit Mbox-Namen |
+| targetRequest | targetDeliveryRequest | Ja | Keine | &#x200B; Dieselbe Zielgruppenanfrage wie für „Angebote [&quot; ](get-offers.md) |
+| mboxNames | var-args-Array | Nein | Keine | Ein var-args-Array von mbox-Namen |
 
 
 ## Ergebnis
 
-Ein `Attributes` -Objekt wird von `TargetClient.getAttributes()` zurückgegeben, das die folgenden Methoden aufweist:
+Ein `Attributes` wird von `TargetClient.getAttributes()` zurückgegeben, das die folgenden Methoden aufweist:
 
 | Name | Typ | Beschreibung |
 | --- | --- | --- |
-| getBoolean(mboxName, key) | Boolesch | Gibt den Wert für einen angegebenen Mbox-Namen und Attributschlüssel aus |
-| getString(mboxName, key) | Zeichenfolge | Gibt den Wert für einen angegebenen Mbox-Namen und Attributschlüssel aus |
-| getInteger(mboxName, key) | Ganzzahl | Gibt den Wert für einen angegebenen Mbox-Namen und Attributschlüssel aus |
-| getDouble(mboxName, key) | Doppelt | Gibt den Wert für einen angegebenen Mbox-Namen und Attributschlüssel aus |
-| toMboxMap(mboxName) | Landkarte | Gibt eine einfache Zuordnung mit Schlüsselwertpaaren zurück |
-| getResponse() | TargetDeliveryResponse | Gibt das Antwortobjekt zurück, das normalerweise von getOffers zurückgegeben wird |
+| getBoolean(mboxName, key) | Boolesch | Gibt den Wert für einen angegebenen Mbox-Namen und einen Attributschlüssel zurück. |
+| getString(mboxName, key) | Zeichenfolge | Gibt den Wert für einen angegebenen Mbox-Namen und einen Attributschlüssel zurück. |
+| getInteger(mboxName, key) | Ganzzahl | Gibt den Wert für einen angegebenen Mbox-Namen und einen Attributschlüssel zurück. |
+| getDouble(mboxName, key) | Doppelt | Gibt den Wert für einen angegebenen Mbox-Namen und einen Attributschlüssel zurück. |
+| toMboxMap(mboxName) | Landkarte | Gibt eine einfache Zuordnung mit Schlüsselwertpaaren zurück. |
+| getResponse() | targetDeliveryResponse | Gibt das Antwortobjekt zurück, das normalerweise von getOffers zurückgegeben wird |
 
 ## Beispiel
 

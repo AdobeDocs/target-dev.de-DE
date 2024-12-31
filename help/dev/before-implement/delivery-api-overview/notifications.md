@@ -1,7 +1,7 @@
 ---
 title: Adobe Target-Bereitstellungs-API-Benachrichtigungen
-description: Wie löst ich Benachrichtigungen mit dem [!UICONTROL Adobe Target Delivery API] aus?
-keywords: Versandschnittstelle
+description: Wie löse ich Benachrichtigungen mithilfe der [!UICONTROL Adobe Target Delivery API] aus?
+keywords: Bereitstellungs-API
 exl-id: 711388fd-2c1f-4ca4-939f-c56dc4bdc04a
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Benachrichtigungen
 
-Benachrichtigungen sollten ausgelöst werden, wenn eine vorab abgerufene Mbox oder Ansicht besucht oder für den Endbenutzer gerendert wurde.
+Benachrichtigungen sollten ausgelöst werden, wenn eine im Voraus abgerufene mbox oder Ansicht besucht oder für den Endbenutzer gerendert wurde.
 
-Damit Benachrichtigungen für die richtige Mbox oder Ansicht ausgelöst werden, müssen Sie die entsprechenden `eventToken` für jede Mbox oder Ansicht im Auge behalten. Benachrichtigungen mit dem korrekten Wert `eventToken` für die entsprechenden Mboxes oder Ansichten müssen ausgelöst werden, damit die Berichterstellung korrekt dargestellt wird.
+Damit Benachrichtigungen für die richtige Mbox oder Ansicht ausgelöst werden, müssen Sie für jede Mbox oder Ansicht den Überblick über die entsprechenden `eventToken` behalten. Benachrichtigungen mit den richtigen `eventToken` für die entsprechenden Mboxes oder Ansichten müssen ausgelöst werden, damit Berichte korrekt widergespiegelt werden.
 
-## Benachrichtigungen für vorab abgerufene Mboxes
+## Benachrichtigungen für im Voraus abgerufene Mboxes
 
-Eine oder mehrere Benachrichtigungen können über einen einzigen Versandaufruf gesendet werden. Bestimmen Sie, ob die zu verfolgende Metrik für jede Mbox entweder `click` oder `display` ist, damit die `type` der Benachrichtigung korrekt angezeigt werden kann. Geben Sie außerdem für jede Benachrichtigung einen `id` ein, damit festgestellt werden kann, ob eine Benachrichtigung über den [!UICONTROL  Adobe Target Delivery API] korrekt gesendet wurde. Die `timestamp` ist auch wichtig, um an [!DNL Target] weitergeleitet zu werden, um anzugeben, wann die `click` oder `display` für eine bestimmte Mbox zu Berichtszwecken aufgetreten sind.
+Eine oder mehrere Benachrichtigungen können über einen einzigen Versandaufruf gesendet werden. Ermitteln Sie, ob es sich bei der zu verfolgenden Metrik entweder um eine `click` oder eine `display` für jede Mbox handelt, damit die `type` der Benachrichtigung korrekt dargestellt werden kann. Übergeben Sie außerdem für jede Benachrichtigung eine `id`, damit festgestellt werden kann, ob eine Benachrichtigung korrekt über die gesendet wurde[!UICONTROL  Adobe Target Delivery API]. Die `timestamp` ist auch wichtig, an [!DNL Target] weitergeleitet zu werden, um anzugeben, wann die `click` oder `display` für eine bestimmte Mbox zu Berichtszwecken aufgetreten ist.
 
 ```
 curl -X POST \
@@ -81,7 +81,7 @@ curl -X POST \
   }'
 ```
 
-Der obige Beispielaufruf führt zu einer Antwort, die anzeigt, dass die `notifications`-Anfrage erfolgreich verarbeitet wurde.
+Der obige Beispielaufruf führt zu einer Antwort, die anzeigt, dass die `notifications` erfolgreich verarbeitet wurde.
 
 ```
 {
@@ -106,11 +106,11 @@ Der obige Beispielaufruf führt zu einer Antwort, die anzeigt, dass die `notific
 }
 ```
 
-Wenn alle an [!DNL Target] gesendeten `notifications` korrekt verarbeitet sind, werden sie im Array `notifications` in der Antwort angezeigt. Wenn jedoch eine `notifications` `id` fehlt, wurde diese bestimmte `notification` nicht durchlaufen. In diesem Szenario kann eine Wiederholungslogik eingerichtet werden, bis eine erfolgreiche `notification` -Antwort abgerufen wird. Stellen Sie sicher, dass für die Wiederholungslogik ein Timeout angegeben ist, sodass der API-Aufruf nicht blockiert und Leistungsverzögerungen verursacht.
+Wenn alle an [!DNL Target] gesendeten `notifications` ordnungsgemäß verarbeitet sind, werden sie im `notifications`-Array in der Antwort angezeigt. Wenn jedoch eine `notifications` `id` fehlt, ist diese `notification` nicht durchgegangen. In diesem Szenario kann eine Logik für weitere Zustellversuche eingerichtet werden, bis eine erfolgreiche `notification`-Antwort abgerufen wird. Stellen Sie sicher, dass für die Wiederholungslogik eine Zeitüberschreitung angegeben ist, damit der API-Aufruf nicht blockiert wird und zu Leistungsverzögerungen führt.
 
 ## Benachrichtigungen für vorab abgerufene Ansichten
 
-Eine oder mehrere Benachrichtigungen können über einen einzigen Versandaufruf gesendet werden. Bestimmen Sie, ob die zu verfolgende Metrik für jede Mbox entweder `click` oder `display` ist, damit der Benachrichtigungstyp korrekt angezeigt werden kann. Geben Sie außerdem für jede Benachrichtigung einen `id` ein, damit festgestellt werden kann, ob eine Benachrichtigung über den [!UICONTROL Adobe Target Delivery API] korrekt gesendet wurde. Der Zeitstempel ist auch wichtig, um an [!DNL Target] weitergeleitet zu werden, um anzugeben, wann die `click` oder `display` für eine bestimmte Ansicht zu Berichtszwecken aufgetreten sind.
+Eine oder mehrere Benachrichtigungen können über einen einzigen Versandaufruf gesendet werden. Ermitteln Sie, ob es sich bei der zu verfolgenden Metrik entweder um eine `click` oder eine `display` für jede Mbox handelt, damit der Typ der Benachrichtigung korrekt dargestellt werden kann. Übergeben Sie außerdem für jede Benachrichtigung einen `id`, damit festgestellt werden kann, ob eine Benachrichtigung korrekt über die [!UICONTROL Adobe Target Delivery API] gesendet wurde. Der Zeitstempel ist auch wichtig, um an [!DNL Target] weitergeleitet zu werden, um anzugeben, wann die `click` oder `display` für eine bestimmte Ansicht zu Berichtszwecken aufgetreten ist.
 
 ```
 curl -X POST \
@@ -161,7 +161,7 @@ curl -X POST \
 }'
 ```
 
-Der obige Beispielaufruf führt zu einer Antwort, die anzeigt, dass die `notifications`-Anfrage erfolgreich verarbeitet wurde.
+Der obige Beispielaufruf führt zu einer Antwort, die anzeigt, dass die `notifications` erfolgreich verarbeitet wurde.
 
 ```
 {
@@ -186,4 +186,4 @@ Der obige Beispielaufruf führt zu einer Antwort, die anzeigt, dass die `notific
 }
 ```
 
-Wenn alle an [!DNL Target] gesendeten `notifications` korrekt verarbeitet sind, werden sie im Array `notifications` in der Antwort angezeigt. Wenn jedoch eine `notifications` `id` fehlt, wurde diese bestimmte Benachrichtigung nicht ausgeführt. In diesem Szenario kann eine Wiederholungslogik eingerichtet werden, bis eine erfolgreiche Benachrichtigungsantwort abgerufen wird. Stellen Sie sicher, dass für die Wiederholungslogik ein Timeout angegeben ist, sodass der API-Aufruf nicht blockiert und Leistungsverzögerungen verursacht.
+Wenn alle an [!DNL Target] gesendeten `notifications` ordnungsgemäß verarbeitet sind, werden sie im `notifications`-Array in der Antwort angezeigt. Wenn jedoch eine `notifications` `id` fehlt, wurde diese Benachrichtigung nicht durchgeführt. In diesem Szenario kann eine Logik für weitere Zustellversuche eingerichtet werden, bis eine erfolgreiche Benachrichtigungsantwort abgerufen wird. Stellen Sie sicher, dass für die Wiederholungslogik eine Zeitüberschreitung angegeben ist, damit der API-Aufruf nicht blockiert wird und zu Leistungsverzögerungen führt.

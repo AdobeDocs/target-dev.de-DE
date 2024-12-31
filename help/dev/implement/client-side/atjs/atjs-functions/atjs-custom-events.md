@@ -1,6 +1,6 @@
 ---
-keywords: benutzerspezifische Ereignisse, at.js, Anforderung fehlgeschlagen, Anfrage erfolgreich, Inhaltswiedergabe fehlgeschlagen, Inhaltswiedergabe erfolgreich, Bibliothek geladen, Anforderungsstart, Start des Inhalts-Renderings, Inhaltswiedergabe ohne Angebote, Inhaltswiedergabe, Umleitung, benutzerspezifische Ereignisse2
-description: Verwenden Sie benutzerspezifische Ereignisse für die JavaScript-Bibliothek [!DNL Adobe Target] at.js , um benachrichtigt zu werden, wenn eine Mbox-Anforderung oder ein Angebot erfolgreich war oder fehlgeschlagen ist.
+keywords: Benutzerdefinierte Ereignisse, at.js, Anfrage fehlgeschlagen, Anfrage erfolgreich, Content Rendering fehlgeschlagen, Content Rendering erfolgreich, Bibliothek geladen, Request Start, Content Rendering Start, Content Rendering keine Angebote, Content Rendering Redirect, Custom Events2
+description: Verwenden Sie benutzerdefinierte Ereignisse für die  [!DNL Adobe Target] .js-JavaScript-Bibliothek, die benachrichtigt werden, wenn eine Mbox-Anfrage oder ein Angebot fehlschlägt oder erfolgreich ist.
 title: Wie verwende ich benutzerdefinierte at.js-Ereignisse?
 feature: at.js
 exl-id: a4baed9a-9eb8-4343-9834-709b03e44ca2
@@ -15,7 +15,7 @@ ht-degree: 71%
 
 Informationen zu `at.js custom events`, die Sie darüber informieren, ob eine Mbox-Anforderung oder ein Angebot erfolgreich war oder fehlgeschlagen ist.
 
-In der Vergangenheit ließ mbox.js (jetzt nicht mehr unterstützt) anderen JavaScript-Code, der auf der Seite ausgeführt wird, nicht wissen, was hinter den Kulissen geschieht. Dank der Weiterentwicklung von at.js konnten wir dieses Problem glücklicherweise beheben.
+Bisher ließ mbox.js (inzwischen nicht mehr unterstützt) anderen auf der Seite ausgeführten JavaScript-Code nicht wissen, was hinter den Kulissen passiert. Dank der Weiterentwicklung von at.js konnten wir dieses Problem glücklicherweise beheben.
 
 Laut unseren Kunden gibt es mehrere Szenarien, über die sie gerne informiert werden möchten, darunter:
 
@@ -36,7 +36,7 @@ Sicherstellung, dass Ereignisse in verschiedenen Szenarien eingesetzt werden kö
 | mbox | Zeichenfolge | Name der Mbox |
 | message | Zeichenfolge | Enthält für Menschen lesbare Beschreibungen, beispielsweise zu Geschehnissen, zur Fehlermeldung usw. |
 | Verfolgung | Objekt | Enthält `sessionId` und `deviceId`. In einigen Fällen fehlt die `deviceId` möglicherweise, weil [!DNL Target] sie nicht vom Edge-Server abrufen konnte. |
-| Typ | Zeichenfolge | **Entscheidungsartefakt auf Gerät erfolgreich**<p>Konstante:<p>`adobe.target.event.ARTIFACT_DOWNLOAD_SUCCEEDED`<p>Zeichenfolgenwert: `artifactDownloadSucceeded`<p>Beschreibung: Wird aufgerufen, wenn das auf dem Gerät bereitgestellte Entscheidungsartefakt erfolgreich heruntergeladen wurde.<p>**Entscheidungsartefakt auf dem Gerät fehlgeschlagen**<p>Konstante: `adobe.target.event.ARTIFACT_DOWNLOAD_FAILED`<p>Zeichenfolgenwert: `artifactDownloadFailed`<p>Beschreibung: Wird aufgerufen, wenn das on-device Decisioning-Artefakt nicht heruntergeladen werden konnte. |
+| Typ | Zeichenfolge | **Artefakt bei der geräteinternen Entscheidungsfindung erfolgreich**<p>Konstante:<p>`adobe.target.event.ARTIFACT_DOWNLOAD_SUCCEEDED`<p>Zeichenfolgenwert: `artifactDownloadSucceeded`<p>Beschreibung: Wird aufgerufen, wenn das Artefakt „On-Device Decisioning“ erfolgreich heruntergeladen wurde.<p>**Artefakt bei der geräteinternen Entscheidungsfindung fehlgeschlagen**<p>Konstante: `adobe.target.event.ARTIFACT_DOWNLOAD_FAILED`<p>Zeichenfolgenwert: `artifactDownloadFailed`<p>Beschreibung: Wird aufgerufen, wenn das Artefakt für die geräteinterne Entscheidungsfindung nicht heruntergeladen werden konnte. |
 
 ## Nutzung
 
@@ -46,8 +46,8 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(event) 
 });
 ```
 
-## Schulungsvideo: Antwort-Token und der benutzerdefinierte at.js-Ereignisse ![Tutorial-Badge](../../../assets/tutorial.png)
+## Schulungsvideo: Antwort-Token und die benutzerdefinierten at.js-Ereignisse ![Tutorial-Badge](../../../assets/tutorial.png)
 
-Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mithilfe von Antwort-Token und benutzerspezifischen at.js-Ereignissen Profilinformationen von [!DNL Target] an Drittanbietersysteme weitergeben können.
+Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit Antwort-Token und benutzerdefinierten at.js-Ereignissen Profilinformationen von [!DNL Target] an Drittanbietersysteme weitergeben können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/23253/?quality=12)

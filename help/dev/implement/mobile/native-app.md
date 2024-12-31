@@ -1,7 +1,7 @@
 ---
-keywords: mobile app,aep sdk,native app,web views,native;swift,adobe experience platform mobile sdk,mobile sdk,nativer Code
-description: Erfahren Sie, wie Sie [!DNL Adobe Target] mit dem [!DNL AEP Mobile SDK]  in eine native App mit Webansichten implementieren.
-title: Implementieren von [!DNL Adobe Target] in eine mobile App, die nativen Code mit Webansichten verwendet
+keywords: Mobile App,AEP-SDK,native App,Web-Ansichten,nativ;SWIFT,Adobe Experience Platform Mobile SDK,Mobile SDK,nativer Code
+description: Erfahren Sie, wie Sie  [!DNL Adobe Target]  mit  [!DNL AEP Mobile SDK]  in einer nativen App mit Web-Ansichten implementieren.
+title: Implementieren  [!DNL Adobe Target]  in einer Mobile App, die nativen Code mit Web-Ansichten verwendet
 feature: Implement Mobile
 role: Developer
 exl-id: 3dd2e1d7-c744-4ba8-aaa4-6c2fe64d01fa
@@ -12,25 +12,25 @@ ht-degree: 0%
 
 ---
 
-# Implementieren von [!DNL Target] mit dem [!DNL AEP Mobile SDK] in einer nativen App mit Webansichten
+# Implementieren von [!DNL Target] mit dem [!DNL AEP Mobile SDK] in einer nativen App mit Web-Ansichten
 
-In diesem Artikel werden Best Practices für die Implementierung von [!DNL Adobe Target] in einer mobilen App vorgestellt, die nativen Code mit Webansichten verwendet, die die [!DNL Adobe Experience Platform Mobile SDK] verwenden.
+In diesem Artikel werden Best Practices für die Implementierung von [!DNL Adobe Target] in einer Mobile App vorgestellt, die nativen Code mit Web-Ansichten verwendet, die den -[!DNL Adobe Experience Platform Mobile SDK] verwenden.
 
-In diesem Artikel wird eine iOS-Beispielanwendung mit dem Code [[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank} und einer Integration mit dem Namen [!DNL Target] verwendet, die in [Swift aus dem GitHub-Repository geschrieben wurden](https://github.com/adobe/aep-sdk-app/){target=_blank}.
+In diesem Artikel werden eine Beispiel-App für iOS mit dem [[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/getting-started/){target=_blank} und eine [!DNL Target] Integration verwendet, die in [Swift aus dem GitHub-Repository geschrieben wurde](https://github.com/adobe/aep-sdk-app/){target=_blank}.
 
-In der realen Welt verwendet Ihre Enterprise-App wahrscheinlich Webansichten in Ihrer mobilen App. Eine Webansicht ist ein Container, der eine Webseite mithilfe einer URL lädt. Der Container ähnelt einem Browserfenster ohne Steuerelemente. In iOS funktioniert der Webansichtsbehälter bei der Verarbeitung von Webseiten als Safari-Browser.
+In der realen Welt verwendet Ihre Unternehmens-App wahrscheinlich Web-Ansichten in Ihrer Mobile App. Eine Webansicht ist ein Container, der eine Webseite mithilfe einer URL lädt. Der Container ähnelt einem Browserfenster ohne Steuerelemente. In iOS funktioniert der Webansichts-Container als Safari-Browser bei der Verarbeitung von Web-Seiten.
 
 ## Voraussetzungen 
 
-Um mit dem [!DNL Adobe Experience Platform Mobile SDK] beginnen zu können, müssen Sie einige vorbereitende Aufgaben ausführen.
+Um mit dem [!DNL Adobe Experience Platform Mobile SDK] zu beginnen, müssen Sie einige erforderliche Aufgaben ausführen.
 
-Weitere Informationen finden Sie unter [Adobe Target](https://developer.adobe.com/client-sdks/documentation/adobe-target/){target=_blank} in der Dokumentation zu [[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/){target=_blank}.
+Weitere Informationen finden Sie unter [Adobe Target](https://developer.adobe.com/client-sdks/documentation/adobe-target/){target=_blank} in der [[!DNL Adobe Experience Platform Mobile SDK]](https://developer.adobe.com/client-sdks/documentation/){target=_blank}.
 
-## Synchronisieren von nativem Code mit Webansichten
+## Synchronisieren von nativem Code mit Web-Ansichten
 
-Die Herausforderung bei der Implementierung von [!DNL Target] in einer nativen App mit Webansichten besteht darin, dass die [!DNL Adobe Experience Platform Mobile SDK] bereits alle erforderlichen Kennungen generiert hat, damit [!DNL Adobe] -Lösungen reibungslos funktionieren. Die Identifikatoren sind jedoch noch nicht für die Webansichten sichtbar, da sie sich nicht in der nativen Plattformumgebung befinden. Daher müssen Sie eine Verbindung erstellen, um einige SDK-IDs an die Webansichten zu übergeben, damit die Besucheridentität in der Webumgebung erhalten bleibt. Andernfalls werden doppelte Besuche ausgegeben, was sich auf Ihre Berichterstellung auswirkt.
+Die Herausforderung bei der Implementierung von [!DNL Target] in einer nativen App mit Web-Ansichten besteht darin, dass der [!DNL Adobe Experience Platform Mobile SDK] bereits alle erforderlichen Kennungen generiert hat, damit [!DNL Adobe] Lösungen nahtlos funktionieren. Die Identifikatoren sind jedoch noch nicht für die Web-Ansichten sichtbar, da sich diese Identifikatoren nicht in der nativen Platform-Umgebung befinden. Daher müssen Sie eine Brücke erstellen, um einige SDK-Kennungen an die Web-Ansichten zu übergeben, damit die Besucheridentität in der Web-Umgebung erhalten bleibt. Wird dies nicht ordnungsgemäß durchgeführt, kommt es zu doppelten Besuchen, was sich auf Ihre Berichte auswirkt.
 
-Glücklicherweise bietet der [!DNL Adobe Experience Platform Mobile SDK] eine praktische Methode zum Generieren von [!DNL Adobe] -Parametern, die erforderlich sind, damit Webansichten denselben Besucher nutzen und beibehalten können, wie im folgenden Beispielcode dargestellt:
+Glücklicherweise bietet die [!DNL Adobe Experience Platform Mobile SDK] eine praktische Methode zum Generieren [!DNL Adobe] Parameter, die erforderlich sind, damit Web-Ansichten für denselben Besucher nutzen und beibehalten werden, wie im folgenden Beispiel-Code gezeigt:
 
 ```swift
 Identity.appendTo(url: URL(string: url), completion: {appendedURL, error in
@@ -43,33 +43,33 @@ Identity.appendTo(url: URL(string: url), completion: {appendedURL, error in
 });
 ```
 
-Weitere Informationen zur `Identity.appendTo` -Methode und ein Beispiel für die Verwendung der -Methode finden Sie unter [Swift > Beispiel](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/tabs/api-reference/){target=_blank} in der *Mobile SDK-Dokumentation*.
+Weitere Informationen zur `Identity.appendTo` und ein Beispiel für die Verwendung der Methode finden Sie unter [Swift > Beispiel](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/tabs/api-reference/){target=_blank} in der *Dokumentation zu Mobile SDK*.
 
-Mithilfe von `Identity.appendTo`, diese URL:
+Diese URL verwendet `Identity.appendTo`:
 
 ```
 https://vadymus.github.io/ateng/at-order-confirmation/index.html?a=1&b=2
 ```
 
-wird in:
+Transformiert in:
 
 ```
 https://vadymus.github.io/ateng/at-order-confirmation/index.html?a=1&b=2&adobe_mc=TS%3D1660667205%7CMCMID%3D69624092487065093697422606480535692677%7CMCORGID%3DEB9CAE8B56E003697F000101%40AdobeOrg
 ```
 
-Wie Sie sehen können, wird der Parameter `adobe_mc` an die URL angehängt. Dieser Parameter enthält kodierte Werte für:
+Wie Sie sehen können, ist an die URL `adobe_mc` Parameter angehängt. Dieser Parameter enthält kodierte Werte für:
 
-* TS=1660667205: Der aktuelle Zeitstempel. Dieser Zeitstempel stellt sicher, dass die Webansicht keine abgelaufenen Werte erhält.
-* MCMID=69624092487065093697422606480535692677: Die [!UICONTROL Experience Cloud ID] (ECID). Wird auch als MID oder [!UICONTROL Marketing Cloud ID] bezeichnet, die für die lösungsübergreifende Besucheridentifizierung mit [!DNL Adobe] erforderlich ist.
+* TS=1660667205: Der aktuelle Zeitstempel. Dieser Zeitstempel stellt sicher, dass die Web-Ansicht keine abgelaufenen Werte erhält.
+* MCMID=69624092487065093697422606480535692677: Die [!UICONTROL Experience Cloud ID] (ECID). Wird auch als MID oder [!UICONTROL Marketing Cloud ID] bezeichnet, die für [!DNL Adobe] lösungsübergreifende Besucheridentifizierung erforderlich sind.
 * MCORGID=EB9CAE8B56E003697F000101@AdobeOrg: Die [!UICONTROL Adobe Organization ID].
 
-Die `Identity.getUrlVariables` ist eine alternative [!DNL Adobe Experience Platform Mobile SDK] -Methode, die eine entsprechend geformte Zeichenfolge zurückgibt, die die [!DNL Experience Cloud Identity Service]-URL-Variablen enthält. Weitere Informationen finden Sie unter [getUrlVariables](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#geturlvariables){target=_blank} in der *Identitäts-API-Referenz*.
+Die `Identity.getUrlVariables` ist eine alternative [!DNL Adobe Experience Platform Mobile SDK]-Methode, die eine entsprechend geformte Zeichenfolge zurückgibt, die die [!DNL Experience Cloud Identity Service] URL-Variablen enthält. Weitere Informationen finden Sie unter [getUrlVariables](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#geturlvariables){target=_blank} in der *Identity API-Referenz*.
 
-## Übergeben der [!DNL Target] Sitzungs-ID für das Erlebnis derselben Sitzung
+## Übergeben Sie die [!DNL Target] Sitzungs-ID für das Erlebnis in derselben Sitzung
 
-Ein weiterer Schritt ist erforderlich, damit die [!DNL Target]-Benutzer-Journey nahtlos über die nativen und Web-Ansichten hinweg funktioniert. Dieser Schritt umfasst das Extrahieren und Übergeben der [!DNL Target] Sitzungs-ID aus dem [!DNL Adobe Experience Platform Mobile SDK] an die Webansichten der mobilen App.
+Ein zusätzlicher Schritt ist erforderlich, damit die [!DNL Target]-Benutzer-Journey nahtlos über die native und die Web-Ansicht hinweg funktioniert. Dieser Schritt umfasst das Extrahieren und Übergeben der [!DNL Target] Sitzungs-ID aus dem [!DNL Adobe Experience Platform Mobile SDK] an die Web-Ansichten der Mobile App.
 
-Der `Target.getSessionId` extrahiert die Sitzungs-ID, die als `mboxSession` -Parameter an die Webansichts-URL übergeben werden kann:
+Der `Target.getSessionId` extrahiert die Sitzungs-ID, die als `mboxSession` Parameter an die Web-Ansicht-URL übergeben werden kann:
 
 ```swift
 Target.getSessionId { (id, err) in
@@ -77,15 +77,15 @@ Target.getSessionId { (id, err) in
 }
 ```
 
-## Testen in Webansichten
+## Testen in den Web-Ansichten
 
-Webvorschau-Links werden auf der Seite &quot;[!UICONTROL Activity detail]&quot;generiert, indem Sie auf den Link &quot;[[!UICONTROL Adobe QA]&quot;](/help/dev/implement/mobile/target-mobile-preview.md) klicken, um ein Popup anzuzeigen und jeden Erlebnisvorschau-Link zu kopieren. Dies ähnelt dem folgenden Beispiel:
+Webvorschau-Links werden auf der Seite [!UICONTROL Activity detail] generiert, indem Sie auf den Link [[!UICONTROL Adobe QA] klicken](/help/dev/implement/mobile/target-mobile-preview.md) um ein Popup zum Kopieren jedes Erlebnisvorschau-Links anzuzeigen, ähnlich dem folgenden:
 
 ```
 ?at_preview_token=mhFIzJSF7JWb-RsnakpBqi_s83Sl64hZp928VWpkwvI&at_preview_index=1_1&at_preview_listed_activities_only=true
 ```
 
-Webvorschau-Links enthalten zusätzliche Parameter `at_preview_index` und `at_preview_listed_activities_only`. Kopieren Sie diese Parameter, um mobile Vorschaulinks mit Weblink-Parametern zu erstellen.
+Webvorschau-Links enthalten zusätzliche `at_preview_index` und `at_preview_listed_activities_only`. Kopieren Sie diese Parameter, um für Mobilgeräte freundliche Vorschau-Links mit Weblink-Parametern zu erstellen.
 
 Beispiel:
 
@@ -93,7 +93,7 @@ Beispiel:
 com.adobe.targetmobile://?at_preview_token=mhFIzJSF7JWb-RsnakpBqhBwj-TiIlZsRTx_1QQuiXLIJFdpSLeEZwKGPUyy57O_&at_preview_index=1_1&at_preview_listed_activities_only=true
 ```
 
-Nach dem Öffnen des Links in einem iOS Safari-Browser erfasst Ihre App die URL in Ihrer `AppDelegate` -Klasse ähnlich dem folgenden Beispiel:
+Nach dem Öffnen des Links in einem iOS Safari-Browser erfasst Ihre App die URL in Ihrer `AppDelegate` ähnlich dem folgenden Beispiel:
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -101,14 +101,14 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
   //...
 ```
 
-Nachdem Sie alle erforderlichen Parameter in der App erfasst haben, können Sie sie bei Bedarf an das Internet übergeben:
+Nachdem Sie nun alle erforderlichen Parameter in der App erfasst haben, können Sie sie bei Bedarf an das Web übergeben:
 
 ```swift
 Identity.appendTo(url: URL(string: url), completion: {appendedURL, error in
   let urlWithWebPreviewLink = appendedURL + "&" + myPreviewLinkFromAppDelegate
 ```
 
-Die endgültige Ausgabe des Webansichts-Links könnte wie folgt aussehen:
+Die endgültige Ausgabe für den Web-Ansichtslink könnte wie folgt aussehen:
 
 ```
 https://vadymus.github.io/ateng/at-order-confirmation/index.html?a=1&b=2&adobe_mc=TS%3D1660667205%7CMCMID%3D69624092487065093697422606480535692677%7CMCORGID%3DEB9CAE8B56E003697F000101%40AdobeOrg&at_preview_token=mhFIzJSF7JWb-RsnakpBqi_s83Sl64hZp928VWpkwvI&at_preview_index=1_1&at_preview_listed_activities_only=true

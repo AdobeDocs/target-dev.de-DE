@@ -1,6 +1,6 @@
 ---
-title: Übersicht über die Adobe Target API
-description: Übersicht über die verschiedenen Adobe Target-APIs, einschließlich Versand-API, Reporting-API, Admin-API, Profil-API, Recommendations-API und Links zu Postman-Sammlungen.
+title: Übersicht über die Adobe Target-API
+description: Überblick über die verschiedenen Adobe Target-APIs, einschließlich Bereitstellungs-API, Reporting-API, Admin-API, Profil-API, Recommendations-API und Links zu Postman-Sammlungen.
 exl-id: bf886103-36af-4061-b8be-2fe645f45ff3
 feature: APIs/SDKs
 source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
@@ -12,32 +12,32 @@ ht-degree: 0%
 
 # Target-API - Übersicht
 
-In diesem Artikel werden die verschiedenen Target-APIs im Allgemeinen beschrieben, bevor der Schwerpunkt auf die spezifischen Anforderungen für die Admin- und Profil-APIs gelegt wird. Wenn Sie Target über die Benutzeroberfläche verwalten möchten, lesen Sie den Abschnitt [Administration des *Adobe Target Business User Guide*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).
+In diesem Artikel werden die verschiedenen Target-APIs im Allgemeinen beschrieben, bevor Sie sich auf die spezifischen Anforderungen der Admin- und Profil-APIs konzentrieren. Wenn Sie Target über die Benutzeroberfläche verwalten möchten, finden Sie weitere Informationen im Abschnitt [Administration“ des *Adobe Target Business-Benutzerhandbuchs*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).
 
 ## API-Typen
 
-Bei den Adobe Target-APIs handelt es sich um eine Sammlung von APIs, die für Adobe Target-Produkte wie Adobe Recommendations verwendet werden. Diese APIs ermöglichen die Erstellung datenreicher Benutzeroberflächen, mit denen Sie Daten bearbeiten und integrieren können.
+Die Adobe Target-APIs sind eine Sammlung von APIs, die Adobe Target-Produkte wie Adobe Recommendations unterstützen. Diese APIs ermöglichen die Erstellung von datenreichen Benutzeroberflächen, die Sie zum Bearbeiten und Integrieren von Daten verwenden können.
 
-Adobe Target-APIs können nach Typ gruppiert werden: Admin, Profil, Versand und Berichterstellung.
+Adobe Target-APIs können nach Typ gruppiert werden: Admin, Profil, Bereitstellung und Reporting.
 
 >[!NOTE]
 >
->Die Admin-APIs und Profil-APIs werden häufig kollektiv bezeichnet (&quot;Admin- und Profil-APIs&quot;), können aber auch separat referenziert werden (&quot;Admin-APIs&quot;und &quot;Profil-APIs&quot;). Die Recommendations-API ist eine spezifische Implementierung einer Target Admin-API.
+>Die Admin-APIs und Profil-APIs werden häufig gemeinsam bezeichnet („Admin- und Profil-APIs„), können aber auch separat bezeichnet werden („Admin-APIs“ und „Profil-APIs„). Die Recommendations-API ist eine spezifische Implementierung einer Target Admin-API.
 
-| API-Typ | Was es Ihnen ermöglicht | Downloadlink | Weitere hilfreiche Links |
+| API-Typ | Was sie Ihnen ermöglicht zu tun | Downloadlink | Weitere hilfreiche Links |
 | --- | --- | --- |--- |
-| [Admin](../administer/admin-api/admin-api-overview-new.md) | Erstellen, ändern und löschen Sie Aktivitäten, Zielgruppen, Angebote und andere Objekte (einschließlich Recommendations-Entitäten, Kriterien, Designs usw.). Die Recommendations-APIs sind eine Art Admin-API.) | <UL><li>[Postman-Sammlung der Target-Admin-API](https://developers.adobetarget.com/api/#admin-postman-collection)</li><li>[Recommendations API Postman Collection](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman)</li></UL> | [Verwenden von Recommendations-APIs](../before-administer/recs-api/overview.md) |
+| [Admin](../administer/admin-api/admin-api-overview-new.md) | Aktivitäten, Zielgruppen, Angebote und andere Objekte (einschließlich Recommendations-Entitäten, Kriterien, Designs usw.) erstellen, ändern und löschen. Die Recommendations-APIs sind eine Art Admin-API.) | <UL><li>[Target Admin-API - Postman-Sammlung](https://developers.adobetarget.com/api/#admin-postman-collection)</li><li>[Recommendations API Postman-Sammlung](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman)</li></UL> | [Verwenden von Recommendations-APIs](../before-administer/recs-api/overview.md) |
 | Profil | Abrufen und Ändern von in Adobe Target gespeicherten Benutzerprofilen. | [Postman-Sammlung der Target-Profil-API](https://developers.adobetarget.com/api/#profiles) |  |
-| [Bereitstellung](../implement/delivery-api/overview.md) | Rufen Sie optimierte und personalisierte Inhalte von Target für die Bereitstellung an einen Endbenutzer ab. | [Postman-Sammlung der Target-Bereitstellungs-API](/help/dev/before-implement/delivery-api-overview/getting-started.md#postman) |  |
-| [Berichterstellung](../administer/admin-api/admin-api-overview-new.md) | Exportieren Sie Aktivitätsergebnisse und andere Berichtsergebnisse. | Reporting-APIs sind in der [Target Admin API Postman-Sammlung](https://developers.adobetarget.com/api/#admin-postman-collection) enthalten. |  |
-| [Modelle](../administer/models-api/models-api-overview.md) | Verwalten Sie die Liste der Funktionen, die Target aus seinen maschinellen Lernmodellen ausschließen soll (die &quot;Blockierungsliste&quot;). Die Modelle-API ist eine Art Admin-API, wird hier jedoch separat aufgeführt, da sie eindeutig mit Objekten auf die Blockierungsliste setzt (), auf die über die Benutzeroberfläche nicht zugegriffen werden kann. |  |  |
+| [Bereitstellung](../implement/delivery-api/overview.md) | Rufen Sie optimierte und personalisierte Inhalte von Target ab, die an einen Endbenutzer gesendet werden sollen. | [Postman-Sammlung der Target-Bereitstellungs-API](/help/dev/before-implement/delivery-api-overview/getting-started.md#postman) |  |
+| [Berichterstellung](../administer/admin-api/admin-api-overview-new.md) | Exportieren Sie Aktivitätsergebnisse und andere Berichterstellungsergebnisse. | Reporting-APIs sind in der Sammlung [Target Admin-API Postman](https://developers.adobetarget.com/api/#admin-postman-collection) enthalten. |  |
+| [Modelle](../administer/models-api/models-api-overview.md) | Verwalten Sie die Liste der Funktionen, die Target aus seinen Modellen für maschinelles Lernen ausschließen soll (die &quot;Blockierungsliste„). Die Models-API ist eine Art Admin-API, sie wird hier jedoch aufgrund ihrer eindeutigen Vorgänge bei Objekten (Blockierungslisten), auf die nicht über die Benutzeroberfläche zugegriffen werden kann, separat aufgeführt. |  |  |
 
 ## API-Unterschiede
 
-Es gibt wichtige Unterschiede zwischen Target Admin-APIs (einschließlich der Recommendations-APIs) und Target-Bereitstellungs-APIs:
+Es gibt wichtige Unterschiede zwischen Target-Admin-APIs (einschließlich der Recommendations-APIs) und Target-Bereitstellungs-APIs:
 
-* Mit Admin-APIs können Sie verschiedene Aspekte von Target konfigurieren, die Sie auch in der Target-Benutzeroberfläche konfigurieren können. Eine Ausnahme bildet die Modelle-API, mit der Sie Aspekte von Target konfigurieren können, die nicht in der Benutzeroberfläche verfügbar sind. Unabhängig davon ist für **alle Admin-APIs eine Authentifizierung erforderlich.**
+* Mit Admin-APIs können Sie verschiedene Aspekte von Target konfigurieren, die Sie auch in der Target-Benutzeroberfläche konfigurieren können. Die Ausnahme bildet die Models-API, mit der Sie Aspekte von Target konfigurieren können, die nicht in der Benutzeroberfläche verfügbar sind. Unabhängig davon **alle Admin-APIs müssen authentifiziert werden.**
 
 * Mit Bereitstellungs-APIs können Sie Inhalte abrufen. Bereitstellungs-APIs erfordern keine Authentifizierung.
 
-Um Target Admin-APIs zu verwenden, müssen Sie die Authentifizierung mit [Adobe Developer Console](https://developer.adobe.com/console/home) konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren der Authentifizierung](../before-administer/configure-authentication.md).
+Um Target Admin-APIs verwenden zu können, müssen Sie die Authentifizierung mithilfe der [Adobe Developer Console](https://developer.adobe.com/console/home) konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren der Authentifizierung](../before-administer/configure-authentication.md).

@@ -1,6 +1,6 @@
 ---
-title: Proxy-Konfiguration im [!DNL Adobe Target] Java-SDK implementieren
-description: Erfahren Sie, wie Sie die TargetClient-Proxy-Konfiguration im Java SDK [!DNL Adobe Target] konfigurieren.
+title: Implementieren der Proxy-Konfiguration in der  [!DNL Adobe Target] -Java-SDK
+description: Erfahren Sie, wie Sie die TargetClient-Proxy-Konfiguration in der Java [!DNL Adobe Target] SDK konfigurieren.
 feature: APIs/SDKs
 exl-id: 32e8277d-3bba-4621-b9c7-3a49ac48a466
 source-git-commit: 59ab3f53e2efcbb9f7b1b2073060bbd6a173e380
@@ -12,11 +12,11 @@ ht-degree: 1%
 
 # Proxy-Konfiguration (Java)
 
-## Grundlegender Proxy
+## Basic Proxy
 
-Wenn für die Anwendung, die das SDK ausführt, ein Proxy für den Internetzugang erforderlich ist, muss die `TargetClient` mit einer Proxy-Konfiguration wie folgt konfiguriert werden.
+Wenn die Anwendung, die die SDK ausführt, einen Proxy benötigt, um auf das Internet zuzugreifen, muss die `TargetClient` wie folgt mit einer Proxy-Konfiguration konfiguriert werden.
 
-### Grundlegende Proxy-Konfiguration
+### Einfache Proxy-Konfiguration
 
 ```java {line-numbers="true"}
 ClientConfig clientConfig = ClientConfig.builder()
@@ -29,9 +29,9 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 ## Authentifizierung
 
-Wenn eine Proxy-Authentifizierung erforderlich ist, können die Anmeldeinformationen gemäß dem folgenden Beispiel als Parameter an den `ClientProxyConfig` -Konstruktor übergeben werden. Beachten Sie, dass dies nur für einfache Benutzername/Kennwort-Proxy-Authentifizierung funktioniert.
+Wenn eine Proxy-Authentifizierung erforderlich ist, können die Anmeldeinformationen als Parameter an den `ClientProxyConfig`-Konstruktor übergeben werden, wie im folgenden Beispiel dargestellt. Beachten Sie, dass dies nur für die einfache Benutzername/Kennwort-Proxy-Authentifizierung funktioniert.
 
-### Grundlegende Proxy-Authentifizierung
+### Einfache Proxy-Authentifizierung
 
 ```java {line-numbers="true"}
 ClientConfig clientConfig = ClientConfig.builder()
@@ -44,7 +44,7 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 ## Geräteinterne Entscheidungsfindung
 
-Für Anfragen zum Abrufen des Regelartefakts sollte Ihr Proxy so konfiguriert sein, dass die Antwort nicht zwischengespeichert wird. Wenn es jedoch nicht möglich ist, den Cache-Mechanismus des Proxys für diese Anforderung zu konfigurieren, verwenden Sie eine Konfigurationsoption als Problemumgehung, um den Cache auf Proxyebene zu umgehen. Diese Problemumgehung fügt die Kopfzeile `Authorization` mit einem leeren Zeichenfolgenwert zur Regelanforderung hinzu, was dem Proxy anzeigen sollte, dass die Antwort nicht zwischengespeichert werden soll.
+Für Anfragen zum Abrufen des Regelartefakts sollte Ihr Proxy so konfiguriert sein, dass die Antwort nicht zwischengespeichert wird. Wenn es jedoch nicht möglich ist, den Caching-Mechanismus des Proxys für diese Anfrage zu konfigurieren, verwenden Sie eine Konfigurationsoption als Problemumgehung, um den Cache auf Proxy-Ebene zu umgehen. Diese Problemumgehung fügt der Regelanforderung den `Authorization`-Header mit einem leeren Zeichenfolgenwert hinzu, der dem Proxy angeben sollte, dass die Antwort nicht zwischengespeichert werden soll.
 
 Um diese Problemumgehung zu aktivieren, legen Sie Folgendes fest:
 

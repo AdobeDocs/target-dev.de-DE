@@ -1,6 +1,6 @@
 ---
-title: Abonnieren von Ereignissen im [!DNL Adobe Target] .NET SDK
-description: Erfahren Sie, wie Sie mithilfe des Objekts [!UICONTROL OnDeviceDecisioningHandler] verschiedene Ereignisse abonnieren, die im .NET SDK auftreten.
+title: Abonnieren von Ereignissen in der  [!DNL Adobe Target] .NET-SDK
+description: Erfahren Sie, wie Sie mit dem [!UICONTROL OnDeviceDecisioningHandler]-Objekt verschiedene Ereignisse in .NET SDK abonnieren können.
 feature: APIs/SDKs
 exl-id: 7578033f-3de5-4d13-9739-46ad1269ec5f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,17 +14,17 @@ ht-degree: 5%
 
 ## Beschreibung
 
-Beim [ Initialisieren des SDK](initialize-sdk.md) kann ein optionaler `OnDeviceDecisioningReady` -Delegat für das `TargetClientConfig` -Objekt bereitgestellt werden, der aufgerufen wird, wenn das SDK für On-Device-Methodenaufrufe bereit ist. Es stehen auch einige weitere Delegaten für die Verarbeitung des [!UICONTROL on-device decisioning]-Artefakt-Downloads zur Verfügung.
+Beim [Initialisieren der SDK](initialize-sdk.md) kann ein optionaler `OnDeviceDecisioningReady`-Delegat für das `TargetClientConfig`-Objekt bereitgestellt werden, der aufgerufen wird, wenn die SDK für Methodenaufrufe auf dem Gerät bereit ist. Es gibt auch einige andere Delegaten, die für die Verarbeitung des [!UICONTROL on-device decisioning]-Artefaktdownloads verfügbar sind.
 
 ## Ereignis- 
 
-Die folgenden Delegate können für bestimmte Ereignisse konfiguriert werden:
+Die folgenden Delegaten können für bestimmte Ereignisse konfiguriert werden:
 
 | Name | Argumente | Beschreibung |
 | --- | --- | --- |
-| OnDeviceDecisioningReady | Keine | Wird nur einmal aufgerufen, wenn der Client zum ersten Mal für [!UICONTROL on-device decisioning] bereit ist |
-| ArtifactDownloadSucceeded | Zeichenfolgeninhalt der Artefaktdatei | Wird jedes Mal aufgerufen, wenn ein [!UICONTROL on-device decisioning] -Artefakt heruntergeladen wird |
-| ArtifactDownloadFailed | Ausnahme | Jedes Mal aufgerufen, wenn ein [!UICONTROL on-device decisioning] -Artefakt nicht heruntergeladen werden kann |
+| OnDeviceDecisioningReady | Keine | Wird nur aufgerufen, wenn der Client zum ersten Mal [!UICONTROL on-device decisioning] ist |
+| Artefakt-Download erfolgreich | Zeichenfolgeninhalte der Artefaktdatei | Wird jedes Mal aufgerufen, wenn ein [!UICONTROL on-device decisioning]-Artefakt heruntergeladen wird |
+| artifactDownload fehlgeschlagen | Ausnahme | Wird jedes Mal aufgerufen, wenn ein [!UICONTROL on-device decisioning]-Artefakt nicht heruntergeladen werden kann |
 
 ## Beispiel
 

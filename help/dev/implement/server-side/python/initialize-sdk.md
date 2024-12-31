@@ -1,6 +1,6 @@
 ---
-title: Initialisieren des Python-SDK mit der create-Methode
-description: Erfahren Sie, wie Sie mit der Methode create das Python-SDK initialisieren und die [!UICONTROL TargetClient] instanziieren, um für Experimente und personalisierte Erlebnisse Aufrufe an  [!DNL Adobe Target]  durchzuführen.
+title: Initialisieren von Python SDK mithilfe der create-Methode
+description: Erfahren Sie, wie Sie mit der create-Methode die Python-SDK initialisieren und die [!UICONTROL TargetClient] instanziieren können, um  [!DNL Adobe Target]  Experimente und personalisierte Erlebnisse aufzurufen.
 feature: APIs/SDKs
 exl-id: 3e231e8e-696d-45c7-b733-79bf99da5bec
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -10,10 +10,10 @@ ht-degree: 17%
 
 ---
 
-# Initialisieren des Python-SDK
+# Initialisieren von Python SDK
 
 Beschreibung
-Verwenden Sie die `create` -Methode, um das Python-SDK zu initialisieren und die [!UICONTROL Target Client] zu instanziieren, um [!DNL Adobe Target] für Experimente und personalisierte Erlebnisse aufzurufen.
+Verwenden Sie die `create`-Methode, um die Python-SDK zu initialisieren und die [!UICONTROL Target Client] zu instanziieren und [!DNL Adobe Target] für Experimente und personalisierte Erlebnisse aufzurufen.
 
 ## Methode
 
@@ -29,24 +29,24 @@ TargetClient.create(options)
 
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
-| client | str | Ja | Keine | [!UICONTROL Adobe Target client ID] |
-| organization_id | str | Ja | Keine | [!UICONTROL Experience Cloud Organization ID] |
-| Zeitüberschreitung | int | Nein | 3000 | Zeitüberschreitung in Millisekunden |
-| server_domain | str | Nein | `client.tt.omtrdc.net` |  | Überschreibt den standardmäßigen Hostnamen |
-| secure | bool | Nein | wahr | Nicht festgelegt zur Erzwingung des HTTP-Schemas |
-| Logger | Objekt | Nein | INFO-Logger |  | Ersetzt den standardmäßigen INFO-Logger |
+| Kunde | str | Ja | Keine | [!UICONTROL Adobe Target client ID] |
+| ORGANIZATION_ID | str | Ja | Keine | [!UICONTROL Experience Cloud Organization ID] |
+| Zeitüberschreitung | int | Nein | 3000 | Timeout in Millisekunden |
+| server_domain | str | Nein | `client.tt.omtrdc.net` |  | Überschreibt den Standard-Host-Namen |
+| sicher | boolesch | Nein | wahr | Einstellung zur Durchsetzung des HTTP-Schemas |
+| Holzfäller | Objekt | Nein | INFO-Logger |  | Ersetzt den standardmäßigen INFO-Logger |
 | target_location_hint | str | Nein | Keine | [!DNL Target] Standorthinweis |
-| property_token | str | Nein | Keine | [!DNL Target] Property-Token. Wenn hier angegeben, verwenden alle Aufrufe von get_offer diesen Wert. |
-| decisioning_method | str | Nein | serverseitig | Bestimmt, welche Entscheidungsmethode verwendet werden soll ([auf dem Gerät](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md), serverseitig, hybrid) |
-| poling_interval | int | Nein | 300000 (5 Minuten) | Abrufintervall für das [on-device decisioning rule artifact](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) (in ms) |
-| artifact_location | str | Nein | Keine | Eine vollständig qualifizierte URL für das [auf dem Gerät vorhandene Entscheidungsregel-Artefakt](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md). Überschreibt intern ermittelte Position. |
-| artifact_payload | Objekt | Nein | Keine | Die JSON-Payload des [auf dem Gerät befindlichen Entscheidungsregel-Artefakts](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md). Wenn angegeben, wird sie anstelle einer Anforderung von einer URL verwendet. |
-| [events](sdk-events.md) | dict &lt;str, callable> | Nein | Keine | Ein optionales Objekt mit Ereignisnamenschlüsseln und Callback-Funktionswerten |
-| environment_id | int | Nein | production | Die Umgebungs-ID [!DNL Target] |
-| Umgebung | str | Nein | production | Der Name der [!DNL Target] Umgebung |
-| cdn_environment | str | Nein | production | Name der CDN-Umgebung |
-| telemetry_enabled | bool | Nein | True | Wenn der Wert auf False festgelegt ist, werden die Telemetrikdaten nicht an [!DNL Adobe] gesendet |
-| version | str | Nein | Keine | Die Versionsnummer dieses SDK |
+| property_token | str | Nein | Keine | [!DNL Target]-Eigenschafts-Token Wenn hier angegeben, verwenden alle get_offers-Aufrufe diesen Wert. |
+| decisioning_method | str | Nein | Server-seitig | Bestimmt, welche Entscheidungsmethode verwendet werden soll ([geräteintern](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md) Server-seitig, hybrid) |
+| polling_interval | int | Nein | 300000 (5 Minuten) | Abrufintervall für das [Artefakt der geräteinternen Entscheidungsregel](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) (in ms) |
+| artifact_location | str | Nein | Keine | Eine vollständig qualifizierte URL zum [Artefakt der geräteinternen Entscheidungsregel](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md). Überschreibt den intern festgelegten Speicherort. |
+| artifact_payload | Objekt | Nein | Keine | Die JSON-Payload des [Artefakts der geräteinternen Entscheidungsregel](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md). Wenn angegeben, wird sie verwendet, anstatt eine URL anzufordern. |
+| [events](sdk-events.md) | dict &lt;str, callable> | Nein | Keine | Ein optionales Objekt mit Ereignisnamenschlüsseln und Rückruffunktionswerten |
+| environment_id | int | Nein | Produktion | Die ID der [!DNL Target] Umgebung |
+| Umgebung | str | Nein | Produktion | Der Name der [!DNL Target] |
+| cdn_environment | str | Nein | Produktion | Der Name der CDN-Umgebung |
+| telemetry_enabled | boolesch | Nein | True | Bei der Einstellung „False“ werden keine Telemetriedaten an [!DNL Adobe] gesendet |
+| version | str | Nein | Keine | Die Versionsnummer dieser SDK |
 
 ## Beispiel
 

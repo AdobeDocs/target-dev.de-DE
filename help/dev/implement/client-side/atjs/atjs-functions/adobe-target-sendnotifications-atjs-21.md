@@ -1,6 +1,6 @@
 ---
-keywords: adobe.target.sendNotifications, sendNotifications, sendnotifications, send notifications, sending notifications, notifications, at.js, Funktionen, funktion, $9
-description: Verwenden Sie [!UICONTROL adobe.target.sendNotifications()] für at.js, um Benachrichtigungen an den  [!DNL Target] Edge zu senden, wenn ein Erlebnis ohne Verwendung von [!UICONTROL applyOffer](s) gerendert wird. (at.js.2.1 +)
+keywords: adobe.target.sendNotifications, sendNotifications, sendNotifications, sendNotifications, send Notifications, notifications, at.js, Funktionen, Funktion, $9
+description: Verwenden Sie [!UICONTROL adobe.target.sendNotifications()] für at.js, um Benachrichtigungen an den  [!DNL Target]  zu senden, wenn ein Erlebnis nicht mit [!UICONTROL applyOffer](en) gerendert wird. (at.js.2.1 +)
 title: Wie verwende ich die Funktion adobe.target.sendNotifications()?
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
@@ -13,7 +13,7 @@ ht-degree: 83%
 
 # [!UICONTROL adobe.target.sendNotifications(options)]
 
-Diese Funktion sendet eine Benachrichtigung an den [!DNL Target] -Edge, wenn ein Erlebnis ohne Verwendung von `[!UICONTROL adobe.target.applyOffer()]` oder `[!UICONTROL adobe.target.applyOffers()]` gerendert wird.
+Diese Funktion sendet eine Benachrichtigung an [!DNL Target] Edge, wenn ein Erlebnis ohne Verwendung von `[!UICONTROL adobe.target.applyOffer()]` oder `[!UICONTROL adobe.target.applyOffers()]` gerendert wird.
 
 >[!NOTE]
 >
@@ -44,11 +44,11 @@ Diese Funktion sendet eine Benachrichtigung an den [!DNL Target] -Edge, wenn ein
 | Request > notifications > product > categoryId | Zeichenfolge | Nein | `<=` 128 Zeichen; darf nicht leer sein. | Kategorie-ID. |
 | Request > notifications > id | Zeichenfolge | Ja | `<=` 200 Zeichen. | Die Benachrichtigungs-ID wird in der Antwort zurückgegeben und gibt an, dass die Benachrichtigung erfolgreich verarbeitet wurde. |
 | Request > notifications > impressionId | Zeichenfolge | Nein | `<= 128` Zeichen. | Die Impressions-ID wird verwendet, um die aktuelle Benachrichtigung mit einer vorherigen Benachrichtigung oder Ausführungsanforderung zu verknüpfen. Stimmen beide überein, generieren die zweite sowie andere nachfolgende Anforderungen keine neue Impression für die Aktivität oder das Erlebnis. |
-| Anforderung > Benachrichtigungen > Typ | Zeichenfolge | Ja | &quot;click&quot;oder &quot;display&quot;wird unterstützt. | Benachrichtigungstyp. |
+| Anforderung > Benachrichtigungen > Typ | Zeichenfolge | Ja | „Klick“ oder „Anzeige“ wird unterstützt. | Benachrichtigungstyp. |
 | Request > notifications > timestamp | Nummer`<int64>` | Ja |  | Zeitstempel der Benachrichtigung in Millisekunden, die seit Beginn der UNIX-Epoche verstrichen sind. |
 | Request > notifications > tokens | Zeichenfolgen-Array | Ja |  | Eine Liste der Token für angezeigte Inhalte oder angeklickte Selektoren basierend auf dem Typ der Benachrichtigung. |
 | Request > notifications > mbox | Objekt | Nein |  | Benachrichtigungen für die Mbox. |
-| Request > notifications > mbox > name | Zeichenfolge | Nein | Keine leeren Werte zulässig.<p>Zulässige Zeichen: Siehe Hinweis nach dieser Tabelle. | Name der Mbox. |
+| Request > notifications > mbox > name | Zeichenfolge | Nein | Keine leeren Werte zulässig.<p>Zulässige Zeichen: Siehe Hinweis in dieser Tabelle. | Name der Mbox. |
 | Request > notifications > mbox > state | Zeichenfolge | Nein |  | Mbox-Statustoken. |
 | Request > notifications > view | Objekt | Nein |  |  |
 | Request > notifications > view > id | Ganzzahl `<int64>` | Nein |  | Ansicht-ID Die ID, die der Ansicht zugewiesen wurde, als die Ansicht über die Ansicht-API erstellt wurde. |
@@ -118,4 +118,4 @@ adobe.target.getOffers({
 
 >[!NOTE]
 >
->Wenn Sie [!DNL Adobe Analytics], `[!UICONTROL getOffers()]` nur mit Vorabruf und `[!UICONTROL sendNotifications()]` verwenden, muss die [!DNL Analytics] -Anfrage ausgelöst werden, nachdem `[!UICONTROL sendNotifications()]` ausgeführt wurde. Dadurch soll sichergestellt werden, dass die durch `[!UICONTROL sendNotifications()]` generierte SDID mit der an [!DNL Analytics] und [!DNL Target] gesendeten SDID übereinstimmt.
+>Wenn Sie [!DNL Adobe Analytics] verwenden, `[!UICONTROL getOffers()]` nur mit Vorabruf und `[!UICONTROL sendNotifications()]`, muss die [!DNL Analytics] nach Ausführung von `[!UICONTROL sendNotifications()]` ausgelöst werden. Dadurch soll sichergestellt werden, dass die von `[!UICONTROL sendNotifications()]` generierte SDID mit der an [!DNL Analytics] und [!DNL Target] gesendeten SDID übereinstimmt.

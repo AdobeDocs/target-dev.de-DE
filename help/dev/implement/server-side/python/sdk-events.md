@@ -1,6 +1,6 @@
 ---
-title: Abonnieren von Ereignissen im  [!DNL Adobe Target] Python-SDK
-description: Erfahren Sie, wie Sie mithilfe des Objekts [!UICONTROL OnDeviceDecisioningHandler] verschiedene Ereignisse abonnieren, die im Python-SDK auftreten.
+title: Abonnieren von Ereignissen in der  [!DNL Adobe Target] -SDK
+description: Erfahren Sie, wie Sie mithilfe des [!UICONTROL OnDeviceDecisioningHandler]-Objekts verschiedene Ereignisse abonnieren, die in der Python-SDK auftreten.
 feature: APIs/SDKs
 exl-id: 4e32e3b5-6072-4703-b09d-abb467aa1304
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,17 +14,17 @@ ht-degree: 3%
 
 ## Beschreibung
 
-Beim [ Initialisieren des SDK](initialize-sdk.md) ist das `options["events"]` -Attribut ein optionales Objekt mit Ereignisnamenschlüsseln und Callback-Funktionswerten. Sie kann zum Abonnieren verschiedener Ereignisse im SDK verwendet werden. Beispielsweise kann das `client_ready` -Ereignis mit einer Callback-Funktion verwendet werden, die aufgerufen wird, wenn das SDK für Methodenaufrufe bereit ist.
+Beim [Initialisieren der SDK](initialize-sdk.md) ist das `options["events"]`-dict ein optionales Objekt mit Ereignisnamenschlüsseln und Rückruffunktionswerten. Sie kann verwendet werden, um verschiedene Ereignisse zu abonnieren, die innerhalb der SDK auftreten. Beispielsweise kann das `client_ready`-Ereignis mit einer Rückruffunktion verwendet werden, die aufgerufen wird, wenn die SDK für Methodenaufrufe bereit ist.
 
-Wenn die Funktion `callback` aufgerufen wird, wird ein Ereignisobjekt übergeben. Jedes Ereignis hat einen `type` -Wert, der dem Ereignisnamen entspricht, und einige Ereignisse enthalten zusätzliche Eigenschaften mit relevanten Informationen.
+Wenn die `callback` aufgerufen wird, wird ein Ereignisobjekt übergeben. Jedes Ereignis verfügt über einen `type`, der dem Ereignisnamen entspricht, und einige Ereignisse enthalten zusätzliche Eigenschaften mit relevanten Informationen.
 
 ## Ereignis- 
 
 | Ereignisname (Typ) | Beschreibung | Zusätzliche Ereigniseigenschaften |
 | --- | --- | --- |
-| client_ready | Wird ausgegeben, wenn das Artefakt heruntergeladen wurde und das SDK für get_offer-Aufrufe bereit ist. Wird empfohlen bei Verwendung von | Entscheidungsmethode auf dem Gerät. | Keine |
-| artifact_download_succeeded | Wird jedes Mal gesendet, wenn ein neues Artefakt heruntergeladen wird. | artifact_payload, artifact_location |
-| artifact_download_failed | Wird jedes Mal gesendet, wenn ein Artefakt nicht heruntergeladen werden kann. | artifact_location, Fehler |
+| client_ready | Wird ausgegeben, wenn das Artefakt heruntergeladen wurde und die SDK für get_offers-Aufrufe bereit ist. Empfohlen bei Verwendung von | Methode der geräteinternen Entscheidungsfindung. | Keine |
+| artifact_download_successful | Wird bei jedem Herunterladen eines neuen Artefakts ausgegeben. | artifact_payload, artifact_location |
+| artifact_download_failed | Wird jedes Mal ausgegeben, wenn ein Artefakt nicht heruntergeladen werden kann. | artifact_location, Fehler |
 
 ## Beispiel
 

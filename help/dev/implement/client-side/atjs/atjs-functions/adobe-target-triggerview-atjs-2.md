@@ -1,6 +1,6 @@
 ---
-keywords: adobe.target.triggerView, triggerView, triggerview, Trigger view, at.js, features, function, viewName, viewname, Ansichtsname, adobe.target.triggerView1
-description: Verwenden Sie die Funktion adobe.target.triggerView() für die JavaScript-Bibliothek [!DNL Adobe Target] at.js zur Verwendung in Einzelseiten-Apps (SPA). (at.js 2.x)
+keywords: adobe.target.triggerView, triggerView, triggerView, Trigger View, at.js, Funktionen, Funktion, viewName, viewname, Ansichtsname, adobe.target.triggerView1
+description: Verwenden Sie die Funktion adobe.target.triggerView() für die  [!DNL Adobe Target] .at.js-JavaScript-Bibliothek zur Verwendung in Single Page Applications (SPA). (at.js 2.x)
 title: Wie verwende ich die Funktion adobe.target.triggerView()?
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
@@ -13,21 +13,21 @@ ht-degree: 21%
 
 # adobe.target.triggerView (viewName, options) - at.js 2.x
 
-Diese Funktion kann immer aufgerufen werden, wenn eine neue Seite geladen wird oder wenn eine Komponente auf einer Seite erneut wiedergegeben wird. `adobe.target.triggerView()` sollte für Einzelseitenanwendungen (SPA) implementiert werden, um die [!UICONTROL Visual Experience Composer] (VEC) zur Erstellung von [!UICONTROL A/B Test] - und [!UICONTROL Experience Targeting] (XT) -Aktivitäten zu verwenden. Wenn `[!UICONTROL adobe.target.triggerView()]` nicht auf der Site implementiert ist, kann VEC nicht für SPA verwendet werden. Weitere Informationen finden Sie unter [Implementieren von Einzelseiten-Apps](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Diese Funktion kann immer aufgerufen werden, wenn eine neue Seite geladen wird oder wenn eine Komponente auf einer Seite erneut wiedergegeben wird. `adobe.target.triggerView()` sollte für Single Page Applications (SPA) implementiert werden, um den [!UICONTROL Visual Experience Composer] (VEC) zum Erstellen von [!UICONTROL A/B Test]- und [!UICONTROL Experience Targeting] (XT)-Aktivitäten zu verwenden. Wenn `[!UICONTROL adobe.target.triggerView()]` nicht auf der Site implementiert ist, kann VEC nicht für SPA verwendet werden. Weitere Informationen finden Sie unter [Implementieren von Einzelseiten-Apps](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 >[!NOTE]
 >
->Diese Funktion wurde mit at.js 2 eingeführt.*x*. Diese Funktion ist nicht für at.js Version 1 verfügbar.*x*.
+>Diese Funktion wurde mit at.js 2 eingeführt.*x*. Diese Funktion ist für at.js-Version 1 nicht verfügbar.*x*.
 
 | Parameter | Typ | Erforderlich? | Beschreibung |
 | --- | --- | --- | --- |
-| viewName | Zeichenfolge | Ja | Geben Sie eine beliebige Zeichenfolge als Namen für Ihre Ansicht an. Der Name dieser Ansicht wird im Bedienfeld [!UICONTROL Modifications] des VEC angezeigt, damit Marketing-Experten Aktionen erstellen und ihre XT-Aktivitäten [!UICONTROL A/B Test] und [!UICONTROL Experience Targeting] ausführen können. |
+| viewName | Zeichenfolge | Ja | Geben Sie eine beliebige Zeichenfolge als Namen für Ihre Ansicht an. Dieser Ansichtsname wird im [!UICONTROL Modifications] des VEC angezeigt, damit Marketing-Experten Aktionen erstellen und ihre [!UICONTROL A/B Test]- und [!UICONTROL Experience Targeting]-Aktivitäten ausführen können. |
 | options | Objekt | Nein |  |
-| Optionen > Seite | Boolesch | Nein | **TRUE:** Der Standardwert der Seite ist „wahr“. Bei page=true werden Benachrichtigungen zum Erhöhen der Impressions-Anzahl an das [!DNL Target]-Backend gesendet.<P>Eine Benachrichtigung wird immer standardmäßig gesendet, wenn ein `[!UICONTROL triggerView]` aufgerufen wird, außer wenn &quot;options&quot;> &quot;page&quot;auf &quot;false&quot;gesetzt ist.<P>**FALSE:** Bei page=false werden keine Benachrichtigungen zur Erhöhung der Impressions-Anzahl gesendet. Dieser Ansatz sollte verwendet werden, wenn Sie nur eine Komponente auf einer Seite mit einem Angebot erneut rendern möchten.<P>**Hinweis**: Angebote mit benutzerspezifischem Code im VEC werden nicht erneut gerendert, wenn `[!UICONTROL triggerView()]` mit `{page: false}` als Option aufgerufen wird. |
+| Optionen > Seite | Boolesch | Nein | **TRUE:** Der Standardwert der Seite ist „wahr“. Bei page=true werden Benachrichtigungen zum Erhöhen der Impressions-Anzahl an das [!DNL Target]-Backend gesendet.<P>Eine Benachrichtigung wird immer standardmäßig gesendet, wenn ein `[!UICONTROL triggerView]` aufgerufen wird, es sei denn, „Optionen“ > „Seite“ ist auf „false“ festgelegt.<P>**FALSE:** Wenn page=false ist, werden keine Benachrichtigungen gesendet, um die Anzahl der Impressionen zu erhöhen. Dieser Ansatz sollte verwendet werden, wenn Sie eine Komponente nur auf einer Seite mit einem Angebot erneut rendern möchten.<P>**Hinweis**: Angebote mit benutzerdefiniertem Code in VEC werden nicht erneut gerendert, wenn `[!UICONTROL triggerView()]` mit `{page: false}` als Option aufgerufen wird. |
 
 ## Beispiel: True
 
-`[!UICONTROL triggerView()]` -Aufruf zum Senden einer Benachrichtigung an das [!DNL Target] -Backend zur Erhöhung der Aktivitätsimpressionen und anderer Metriken.
+`[!UICONTROL triggerView()]` Aufruf zum Senden einer Benachrichtigung an das [!DNL Target]-Backend zum Erhöhen von Aktivitätsimpressionen und anderen Metriken.
 
 ```javascript {line-numbers="true"}
 adobe.target.triggerView("homeView")
@@ -35,15 +35,15 @@ adobe.target.triggerView("homeView")
 
 ## Beispiel: False
 
-`[!UICONTROL triggerView()]` -Aufruf, um keine Benachrichtigungen zur Impressions-Zählung an das [!DNL Target] -Backend zu senden.
+`[!UICONTROL triggerView()]` Aufruf von , um keine Benachrichtigungen zur Impression-Zählung an das [!DNL Target]-Backend zu senden.
 
 ```javascript {line-numbers="true"}
 adobe.target.triggerView("homeView", {page: false})
 ```
 
-## Beispiel: Versprechen, Verketten mit `getoffers()` und `applyOffers()`
+## Beispiel: Promise-Verkettung mit `getoffers()` und `applyOffers()`
 
-Um `triggerView()` auszuführen, wenn das `getOffers()`-Versprechen aufgelöst wird, ist es wichtig, `triggerView()` auf dem letzten Block auszuführen, wie im folgenden Beispiel gezeigt. Dies ist erforderlich, damit VEC `Views` im Authoring-Modus erkennen kann.
+Um `triggerView()` auszuführen, wenn die `getOffers()` aufgelöst ist, ist es wichtig, `triggerView()` auf dem endgültigen Block auszuführen, wie im folgenden Beispiel gezeigt. Dies ist erforderlich, damit VEC `Views` im Authoring-Modus erkennen kann.
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -72,11 +72,11 @@ adobe.target.getOffers({
 
 ## Beispiel: Beste Kompatibilität für `triggerView()` mit dem [!UICONTROL Adobe Visual Editing Helper extension]
 
-Beachten Sie Folgendes bei Verwendung der Erweiterung [Adobe Visual Editing Helper Extension](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}:
+Beachten Sie bei Verwendung der Erweiterung [Adobe Visual Editing Helper“ Folgendes](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}:
 
-Aufgrund der neuen V3-Manifestrichtlinien von [!DNL Googl] e für [!DNL Chrome] -Erweiterungen muss [!UICONTROL Visual Editing Helper extension] auf das `DOMContentLoaded` -Ereignis warten, bevor die [!DNL Target] -Bibliotheken in VEC geladen werden. Diese Verzögerung kann dazu führen, dass Webseiten den Aufruf `triggerView()` auslösen, bevor die Authoring-Bibliotheken bereit sind, was dazu führt, dass die Ansicht beim Laden nicht gefüllt wird.
+Aufgrund der neuen V3-Manifestrichtlinien von [!DNL Googl]e für [!DNL Chrome]-Erweiterungen muss der [!UICONTROL Visual Editing Helper extension] auf das `DOMContentLoaded`-Ereignis warten, bevor die [!DNL Target] in VEC geladen werden. Diese Verzögerung kann dazu führen, dass Web-Seiten den `triggerView()`-Aufruf auslösen, bevor die Authoring-Bibliotheken bereit sind, was dazu führen kann, dass die Ansicht beim Laden nicht ausgefüllt wird.
 
-Um dieses Problem zu beheben, verwenden Sie einen Listener für das page `load` -Ereignis.
+Um dieses Problem zu beheben, verwenden Sie einen Listener für das `load`.
 
 Im Folgenden finden Sie eine Beispielimplementierung:
 

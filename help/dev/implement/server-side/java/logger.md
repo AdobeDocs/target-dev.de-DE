@@ -1,6 +1,6 @@
 ---
-title: Initialisieren des Java-SDK [!DNL Adobe Target] zur Protokollierung von Anforderungen
-description: Erfahren Sie, wie Sie Anfragen im Java-SDK [!DNL Adobe Target] protokollieren.
+title: Initialisieren der  [!DNL Adobe Target] -Java-SDK zum Protokollieren von Anforderungen
+description: Erfahren Sie, wie Sie Anfragen in der Java [!DNL Adobe Target] SDK protokollieren.
 feature: APIs/SDKs
 exl-id: 85d1a6ef-0b08-4948-8133-740b7d6141dd
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,18 +14,18 @@ ht-degree: 4%
 
 ## Beschreibung
 
-Beim [ Initialisieren des SDK](initialize-sdk.md) gibt es mehrere Optionen für das Objekt `ClientConfig`, die auf Protokollanforderungen festgelegt werden können.
+Beim [Initialisieren der SDK](initialize-sdk.md) gibt es mehrere Optionen für das `ClientConfig`-Objekt, die auf Protokollanfragen festgelegt werden können.
 
 | Option | Beschreibung |
 | --- | --- |
-| `logRequests` | Protokolliert den gesamten Anforderungstext sowie den Antworttext. |
-| `logRequestStatus` | Protokolliert die URL der Anfrage, den Status sowie die Antwortzeit. |
+| `logRequests` | Protokolliert den gesamten Anfragetext sowie den Antworttext. |
+| `logRequestStatus` | Protokolliert die URL der Anfrage, den Status zusammen mit der Antwortzeit. |
 
-[!DNL Target] Java SDK verwendet die `slf4j` -Protokollierung. Sie müssen Ihre Implementierung der Protokollfunktion bereitstellen, z. B. `java.util.logging`, `logback` und `log4j`. Weitere Informationen finden Sie unter [http://www.slf4j.org/manual.html](http://www.slf4j.org/manual.html) . Alle Protokolle werden in `debug` gedruckt.
+[!DNL Target] Java SDK verwendet die `slf4j`. Sie müssen die Implementierung von Logger bereitstellen, z. B. `java.util.logging`, `logback` und `log4j`. Weitere Informationen finden Sie ](http://www.slf4j.org/manual.html) [http://www.slf4j.org/manual.html. Alle Protokolle werden in `debug` gedruckt.
 
 ## Beispiel
 
-Fügen Sie die `slf4j` -Abhängigkeit hinzu.
+Fügen Sie die `slf4j` hinzu.
 
 >[!BEGINTABS]
 
@@ -49,7 +49,7 @@ compile 'org.slf4j:slf4j-simple:2.0.0-alpha0'
 
 >[!ENDTABS]
 
-Aktivieren Sie die `DEBUG` -Protokolle basierend auf Ihrer Implementierung und markieren Sie die Protokollierungsmarkierungen der Anforderungen.
+Aktivieren Sie die `DEBUG` basierend auf Ihrer Implementierung und markieren Sie die Flags für die Anfrageprotokollierung.
 
 ### Debug
 
@@ -65,4 +65,4 @@ ClientConfig config = ClientConfig.builder()
 TargetClient targetClient = TargetClient.create(config);
 ```
 
-Sie sollten sehen, wie Anfragen, Antworten und Antwortzeiten in der Konsole gedruckt werden.
+In der Konsole sollten Anforderungen, Antworten und Antwortzeiten gedruckt werden.

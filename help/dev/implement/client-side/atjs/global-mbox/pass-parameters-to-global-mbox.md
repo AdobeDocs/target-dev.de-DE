@@ -1,6 +1,6 @@
 ---
-keywords: globale Mbox-Parameter, targetPageParams, Abfragezeichenfolge, Array, JSON, DTM
-description: Erfahren Sie, wie Sie mit der Funktion [!UICONTROL targetPageParams] zusätzliche Targeting- oder Kontextdaten an die globale Mbox übergeben. [!DNL Adobe Target]
+keywords: globale mbox-Parameter, targetPageParams, Abfragezeichenfolge, Array, JSON, dtm
+description: Erfahren Sie, wie Sie mit der [!UICONTROL targetPageParams]-Funktion zusätzliche Zielgruppen- oder Kontextinformationen an die  [!DNL Adobe Target] -globale Mbox übergeben.
 title: Wie übergebe ich Parameter an eine globale Mbox?
 feature: at.js
 exl-id: 2a6be3e4-a618-4812-9e87-b01789705c40
@@ -13,15 +13,15 @@ ht-degree: 61%
 
 # Übergeben von Parametern an eine globale Mbox
 
-Die JavaScript `targetPageParams` -Funktion wird verwendet, um Parameter in [!DNL Adobe Target] an die globale Mbox zu übergeben. Dies ist in jedem Szenario erforderlich, in dem zusätzliche Targeting-/Kontextinformationen an [!DNL Target] übergeben werden sollen.
+Die JavaScript `targetPageParams`-Funktion wird verwendet, um Parameter an die globale Mbox in [!DNL Adobe Target] zu übergeben. Dies ist in jedem Szenario erforderlich, in dem zusätzliche Zielgruppen-/Kontextinformationen an [!DNL Target] übergeben werden sollen.
 
 Beispiel: Verwenden Sie in einer Recommendations-Aktivität die Parameter zur Darstellung des aktuellen Produkts oder der Kategorie, die angezeigt wird.
 
-Der Code zum Aufrufen der JavaScript-Funktion muss vor die globale Mbox auf der Seite gestellt werden, unabhängig davon, ob die globale Mbox als Teil von at.js ausgelöst oder manuell im Seiten-Code eingefügt wird.
+Der Code zum Aufrufen der JavaScript-Funktion muss vor der globalen Mbox auf der Seite stehen, unabhängig davon, ob die globale Mbox als Teil von at.js ausgelöst oder manuell in den Seiten-Code aufgenommen wird.
 
 >[!NOTE]
 >
->Wenn Sie Parameter zu allen Mboxes auf der Seite hinzufügen möchten, nicht nur zur globalen Mbox, verwenden Sie die Funktion [targetPageParamsAll()](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparamsall.md) .
+>Wenn Sie Parameter zu allen Mboxes auf der Seite und nicht nur zur globalen Mbox hinzufügen möchten, verwenden Sie die Funktion [targetPageParamsAll()](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparamsall.md).
 
 Um Parameter an `target-global-mbox` zu übergeben, können Sie die Funktion `targetPageParams()` auf eine der folgenden Arten verwenden:
 
@@ -46,7 +46,7 @@ p1=v1&p2=v2&p3=hello%20world
 
   In diesem Beispiel hat p3 den Wert `hello world`, der URL-codiert ist.
 
-Betrachten Sie den folgenden Beispielseitencode:
+Siehe folgenden Beispiel für Seiten-Code:
 
 ```html {line-numbers="true"}
 <html> 

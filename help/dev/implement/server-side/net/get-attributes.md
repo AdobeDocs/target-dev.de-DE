@@ -1,6 +1,6 @@
 ---
-title: Verwenden von getAttributes in [!DNL Adobe Target] mit dem .NET SDK
-description: Erfahren Sie, wie Sie mit getAttributes() Experimente und personalisierte Erlebnisse aus  [!DNL Target]  abrufen und Attributwerte extrahieren können.
+title: Verwenden von getAttributes in [!DNL Adobe Target] mit .NET SDK
+description: Erfahren Sie, wie Sie mit getAttributes() Experimente und personalisierte Erlebnisse aus abrufen  [!DNL Target]  Attributwerte extrahieren können.
 feature: APIs/SDKs
 exl-id: 808da83d-3077-468b-a2ad-e35c25905f7d
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -28,23 +28,23 @@ TargetAttributes TargetClient.GetAttributes(TargetDeliveryRequest targetRequest,
 
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
-| targetRequest | TargetDeliveryRequest | Nein | null  | Dieselbe [!DNL Target]-Anfrage wie für [Angebote abrufen &#x200B;](get-offers.md) |
-| mboxNames | params string[] | Nein | null  | Ein Parameterarray für Mbox-Namen |
+| targetRequest | targetDeliveryRequest | Nein | null  | Dieselbe [!DNL Target], die für „Angebote [&quot; verwendet &#x200B;](get-offers.md) |
+| mboxNames | Parameterzeichenfolge[] | Nein | null  | Ein Parameter-Array mit Mbox-Namen |
 
 ## Ergebnis
 
-Ein `TargetAttributes` -Objekt wird von `TargetClient.GetAttributes()` zurückgegeben, das die folgenden Eigenschaften und Methoden aufweist:
+Ein `TargetAttributes` wird von `TargetClient.GetAttributes()` zurückgegeben, das die folgenden Eigenschaften und Methoden aufweist:
 
 | Eigenschaft/Methode | Rückgabetyp | Beschreibung |
 | --- | --- | --- |
-| Antwort | TargetDeliveryResponse | Gibt das Antwortobjekt zurück, das normalerweise von [Angebote abrufen](get-offers.md) zurückgegeben wird |
-| ToDictionary | IReadOnlyDictionary | Gibt ein Wörterbuchwörterbuch mit Schlüsselwertpaaren zurück, die nach Mbox-Namen gruppiert sind |
-| ToMboxDictionary(mboxName) | IReadOnlyDictionary | Gibt ein Wörterbuch mit Schlüsselwertpaaren für die bereitgestellte Mbox zurück |
-| GetBoolean(mboxName, key, defaultValue) | bool | Gibt den Wert für einen angegebenen Mbox-Namen und Attributschlüssel aus |
-| GetString(mboxName, key, defaultValue) | string | Gibt den Wert für einen angegebenen Mbox-Namen und Attributschlüssel aus |
-| GetInteger(mboxName, key, defaultValue) | int | Gibt den Wert für einen angegebenen Mbox-Namen und Attributschlüssel aus |
-| GetDouble(mboxName, key, defaultValue) | double | Gibt den Wert für einen angegebenen Mbox-Namen und Attributschlüssel aus |
-| GetValue(mboxName, key, defaultValue) | T   | Gibt den Wert für einen angegebenen Mbox-Namen und Attributschlüssel aus |
+| Antwort | targetDeliveryResponse | Gibt das Antwortobjekt zurück, das normalerweise von „Angebote [&quot; zurückgegeben ](get-offers.md) |
+| ToDictionary | IReadOnlyDictionary | Gibt ein Wörterbuch der Wörterbücher mit Schlüsselwertpaaren zurück, die nach Mbox-Namen gruppiert sind |
+| ToMboxDictionary(mboxName) | IReadOnlyDictionary | Gibt ein Wörterbuch mit Schlüsselwertpaaren für die bereitgestellte Mbox zurück. |
+| GetBoolean(mboxName, key, defaultValue) | boolesch | Gibt den Wert für einen angegebenen Mbox-Namen und einen Attributschlüssel zurück. |
+| GetString(mboxName, key, defaultValue) | string | Gibt den Wert für einen angegebenen Mbox-Namen und einen Attributschlüssel zurück. |
+| GetInteger(mboxName, key, defaultValue) | int | Gibt den Wert für einen angegebenen Mbox-Namen und einen Attributschlüssel zurück. |
+| GetDouble(mboxName, key, defaultValue) | Doppelte Genauigkeit | Gibt den Wert für einen angegebenen Mbox-Namen und einen Attributschlüssel zurück. |
+| GetValue(mboxName, key, defaultValue) | T   | Gibt den Wert für einen angegebenen Mbox-Namen und einen Attributschlüssel zurück. |
 
 ## Beispiel
 

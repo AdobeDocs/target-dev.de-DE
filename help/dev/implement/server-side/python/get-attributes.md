@@ -1,6 +1,6 @@
 ---
-title: Verwendung asynchroner Anforderungen im  [!DNL Adobe Target] Python-SDK
-description: Erfahren Sie, wie das Python-SDK asynchrone Anfragen unterstützt, wodurch die effektive Zielzeit auf null reduziert werden kann. [!DNL Target]
+title: Verwenden asynchroner Anfragen in der Python [!DNL Adobe Target] SDK
+description: Erfahren Sie [!DNL Target]  wie Python SDK asynchrone Anforderungen unterstützt, wodurch die effektive Zielzeit auf null reduziert werden kann.
 feature: APIs/SDKs
 exl-id: fafb9e28-5ac5-41c1-8e7f-f40550b6749f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -10,7 +10,7 @@ ht-degree: 16%
 
 ---
 
-# Abrufen von Attributen (Python)
+# Attribute abrufen (Python)
 
 ## Beschreibung
 
@@ -29,18 +29,18 @@ target_client_instance.get_attributes(mbox_names, options)
 
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
-| mbox_names | list[str] | Ja | Keine | Eine Liste der Mbox-Namen |
-| options | dict | Nein | Keine | Dieselben Optionen wie für [Angebote abrufen](get-offers.md) |
+| mbox_names | list[str] | Ja | Keine | Eine Liste von Mbox-Namen |
+| options | verordnen | Nein | Keine | Die gleichen Optionen wie für &quot;[&quot; ](get-offers.md) |
 
 ## AttributesProvider
 
-Der von `target_client.get_attributes()` zurückgegebene `AttributesProvider`-Wert weist die folgenden Methoden auf:
+Die von `target_client.get_attributes()` zurückgegebene `AttributesProvider` weist die folgenden Methoden auf:
 
 | Methode | Rückgabetyp | Beschreibung |
 | --- | --- | --- |
-| get_value(mbox_name, key) | any | Gibt den Wert für einen angegebenen Mbox-Namen und Attributschlüssel aus |
-| as_object(mbox_name) | dict | Gibt ein einfaches JSON-Objekt mit Schlüsselwertpaaren zurück |
-| get_response() | [TargetDeliveryResponse](https://github.com/adobe/target-python-sdk/blob/main/target_python_sdk/types/target_delivery_response.py) | Gibt das Antwortobjekt zurück, das normalerweise von `get_offers` zurückgegeben wird |
+| get_value(mbox_name, key) | any | Gibt den Wert für einen angegebenen Mbox-Namen und einen Attributschlüssel zurück. |
+| as_object(mbox_name) | verordnen | Gibt ein einfaches JSON-Objekt mit Schlüsselwertpaaren zurück. |
+| get_response() | [targetDeliveryResponse](https://github.com/adobe/target-python-sdk/blob/main/target_python_sdk/types/target_delivery_response.py) | Gibt das Antwortobjekt zurück, das normalerweise von `get_offers` zurückgegeben wird |
 
 ## Beispiel
 

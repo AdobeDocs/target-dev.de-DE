@@ -1,7 +1,7 @@
 ---
-keywords: adobe.target.getOffer, getOffer, getoffer, get offer, at.js, Funktionen, Funktion, $8
-description: Verwenden Sie die Funktion "[!UICONTROL adobe.target.getOffer()]"und die zugehörigen Optionen für die Bibliothek " [!DNL Adobe Target] at.js", um Anforderungen auszulösen, um ein [!DNL Target] Angebot zu erhalten.
-title: Wie verwende ich die Funktion "[!UICONTROL adobe.target.getOffer()]"?
+keywords: adobe.target.getOffer, getOffer, getoffer, Angebot abrufen, at.js, Funktionen, Funktion, $8
+description: Verwenden Sie die [!UICONTROL adobe.target.getOffer()]-Funktion und ihre Optionen für die  [!DNL Adobe Target] .js-Bibliothek, um Anfragen auszulösen, um ein Angebot  [!DNL Target]  erhalten.
+title: Wie verwende ich die [!UICONTROL adobe.target.getOffer()]?
 feature: at.js
 exl-id: 7b917d42-06e8-4838-a09d-0c4872c9beaa
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -13,7 +13,7 @@ ht-degree: 81%
 
 # [!DNL adobe.target.getOffer(options)]
 
-Diese Funktion löst eine Anfrage zum Abrufen eines [!DNL Target] -Angebots aus.
+Diese Funktion löst eine Anfrage aus, um ein [!DNL Target] Angebot abzurufen.
 
 Verwenden Sie sie mit `[!UICONTROL adobe.target.applyOffer()]`, um die Antwort zu verarbeiten, oder verwenden Sie Ihre eigene Methode für die Verarbeitung von „success“. Der Optionsparameter ist obligatorisch und hat die folgende Struktur:
 
@@ -21,13 +21,13 @@ Verwenden Sie sie mit `[!UICONTROL adobe.target.applyOffer()]`, um die Antwort z
 |--- |--- |--- |--- |
 | mbox | Zeichenfolge | Ja | Name der Mbox |
 | params | Objekt | Nein | Mbox-Parameter Ein Objekt aus Schlüssel-Wert-Paaren mit der folgenden Struktur:<P>`{ "param1": "value1", "param2": "value2"}` |
-| success | Funktion | Ja | Rückruf wird ausgeführt, wenn eine Antwort vom Server eingegangen ist. Die Rückruffunktion „success“ erhält einen einzelnen Parameter, der ein Array von Angebotsobjekten enthält. Im Folgenden finden Sie ein Beispiel für einen Rückruf bei einem Erfolg:<P>`function handleSuccess(response){......}`<P>Details finden Sie unten unter „Antworten“. |
-| error | Funktion | Ja | Auszuführender Rückruf bei Eingang eines Fehlers Es gibt einige Fälle, die als fehlerhaft angesehen werden:<ul><li>Der HTTP-Status-Code weicht von „200 OK“ ab.</li><li>Die Antwort kann nicht analysiert werden. Dies kann zum Beispiel bei schlecht programmiertem JSON-Code oder HTML- statt JSON-Code auftreten.</li><li>Die Antwort enthält den Schlüssel „error“. Dies kann zum Beispiel der Fall sein, wenn eine Ausnahme auf dem Edgeserver auftritt und eine Anforderung nicht richtig verarbeitet werden konnte. Ein Fehler tritt auch dann auf, wenn eine Mbox blockiert ist und dafür keine Inhalte abgerufen werden konnten und so weiter. Die Rückruffunktion „error“ erhält zwei Parameter: „status“ und „error“. Beispiel für einen Fehler-Rückruf: `function handleError(status, error){......}`</li></ul>Details finden Sie unten unter „Fehlermeldungen“. |
-| Zeitüberschreitung | Nummer | Nein | Zeitüberschreitung in Millisekunden Wird kein Wert festgelegt, kommt der Standardwert für die Zeitüberschreitung in at.js zum Einsatz.<P>Der standardmäßige Timeout kann über die [!DNL Target] -Benutzeroberfläche unter [!UICONTROL Administration] > [!UICONTROL Implementation] festgelegt werden. |
+| success | Funktion | Ja | Rückruf wird ausgeführt, wenn eine Antwort vom Server eingegangen ist. Die Rückruffunktion „success“ erhält einen einzelnen Parameter, der ein Array von Angebotsobjekten enthält. Im Folgenden finden Sie ein Beispiel für einen erfolgreichen Callback:<P>`function handleSuccess(response){......}`<P>Details finden Sie unten unter „Antworten“. |
+| error | Funktion | Ja | Auszuführender Rückruf bei Eingang eines Fehlers Es gibt einige Fälle, die als fehlerhaft angesehen werden:<ul><li>Der HTTP-Status-Code weicht von „200 OK“ ab.</li><li>Die Antwort kann nicht analysiert werden. Dies kann zum Beispiel bei schlecht programmiertem JSON-Code oder HTML- statt JSON-Code auftreten.</li><li>Die Antwort enthält den Schlüssel „error“. Dies kann zum Beispiel der Fall sein, wenn eine Ausnahme auf dem Edgeserver auftritt und eine Anforderung nicht richtig verarbeitet werden konnte. Ein Fehler tritt auch dann auf, wenn eine Mbox blockiert ist und dafür keine Inhalte abgerufen werden konnten und so weiter. Die Rückruffunktion „error“ erhält zwei Parameter: „status“ und „error“. Im Folgenden finden Sie ein Beispiel für einen Fehler-Callback: `function handleError(status, error){......}`</li></ul>Details finden Sie unten unter „Fehlermeldungen“. |
+| Zeitüberschreitung | Nummer | Nein | Zeitüberschreitung in Millisekunden Wird kein Wert festgelegt, kommt der Standardwert für die Zeitüberschreitung in at.js zum Einsatz.<P>Die standardmäßige maximale Wartezeit kann über die [!DNL Target]-Benutzeroberfläche unter [!UICONTROL Administration] > [!UICONTROL Implementation] festgelegt werden. |
 
 ## Beispiele
 
-Hinzufügen von Parametern mit [!UICONTROL getOffer()] und Verwendung von [!UICONTROL applyOffer()] für die Erfolgsbehandlung:
+Hinzufügen von Parametern mit [!UICONTROL getOffer()] und Verwenden von [!UICONTROL applyOffer()] für die erfolgreiche Verarbeitung:
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   
@@ -48,7 +48,7 @@ adobe.target.getOffer({
 });
 ```
 
-Hinzufügen von Parametern und Profilparametern mit [!UICONTROL getOffer()] und Verwendung von [!UICONTROL applyOffer()] für die Erfolgsbehandlung:
+Hinzufügen von Parametern und Profilparametern mit [!UICONTROL getOffer()] und Verwenden von [!UICONTROL applyOffer()] für die erfolgreiche Verarbeitung:
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   
@@ -71,7 +71,7 @@ adobe.target.getOffer({
 });
 ```
 
-Verwenden von benutzerdefiniertem Timeout und benutzerdefinierter Erfolgsbehandlung mit [!UICONTROL getOffer()]:
+Verwenden der benutzerdefinierten Zeitüberschreitung und der benutzerdefinierten Erfolgsbehandlung mit [!UICONTROL getOffer()]:
 
 „YOUR_OWN_CUSTOM_HANDLING_FUNCTION“ ist ein Platzhalter für eine Funktion, die der Kunde definieren würde.
 

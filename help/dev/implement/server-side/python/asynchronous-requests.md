@@ -1,6 +1,6 @@
 ---
-title: Verwendung asynchroner Anforderungen im  [!DNL Adobe Target] Python-SDK
-description: Erfahren Sie, wie das Python-SDK asynchrone Anfragen unterstützt, wodurch die effektive Zielzeit auf null reduziert werden kann. [!DNL Target]
+title: Verwenden asynchroner Anfragen in der Python [!DNL Adobe Target] SDK
+description: Erfahren Sie [!DNL Target]  wie Python SDK asynchrone Anforderungen unterstützt, wodurch die effektive Zielzeit auf null reduziert werden kann.
 feature: APIs/SDKs
 exl-id: 44ab74e5-3c1a-49cf-9fff-fe523b0c2592
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -10,11 +10,11 @@ ht-degree: 4%
 
 ---
 
-# Asynchrone Anforderungen (Python)
+# Asynchrone Anfragen (Python)
 
 ## Beschreibung
 
-Ein Vorteil der serverseitigen Integration besteht darin, dass Sie die enorme Bandbreite und die Computerressourcen, die auf Server-Seite verfügbar sind, mit Parallelismus nutzen können. [!DNL Target] Python SDK unterstützt asynchrone Anfragen, wodurch die effektive Zielzeit auf null reduziert werden kann.
+Ein Vorteil der Server-seitigen Integration besteht darin, dass die auf der Server-Seite verfügbaren enormen Bandbreite- und Rechenressourcen durch die Verwendung von Parallelität genutzt werden können. [!DNL Target] Python SDK unterstützt asynchrone Anfragen, die die effektive Zielzeit auf null reduzieren können.
 
 ## Unterstützte Methoden
 
@@ -28,7 +28,7 @@ get_attributes(mbox_names, options)
 
 ## Beispiel
 
-Eine Beispielanwendung, die das async/await des `asyncio`-Moduls in Python 3.9+ verwendet, könnte wie folgt aussehen:
+Eine Beispielanwendung, die das asynchrone/erwartete Verhalten des `asyncio`-Moduls in Python 3.9+ verwendet, könnte wie folgt aussehen:
 
 ### Python
 
@@ -52,4 +52,4 @@ mboxes = [MboxRequest(name="a1-serverside-ab", index=1)]
 return asyncio.run(get_target_delivery_response(mboxes)
 ```
 
-In diesem Beispiel wird davon ausgegangen, dass Sie Python 3.9+ verwenden. Wenn Sie eine ältere Version von Python verwenden, können Sie weiterhin asynchrone Anfragen senden, indem Sie `options.callback` an `get_offers` übergeben. Weitere Informationen zur asynchronen Ausführung mit Callbacks oder async/await, [hier](https://github.com/adobe/target-python-sdk/blob/main/samples/app.py), finden Sie in der Flask-Beispielanwendung.
+In diesem Beispiel wird davon ausgegangen, dass Sie Python 3.9+ verwenden. Wenn Sie eine ältere Python-Version verwenden, können Sie weiterhin asynchrone Anfragen senden, indem Sie `options.callback` an `get_offers` übergeben. In der Beispiel-Flask-App finden Sie weitere Informationen zur asynchronen Ausführung mithilfe von Callbacks oder async/await ([) ](https://github.com/adobe/target-python-sdk/blob/main/samples/app.py).
