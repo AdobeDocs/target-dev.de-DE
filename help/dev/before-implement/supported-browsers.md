@@ -4,10 +4,10 @@ description: Erfahren Sie, welche Internet [!DNL Adobe Target] Browser die Benut
 title: Welche Browser werden  [!DNL Target]  unterstützt?
 feature: Implementation
 exl-id: 1d778e14-26b0-477b-ac28-d304db70a133
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: f194c6de43070443b78c9a69b4233c27d70b8858
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 26%
+source-wordcount: '380'
+ht-degree: 23%
 
 ---
 
@@ -38,6 +38,7 @@ Die Inhaltsbereitstellung wurde für folgende Browser und Geräte getestet:
 
 Beachten Sie Folgendes:
 
+* Die [!DNL Adobe Experience Platform Web SDK] wurde für eine optimale Funktionsweise in den neuesten Versionen von [!DNL Google Chrome], [!DNL Safari], [!DNL Firefox] und [!DNL Microsoft Edge Chromium] entwickelt. Bei der Verwendung bestimmter Funktionen in älteren Versionen dieser Browser oder veralteten Browsern, wie z. B. [!DNL Internet Explorer], können Probleme auftreten.
 * Bei at.js-Implementierungen zeigt [!DNL Target] Standardinhalte in früheren Versionen von Internet Explorer und möglicherweise in früheren Versionen der oben aufgeführten Browser an.
 * In Internet Explorer werden alle unbekannten Elemente (z. B. benutzerdefinierte Elemente) als derselbe Elementtyp behandelt. Daher funktioniert der Versand nicht mit benutzerdefinierten Elementen.
 * [!DNL Target] zeigt Standardinhalte in Browsern an, die oben nicht aufgeführt sind, und in Browsern, die den [Quirks-Modus“ ](https://en.wikipedia.org/wiki/Quirks_mode). Für at.js ist ein Dokumenttyp erforderlich, der im Standardmodus dargestellt wird, beispielsweise `<!DOCTYPE html>`.
