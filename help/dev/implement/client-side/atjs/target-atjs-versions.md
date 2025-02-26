@@ -4,9 +4,9 @@ description: Zeigen Sie die Details der Änderungen in den einzelnen Versionen d
 title: Was ist in jeder Version von at.js enthalten?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
+source-git-commit: 3deeee2838d02d578bb653a4911313463b962050
 workflow-type: tm+mt
-source-wordcount: '4967'
+source-wordcount: '4994'
 ht-degree: 64%
 
 ---
@@ -26,6 +26,10 @@ Details zu den Änderungen in den einzelnen Versionen der at.js-JavaScript-Bibli
 >Sie sollten auf die neuesten Versionen von entweder 1 aktualisieren.*x* oder 2 *x*, um Fehlerbehebungen und Sicherheitspatches für Probleme zu erhalten, die in einer früheren Nebenversion der entsprechenden Hauptversion entdeckt wurden.
 
 Tags in [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) sind die bevorzugte Methode zum Aktualisieren von at.js. Erweiterungsentwickler fügen ihren Erweiterungen kontinuierlich neue Funktionen hinzu und beheben häufig Fehler. Diese Aktualisierungen werden in neue Versionen einer Erweiterung gepackt und im Adobe Experience Platform-Katalog als Aktualisierungen verfügbar gemacht. Weitere Informationen finden Sie unter [Erweiterungs-Upgrades](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) im Handbuch *Übersicht über Tags*.
+
+## at.js-Version 2.11.7 (26. Februar 2025)
+
+* Fehlerkorrektur - Die Telemetrie-Protokollierung funktioniert jetzt, wenn `localStorage` nicht verfügbar ist. Die Telemetrie verursachte bei einigen Kunden, die in ihren Browsern deaktiviert `localStorage`, ein Problem.
 
 ## at.js-Version 2.11.6 (29. September 2024)
 
@@ -100,7 +104,7 @@ Diese Version enthält die folgende Verbesserung:
 
 Diese Version enthält die folgenden Änderungen:
 
-* Die `reactor-window` und `reactor-document` Adobe Experience Platform Launch-Module wurden entfernt, um sicherzustellen, dass der Platform launch-Build für Kunden, die `window.default` oder `document-default` festgelegt haben, ordnungsgemäß funktioniert.
+* Die `reactor-window` und `reactor-document` Adobe Experience Platform Launch-Module wurden entfernt, um sicherzustellen, dass der Platform Launch-Build für Kunden, die `window.default` oder `document-default` festgelegt haben, ordnungsgemäß funktioniert.
 * at.js 1.8.3 legt jetzt explizit `Samesite=None` und `Secure` fest, um sicherzustellen, dass Domain-Cookies von Drittanbietern ordnungsgemäß gesetzt werden.
 
 ## at.js 2.6.1 (16. August 2021)
@@ -115,7 +119,7 @@ Diese Version enthält die folgenden Änderungen:
 * Details zur Klickmetrik von [!UICONTROL Analytics for Target] (A4T) werden bei der Verwendung von `prefetch`-Anfragen korrekt zurückgegeben.
 * Die UUID-Generierung verwendet nicht mehr `Math.random()`, sondern beruht auf `window.crypto`.
 * Der Ablauf des `sessionId`-Cookies wird bei jedem Netzwerkaufruf korrekt verlängert.
-* Die Ansichts-Cache-Initialisierung für die Einzelseiten-Anwendung (SPA) wird jetzt korrekt verarbeitet und berücksichtigt `viewsEnabled` Einstellungen. Wenn `viewsEnabled` auf den `false` Wert gesetzt wird, wird die `triggerView()` deaktiviert. Siehe [Reihenfolge der Vorgänge beim ersten Laden der Seite](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order).
+* Die Ansichts-Cache-Initialisierung für die Einzelseiten-Anwendung (SPA, Single Page Application) wird jetzt korrekt verarbeitet und berücksichtigt `viewsEnabled` Einstellungen. Wenn `viewsEnabled` auf den `false` Wert gesetzt wird, wird die `triggerView()` deaktiviert. Siehe [Reihenfolge der Vorgänge beim ersten Laden der Seite](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order).
 
 ## at.js 2.5.0 (13. Mai 2021)
 
@@ -288,7 +292,7 @@ Weitere Informationen finden Sie unter [Aktualisieren von at.js 1.x auf at.js 2.
 
 >[!NOTE]
 >
->Wenn Sie Adobe-Opt-in-Unterstützung für die [Datenschutz-Grundverordnung](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) (DSGVO) benötigen, müssen Sie derzeit at.js 1.7.0 oder at.js 2.1.0 oder höher verwenden.
+>Wenn Sie Opt-in-Unterstützung von Adobe für die [Datenschutz-Grundverordnung](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) (DSGVO) benötigen, müssen Sie derzeit at.js 1.7.0 oder at.js 2.1.0 oder höher verwenden.
 
 ## „at.js“-Version 1.7.0
 
@@ -300,7 +304,7 @@ In dieser Version wird auch ein Problem behoben, bei dem [!DNL Target] Umleitung
 
 >[!NOTE]
 >
->Wenn Sie für die DSGVO Adobe-Opt-in-Unterstützung benötigen, müssen Sie derzeit at.js 1.7.0 oder at.js 2.1.0 oder höher verwenden.
+>Wenn Sie für die DSGVO Opt-in-Unterstützung von Adobe benötigen, müssen Sie derzeit at.js 1.7.0 oder at.js 2.1.0 oder höher verwenden.
 
 ## „at.js“-Version 1.6.4
 
@@ -382,7 +386,7 @@ at.js Version 1.3.0 ist verfügbar.
 
   Weitere Informationen finden Sie unter [Datenanbieter](atjs-functions/targetglobalsettings.md#data-providers).
 
-* at.js-Anfragen verwenden nun GET. Sie wechseln jedoch zu POST, wenn die URL-Größe 2048 Zeichen überschreitet. Es gibt eine neue Eigenschaft mit dem Namen `urlSizeLimit`, wo Sie die Größenbeschränkung bei Bedarf erhöhen können. Durch diese Änderung können [!DNL Target] at.js auf AppMeasurement ausrichten, wobei dieselbe Technik verwendet wird.
+* at.js-Anfragen verwenden nun GET. Sie wechseln jedoch zu POST, wenn die URL-Größe 2048 Zeichen überschreitet. Es gibt eine neue Eigenschaft mit dem Namen `urlSizeLimit`, wo Sie die Größenbeschränkung bei Bedarf erhöhen können. Durch diese Änderung können [!DNL Target] at.js an AppMeasurement ausrichten, das dieselbe Technik verwendet.
 * [!DNL Target] erzwingt jetzt, dass der `mbox` in der `adobe.target.applyOffer(options)` verwendet wird. Dieser Schlüssel war in der Vergangenheit erforderlich, erzwingt [!DNL Target] jetzt jedoch seine Verwendung, um sicherzustellen, dass [!DNL Target] ordnungsgemäß validiert wurde und Kundinnen und Kunden die Funktion ordnungsgemäß verwenden.
 * at.js weist eine verbesserte Ereignis- und Klick-Tracking-Funktionalität auf. at.js verwendet `navigator.sendBeacon()` zum Senden von Ereignis-Tracking-Daten und weicht zur synchronen XHR aus, wenn `navigator.sendBeacon()` nicht unterstützt wird. Dies wirkt sich hauptsächlich auf Internet Explorer 10 und 11 und einige Safari-Versionen aus. Safari unterstützt `navigator.sendBeacon()` ab der kommenden iOS 11.3-Version.
 * at.js kann Angebote nun sogar dann darstellen, wenn eine Seite auf Registerkarten im Hintergrund geöffnet wird. Bei einigen [!DNL Target]-Kunden trat ein Problem auf, wenn `requestAnimationFrame()` aufgrund des Browser-Drosselungsverhaltens für Hintergrund-Registerkarten deaktiviert wurde.
