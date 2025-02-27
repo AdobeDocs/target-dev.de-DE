@@ -6,22 +6,22 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
+source-git-commit: 526445fccee9b778b7ac0d7245338f235f11d333
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1286'
 ht-degree: 1%
 
 ---
 
 # Abrufen von Recommendations mit der Bereitstellungs-API
 
-Die Adobe Target- und Adobe Target Recommendations-APIs können verwendet werden, um Antworten auf Web-Seiten bereitzustellen, sie können aber auch in Nicht-HTML-basierten Erlebnissen wie Apps, Bildschirmen, Konsolen, E-Mails, Kiosks und anderen Anzeigegeräten verwendet werden. Mit anderen Worten: Wenn Target-Bibliotheken und JavaScript nicht verwendet werden können, ermöglicht die [Target-Bereitstellungs-API](/help/dev/implement/delivery-api/overview.md) weiterhin den Zugriff auf alle Target-Funktionen, um personalisierte Erlebnisse bereitzustellen.
+Die Recommendations-APIs von Adobe Target und Adobe Target können für die Bereitstellung von Antworten auf Web-Seiten verwendet werden. Sie können aber auch für Erlebnisse außerhalb von HTML verwendet werden, wie Apps, Bildschirme, Konsolen, E-Mails, Kiosks und andere Anzeigegeräte. Mit anderen Worten: Wenn Target-Bibliotheken und JavaScript nicht verwendet werden können, ermöglicht die [Target-Bereitstellungs-API](/help/dev/implement/delivery-api/overview.md) weiterhin den Zugriff auf alle Target-Funktionen, um personalisierte Erlebnisse bereitzustellen.
 
 >[!NOTE]
 >
 >Verwenden Sie beim Anfordern von Inhalten mit tatsächlichen Empfehlungen (empfohlene Produkte oder Elemente) die Target-Bereitstellungs-API.
 
-Um Empfehlungen abzurufen, senden Sie einen Aufruf zur POST der Adobe Target-Bereitstellungs-API mit den entsprechenden Kontextinformationen, die eine Benutzer-ID (zur Verwendung mit profilspezifischen Empfehlungen wie den kürzlich angezeigten Elementen des Benutzers), einen relevanten Mbox-Namen, Mbox-Parameter, Profilparameter oder andere Attribute enthalten können. Die Antwort enthält empfohlene entity.ids (und kann andere Entitätsdaten enthalten) im JSON- oder HTML-Format, die dann auf dem Gerät angezeigt werden können.
+Um Empfehlungen abzurufen, senden Sie einen POST-Aufruf zur Adobe Target-Bereitstellungs-API mit den entsprechenden Kontextinformationen, die eine Benutzer-ID (zur Verwendung mit profilspezifischen Empfehlungen wie den kürzlich angezeigten Elementen des Benutzers), einen relevanten Mbox-Namen, Mbox-Parameter, Profilparameter oder andere Attribute enthalten können. Die Antwort enthält empfohlene entity.ids (und möglicherweise andere Entitätsdaten) im JSON- oder HTML-Format, die dann auf dem Gerät angezeigt werden können.
 
 Die [Bereitstellungs-API](/help/dev/implement/delivery-api/overview.md) für Adobe Target stellt alle vorhandenen Funktionen bereit, die eine Standard-Target-Anfrage bereitstellt.
 
@@ -65,7 +65,7 @@ Die Syntax für die [Bereitstellungs-API](/help/dev/implement/delivery-api/overv
 1. Beachten Sie, dass der Clientcode erforderlich ist. Zur Erinnerung: Ihr Clientcode befindet sich möglicherweise in Adobe Target, indem Sie zu **[!UICONTROL Recommendations]** > **[!UICONTROL Settings]** navigieren. Beachten Sie den **Client-Code** im Abschnitt **Recommendations-API-**&quot;.
    ![client-code.png](assets/client-code.png)
 1. Nachdem Sie Ihren Client-Code haben, erstellen Sie Ihren Bereitstellungs-API-Aufruf. Das folgende Beispiel beginnt mit den in der Sammlung &quot;[-API-Postman](../../implement/delivery-api/overview.md/#section/Getting-Started/Postman-Collection) bereitgestellten **[!UICONTROL Web Batched Mboxes Delivery API Call]** und nimmt entsprechende Änderungen vor. Beispiel:
-   * Die **browser**- und **address**-Objekte wurden aus dem **body** entfernt, da sie für Anwendungsfälle ohne HTML nicht erforderlich sind
+   * Die **browser**- und **address**-Objekte wurden aus dem **body** entfernt, da sie für Anwendungsfälle außerhalb von HTML nicht erforderlich sind
    * *api_charter* wird in diesem Beispiel als Standortname aufgeführt
    * entity.id wird angegeben, da diese Empfehlung auf Inhaltsähnlichkeit basiert, d. h., es muss ein aktueller Elementschlüssel an Target übergeben werden.
      ![server-side-delivery-API-call.png](assets/server-side-delivery-api-call2.png)
@@ -76,7 +76,7 @@ Denken Sie daran, Ihre Abfrageparameter korrekt zu konfigurieren. Geben Sie beis
    ![server-side-create-recs-json-response2.png](assets/server-side-create-recs-json-response2.png)
 Die Antwort enthält die Schlüssel-ID sowie die Entitäts-IDs der empfohlenen Entitäten.
 
-Durch diese Verwendung der Bereitstellungs-API mit Recommendations können Sie zusätzliche Schritte ausführen, bevor Sie dem Besucher auf dem Nicht-HTML-Gerät Empfehlungen anzeigen. Sie können beispielsweise die Antwort von der Bereitstellungs-API verwenden, um eine zusätzliche Echtzeitsuche nach Entitätsattributdetails (Bestand, Preis, Bewertung usw.) aus einem anderen System (z. B. CMS, PIM oder E-Commerce-Plattform) durchzuführen, bevor die endgültigen Ergebnisse angezeigt werden.
+Durch diese Verwendung der Bereitstellungs-API mit Recommendations können Sie zusätzliche Schritte ausführen, bevor Sie dem Besucher Recommendations auf dem Nicht-HTML-Gerät anzeigen. Sie können beispielsweise die Antwort von der Bereitstellungs-API verwenden, um eine zusätzliche Echtzeitsuche nach Entitätsattributdetails (Bestand, Preis, Bewertung usw.) aus einem anderen System (z. B. CMS, PIM oder E-Commerce-Plattform) durchzuführen, bevor die endgültigen Ergebnisse angezeigt werden.
 
 Mit dem in diesem Handbuch beschriebenen Ansatz können Sie jede Anwendung dazu bringen, die Antwort von Target zu nutzen, um personalisierte Empfehlungen zu geben!
 
@@ -86,18 +86,16 @@ Die folgenden Ressourcen enthalten Beispiele für verschiedene Implementierungen
 
 | Ressource | Details |
 | --- | --- |
-| [Adobe Target überall - Server-seitig oder im IoT implementieren](https://expleague.azureedge.net/labs/L733/index.html) | Adobe Summit 2019 Lab , das praktische Erfahrungen für eine React-App bietet, die Adobe Target-Server-seitige APIs nutzt. |
-| [Adobe Target in einer Mobile App ohne Adobe-SDK](https://community.tealiumiq.com/t5/Universal-Data-Hub/Adobe-Target-in-a-Mobile-App-Without-the-Adobe-SDK/ta-p/26753) | In diesem Handbuch erfahren Sie, wie Sie Adobe Target in Ihrer Mobile App einrichten, ohne die Adobe SDK zu installieren. Diese Lösung verwendet die Tealium SDK-Webansicht und das Remote-Befehlsmodul, um Anfragen an die Adobe-Besucher-API (Experience Cloud) und die Adobe Target-API zu senden und zu empfangen. |
-| [Konfigurieren der Target-Erweiterung beim Experience Platform Launch und Implementieren von Target-APIs](https://developer.adobe.com/client-sdks/documentation/adobe-target/) | Schritte zum Konfigurieren der Target-Erweiterung im Experience Platform Launch, Hinzufügen der Target-Erweiterung zur App und Implementieren von Target-APIs, um Aktivitäten anzufordern, Angebote vorab abzurufen und in den visuellen Vorschaumodus zu wechseln. |
+| [Konfigurieren der Target-Erweiterung in Experience Platform Launch und Implementieren von Target-APIs](https://developer.adobe.com/client-sdks/documentation/adobe-target/) | Schritte zum Konfigurieren der Target-Erweiterung in Experience Platform Launch, Hinzufügen der Target-Erweiterung zu Ihrer App und Implementieren von Target-APIs, um Aktivitäten anzufordern, Angebote vorab abzurufen und in den visuellen Vorschaumodus zu wechseln. |
 | [Adobe Target-Knoten-Client](https://www.npmjs.com/package/@adobe/target-nodejs-sdk) | Open-Source-Target Node.js SDK v1.0 |
 | [Server-seitige Übersicht](../../implement/server-side/server-side-overview.md) | Informationen zu Server-seitigen Adobe Target-Bereitstellungs-APIs, Server-seitigen Batch-Bereitstellungs-APIs, Node.js-SDK und Adobe Target Recommendations-APIs. |
-| [Adobe Campaign Content Recommendations in E-Mail](https://medium.com/adobetech/adobe-campaign-content-recommendations-in-email-b51ced771d7f) | Dieser Blog beschreibt, wie Sie Inhaltsempfehlungen in E-Mails über Adobe Target und Adobe I/O Runtime in Adobe Campaign nutzen können. |
+| [Adobe Campaign-Inhaltsempfehlungen in E-Mails](https://medium.com/adobetech/adobe-campaign-content-recommendations-in-email-b51ced771d7f) | Dieser Blog beschreibt, wie Sie Inhaltsempfehlungen in E-Mails über Adobe Target und Adobe I/O Runtime in Adobe Campaign nutzen können. |
 
 ## Verwalten des Recommendations-Setups mit APIs
 
 In den meisten Fällen werden Empfehlungen in der Adobe Target-Benutzeroberfläche konfiguriert und dann über die Target-APIs verwendet oder aufgerufen, beispielsweise aus den in den obigen Abschnitten genannten Gründen. Diese UI-API-Koordination ist üblich. Manchmal möchten die Benutzer jedoch möglicherweise alle Aktionen über APIs durchführen - sowohl die Einrichtung als auch die Verwendung der Ergebnisse. Obwohl dies weniger häufig vorkommt, können Benutzer die Ergebnisse von Recommendations absolut konfigurieren *ausführen und* vollständig mithilfe der -APIs nutzen.
 
-In einem [ Abschnitt haben wir gelernt](manage-catalog.md) wie Sie Adobe Target Recommendations-Entitäten verwalten und Server-seitig bereitstellen. Ebenso können Sie mit der [Adobe Developer Console](https://developer.adobe.com/console/home) Kriterien, Promotions, Sammlungen und Design-Vorlagen verwalten, ohne sich bei Adobe Target anmelden zu müssen. Eine vollständige Liste aller Recommendations-APIs finden Sie [hier](https://developer.adobe.com/target/administer/recommendations-api/), aber hier finden Sie eine Zusammenfassung.
+In einem [ Abschnitt haben wir gelernt](manage-catalog.md) wie Adobe Target Recommendations-Entitäten verwaltet und Server-seitig bereitgestellt werden. Ebenso können Sie mit der [Adobe Developer Console](https://developer.adobe.com/console/home) Kriterien, Promotions, Sammlungen und Design-Vorlagen verwalten, ohne sich bei Adobe Target anmelden zu müssen. Eine vollständige Liste aller Recommendations-APIs finden Sie [hier](https://developer.adobe.com/target/administer/recommendations-api/), aber hier finden Sie eine Zusammenfassung als Referenz.
 
 | Ressource | Details |
 | --- | --- |
