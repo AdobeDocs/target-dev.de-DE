@@ -4,10 +4,10 @@ description: Erfahren Sie, welche Internet [!DNL Adobe Target] Browser die Benut
 title: Welche Browser werden  [!DNL Target]  unterstützt?
 feature: Implementation
 exl-id: 1d778e14-26b0-477b-ac28-d304db70a133
-source-git-commit: f194c6de43070443b78c9a69b4233c27d70b8858
+source-git-commit: 1b6dcb24d677b758ed1daf85dc0a7e9e5b42680d
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 23%
+source-wordcount: '421'
+ht-degree: 20%
 
 ---
 
@@ -21,10 +21,24 @@ Weitere wichtige Informationen zu TLS finden Sie unter [TLS-Verschlüsselungsän
 
 Die [!DNL Target]-Schnittstelle unterstützt die folgenden Browser und Geräte:
 
+>[!NOTE]
+>
+>Target unterstützt die neueste Version jedes aufgelisteten Browsers und die neueste Version abzüglich 1.
+
+
 | Gerätetyp | Browser-Version |
 |--- |--- |
-| Windows | <ul><li>Microsoft Edge</li><li>Google Chrome (neueste, neueste minus 1)</li><li>Mozilla Firefox (neueste, neueste minus 1)</li></ul> |
-| Mac | <ul><li>Firefox (neueste, neueste minus 1)</li><li>Chrome (aktuelle, neueste minus 1)</li></ul> |
+| [!DNL Windows] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+
+## Anforderungen an die visuelle Bearbeitung
+
+Damit Sie Ihre Web-Seiten zuverlässig im [!UICONTROL Visual Experience Composer] (VEC) öffnen, erstellen und in der Vorschau anzeigen können, muss die Browser-Erweiterung [Adobe Experience Cloud Visual Editing Helper](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} in Ihrem Webbrowser installiert sein oder [!UICONTROL Enhanced Experience Composer (EEC)] verwenden.
+
+>[!NOTE]
+>
+>[!DNL Google Chrome] und [!DNL Microsoft Edge] sind derzeit die einzigen Browser, die die visuelle Bearbeitung von Web-Seiten in [!DNL Adobe Target] unterstützen.
+
 
 ## Inhaltsbereitstellung
 
