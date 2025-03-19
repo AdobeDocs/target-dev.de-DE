@@ -4,7 +4,7 @@ description: Arbeiten Sie mit [!UICONTROL Adobe Client Care] zusammen, um die CN
 title: Wie verwende ich CNAME in Target?
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: 31d7de17530c14a392cbeef777937c07a214e07a
+source-git-commit: dd99cf1753e4fa5033ee463b79a31c6eddcd02b5
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -98,7 +98,7 @@ Verwenden Sie die folgenden Befehle (im macOS- oder Linux-Befehlszeilen-Terminal
 1. Kopieren Sie diese Bash-Funktion und fügen Sie sie in Ihr Terminal ein, oder fügen Sie sie in Ihre Bash-Startskriptdatei ein (normalerweise `~/.bash_profile` oder `~/.bashrc`), damit die Funktion in allen Terminalsitzungen verfügbar ist:
 
    ```
-      function adobeTargetCnameValidation {
+   function adobeTargetCnameValidation {
      local hostname="$1"
      if [ -z "$hostname" ]; then
        echo "ERROR: no hostname specified"
@@ -242,7 +242,7 @@ Verwenden Sie die folgenden Befehle (im macOS- oder Linux-Befehlszeilen-Terminal
    Wenn die Implementierung fertig ist, sehen Sie eine Ausgabe wie unten. Wichtig ist, dass alle Validierungsstatuszeilen `✅` statt `🚫` anzeigen. Jede Target Edge-CNAME-Shard sollte `CN=target.example.com` anzeigen, die dem primären Hostnamen im angeforderten Zertifikat entspricht (zusätzliche SAN-Hostnamen im Zertifikat werden in dieser Ausgabe nicht gedruckt).
 
    ```
-      $ adobeTargetCnameValidation 
+      $ adobeTargetCnameValidation
     target.example.com==========================================================Adobe Target CNAME implementation validation for hostname target.example.com:
     ✅ target.example.com passes DNS CNAME validation
     ✅ target.example.com passes TLS and HTTP response validation for region IRL1
@@ -274,7 +274,7 @@ Verwenden Sie die folgenden Befehle (im macOS- oder Linux-Befehlszeilen-Terminal
     *  expire date: Feb 20 23:59:59 2026 GMT
     *  issuer: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
     *  subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com==========================================================  For additional TLS/SSL validation, see SSL Shopper:    🔎  https://www.sslshopper.com/ssl-checker.html#hostname=target.example.com  To check DNS propagation around the world, see whatsmydns.net:    🔎  DNS A records:     https://whatsmydns.net/#A/target.example.com
-        🔎  DNS CNAME record:  https://whatsmydns.net/#CNAME/target.example.com 
+        🔎  DNS CNAME record:  https://whatsmydns.net/#CNAME/target.example.com
    ```
 
 >[!NOTE]
