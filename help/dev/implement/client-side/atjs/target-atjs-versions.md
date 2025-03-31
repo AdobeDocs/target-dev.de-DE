@@ -4,9 +4,9 @@ description: Zeigen Sie die Details der Änderungen in den einzelnen Versionen d
 title: Was ist in jeder Version von at.js enthalten?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: 3deeee2838d02d578bb653a4911313463b962050
+source-git-commit: 1a9b43142319ace8fa04aff209b8b639c7512e3f
 workflow-type: tm+mt
-source-wordcount: '4994'
+source-wordcount: '5018'
 ht-degree: 64%
 
 ---
@@ -26,6 +26,10 @@ Details zu den Änderungen in den einzelnen Versionen der at.js-JavaScript-Bibli
 >Sie sollten auf die neuesten Versionen von entweder 1 aktualisieren.*x* oder 2 *x*, um Fehlerbehebungen und Sicherheitspatches für Probleme zu erhalten, die in einer früheren Nebenversion der entsprechenden Hauptversion entdeckt wurden.
 
 Tags in [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) sind die bevorzugte Methode zum Aktualisieren von at.js. Erweiterungsentwickler fügen ihren Erweiterungen kontinuierlich neue Funktionen hinzu und beheben häufig Fehler. Diese Aktualisierungen werden in neue Versionen einer Erweiterung gepackt und im Adobe Experience Platform-Katalog als Aktualisierungen verfügbar gemacht. Weitere Informationen finden Sie unter [Erweiterungs-Upgrades](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) im Handbuch *Übersicht über Tags*.
+
+## at.js-Version 2.11.8 (31. März 2025)
+
+* Behobene CodeQL-identifizierte Sicherheitslücke in der Validierung von Zeichenfolgen-Suffixen, um Edge-Fälle während Größenänderungs- und Verschiebungsvorgängen zu verhindern. (TNT-51516)
 
 ## at.js-Version 2.11.7 (26. Februar 2025)
 
