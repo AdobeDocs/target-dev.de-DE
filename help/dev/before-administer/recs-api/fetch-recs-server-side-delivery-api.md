@@ -68,6 +68,7 @@ Die Syntax für die [Bereitstellungs-API](/help/dev/implement/delivery-api/overv
    * Die **browser**- und **address**-Objekte wurden aus dem **body** entfernt, da sie für Anwendungsfälle außerhalb von HTML nicht erforderlich sind
    * *api_charter* wird in diesem Beispiel als Standortname aufgeführt
    * entity.id wird angegeben, da diese Empfehlung auf Inhaltsähnlichkeit basiert, d. h., es muss ein aktueller Elementschlüssel an Target übergeben werden.
+
      ![server-side-delivery-API-call.png](assets/server-side-delivery-api-call2.png)
 Denken Sie daran, Ihre Abfrageparameter korrekt zu konfigurieren. Geben Sie beispielsweise bei Bedarf `{{CLIENT_CODE}}` an. &lt;!— F: In der aktualisierten Aufrufsyntax wird entity.id als profileParameter und nicht als mboxParameter aufgeführt, wie dies in älteren Versionen der Fall war. —> &lt;!— F: Altes Bild ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) Alter Begleittext: „Beachten Sie, dass diese Empfehlung auf Inhalten basiert, die auf der entity.id basieren, die über mboxParameters gesendet wird.“ —>
      ![client-code3](assets/client-code3.png)

@@ -97,7 +97,7 @@ Es gibt viele Möglichkeiten, die Details Ihres Projekts in Postman anzugeben, a
 >
 >Videoanweisungen für alle Experience Cloud-Lösungen, einschließlich [!DNL Target], finden Sie unter [Verwenden von Postman mit Experience Platform-APIs](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html). Die folgenden Abschnitte sind für die [!DNL Target]-APIs relevant: 1. Erstellen und Exportieren der Experience Platform-API nach Postman 2. Erstellen eines Zugriffs-Tokens mit Postman. Diese Schritte werden ebenfalls unten beschrieben.
 
-1. Navigieren Sie noch in der {0](https://developer.adobe.com/console/home)Adobe Developer Console}, um die **[!UICONTROL Service Account (JWT)]** Anmeldedaten Ihres neuen Projekts anzuzeigen. [ Verwenden Sie entweder den linken Navigationsbereich oder den **[!UICONTROL Credentials]**, wie abgebildet.
+1. Navigieren Sie noch in der {0[&#128279;](https://developer.adobe.com/console/home)Adobe Developer Console}, um die **[!UICONTROL Service Account (JWT)]** Anmeldedaten Ihres neuen Projekts anzuzeigen.  Verwenden Sie entweder den linken Navigationsbereich oder den **[!UICONTROL Credentials]**, wie abgebildet.
 
    ![JWT1](assets/configure-io-target-jwt1.png)
 

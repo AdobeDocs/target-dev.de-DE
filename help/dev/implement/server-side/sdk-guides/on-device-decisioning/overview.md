@@ -1,6 +1,6 @@
 ---
 keywords: Server-seitig, Server-seitig, SDK, SDKs, geräteintern, Entscheidungsfindung, auf dem Gerät, auf dem Gerät, keine Latenz, Latenz, nahezu null, node.js, Server-seitig3
-description: Erfahren Sie, wie Sie mithilfe von [!UICONTROL [!UICONTROL on-device decisioning] Ihre A/ [!DNL Target] - und MVT-Aktivitäten auf Ihrem Server zwischenspeichern können, um speicherinterne Entscheidungen mit einer Latenz von nahezu null durchzuführen.
+description: Erfahren Sie, wie Sie mithilfe von [!UICONTROL on-device decisioning] Ihre A/ [!DNL Target] - und MVT-Aktivitäten auf Ihrem Server zwischenspeichern können, um speicherinterne Entscheidungen mit einer Latenz von nahezu null durchzuführen.
 title: Was ist On-Device Decisioning?
 feature: Implement Server-side
 exl-id: 22ed3072-56f0-4075-9d1a-d642afe3b649

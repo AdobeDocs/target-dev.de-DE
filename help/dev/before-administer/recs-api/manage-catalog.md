@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Verwalten des Recommendations-Katalogs mithilfe von APIs
 
-Sie haben gelernt, wie Sie mit dem JWT-Authentifizierungsfluss [ein Zugriffstoken generieren](/help/dev/before-administer/configure-authentication.md) die [!DNL Adobe Target]-Admin-APIs auf der [Adobe Developer Console verwenden, um sicherzustellen, dass Sie die [](/help/dev/before-administer/recs-api/overview.md#prerequisites) Anforderungen zur Verwendung der Recommendations-APIs](https://developer.adobe.com/console/home).
+Sie haben gelernt, wie Sie mit dem JWT-Authentifizierungsfluss [ein Zugriffstoken generieren](/help/dev/before-administer/configure-authentication.md) die [!DNL Adobe Target]-Admin-APIs auf der [&#128279;](https://developer.adobe.com/console/home)Adobe Developer Console verwenden, um sicherzustellen, dass Sie die [&#128279;](/help/dev/before-administer/recs-api/overview.md#prerequisites) Anforderungen zur Verwendung der Recommendations-APIs.
 
 Sie können jetzt die [Recommendations-APIs](https://developer.adobe.com/target/administer/recommendations-api/) verwenden, um Elemente in Ihrem Recommendations-Katalog hinzuzufügen, zu aktualisieren oder zu löschen. Wie alle anderen Adobe Target Recommendations Admin-APIs müssen auch diese authentifiziert werden.
 

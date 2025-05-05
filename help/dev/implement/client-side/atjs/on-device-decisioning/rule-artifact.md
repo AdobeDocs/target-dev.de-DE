@@ -1,6 +1,6 @@
 ---
 keywords: Implementierung, JavaScript-Bibliothek, JS, ATJS, On-Device Decisioning, On-Device Decisioning, Regelartefakt, $8
-description: Erfahren Sie mehr über das JSON-Regel-Artefakt, das von [!UICONTROL on-device decisioning]] verwendet wird.
+description: Erfahren Sie mehr über das JSON-Regel-Artefakt, das von [!UICONTROL on-device decisioning]&rbrack; verwendet wird.
 title: Was ist das JSON-Regel-Artefakt bei der geräteinternen Entscheidungsfindung?
 feature: at.js
 exl-id: 14413ccf-b55e-48a8-a474-4401eb1b50fc

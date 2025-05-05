@@ -43,13 +43,13 @@ Mit dem [!UICONTROL Bulk Profile Update API] können Sie bequem detaillierte Bes
 
 Um Profildaten stapelweise zu aktualisieren, erstellen Sie eine Batch-Datei. Die Batch-Datei ist eine Textdatei mit Werten, die durch Kommas getrennt sind, ähnlich der folgenden Beispieldatei.
 
-``````
+``` ```
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``````
+``` ```
 
 >[!NOTE]
 >
@@ -71,9 +71,9 @@ Sie verweisen im Dateiaufruf an [!DNL Target] Server auf diese POST, um die Date
 
 Stellen Sie eine HTTP-Dateianforderung an [!DNL Target] Edge-Server, um die POST zu verarbeiten. Im Folgenden finden Sie eine Beispiel-HTTP-POST-Anfrage für die Datei batch.txt mit dem curl-Befehl:
 
-``````
+``` ```
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``````
+``` ```
 
 Wo:
 

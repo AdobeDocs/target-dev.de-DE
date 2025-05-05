@@ -21,7 +21,7 @@ Beim [Initialisieren der SDK](initialize-sdk.md) gibt es mehrere Optionen für d
 | `logRequests` | Protokolliert den gesamten Anfragetext sowie den Antworttext. |
 | `logRequestStatus` | Protokolliert die URL der Anfrage, den Status zusammen mit der Antwortzeit. |
 
-[!DNL Target] Java SDK verwendet die `slf4j`. Sie müssen die Implementierung von Logger bereitstellen, z. B. `java.util.logging`, `logback` und `log4j`. Weitere Informationen finden Sie ](https://www.slf4j.org/manual.html) [https://www.slf4j.org/manual.html. Alle Protokolle werden in `debug` gedruckt.
+[!DNL Target] Java SDK verwendet die `slf4j`. Sie müssen die Implementierung von Logger bereitstellen, z. B. `java.util.logging`, `logback` und `log4j`. Weitere Informationen finden Sie [&#128279;](https://www.slf4j.org/manual.html) https://www.slf4j.org/manual.html. Alle Protokolle werden in `debug` gedruckt.
 
 ## Beispiel
 

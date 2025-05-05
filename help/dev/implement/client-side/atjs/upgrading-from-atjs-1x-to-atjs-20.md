@@ -57,7 +57,7 @@ Egal, wo `triggerView()` in Ihrer SPA implementiert ist, werden die Ansichten un
 
 ## Bereitstellen von at.js 2 *x*  
 
-Bereitstellen von at.js 2 *x* über Tags in der Erweiterung {2](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)Adobe Experience Platform}.[
+Bereitstellen von at.js 2 *x* über Tags in der Erweiterung {2[&#128279;](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)Adobe Experience Platform}.
 
 >[!NOTE]
 >
@@ -317,7 +317,7 @@ Kunden können einen globalen Mbox-Namen über **[!UICONTROL Target]** > **[!UIC
 
 Ja, die benutzerdefinierten at.js-Ereignisse gelten auch für `triggerView()`.
 
-### Wenn ich `triggerView()` mit &amp;lbrace;`"page" : "true"`&amp;rbrace; aufrufe, werde eine Benachrichtigung an das [!DNL Target]-Backend gesendet und die Impression erhöht. Führt dies auch dazu, dass die Profilskripts ausgeführt werden?
+### Wenn ich `triggerView()` mit &lbrace;`"page" : "true"`&rbrace; aufrufe, werde eine Benachrichtigung an das [!DNL Target]-Backend gesendet und die Impression erhöht. Führt dies auch dazu, dass die Profilskripts ausgeführt werden?
 
 Wenn ein Prefetch-Aufruf an das [!DNL Target]-Backend erfolgt, werden die Profilskripts ausgeführt. Anschließend werden die betroffenen Profildaten verschlüsselt und an die Client-Seite zurückgegeben. Nachdem `triggerView()` mit `{"page": "true"}` aufgerufen wurde, wird eine Benachrichtigung zusammen mit den verschlüsselten Profildaten gesendet. Dann entschlüsselt das [!DNL Target]-Backend die Profildaten und speichert sie in den Datenbanken.
 

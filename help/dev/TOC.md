@@ -106,9 +106,9 @@ ht-degree: 45%
       + [Experience Cloud-ID-Dienst (ECID)](implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md)
       + [Berichterstellung von Analytics for Target (A4T)](implement/server-side/sdk-guides/integration-with-experience-cloud/a4t-reporting.md)
       + [AAM-Segmente](implement/server-side/sdk-guides/integration-with-experience-cloud/aam-segments.md)
-   + {#on-device-decisioning} der geräteinternen Entscheidungsfindung
+   + der geräteinternen Entscheidungsfindung{#on-device-decisioning}
       + [Übersicht über On-device Decisioning](implement/server-side/sdk-guides/on-device-decisioning/overview.md)
-      + {#rule-artifact} von Regelartefakten
+      + von Regelartefakten{#rule-artifact}
          + [Übersicht über Regelartefakte](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)
          + [Herunterladen über Adobe Target SDK](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-sdk.md)
          + [Über JSON-Payload herunterladen](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-json.md)
@@ -165,7 +165,7 @@ ht-degree: 45%
 + [Hybridimplementierung](implement/hybrid/hybrid-overview.md)
 + [Recommendations-Implementierung](implement/recommendations/recommendations.md)
 + [Recommendations-Implementierung - Beta](/help/dev/implement/recommendations/recommendations-beta.md)
-+ {#mobile-apps} der Mobile-App-Implementierung
++ der Mobile-App-Implementierung{#mobile-apps}
    + [Target für mobile Apps – Überblick](implement/mobile/overview.md)
    + [Mobile Target-Vorschau](implement/mobile/target-mobile-preview.md)
    + [Verwenden des Standortdienstes](implement/mobile/use-location-service.md)

@@ -19,7 +19,7 @@ Damit Benachrichtigungen für die richtige Mbox oder Ansicht ausgelöst werden, 
 
 ## Benachrichtigungen für im Voraus abgerufene Mboxes
 
-Eine oder mehrere Benachrichtigungen können über einen einzigen Versandaufruf gesendet werden. Ermitteln Sie, ob es sich bei der zu verfolgenden Metrik entweder um eine `click` oder eine `display` für jede Mbox handelt, damit die `type` der Benachrichtigung korrekt dargestellt werden kann. Übergeben Sie außerdem für jede Benachrichtigung eine `id`, damit festgestellt werden kann, ob eine Benachrichtigung korrekt über die gesendet wurde[!UICONTROL  Adobe Target Delivery API]. Die `timestamp` ist auch wichtig, an [!DNL Target] weitergeleitet zu werden, um anzugeben, wann die `click` oder `display` für eine bestimmte Mbox zu Berichtszwecken aufgetreten ist.
+Eine oder mehrere Benachrichtigungen können über einen einzigen Versandaufruf gesendet werden. Ermitteln Sie, ob es sich bei der zu verfolgenden Metrik entweder um eine `click` oder eine `display` für jede Mbox handelt, damit die `type` der Benachrichtigung korrekt dargestellt werden kann. Übergeben Sie außerdem für jede Benachrichtigung eine `id`, damit festgestellt werden kann, ob eine Benachrichtigung korrekt über die gesendet wurde[!UICONTROL &#x200B; Adobe Target Delivery API]. Die `timestamp` ist auch wichtig, an [!DNL Target] weitergeleitet zu werden, um anzugeben, wann die `click` oder `display` für eine bestimmte Mbox zu Berichtszwecken aufgetreten ist.
 
 ```
 curl -X POST \

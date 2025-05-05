@@ -20,4 +20,4 @@ ht-degree: 71%
 
 Die Datei „metadata.md“ enthält Replizierungsmetadaten, die an Benutzerhandbuchdaten TOC.md im Repo übergeben werden. Wenn Sie metadata.md-Inhalte für ein beliebiges Benutzerhandbuch ändern möchten, tun Sie dies in jeder beliebigen TOC.md-Datei.
 
-Unter [Metadaten](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/editing/user-guide-setup/metadata.html) finden Sie eine Liste gültiger Werte für **Lösung**, **** und **Typ**.
+Unter [Metadaten](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/editing/user-guide-setup/metadata.html) finden Sie eine Liste gültiger Werte für **Lösung**, **&#x200B;**&#x200B;und **Typ**.

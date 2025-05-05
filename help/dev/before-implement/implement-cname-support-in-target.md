@@ -49,7 +49,7 @@ Anweisungen für die Arbeit mit [!DNL Adobe Client Care] zur Implementierung der
 
    Die Adobe-Kundenunterstützung benachrichtigt Sie, wenn Ihre Implementierung bereit ist.
 
-1. Aktualisieren Sie die `serverDomain` [Dokumentation](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverdomain) auf den neuen CNAME-Hostnamen und legen Sie `overrideMboxEdgeServer` in Ihrer at.js[](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#overridemboxedgeserver) auf `false` fest.
+1. Aktualisieren Sie die `serverDomain` [Dokumentation](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverdomain) auf den neuen CNAME-Hostnamen und legen Sie `overrideMboxEdgeServer` in Ihrer at.js[&#128279;](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#overridemboxedgeserver) auf `false` fest.
 
 ## Häufig gestellte Fragen  
 
