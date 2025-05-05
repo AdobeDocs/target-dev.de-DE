@@ -15,13 +15,13 @@ Dieses Projekt hat den [Open-Source-Verhaltenskodex](code-of-conduct.md) oder de
 
 ## Informationen zu Ihren Beiträgen zu Adobe-Inhalten
 
-Siehe [Leitfaden für Beitragende zu Adobe-Dokumenten](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Siehe [Leitfaden für Beitragende zu Adobe-Dokumenten](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=de).
 
 Wie Sie Beiträge einbringen, hängt davon ab, wer Sie sind und welche Art von Änderungen Sie einbringen möchten:
 
 ### Geringfügige Änderungen
 
-Wenn Sie aus reiner Freundlichkeit kleinere Änderungen vornehmen möchten, rufen Sie den Artikel auf und klicken Sie auf den Link **Bearbeiten** im Artikel, der zur GitHub-Quelle des Artikels führt. Nehmen Sie die Änderungen einfach in der GitHub-Benutzeroberfläche vor. Weitere Informationen finden Sie im allgemeinen [Leitfaden für Beitragende zu Adobe-Dokumenten](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Wenn Sie aus reiner Freundlichkeit kleinere Änderungen vornehmen möchten, rufen Sie den Artikel auf und klicken Sie auf den Link **Bearbeiten** im Artikel, der zur GitHub-Quelle des Artikels führt. Nehmen Sie die Änderungen einfach in der GitHub-Benutzeroberfläche vor. Weitere Informationen finden Sie im allgemeinen [Leitfaden für Beitragende zu Adobe-Dokumenten](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=de).
 
 Kleinere Korrekturen oder Erläuterungen, die Sie zur Dokumentation und als Codebeispiele in dieses Repository übermitteln, unterliegen den Adobe-Nutzungsbedingungen.
 
@@ -43,7 +43,7 @@ Wenn Sie technischer Redakteur/technische Redakteurin, Programmmanager oder Entw
 
 Community-Mitarbeiter können die GitHub-Benutzeroberfläche zur einfachen Bearbeitung verwenden oder einen Fork des Repositorys durchführen, um wichtige Beiträge beizusteuern.
 
-Weitere Informationen finden Sie im [Leitfaden für Beitragende zu Adobe-Dokumenten](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Weitere Informationen finden Sie im [Leitfaden für Beitragende zu Adobe-Dokumenten](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=de).
 
 ## Verwenden von Markdown zum Formatieren Ihres Themas
 

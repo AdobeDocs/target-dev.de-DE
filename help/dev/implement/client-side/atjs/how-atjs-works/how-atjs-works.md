@@ -15,13 +15,13 @@ ht-degree: 66%
 
 Zur Client-seitigen Implementierung von [!DNL Adobe Target] müssen Sie die JavaScript-Bibliothek „at.js“ verwenden.
 
-Bei Client-seitigen Implementierungen von [!DNL Adobe Target] stellt [!DNL Target] die mit einer Aktivität verknüpften Erlebnisse direkt dem Client-Browser bereit. Der Browser entscheidet, welches Erlebnis angezeigt werden soll, und zeigt es an. Bei einer Client-seitigen Implementierung können Sie einen WYSIWYG-Editor, Visual [Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC) oder eine nicht visuelle Schnittstelle, den [formularbasierten Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), verwenden, um Ihre Tests und Personalisierungserlebnisse zu erstellen.
+Bei Client-seitigen Implementierungen von [!DNL Adobe Target] stellt [!DNL Target] die mit einer Aktivität verknüpften Erlebnisse direkt dem Client-Browser bereit. Der Browser entscheidet, welches Erlebnis angezeigt werden soll, und zeigt es an. Bei einer Client-seitigen Implementierung können Sie einen WYSIWYG-Editor, Visual [Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=de) (VEC) oder eine nicht visuelle Schnittstelle, den [formularbasierten Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de), verwenden, um Ihre Tests und Personalisierungserlebnisse zu erstellen.
 
 ## Was ist at.js?
 
 Die at.js-Bibliothek ist die Implementierungsbibliothek für die Client-seitige Implementierung von [!DNL Adobe Target]. Die at.js-Bibliothek sorgt für kürzere Seitenladezeiten bei Web-Implementierungen und bietet bessere Implementierungsoptionen für Single-Page-Anwendungen. „at.js“ ist die empfohlene Implementierungsbibliothek und wird häufig mit neuen Funktionen aktualisiert. Es wird empfohlen, dass alle -Kunden die [neueste Version von at.js) implementieren oder ](/help/dev/implement/client-side/atjs/target-atjs-versions.md).
 
-Weitere Informationen finden Sie unter [JavaScript-Bibliotheken in Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#libraries).
+Weitere Informationen finden Sie unter [JavaScript-Bibliotheken in Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=de#libraries).
 
 In der [!DNL Target]unten dargestellten Implementierung sind die folgenden Adobe Experience Cloud-Lösungen implementiert: [!DNL Analytics], Target und [!DNL Audience Manager]. Darüber hinaus werden die folgenden [!DNL Experience Cloud] Core Services implementiert: [!DNL Adobe Experience Platform], [!UICONTROL Audiences] und [!UICONTROL Visitor ID Service].
 
@@ -74,7 +74,7 @@ at.js 2.x verbessert die Unterstützung von Adobe Target für SPAs und kann mit 
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-Weitere Informationen finden Sie unter [Funktionsweise von at.js 2.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html).
+Weitere Informationen finden Sie unter [Funktionsweise von at.js 2.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=de).
 
 ## at.js 1.x-Diagramm
 

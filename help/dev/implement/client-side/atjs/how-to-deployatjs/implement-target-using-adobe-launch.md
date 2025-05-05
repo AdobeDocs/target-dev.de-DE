@@ -17,7 +17,7 @@ Tags in [!DNL Adobe Experience Platform] sind die nächste Generation von Tag-Ma
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als Suite von Datenerfassungstechnologien in [!DNL Adobe Experience Platform] umbenannt. Dies spiegelt sich in der Produktdokumentation in verschiedenen Änderungen hinsichtlich der verwendeten Begriffe wider. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?).
+>Adobe Experience Platform Launch wurde als Suite von Datenerfassungstechnologien in [!DNL Adobe Experience Platform] umbenannt. Dies spiegelt sich in der Produktdokumentation in verschiedenen Änderungen hinsichtlich der verwendeten Begriffe wider. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=de&).
 
 In der folgenden Tabelle finden Sie verschiedene Quellen, über die Sie weitere Informationen abrufen können:
 

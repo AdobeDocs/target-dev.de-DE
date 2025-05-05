@@ -49,6 +49,6 @@ Die `clientCode` können über die [!DNL Target]-Benutzeroberfläche abgerufen w
 
 Bevor Sie einen [!UICONTROL Target Delivery API]-Aufruf ausführen, führen Sie die folgenden Schritte aus, um sicherzustellen, dass eine Antwort das relevante Erlebnis enthält, um Endbenutzenden zu zeigen:
 
-1. Erstellen Sie eine [!DNL Target] Aktivität (A/B, XT, AP oder Recommendations) mit dem [formularbasierten Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en) oder dem [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
+1. Erstellen Sie eine [!DNL Target] Aktivität (A/B, XT, AP oder Recommendations) mit dem [formularbasierten Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de) oder dem [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=de).
 1. Verwenden Sie die Bereitstellungs-API, um eine Antwort für die Mboxes zu erhalten, die in der in Schritt 2 erstellten [!DNL Target]-Aktivität verwendet werden.
 1. Präsentieren Sie dem Besucher das Erlebnis.

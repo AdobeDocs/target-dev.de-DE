@@ -15,4 +15,4 @@ ht-degree: 3%
 
 [!DNL Adobe Target] bietet ein einzigartiges Hybrid-Bereitstellungsmodell für die Personalisierung, bei dem Client- und Server-seitige Implementierungen kombiniert werden. Mit diesem Hybridmodell können technisch nicht versierte Benutzende ein Experiment oder eine Personalisierungsaktivität mit dem WYSIWYG [!UICONTROL Visual Experience Composer] (VEC) erstellen und das Erlebnis für einen hochleistungsfähigen Versand Server-seitig ausführen, bereitstellen und rendern lassen.
 
-Weitere Informationen finden Sie unter [Adobe-Hybridbereitstellung](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/hybrid-deployment.html) in [Adobe Target Tutorials](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=de).
+Weitere Informationen finden Sie unter [Adobe-Hybridbereitstellung](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/hybrid-deployment.html?lang=de) in [Adobe Target Tutorials](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=de).

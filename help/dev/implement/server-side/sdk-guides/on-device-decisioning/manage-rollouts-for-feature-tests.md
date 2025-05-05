@@ -30,7 +30,7 @@ Durch die Aktivierung der geräteinternen Entscheidungsfindung wird sichergestel
 
 >[!NOTE]
 >
->Sie müssen über die Rolle Administrator oder Genehmiger [Benutzer) verfügen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) um den Umschalter [!UICONTROL On-Device Decisioning] zu aktivieren oder zu deaktivieren.
+>Sie müssen über die Rolle Administrator oder Genehmiger [Benutzer) verfügen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=de) um den Umschalter [!UICONTROL On-Device Decisioning] zu aktivieren oder zu deaktivieren.
 
 Nach der Aktivierung des [!UICONTROL On-Device Decisioning]-Umschalters beginnt [!DNL Adobe Target] mit der Generierung *Regelartefakte* für Ihren Client.
 

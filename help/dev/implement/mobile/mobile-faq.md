@@ -25,7 +25,7 @@ Die Adobe Experience Platform Mobile SDKs unterstützen derzeit iOS, Android und
 
 ## Wie häufig wird die standortbasierte Funktion verwendet, um den Breiten- und Längengrad zu überprüfen?
 
-Weitere Informationen finden Sie in der Dokumentation zu [&#128279;](https://experienceleague.adobe.com/docs/places/using/home.html){target=_blank}0&rbrace;Adobe Places.
+Weitere Informationen finden Sie in der Dokumentation zu [&#128279;](https://experienceleague.adobe.com/docs/places/using/home.html?lang=de){target=_blank}0&rbrace;Adobe Places.
 
 ## Benötige ich at.js, damit die Adobe Experience Platform Mobile SDKs funktionieren?
 
@@ -33,8 +33,8 @@ Nein, Sie benötigen at.js nicht, um die Mobile SDKs zu verwenden. at.js ist die
 
 ## Ist [!DNL Target] Mobile nur eine Funktion [!DNL Adobe Target] Premium-Produkt-SKU?
 
-Nein. Für [!DNL Adobe Target Standard]-Kunden können Sie unsere Mobile SDKs nur mit dem Add-on Mobile App von [!DNL Target Standard] für [!UICONTROL A/B Test]- und [!UICONTROL Experience Targeting] (XT)-Aktivitäten verwenden. Wenn Sie [!UICONTROL Recommendations] oder KI-gestützte Funktionen in der Mobile App verwenden möchten, benötigen Sie eine [Adobe Target Premium](https://experienceleague.adobe.com/docs/target/using/introduction/intro.html#premium)-Lizenz.
+Nein. Für [!DNL Adobe Target Standard]-Kunden können Sie unsere Mobile SDKs nur mit dem Add-on Mobile App von [!DNL Target Standard] für [!UICONTROL A/B Test]- und [!UICONTROL Experience Targeting] (XT)-Aktivitäten verwenden. Wenn Sie [!UICONTROL Recommendations] oder KI-gestützte Funktionen in der Mobile App verwenden möchten, benötigen Sie eine [Adobe Target Premium](https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=de#premium)-Lizenz.
 
 ## Gibt es eine Mobile-App-Integration zwischen [!DNL Adobe Experience Manager] (AEM) und [!DNL Target] Aktivitäten für Mobilgeräte?
 
-Derzeit können Sie JSON [Experience Fragments](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html){target=_blank} von AEM für [!DNL Target] freigeben. Möglicherweise werden sie dann in einer Mobile-App-Aktivität verwendet.
+Derzeit können Sie JSON [Experience Fragments](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html?lang=de){target=_blank} von AEM für [!DNL Target] freigeben. Möglicherweise werden sie dann in einer Mobile-App-Aktivität verwendet.

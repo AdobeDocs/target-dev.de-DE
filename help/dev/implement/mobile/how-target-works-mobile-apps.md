@@ -24,7 +24,7 @@ Der [!DNL Adobe Mobile SDK] kontaktiert den [!DNL Target]-Server, um den Inhalt 
 
 Ein *Zielspeicherort* wird auch als Mbox bezeichnet. Ein in der Anwendung identifizierter Ort wird für Tests oder Personalisierung aktiviert (beispielsweise die Willkommensnachricht auf dem Starbildschirm). Diese Orte werden während der Testerstellung festgelegt.
 
-Eine *[Erfolgsmetrik](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)* ist eine vom Benutzer durchgeführte Aktion, die angibt, ob eine bestimmte Aktivität erfolgreich war (z. B. Anmeldung, Kauf, Buchung eines Tickets usw.).
+Eine *[Erfolgsmetrik](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=de)* ist eine vom Benutzer durchgeführte Aktion, die angibt, ob eine bestimmte Aktivität erfolgreich war (z. B. Anmeldung, Kauf, Buchung eines Tickets usw.).
 
 ![ALT-Bild](assets/mobile-target-location.png)
 

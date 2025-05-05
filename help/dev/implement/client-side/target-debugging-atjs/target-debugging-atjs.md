@@ -17,7 +17,7 @@ Informationen zur Verwendung der [!UICONTROL Adobe Experience Cloud Debugger]-Er
 
 Sie können Ihre Bibliothekskonfiguration schnell anzeigen, Anfragen überprüfen, um sicherzustellen, dass Ihre benutzerdefinierten Parameter korrekt weitergeleitet werden, die Konsolenprotokollierung aktivieren und alle [!DNL Target] Anfragen deaktivieren. Authentifizierung bei der [!DNL Experience Cloud] und Sie können das leistungsstarke Tool Mbox Trace verwenden, um Ihre Aktivität und Zielgruppenqualifikationen sowie Ihr Besucherprofil zu überprüfen.
 
-Überprüfen Sie die Übersicht über den [Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html){target=_blank}.
+Überprüfen Sie die Übersicht über den [Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=de){target=_blank}.
 
 ## Schulungsvideos
 

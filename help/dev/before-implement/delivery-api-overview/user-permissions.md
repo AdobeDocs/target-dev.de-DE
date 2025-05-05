@@ -1,7 +1,7 @@
 ---
 title: Benutzerberechtigungen für die Adobe Target-Bereitstellungs-API
 description: Benutzerberechtigungen für die Adobe Target-Bereitstellungs-API
-badgePremium: label="Premium" type="Positive" url="https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=en#premium newtab=true" tooltip="Hier finden Sie Informationen zum Lieferumfang von Target Premium."
+badgePremium: label="Premium" type="Positive" url="https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=de#premium newtab=true" tooltip="Hier finden Sie Informationen zum Lieferumfang von Target Premium."
 keywords: Bereitstellungs-API
 exl-id: 332f90bd-4079-4653-aa38-b35837631c94
 feature: APIs/SDKs
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Benutzerberechtigungen (Premium)
 
-[!DNL Adobe] ermöglicht Kunden die Verwaltung von Benutzerberechtigungen bei der Verwendung von Adobe Target. Um einen erfolgreichen [!UICONTROL Adobe Target Delivery API]-Aufruf durchzuführen, muss innerhalb des API-Aufrufs ein Token mit den richtigen Berechtigungen übergeben werden. Weitere Informationen zu Benutzerberechtigungen und zum Abrufen des Tokens finden Sie unter [diese Dokumentation](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
+[!DNL Adobe] ermöglicht Kunden die Verwaltung von Benutzerberechtigungen bei der Verwendung von Adobe Target. Um einen erfolgreichen [!UICONTROL Adobe Target Delivery API]-Aufruf durchzuführen, muss innerhalb des API-Aufrufs ein Token mit den richtigen Berechtigungen übergeben werden. Weitere Informationen zu Benutzerberechtigungen und zum Abrufen des Tokens finden Sie unter [diese Dokumentation](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=de).
 
 ```
 curl -X POST \

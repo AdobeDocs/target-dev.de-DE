@@ -56,13 +56,13 @@ Bevor Sie eine Weiterleitung verwenden können, müssen Sie diese erst erstellen
 
    >[!WARNING]
    >
-   >Beachten Sie, dass Sie mit Redirector einem Risiko für eine Open Redirect-Schwachstelle ausgesetzt sein können. Zur Vermeidung einer unbefugten Nutzung von Weiterleitungs-Links durch Dritte empfiehlt Adobe die Verwendung von „autorisierten Hosts“ zur Zulassungsliste der Standard-Umleitungs-URL-Domains. [!DNL Target] verwendet Hosts, um Domains auf die Zulassungsliste setzen, zu denen Umleitungen erlaubt sein sollen. Auf die Zulassungsliste setzen Weitere Informationen finden Sie unter [Erstellen von Hosts, die autorisiert sind, Mbox-Aufrufe an zu senden [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) in *Hosts*.
+   >Beachten Sie, dass Sie mit Redirector einem Risiko für eine Open Redirect-Schwachstelle ausgesetzt sein können. Zur Vermeidung einer unbefugten Nutzung von Weiterleitungs-Links durch Dritte empfiehlt Adobe die Verwendung von „autorisierten Hosts“ zur Zulassungsliste der Standard-Umleitungs-URL-Domains. [!DNL Target] verwendet Hosts, um Domains auf die Zulassungsliste setzen, zu denen Umleitungen erlaubt sein sollen. Auf die Zulassungsliste setzen Weitere Informationen finden Sie unter [Erstellen von Hosts, die autorisiert sind, Mbox-Aufrufe an zu senden [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=de#allowlist) in *Hosts*.
 
 1. Validieren Sie die Weiterleitung.
    1. *Best Practice für die Sicherheit*: Stellen Sie sicher, dass die im Redirector verwendete Domain wie oben angegeben auf die Zulassungsliste gesetzt ist. Wenn Sie eine Domain verwenden, die nicht auf die Zulassungsliste gesetzt ist, blockiert Adobe alle Aufrufe an diese Domain, um böswillige Akteure daran zu hindern, den Redirector zu verwenden, um zu potenziell böswilligen Domains umzuleiten.
    2. Fügen Sie die Weiterleitungs-URL in eine Browserzeile ein, und aktualisieren Sie den Browser.
    3. Melden Sie sich bei Ihrem Konto an, aktualisieren Sie Ihre Mbox-Liste, und überprüfen Sie, ob die neue Weiterleitung als Mbox aufgelistet wird.
-1. Um verschiedene Ziele für eine Anzeige zu testen, erstellen Sie [Weiterleitungsangebote](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html) für jede Version.
+1. Um verschiedene Ziele für eine Anzeige zu testen, erstellen Sie [Weiterleitungsangebote](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html?lang=de) für jede Version.
 1. Erstellen Sie die Kampagne.
 
    Unter [Nicht-JavaScript-basierte Implementierungen](/help/dev/implement/email/overview.md) finden Sie die richtigen Einstellungen, um Ihre Ziele zu erreichen.

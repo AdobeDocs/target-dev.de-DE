@@ -148,7 +148,7 @@ Um Safari-Besucher zu unterstützen, wäre eine bessere X-Domain „deaktiviert�
 
 ## Kann ich Target [!UICONTROL Visual Experience Composer] (VEC) in meinen Einzelseitenanwendungen verwenden?
 
-Ja. Sie können VEC für Ihre SPA benutzen, wenn Sie at.js 2.x verwenden. Weitere Informationen finden Sie unter [Visual Experience Composer (VEC) für Einzelseiten-Programme](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html).
+Ja. Sie können VEC für Ihre SPA benutzen, wenn Sie at.js 2.x verwenden. Weitere Informationen finden Sie unter [Visual Experience Composer (VEC) für Einzelseiten-Programme](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=de).
 
 ## Kann ich den Adobe Experience Cloud-Debugger für at.js-Implementierungen verwenden?
 
@@ -239,7 +239,7 @@ Beachten Sie bei Antwort-Token und Sitzungs-IDs, die in diesen Anfragen übertra
 * Sie verfolgen Kommunikationssitzungen
 * Sie bestehen aus zufälligen Zeichen
 * Sitzungs-IDs sind 30 Minuten lang gültig
-* Antwort-Token können deaktiviert werden ([Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html))
+* Antwort-Token können deaktiviert werden ([Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=de))
 * Sie sind nur in der Umgebung von Adobe-Lösungen nützlich.
 
 Es wird erwartet, dass der `Access-Control-Allow-Origin`-Header mit dem Wert &quot;*&quot; in at.js-Anfragen angezeigt wird, da sie öffentlich sind, keine Authentifizierung erforderlich ist und der Zugriff auf das Adobe Edge-Netzwerk von jeder Domain über JavaScript-Aufrufe erfolgen muss.

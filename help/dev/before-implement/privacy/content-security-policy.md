@@ -37,7 +37,7 @@ Adobe speichert keine personenbezogenen oder anderen sensiblen Informationen auf
 
 ### Wie kann ich zulassen oder verhindern, dass meine Website als iFrame unter fremden Domains eingebettet wird?
 
-Damit der [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC) Ihre Website in einen iFrame einbetten kann, muss die CSP (falls festgelegt) in der Webservereinstellung geändert werden. [!DNL Adobe]-Domains müssen auf die Whitelist gesetzt und konfiguriert werden.
+Damit der [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=de){target=_blank} (VEC) Ihre Website in einen iFrame einbetten kann, muss die CSP (falls festgelegt) in der Webservereinstellung geändert werden. [!DNL Adobe]-Domains müssen auf die Whitelist gesetzt und konfiguriert werden.
 
 Aus Sicherheitsgründen möchten Sie möglicherweise verhindern, dass Ihre Site als iFrame unter fremden Domains eingebettet wird.
 

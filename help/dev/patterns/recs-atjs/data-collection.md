@@ -71,11 +71,11 @@ Link zu Entitätsattributen, um den Produktkatalog für [!DNL Target Recommendat
 
 **Messwerte**
 
-* [Entitätsattribute](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
+* [Entitätsattribute](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=de){target=_blank}
 
 **Zu beachten**
 
-* Eine alternative Möglichkeit, Entitätsattribute zu übergeben, besteht darin, den Produktkatalog in der [!DNL Target]-Benutzeroberfläche zu aktualisieren, um [Recommendations-Produkt-Feeds](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} zu verwenden.
+* Eine alternative Möglichkeit, Entitätsattribute zu übergeben, besteht darin, den Produktkatalog in der [!DNL Target]-Benutzeroberfläche zu aktualisieren, um [Recommendations-Produkt-Feeds](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=de){target=_blank} zu verwenden.
 * Die Übergabe von Entitätsattributen ist nur auf Seiten anwendbar, auf denen Produktkatalogdaten in der Datenschicht verfügbar sind.
 * Die Übergabe des `entity.event.detailsOnly=true` bei jedem Aufruf hat Priorität.
 

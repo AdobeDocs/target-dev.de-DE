@@ -15,4 +15,4 @@ ht-degree: 0%
 
 Erfahren Sie, was die künftige Einstellung von Drittanbieter-Cookies für Ihre [!DNL Adobe Target] Implementierung von at.js bedeutet.
 
-Weitere Informationen finden Sie unter [Auswirkungen der Einstellung von Drittanbieter-Cookies auf Adobe Target (at.js)](https://experienceleaguecommunities.adobe.com/t5/adobe-target-blogs/the-impact-of-third-party-cookie-deprecation-on-adobe-target-at/ba-p/661615?search=Third%20Party%20Cookie%20Deprecation){target=_blank} in der Adobe Target-Community.
+Weitere Informationen finden Sie unter [Auswirkungen der Einstellung von Drittanbieter-Cookies auf Adobe Target (at.js)](https://experienceleaguecommunities.adobe.com/t5/adobe-target-blogs/the-impact-of-third-party-cookie-deprecation-on-adobe-target-at/ba-p/661615?profile.language=de&search=Third%20Party%20Cookie%20Deprecation){target=_blank} in der Adobe Target-Community.

@@ -36,11 +36,11 @@ Um die Sicherheit zu erhöhen, können Sie festlegen, dass beim API-Aufruf für 
 
    * Administratorrolle oder mindestens über Rechte als genehmigende Person verfügen
 
-     Weitere Informationen für Target Standard-Kunden finden Sie unter [Festlegen von Rollen und Berechtigungen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions) in *Benutzer*. Weitere Informationen für [!DNL Target Premium]-Kunden finden Sie unter [Konfigurieren von Enterprise-Berechtigungen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
+     Weitere Informationen für Target Standard-Kunden finden Sie unter [Festlegen von Rollen und Berechtigungen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=de#roles-permissions) in *Benutzer*. Weitere Informationen für [!DNL Target Premium]-Kunden finden Sie unter [Konfigurieren von Enterprise-Berechtigungen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=de).
 
    * Administratorrolle auf der Ebene Arbeitsbereich/Produktprofil
 
-     Arbeitsbereiche stehen nur [!DNL Target Premium]-Kunden zur Verfügung. Weitere Informationen finden Sie unter [Konfigurieren von Enterprise-Berechtigungen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
+     Arbeitsbereiche stehen nur [!DNL Target Premium]-Kunden zur Verfügung. Weitere Informationen finden Sie unter [Konfigurieren von Enterprise-Berechtigungen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=de).
 
    * Administratorrechte (Berechtigung „Sysadmin“) auf der [!DNL Adobe Target]-Produktebene
 

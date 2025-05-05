@@ -39,7 +39,7 @@ Hilfe bei der Auswahl des richtigen Setups [ Sie unter (Nicht-JavaScript-basiert
 
      Hierbei muss es sich um einen URL-kodierten, absoluten Verweis handeln. Sie können die [HTML-URL-Codierungsreferenz](https://www.w3schools.com/tags/ref_urlencode.asp) verwenden, um Ihre URLs schnell zu codieren.
 
-1. Erstellen Sie [Weiterleitungsangebote](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html) für alle alternativen Bilder.
+1. Erstellen Sie [Weiterleitungsangebote](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=de) für alle alternativen Bilder.
 
    >[!NOTE]
    >

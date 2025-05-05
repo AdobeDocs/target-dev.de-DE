@@ -28,7 +28,7 @@ AdBox-Anzeigen und Weiterleitungen können mit jeder beliebigen Aktivität verwe
 
 ## Best Practices für die Sicherheit
 
-Beachten Sie, dass Sie bei Redirector einer Schwachstelle der Kategorie „Open Redirect“ ausgesetzt sein können. Zur Vermeidung einer unbefugten Nutzung von Weiterleitungs-Links durch Dritte empfehlen wir die Verwendung von „autorisierten Hosts“ zur Zulassungsliste der Domains der Standard-Weiterleitungs-URL. [!DNL Target] verwendet Hosts, um Domains auf die Zulassungsliste setzen, zu denen Umleitungen erlaubt sein sollen. Auf die Zulassungsliste setzen Weitere Informationen finden Sie unter [Erstellen von Hosts, die autorisiert sind, Mbox-Aufrufe an zu senden [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) in *Hosts*.
+Beachten Sie, dass Sie bei Redirector einer Schwachstelle der Kategorie „Open Redirect“ ausgesetzt sein können. Zur Vermeidung einer unbefugten Nutzung von Weiterleitungs-Links durch Dritte empfehlen wir die Verwendung von „autorisierten Hosts“ zur Zulassungsliste der Domains der Standard-Weiterleitungs-URL. [!DNL Target] verwendet Hosts, um Domains auf die Zulassungsliste setzen, zu denen Umleitungen erlaubt sein sollen. Auf die Zulassungsliste setzen Weitere Informationen finden Sie unter [Erstellen von Hosts, die autorisiert sind, Mbox-Aufrufe an zu senden [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=de#allowlist) in *Hosts*.
 
 ## Einschränkungen
 

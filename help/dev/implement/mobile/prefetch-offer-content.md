@@ -26,9 +26,9 @@ Dieser Prozess reduziert die Ladezeit, verhindert multiple Netzwerkaufrufe und e
 Beachten Sie die folgenden Einschränkungen bei der Verwendung der Prefetch-Methode mit den iOS- und Android Mobile-SDKs:
 
 * Vorabgerufene Inhalte werden nicht über Starts hinweg behalten. Der Inhalt des vorherigen Artikels wird zwischengespeichert, solange die Anwendung aktiv ist oder bis die `clearPrefetchCache()` Methode aufgerufen wird.
-* Die Vorabruf-Funktion wird nicht für [!UICONTROL Auto-Allocate]- und [!UICONTROL Auto-Target] Traffic-Zuordnungsmethoden, für [!UICONTROL Automated Personalization] oder [!UICONTROL Recommendations] Aktivitätstypen oder für (Recommendations[Angebote innerhalb einer A/B- oder XT-Aktivität unterstützt](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html).
+* Die Vorabruf-Funktion wird nicht für [!UICONTROL Auto-Allocate]- und [!UICONTROL Auto-Target] Traffic-Zuordnungsmethoden, für [!UICONTROL Automated Personalization] oder [!UICONTROL Recommendations] Aktivitätstypen oder für (Recommendations[Angebote innerhalb einer A/B- oder XT-Aktivität unterstützt](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html?lang=de).
 
 Weitere Informationen einschließlich Vorabruf-Methoden, öffentliche Klassen und Code-Beispiele finden Sie unter:
 
 * **iOS:** [Vorab-Abrufen von Angebotsinhalten in iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html) in der *Mobile Services iOS SDK-Hilfe*.
-* **Android:** [Vorab-Abrufen von Angebotsinhalten in Android](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html) in der *Mobile Services Android SDK-Hilfe*.
+* **Android:** [Vorab-Abrufen von Angebotsinhalten in Android](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html?lang=de) in der *Mobile Services Android SDK-Hilfe*.

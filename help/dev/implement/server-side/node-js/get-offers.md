@@ -52,7 +52,7 @@ Das `options`-Objekt hat die folgende Struktur:
 | targetCookie | Objekt | Cookie [!DNL Target] |
 | targetLocationHintCookie | Objekt | Cookie für [!DNL Target]-Standorthinweise |
 | analyticsDetails | Array | Analytics-Payload im Fall einer Client-seitigen Analytics-Nutzung |
-| responseTokens | Array | Eine Liste von [Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?). |
+| responseTokens | Array | Eine Liste von [Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=de&). |
 | Spur | Array | Aggregierte Trace-Daten für alle Anfrage-Mboxes/-Ansichten |
 | status | Objekt | Ein Objekt, das den Status der Antwort enthält. |
 | decisioningMethod | Zeichenfolge | Bestimmt, welche Entscheidungsmethode verwendet werden soll ([geräteintern](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md) Server-seitig, hybrid) |

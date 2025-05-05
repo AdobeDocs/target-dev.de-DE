@@ -15,7 +15,7 @@ ht-degree: 59%
 
 Diese Funktion löst eine Anforderung zum Melden von Benutzeraktionen aus (wie beispielsweise Klicks und Konversionen). Sie übermittelt keine Aktivitäten in der Antwort.
 
-Diese Mbox-Aufrufe für die Ereignisverfolgung können dann verwendet werden, um in den Aktivitäten Metriken zu definieren. Weitere Informationen finden Sie unter [Erfolgsmetriken](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html) und [Konversions-Tracking](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions).
+Diese Mbox-Aufrufe für die Ereignisverfolgung können dann verwendet werden, um in den Aktivitäten Metriken zu definieren. Weitere Informationen finden Sie unter [Erfolgsmetriken](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=de) und [Konversions-Tracking](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions).
 
 Hier finden Sie die Einzelheiten zur API:
 

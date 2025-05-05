@@ -49,7 +49,7 @@ Sie müssen die Attribute für die Bestellkonvertierung nicht in diesen Aufruf e
    * `orderTotal`: Bestellsumme für den Kauf.
    * `orderId`: Auftrags-ID des Kaufs.
 
-  Die folgende Abbildung zeigt eine [Regel für [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank}, die nur auf der [!UICONTROL Confirmation]-Seite ausgelöst werden sollte.
+  Die folgende Abbildung zeigt eine [Regel für [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=de){target=_blank}, die nur auf der [!UICONTROL Confirmation]-Seite ausgelöst werden sollte.
 
   ![Seite „Aktionskonfiguration“](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
@@ -58,7 +58,7 @@ Sie müssen die Attribute für die Bestellkonvertierung nicht in diesen Aufruf e
 **Messwerte**
 
 * [adobe.target.trackEvent()-Methode](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* [cartIds für auf dem Warenkorb basierende Kriterien](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
+* [cartIds für auf dem Warenkorb basierende Kriterien](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=de#cart-based){target=_blank}
 
 **Aktionen**
 
