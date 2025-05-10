@@ -30,5 +30,5 @@ Beachten Sie die folgenden Einschränkungen bei der Verwendung der Prefetch-Meth
 
 Weitere Informationen einschließlich Vorabruf-Methoden, öffentliche Klassen und Code-Beispiele finden Sie unter:
 
-* **iOS:** [Vorab-Abrufen von Angebotsinhalten in iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html) in der *Mobile Services iOS SDK-Hilfe*.
+* **iOS:** [Vorab-Abrufen von Angebotsinhalten in iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html?lang=de) in der *Mobile Services iOS SDK-Hilfe*.
 * **Android:** [Vorab-Abrufen von Angebotsinhalten in Android](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html?lang=de) in der *Mobile Services Android SDK-Hilfe*.
