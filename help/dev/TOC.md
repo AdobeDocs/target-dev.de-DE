@@ -2,9 +2,9 @@
 user-guide-title: Adobe Target-Entwicklerhandbuch
 breadcrumb-title: Target-Entwicklerhandbuch
 user-guide-description: Erfahren Sie, wie Sie das Kundenerlebnis so anpassen und personalisieren können, dass Sie den Umsatz Ihrer Websites, Mobile Sites, Mobile Apps, Social Media und anderer digitaler Kanäle maximieren können.
-source-git-commit: c963a070a7a4c5e7dc2915eb5ac7d60895340705
+source-git-commit: ac13e0dd7f67de50b77778921c90a95f12c2b9e4
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '769'
 ht-degree: 45%
 
 ---
@@ -41,9 +41,11 @@ ht-degree: 45%
    + [Unterstützte Browser](before-implement/supported-browsers.md)
    + [Änderungen der TLS-Verschlüsselung (Transport Layer Security)](before-implement/tls-transport-layer-security-encryption.md)
    + [CNAME und Adobe Target](before-implement/implement-cname-support-in-target.md)
-+ Client-seitige {#client-side}
++ Client-seitige Implementierung {#client-side}
    + [Übersicht: Target für Client-seitiges Web implementieren](implement/client-side/overview.md)
-   + [Übersicht über die Implementierung von Adobe Experience Platform Web SDK](implement/client-side/aep-web-sdk.md)
+   + Adobe Experience Platform Web SDK {#web-sdk}
+      + [Übersicht über die Implementierung von Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
+      + [Personalisierung mit Adobe Target und Web SDK](/help/dev/implement/client-side/aep-web-sdk/target-overview.md)
    + at.js-Implementierung {#at-js-implementation}
       + [Übersicht über at.js](implement/client-side/atjs/how-atjs-works/overview.md)
       + Funktionsweise von „at.js“ {#at-js}
@@ -90,7 +92,7 @@ ht-degree: 45%
       + [Verwenden einer globalen Mbox in einer Legacy-Implementierung](implement/client-side/atjs/global-mbox/mbox-global-target-standard.md)
       + [Übergeben von Parametern an eine globale Mbox](implement/client-side/atjs/global-mbox/pass-parameters-to-global-mbox.md)
       + [Häufig gestellte Fragen zu globalen Mboxes](implement/client-side/atjs/global-mbox/global-mbox-faq.md)
-+ Server-seitige {#server-side}
++ Server-seitige Implementierung {#server-side}
    + [Serverseitig: Target-Implementierung – Überblick](implement/server-side/server-side-overview.md)
    + [Erste Schritte mit Target-SDKs](implement/server-side/sdk-guides/getting-started/getting-started.md)
    + [Beispiel-Apps](implement/server-side/sdk-guides/sample-apps/sample-apps.md)
@@ -101,14 +103,14 @@ ht-degree: 45%
       + [Zielgruppen-Targeting](implement/server-side/sdk-guides/core-principles/audience-targeting.md)
       + [Ereignis-Tracking](implement/server-side/sdk-guides/core-principles/event-tracking.md)
       + [Benutzerberechtigungen und Eigenschaften](implement/server-side/sdk-guides/core-principles/user-permissions-and-properties.md)
-   + {#integration}
+   + Integration {#integration}
       + [Übersicht über die Integration](implement/server-side/sdk-guides/integration-with-experience-cloud/overview.md)
-      + [Experience Cloud-ID-Dienst (ECID)](implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md)
+      + [Experience Cloud ID-Dienst (ECID)](implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md)
       + [Berichterstellung von Analytics for Target (A4T)](implement/server-side/sdk-guides/integration-with-experience-cloud/a4t-reporting.md)
       + [AAM-Segmente](implement/server-side/sdk-guides/integration-with-experience-cloud/aam-segments.md)
-   + der geräteinternen Entscheidungsfindung{#on-device-decisioning}
+   + Geräteinterne Entscheidungsfindung {#on-device-decisioning}
       + [Übersicht über On-device Decisioning](implement/server-side/sdk-guides/on-device-decisioning/overview.md)
-      + von Regelartefakten{#rule-artifact}
+      + Regelartefakt {#rule-artifact}
          + [Übersicht über Regelartefakte](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)
          + [Herunterladen über Adobe Target SDK](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-sdk.md)
          + [Über JSON-Payload herunterladen](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-json.md)
@@ -120,7 +122,7 @@ ht-degree: 45%
       + [Übersicht über die unterstützten Funktionen](implement/server-side/sdk-guides/on-device-decisioning/supported-features.md)
       + [Fehlerbehebung bei der geräteinternen Entscheidungsfindung](implement/server-side/sdk-guides/on-device-decisioning/troubleshooting.md)
       + [Best Practices  ](implement/server-side/sdk-guides/best-practices/best-practices.md)
-   + Node.js SDK-{#node-js}
+   + Node.js-SDK-Referenz {#node-js}
       + [Übersicht über Node.js SDK](implement/server-side/node-js/overview.md)
       + [Installieren der Node.js-SDK](implement/server-side/node-js/install-sdk.md)
       + [Initialisieren der Node.js-SDK](implement/server-side/node-js/initialize-sdk.md)
@@ -130,7 +132,7 @@ ht-degree: 45%
       + [SDK-Ereignisse (Node.js)](implement/server-side/node-js/sdk-events.md)
       + [Logger (Node.js)](implement/server-side/node-js/logger.md)
       + [Proxy-Konfiguration (Node.js)](implement/server-side/node-js/proxy-configuration.md)
-   + Java SDK-{#java}
+   + Java SDK-Referenz {#java}
       + [Übersicht über Java SDK](implement/server-side/java/overview.md)
       + [Installieren der Java-SDK](implement/server-side/java/install-sdk.md)
       + [Initialisieren der Java-SDK](implement/server-side/java/initialize-sdk.md)
@@ -143,7 +145,7 @@ ht-degree: 45%
       + [Proxy-Konfiguration (Java)](implement/server-side/java/proxy-configuration.md)
       + [Benutzerdefinierte HTTP-Client-Konfiguration (Java)](implement/server-side/java/custom-http-client.md)
       + [Dienstprogrammmethoden (Java)](implement/server-side/java/utility-methods.md)
-   + .NET SDK-{#net}
+   + .NET SDK-Referenz {#net}
       + [Übersicht über .NET SDK](implement/server-side/net/overview.md)
       + [Installieren von .NET SDK](implement/server-side/net/install-sdk.md)
       + [Initialisieren von .NET SDK](implement/server-side/net/initialize-sdk.md)
@@ -152,7 +154,7 @@ ht-degree: 45%
       + [Benachrichtigungen senden (.NET)](implement/server-side/net/send-notifications.md)
       + [SDK-Ereignisse (.NET)](implement/server-side/net/sdk-events.md)
       + [Asynchrone Anforderungen (.NET)](implement/server-side/net/asynchronous-requests.md)
-   + Python SDK-{#python}
+   + Python SDK-Referenz {#python}
       + [Übersicht über Python SDK](implement/server-side/python/overview.md)
       + [Installieren von Python SDK](implement/server-side/python/install-sdk.md)
       + [Initialisieren von Python SDK](implement/server-side/python/initialize-sdk.md)
@@ -163,15 +165,15 @@ ht-degree: 45%
       + [Asynchrone Anfragen (Python)](implement/server-side/python/asynchronous-requests.md)
       + [Logger (Python)](implement/server-side/python/logger.md)
 + [Hybridimplementierung](implement/hybrid/hybrid-overview.md)
-+ [Recommendations-Implementierung](implement/recommendations/recommendations.md)
++ [Implementierung von Recommendations](implement/recommendations/recommendations.md)
 + [Recommendations-Implementierung - Beta](/help/dev/implement/recommendations/recommendations-beta.md)
-+ der Mobile-App-Implementierung{#mobile-apps}
++ Mobile-App-Implementierung {#mobile-apps}
    + [Target für mobile Apps – Überblick](implement/mobile/overview.md)
    + [Mobile Target-Vorschau](implement/mobile/target-mobile-preview.md)
    + [Verwenden des Standortdienstes](implement/mobile/use-location-service.md)
    + [Target für mobile Apps – FAQs](implement/mobile/mobile-faq.md)
    + [Implementieren von Target mit dem AEP Mobile SDK in einer nativen App mit Web-Ansichten](/help/dev/implement/mobile/native-app.md)
-+ E-Mail-{#implement-email}
++ E-Mail-Implementierung {#implement-email}
    + [E-Mail: Target-Implementierung – Überblick](implement/email/overview.md)
    + [Erstellen einer AdBox für ein Bild](implement/email/testing-content-with-the-adbox.md)
    + [Testen einer E-Mail-Bild-AdBox](implement/email/testing-email-image-adbox.md)
@@ -192,31 +194,31 @@ ht-degree: 45%
       + [Überlegungen und bekannte Einschränkungen](/help/dev/before-implement/delivery-api-overview/known-limitations.md)
       + [Client-Hinweise](/help/dev/before-implement/delivery-api-overview/client-hints.md)
       + [Bereitstellungs-API](/help/dev/implement/delivery-api/delivery-api.md)
-   + Admin-API-{#admin-api}
+   + Admin-API {#admin-api}
       + [Übersicht über die Admin-API](before-administer/admin-api-overview/admin-api-overview.md)
       + [Adobe Target Admin-API](/help/dev/administer/admin-api/admin-api-overview-new.md)
-   + Profil-API-{#profile-apis}
+   + Profil-API {#profile-apis}
       + [Profile-API - Übersicht](/help/dev/administer/profile-api/profiles-api.md)
       + [Profile abrufen](/help/dev/administer/profile-api/profile-fetch.md)
       + [Profilaktualisierung](/help/dev/administer/profile-api/profile-api-overview.md)
       + [API zur Aktualisierung einzelner Profile](/help/dev/administer/profile-api/profile-single-api.md)
       + [API zur Massenaktualisierung von Profilen](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [Berichterstellungs-API](/help/dev/administer/reporting-api/reporting-api.md)
-   + Recommendations API-{#recommendations-api}
-      + [Übersicht über die Recommendations-API](before-administer/recs-api/overview.md)
+   + Recommendations-API {#recommendations-api}
+      + [Recommendations-API - Übersicht](before-administer/recs-api/overview.md)
       + [Katalog mit APIs verwalten](before-administer/recs-api/manage-catalog.md)
       + [Verwalten benutzerdefinierter Kriterien](before-administer/recs-api/manage-custom-criteria.md)
       + [Verwenden der Bereitstellungs-API mit Recommendations](before-administer/recs-api/fetch-recs-server-side-delivery-api.md)
       + [Recommendations-API](/help/dev/administer/recommendations-api/recommendations-api.md)
-   + Models-API-{#models-api}
+   + Models-API {#models-api}
       + [Auf die Blockierungsliste setzen Übersicht über die Models-API](before-administer/models-api.md)
       + [Models-API](/help/dev/administer/models-api/models-api-overview.md)
    + [Adobe Admin Console-APIs](/help/dev/before-implement/delivery-api-overview/adobe-console-api.md)
-   + [Adobe Experience Platform Edge Network Server-API](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
+   + [Adobe Experience Platform Edge Network-Server-API](/help/dev/before-implement/delivery-api-overview/aep-edge-network-server-api.md)
 + Implementierungsmuster {#implementation-patterns}
    + [Übersicht über Implementierungsmuster](/help/dev/patterns/pattern-overview.md)
-   + Recommendations-Implementierungsmuster unter Verwendung von at.js-{#atjs}
-      + [Recommendations-Implementierungsmuster mit at.js - Übersicht](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
+   + Implementierungsmuster für Recommendations unter Verwendung von at.js {#atjs}
+      + [Recommendations-Implementierungsmuster mit at.js - Überblick](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
       + [SDKs initialisieren](/help/dev/patterns/recs-atjs/initialize-sdk.md)
       + [Konfigurieren der Datenerfassung](/help/dev/patterns/recs-atjs/data-collection.md)
       + [Rendern von Erlebnissen](/help/dev/patterns/recs-atjs/render-experiences.md)

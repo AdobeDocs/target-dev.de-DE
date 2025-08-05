@@ -5,7 +5,7 @@ description: Wie implementiere und verwalte ich und  [!DNL Adobe Target]  mit se
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: dadc3804da4592dba4ad88b8c5c9f804c56e232b
+source-git-commit: 599aa4c965e331bb2681523d50708a03fc933875
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 6%
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # [!DNL Adobe Target]-Entwicklerhandbuch
 
-**([Anzeigen [!DNL Target] Dokumentationsaktualisierungen](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html?lang=de){target=_blank})**
+**([Anzeigen [!DNL Target] Dokumentationsaktualisierungen](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank})**
 
 Dieses *[!DNL Adobe Target]-Entwicklerhandbuch* enthält Ressourcen und Anleitungen für [!DNL Target], einschließlich API- und SDK-Dokumentation, zur Implementierung und Verwaltung von [!DNL Target].
 
@@ -26,7 +26,7 @@ Dieses *[!DNL Adobe Target]-Entwicklerhandbuch* enthält Ressourcen und Anleitun
 >
 >* [*[!DNL Adobe Target] Tutorials *](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=de){target=_blank}
 >
->Versionsinformationen finden Sie unter [Target-Versionshinweise (aktuell)](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=de){target=_blank} im Handbuch für *[!DNL Adobe Target]Business Practices*.
+>Versionsinformationen finden Sie unter [Target-Versionshinweise (aktuell)](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html){target=_blank} im Handbuch für *[!DNL Adobe Target]Business Practices*.
 
 ## Erste Schritte mit der Implementierung
 
@@ -34,7 +34,7 @@ Dieses *[!DNL Adobe Target]-Entwicklerhandbuch* enthält Ressourcen und Anleitun
 
 ## Client-seitige Implementierung
 
-[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk.md): Mit dem [!DNL Adobe Experience Platform Web SDK] können Sie über die [!UICONTROL Adobe Experience Edge Network] mit den verschiedenen Services in der [!DNL Experience Cloud] (einschließlich [!DNL Target]) interagieren.
+[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md): Mit dem [!DNL Adobe Experience Platform Web SDK] können Sie über die [!DNL Experience Cloud] mit den verschiedenen Services in der [!DNL Target] (einschließlich [!UICONTROL Adobe Experience Edge Network]) interagieren.
 
 [**Target at.js-JavaScript-Bibliothek**](/help/dev/implement/client-side/overview.md): Die at.js-JavaScript-Bibliothek verbessert die Seitenladezeiten für Web-Implementierungen, verbessert die Sicherheit und bietet bessere Implementierungsoptionen für Single-Page-Anwendungen.
 
@@ -54,15 +54,15 @@ Dieses *[!DNL Adobe Target]-Entwicklerhandbuch* enthält Ressourcen und Anleitun
 
 [**Hybrid-Bereitstellung**](implement/hybrid/hybrid-overview.md): Implementieren Sie [!DNL Target] mithilfe einer Kombination aus Client- und Server-seitiger Implementierung.
 
-## Recommendations-Implementierung
+## Implementierung von Recommendations
 
-[**Recommendations-Implementierung**](implement/recommendations/recommendations.md): [!DNL Adobe Target Recommendations] planen und implementieren.
+[**Implementierung von Empfehlungen**](implement/recommendations/recommendations.md): [!DNL Adobe Target Recommendations] planen und implementieren.
 
 ## Mobile-App-Implementierung
 
 [**Übersicht über AEP Mobile SDK**](implement/mobile/overview.md): Übersicht über die Implementierung von [!DNL Adobe Target] mit [!DNL Adobe Experience Platform] Mobile SDKs.
 
-[**AEP Mobile SDK-Referenz**](https://developer.adobe.com/client-sdks/documentation/): Implementieren von [!DNL Adobe Target] mit [!DNL Adobe Experience Platform] Mobile SDKs.
+[**AEP Mobile SDK-Referenz**](https://developer.adobe.com/client-sdks/documentation/): Implementieren Sie [!DNL Adobe Target] mit [!DNL Adobe Experience Platform] Mobile SDKs.
 
 ## E-Mail-Implementierung
 
@@ -84,13 +84,13 @@ Dieses *[!DNL Adobe Target]-Entwicklerhandbuch* enthält Ressourcen und Anleitun
 
 [**[!DNL Target Models API]**](administer/models-api/models-api-overview.md): Verwalten Sie Blockierungslisten, um die in [!DNL Target] Modellen für maschinelles Lernen verwendeten Funktionen zu definieren.
 
-[**Admin Console-APIs**](https://developer.adobe.com/umapi/): Verwalten Sie Benutzende und Produktberechtigungen über die Adobe User Management- und Benutzersynchronisierungs-APIs.
+[**Admin Console-APIs**](https://developer.adobe.com/umapi/): Verwalten Sie Benutzer und Produktberechtigungen über die APIs für Benutzerverwaltung und Benutzersynchronisierung von Adobe.
 
-[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=de): Verwenden Sie die [!DNL Adobe Experience Platform Edge Network Server]-API für eine Vielzahl von Anwendungsfällen für Datenerfassung, Personalisierung, Werbung und Marketing.
+[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html): Verwenden Sie die [!DNL Adobe Experience Platform Edge Network Server]-API für eine Vielzahl von Anwendungsfällen für Datenerfassung, Personalisierung, Werbung und Marketing.
 
 ## Ressourcen
 
-* [Adobe Open Source Repository](https://github.com/adobe)
+* [Adobe Open Source-Repository](https://github.com/adobe)
 * [Zielknoten JS SDK Source](https://github.com/adobe/target-nodejs-sdk)
 * [Target Node JS SDK Examples repo](https://github.com/adobe/target-nodejs-sdk-samples)
 * [Target Java SDK Source](https://github.com/adobe/target-java-sdk)
@@ -98,6 +98,6 @@ Dieses *[!DNL Adobe Target]-Entwicklerhandbuch* enthält Ressourcen und Anleitun
 * [Target-Implementierung](./before-implement/prepare-to-implement-target.md)
 * [Verwaltung von Target](./before-administer/target-api-overview.md)
 * [Adobe Target Dev Docs GitHub Repo](https://github.com/AdobeDocs/target-developers)
-* [Versionshinweise zu Adobe Target](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=de)
+* [Versionshinweise zu Adobe Target](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html)
 * [Adobe Target Business-Benutzerhandbuch](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=de)
 
