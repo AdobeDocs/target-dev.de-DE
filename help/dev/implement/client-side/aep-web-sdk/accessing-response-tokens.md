@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Zugriff auf Antwort-Token
 
-Personalization-Inhalte, die von [!DNL Adobe Target] zurückgegeben werden[ umfassen ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)Antwort-Token), die Details zur Aktivität, zum Angebot, zum Erlebnis, zum Benutzerprofil, zu geografischen Informationen und mehr sind. Diese Details können für Drittanbieter-Tools freigegeben oder zum Debugging verwendet werden. Antwort-Token können in der [!DNL Target]-Benutzeroberfläche konfiguriert werden.
+Personalization-Inhalte, die von [!DNL Adobe Target] zurückgegeben werden[ umfassen ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=de)Antwort-Token), die Details zur Aktivität, zum Angebot, zum Erlebnis, zum Benutzerprofil, zu geografischen Informationen und mehr sind. Diese Details können für Drittanbieter-Tools freigegeben oder zum Debugging verwendet werden. Antwort-Token können in der [!DNL Target]-Benutzeroberfläche konfiguriert werden.
 
 Um auf Personalisierungsinhalte zuzugreifen, stellen Sie beim Senden eines Ereignisses eine Rückruffunktion bereit. Dieser Rückruf wird aufgerufen, nachdem die SDK eine erfolgreiche Antwort vom Server erhalten hat. Ihr Callback wird als `result`-Objekt bereitgestellt, das eine `propositions`-Eigenschaft enthalten kann, die alle zurückgegebenen Personalisierungsinhalte enthält. Nachfolgend finden Sie ein Beispiel für die Bereitstellung einer Rückruffunktion.
 
@@ -27,7 +27,7 @@ alloy("sendEvent", {
   });
 ```
 
-In diesem Beispiel ist `result.propositions`, falls vorhanden, ein Array mit Personalisierungsvorschlägen im Zusammenhang mit dem Ereignis. Weitere Informationen [ Inhalt von ](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content) finden `result.propositions.` unter „Rendern von Personalisierungsinhalten“
+In diesem Beispiel ist `result.propositions`, falls vorhanden, ein Array mit Personalisierungsvorschlägen im Zusammenhang mit dem Ereignis. Weitere Informationen [ Inhalt von ](https://experienceleague.adobe.com/de/docs/experience-platform/web-sdk/personalization/rendering-personalization-content) finden `result.propositions.` unter „Rendern von Personalisierungsinhalten“
 
 Angenommen, Sie möchten alle Aktivitätsnamen aus allen Vorschlägen erfassen, die automatisch von Web SDK gerendert wurden, und sie in ein einziges Array pushen. Sie können dann das einzelne Array an einen Drittanbieter senden. In diesem Fall:
 
