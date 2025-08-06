@@ -815,7 +815,7 @@ Wenn diese Option eingerichtet ist, sieht das Format der zurückgegebenen Payloa
 }
 ```
 
-Die Payload kann dann über den an [!DNL Analytics] weitergeleitet [!DNL  Data Insertion API].
+Die Payload kann dann über den an [!DNL Analytics] weitergeleitet [!DNL &#x200B; Data Insertion API].
 
 Beispiel 2: Konfiguration in jeder `getOffers`:
 
