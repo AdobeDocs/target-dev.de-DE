@@ -3,24 +3,24 @@ title: Echtzeit-Profilsynchronisierung für mbox3rdPartyId
 description: Erfahren Sie, wie Sie mbox3rdPartyId mit dem  [!DNL Adobe Experience Platform Web SDK].
 keywords: Personalisierung;Target;Adobe Target;renderDecisions;sendEvent;mbox3rdPartyId;
 feature: AEP Web SDK
-source-git-commit: 03b02fb87873d89c917c7a2d7e7f775b724ea083
+source-git-commit: b694698b0957db499172af34ff3a61c10d22b0d1
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '146'
 ht-degree: 16%
 
 ---
 
-# Was ist mbox3rdPartyId
+# mbox3rdPartyId verwenden
 
 Die `mbox3rdPartyId` in [!DNL Adobe Target] ist die Besucher-ID Ihres Unternehmens, wie z. B. die Mitgliedschafts-ID des Treueprogramms Ihres Unternehmens.
 
-Wenn sich ein Besucher auf der Website eines Unternehmens anmeldet, erstellt das Unternehmen in der Regel eine ID, die mit dem Konto, der Treuekarte, der Mitgliedschaftsnummer oder anderen Kennungen des Besuchers für dieses Unternehmen verknüpft ist. [Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=de)
+Wenn sich ein Besucher auf der Website eines Unternehmens anmeldet, erstellt das Unternehmen in der Regel eine ID, die mit dem Konto, der Treuekarte, der Mitgliedschaftsnummer oder anderen Kennungen des Besuchers für dieses Unternehmen verknüpft ist. [Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html)
 
 ## Verwendung von `mbox3rdPartyId` mit dem [!DNL Platform Web SDK]
 
 ### Schritt 1: Konfigurieren des `Target Third Party ID Namespace`
 
-Konfigurieren Sie die `Target Third Party ID Namespace` in Ihrem [Datenstrom](https://experienceleague.adobe.com/de/docs/experience-platform/datastreams/overview) unter Verwendung des ID-Namespace, den Sie als mbox-Drittanbieter-ID verwenden möchten. [Weitere Informationen zu ID-Namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=de)
+Konfigurieren Sie die `Target Third Party ID Namespace` in Ihrem [Datenstrom](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview) unter Verwendung des ID-Namespace, den Sie als mbox-Drittanbieter-ID verwenden möchten. [Weitere Informationen zu ID-Namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html)
 
 ![Experience Platform-Benutzeroberfläche mit dem Namespace-Feld für die Target-Third-Party-ID.](/help/dev/implement/client-side/aep-web-sdk/assets/mbox3rdpartyid.png)
 
