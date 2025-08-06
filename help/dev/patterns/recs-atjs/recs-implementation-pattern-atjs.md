@@ -1,11 +1,11 @@
 ---
-title: Recommendations-Implementierungsmuster unter Verwendung von at.js
-description: Erfahren Sie, wie Sie das Implementierungsmuster für Recommendations mit at.js verwenden
+title: Implementierungsmuster für Recommendations unter Verwendung von at.js
+description: Erfahren Sie, wie Sie das Implementierungsmuster für Recommendations mit at.js verwenden.
 feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: d568cd1d-acc3-42e0-ae2c-5787e6f361f8
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+source-git-commit: 3b0bc0b67800ed4b1da6ba2bfa05c677147a78ba
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # [!DNL Recommendations] von Implementierungsmustern mit at.js - Überblick
 
-Dieses Implementierungsmuster hilft Ihnen, Ihre [!DNL Adobe Target Recommendations] Implementierung zu verstehen und zu erstellen, wenn Sie die [at.js-JavaScript-Bibliothek verwenden](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md).
+Dieses Implementierungsmuster hilft Ihnen, Ihre [!DNL Adobe Target Recommendations] Implementierung zu verstehen und zu erstellen, wenn Sie die [at.js-JavaScript-Bibliothek verwenden](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md).
 
 Klicken Sie auf Bild , um es auf den Vollbildmodus zu erweitern.
 
