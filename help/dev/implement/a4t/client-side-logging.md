@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Client-seitige Protokollierung für A4T-Daten im [!DNL Experience Platform Web SDK]
 
-Mit dem [!DNL Adobe Experience Platform Web SDK] können Sie [Daten von Adobe Analytics for Target (A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) Client-seitig in Ihrer Web-Anwendung erfassen.
+Mit dem [!DNL Adobe Experience Platform Web SDK] können Sie [Daten von Adobe Analytics for Target (A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=de) Client-seitig in Ihrer Web-Anwendung erfassen.
 
-Client-seitige Protokollierung bedeutet, dass relevante [!DNL Target]-Daten Client-seitig zurückgegeben werden, sodass Sie Daten erfassen und für [!DNL Analytics] freigeben können. Diese Option sollte aktiviert werden, wenn Sie Daten manuell über die „Data Insertion [&quot; an Analytics ](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html) möchten.
+Client-seitige Protokollierung bedeutet, dass relevante [!DNL Target]-Daten Client-seitig zurückgegeben werden, sodass Sie Daten erfassen und für [!DNL Analytics] freigeben können. Diese Option sollte aktiviert werden, wenn Sie Daten manuell über die „Data Insertion [&quot; an Analytics ](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=de) möchten.
 
 >[!NOTE]
 >
->Eine Methode zur Durchführung dieses Vorgangs mit [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) ist derzeit in Entwicklung und wird in naher Zukunft verfügbar sein.
+>Eine Methode zur Durchführung dieses Vorgangs mit [AppMeasurement.js](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=de) ist derzeit in Entwicklung und wird in naher Zukunft verfügbar sein.
 
 In diesem Dokument werden die Schritte zum Einrichten der Client-seitigen A4T-Protokollierung für die [!DNL Platform Web SDK] beschrieben und Implementierungsbeispiele für gängige Anwendungsfälle bereitgestellt.
 
@@ -28,9 +28,9 @@ In diesem Dokument werden die Schritte zum Einrichten der Client-seitigen A4T-Pr
 
 In diesem Tutorial wird davon ausgegangen, dass Sie mit den grundlegenden Konzepten und Prozessen der Verwendung des [!DNL Platform Web SDK] zu Personalisierungszwecken vertraut sind. Lesen Sie die folgende Dokumentation, wenn Sie eine Einführung benötigen:
 
-* [Konfigurieren der Web-SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview)
-* [Ereignisse senden](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview)
-* [Rendern von Personalisierungsinhalten](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+* [Konfigurieren der Web-SDK](https://experienceleague.adobe.com/de/docs/experience-platform/web-sdk/commands/configure/overview)
+* [Ereignisse senden](https://experienceleague.adobe.com/de/docs/experience-platform/web-sdk/commands/sendevent/overview)
+* [Rendern von Personalisierungsinhalten](https://experienceleague.adobe.com/de/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## Einrichten [!DNL Analytics] Client-seitigen Protokollierung {#set-up-client-side-logging}
 
@@ -38,13 +38,13 @@ In den folgenden Unterabschnitten wird beschrieben, wie Sie [!DNL Analytics] Cli
 
 ### Aktivieren [!DNL Analytics] Client-seitigen Protokollierung {#enable-analytics-client-side-logging}
 
-Um [!DNL Analytics] Client-seitige Protokollierung für Ihre Implementierung aktivieren zu können, müssen Sie die [!DNL Adobe Analytics]-Konfiguration in Ihrem [Datenstrom“ ](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview).
+Um [!DNL Analytics] Client-seitige Protokollierung für Ihre Implementierung aktivieren zu können, müssen Sie die [!DNL Adobe Analytics]-Konfiguration in Ihrem [Datenstrom“ ](https://experienceleague.adobe.com/de/docs/experience-platform/datastreams/overview).
 
 ![Analytics-Datenstromkonfiguration deaktiviert](/help/dev/implement/a4t/assets/disable-analytics-datastream.png)
 
 ### Abrufen [!DNL A4T] Daten aus der SDK und Senden an [!DNL Analytics] {#a4t-to-analytics}
 
-Damit diese Berichtsmethode ordnungsgemäß funktioniert, müssen Sie die [!DNL A4T] Daten senden, die mit dem [`sendEvent`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/sendevent/overview)-Befehl im [!DNL Analytics]-Treffer abgerufen wurden.
+Damit diese Berichtsmethode ordnungsgemäß funktioniert, müssen Sie die [!DNL A4T] Daten senden, die mit dem [`sendEvent`](https://experienceleague.adobe.com/de/docs/experience-platform/web-sdk/commands/sendevent/overview)-Befehl im [!DNL Analytics]-Treffer abgerufen wurden.
 
 Wenn [!DNL Target] Edge eine Vorschlagsantwort berechnet, prüft es, ob [!DNL Analytics] Client-seitige Protokollierung aktiviert ist (z. B. wenn [!DNL Analytics] in Ihrem Datenstrom deaktiviert ist). Wenn die Client-seitige Protokollierung aktiviert ist, fügt das System jedem Vorschlag in der Antwort ein [!DNL Analytics]-Token hinzu.
 
@@ -225,7 +225,7 @@ Die folgenden Unterabschnitte zeigen, wie Sie [!DNL Analytics] Client-seitige Pr
 
 ### [!UICONTROL Form-Based Experience Composer] Aktivitäten {#form-based-composer}
 
-Sie können die [!DNL Platform Web SDK] verwenden, um die Ausführung von Vorschlägen aus [Adobe Target Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html)-Aktivitäten zu steuern.
+Sie können die [!DNL Platform Web SDK] verwenden, um die Ausführung von Vorschlägen aus [Adobe Target Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de)-Aktivitäten zu steuern.
 
 Wenn Sie Vorschläge für einen bestimmten Entscheidungsumfang anfordern, enthält der zurückgegebene Vorschlag das entsprechende [!DNL Analytics]-Token. Best Practice ist es, den [!DNL Experience Platform Web SDK] `sendEvent`-Befehl zu verketten und durch die zurückgegebenen Vorschläge zu iterieren, um sie auszuführen, während gleichzeitig die [!DNL Analytics]-Token erfasst werden.
 
@@ -465,7 +465,7 @@ alloy("sendEvent", {
 
 ### [!UICONTROL Visual Experience Composer] (VEC)-Aktivitäten {#visual-experience-composer-acitivties}
 
-Mit dem [!DNL Platform Web SDK] können Sie Angebote verarbeiten, die mit [Visual Experience Composer (VEC) erstellt wurden](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
+Mit dem [!DNL Platform Web SDK] können Sie Angebote verarbeiten, die mit [Visual Experience Composer (VEC) erstellt wurden](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=de).
 
 >[!NOTE]
 >
