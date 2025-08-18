@@ -1,19 +1,19 @@
 ---
 title: Integration mit Experience Cloud A4T-Reporting
-description: Integration mit Experience Cloud, A4T-Reporting, Integration von Analytics for Target
+description: Integration mit Experience Cloud, A4T-Reporting, Analytics for Target-Integration
 keywords: Bereitstellungs-API, serverseitig, serverseitig, Integration, A4T
 exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+source-git-commit: cbae0f1758fb0dee4837e8c237f8617ecb46eb25
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 7%
+source-wordcount: '372'
+ht-degree: 6%
 
 ---
 
-# Berichterstellung von Analytics for Target (A4T)
+# [!UICONTROL Analytics for Target] (A4T)-Reporting
 
-[!DNL Adobe Target] unterstützt A4T-Reporting sowohl für die geräteinterne Entscheidungsfindung als auch für Server-seitige Target-Aktivitäten. Es gibt zwei Konfigurationsoptionen zum Aktivieren von A4T-Berichten:
+[!DNL Adobe Target] unterstützt A4T-Reporting sowohl für die geräteinterne Entscheidungsfindung als auch für Server-seitige [!DNL Target]. Es gibt zwei Konfigurationsoptionen zum Aktivieren von A4T-Berichten:
 
 * [!DNL Adobe Target] leitet die Analytics-Payload automatisch an [!DNL Adobe Analytics] weiter oder
 * Der Benutzer fordert die Analytics-Payload von [!DNL Adobe Target] an. ([!DNL Adobe Target] gibt die [!DNL Adobe Analytics] Payload an den Aufrufer zurück.)
@@ -25,9 +25,9 @@ ht-degree: 7%
 ## Voraussetzungen
 
 1. Konfigurieren Sie die Aktivität in der [!DNL Adobe Target]-Benutzeroberfläche mit [!DNL Adobe Analytics] als Berichtsquelle und stellen Sie sicher, dass die Konten für A4T aktiviert sind.
-1. Der API-Benutzer generiert die Adobe Marketing Cloud-Besucher-ID und stellt sicher, dass diese ID verfügbar ist, wenn die Target-Anfrage ausgeführt wird.
+1. Der API-Benutzer generiert die Adobe-[!UICONTROL Marketing Cloud Visitor ID] und stellt sicher, dass diese ID verfügbar ist, wenn die [!DNL Target] ausgeführt wird.
 
-## [!DNL Adobe Target] leitet die Analytics-Payload automatisch weiter
+## [!DNL Adobe Target] leitet die [!DNL Analytics] Payload automatisch weiter
 
 [!DNL Adobe Target] können die Analytics-Payload automatisch an [!DNL Adobe Analytics] weiterleiten, wenn die folgenden Kennungen bereitgestellt werden:
 
@@ -115,7 +115,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## Benutzer ruft Analytics-Payload von [!DNL Adobe Target] ab
 
-Ein Benutzer kann die [!DNL Adobe Analytics] Payload für eine bestimmte Mbox abrufen und dann über die „Data Insertion [&quot; an [!DNL Adobe Analytics] ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Wenn eine [!DNL Adobe Target]-Anfrage ausgelöst wird, übergeben Sie `client_side` an das Feld `logging` in der Anfrage. Dadurch wird eine Payload zurückgegeben, wenn die angegebene Mbox in einer Aktivität vorhanden ist, die Analytics als Berichtsquelle verwendet.
+Ein Benutzer kann die [!DNL Adobe Analytics] Payload für eine bestimmte Mbox abrufen und dann über die „Data Insertion [!DNL Adobe Analytics]&quot; an [ ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Wenn eine [!DNL Adobe Target]-Anfrage ausgelöst wird, übergeben Sie `client_side` an das Feld `logging` in der Anfrage. Diese Anfrage gibt eine Payload zurück, wenn die angegebene Mbox in einer Aktivität vorhanden ist, die [!DNL Analytics] als Berichtsquelle verwendet.
 
 >[!BEGINTABS]
 
@@ -191,10 +191,10 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 Nachdem Sie `logging = client_side` angegeben haben, erhalten Sie die Payload im mbox-Feld.
 
-Wenn die Target-Antwort etwas in der `analytics -> payload`-Eigenschaft enthält, leiten Sie sie so weiter, wie sie ist, an [!DNL Adobe Analytics]. [!DNL Adobe Analytics] weiß, wie diese Payload verarbeitet wird. Dies kann in einer GET-Anfrage im folgenden Format erfolgen:
+Wenn die Antwort von [!DNL Target] etwas in der `analytics -> payload`-Eigenschaft enthält, leiten Sie sie so weiter, wie sie ist, an [!DNL Adobe Analytics]. [!DNL Adobe Analytics] weiß, wie diese Payload verarbeitet wird. Dies kann in einer GET-Anfrage im folgenden Format erfolgen:
 
 ```
-https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
+https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/{content_type_num}/{code_ver}/{session}?pe=tnt&tnta={payload}&c.&a.&target.&sessionId={sessionId}&.target&.a&.c&mid={mid}
 ```
 
 ### Parameter und Variablen von Abfragezeichenfolgen
@@ -202,8 +202,12 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 | Feldname | Erforderlich | Beschreibung |
 | --- | --- | --- |
 | `rsid` | Ja | Die Report Suite-ID |
+| `content_type_num` | Ja | Immer auf „0“ festgelegt |
+| `code_ver` | Ja | Immer auf „MOBILE-1.0“ eingestellt |
+| `session` | Ja | Immer auf „0“ festgelegt |
 | `pe` | Ja | Seitenereignis. Immer auf `tnt` gesetzt |
-| `tnta` | Ja | Analytics-Payload, die vom Target-Server in `analytics -> payload -> tnta` zurückgegeben wird |
+| `tnta` | Ja | [!DNL Analytics] Payload, die von [!DNL Target] Server in `analytics -> payload -> tnta` zurückgegeben wird |
+| `sessionId` | Ja | [!DNL Target] Sitzungs-ID der aktuellen Sitzung |
 | `mid` | Ja | Marketing Cloud-Besucher-ID |
 
 ### Erforderliche Kopfzeilenwerte
@@ -212,8 +216,16 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 | --- | --- |
 | Host | Analytics-Datenerfassungs-Server (z. B.: `adobeags421.sc.omtrdc.net`) |
 
-### HTTP-GET-Aufruf zum Einfügen von Beispiel-A4T-Daten
+### Beispiel für HTTP-GET-Aufruf zum Einfügen von A4T-Daten
+
+Nicht URL-kodierte Version für bessere Lesbarkeit (Format für API-Aufrufe nicht zu verwenden):
 
 ```
-https://demo.sc.omtrdc.net/b/ss/myCustomRsid/0/MOBILE-1.0?pe=tnt&tnta=285408:0:0|2&mid=2304820394812039
+https://demo.sc.omtrdc.net/b/ss/myCustomRsid/0/MOBILE-1.0/0?tnta=253236:0:0|0,253236:0:0|2,253236:0:0|1,253613:0:0|0,253613:0:0|2,253613:0:0|1&c.&a.&target.&sessionId=45c08980-f4b9-4e11-96db-067d58e49f74&.target&.a&.c&pe=tnt&mid=69170113867710665996968872592584719577
+```
+
+URL-codierte Version (für API-Aufrufe zu verwendendes Format):
+
+```
+https://demo.sc.omtrdc.net/b/ss/myCustomRsid/0/MOBILE-1.0/0?tnta=253236%3A0%3A0%7C0%2C253236%3A0%3A0%7C2%2C253236%3A0%3A0%7C1%2C253613%3A0%3A0%7C0%2C253613%3A0%3A0%7C2%2C253613%3A0%3A0%7C1&c.%26a.%26target.%26sessionId=45c08980-f4b9-4e11-96db-067d58e49f74%26.target%26.a%26.c&pe=tnt&mid=69170113867710665996968872592584719577 
 ```
