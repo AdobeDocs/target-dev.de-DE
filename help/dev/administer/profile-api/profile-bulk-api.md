@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie  [!DNL Adobe Target] [!UICONTROL Bulk Profile
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 8cab20a7842b0a05c5b2a845662a7ab5f60393bd
+source-git-commit: dae198fd8ef3fc8473ad31807c146802339b1832
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '917'
 ht-degree: 7%
 
 ---
@@ -26,9 +26,11 @@ Mit dem [!UICONTROL Bulk Profile Update API] können Sie bequem detaillierte Bes
 >
 >Version 2 (v2) des [!DNL Bulk Profile Update API] ist die aktuelle Version. [!DNL Target] unterstützt jedoch weiterhin Version 1 (v1).
 >
->* **Eigenständige Implementierungen, die nicht auf `ECID` angewiesen sind, verwenden Version 2**: Wenn Ihre [!DNL Target]-Implementierung [!DNL Experience Cloud ID] (ECID) als eine der Profilkennungen für anonyme Besucher verwendet, dürfen Sie `pcId` nicht als Schlüssel in einer Batch-Datei von Version 2 (v2) verwenden. Die Verwendung von `pcId` mit Version 2 des [!DNL Bulk Profile Update API] ist für eigenständige [!DNL Target]-Implementierungen vorgesehen, die nicht auf `ECID` angewiesen sind.
+>* Wenn Ihre [!DNL Target]-Implementierung [!DNL Experience Cloud ID] (ECID) als Profilkennung für anonyme Besucher verwendet, verwenden Sie `pcId` nicht als Schlüssel in einer Batch-Datei der Version 2 (v2). Die Verwendung von `pcId` mit Version 2 des [!DNL Bulk Profile Update API] ist nur für eigenständige [!DNL Target]-Implementierungen vorgesehen, die nicht auf ECID angewiesen sind.
 >
->* **Implementierungen, die auf `thirdPartID` basieren, verwenden Version 1**: Implementierungen, die `ECID` zur Profilidentifizierung verwenden, sollten Version 1 (v1) der API verwenden, wenn Sie `pcId` als Schlüssel in der Batch-Datei verwenden möchten. Wenn Ihre Implementierung `thirdPartyId` zur Profilidentifizierung verwendet, wird Version 2 (v2) mit `thirdPartyId` als Schlüssel empfohlen.
+>* Wenn Ihre Implementierung ECID zur Profilidentifizierung verwendet und Sie `pcId` als Schlüssel in der Batch-Datei verwenden möchten, verwenden Sie Version 1 (v1) der API.
+>
+>* Wenn Ihre Implementierung `thirdPartyId` zur Profilidentifizierung verwendet, verwenden Sie Version 2 (v2) der API mit `thirdPartyId` als Schlüssel.
 
 ## Vorteile der [!UICONTROL Bulk Profile Update API]
 
@@ -47,13 +49,13 @@ Mit dem [!UICONTROL Bulk Profile Update API] können Sie bequem detaillierte Bes
 
 Um Profildaten stapelweise zu aktualisieren, erstellen Sie eine Batch-Datei. Die Batch-Datei ist eine Textdatei mit Werten, die durch Kommas getrennt sind, ähnlich der folgenden Beispieldatei.
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -75,9 +77,9 @@ Sie verweisen im POST-Aufruf an [!DNL Target] Server auf diese Datei, um die Dat
 
 Stellen Sie eine HTTP-POST-Anfrage an [!DNL Target] Edge-Server, um die Datei zu verarbeiten. Im Folgenden finden Sie eine Beispiel-HTTP-POST-Anfrage für die Datei batch.txt mit dem curl-Befehl:
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 Wo:
 
