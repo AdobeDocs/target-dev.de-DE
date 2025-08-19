@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie  [!DNL Adobe Target] [!UICONTROL Bulk Profile
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
+source-git-commit: 39f0ab4a6b06d0b3415be850487552714f51b4a2
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 8%
+source-wordcount: '929'
+ht-degree: 7%
 
 ---
 
@@ -24,9 +24,13 @@ Mit dem [!UICONTROL Bulk Profile Update API] können Sie bequem detaillierte Bes
 
 >[!NOTE]
 >
->Version 2 (v2) des [!UICONTROL Bulk Profile Update API] ist die aktuelle Version. [!DNL Target] unterstützt jedoch weiterhin Version 1 (v1).
+>Version 2 (v2) des [!DNL Bulk Profile Update API] ist die aktuelle Version. [!DNL Target] unterstützt jedoch weiterhin Version 1 (v1).
+>
+>* **Eigenständige Implementierungen, die nicht auf `PCID` angewiesen sind, verwenden Version 2**: Wenn Ihre [!DNL Target]-Implementierung [!DNL Experience Cloud ID] (ECID) als eine der Profilkennungen für anonyme Besucher verwendet, dürfen Sie `pcId` nicht als Schlüssel in einer Batch-Datei von Version 2 (v2) verwenden. Die Verwendung von `pcId` mit Version 2 des [!DNL Bulk Profile Update API] ist für eigenständige [!DNL Target]-Implementierungen vorgesehen, die nicht auf `ECID` angewiesen sind.
+>
+>* **Implementierungen, die auf `thirdPartID` basieren, verwenden Version 1**: Implementierungen, die `ECID` zur Profilidentifizierung verwenden, sollten Version 1 (v1) der API verwenden, wenn Sie `pcId` als Schlüssel in der Batch-Datei verwenden möchten. Wenn Ihre Implementierung `thirdPartyId` zur Profilidentifizierung verwendet, wird Version 2 (v2) mit `thirdPartyId` als Schlüssel empfohlen.
 
-## Vorteile der Bulk Profile Update API
+## Vorteile der [!UICONTROL Bulk Profile Update API]
 
 * Keine Begrenzung der Anzahl der Profilattribute.
 * Profilattribute, die über die Site gesendet werden, können über die API aktualisiert werden und umgekehrt.
@@ -43,22 +47,22 @@ Mit dem [!UICONTROL Bulk Profile Update API] können Sie bequem detaillierte Bes
 
 Um Profildaten stapelweise zu aktualisieren, erstellen Sie eine Batch-Datei. Die Batch-Datei ist eine Textdatei mit Werten, die durch Kommas getrennt sind, ähnlich der folgenden Beispieldatei.
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
 >Der `batch=` ist erforderlich und muss am Anfang der Datei angegeben werden.
 
-Sie verweisen im Dateiaufruf an [!DNL Target] Server auf diese POST, um die Datei zu verarbeiten. Beachten Sie beim Erstellen der Batch-Datei Folgendes:
+Sie verweisen im POST-Aufruf an [!DNL Target] Server auf diese Datei, um die Datei zu verarbeiten. Beachten Sie beim Erstellen der Batch-Datei Folgendes:
 
 * In der ersten Zeile der Datei müssen die Spaltenüberschriften angegeben werden.
-* Die erste Kopfzeile sollte entweder ein `pcId` oder ein `thirdPartyId` sein. Die [!UICONTROL Marketing Cloud visitor ID] wird nicht unterstützt. [!UICONTROL pcId] ist eine [!DNL Target] Besucher-ID. `thirdPartyId` ist eine von der Client-Anwendung angegebene ID, die über einen Mbox-Aufruf als `mbox3rdPartyId` an [!DNL Target] übergeben wird. Sie muss hier als `thirdPartyId` bezeichnet werden.
+* Die erste Kopfzeile sollte entweder ein `pcId` oder ein `thirdPartyId` sein. Die [!UICONTROL Marketing Cloud visitor ID] wird nicht unterstützt. [!UICONTROL pcId] ist eine [!DNL Target] Besucher-ID. `thirdPartyId` ist eine von der Client-Anwendung angegebene ID, die über einen Mbox-Aufruf als [!DNL Target] an `mbox3rdPartyId` übergeben wird. Sie muss hier als `thirdPartyId` bezeichnet werden.
 * Parameter und Werte, die Sie in der Batch-Datei angeben, müssen aus Sicherheitsgründen mit UTF-8 URL-codiert sein. Parameter und Werte können zur Verarbeitung über HTTP-Anfragen an andere Edge-Knoten weitergeleitet werden.
 * Die Parameter dürfen nur das Format `paramName` haben. Parameter werden in [!DNL Target] als `profile.paramName` angezeigt.
 * Wenn Sie [!UICONTROL Bulk Profile Update API] v2 verwenden, müssen Sie nicht alle Parameterwerte für jede `pcId` angeben. Profile werden für alle `pcId` oder `mbox3rdPartyId` erstellt, die nicht in [!DNL Target] gefunden werden. Wenn Sie v1 verwenden, werden Profile nicht für fehlende pcIds oder mbox3rdPartyIds erstellt.
@@ -69,11 +73,11 @@ Sie verweisen im Dateiaufruf an [!DNL Target] Server auf diese POST, um die Date
 
 ## HTTP-POST-Anfrage
 
-Stellen Sie eine HTTP-Dateianforderung an [!DNL Target] Edge-Server, um die POST zu verarbeiten. Im Folgenden finden Sie eine Beispiel-HTTP-POST-Anfrage für die Datei batch.txt mit dem curl-Befehl:
+Stellen Sie eine HTTP-POST-Anfrage an [!DNL Target] Edge-Server, um die Datei zu verarbeiten. Im Folgenden finden Sie eine Beispiel-HTTP-POST-Anfrage für die Datei batch.txt mit dem curl-Befehl:
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 Wo:
 
@@ -81,7 +85,7 @@ BATCH.TXT ist der Dateiname. CLIENTCODE ist der [!DNL Target] Clientcode.
 
 Wenn Sie Ihren Client-Code nicht kennen, klicken Sie in der [!DNL Target]-Benutzeroberfläche auf **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**. Der Client-Code wird im Abschnitt [!UICONTROL Account Details] angezeigt.
 
-### Inspect - die Antwort
+### Überprüfen der Antwort
 
 Die Profile-API gibt den Übermittlungsstatus des Batches zur Verarbeitung zusammen mit einem Link unter „batchStatus“ zu einer anderen URL zurück, die den Gesamtstatus des jeweiligen Batch-Vorgangs anzeigt.
 
