@@ -4,9 +4,9 @@ description: Arbeiten Sie mit [!UICONTROL Adobe Client Care] zusammen, um die CN
 title: Wie verwende ich CNAME in Target?
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: 1a78a1e2750ae906338e91ff24ac16cdc99323ba
+source-git-commit: 04dfc34bcd3e7efbf73cd167334b440d42cafd1b
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1169'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Anweisungen für die Arbeit mit [!DNL Adobe Client Care] zur Implementierung der
    >
    >Die Adobe-Zertifizierungsstelle DigiCert kann erst dann ein Zertifikat ausstellen, wenn dieser Schritt abgeschlossen ist. Daher kann Adobe Ihre Anfrage nach einer CNAME-Implementierung erst erfüllen, wenn dieser Schritt abgeschlossen ist.
 
-1. [Füllen Sie dieses Formular aus](assets/FPC_Request_Form.xlsx) und schließen Sie es ein, wenn Sie [ein Adobe-Ticket für die Kundenunterstützung öffnen, um CNAME-Unterstützung anzufordern](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=de&#reference_ACA3391A00EF467B87930A450050077C):
+1. [Füllen Sie dieses Formular aus](assets/FPC_Request_Form.xlsx) und schließen Sie es ein, wenn Sie [ein Adobe-Ticket für die Kundenunterstützung öffnen, um CNAME-Unterstützung anzufordern](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C):
 
    * [!DNL Adobe Target] Clientcode:
    * Hostnamen für SSL-Zertifikate (Beispiel: `target.example.com target.example.org`):
@@ -49,7 +49,7 @@ Anweisungen für die Arbeit mit [!DNL Adobe Client Care] zur Implementierung der
 
    Die Adobe-Kundenunterstützung benachrichtigt Sie, wenn Ihre Implementierung bereit ist.
 
-1. Aktualisieren Sie die `serverDomain` [Dokumentation](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverdomain) auf den neuen CNAME-Hostnamen und legen Sie `overrideMboxEdgeServer` in Ihrer at.js[&#128279;](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#overridemboxedgeserver) auf `false` fest.
+1. Aktualisieren Sie die `serverDomain` [Dokumentation](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverdomain) auf den neuen CNAME-Hostnamen und legen Sie `overrideMboxEdgeServer` in Ihrer at.js`false`[ auf ](../implement/client-side/atjs/atjs-functions/targetglobalsettings.md#overridemboxedgeserver) fest.
 
 ## Häufig gestellte Fragen  
 
@@ -96,6 +96,8 @@ Alle Zertifikate sind RSA SHA-256 und die Schlüssel sind standardmäßig RSA 20
 Verwenden Sie die folgenden Befehle (im macOS- oder Linux-Befehlszeilen-Terminal mit bash und curl >=7.49):
 
 1. Kopieren Sie diese Bash-Funktion und fügen Sie sie in Ihr Terminal ein, oder fügen Sie sie in Ihre Bash-Startskriptdatei ein (normalerweise `~/.bash_profile` oder `~/.bashrc`), damit die Funktion in allen Terminalsitzungen verfügbar ist:
+
+   +++Details anzeigen
 
    ```
    function adobeTargetCnameValidation {
@@ -240,13 +242,15 @@ Verwenden Sie die folgenden Befehle (im macOS- oder Linux-Befehlszeilen-Terminal
    }
    ```
 
+   +++
+
 1. Fügen Sie diesen Befehl ein (und ersetzen Sie `target.example.com` durch Ihren Hostnamen):
 
-   ```
-   adobeTargetCnameValidation target.example.com
-   ```
+   ```adobeTargetCnameValidation target.example.com```
 
    Wenn die Implementierung fertig ist, sehen Sie eine Ausgabe wie unten. Wichtig ist, dass alle Validierungsstatuszeilen `✅` statt `🚫` anzeigen. Jede Target Edge-CNAME-Shard sollte `CN=target.example.com` anzeigen, die dem primären Hostnamen im angeforderten Zertifikat entspricht (zusätzliche SAN-Hostnamen im Zertifikat werden in dieser Ausgabe nicht gedruckt).
+
+   +++Details anzeigen
 
    ```
    $ adobeTargetCnameValidation target.example.com
@@ -310,6 +314,8 @@ Verwenden Sie die folgenden Befehle (im macOS- oder Linux-Befehlszeilen-Terminal
        🔎  DNS A records:     https://whatsmydns.net/#A/target.example.com
        🔎  DNS CNAME record:  https://whatsmydns.net/#CNAME/target.example.com 
    ```
+
++++
 
 >[!NOTE]
 >
