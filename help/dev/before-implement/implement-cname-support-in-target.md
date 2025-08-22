@@ -275,7 +275,7 @@ Wenn die Implementierung fertig ist, sehen Sie eine Ausgabe wie unten. Wichtig i
      target.example.com besteht Shard-Validierung für die folgenden 7 Edge-Shards:===== ✅ target.example.com [Edge-Shard: IRL1-pool.data.adobedc.net] ====
     * Ablaufdatum: 20. Februar 23:59:59 2026 GMT* Aussteller: C=US; O=US Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
     * Subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== 
-     Edge Shard: IND1-pool.data.adobedc.net] ====✅* Ablaufdatum: Feb 20 2359 2026 GMTnet* Issuer: C=US; O=DigiCert Inc; CN=DigiCert Globaler G2 TLS RSA SHA256 2020 CA1
+     Edge Shard: IND1-pool.data.adobedc.net&rbrack; ====✅* Ablaufdatum: Feb 20 2359 2026 GMTnet* Issuer: C=US; O=DigiCert Inc; CN=DigiCert Globaler G2 TLS RSA SHA256 2020 CA1
     * Betreff: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== target.example.com [edge shard: SIN-pool.data.adobedc.net] =======* Ablaufdatum: Feb 20 230 2356 GMT26* Herausgeber: C=US; O=DigiCert Inc; CN=DigiCert Global G TLS RSA SHA256 2020 CA1:59:* Betreff: C=US; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
      target.example.com [edge-share: OR-pool.data.adobedc.net] =====US* Ablaufdatum: Feb 20 2339 2026 GMT
     * Aussteller: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1✅* Betreff: C=US; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
