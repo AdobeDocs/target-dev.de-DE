@@ -4,9 +4,9 @@ description: Arbeiten Sie mit [!UICONTROL Adobe Client Care] zusammen, um die CN
 title: Wie verwende ich CNAME in Target?
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: f894122217529cb40369c003a3b4ed5419fb0505
+source-git-commit: 353597cbbd3478e9598bd42303619440b3b478fd
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1580'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Anweisungen für die Arbeit mit [!DNL Adobe Client Care] zur Implementierung der
    >
    >Die Adobe-Zertifizierungsstelle DigiCert kann erst dann ein Zertifikat ausstellen, wenn dieser Schritt abgeschlossen ist. Daher kann Adobe Ihre Anfrage nach einer CNAME-Implementierung erst erfüllen, wenn dieser Schritt abgeschlossen ist.
 
-1. [Füllen Sie dieses Formular aus](assets/FPC_Request_Form.xlsx) und schließen Sie es ein, wenn Sie [ein Adobe-Ticket für die Kundenunterstützung öffnen, um CNAME-Unterstützung anzufordern](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=de&#reference_ACA3391A00EF467B87930A450050077C):
+1. [Füllen Sie dieses Formular aus](assets/FPC_Request_Form.xlsx) und schließen Sie es ein, wenn Sie [ein Adobe-Ticket für die Kundenunterstützung öffnen, um CNAME-Unterstützung anzufordern](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C):
 
    * [!DNL Adobe Target] Clientcode:
    * Hostnamen für SSL-Zertifikate (Beispiel: `target.example.com target.example.org`):
@@ -96,8 +96,6 @@ Alle Zertifikate sind RSA SHA-256 und die Schlüssel sind standardmäßig RSA 20
 Verwenden Sie die folgenden Befehle (im macOS- oder Linux-Befehlszeilen-Terminal mit bash und curl >=7.49):
 
 1. Kopieren Sie diese Bash-Funktion und fügen Sie sie in Ihr Terminal ein, oder fügen Sie sie in Ihre Bash-Startskriptdatei ein (normalerweise `~/.bash_profile` oder `~/.bashrc`), damit die Funktion in allen Terminalsitzungen verfügbar ist:
-
-   +++ Details anzeigen
 
    ```bash {line-numbers="true"}
     function adobeTargetCnameValidation {
@@ -243,8 +241,6 @@ Verwenden Sie die folgenden Befehle (im macOS- oder Linux-Befehlszeilen-Terminal
    }
    ```
 
-   +++
-
 1. Fügen Sie diesen Befehl ein (und ersetzen Sie `target.example.com` durch Ihren Hostnamen):
 
    ```adobeTargetCnameValidation target.example.com```
@@ -279,7 +275,7 @@ Wenn die Implementierung fertig ist, sehen Sie eine Ausgabe wie unten. Wichtig i
      target.example.com besteht Shard-Validierung für die folgenden 7 Edge-Shards:===== ✅ target.example.com [Edge-Shard: IRL1-pool.data.adobedc.net] ====
     * Ablaufdatum: 20. Februar 23:59:59 2026 GMT* Aussteller: C=US; O=US Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
     * Subject: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== 
-     Edge Shard: IND1-pool.data.adobedc.net&rbrack; ====✅* Ablaufdatum: Feb 20 2359 2026 GMTnet* Issuer: C=US; O=DigiCert Inc; CN=DigiCert Globaler G2 TLS RSA SHA256 2020 CA1
+     Edge Shard: IND1-pool.data.adobedc.net] ====✅* Ablaufdatum: Feb 20 2359 2026 GMTnet* Issuer: C=US; O=DigiCert Inc; CN=DigiCert Globaler G2 TLS RSA SHA256 2020 CA1
     * Betreff: C=US; ST=California; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== target.example.com [edge shard: SIN-pool.data.adobedc.net] =======* Ablaufdatum: Feb 20 230 2356 GMT26* Herausgeber: C=US; O=DigiCert Inc; CN=DigiCert Global G TLS RSA SHA256 2020 CA1:59:* Betreff: C=US; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
      target.example.com [edge-share: OR-pool.data.adobedc.net] =====US* Ablaufdatum: Feb 20 2339 2026 GMT
     * Aussteller: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1✅* Betreff: C=US; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com
