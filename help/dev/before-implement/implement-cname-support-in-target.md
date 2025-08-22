@@ -31,7 +31,7 @@ Anweisungen für die Arbeit mit [!DNL Adobe Client Care] zur Implementierung der
    >
    >Die Adobe-Zertifizierungsstelle DigiCert kann erst dann ein Zertifikat ausstellen, wenn dieser Schritt abgeschlossen ist. Daher kann Adobe Ihre Anfrage nach einer CNAME-Implementierung erst erfüllen, wenn dieser Schritt abgeschlossen ist.
 
-1. [Füllen Sie dieses Formular aus](assets/FPC_Request_Form.xlsx) und schließen Sie es ein, wenn Sie [ein Adobe-Ticket für die Kundenunterstützung öffnen, um CNAME-Unterstützung anzufordern](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C):
+1. [Füllen Sie dieses Formular aus](assets/FPC_Request_Form.xlsx) und schließen Sie es ein, wenn Sie [ein Adobe-Ticket für die Kundenunterstützung öffnen, um CNAME-Unterstützung anzufordern](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=de&#reference_ACA3391A00EF467B87930A450050077C):
 
    * [!DNL Adobe Target] Clientcode:
    * Hostnamen für SSL-Zertifikate (Beispiel: `target.example.com target.example.org`):
