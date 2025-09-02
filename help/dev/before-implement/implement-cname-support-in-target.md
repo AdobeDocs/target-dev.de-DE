@@ -4,7 +4,7 @@ description: Arbeiten Sie mit [!UICONTROL Adobe Client Care] zusammen, um die CN
 title: Wie verwende ich CNAME in Target?
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: 71a8a2d9d324cd31452a4400d76052432efbfdd4
+source-git-commit: 4f28018a55d484f45ebbbce319d580450d3db68b
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 1%
@@ -31,12 +31,13 @@ Anweisungen für die Arbeit mit [!DNL Adobe Client Care] zur Implementierung der
    >
    >Die Adobe-Zertifizierungsstelle DigiCert kann erst dann ein Zertifikat ausstellen, wenn dieser Schritt abgeschlossen ist. Daher kann Adobe Ihre Anfrage nach einer CNAME-Implementierung erst erfüllen, wenn dieser Schritt abgeschlossen ist.
 
-1. [Füllen Sie dieses Formular aus](assets/FPC_Request_Form.xlsx) und schließen Sie es ein, wenn Sie [ein Adobe-Ticket für die Kundenunterstützung öffnen, um CNAME-Unterstützung anzufordern](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=de&#reference_ACA3391A00EF467B87930A450050077C):
+1. [Füllen Sie dieses Formular aus](assets/FPC_Request_Form.xlsx) und schließen Sie es ein, wenn Sie [ein Adobe-Ticket für die Kundenunterstützung öffnen, um CNAME-Unterstützung anzufordern](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C):
 
    * [!DNL Adobe Target] Clientcode:
    * Hostnamen für SSL-Zertifikate (Beispiel: `target.example.com target.example.org`):
    * SSL-Zertifikatkäufer (Adobe wird dringend empfohlen, siehe FAQ): Adobe/Kunde
    * Wenn der Kunde das Zertifikat, auch bekannt als „Bring Your Own Certificate“ (BYOC), kauft, füllen Sie diese zusätzlichen Details aus:
+
       * Zertifikatorganisation (Beispiel: Firma Inc):
       * Organisationseinheit des Zertifikats (optional, Beispiel: Marketing):
       * Zertifikatland (Beispiel: USA):
@@ -306,3 +307,4 @@ Ersetzen Sie `clientcode` durch Ihren Client-Code und fügen Sie dann den Text o
 
 * Der QA-Modus bleibt bei CNAME- und at.js-Versionen 1.x nicht hängen, da er auf einem Drittanbieter-Cookie basiert. Um dieses Problem zu umgehen, fügen Sie die Vorschauparameter zu jeder URL hinzu, zu der Sie navigieren. Der QA-Modus bleibt bestehen, wenn Sie CNAME und at.js 2.x verwenden.
 * Bei Verwendung von CNAME ist es wahrscheinlicher, dass die Größe der Cookie-Kopfzeile für [!DNL Target] Aufrufe zunimmt. Adobe empfiehlt, die Cookie-Größe unter 8 KB zu halten.
+
