@@ -341,7 +341,7 @@ Verwenden Sie die folgenden Befehle (im macOS- oder Linux-Befehlszeilen-Terminal
 Wenn Sie CNAME verwenden, sollte der Ausschluss-Link beispielsweise den Parameter „client=`clientcode`&quot; enthalten:
 `https://my.cname.domain/optout?client=clientcode`.
 
-Ersetzen Sie `clientcode` durch Ihren Client-Code und fügen Sie dann den Text oder das Bild hinzu, das mit der [Opt-out-URL) verknüpft ](/help/dev/before-implement/privacy/privacy.md) soll.
+Ersetzen Sie `clientcode` durch Ihren Client-Code und fügen Sie dann den Text oder das Bild hinzu, das mit der [Opt-out-URL) verknüpft &#x200B;](/help/dev/before-implement/privacy/privacy.md) soll.
 
 ## Bekannte Einschränkungen
 
