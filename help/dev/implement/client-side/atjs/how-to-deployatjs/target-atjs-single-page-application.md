@@ -228,7 +228,7 @@ Nachdem Sie die Installation von at.js 2.x abgeschlossen und `triggerView()` zu 
 
 ## Verwenden Sie TriggerView, um sicherzustellen, dass A4T ordnungsgemäß mit at.js 2.x und SPA funktioniert
 
-Um sicherzustellen, [ „Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=de) (A4T) ordnungsgemäß mit at.js 2.x funktioniert, müssen Sie dieselbe SDID in der [!DNL Target]-Anfrage und in der [!DNL Analytics]-Anfrage senden.
+Um sicherzustellen, [&#x200B; „Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=de) (A4T) ordnungsgemäß mit at.js 2.x funktioniert, müssen Sie dieselbe SDID in der [!DNL Target]-Anfrage und in der [!DNL Analytics]-Anfrage senden.
 
 Best Practices in Bezug auf SPAs:
 
@@ -287,7 +287,7 @@ In den folgenden Informationen wird die Reihenfolge der Vorgänge beschrieben, d
 | --- | --- | --- |
 | 1 | VisitorAPI JS laden | Diese Bibliothek ist für die Zuweisung einer ECID zum Besucher verantwortlich. Diese ID wird später von anderen Adobe-Lösungen auf der Web-Seite genutzt. |
 | 2 | Laden von at.js 2.x | at.js 2.x lädt alle erforderlichen APIs, die Sie zum Implementieren von [!DNL Target]-Anfragen und -Ansichten verwenden. |
-| 3 | [!DNL Target] ausführen | Wenn Sie über eine Datenschicht verfügen, empfehlen wir, wichtige Daten, die an [!DNL Target] gesendet werden müssen, zu laden, bevor Sie die [!DNL Target] ausführen. Auf diese Weise können Sie `targetPageParams` verwenden, um alle Daten einzubeziehen, die Sie für die Zielgruppenbestimmung verwenden möchten.<P>Wenn `pageLoadEnabled` und `viewsEnabled` in „targetGlobalSettings[ auf „true“ gesetzt sind](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md) fordert at.js in Schritt 2 automatisch alle VEC-[!DNL Target] an.<P>Beachten Sie, dass `getOffers` auch zum Abrufen von VEC-Angeboten nach dem Laden der Seite verwendet werden kann. Stellen Sie dazu sicher, dass die Anfrage `execute>pageLoad` und `prefetch>views` im API-Aufruf enthält. |
+| 3 | [!DNL Target] ausführen | Wenn Sie über eine Datenschicht verfügen, empfehlen wir, wichtige Daten, die an [!DNL Target] gesendet werden müssen, zu laden, bevor Sie die [!DNL Target] ausführen. Auf diese Weise können Sie `targetPageParams` verwenden, um alle Daten einzubeziehen, die Sie für die Zielgruppenbestimmung verwenden möchten.<P>Wenn `pageLoadEnabled` und `viewsEnabled` in „targetGlobalSettings[&#x200B; auf „true“ gesetzt sind](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md) fordert at.js in Schritt 2 automatisch alle VEC-[!DNL Target] an.<P>Beachten Sie, dass `getOffers` auch zum Abrufen von VEC-Angeboten nach dem Laden der Seite verwendet werden kann. Stellen Sie dazu sicher, dass die Anfrage `execute>pageLoad` und `prefetch>views` im API-Aufruf enthält. |
 | 4 | `triggerView()` | Da die in Schritt 3 initiierte [!DNL Target] sowohl für die Seitenladeausführung als auch für Ansichten Erlebnisse zurückgeben kann, stellen Sie sicher, dass `triggerView()` aufgerufen wird, nachdem die [!DNL Target]-Anfrage zurückgegeben wurde, und die Anwendung der Angebote auf den Cache abgeschlossen ist. Sie müssen diesen Schritt nur einmal pro Ansicht ausführen. |
 | 5 | Rufen Sie den Beacon für die [!DNL Analytics] Seitenansicht auf | Dieses Beacon sendet die mit den Schritten 3 und 4 verknüpfte SDID zum Daten-Stitching an [!DNL Analytics]. |
 | 6 | Aufrufen zusätzlicher `triggerView({"page": false})` | Dies ist ein optionaler Schritt für SPA-Frameworks, die bestimmte Komponenten auf der Seite möglicherweise erneut rendern können, ohne dass eine Änderung der Ansicht erfolgt. In solchen Fällen ist es wichtig, dass Sie diese API aufrufen, um sicherzustellen, dass [!DNL Target] Erlebnisse erneut angewendet werden, nachdem das SPA-Framework die Komponenten erneut gerendert hat. Sie können diesen Schritt so oft ausführen, wie Sie sicherstellen möchten, dass [!DNL Target] Erlebnisse in Ihren SPA-Ansichten bestehen bleiben. |
@@ -317,10 +317,10 @@ Weitere Informationen finden Sie unter [Funktionsweise von at.js 2.x](https://ex
 
 >[!VIDEO](https://video.tv.adobe.com/v/34771/?quality=12&captions=ger)
 
-Weitere Informationen finden [ unter „Implementieren von at.js 2.x von Adobe Target in einer Einzelseiten](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=de)Anwendung (SPA)“.
+Weitere Informationen finden [&#x200B; unter „Implementieren von at.js 2.x von Adobe Target in einer Einzelseiten](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=de)Anwendung (SPA)“.
 
 ### Verwenden des VEC für SPA in [!DNL Adobe Target]
 
 >[!VIDEO](https://video.tv.adobe.com/v/34777/?quality=12&captions=ger)
 
-Weitere [ finden Sie unter „Verwenden des Visual Experience Composer für Einzelseitenanwendungen (SPA VEC) ](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=de) Adobe Target&quot;.
+Weitere [&#x200B; finden Sie unter „Verwenden des Visual Experience Composer für Einzelseitenanwendungen (SPA VEC) &#x200B;](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=de) Adobe Target&quot;.

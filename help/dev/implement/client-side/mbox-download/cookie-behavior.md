@@ -23,7 +23,7 @@ Siehe auch [Löschen des Target-](/help/dev/before-implement/privacy/cookie-dele
 
 ## Verwenden von Erstanbieter-Cookies und Drittanbieter-Cookies
 
-Durch Ihre Site-Einrichtung wird bestimmt, welche Cookies Sie verwenden. Um Erstanbieter- und Drittanbieter-Cookies zu verstehen, ist es hilfreich, die Funktionsweise von Target zu verstehen. Weitere Informationen finden [ unter ](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=de) von Adobe Target .
+Durch Ihre Site-Einrichtung wird bestimmt, welche Cookies Sie verwenden. Um Erstanbieter- und Drittanbieter-Cookies zu verstehen, ist es hilfreich, die Funktionsweise von Target zu verstehen. Weitere Informationen finden [&#x200B; unter &#x200B;](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=de) von Adobe Target .
 
 Es gibt drei Haupt-Nutzungsszenarien für Cookies:
 

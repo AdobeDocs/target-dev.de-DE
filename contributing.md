@@ -29,7 +29,7 @@ Für alle Drittanbieter-Beiträge zu diesem Projekt ist eine unterzeichnete Lize
 
 ## Code-Überprüfungen
 
-Alle Code-Beiträge sollten als Pull-Anforderungen übermittelt werden und müssen von den Projektverantwortlichen geprüft werden. Lesen [ Dokumentation zu Pull Requests von GitHub](https://help.github.com/de/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
+Alle Code-Beiträge sollten als Pull-Anforderungen übermittelt werden und müssen von den Projektverantwortlichen geprüft werden. Lesen [&#x200B; Dokumentation zu Pull Requests von GitHub](https://help.github.com/de/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
 Weitere Informationen zum Senden von Pull-Anforderungen finden Sie unter.
 
 <!--

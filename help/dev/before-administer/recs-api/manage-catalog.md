@@ -21,7 +21,7 @@ Sie können jetzt die [Recommendations-APIs](https://developer.adobe.com/target/
 
 >[!NOTE]
 >
->Senden Sie die **[!UICONTROL IMS: JWT Generate + Auth via User Token]**-Anfrage immer dann, wenn Sie Ihr Zugriffstoken zur Authentifizierung aktualisieren müssen, da es nach 24 Stunden abläuft. Anweisungen finden [ unter „Konfigurieren der Adobe](../configure-authentication.md)API-Authentifizierung“.
+>Senden Sie die **[!UICONTROL IMS: JWT Generate + Auth via User Token]**-Anfrage immer dann, wenn Sie Ihr Zugriffstoken zur Authentifizierung aktualisieren müssen, da es nach 24 Stunden abläuft. Anweisungen finden [&#x200B; unter „Konfigurieren der Adobe](../configure-authentication.md)API-Authentifizierung“.
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
@@ -149,7 +149,7 @@ Wenn Sie einen Fehler erhalten, der besagt, dass die Entität nicht gefunden wur
 
    >[!NOTE]
    >
-   >Wenn keine Umgebung explizit angegeben ist, versucht Get Entity, die Entität nur aus Ihrer [Standardumgebung“ ](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=de). Wenn Sie aus einer anderen Umgebung als der Standardumgebung abrufen möchten, müssen Sie die Umgebungs-ID angeben.
+   >Wenn keine Umgebung explizit angegeben ist, versucht Get Entity, die Entität nur aus Ihrer [Standardumgebung“ &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=de). Wenn Sie aus einer anderen Umgebung als der Standardumgebung abrufen möchten, müssen Sie die Umgebungs-ID angeben.
 
 1. Fügen Sie bei Bedarf den `environmentId` Parameter hinzu und senden Sie die Anfrage erneut.
 

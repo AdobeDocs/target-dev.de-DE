@@ -42,7 +42,7 @@ Daten werden in Echtzeit an [!DNL Target] gesendet und können auf demselben Ser
 
 * Erfordert ein Seiten-Code-Update (direkt oder über ein Tag-Management-System).
 * Wenn die Daten für das Targeting bei einem nachfolgenden Seiten-/Server-Aufruf verwendet werden müssen, müssen sie in ein Profilskript übersetzt werden.
-* Abfragezeichenfolgen dürfen nur Zeichen gemäß dem Standard [Internet Engineering Task Force (IETF)) ](https://www.ietf.org/rfc/rfc3986.txt).
+* Abfragezeichenfolgen dürfen nur Zeichen gemäß dem Standard [Internet Engineering Task Force (IETF)) &#x200B;](https://www.ietf.org/rfc/rfc3986.txt).
 
   Zusätzlich zu den auf der IETF-Website erwähnten Zeichen lässt [!DNL Target] die folgenden Zeichen in Abfragezeichenfolgen zu:
 

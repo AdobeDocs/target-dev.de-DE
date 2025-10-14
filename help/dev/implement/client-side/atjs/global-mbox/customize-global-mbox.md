@@ -29,7 +29,7 @@ Die globale Mbox wird auch für Klick-Tracking eingesetzt.
 
 1. Implementieren Sie die at.js-Bibliothek auf Ihrer Site.
 
-   Weitere Informationen finden [ unter „Bereitstellen von ](/help/dev/implement/client-side/atjs/how-to-deployatjs/how-to-deployatjs.md).js“ .
+   Weitere Informationen finden [&#x200B; unter „Bereitstellen von &#x200B;](/help/dev/implement/client-side/atjs/how-to-deployatjs/how-to-deployatjs.md).js“ .
 
 1. Stimmen Sie die Umstellung mit Ihrer Veröffentlichung zeitlich ab.
 

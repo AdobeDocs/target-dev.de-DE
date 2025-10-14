@@ -28,7 +28,7 @@ Attributes TargetClient.getAttributes(TargetDeliveryRequest targetRequest, Strin
 
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
-| targetRequest | targetDeliveryRequest | Ja | Keine | &#x200B; Dieselbe Zielgruppenanfrage wie für „Angebote [&quot; ](get-offers.md) |
+| targetRequest | targetDeliveryRequest | Ja | Keine | &#x200B; Dieselbe Zielgruppenanfrage wie für „Angebote [&quot; &#x200B;](get-offers.md) |
 | mboxNames | var-args-Array | Nein | Keine | Ein var-args-Array von mbox-Namen |
 
 

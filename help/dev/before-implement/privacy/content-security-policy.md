@@ -13,7 +13,7 @@ ht-degree: 28%
 
 # Richtlinien zur Content Security Policy (CSP)
 
-Wenn Sie die [Content Security Policy](https://de.wikipedia.org/wiki/Content_Security_Policy) (CSP) für Ihre [!DNL Adobe Target]-Implementierung verwenden, sollten Sie die folgenden CSP-Anweisungen hinzufügen, wenn Sie at.[ 2.1 oder höher verwenden](../../implement/client-side/atjs/target-atjs-versions.md):
+Wenn Sie die [Content Security Policy](https://de.wikipedia.org/wiki/Content_Security_Policy) (CSP) für Ihre [!DNL Adobe Target]-Implementierung verwenden, sollten Sie die folgenden CSP-Anweisungen hinzufügen, wenn Sie at.[&#x200B; 2.1 oder höher verwenden](../../implement/client-side/atjs/target-atjs-versions.md):
 
 * `connect-src` mit `*.tt.omtrdc.net` auf der Zulassungsliste. Erforderlich, um die Netzwerkanfrage an das [!DNL Target]-Edge-Netzwerk zuzulassen.
 * `style-src unsafe-inline`. Erforderlich, um die Flimmerregelung vorab auszublenden.

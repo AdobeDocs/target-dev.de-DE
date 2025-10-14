@@ -26,7 +26,7 @@ Die folgenden Tutorials helfen Ihnen bei der Implementierung:
 
 ### Implementieren von [!DNL Adobe Experience Cloud] mit [!DNL Platform Web SDK]
 
-Erfahren Sie in diesem Tutorial, wie Sie [!DNL Experience Cloud]-Programme mithilfe von [!DNL Adobe Experience Platform Web SDK] [ implementieren](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=de). Spezifische Informationen zu [!DNL Target] finden Sie im Tutorial-Abschnitt [Einrichten [!DNL Target]  mit Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=de).
+Erfahren Sie in diesem Tutorial, wie Sie [!DNL Experience Cloud]-Programme mithilfe von [!DNL Adobe Experience Platform Web SDK] [&#x200B; implementieren](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=de). Spezifische Informationen zu [!DNL Target] finden Sie im Tutorial-Abschnitt [Einrichten [!DNL Target]  mit Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=de).
 
 ### Migrieren von [!DNL Target] aus at.js 2.*x* bis [!DNL Platform Web SDK]
 

@@ -42,7 +42,7 @@ Für at.js 1.*x* ist das Verhalten von Cookies davon abhängig, ob es sich um ei
 
 ### Verwenden von Erstanbieter-Cookies und Drittanbieter-Cookies
 
-Durch Ihre Site-Einrichtung wird bestimmt, welche Cookies Sie verwenden. Es ist hilfreich zu verstehen, wie [!DNL Target] funktioniert, wenn Sie versuchen, Erstanbieter- und Drittanbieter-Cookies zu verstehen. Weitere Informationen finden [ unter  [!DNL Adobe Target] Funktionsweise](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=de).
+Durch Ihre Site-Einrichtung wird bestimmt, welche Cookies Sie verwenden. Es ist hilfreich zu verstehen, wie [!DNL Target] funktioniert, wenn Sie versuchen, Erstanbieter- und Drittanbieter-Cookies zu verstehen. Weitere Informationen finden [&#x200B; unter  [!DNL Adobe Target] Funktionsweise](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=de).
 
 Es gibt drei Haupt-Nutzungsszenarien für Cookies:
 
@@ -113,7 +113,7 @@ Das Cookie verfügt über mehrere Standardeinstellungen. Sie können diese Einst
 | Cookie-Name | mbox. |
 | Cookie-Domäne | Die obersten und die darunter liegenden Ebenen der Domänen, von denen der Inhalt geliefert wird. Da die Belieferung von der Domain Ihres Unternehmens stattfindet, handelt es sich um ein Erstanbieter-Cookie. Beispiel: `mycompany.com`. |
 | Serverdomäne | `clientcode.tt.omtrdc.net`, unter Verwendung des Kundencodes für Ihr Konto. |
-| Cookie-Dauer | Das Cookie verbleibt zwei Jahre nach der letzten Anmeldung im Browser des Besuchers.<P>Die `deviceIdLifetime` Einstellung kann in at.js[Version 2.3.1 oder höher überschrieben ](../atjs/target-atjs-versions.md). Weitere Informationen finden Sie unter [targetGlobalSettings()](../../../implement/client-side/atjs/atjs-functions/targetglobalsettings.md). |
+| Cookie-Dauer | Das Cookie verbleibt zwei Jahre nach der letzten Anmeldung im Browser des Besuchers.<P>Die `deviceIdLifetime` Einstellung kann in at.js[Version 2.3.1 oder höher überschrieben &#x200B;](../atjs/target-atjs-versions.md). Weitere Informationen finden Sie unter [targetGlobalSettings()](../../../implement/client-side/atjs/atjs-functions/targetglobalsettings.md). |
 | P3P-Richtlinie | Das Cookie wird mit einer P3P-Richtlinie veröffentlicht, wie sie von den Standardeinstellungen in den meisten Browsern gefordert wird. Durch eine P3P-Richtlinie wird einem Browser angezeigt, wer das Cookie bereitstellt und wie die Informationen verwendet werden. |
 
 Das Cookie enthält verschiedene Werte, mit denen verwaltet werden kann, wie die Besucher die Kampagnen erleben:

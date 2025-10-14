@@ -374,7 +374,7 @@ Die folgenden Tabellen erläutern die at.js. 2.*x* Kompatibilität mit verschied
 | [Adobe Experience Platform-Erweiterung](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) | Ja |
 | Debugger | Ja |
 | Auditor | Regeln für at.js 2 wurden noch nicht aktualisiert.*x*   |
-| Opt-in-Unterstützung für [DSGVO](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) | Dies wird in [at.js-Version 2.1.0 ](/help/dev/implement/client-side/atjs/target-atjs-versions.md#atjs-version-210-june-3-2019) höher unterstützt. |
+| Opt-in-Unterstützung für [DSGVO](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) | Dies wird in [at.js-Version 2.1.0 &#x200B;](/help/dev/implement/client-side/atjs/target-atjs-versions.md#atjs-version-210-june-3-2019) höher unterstützt. |
 | AEM Enhanced Personalization powered by [!DNL Adobe Target] | Nein |
 
 ### Funktionen

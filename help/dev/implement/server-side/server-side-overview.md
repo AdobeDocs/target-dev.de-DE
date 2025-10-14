@@ -66,7 +66,7 @@ Mit den Server-seitigen SDKs von [!DNL Adobe Target] können Sie:
 * Stellen Sie **(ML)-gesteuerte personalisierte Erlebnisse für** bereit, unabhängig davon, über welchen Kanal oder welches Gerät der Benutzer mit Ihrem Unternehmen interagiert hat.
 * **Nahtlose Integration mit Adobe Experience Cloud**-Produkten wie **Adobe Analytics**, **Adobe Audience Manager** und dem **Experience Cloud ID-** von Serverseite aus.
 
-Auf der Seite [Erste Schritte](sdk-guides/getting-started/getting-started.md) erfahren Sie, wie Sie einen Anwendungsfall mit einfachem Feature-Flag über [On-Device Decisioning“ ](sdk-guides/on-device-decisioning/overview.md).
+Auf der Seite [Erste Schritte](sdk-guides/getting-started/getting-started.md) erfahren Sie, wie Sie einen Anwendungsfall mit einfachem Feature-Flag über [On-Device Decisioning“ &#x200B;](sdk-guides/on-device-decisioning/overview.md).
 
 Schauen Sie sich unsere [Sample Apps](sdk-guides/sample-apps/sample-apps.md) an, um Spaß zu haben und herumzuspielen!
 

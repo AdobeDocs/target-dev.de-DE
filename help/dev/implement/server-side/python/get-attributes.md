@@ -30,7 +30,7 @@ target_client_instance.get_attributes(mbox_names, options)
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
 | mbox_names | list[str] | Ja | Keine | Eine Liste von Mbox-Namen |
-| options | verordnen | Nein | Keine | Die gleichen Optionen wie für &quot;[&quot; ](get-offers.md) |
+| options | verordnen | Nein | Keine | Die gleichen Optionen wie für &quot;[&quot; &#x200B;](get-offers.md) |
 
 ## AttributesProvider
 

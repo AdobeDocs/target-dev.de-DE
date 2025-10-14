@@ -24,6 +24,6 @@ Es gibt einige Unterschiede zwischen einer normalen Mbox (nicht globale Mbox) un
 | Eine normale Mbox bricht um Inhalte normalerweise mit dem Tag `<DIV>` um. | Die globale Mbox ist „leer“ und bricht nicht um Inhalt um. |
 | In einer normalen Mbox kann nur Inhalt einer Aktivität bereitgestellt werden. | In einer Antwort an eine globale Mbox können Inhalte mehrerer Aktivitäten bereitgestellt werden. |
 
-Werden mehrere Aktivitäten über die globale Mbox oder mehrere reguläre Mboxes bereitgestellt, bestimmt Target [die Priorität), mit ](https://experienceleague.adobe.com/docs/target/using/activities/priority.html?lang=de) die Aktivität (oder Aktivitäten) auf einer Web-Seite bereitgestellt wird.
+Werden mehrere Aktivitäten über die globale Mbox oder mehrere reguläre Mboxes bereitgestellt, bestimmt Target [die Priorität), mit &#x200B;](https://experienceleague.adobe.com/docs/target/using/activities/priority.html?lang=de) die Aktivität (oder Aktivitäten) auf einer Web-Seite bereitgestellt wird.
 
 Es lassen sich zusätzliche Daten auf Seitenniveau an [!DNL Target] sowie an die globale Mbox übermitteln, indem die Funktion `[!UICONTROL targetPageParams]` genutzt wird. Dies entspricht in etwa der Funktion für Mbox-Parameter. Weitere Informationen finden Sie unter [Übergeben von Parametern an eine globale Mbox](/help/dev/implement/client-side/atjs/global-mbox/pass-parameters-to-global-mbox.md).

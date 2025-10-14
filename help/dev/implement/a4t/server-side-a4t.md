@@ -26,4 +26,4 @@ Das folgende Diagramm zeigt, wie Daten durch das System fließen, wenn die Serve
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde die Server-seitige Protokollierung für A4T-Daten in der Web-SDK behandelt. Weitere Informationen zum [ von A4T-Daten auf der Client](/help/dev/implement/a4t/client-side-logging.md)Seite finden Sie im Handbuch zur Client-seitigen Protokollierung .
+In diesem Handbuch wurde die Server-seitige Protokollierung für A4T-Daten in der Web-SDK behandelt. Weitere Informationen zum [&#x200B; von A4T-Daten auf der Client](/help/dev/implement/a4t/client-side-logging.md)Seite finden Sie im Handbuch zur Client-seitigen Protokollierung .

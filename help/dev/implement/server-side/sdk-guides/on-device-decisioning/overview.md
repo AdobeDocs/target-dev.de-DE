@@ -42,7 +42,7 @@ Das folgende Diagramm zeigt die [!UICONTROL on-device decisioning]. Klicken, um 
 
 ### Aktivitäten
 
-Die geräteinterne Entscheidungsfindung unterstützt die folgenden Aktivitätstypen, die vom ([-basierten Experience Composer) erstellt ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de):
+Die geräteinterne Entscheidungsfindung unterstützt die folgenden Aktivitätstypen, die vom ([-basierten Experience Composer) erstellt &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de):
 
 * [!UICONTROL A/B Test]
 * [!UICONTROL Experience Targeting] (XT)
@@ -116,7 +116,7 @@ Sie können auch alle Aktivitäten anzeigen, die [!UICONTROL on-device decisioni
 1. Implementieren Sie `getOffers()` oder `getAttributes()` in Ihrem Code, um ein Erlebnis auf dem Gerät abzurufen.
 1. Bereitstellen des Codes.
 
-Beispiele, die die ersten Schritte mit den Schritten 1-3 oben veranschaulichen, finden Sie [ Abschnitt „Erste Schritte](../getting-started/getting-started.md).
+Beispiele, die die ersten Schritte mit den Schritten 1-3 oben veranschaulichen, finden Sie [&#x200B; Abschnitt „Erste Schritte](../getting-started/getting-started.md).
 
 
 ## Zusätzliche Ressourcen

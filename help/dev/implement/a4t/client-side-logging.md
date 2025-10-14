@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Mit dem [!DNL Adobe Experience Platform Web SDK] können Sie [Daten von Adobe Analytics for Target (A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=de) Client-seitig in Ihrer Web-Anwendung erfassen.
 
-Client-seitige Protokollierung bedeutet, dass relevante [!DNL Target]-Daten Client-seitig zurückgegeben werden, sodass Sie Daten erfassen und für [!DNL Analytics] freigeben können. Diese Option sollte aktiviert werden, wenn Sie Daten manuell über die „Data Insertion [&quot; an Analytics ](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=de) möchten.
+Client-seitige Protokollierung bedeutet, dass relevante [!DNL Target]-Daten Client-seitig zurückgegeben werden, sodass Sie Daten erfassen und für [!DNL Analytics] freigeben können. Diese Option sollte aktiviert werden, wenn Sie Daten manuell über die „Data Insertion [&quot; an Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=de) möchten.
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ In den folgenden Unterabschnitten wird beschrieben, wie Sie [!DNL Analytics] Cli
 
 ### Aktivieren [!DNL Analytics] Client-seitigen Protokollierung {#enable-analytics-client-side-logging}
 
-Um [!DNL Analytics] Client-seitige Protokollierung für Ihre Implementierung aktivieren zu können, müssen Sie die [!DNL Adobe Analytics]-Konfiguration in Ihrem [Datenstrom“ ](https://experienceleague.adobe.com/de/docs/experience-platform/datastreams/overview).
+Um [!DNL Analytics] Client-seitige Protokollierung für Ihre Implementierung aktivieren zu können, müssen Sie die [!DNL Adobe Analytics]-Konfiguration in Ihrem [Datenstrom“ &#x200B;](https://experienceleague.adobe.com/de/docs/experience-platform/datastreams/overview).
 
 ![Analytics-Datenstromkonfiguration deaktiviert](/help/dev/implement/a4t/assets/disable-analytics-datastream.png)
 
@@ -538,4 +538,4 @@ alloy("configure", {
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Handbuch wurde die Client-seitige Protokollierung für A4T-Daten im [!DNL Platform Web SDK] behandelt. Weitere Informationen zum Umgang mit [4T-Daten in Edge Network finden ](/help/dev/implement/a4t/server-side-a4t.md) im Handbuch zur Server-seitigen Protokollierung.
+In diesem Handbuch wurde die Client-seitige Protokollierung für A4T-Daten im [!DNL Platform Web SDK] behandelt. Weitere Informationen zum Umgang mit [4T-Daten in Edge Network finden &#x200B;](/help/dev/implement/a4t/server-side-a4t.md) im Handbuch zur Server-seitigen Protokollierung.

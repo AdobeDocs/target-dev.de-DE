@@ -52,4 +52,4 @@ mboxes = [MboxRequest(name="a1-serverside-ab", index=1)]
 return asyncio.run(get_target_delivery_response(mboxes)
 ```
 
-In diesem Beispiel wird davon ausgegangen, dass Sie Python 3.9+ verwenden. Wenn Sie eine ältere Python-Version verwenden, können Sie weiterhin asynchrone Anfragen senden, indem Sie `options.callback` an `get_offers` übergeben. In der Beispiel-Flask-App finden Sie weitere Informationen zur asynchronen Ausführung mithilfe von Callbacks oder async/await ([) ](https://github.com/adobe/target-python-sdk/blob/main/samples/app.py).
+In diesem Beispiel wird davon ausgegangen, dass Sie Python 3.9+ verwenden. Wenn Sie eine ältere Python-Version verwenden, können Sie weiterhin asynchrone Anfragen senden, indem Sie `options.callback` an `get_offers` übergeben. In der Beispiel-Flask-App finden Sie weitere Informationen zur asynchronen Ausführung mithilfe von Callbacks oder async/await ([) &#x200B;](https://github.com/adobe/target-python-sdk/blob/main/samples/app.py).

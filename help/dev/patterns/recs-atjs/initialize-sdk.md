@@ -60,7 +60,7 @@ Mit diesem Schritt können Sie sicherstellen, dass die `VisitorAPI.js` Bibliothe
 **Voraussetzungen**
 
 * Um den Besucher-ID-/API-Service verwenden zu können, muss Ihr Unternehmen für die [!DNL Adobe Experience Cloud] aktiviert sein und über eine [!UICONTROL Organization ID] verfügen. Weitere Informationen finden Sie unter [Experience Cloud-Anforderungen: Organisations](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=de&){target=_blank}ID im *Identity Service-*).
-* Sie benötigen die `VisitorAPI.js`. Sie sollten diese Datei bereits haben, falls Sie sie implementiert [!DNL Adobe Analytics]. Diese Datei kann auch über die [[!DNL Adobe Experience Platform] Tags-Erweiterung](https://experienceleague.adobe.com/docs/tags.html?lang=de){target=_blank} hinzugefügt oder aus dem [Adobe Analytics Code Manager heruntergeladen ](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=de){target=_blank}.
+* Sie benötigen die `VisitorAPI.js`. Sie sollten diese Datei bereits haben, falls Sie sie implementiert [!DNL Adobe Analytics]. Diese Datei kann auch über die [[!DNL Adobe Experience Platform] Tags-Erweiterung](https://experienceleague.adobe.com/docs/tags.html?lang=de){target=_blank} hinzugefügt oder aus dem [Adobe Analytics Code Manager heruntergeladen &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=de){target=_blank}.
 
 **Konfigurieren und Verweisen auf VisitorAPI.js**
 

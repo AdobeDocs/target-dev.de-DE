@@ -17,7 +17,7 @@ Verwenden Sie eine AdBox, um Bilder in einer Offsite-Implementierung mithilfe vo
 
 Eine AdBox funktioniert wie eine Mbox, wird aber mithilfe einer URL statt mit JavaScript gesteuert. AdBoxes werden mit einer speziellen AdBox-URL erstellt, die eine „Werbeanzeigen“-Mbox (oder AdBox) in Ihr Adobe-Konto lädt. Verwenden Sie diese AdBox anstelle der Mbox für Ihre Aktivitäten. Verwenden Sie die AdBox-URL anstelle eines direkten Bildverweises in E-Mail- oder anderen Nicht-JavaScript-Implementierungen.
 
-Hilfe bei der Auswahl des richtigen Setups [ Sie unter (Nicht-JavaScript-basierte Implementierungen](/help/dev/implement/email/overview.md).
+Hilfe bei der Auswahl des richtigen Setups [&#x200B; Sie unter (Nicht-JavaScript-basierte Implementierungen](/help/dev/implement/email/overview.md).
 
 1. Erstellen der AdBox-URL:
 

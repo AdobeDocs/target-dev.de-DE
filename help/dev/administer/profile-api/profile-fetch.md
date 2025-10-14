@@ -65,7 +65,7 @@ Wenn dieser Aufruf erfolgt, versucht [!DNL Target], das Profil zuerst in dem Clu
 
 ## Authentifizierung
 
-Das [!DNL Target Profile API] kann gesichert werden, indem die Authentifizierung über die [!DNL Target]-Benutzeroberfläche aktiviert wird, wie hier beschrieben. Sobald die Authentifizierung aktiviert ist, muss bei allen Profil-API-Anfragen das Profil-Authentifizierungstoken in den Anfragekopfzeilen festgelegt sein. Das Token selbst kann über die [!DNL Target]-Benutzeroberfläche oder mithilfe der oben im Abschnitt &quot;[-Authentifizierungstoken“ ](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} Schritte generiert werden.
+Das [!DNL Target Profile API] kann gesichert werden, indem die Authentifizierung über die [!DNL Target]-Benutzeroberfläche aktiviert wird, wie hier beschrieben. Sobald die Authentifizierung aktiviert ist, muss bei allen Profil-API-Anfragen das Profil-Authentifizierungstoken in den Anfragekopfzeilen festgelegt sein. Das Token selbst kann über die [!DNL Target]-Benutzeroberfläche oder mithilfe der oben im Abschnitt &quot;[-Authentifizierungstoken“ &#x200B;](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} Schritte generiert werden.
 
 ## Messung
 

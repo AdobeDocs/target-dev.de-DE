@@ -73,6 +73,6 @@ public class TargetRestController {
 }
 ```
 
-In diesem Beispiel wird davon ausgegangen[ dass Sie SDK als ](initialize-sdk.md)-Bean initialisiert haben und [Dienstprogrammmethoden](utility-methods.md) verfügbar sind.
+In diesem Beispiel wird davon ausgegangen[&#x200B; dass Sie SDK als &#x200B;](initialize-sdk.md)-Bean initialisiert haben und [Dienstprogrammmethoden](utility-methods.md) verfügbar sind.
 
 Die [!DNL Target]-Anfrage wird vor dem `simulateIO` ausgelöst und zum Zeitpunkt ihrer Ausführung sollte auch das Zielergebnis bereit sein. Selbst wenn dies nicht der Fall ist, werden Sie in den meisten Fällen erhebliche Einsparungen erzielen.

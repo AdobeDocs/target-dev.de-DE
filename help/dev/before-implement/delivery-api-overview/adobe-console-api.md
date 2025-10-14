@@ -15,4 +15,4 @@ ht-degree: 0%
 
 Verwalten Sie Benutzer und Produktberechtigungen über die [!UICONTROL Adobe User Management] und [!UICONTROL User Sync API].
 
-Weitere Informationen finden Sie unter [Verwalten von Benutzern und Produktberechtigungen, auf die ](https://developer.adobe.com/umapi/){target=_blank}-Weise *auf der* Adobe Developer-Website.
+Weitere Informationen finden Sie unter [Verwalten von Benutzern und Produktberechtigungen, auf die &#x200B;](https://developer.adobe.com/umapi/){target=_blank}-Weise *auf der* Adobe Developer-Website.

@@ -22,7 +22,7 @@ Dieser Artikel bietet einen Überblick über Hintergrundinformationen, die zum V
 
 ## Vorabinformationen 
 
-Ersetzen Sie in allen Code-Beispielen für [Admin-](../../administer/admin-api/admin-api-overview-new.md)) {tenant} durch Ihren Mandantenwert, `your-bearer-token` durch das Zugriffstoken, das Sie mit Ihrem JWT generieren, und `your-api-key` durch Ihren API-Schlüssel aus der [Adobe Developer Console](https://developer.adobe.com/console/home). Weitere Informationen zu Mandanten und JWTs finden Sie im Artikel zum [ der Authentifizierung für das Adobe [!DNL Target] Admin](../configure-authentication.md)APIs.
+Ersetzen Sie in allen Code-Beispielen für [Admin-](../../administer/admin-api/admin-api-overview-new.md)) {tenant} durch Ihren Mandantenwert, `your-bearer-token` durch das Zugriffstoken, das Sie mit Ihrem JWT generieren, und `your-api-key` durch Ihren API-Schlüssel aus der [Adobe Developer Console](https://developer.adobe.com/console/home). Weitere Informationen zu Mandanten und JWTs finden Sie im Artikel zum [&#x200B; der Authentifizierung für das Adobe [!DNL Target] Admin](../configure-authentication.md)APIs.
 
 ## Versionierung
 

@@ -37,7 +37,7 @@ Ein `TargetAttributes` wird von `TargetClient.GetAttributes()` zurückgegeben, d
 
 | Eigenschaft/Methode | Rückgabetyp | Beschreibung |
 | --- | --- | --- |
-| Antwort | targetDeliveryResponse | Gibt das Antwortobjekt zurück, das normalerweise von „Angebote [&quot; zurückgegeben ](get-offers.md) |
+| Antwort | targetDeliveryResponse | Gibt das Antwortobjekt zurück, das normalerweise von „Angebote [&quot; zurückgegeben &#x200B;](get-offers.md) |
 | ToDictionary | IReadOnlyDictionary | Gibt ein Wörterbuch der Wörterbücher mit Schlüsselwertpaaren zurück, die nach Mbox-Namen gruppiert sind |
 | ToMboxDictionary(mboxName) | IReadOnlyDictionary | Gibt ein Wörterbuch mit Schlüsselwertpaaren für die bereitgestellte Mbox zurück. |
 | GetBoolean(mboxName, key, defaultValue) | boolesch | Gibt den Wert für einen angegebenen Mbox-Namen und einen Attributschlüssel zurück. |

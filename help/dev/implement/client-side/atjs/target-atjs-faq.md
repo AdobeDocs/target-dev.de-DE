@@ -122,7 +122,7 @@ Weitere Informationen finden Sie unter [Verwaltung von Flackern mit „at.js“]
 
 ## Wie kann ich mit at.js ein Flackern beim Laden von Seiten verhindern ?
 
-[!DNL Target] bietet mehrere Möglichkeiten, ein Flackern beim Laden von Seiten zu verhindern. Weitere Informationen finden Sie unter &quot;[ mit at.js verhindern](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
+[!DNL Target] bietet mehrere Möglichkeiten, ein Flackern beim Laden von Seiten zu verhindern. Weitere Informationen finden Sie unter &quot;[&#x200B; mit at.js verhindern](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
 
 ## Wie groß ist at.js?
 
@@ -206,7 +206,7 @@ Nachfolgend finden Sie mögliche Grundursachen für diesen Warnhinweis:
 * Die zugrunde liegende Seite ist Teil eines Einzelseiten-Programms (Single Page Application, SPA) oder die Seite enthält Elemente, die weiter unten auf der Seite auftauchen und der „at.js-Selektor-Polling-Mechanismus“ kann diese Elemente nicht finden. Es ist unter Umständen hilfreich, den `selectorsPollingTimeout` zu erhöhen. Weitere Informationen finden Sie unter [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 * Eine beliebige Klick-Tracking-Metrik versucht, sich zu jeder Seite hinzuzufügen, unabhängig von der URL, in der die Metrik eingerichtet wurde. Diese Situation ist zwar harmlos, hat aber viele dieser Warnhinweise zur Folge.
 
-  Um die bestmöglichen Ergebnisse zu erzielen, laden Sie bitte die [neueste Version von at.js) herunter ](/help/dev/implement/client-side/atjs/target-atjs-versions.md) verwenden Sie sie. Weitere Informationen zum Herunterladen von at.js finden Sie im Abschnitt [Herunterladen von at.js mithilfe der  [!DNL Target] -Schnittstelle](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface) im Artikel [*Bereitstellen von at.js* > *Implementieren von [!DNL Target] ohne Tag-Manager*](how-to-deployatjs/implement-target-without-a-tag-manager.md).
+  Um die bestmöglichen Ergebnisse zu erzielen, laden Sie bitte die [neueste Version von at.js) herunter &#x200B;](/help/dev/implement/client-side/atjs/target-atjs-versions.md) verwenden Sie sie. Weitere Informationen zum Herunterladen von at.js finden Sie im Abschnitt [Herunterladen von at.js mithilfe der  [!DNL Target] -Schnittstelle](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface) im Artikel [*Bereitstellen von at.js* > *Implementieren von [!DNL Target] ohne Tag-Manager*](how-to-deployatjs/implement-target-without-a-tag-manager.md).
 
 ## Was ist die Domain tt.omtrdc.net, zu der die Aufrufe des [!DNL Target]-Servers gehen?
 

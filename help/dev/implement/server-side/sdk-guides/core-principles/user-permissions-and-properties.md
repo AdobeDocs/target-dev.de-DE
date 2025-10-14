@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Benutzerberechtigungen und Eigenschaften
 
-Die [!DNL Target]-SDKs unterstützen Benutzerberechtigungen und Eigenschaften. Wenn Sie nicht genau wissen, wie [!DNL Adobe Target] mit Unternehmensberechtigungen über Arbeitsbereiche und Eigenschaften umgeht, können Sie mehr darüber in [Berechtigungen für Unternehmensbenutzer“ ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=de).
+Die [!DNL Target]-SDKs unterstützen Benutzerberechtigungen und Eigenschaften. Wenn Sie nicht genau wissen, wie [!DNL Adobe Target] mit Unternehmensberechtigungen über Arbeitsbereiche und Eigenschaften umgeht, können Sie mehr darüber in [Berechtigungen für Unternehmensbenutzer“ &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=de).
 
 Der Client kann ein Eigenschafts-Token auf zwei Arten verwenden.
 

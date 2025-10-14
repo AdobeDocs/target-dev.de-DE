@@ -23,7 +23,7 @@ Sie können Ihre Bibliothekskonfiguration schnell anzeigen, Anfragen überprüfe
 
 Die folgenden Videos führen Sie Schritt für Schritt durch den Debugging-Prozess:
 
-### Fügen Sie die Adobe Experience Cloud Debugger-Erweiterung ![Übersichts-Badge) ](../../assets/overview.png)
+### Fügen Sie die Adobe Experience Cloud Debugger-Erweiterung ![Übersichts-Badge) &#x200B;](../../assets/overview.png)
 
 >[!VIDEO](https://video.tv.adobe.com/v/33823/?quality=12&captions=ger)
 

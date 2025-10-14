@@ -30,7 +30,7 @@ Adobe Experience Cloud stellt Datenverantwortlichen DSGVO-konforme APIs bereit, 
 
 Weitere Informationen finden Sie unter:
 
-* [Übersicht über den Adobe-Privacy Service ](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=de)
+* [Übersicht über den Adobe-Privacy Service &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=de)
 * [Handbuch zur Privacy Service-API](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/overview.html?lang=de)
 * Übersicht über die [Privacy Service-Benutzeroberfläche](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=de)
 
@@ -53,7 +53,7 @@ Wenn Sie sich im letzten Jahr auf das europäische Datenschutzrecht (DSGVO) vorb
 
 ## Opt-in-Funktion in Adobe Target und Adobe Experience Platform
 
-Target unterstützt die Opt-in-Funktionalität über Tags in Adobe Experience Platform und hilft Ihnen bei der Einwilligungsverwaltung. Mit der Opt-in-Funktion können Kunden steuern, wie und wann das Target-Tag ausgelöst wird. Es gibt auch eine Option über Adobe Experience Platform, um das Target-Tag vorab zu genehmigen. Um die Möglichkeit der Verwendung von Opt-in in der Target at.js-Bibliothek zu aktivieren, sollten Sie `targetGlobalSettings` verwenden und die `optinEnabled=true` hinzufügen. Wählen Sie in Adobe Experience Platform in der Dropdown-Liste DSGVO-Opt-in im Installationsfenster der Erweiterung „Aktivieren“ aus. Weitere [ finden Sie unter „Implementieren von Target ](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) Adobe Experience Platform&quot;.
+Target unterstützt die Opt-in-Funktionalität über Tags in Adobe Experience Platform und hilft Ihnen bei der Einwilligungsverwaltung. Mit der Opt-in-Funktion können Kunden steuern, wie und wann das Target-Tag ausgelöst wird. Es gibt auch eine Option über Adobe Experience Platform, um das Target-Tag vorab zu genehmigen. Um die Möglichkeit der Verwendung von Opt-in in der Target at.js-Bibliothek zu aktivieren, sollten Sie `targetGlobalSettings` verwenden und die `optinEnabled=true` hinzufügen. Wählen Sie in Adobe Experience Platform in der Dropdown-Liste DSGVO-Opt-in im Installationsfenster der Erweiterung „Aktivieren“ aus. Weitere [&#x200B; finden Sie unter „Implementieren von Target &#x200B;](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) Adobe Experience Platform&quot;.
 
 Im folgenden Code-Snippet wird gezeigt, wie Sie die `optinEnabled=true`-Einstellung aktivieren:
 

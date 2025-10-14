@@ -27,7 +27,7 @@ Verwenden Sie den Redirector für Folgendes:
 
 * Finden Sie heraus, welche Landingpage die meisten Konversionen bringt.
 
-Hilfe bei der Entscheidung über die richtige Einrichtung [ Sie unter (Nicht-JavaScript-basierte Implementierungen](/help/dev/implement/email/overview.md).
+Hilfe bei der Entscheidung über die richtige Einrichtung [&#x200B; Sie unter (Nicht-JavaScript-basierte Implementierungen](/help/dev/implement/email/overview.md).
 
 ## Erstellen eines Redirectors
 

@@ -204,7 +204,7 @@ adobe.target.getOffers({
 }
 ```
 
-Die Payload kann dann über die „Data Insertion [&quot; an [!DNL Adobe Analytics] weitergeleitet ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+Die Payload kann dann über die „Data Insertion [&quot; an [!DNL Adobe Analytics] weitergeleitet &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
 ## Abrufen und Rendern von Daten aus mehreren Mboxes über [!UICONTROL getOffers()] und [!UICONTROL applyOffers()]
 

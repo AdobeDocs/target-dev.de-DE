@@ -27,7 +27,7 @@ Dieser Artikel bietet einen Überblick über die Unterschiede zwischen der `at.j
 
 Die vordefinierte Version ist in einem CDN verfügbar. Sie können direkt auf Ihrer Seite auf die Bibliothek im CDN verweisen oder sie herunterladen und in Ihrer eigenen Infrastruktur hosten. Es ist in minimierten und nicht minimierten Formaten verfügbar. Die nicht minimierte Version ist zum Debuggen hilfreich.
 
-Weitere [ finden Sie unter „Installieren von Web SDK mithilfe ](https://experienceleague.adobe.com/de/docs/experience-platform/web-sdk/install/library) JavaScript-Bibliothek“.
+Weitere [&#x200B; finden Sie unter „Installieren von Web SDK mithilfe &#x200B;](https://experienceleague.adobe.com/de/docs/experience-platform/web-sdk/install/library) JavaScript-Bibliothek“.
 
 ## Konfigurieren der Bibliotheken
 
@@ -869,7 +869,7 @@ Mit diesem Code-Snippet wird die Antwort-Payload wie folgt dargestellt:
 }
 ```
 
-Die [!DNL Analytics]-Payload (`tnta`-Token) sollte mit der Dateneinfüge-[!DNL Analytics] in den [-Treffer ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+Die [!DNL Analytics]-Payload (`tnta`-Token) sollte mit der Dateneinfüge-[!DNL Analytics] in den [-Treffer &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
 #### [!DNL Analytics] Server-seitige Protokollierung
 
@@ -894,7 +894,7 @@ Web-SDK unterstützt auch:
 
 ![Diagramm mit dem Client-seitigen Analytics-Protokollierungs-Workflow](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-disabled-datastream-config.png)
 
-Die Kundin bzw. der Kunde hat Zugriff auf das [!DNL Analytics]-Token (`tnta`), das über die [!DNL Analytics]Dateneinfüge-API[ mit ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) geteilt werden muss, indem der `sendEvent`-Befehl verkettet wird und das resultierende Vorschläge-Array iteriert wird.
+Die Kundin bzw. der Kunde hat Zugriff auf das [!DNL Analytics]-Token (`tnta`), das über die [!DNL Analytics]Dateneinfüge-API[&#x200B; mit &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) geteilt werden muss, indem der `sendEvent`-Befehl verkettet wird und das resultierende Vorschläge-Array iteriert wird.
 
 **Beispiel**
 
@@ -1252,7 +1252,7 @@ Die at.js-Bibliothek stellt die folgenden Debugging-Funktionen bereit:
 
 >[!NOTE]
 >
->Alle diese Debugging-Funktionen sind in [Adobe Experience Platform Debugger mit erweiterten Funktionen ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
+>Alle diese Debugging-Funktionen sind in [Adobe Experience Platform Debugger mit erweiterten Funktionen &#x200B;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
 
 ### Verwenden von [!DNL Platform Web SDK]
 
@@ -1260,6 +1260,6 @@ Bei Verwendung von [!DNL Platform Web SDK] stehen mehrere Debugging-Funktionen z
 
 * Verwenden von [Assurance](https://experienceleague.adobe.com/de/docs/experience-platform/assurance/home)
 * [Web SDK Debug aktiviert](https://experienceleague.adobe.com/de/docs/experience-platform/assurance/home)
-* Verwenden [ Überwachungs-Hooks für Web SDK](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
+* Verwenden [&#x200B; Überwachungs-Hooks für Web SDK](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Verwenden Sie [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/de/docs/experience-platform/debugger/home)
 * Zielspur
