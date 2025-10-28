@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie  [!DNL Adobe Target] [!UICONTROL Bulk Profile
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 76b4add132d3e98f241b887dbce4170c90445be2
+source-git-commit: 892de7c241a165b55a5cf85ce8f472ad8e200ac3
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1086'
 ht-degree: 6%
 
 ---
@@ -49,13 +49,13 @@ Mit dem [!UICONTROL Bulk Profile Update API] können Sie bequem detaillierte Bes
 
 Um Profildaten stapelweise zu aktualisieren, erstellen Sie eine Batch-Datei. Die Batch-Datei ist eine Textdatei mit Werten, die durch Kommas getrennt sind, ähnlich der folgenden Beispieldatei.
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Sie verweisen im POST-Aufruf an [!DNL Target] Server auf diese Datei, um die Dat
 * Die erste Kopfzeile sollte entweder ein `pcId` oder ein `thirdPartyId` sein. Die [!UICONTROL Marketing Cloud visitor ID] wird nicht unterstützt. [!UICONTROL pcId] ist eine [!DNL Target] Besucher-ID. `thirdPartyId` ist eine von der Client-Anwendung angegebene ID, die über einen Mbox-Aufruf als [!DNL Target] an `mbox3rdPartyId` übergeben wird. Sie muss hier als `thirdPartyId` bezeichnet werden.
 * Parameter und Werte, die Sie in der Batch-Datei angeben, müssen aus Sicherheitsgründen mit UTF-8 URL-codiert sein. Parameter und Werte können zur Verarbeitung über HTTP-Anfragen an andere Edge-Knoten weitergeleitet werden.
 * Die Parameter dürfen nur das Format `paramName` haben. Parameter werden in [!DNL Target] als `profile.paramName` angezeigt.
-* Wenn Sie [!UICONTROL Bulk Profile Update API] v2 verwenden, müssen Sie nicht alle Parameterwerte für jede `pcId` angeben. Profile werden für alle `pcId` oder `mbox3rdPartyId` erstellt, die nicht in [!DNL Target] gefunden werden. Wenn Sie v1 verwenden, werden Profile nicht für fehlende pcIds oder mbox3rdPartyIds erstellt.
+* Wenn Sie [!UICONTROL Bulk Profile Update API] v2 verwenden, müssen Sie nicht alle Parameterwerte für jede `pcId` angeben. Profile werden für alle `pcId` oder `mbox3rdPartyId` erstellt, die nicht in [!DNL Target] gefunden werden. Wenn Sie v1 verwenden, werden Profile nicht für fehlende pcIds oder mbox3rdPartyIds erstellt. Weitere Informationen finden Sie unter [Umgang mit leeren Werten in der  [!DNL Bulk Profile Update API]](#empty) unten.
 * Die Batch-Datei muss kleiner als 50 MB sein. Darüber hinaus sollte die Gesamtzahl der Zeilen 500.000 nicht überschreiten. Dadurch wird sichergestellt, dass Server nicht mit zu vielen Anfragen überflutet werden.
 * Sie können mehrere Dateien senden. Die Summe der Zeilen aller Dateien, die Sie an einem Tag senden, sollte jedoch eine Million pro Client nicht überschreiten.
 * Die Anzahl der Attribute, die Sie hochladen können, ist nicht beschränkt. Die Gesamtgröße der externen Profildaten, zu denen Kundenattribute, Profil-API, In-Mbox-Profilparameter und Profilskriptausgabe gehören, darf jedoch 64 KB nicht überschreiten.
@@ -77,9 +77,9 @@ Sie verweisen im POST-Aufruf an [!DNL Target] Server auf diese Datei, um die Dat
 
 Stellen Sie eine HTTP-POST-Anfrage an [!DNL Target] Edge-Server, um die Datei zu verarbeiten. Im Folgenden finden Sie eine Beispiel-HTTP-POST-Anfrage für die Datei batch.txt mit dem curl-Befehl:
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 Wo:
 
@@ -145,7 +145,7 @@ http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473
 </response>
 ```
 
-## Umgang mit leeren Werten in der [!DNL Bulk Profile Update API]
+## Umgang mit leeren Werten in der [!DNL Bulk Profile Update API] {#empty}
 
 Bei Verwendung der [!DNL Target]-[!DNL Bulk Profile Update API] (v1 oder v2) ist es wichtig zu verstehen, wie das System leere Parameter- oder Attributwerte verarbeitet.
 
@@ -153,11 +153,11 @@ Bei Verwendung der [!DNL Target]-[!DNL Bulk Profile Update API] (v1 oder v2) ist
 
 Das Senden leerer Werte (“&quot;, Null oder fehlende Felder) für vorhandene Parameter oder Attribute setzt diese Werte nicht zurück oder löscht sie nicht im Profilspeicher. Das ist beabsichtigt.
 
-**Leere Werte werden ignoriert**: Die API filtert während der Verarbeitung leere Werte heraus, um unnötige oder sinnlose Aktualisierungen zu vermeiden.
+* **Leere Werte werden ignoriert**: Die API filtert während der Verarbeitung leere Werte heraus, um unnötige oder sinnlose Aktualisierungen zu vermeiden.
 
-**Keine Bereinigung vorhandener Daten**: Wenn ein Parameter bereits einen Wert enthält, wird er beim Senden eines leeren Werts nicht geändert.
+* **Keine Bereinigung vorhandener Daten**: Wenn ein Parameter bereits einen Wert enthält, wird er beim Senden eines leeren Werts nicht geändert.
 
-**Nur leere Batches werden übersprungen**: Wenn ein Batch nur leere oder null Werte enthält, wird er vollständig ignoriert und es werden keine Aktualisierungen angewendet.
+* **Nur leere Batches werden übersprungen**: Wenn ein Batch nur leere oder null Werte enthält, wird er vollständig ignoriert und es werden keine Aktualisierungen angewendet.
 
 ### Weitere Hinweise
 
