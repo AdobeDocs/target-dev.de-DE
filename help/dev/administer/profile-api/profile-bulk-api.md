@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie  [!DNL Adobe Target] [!UICONTROL Bulk Profile
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: dae198fd8ef3fc8473ad31807c146802339b1832
+source-git-commit: 38ed32560170e5a8f472aa191bb5a24d4e13cde7
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 7%
+source-wordcount: '1078'
+ht-degree: 6%
 
 ---
 
@@ -49,13 +49,13 @@ Mit dem [!UICONTROL Bulk Profile Update API] können Sie bequem detaillierte Bes
 
 Um Profildaten stapelweise zu aktualisieren, erstellen Sie eine Batch-Datei. Die Batch-Datei ist eine Textdatei mit Werten, die durch Kommas getrennt sind, ähnlich der folgenden Beispieldatei.
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -77,9 +77,9 @@ Sie verweisen im POST-Aufruf an [!DNL Target] Server auf diese Datei, um die Dat
 
 Stellen Sie eine HTTP-POST-Anfrage an [!DNL Target] Edge-Server, um die Datei zu verarbeiten. Im Folgenden finden Sie eine Beispiel-HTTP-POST-Anfrage für die Datei batch.txt mit dem curl-Befehl:
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 Wo:
 
@@ -144,3 +144,25 @@ http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473
     <failedUpdates>0</failedUpdates>
 </response>
 ```
+
+## Klarstellung der Handhabung leerer Werte in der [!DNL Bulk Profile Update API]
+
+Bei Verwendung der [!DNL Target]-[!DNL Bulk Profile Update API] (v1 oder v2) ist es wichtig zu verstehen, wie das System leere Parameter- oder Attributwerte verarbeitet.
+
+### Erwartetes Verhalten
+
+Das Senden leerer Werte (“&quot;, Null oder fehlende Felder) für vorhandene Parameter oder Attribute setzt diese Werte nicht zurück oder löscht sie nicht im Profilspeicher. Das ist beabsichtigt.
+
+Leere Werte werden ignoriert: Die API filtert leere Werte während der Verarbeitung heraus, um unnötige oder sinnlose Aktualisierungen zu vermeiden.
+
+**Keine Bereinigung vorhandener Daten**: Wenn ein Parameter bereits einen Wert enthält, wird er beim Senden eines leeren Werts nicht geändert.
+
+**Nur leere Batches werden übersprungen**: Wenn ein Batch nur leere oder null Werte enthält, wird er vollständig ignoriert und es werden keine Aktualisierungen angewendet.
+
+### Weitere Hinweise
+
+Dieses Verhalten gilt sowohl für v1 als auch für v2 der [!DNL Bulk Profile Update API].
+
+Der Versuch, ein Attribut durch Senden eines leeren Werts zu löschen oder zu entfernen, hat keine Auswirkungen.
+
+Die Unterstützung für das explizite Entfernen von Attributen ist für eine zukünftige Version (v3) der API geplant, ist aber derzeit nicht verfügbar.
