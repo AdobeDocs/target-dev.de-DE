@@ -3,9 +3,9 @@ title: Übersicht über die Adobe Target Admin-API
 description: Überblick über die [!DNL Adobe Target Admin API]
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1305'
 ht-degree: 2%
 
 ---
@@ -16,13 +16,13 @@ Dieser Artikel bietet einen Überblick über Hintergrundinformationen, die zum V
 
 >[!NOTE]
 >
->Wenn Sie [!DNL Target] über die Benutzeroberfläche verwalten möchten, lesen Sie den Abschnitt [Administration“ im *Handbuch für Adobe Target Business Practices*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=de).
+>Wenn Sie [!DNL Target] über die Benutzeroberfläche verwalten möchten, lesen Sie den Abschnitt [Administration“ im *Handbuch für Adobe Target Business Practices*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).
 >
 >Die Admin-APIs und Profil-APIs werden häufig gemeinsam bezeichnet („Admin- und Profil-APIs„), können aber auch separat bezeichnet werden („Admin-APIs“ und „Profil-APIs„). Die Recommendations-API ist eine spezifische Implementierung einer [!DNL Target] Admin-API.
 
 ## Vorabinformationen 
 
-Ersetzen Sie in allen Code-Beispielen für [Admin-](../../administer/admin-api/admin-api-overview-new.md)) {tenant} durch Ihren Mandantenwert, `your-bearer-token` durch das Zugriffstoken, das Sie mit Ihrem JWT generieren, und `your-api-key` durch Ihren API-Schlüssel aus der [Adobe Developer Console](https://developer.adobe.com/console/home). Weitere Informationen zu Mandanten und JWTs finden Sie im Artikel zum [&#x200B; der Authentifizierung für das Adobe [!DNL Target] Admin](../configure-authentication.md)APIs.
+Ersetzen Sie in allen Code-Beispielen für [Admin-](../../administer/admin-api/admin-api-overview-new.md)) {tenant} durch Ihren Mandantenwert, `your-bearer-token` durch das Zugriffstoken, das Sie mit Ihrem JWT generieren, und `your-api-key` durch Ihren API-Schlüssel aus der [Adobe Developer Console](https://developer.adobe.com/console/home). Weitere Informationen zu Mandanten und JWTs finden Sie im Artikel zum Konfigurieren [Authentifizierung](../configure-authentication.md) für Adobe [!DNL Target] Admin-APIs.
 
 ## Versionierung
 
@@ -64,21 +64,21 @@ Im Folgenden finden Sie die allgemeinen Antwort-Codes für die Target Admin-APIs
 
 | Status | Beschreibung | Beschreibung |
 | --- | --- | --- |
-| 200 | [OK](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) | OK |  |
-| 400 | [Fehlerhafte Anfrage](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | Fehlerhafte Anfrage. Wahrscheinlich sind die in der Anfrage angegebenen Daten ungültig. |  |
-| 401 | [Nicht autorisiert](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | Der Benutzer darf diesen Vorgang nicht ausführen. |  |
-| 403 | [Verboten](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | Zugriff auf diese Ressource ist verboten. |  |
-| 404 | [Nicht gefunden](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | Die referenzierte Ressource wurde nicht gefunden. |  |
+| 200 | [OK](https://www.rfc-editor.org/rfc/rfc7231#section-6.3.1) | OK |
+| 400 | [Fehlerhafte Anfrage](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | Fehlerhafte Anfrage. Wahrscheinlich sind die in der Anfrage angegebenen Daten ungültig. |
+| 401 | [Nicht autorisiert](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | Der Benutzer darf diesen Vorgang nicht ausführen. |
+| 403 | [Verboten](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | Zugriff auf diese Ressource ist verboten. |
+| 404 | [Nicht gefunden](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | Die referenzierte Ressource wurde nicht gefunden. |
 
 ## Aktivitäten
 
 Eine Aktivität ermöglicht es Ihnen, Inhalte für Ihre Benutzerinnen und Benutzer zu testen oder zu personalisieren. Aktivitäten können einen der folgenden Typen aufweisen:
 
-* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=de)
-* [Erlebnis-Targeting (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=de)
-* [Recommendations](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html?lang=de)
-* [Automatisierte Personalisierung](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=de)
-* [Multivarianz-Test (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=de)
+* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
+* [Erlebnis-Targeting (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)
+* [Recommendations](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html)
+* [Automatisierte Personalisierung](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [Multivarianz-Test (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 
 ## Batch-Aktualisierungen
 
@@ -110,15 +110,15 @@ Die Batch-Verarbeitung ist abgeschlossen, wenn alle Vorgänge abgeschlossen sind
 
 | Attribut | Beschreibung | Beschränkungen | Standardeinstellung |
 | --- | --- | --- | --- |
-| Textkörper | Hauptteil für HTTP-Batch-Vorgang. wird für alle Aktionen außer POST und PUT ignoriert. kann auf IDs aus vorherigen Batch-Aktionen verweisen, z. B.: „offerId“: &quot;{operationIdResponse:0}&quot;, „segmentId“: &quot;{operationIdResponse:1}&quot; | muss eine gültige JSON sein. Im Fall des Verweises auf eine operationIdResponse sollte die verweisende operationId-Antwort eine gültige ID sein und die Methode für diese Aktion sollte POST sein | Leere {} |  |
-| dependsOnOperationIds | Liste der Einschränkungs-IDs, die sicherstellen, dass der aktuelle Vorgang nur ausgeführt wird, wenn die angegebenen Vorgänge erfolgreich abgeschlossen wurden. Kann verwendet werden, um eine Verkettung von Vorgängen zu erzielen. | Es sind maximal 255 Vorgänge zulässig; eindeutige Werte sind nur zulässig; sollten auf eine gültige operationId im Array verweisen; zyklische Abhängigkeiten sind nicht zulässig |  |  |
-| Kopfzeilen | Array von Schlüssel-Wert-Headern, die mit einem bestimmten Vorgang gesendet werden sollen. Wenn die Authentifizierung für die Batch-API über die Autorisierungskopfzeile durchgeführt wurde, wird sie auch für einzelne Vorgänge kopiert. | Maximal zulässige Anzahl von Kopfzeilen im Array ist 50 | Content-Type: application/json |  |
-| header->name | Header-Name | sollte unter anderen Kopfzeilennamen eindeutig sein. Bei Kopfzeilen wird von RFC nicht zwischen Groß- und Kleinschreibung unterschieden. Andernfalls überschreiben sich die Werte gegenseitig. |  |  |
-| headers->value | Kopfzeilenwert | K. A. | Leere Zeichenfolge |  |
-| method | Zu verwendende HTTP-Methode. Verfügbare Optionen: GET, POST, PUT, PATCH, DELETE | Nur GET-, POST-, PUT-, PATCH- und DELETE-Methoden sind zulässig |  |  |
-| operationId | Vorgangs-ID, die verwendet wird, um einen Vorgang neben anderen Vorgängen für Antworten und Verweise auf Ergebnisse zu identifizieren. | Eindeutig unter anderen Vorgängen; Werte von 0-255 |  |  |
-| Betrieb | Liste der im Batch auszuführenden Vorgänge. Reihenfolge ist nicht relevant. | Es sind maximal 256 Vorgänge zulässig |  |  |
-| relativeUrl | relative URL für die Admin-REST-API, der Teil nach &quot;/admin/rest/&quot;. Kann Abfragezeichenfolgenparameter enthalten wie: &quot;/v2/campaigns?limit=10&amp;offset=10“. kann auf URLs verweisen, die IDs aus vorherigen Batch-Aktionen enthalten, z. B.: &quot;/v1/offers/{operationIdResponse:0}&quot;. Wenn Abfrageparameter gesendet werden, müssen sie URL-kodiert sein. | sollte mit / (relativ sein) beginnen; nur neue gültige JSON-APIs werden unterstützt; im Fall einer ungültigen relativen URL wird eine 404-Antwort für einen bestimmten Vorgang zurückgegeben. Im Fall des Verweises auf eine operationIdResponse sollte die verweisende operationId-Antwort eine gültige ID sein und die Methode für diese Aktion sollte POST sein |  |  |
+| Textkörper | Hauptteil für HTTP-Batch-Vorgang. wird für alle Aktionen außer POST und PUT ignoriert. kann auf IDs aus vorherigen Batch-Aktionen verweisen, z. B.: „offerId“: &quot;{operationIdResponse:0}&quot;, „segmentId“: &quot;{operationIdResponse:1}&quot; | sollte eine gültige JSON sein. Im Fall des Verweises auf eine operationIdResponse sollte die verweisende operationId-Antwort eine gültige ID sein und die Methode für diese Aktion sollte POST sein | Leere {} |
+| dependsOnOperationIds | Liste der Einschränkungs-IDs, die sicherstellen, dass der aktuelle Vorgang nur ausgeführt wird, wenn die angegebenen Vorgänge erfolgreich abgeschlossen wurden. Kann verwendet werden, um eine Verkettung von Vorgängen zu erzielen. | Es sind maximal 255 Vorgänge zulässig; eindeutige Werte sind nur zulässig; sollten auf eine gültige operationId im Array verweisen; zyklische Abhängigkeiten sind nicht zulässig |  |
+| Kopfzeilen | Array von Schlüssel-Wert-Headern, die mit einem bestimmten Vorgang gesendet werden sollen. Wenn die Authentifizierung für die Batch-API über die Autorisierungskopfzeile durchgeführt wurde, wird sie auch für einzelne Vorgänge kopiert. | Maximal zulässige Anzahl von Kopfzeilen im Array ist 50 | Content-Type: application/json |
+| header->name | Header-Name | sollte unter anderen Kopfzeilennamen eindeutig sein. Bei Kopfzeilen wird von RFC nicht zwischen Groß- und Kleinschreibung unterschieden. Andernfalls überschreiben sich die Werte gegenseitig. |  |
+| headers->value | Kopfzeilenwert | K. A. | Leere Zeichenfolge |
+| method | Zu verwendende HTTP-Methode. Verfügbare Optionen: GET, POST, PUT, PATCH, DELETE | Nur GET-, POST-, PUT-, PATCH- und DELETE-Methoden sind zulässig |  |
+| operationId | Vorgangs-ID, die verwendet wird, um einen Vorgang neben anderen Vorgängen für Antworten und Verweise auf Ergebnisse zu identifizieren. | Eindeutig unter anderen Vorgängen; Werte von 0-255 |  |
+| Betrieb | Liste der im Batch auszuführenden Vorgänge. Reihenfolge ist nicht relevant. | Es sind maximal 256 Vorgänge zulässig |  |
+| relativeUrl | relative URL für die Admin-REST-API, der Teil nach &quot;/admin/rest/&quot;. Kann Abfragezeichenfolgenparameter enthalten wie: &quot;/v2/campaigns?limit=10&amp;offset=10“. kann auf URLs verweisen, die IDs aus vorherigen Batch-Aktionen enthalten, z. B.: &quot;/v1/offers/{operationIdResponse:0}&quot;. Wenn Abfrageparameter gesendet werden, müssen sie URL-kodiert sein. | sollte mit / (relativ sein) beginnen; nur neue gültige JSON-APIs werden unterstützt; im Fall einer ungültigen relativen URL wird eine 404-Antwort für einen bestimmten Vorgang zurückgegeben. Im Fall des Verweises auf eine operationIdResponse sollte die verweisende operationId-Antwort eine gültige ID sein und die Methode für diese Aktion sollte POST sein |  |
 
 #### Beispielobjekt für die Anfrage
 
@@ -148,13 +148,13 @@ Die Batch-Verarbeitung ist abgeschlossen, wenn alle Vorgänge abgeschlossen sind
 
 | Parameter | Beschreibung |
 | --- | --- |
-| operationId | Vorgangs-ID, die verwendet wird, um einen Vorgang neben anderen Vorgängen zu identifizieren, und dieselbe ID, die in der POST-Anfrage gesendet wurde. |  |
-| übersprungen | BOOLEN-Markierung, um zu markieren, ob der Vorgang ausgeführt oder übersprungen wurde. Ist „true“, wenn der aktuelle Vorgang von einem fehlgeschlagenen Vorgang abhängt (gibt einen StatusCode-Wert zurück, der von 2xx abweicht). |  |
-| statusCode | zurückgegeben, werden alle abhängigen Vorgänge übersprungen (nicht ausgeführt). |  |
-| Kopfzeilen | Array von Schlüssel-Wert-Headern, die als Antwort für einen bestimmten Vorgang gesendet werden sollen. |  |
-| header->name | Header-Name |  |
-| headers->value | Kopfzeilenwert |  |
-| Textkörper | Hauptteil für HTTP-Batch-Antwortvorgang |  |
+| operationId | Vorgangs-ID, die verwendet wird, um neben anderen Vorgängen einen Vorgang zu identifizieren, dieselbe ID, die in der POST-Anfrage gesendet wurde. |
+| übersprungen | BOOLEN-Markierung, um zu markieren, ob der Vorgang ausgeführt oder übersprungen wurde. Ist „true“, wenn der aktuelle Vorgang von einem fehlgeschlagenen Vorgang abhängt (gibt einen StatusCode-Wert zurück, der von 2xx abweicht). |
+| statusCode | zurückgegeben, werden alle abhängigen Vorgänge übersprungen (nicht ausgeführt). |
+| Kopfzeilen | Array von Schlüssel-Wert-Headern, die als Antwort für einen bestimmten Vorgang gesendet werden sollen. |
+| header->name | Header-Name |
+| headers->value | Kopfzeilenwert |
+| Textkörper | Hauptteil für HTTP-Batch-Antwortvorgang |
 
 #### Beispielantwortobjekt
 

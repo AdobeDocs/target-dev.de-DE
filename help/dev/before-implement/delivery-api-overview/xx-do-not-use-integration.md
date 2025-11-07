@@ -2,7 +2,7 @@
 title: Integration mit Experience Cloud
 description: Integration mit Experience Cloud
 keywords: Bereitstellungs-API
-source-git-commit: f16903556954d2b1854acd429f60fbf6fc2920de
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 7%
@@ -26,7 +26,7 @@ Wenn ein Aufruf der Target-Bereitstellungs-API vom Server ausgelöst wird, gibt 
 Adobe Target kann die Analytics-Payload automatisch über die Serverseite an Adobe Analytics weiterleiten, wenn die folgenden Kennungen bereitgestellt werden:
 
 1. `supplementalDataId` : Die ID, die für die Zuordnung zwischen Adobe Analytics und Adobe Target verwendet wird
-1. `trackingServer`: Der Adobe-Analytics-Server Damit Adobe Target und Adobe Analytics die Daten korrekt zusammenfügen können, müssen dieselben `supplementalDataId` sowohl an Adobe Target als auch an Adobe Analytics übergeben werden.
+1. `trackingServer` - Der Adobe Analytics-Server Damit Adobe Target und Adobe Analytics die Daten korrekt zusammenfügen können, müssen dieselben `supplementalDataId` sowohl an Adobe Target als auch an Adobe Analytics übergeben werden.
 
 ```
 curl -X POST \
@@ -176,7 +176,7 @@ Nachdem Sie `logging` = `client_side` angegeben haben, erhalten Sie die Payload 
 }
 ```
 
-Wenn die Target-Antwort etwas in der `payload` `analytics` -> enthält, leiten Sie es wie gewünscht an Adobe Analytics weiter. Analytics weiß, wie diese Payload verarbeitet wird. Dies kann in einer GET-Anfrage im folgenden Format erfolgen:
+Wenn die Target-Antwort etwas in der `analytics` `payload` -> enthält, leiten Sie es wie gewünscht an Adobe Analytics weiter. Analytics weiß, wie diese Payload verarbeitet wird. Dies kann in einer GET-Anfrage im folgenden Format erfolgen:
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
@@ -189,7 +189,7 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 | `rsid` | Ja | Die Report Suite-ID |
 | `pe` | Ja | Seitenereignis. Immer auf `tnt` gesetzt |
 | `tnta` | Ja | Analytics-Payload, die vom Target-Server in `analytics` -> `payload` -> `tnta` zurückgegeben wird |
-| `mid` | Marketing Cloud-Besucher-ID |
+| `mid` | Marketing Cloud-Besucher-ID |  |
 
 ### Erforderliche Kopfzeilenwerte
 
@@ -209,7 +209,7 @@ Adobe Audience Manager (AAM)-Segmente können auch über Adobe Target-Bereitstel
 
 | Feldname | Erforderlich | Beschreibung |
 | --- | --- | --- |
-| `locationHint` | Ja | Mit dem DCS-Standorthinweis wird bestimmt, welcher AAM-DCS-Endpunkt aufgerufen werden muss, um das Profil abzurufen. Muss >= 1 sein. |
+| `locationHint` | Ja | Mit dem DCS-Standorthinweis wird bestimmt, auf welchen AAM DCS-Endpunkt geklickt werden soll, um das Profil abzurufen. Muss >= 1 sein. |
 | `marketingCloudVisitorId` | Ja | Marketing Cloud-Besucher-ID |
 | `blob` | Ja | AAM Blob wird verwendet, um zusätzliche Daten an AAM zu senden. Darf nicht leer sein und die Größe &lt;= 1024. |
 

@@ -4,7 +4,7 @@ description: Verwenden Sie die [!UICONTROL adobe.target.getOffers()]-Funktion un
 title: Wie verwende ich die [!UICONTROL adobe.target.getOffers()]?
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '1317'
 ht-degree: 62%
@@ -35,7 +35,7 @@ Mit dieser Funktion können Sie mehrere Angebote abrufen, indem Sie mehrere Mbox
 | Feldname | Erforderlich? | Einschränkungen | Beschreibung |
 | --- | --- | --- | --- |
 | Anfrage > ID | Nein |  | Entweder `tntId`, `thirdPartyId` oder `marketingCloudVisitorId` wird benötigt. |
-| Anfrage > ID > thirdPartyId | Nein | Maximale Größe = 128. |  |  |
+| Anfrage > ID > thirdPartyId | Nein | Maximale Größe = 128. |  |
 | Request > experienceCloud | Nein |  |  |
 | Request > experienceCloud > analytics | Nein |  | Adobe Analytics-Integration |
 | Request > experienceCloud > analytics > logging | Nein | Folgendes muss auf der Seite implementiert werden:<ul><li>Besucher-ID-Service</li><li>Appmeasurement.js</li></ul> | Die folgenden Werte werden unterstützt:<P>**client_side**: Wenn angegeben, wird eine Analytics-Payload an den Aufrufer zurückgegeben, die zum Senden an [!UICONTROL Adobe Analytics] über die [!UICONTROL Data Insertion API] verwendet werden sollte.<P>**server_side**: Dies ist der Standardwert, bei dem der [!DNL Target] und [!DNL Analytics] Backend die SDID verwenden, um die Aufrufe zu Berichtszwecken zusammenzufügen. |
@@ -61,7 +61,7 @@ Mit dieser Funktion können Sie mehrere Angebote abrufen, indem Sie mehrere Mbox
 | Anfrage > Ausführen > pageLoad > Bestellung > Gesamtsumme | Nein | `>=` 0. | Angebote mit angegebenen Gesamtbestellsummen abrufen, wenn die Seite geladen wird. |
 | Anfrage > Ausführen > pageLoad > Bestellung > purchasedProductIds | Nein | Keine leeren Werte.<P>Die maximale Länge jedes Werts ist 50.<P>Verkettet und durch Kommas getrennt.<P>Die Gesamtlänge der Produkt-IDs `<=` 250. | Angebote mit angegebenen IDs gekaufter Produkte abrufen, wenn die Seite geladen wird. |
 | Anfrage > Ausführen > Mboxes | Nein | Maximale Größe = 50.<P>Keine Null-Elemente. |  |
-| Anfrage > Ausführen > Mboxes > Mbox | Ja | Nicht leer.<P>Kein &quot;-geklickt“-Suffix.<P>Maximale Größe = 250.<P>Zulässige Zeichen: `'-, ._\/=:;&!@#$%^&*()_+|?~[]{}'` | Name der Mbox. |
+| Anfrage > Ausführen > Mboxes > Mbox | Ja | Nicht leer.<P>Kein &quot;-geklickt“-Suffix.<P>Maximale Größe = 250.<P>Zulässige Zeichen: `'-, ._\/=:;&!@#$%^&*()_+|?~[]{}'`\|Name der mbox. |
 | Anfrage > Ausführen > Mboxes > Mbox > Index | Ja | Nicht null.<P>Eindeutig.<P>`>=` 0. | Beachten Sie, dass der Index nicht die Reihenfolge darstellt, in der die Mboxes verarbeitet werden. Wie auf einer Webseite mit mehreren regionalen Mboxes kann die Reihenfolge, in der sie verarbeitet werden, nicht angegeben werden. |
 | Anfrage > Ausführen > Mboxes > Mbox > Parameter | Nein | Maximale Anzahl = 50.<P>Name nicht leer.<P>Namenslänge `<=` 128.<P>Akzeptiert nur Zeichenfolgenwerte.<P>Wertelänge `<=` 5000.<P>Der Name darf nicht mit „profile“ beginnen.<P>Nicht zulässige Namen: „orderId“, „orderTotal“, „productPurchasedId“. | Angebote für eine bestimmte Mbox mit den angegebenen Parametern abrufen. |
 | Anfrage > Ausführen > Mboxes > Mbox > profileParameters | Nein | Maximale Anzahl = 50.<P>Name nicht leer.<P>Namenslänge `<=` 128.<P>Akzeptiert nur Zeichenfolgenwerte.<P>Länge des Werts `<=`256.<P>Der Name darf nicht mit „profile“ beginnen. | Angebote für eine bestimmte Mbox mit den angegebenen Profilparametern abrufen. |
@@ -204,7 +204,7 @@ adobe.target.getOffers({
 }
 ```
 
-Die Payload kann dann über die „Data Insertion [&quot; an [!DNL Adobe Analytics] weitergeleitet &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+Die Payload kann dann über die „Data Insertion [!DNL Adobe Analytics]&quot; an [ weitergeleitet ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
 ## Abrufen und Rendern von Daten aus mehreren Mboxes über [!UICONTROL getOffers()] und [!UICONTROL applyOffers()]
 

@@ -3,7 +3,7 @@ title: Abonnieren von Ereignissen in der  [!DNL Adobe Target] .js-SDK
 description: Erfahren Sie, wie Sie mithilfe des [!UICONTROL OnDeviceDecisioningHandler]-Objekts verschiedene Ereignisse in der Node.js-SDK abonnieren.
 feature: APIs/SDKs
 exl-id: 40c53840-a560-4819-ae04-f527c36b22fe
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 2%
@@ -22,7 +22,7 @@ Wenn die Rückruffunktion aufgerufen wird, wird ein Ereignisobjekt übergeben. J
 
 | Ereignisname (Typ) | Beschreibung | Zusätzliche Ereigniseigenschaften |
 | --- | --- | --- |
-| clientReady | Wird ausgegeben, wenn das Artefakt heruntergeladen wurde und die SDK für `getOffers` Aufrufe bereit ist. Wird bei Verwendung der geräteinternen Entscheidungsmethode empfohlen. |
+| clientReady | Wird ausgegeben, wenn das Artefakt heruntergeladen wurde und die SDK für `getOffers` Aufrufe bereit ist. Wird bei Verwendung der geräteinternen Entscheidungsmethode empfohlen. |  |
 | artifactDownload erfolgreich | Wird bei jedem Herunterladen eines neuen Artefakts ausgegeben. | artifactPayload, artifactLocation |
 | artifactDownload fehlgeschlagen | Wird jedes Mal ausgegeben, wenn ein Artefakt nicht heruntergeladen werden kann. | artifactLocation, Fehler |
 

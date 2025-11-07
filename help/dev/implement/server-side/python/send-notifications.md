@@ -3,7 +3,7 @@ title: Senden von Anzeige- oder Klickbenachrichtigungen an  [!DNL Adobe Target] 
 description: Erfahren Sie, wie Sie mit sendNotifications() Anzeigen- oder Klick-Benachrichtigungen an senden können [!DNL Adobe Target]  um Messungen und Berichte durchzuführen.
 feature: APIs/SDKs
 exl-id: 03827b18-a546-4ec8-8762-391fcb3ac435
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 8%
@@ -60,8 +60,8 @@ target_client.send_notifications(options)
 | target_cookie | verordnen | Cookie [!DNL Target] |
 | target_location_hint_cookie | verordnen | Cookie für [!DNL Target]-Standorthinweise |
 | analytics_details | list[analyticsResponse] | [!DNL Analytics] Payload im Falle einer Client-seitigen [!DNL Analytics] |
-| Spur |  | list[dict] | Aggregierte Trace-Daten für alle Anfrage-Mboxes/-Ansichten |
-| response_token | list[dict] | Eine Liste von [&#x200B;Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=de) |
+| Spur | list[dict] | Aggregierte Trace-Daten für alle Anfrage-Mboxes/-Ansichten |
+| response_token | list[dict] | Eine Liste von [&#x200B;Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) |
 | meta | verordnen | Zusätzliche Entscheidungsmetadaten zur Verwendung mit der geräteinternen Entscheidungsfindung |
 
 ## Beispiel
@@ -155,7 +155,7 @@ notification = Notification(
 notification_request = DeliveryRequest(notifications=[notification])
 ```
 
-Beachten Sie, dass wir sowohl den Mbox-Status als auch das Ereignis-Token entsprechend dem [!DNL Target] Angebot in der Prefetch-Antwort eingeschlossen haben. Nachdem wir die Benachrichtigungsanfrage erstellt haben, können wir sie über die `send_notifications()`-API-Methode an [!DNL Target] senden:
+Beachten Sie, dass wir sowohl den Mbox-Status als auch das Ereignis-Token entsprechend dem [!DNL Target] Angebot in der Prefetch-Antwort eingeschlossen haben. Nachdem wir die Benachrichtigungsanfrage erstellt haben, können wir sie über die [!DNL Target]-API-Methode an `send_notifications()` senden:
 
 ### Python
 

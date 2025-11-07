@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über  [!DNL Adobe Target]  und die Auswirkungen 
 title: Wie  [!DNL Target]  Apple ITP-Unterstützung?
 feature: Privacy & Security
 exl-id: 6deee03b-df86-4d0d-999c-b11855ddfda5
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '606'
 ht-degree: 30%
@@ -33,8 +33,8 @@ Apple ITP 2.x wirkt sich auf [!DNL Target] in den folgenden Bereichen aus:
 | --- | --- |
 | Mögliche Zunahme von Unique Visitors | Da das Ablauffenster auf sieben Tage (mit ITP 2.1) und einen Tag (mit ITP 2.2 und ITP 2.3) eingestellt ist, kann es zu einem Anstieg der Unique Visitors kommen, die von Safari-Browsern kommen. Wenn Ihre Besucher nach sieben Tagen (ITP 2.1) oder einem Tag (ITP 2.2 und ITP 2.3) erneut Ihre Domain aufrufen, ist [!DNL Target] gezwungen, anstelle des abgelaufenen Cookies ein neues [!DNL Target]-Cookie in Ihrer Domain zu setzen. Das neue [!DNL Target]-Cookie wird als neuer Unique Visitor gewertet, auch wenn der Benutzer derselbe ist. |
 | Verringerte Lookback-Zeiträume für [!DNL Target]-Aktivitäten | Besucherprofile für [!DNL Target]-Aktivitäten haben möglicherweise für die Entscheidungsfindung einen verringerten Lookback-Zeitraum. [!DNL Target]-Cookies werden verwendet, um einen Besucher zu erkennen und Benutzerprofilattribute zur Personalisierung zu speichern. Da [!DNL Target] Cookies in Safari nach sieben Tagen (ITP 2.1) oder einem Tag (ITP 2.2 und 2.3) abgelaufen sein können, können die Benutzerprofildaten, die mit dem bereinigten [!DNL Target]-Cookie verknüpft waren, nicht für die Entscheidungsfindung verwendet werden. |
-| Profil-Skripte, die auf der ID von Drittanbietern (3rdPartyID) basieren | Da das Gültigkeitsfenster auf sieben Tage (mit ITP 2.1) und einen Tag (mit ITP 2.2 und ITP 2.3) festgelegt wird, funktionieren [Profilskripte](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=de) die auf dem 3rdPartyID-Cookie basieren, nach Ablauf nicht mehr. |
-| QA-/Vorschau-URLs auf iOS-Geräten | Da das Gültigkeitsfenster auf sieben Tage (mit ITP 2.1) und einen Tag (mit ITP 2.2 und ITP 2.3) festgelegt wird, funktionieren [QA-/Vorschau-URLs](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=de) nach Ablauf nicht mehr, da die URLs auf dem ThirdPartyID-Cookie basieren. |
+| Profil-Skripte, die auf der ID von Drittanbietern (3rdPartyID) basieren | Da das Gültigkeitsfenster auf sieben Tage (mit ITP 2.1) und einen Tag (mit ITP 2.2 und ITP 2.3) festgelegt wird, funktionieren [Profilskripte](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html) die auf dem 3rdPartyID-Cookie basieren, nach Ablauf nicht mehr. |
+| QA-/Vorschau-URLs auf iOS-Geräten | Da das Gültigkeitsfenster auf sieben Tage (mit ITP 2.1) und einen Tag (mit ITP 2.2 und ITP 2.3) festgelegt wird, funktionieren [QA-/Vorschau-URLs](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html) nach Ablauf nicht mehr, da die URLs auf dem ThirdPartyID-Cookie basieren. |
 
 ## Ist meine aktuelle [!DNL Target]-Implementierung betroffen?
 

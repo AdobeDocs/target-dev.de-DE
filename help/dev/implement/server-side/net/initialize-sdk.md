@@ -3,7 +3,7 @@ title: Initialisieren von .NET SDK mithilfe der create-Methode
 description: Erfahren Sie, wie Sie mit der create-Methode die Java-SDK initialisieren und die [!UICONTROL TargetClient] instanziieren können, um  [!DNL Adobe Target]  für Experimente und personalisierte Erlebnisse aufzurufen.
 feature: APIs/SDKs
 exl-id: 501010c3-22f4-49a8-b2ac-c7307232d180
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 16%
@@ -24,7 +24,8 @@ Verwenden Sie danach die `Initialize`-Methode von SDK, um die SDK zu konfigurier
 
 `TargetClient` wird mithilfe von `TargetClient.Create` erstellt.
 
-## C\#
+## C\
+#
 
 ```csharp {line-numbers="true"}
 TargetClient TargetClient.Create(TargetClientConfig clientConfig)
@@ -32,7 +33,8 @@ TargetClient TargetClient.Create(TargetClientConfig clientConfig)
 
 `ClientConfig` wird mit ClientConfig.Builder erstellt.
 
-## C\#
+## C\
+#
 
 ```csharp {line-numbers="true"}
 TargetClientConfig.Builder TargetClientConfig.Builder()
@@ -47,7 +49,7 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 | Client | string | Ja | Keine | [!UICONTROL Target Client Id] |
 | OrganizationId | string | Ja | Keine | [!UICONTROL Experience Cloud Organization ID] |
 | Zeitüberschreitung | int | Nein | 10000 | Zeitüberschreitung für alle Anforderungen in Millisekunden |
-| Proxy |  | WebProxy | Nein | null  | Proxy für alle [!DNL Target] |
+| Proxy | WebProxy | Nein | null  | Proxy für alle [!DNL Target] |
 | Richtlinie wiederholen | Richtlinie | Nein | null  | Richtlinie für alle [!DNL Target] wiederholen |
 | AsyncRetryPolicy | AsyncPolicy | Nein | null  | Asynchrone Wiederholungsrichtlinie für alle [!DNL Target] |
 | Logger | ILogger | Nein | null  | Wird für die Debug-Protokollierung von [!DNL Target] und Antworten verwendet |
@@ -66,7 +68,8 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 
 ## Beispiel
 
-## C\#
+## C\
+#
 
 ```csharp {line-numbers="true"}
 var targetClientConfig = new TargetClientConfig.Builder("acmeclient", "ABCDEF012345677890ABCDEF0@AdobeOrg")

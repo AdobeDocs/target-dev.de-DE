@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Adobe Target den user-agent und Client Hints verw
 title: User Agent und Client Hints
 feature: at.js
 exl-id: e0d87d95-ee95-4ca9-8632-222ae1fb9a91
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 72%
@@ -72,7 +72,7 @@ Sec-CH-UA-Platform: "macOS"
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36 
 ```
 
-Obwohl die Informationen ähnlich sind, enthält die erste Anfrage an den Server Client Hints, die nur einen Teil der verfügbaren Elemente in der Zeichenfolge beinhalten. Bei der Anfrage fehlen die Betriebssystemarchitektur, die vollständige Betriebssystemversion, der Name der Layout-Engine, die Version der Layout-Engine und die vollständige Browser-Version. Bei nachfolgenden Anfragen ermöglicht die Client Hints-API Webservern jedoch, zusätzliche Details mit hoher Entropie (hohem Informationsgehalt) zum Gerät anzufordern. Wenn diese Werte mit hoher Entropie angefordert werden, kann die Browser-Antwort je nach der Browser-Richtlinie oder den Benutzereinstellungen diese Informationen enthalten.
+Obwohl die Informationen ähnlich sind, enthält die erste Anfrage an den Server Client Hints, die nur eine Teilmenge der verfügbaren Elemente in der Zeichenfolge beinhalten. Bei der Anfrage fehlen die Betriebssystemarchitektur, die vollständige Betriebssystemversion, der Name der Layout-Engine, die Version der Layout-Engine und die vollständige Browser-Version. Bei nachfolgenden Anfragen ermöglicht die Client Hints-API Webservern jedoch, zusätzliche Details mit hoher Entropie (hohem Informationsgehalt) zum Gerät anzufordern. Wenn diese Werte mit hoher Entropie angefordert werden, kann die Browser-Antwort je nach der Browser-Richtlinie oder den Benutzereinstellungen diese Informationen enthalten.
 
 Das folgende Beispiel ist ein JSON-Objekt, das von der Client Hints-API zurückgegeben wird, wenn Werte mit hoher Entropie angefordert werden:
 

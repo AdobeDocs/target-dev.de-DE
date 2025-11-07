@@ -3,7 +3,7 @@ title: Abonnieren von Ereignissen in der  [!DNL Adobe Target] -SDK
 description: Erfahren Sie, wie Sie mithilfe des [!UICONTROL OnDeviceDecisioningHandler]-Objekts verschiedene Ereignisse abonnieren, die in der Python-SDK auftreten.
 feature: APIs/SDKs
 exl-id: 4e32e3b5-6072-4703-b09d-abb467aa1304
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 3%
@@ -22,7 +22,7 @@ Wenn die `callback` aufgerufen wird, wird ein Ereignisobjekt übergeben. Jedes E
 
 | Ereignisname (Typ) | Beschreibung | Zusätzliche Ereigniseigenschaften |
 | --- | --- | --- |
-| client_ready | Wird ausgegeben, wenn das Artefakt heruntergeladen wurde und die SDK für get_offers-Aufrufe bereit ist. Empfohlen bei Verwendung von | Methode der geräteinternen Entscheidungsfindung. | Keine |
+| client_ready | Wird ausgegeben, wenn das Artefakt heruntergeladen wurde und die SDK für get_offers-Aufrufe bereit ist. Wird bei Verwendung der geräteinternen Entscheidungsmethode empfohlen. | Keine |
 | artifact_download_successful | Wird bei jedem Herunterladen eines neuen Artefakts ausgegeben. | artifact_payload, artifact_location |
 | artifact_download_failed | Wird jedes Mal ausgegeben, wenn ein Artefakt nicht heruntergeladen werden kann. | artifact_location, Fehler |
 

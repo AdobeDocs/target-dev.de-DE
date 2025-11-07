@@ -3,7 +3,7 @@ title: Verwenden von getOffers() in  [!DNL Adobe Target]  bei Verwendung der Jav
 description: Erfahren Sie, wie Sie mit getOffers() eine Entscheidung ausführen und ein Erlebnis aus abrufen können [!DNL Adobe Target].
 feature: APIs/SDKs
 exl-id: 9d7bf956-9d6a-4b4f-a401-2e6814f17f3d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 13%
@@ -43,7 +43,7 @@ Das `[!UICONTROL TargetDeliveryRequestBuilder]`-Objekt hat die folgende Struktur
 | Name | Typ | Erforderlich | Beschreibung |
 | --- | --- | --- | --- |
 | Kontext | Kontext | Ja | Gibt den Kontext für die Anfrage an |
-| sessionId |  | Zeichenfolge | Nein | Wird zum Verknüpfen mehrerer [!DNL Target] verwendet |
+| sessionId | Zeichenfolge | Nein | Wird zum Verknüpfen mehrerer [!DNL Target] verwendet |
 | thirdPartyId | Zeichenfolge | Nein | Die Kennung Ihres Unternehmens für den Benutzer, die Sie mit jedem Aufruf senden können |
 | Cookies | Liste | Nein | Liste der Cookies, die in der vorherigen [!DNL Target]-Anfrage desselben Benutzers zurückgegeben wurden. |
 | customerIds | Landkarte | Nein | Kunden-IDs im VisitorId-kompatiblen Format |
@@ -71,7 +71,7 @@ Die Werte der einzelnen Felder sollten *[!UICONTROL Target View Delivery API]* A
 
 ## Antwort
 
-Die von `TargetClient.getOffers(` zurückgegebene `TargetDeliveryResponse` weist die folgende Struktur auf:
+Die von `TargetDeliveryResponse` zurückgegebene `TargetClient.getOffers(` weist die folgende Struktur auf:
 
 | Name | Typ | Beschreibung |
 | --- | --- | --- |

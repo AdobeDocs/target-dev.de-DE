@@ -3,7 +3,7 @@ title: Übersicht über die Adobe Models-API
 description: Übersicht über die Models-API, mit der Benutzer verhindern können, dass Funktionen in Modelle für maschinelles Lernen aufgenommen werden.
 exl-id: e34b9b03-670b-4f7c-a94e-0c3cb711d8e4
 feature: APIs/SDKs, Recommendations, Administration & Configuration
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '1288'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Die Models-API, auch als Blockierungsliste-API bezeichnet, ermöglicht es Benutzenden, die Liste der Funktionen anzuzeigen und zu verwalten, die in Modellen für maschinelles Lernen für [!UICONTROL Automated Personalization] (AP)- und [!DNL Auto-Target] (AT)-Aktivitäten verwendet werden. Wenn ein(e) Benutzende(r) eine Funktion von der Verwendung durch die Modelle für AP- oder AT-Aktivitäten ausschließen möchte, kann er/sie die Models-API verwenden, um diese Funktion der &quot;Blockierungsliste&quot; hinzuzufügen.
 
-Ein **[!UICONTROL blocklist]** definiert die Reihe von Funktionen, die von [!DNL Adobe Target] aus seinen Modellen für maschinelles Lernen ausgeschlossen werden. Weitere Informationen zu Funktionen finden Sie unter [Von Algorithmen für  [!DNL Target]  maschinelles Lernen verwendete Daten](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=de).
+Ein **[!UICONTROL blocklist]** definiert die Reihe von Funktionen, die von [!DNL Adobe Target] aus seinen Modellen für maschinelles Lernen ausgeschlossen werden. Weitere Informationen zu Funktionen finden Sie unter [Von Algorithmen für  [!DNL Target]  maschinelles Lernen verwendete Daten](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html).
 
 Blockierungslisten können pro Aktivität (Aktivitätsebene) oder für alle Aktivitäten innerhalb eines [!DNL Target] Kontos (globale Ebene) definiert werden.
 
@@ -100,7 +100,7 @@ In dem hier gezeigten Beispiel prüft der Benutzer, ob die Liste der Funktionen 
 >
 >Um die Aktivitäts-ID Ihrer Aktivität zu finden, navigieren Sie in der [!DNL Target]-Benutzeroberfläche zur Liste Aktivitäten . Klicken Sie auf die gewünschte Aktivität. Die Aktivitäts-ID wird im Hauptteil der resultierenden Aktivitätenübersichtsseite sowie am Ende der URL für diese Seite angezeigt.
 
-Der **[!UICONTROL externalName]** ist ein benutzerfreundlicher Name für eine Funktion. Er wird von [!DNL Target] erstellt und es ist möglich, dass sich dieser Wert im Laufe der Zeit ändert. Benutzer können diese benutzerfreundlichen Namen im [Personalization Insights-Bericht anzeigen](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=de).
+Der **[!UICONTROL externalName]** ist ein benutzerfreundlicher Name für eine Funktion. Er wird von [!DNL Target] erstellt und es ist möglich, dass sich dieser Wert im Laufe der Zeit ändert. Benutzer können diese benutzerfreundlichen Namen im [Personalization Insights-Bericht anzeigen](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html).
 
 Die **[!UICONTROL internalName]** ist die tatsächliche Kennung der Funktion. Es wird auch von [!DNL Target] erstellt, kann jedoch nicht geändert werden. Auf die Blockierungsliste setzen Dies ist der Wert, auf den Sie verweisen müssen, um die Funktion(en) zu identifizieren, die Sie ändern möchten.
 
@@ -143,7 +143,7 @@ In dem hier gezeigten Beispiel prüft der Benutzer die Liste der blockierten Fun
 
 ## Schritt 3: Funktionen zur Blockierungsliste der Aktivität hinzufügen {#step3}
 
-Um der Blockierungsliste Funktionen hinzuzufügen, ändern Sie die Anfrage von GET auf PUT und ändern Sie den Textkörper der Anfrage, um die `blockedFeatureSources` oder `blockedFeatures` nach Bedarf anzugeben.
+Um der Blockierungsliste Funktionen hinzuzufügen, ändern Sie die Anfrage von GET an PUT und ändern Sie den Text der Anfrage, um die `blockedFeatureSources` oder `blockedFeatures` nach Bedarf anzugeben.
 
 * Der Text der Anfrage erfordert entweder `blockedFeatures` oder `blockedFeatureSources`. Beide können enthalten sein.
 * Befüllen Sie `blockedFeatures` mit Werten, die aus `internalName` identifiziert wurden. Siehe [Schritt 1](#step1).
@@ -166,7 +166,7 @@ Beachten Sie, dass `blockedFeatureSources` angibt, woher eine Funktion kam. Zur 
 | PÖBEL | Mobile |
 | CRS | Benutzerdefiniert - Kundenattribute |
 | UPA | Benutzerdefiniert - RT-CDP-Profilattribut |
-| IAC | Besucherinteressenbereiche |  |
+| IAC | Besucherinteressenbereiche |
 
 >[!BEGINTABS]
 
@@ -197,11 +197,11 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 >[!ENDTABS]
 
-In dem hier gezeigten Beispiel blockiert der Benutzer zwei Funktionen, `SES_PREVIOUS_VISIT_COUNT` und `SES_TOTAL_SESSIONS`, die er zuvor identifiziert hat, indem er die vollständige Liste der Funktionen für die Aktivität abgefragt hat, deren Aktivitäts-ID 260480 ist, wie in [Schritt 1](#step1) beschrieben. Sie blockieren auch alle Funktionen, die von Experience Cloud-Segmenten stammen, was durch die Blockierung von Funktionen mit dem Präfix &quot;AAM&quot; erreicht wird, wie in der [Tabelle](#table) oben beschrieben.
+In dem hier gezeigten Beispiel blockiert der Benutzer zwei Funktionen, `SES_PREVIOUS_VISIT_COUNT` und `SES_TOTAL_SESSIONS`, die er zuvor identifiziert hat, indem er die vollständige Liste der Funktionen für die Aktivität abgefragt hat, deren Aktivitäts-ID 260480 ist, wie in [Schritt 1](#step1) beschrieben. Sie blockieren auch alle Funktionen aus Experience Cloud-Segmenten, was durch die Blockierung von Funktionen mit dem Präfix &quot;AAM&quot; erreicht wird, wie in der [Tabelle](#table) oben beschrieben.
 
 ![Schritt 3](assets/models-api-step-3.png)
 
-Beachten Sie, dass Sie nach der Blockierungsauflistung auf die Blockierungsliste setzte einer Funktion die aktualisierte Datei überprüfen sollten, indem Sie [Schritt 2](#step2) erneut ausführen (GET auf die Blockierungsliste setzte). Überprüfen Sie, ob die Ergebnisse erwartungsgemäß angezeigt werden (stellen Sie sicher, dass die Ergebnisse die Funktionen enthalten, die mit der neuesten PUT-Anfrage hinzugefügt wurden).
+Beachten Sie, dass Sie nach der Blockierungsauflistung auf die Blockierungsliste setzte einer Funktion die aktualisierte Datei überprüfen sollten, indem Sie [Schritt 2](#step2) erneut ausführen (GET auf die Blockierungsliste setzte). Überprüfen Sie, ob die Ergebnisse erwartungsgemäß angezeigt werden (stellen Sie sicher, dass die Ergebnisse die Funktionen enthalten, die von der neuesten PUT-Anfrage hinzugefügt wurden).
 
 ## Schritt 4: (Optional) Entsperren {#step4}
 
@@ -235,7 +235,7 @@ Im hier gezeigten Beispiel löscht der Benutzer seine Blockierungsliste für die
 
 ![Schritt 4](assets/models-api-step-4.png)
 
-Wie immer wird nach der Änderung der Blockierungsliste empfohlen, [Schritt 2](#step2) erneut auszuführen (die GET auf die Blockierungsliste setzte zur Überprüfung der Liste enthält Funktionen wie erwartet). In dem hier gezeigten Beispiel verifiziert der Benutzer, dass seine -Blockierungsliste jetzt leer ist.
+Wie immer wird nach der Änderung der Blockierungsliste empfohlen, [Schritt 2](#step2) erneut auszuführen (die GET-Blockierungsliste zur Überprüfung der Liste enthält Funktionen wie erwartet). In dem hier gezeigten Beispiel verifiziert der Benutzer, dass seine -Blockierungsliste jetzt leer ist.
 
 ![Schritt 4b](assets/models-api-step-4b.png)
 
@@ -282,10 +282,10 @@ In der obigen Beispielanfrage blockiert der Benutzer zwei Funktionen, &quot;AAM_
 
 Frage: Ist das obige Code-Beispiel nicht redundant?
 
-Antwort: Ja. Es ist redundant, Funktionen zu blockieren, deren Werte mit &quot;AAM&quot; beginnen, während gleichzeitig alle Funktionen blockiert werden, deren Quelle &quot;AAM&quot; ist. Das Ergebnis ist, dass alle Funktionen, die von AAM (Experience Cloud-Segmenten) bezogen werden, blockiert werden. Wenn das Ziel also darin besteht, alle Funktionen aus Experience Cloud-Segmenten zu blockieren, ist es im obigen Beispiel nicht erforderlich, bestimmte Funktionen einzeln anzugeben, die mit &quot;AAM&quot; beginnen.
+Antwort: Ja. Es ist redundant, Funktionen zu blockieren, deren Werte mit &quot;AAM&quot; beginnen, während gleichzeitig alle Funktionen blockiert werden, deren Quelle &quot;AAM&quot; ist. In der Folge werden alle Funktionen, die aus AAM (Experience Cloud-Segmente) bezogen werden, blockiert. Wenn das Ziel daher darin besteht, alle Funktionen aus Experience Cloud-Segmenten zu blockieren, ist es im obigen Beispiel nicht erforderlich, bestimmte Funktionen einzeln anzugeben, die mit &quot;AAM&quot; beginnen.
 
 Letzter Schritt: Unabhängig davon, ob auf Aktivitäts- oder globaler Ebene, wird empfohlen, dass Sie Ihre Blockierungsliste nach der Änderung überprüfen, um sicherzustellen, dass sie die erwarteten Werte enthält. Ändern Sie dazu die `PUT` in eine `GET`.
 
-Die folgende Beispielantwort zeigt, [!DNL Target] zwei einzelne Funktionen blockiert, sowie alle Funktionen, die von &quot;AAM&quot;, „PRO“ und „ENV“ bezogen werden.
+Die folgende Beispielantwort zeigt, [!DNL Target] zwei einzelne Funktionen blockiert sowie alle Funktionen, die von &quot;AAM&quot;, „PRO“ und „ENV“ bezogen werden.
 
 ![Schritt 5](assets/models-api-step-5.png)

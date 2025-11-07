@@ -3,7 +3,7 @@ title: Initialisieren von Python SDK mithilfe der create-Methode
 description: Erfahren Sie, wie Sie mit der create-Methode die Python-SDK initialisieren und die [!UICONTROL TargetClient] instanziieren können, um  [!DNL Adobe Target]  Experimente und personalisierte Erlebnisse aufzurufen.
 feature: APIs/SDKs
 exl-id: 3e231e8e-696d-45c7-b733-79bf99da5bec
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 17%
@@ -32,9 +32,9 @@ TargetClient.create(options)
 | Kunde | str | Ja | Keine | [!UICONTROL Adobe Target client ID] |
 | ORGANIZATION_ID | str | Ja | Keine | [!UICONTROL Experience Cloud Organization ID] |
 | Zeitüberschreitung | int | Nein | 3000 | Timeout in Millisekunden |
-| server_domain | str | Nein | `client.tt.omtrdc.net` |  | Überschreibt den Standard-Host-Namen |
+| server_domain | str | Nein | `client.tt.omtrdc.net` | Überschreibt den Standard-Host-Namen |
 | sicher | boolesch | Nein | wahr | Einstellung zur Durchsetzung des HTTP-Schemas |
-| Holzfäller | Objekt | Nein | INFO-Logger |  | Ersetzt den standardmäßigen INFO-Logger |
+| Holzfäller | Objekt | Nein | INFO-Logger | Ersetzt den standardmäßigen INFO-Logger |
 | target_location_hint | str | Nein | Keine | [!DNL Target] Standorthinweis |
 | property_token | str | Nein | Keine | [!DNL Target]-Eigenschafts-Token Wenn hier angegeben, verwenden alle get_offers-Aufrufe diesen Wert. |
 | decisioning_method | str | Nein | Server-seitig | Bestimmt, welche Entscheidungsmethode verwendet werden soll ([geräteintern](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md) Server-seitig, hybrid) |
