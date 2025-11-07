@@ -50,4 +50,4 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(event) 
 
 Sehen Sie sich das folgende Video an, um zu erfahren, wie Sie mit Antwort-Token und benutzerdefinierten at.js-Ereignissen Profilinformationen von [!DNL Target] an Drittanbietersysteme weitergeben können.
 
->[!VIDEO](https://video.tv.adobe.com/v/23253/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33825/?captions=ger&quality=12)
