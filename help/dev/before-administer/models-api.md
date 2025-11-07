@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Die Models-API, auch als Blockierungsliste-API bezeichnet, ermöglicht es Benutzenden, die Liste der Funktionen anzuzeigen und zu verwalten, die in Modellen für maschinelles Lernen für [!UICONTROL Automated Personalization] (AP)- und [!DNL Auto-Target] (AT)-Aktivitäten verwendet werden. Wenn ein(e) Benutzende(r) eine Funktion von der Verwendung durch die Modelle für AP- oder AT-Aktivitäten ausschließen möchte, kann er/sie die Models-API verwenden, um diese Funktion der &quot;Blockierungsliste&quot; hinzuzufügen.
 
-Ein **[!UICONTROL blocklist]** definiert die Reihe von Funktionen, die von [!DNL Adobe Target] aus seinen Modellen für maschinelles Lernen ausgeschlossen werden. Weitere Informationen zu Funktionen finden Sie unter [Von Algorithmen für  [!DNL Target]  maschinelles Lernen verwendete Daten](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html).
+Ein **[!UICONTROL blocklist]** definiert die Reihe von Funktionen, die von [!DNL Adobe Target] aus seinen Modellen für maschinelles Lernen ausgeschlossen werden. Weitere Informationen zu Funktionen finden Sie unter [Von Algorithmen für  [!DNL Target]  maschinelles Lernen verwendete Daten](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=de).
 
 Blockierungslisten können pro Aktivität (Aktivitätsebene) oder für alle Aktivitäten innerhalb eines [!DNL Target] Kontos (globale Ebene) definiert werden.
 
@@ -100,7 +100,7 @@ In dem hier gezeigten Beispiel prüft der Benutzer, ob die Liste der Funktionen 
 >
 >Um die Aktivitäts-ID Ihrer Aktivität zu finden, navigieren Sie in der [!DNL Target]-Benutzeroberfläche zur Liste Aktivitäten . Klicken Sie auf die gewünschte Aktivität. Die Aktivitäts-ID wird im Hauptteil der resultierenden Aktivitätenübersichtsseite sowie am Ende der URL für diese Seite angezeigt.
 
-Der **[!UICONTROL externalName]** ist ein benutzerfreundlicher Name für eine Funktion. Er wird von [!DNL Target] erstellt und es ist möglich, dass sich dieser Wert im Laufe der Zeit ändert. Benutzer können diese benutzerfreundlichen Namen im [Personalization Insights-Bericht anzeigen](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html).
+Der **[!UICONTROL externalName]** ist ein benutzerfreundlicher Name für eine Funktion. Er wird von [!DNL Target] erstellt und es ist möglich, dass sich dieser Wert im Laufe der Zeit ändert. Benutzer können diese benutzerfreundlichen Namen im [Personalization Insights-Bericht anzeigen](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=de).
 
 Die **[!UICONTROL internalName]** ist die tatsächliche Kennung der Funktion. Es wird auch von [!DNL Target] erstellt, kann jedoch nicht geändert werden. Auf die Blockierungsliste setzen Dies ist der Wert, auf den Sie verweisen müssen, um die Funktion(en) zu identifizieren, die Sie ändern möchten.
 

@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # [!DNL Adobe Analytics for Target] (A4T)-Protokollierung in der [!DNL Experience Platform Web SDK]
 
-Bei der Verwendung von [!DNL Adobe Target] für die Personalisierung können Sie auswählen, welches System Sie für die Leistungsmessung verwenden möchten. Jede [Target-Aktivität](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) ermöglicht die Auswahl zwischen [!DNL Target] Reporting und Adobe [!DNL Analytics] Reporting.
+Bei der Verwendung von [!DNL Adobe Target] für die Personalisierung können Sie auswählen, welches System Sie für die Leistungsmessung verwenden möchten. Jede [Target-Aktivität](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=de) ermöglicht die Auswahl zwischen [!DNL Target] Reporting und Adobe [!DNL Analytics] Reporting.
 
 Wenn Sie [!DNL Analytics] Reporting verwenden, müssen [!DNL Target] den [!DNL Analytics] Folgendes mitteilen:
 
@@ -28,9 +28,9 @@ Die [!DNL Adobe Experience Platform Web SDK] unterstützt zwei Arten der [!DNL A
 | Protokollierungsmethode | Beschreibung |
 | --- | --- |
 | Server-seitige [!DNL Analytics] | Alle [!DNL Analytics] über die Edge Network gesendeten Treffer werden Server-seitig um [!DNL Target] Details erweitert, ohne dass der Trefferzusammenfügungsprozess durchlaufen werden muss. |
-| Client-seitige [!DNL Analytics] | [!DNL Target] Daten werden Client-seitig zurückgegeben, sodass Sie Daten manuell erweitern und mit der Data Insertion[!DNL Analytics]API an [&#x200B; senden &#x200B;](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
+| Client-seitige [!DNL Analytics] | [!DNL Target] Daten werden Client-seitig zurückgegeben, sodass Sie Daten manuell erweitern und mit der Data Insertion[!DNL Analytics]API an [&#x200B; senden &#x200B;](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=de). |
 
-Die Protokollierungsmethode wird davon bestimmt, ob Sie in Ihrem konfigurierten (Datenstrom[!DNL Adobe Analytics] aktiviert [&#128279;](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview):
+Die Protokollierungsmethode wird davon bestimmt, ob Sie in Ihrem konfigurierten (Datenstrom[!DNL Adobe Analytics] aktiviert [&#128279;](https://experienceleague.adobe.com/de/docs/experience-platform/datastreams/overview):
 
 ![Entscheidungsfluss der Protokollierungsmethode](/help/dev/implement/a4t/assets/analytics-logging.png)
 
