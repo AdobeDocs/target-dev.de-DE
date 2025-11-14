@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie  [!DNL Adobe Target] [!UICONTROL Bulk Profile
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: c2300ad6affdf3c1028e5c52ccaceb577a289227
+source-git-commit: 23cbece45828cf057594445b010a353d865d36ed
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 6%
@@ -49,13 +49,13 @@ Mit dem [!UICONTROL Bulk Profile Update API] können Sie bequem detaillierte Bes
 
 Um Profildaten stapelweise zu aktualisieren, erstellen Sie eine Batch-Datei. Die Batch-Datei ist eine Textdatei mit Werten, die durch Kommas getrennt sind, ähnlich der folgenden Beispieldatei.
 
-``` ```
+```
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+```
 
 >[!NOTE]
 >
@@ -76,9 +76,9 @@ Sie verweisen im POST-Aufruf an [!DNL Target] Server auf diese Datei, um die Dat
 
 Stellen Sie eine HTTP-POST-Anfrage an [!DNL Target] Edge-Server, um die Datei zu verarbeiten. Im Folgenden finden Sie eine Beispiel-HTTP-POST-Anfrage für die Datei batch.txt mit dem curl-Befehl:
 
-``` ```
+```
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+```
 
 Wo:
 
