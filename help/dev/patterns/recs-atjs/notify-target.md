@@ -5,10 +5,10 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+source-git-commit: 3301d88bc47208ab5439c1a9f7933e99c22a4521
 workflow-type: tm+mt
 source-wordcount: '346'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -32,13 +32,15 @@ Die Schrittnummer in der folgenden Abbildung entspricht dem folgenden Abschnitt.
 
 Mit diesem Schritt können Sie sicherstellen, dass alle Ereignisse, die an [!DNL Target] gesendet werden müssen, mit der `trackEvent`-Methode gesendet werden.
 
-+++Siehe Details
++++Details anzeigen
 
 ![Diagramm zur Fire Adobe Target Track-API](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
 
 Sie senden die Attribute für die Auftragskonvertierung wie im Abschnitt *Voraussetzungen* unten beschrieben. Der Name der Mbox spielt keine Rolle, die Konvertierung besteht jedoch in der Verwendung von `orderConfirmPage`.
 
 Sie müssen die Attribute für die Bestellkonvertierung nicht in diesen Aufruf einbeziehen. Diese Aufrufe zeichnen idealerweise Erfolgsmetriken auf, die vor den Hauptkonversionsereignissen als Mini-Konversionsereignisse betrachtet werden können. `CardIds` müssen in auf dem Warenkorb basierende Empfehlungen auf der Grundlage des `Add to Cart`-Ereignisses enthalten sein.
+
++++
 
 **Voraussetzungen**
 
@@ -49,7 +51,7 @@ Sie müssen die Attribute für die Bestellkonvertierung nicht in diesen Aufruf e
    * `orderTotal`: Bestellsumme für den Kauf.
    * `orderId`: Auftrags-ID des Kaufs.
 
-  Die folgende Abbildung zeigt eine [Regel für [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=de){target=_blank}, die nur auf der [!UICONTROL Confirmation]-Seite ausgelöst werden sollte.
+  Die folgende Abbildung zeigt eine [Regel für [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank}, die nur auf der [!UICONTROL Confirmation]-Seite ausgelöst werden sollte.
 
   ![Seite „Aktionskonfiguration“](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
@@ -58,7 +60,7 @@ Sie müssen die Attribute für die Bestellkonvertierung nicht in diesen Aufruf e
 **Messwerte**
 
 * [adobe.target.trackEvent()-Methode](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* [cartIds für auf dem Warenkorb basierende Kriterien](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=de#cart-based){target=_blank}
+* [cartIds für auf dem Warenkorb basierende Kriterien](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
 
 **Aktionen**
 
