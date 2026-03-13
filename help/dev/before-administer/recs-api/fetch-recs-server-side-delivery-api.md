@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+source-git-commit: 0681f89bbebb9e79ab042ae6cfbab989d846cb70
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1243'
 ht-degree: 1%
 
 ---
@@ -31,30 +31,30 @@ Die Bereitstellungs-API:
 * Erfordert keine Authentifizierung.
 * Nur POSTs.
 * Verarbeitet keine Cookies oder Umleitungsaufrufe.
-* Erfordert oder erkennt keine „Benutzerrollen“. Es ruft einfach Inhalte ab oder meldet Ereignisse an Target Edge-Server.
+* &quot;Benutzerrollen&quot; sind nicht erforderlich oder werden nicht erkannt. Es ruft einfach Inhalte ab oder meldet Ereignisse auf den Ziel-Edge-Servern.
 
-Gehen Sie wie folgt vor, um mit der Bereitstellungs-API Target-Erlebnisse einschließlich Empfehlungen bereitzustellen:
+Führen Sie die folgenden Schritte aus, um die Bereitstellungs-API zur Bereitstellung von Target-Erlebnissen einschließlich Empfehlungen zu verwenden:
 
 1. Erstellen Sie eine Target-Aktivität (A/B, XT, AP oder Recommendations) mit dem formularbasierten Composer (nicht dem Visual Experience Composer).
 1. Verwenden Sie die Bereitstellungs-API , um eine Antwort auf die Anfragen zu erhalten, die von der soeben erstellten Target-Aktivität generiert wurden.
 
-&lt;!— F: Warum sind BEIDE Schritte dafür notwendig? Wenn Sie eine formularbasierte Empfehlung für eine Mbox definiert haben, worin besteht dann der Vorteil, dass die Bereitstellungs-API ebenfalls integriert wird, um Ergebnisse abzurufen? Warum können Sie die Ergebnisse nicht einfach mit dem formularbasierten Rec auf dem Zielgerät bereitstellen lassen?..?? A: Siehe den unten stehenden Anwendungsfall … Dies ist der Fall, wenn Sie die ausstehenden Ergebnisse „abfangen“ möchten, um mehr Aufgaben auszuführen, bevor Sie die Ergebnisse anzeigen. Dinge wie Echtzeit-Vergleiche zu Beständen. —>
+&lt;!— F: Warum sind BEIDE Schritte dafür notwendig? Wenn Sie eine formularbasierte Empfehlung für eine Mbox definiert haben, worin besteht dann der Vorteil, dass die Bereitstellungs-API ebenfalls integriert wird, um Ergebnisse abzurufen? Warum können Sie nicht einfach die Ergebnisse vom formularbasierten Rec auf dem Zielgerät bereitstellen lassen...?? A: Siehe Anwendungsfall unten... Es ist, wenn Sie die ausstehenden Ergebnisse &quot;abfangen&quot; möchten, um mehr zu tun, bevor die Ergebnisse angezeigt werden. Dinge wie Echtzeit-Vergleiche mit dem Inventar. —>
 
 ## Erstellen einer Empfehlung mit dem formularbasierten Experience Composer
 
-Um Empfehlungen zu erstellen, die mit der Bereitstellungs-API verwendet werden können, verwenden Sie den [formularbasierten Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de).
+Um Empfehlungen zu erstellen, die mit der Bereitstellungs-API verwendet werden können, verwenden Sie den [formularbasierten Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
-1. Erstellen und speichern Sie zunächst ein JSON-basiertes Design, das Sie in Ihrer Empfehlung verwenden können. Beispiel-JSON sowie Hintergrundinformationen dazu, wie JSON-Antworten bei der Konfiguration einer formularbasierten Aktivität zurückgegeben werden können, finden Sie in der Dokumentation unter [Erstellen von Empfehlungsentwürfen](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=de). In diesem Beispiel trägt der Entwurf den Namen *Einfaches JSON.*
+1. Erstellen und speichern Sie zunächst ein JSON-basiertes Design, das Sie in Ihrer Empfehlung verwenden können. Beispiel-JSON sowie Hintergrundinformationen dazu, wie JSON-Antworten bei der Konfiguration einer formularbasierten Aktivität zurückgegeben werden können, finden Sie in der Dokumentation unter [Erstellen von Empfehlungsentwürfen](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html). In diesem Beispiel trägt der Entwurf den Namen *Einfaches JSON.*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
 1. Gehen Sie in Target zu **[!UICONTROL Activities]** > **[!UICONTROL Create Activity]** > **[!UICONTROL Recommendations]** und klicken Sie dann auf **[!UICONTROL Form]**.
 
    ![server-side-create-recs.png](assets/server-side-create-recs.png)
 
-1. Wählen Sie eine Eigenschaft aus und klicken Sie auf **[!UICONTROL Next]**.
-1. Definieren Sie den Speicherort, an dem Benutzer die Antwort der Empfehlung erhalten sollen. Im folgenden Beispiel wird ein Speicherort namens *api_charter* verwendet. Wählen Sie Ihr zuvor erstelltes JSON-basiertes Design mit dem Namen *Einfaches JSON.*
-   ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
-1. Speichern und aktivieren Sie die Empfehlung. Es wird Ergebnisse generieren. [Sobald die Ergebnisse fertig sind](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=de) können Sie die Bereitstellungs-API verwenden, um sie abzurufen.
+1. Wählen Sie eine Eigenschaft aus, und klicken Sie auf &quot;**[!UICONTROL Next]**&quot;.
+1. Definieren Sie den Speicherort, an dem die Benutzer die Antwort auf die Empfehlung erhalten sollen. Im folgenden Beispiel wird ein Speicherort mit dem Namen *api_charter* verwendet. Wählen Sie Ihr zuvor erstelltes JSON-basiertes Design mit dem Namen *Simple JSON.* aus.
+   ![serverseitige-create-recs-form.png](assets/server-side-create-recs-form1.png)
+1. Speichert und aktiviert die Empfehlung. Es wird Ergebnisse generieren. [Sobald die Ergebnisse fertig sind](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html) können Sie die Bereitstellungs-API verwenden, um sie abzurufen.
 
 ## Verwenden der Bereitstellungs-API
 
@@ -64,12 +64,12 @@ Die Syntax für die [Bereitstellungs-API](/help/dev/implement/delivery-api/overv
 
 1. Beachten Sie, dass der Clientcode erforderlich ist. Zur Erinnerung: Ihr Clientcode befindet sich möglicherweise in Adobe Target, indem Sie zu **[!UICONTROL Recommendations]** > **[!UICONTROL Settings]** navigieren. Beachten Sie den **Client-Code** im Abschnitt **Recommendations-API-**&quot;.
    ![client-code.png](assets/client-code.png)
-1. Nachdem Sie Ihren Client-Code haben, erstellen Sie Ihren Bereitstellungs-API-Aufruf. Das folgende Beispiel beginnt mit den in der Sammlung &quot;**[!UICONTROL Web Batched Mboxes Delivery API Call]**-API-Postman[&#x200B; bereitgestellten &#x200B;](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection) und nimmt entsprechende Änderungen vor. Beispiel:
+1. Nachdem Sie Ihren Client-Code haben, erstellen Sie Ihren Bereitstellungs-API-Aufruf. Das folgende Beispiel beginnt mit den in der Sammlung &quot;**[!UICONTROL Web Batched Mboxes Delivery API Call]**-API-Postman[ bereitgestellten ](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection) und nimmt entsprechende Änderungen vor. Beispiel:
    * Die **browser**- und **address**-Objekte wurden aus dem **body** entfernt, da sie für Anwendungsfälle außerhalb von HTML nicht erforderlich sind
    * *api_charter* wird in diesem Beispiel als Standortname aufgeführt
    * entity.id wird angegeben, da diese Empfehlung auf Inhaltsähnlichkeit basiert, d. h., es muss ein aktueller Elementschlüssel an Target übergeben werden.
      ![server-side-delivery-API-call.png](assets/server-side-delivery-api-call2.png)
-Denken Sie daran, Ihre Abfrageparameter korrekt zu konfigurieren. Geben Sie beispielsweise bei Bedarf `{{CLIENT_CODE}}` an. &lt;!— F: In der aktualisierten Aufrufsyntax wird entity.id als profileParameter und nicht als mboxParameter aufgeführt, wie dies in älteren Versionen der Fall war. —> &lt;!— F: Altes Bild ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) Alter Begleittext: „Beachten Sie, dass diese Empfehlung auf Inhalten basiert, die auf der entity.id basieren, die über mboxParameters gesendet wird.“ —>
+Denken Sie daran, Ihre Abfrageparameter korrekt zu konfigurieren. Geben Sie beispielsweise bei Bedarf `{{CLIENT_CODE}}` an. <!-- Q: In the updated call syntax, entity.id is listed as a profileParameter instead of an mboxParameter as in older versions. Q: Old image ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) Old accompanying text: "Note this recommendation is based on Content Similar products based on the entity.id sent via mboxParameters." -->
      ![client-code3](assets/client-code3.png)
 1. Senden Sie die Anfrage. Dies wird für den Speicherort *api_charter* ausgeführt, auf dem eine aktive Empfehlung ausgeführt wird, die mit Ihrem JSON-Design definiert wird und eine Liste empfohlener Entitäten ausgibt.
 1. Sie erhalten eine Antwort, die auf dem JSON-Design basiert.
@@ -95,11 +95,11 @@ Die folgenden Ressourcen enthalten Beispiele für verschiedene Implementierungen
 
 In den meisten Fällen werden Empfehlungen in der Adobe Target-Benutzeroberfläche konfiguriert und dann über die Target-APIs verwendet oder aufgerufen, beispielsweise aus den in den obigen Abschnitten genannten Gründen. Diese UI-API-Koordination ist üblich. Manchmal möchten die Benutzer jedoch möglicherweise alle Aktionen über APIs durchführen - sowohl die Einrichtung als auch die Verwendung der Ergebnisse. Obwohl dies weniger häufig vorkommt, können Benutzer die Ergebnisse von Recommendations absolut konfigurieren *ausführen und* vollständig mithilfe der -APIs nutzen.
 
-In einem [&#x200B; Abschnitt haben wir gelernt](manage-catalog.md) wie Adobe Target Recommendations-Entitäten verwaltet und Server-seitig bereitgestellt werden. Ebenso können Sie mit der [Adobe Developer Console](https://developer.adobe.com/console/home) Kriterien, Promotions, Sammlungen und Design-Vorlagen verwalten, ohne sich bei Adobe Target anmelden zu müssen. Eine vollständige Liste aller Recommendations-APIs finden Sie [hier](https://developer.adobe.com/target/administer/recommendations-api/), aber hier finden Sie eine Zusammenfassung als Referenz.
+In einem [ Abschnitt haben wir gelernt](manage-catalog.md) wie Adobe Target Recommendations-Entitäten verwaltet und Server-seitig bereitgestellt werden. Ebenso können Sie mit der [Adobe Developer Console](https://developer.adobe.com/console/home) Kriterien, Promotions, Sammlungen und Design-Vorlagen verwalten, ohne sich bei Adobe Target anmelden zu müssen. Eine vollständige Liste aller Recommendations-APIs finden Sie [hier](https://developer.adobe.com/target/administer/recommendations-api/), aber hier finden Sie eine Zusammenfassung als Referenz.
 
 | Ressource | Details |
 | --- | --- |
-| [Sammlungen](https://developer.adobe.com/target/administer/recommendations-api/#tag/Collections) | Auflisten, Erstellen, Abrufen, Bearbeiten und Löschen von Sammlungen. |
+| [Sammlungen](https://developer.adobe.com/target/administer/recommendations-api/#tag/Collections) | Sammlungen auflisten, erstellen, abrufen, bearbeiten und löschen |
 | [Kriterien](https://developer.adobe.com/target/administer/recommendations-api/#tag/Criteria) | Kriterien auflisten und abrufen. |
 | [Designs](https://developer.adobe.com/target/administer/recommendations-api/#tag/Designs) | Auflisten, Erstellen, Abrufen, Bearbeiten, Löschen und Überprüfen von Designs. |
 | [Entitäten](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities) | Speichern, Löschen und Abrufen von Entitäten. |
@@ -107,15 +107,15 @@ In einem [&#x200B; Abschnitt haben wir gelernt](manage-catalog.md) wie Adobe Tar
 | [Kategoriekriterien](https://developer.adobe.com/target/administer/recommendations-api/#tag/Category-Criteria) | Kategoriekriterien auflisten, erstellen, abrufen, bearbeiten und löschen. |
 | [Benutzerdefinierte Kriterien](https://developer.adobe.com/target/administer/recommendations-api/#tag/Custom-Criteria) | Benutzerdefinierte Kriterien auflisten, erstellen, abrufen, bearbeiten und löschen. |
 | [Elementkriterien](https://developer.adobe.com/target/administer/recommendations-api/#tag/Item-Criteria) | Auflisten, Erstellen, Abrufen, Bearbeiten und Löschen von Elementkriterien. |
-| [Beliebtheitskriterien](https://developer.adobe.com/target/administer/recommendations-api/#tag/Popularity-Criteria) | Popularitätskriterien auflisten, erstellen, abrufen, bearbeiten und löschen. |
-| [Kriterien für Profilattribute](https://developer.adobe.com/target/administer/recommendations-api/#tag/Profile-Attribute-Criteria) | Auflisten, Erstellen, Abrufen, Bearbeiten und Löschen von Profilattributkriterien. |
-| [Aktuelle Kriterien](https://developer.adobe.com/target/administer/recommendations-api/#tag/Recent-Criteria) | Auflisten, Erstellen, Abrufen, Bearbeiten und Löschen der letzten Kriterien. |
+| [Beliebtheitskriterien](https://developer.adobe.com/target/administer/recommendations-api/#tag/Popularity-Criteria) | Auflisten, Erstellen, Abrufen, Bearbeiten und Löschen von Beliebtheitskriterien. |
+| [Attributkriterien für Profil](https://developer.adobe.com/target/administer/recommendations-api/#tag/Profile-Attribute-Criteria) | Profilattributkriterien auflisten, erstellen, abrufen, bearbeiten und löschen |
+| [Letzte Kriterien](https://developer.adobe.com/target/administer/recommendations-api/#tag/Recent-Criteria) | Auflisten, Erstellen, Abrufen, Bearbeiten und Löschen der letzten Kriterien. |
 | [Sequenzkriterien](https://developer.adobe.com/target/administer/recommendations-api/#tag/Sequence-Criteria) | Auflisten, Erstellen, Abrufen, Bearbeiten und Löschen von Sequenzkriterien. |
 
 ## Referenzdokumentation
 
 * [Dokumentation zur Adobe Target-Bereitstellungs-API](/help/dev/implement/delivery-api/overview.md)
-* [Integration von Recommendations in E-Mail](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html?lang=de)
+* [Integration von Recommendations in E-Mail](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/integrating-recs-email.html)
 
 ## Zusammenfassung und Überprüfung
 
