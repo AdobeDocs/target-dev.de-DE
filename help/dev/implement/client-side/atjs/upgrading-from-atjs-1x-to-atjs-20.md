@@ -317,7 +317,7 @@ Kunden können einen globalen Mbox-Namen über **[!UICONTROL Target]** > **[!UIC
 
 Ja, die benutzerdefinierten at.js-Ereignisse gelten auch für `triggerView()`.
 
-### Wenn ich `triggerView()` mit &amp;lbrace;`"page" : "true"`&amp;rbrace; aufrufe, werde eine Benachrichtigung an das [!DNL Target]-Backend gesendet und die Impression erhöht. Führt dies auch dazu, dass die Profilskripts ausgeführt werden?
+### Wenn ich `triggerView()` mit &lbrace;`"page" : "true"`&rbrace; aufrufe, werde eine Benachrichtigung an das [!DNL Target]-Backend gesendet und die Impression erhöht. Führt dies auch dazu, dass die Profilskripts ausgeführt werden?
 
 Wenn ein Prefetch-Aufruf an das [!DNL Target]-Backend erfolgt, werden die Profilskripts ausgeführt. Anschließend werden die betroffenen Profildaten verschlüsselt und an die Client-Seite zurückgegeben. Nachdem `triggerView()` mit `{"page": "true"}` aufgerufen wurde, wird eine Benachrichtigung zusammen mit den verschlüsselten Profildaten gesendet. Dann entschlüsselt das [!DNL Target]-Backend die Profildaten und speichert sie in den Datenbanken.
 
@@ -374,7 +374,7 @@ Die folgenden Tabellen erläutern die at.js. 2.*x* Kompatibilität mit verschied
 | [Adobe Experience Platform-Erweiterung](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) | Ja |
 | Debugger | Ja |
 | Auditor | Regeln für at.js 2 wurden noch nicht aktualisiert.*x*   |
-| Opt-in-Unterstützung für [DSGVO](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) | Dies wird in [at.js-Version 2.1.0 ](/help/dev/implement/client-side/atjs/target-atjs-versions.md#atjs-version-210-june-3-2019) höher unterstützt. |
+| Opt-in-Unterstützung für [DSGVO](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) | Dies wird in [at.js-Version 2.1.0 &#x200B;](/help/dev/implement/client-side/atjs/target-atjs-versions.md#atjs-version-210-june-3-2019) höher unterstützt. |
 | AEM Enhanced Personalization powered by [!DNL Adobe Target] | Nein |
 
 ### Funktionen
