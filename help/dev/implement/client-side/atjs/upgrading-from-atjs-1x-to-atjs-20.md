@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie von  [!DNL Adobe Target] .at.js 1.x auf at.js
 title: Wie führe ich ein Upgrade von at.js Version 1.x auf Version 2.x durch?
 feature: at.js
 exl-id: fbfa5743-0fa5-44c6-89b3-fdee9b50e126
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 16132bc7a624ab4849651b183bde9b3064b4a676
 workflow-type: tm+mt
 source-wordcount: '2939'
 ht-degree: 57%
@@ -19,7 +19,7 @@ Im Folgenden finden Sie einige Vorteile der Verwendung von at.js 2.*x*, die in f
 
 * Möglichkeit zur Zwischenspeicherung aller Angebote beim Seitenladen, um mehrere Server-Aufrufe auf einen einzelnen Server-Aufruf zu reduzieren
 * Drastische Verbesserung der Erlebnisse Ihrer Endbenutzer auf Ihrer Site, da Angebote sofort über den Cache angezeigt werden, ohne dass die herkömmlichen Serveraufrufe verzögert werden.
-* Einfache, einzeilige Code- und einmalige Entwicklereinrichtung, damit Ihre Marketing-Fachleute [!UICONTROL A/B Test]- und [!UICONTROL Experience Targeting] (XT)-Aktivitäten über den VEC auf Ihrer SPA erstellen und ausführen können.
+* Einfaches, einzeiliges Code- und einmaliges Entwicklersetup, damit Ihre Marketing-Fachleute [!UICONTROL A/B Test]- und [!UICONTROL Experience Targeting] (XT)-Aktivitäten über den VEC in Ihren SPAs erstellen und ausführen können.
 
 ## at.js 2.*x* Systemdiagramme
 
@@ -36,11 +36,11 @@ Die folgenden Diagramme helfen Ihnen, den Workflow von at.js 2 zu verstehen.*x* 
 | 3 | Es wird eine Seitenlade-Anfrage durchgeführt, in der alle konfigurierten Parameter (MCID, SDID und Kunden-ID) enthalten sind. |
 | 4 | Profilskripte werden ausgeführt und anschließend in den Profilspeicher eingespeist. Der Store fordert qualifizierte Zielgruppen aus der Zielgruppenbibliothek an (z. B. von [!DNL Adobe Analytics] freigegebene Zielgruppen, [!DNL Audience Manager] usw.).<P>Kundenattribute werden in einem Batch-Prozess an den Profilspeicher übermittelt. |
 | 5 | Basierend auf den URL-Anfrageparametern und den Profildaten entscheidet [!DNL Target], welche Aktivitäten und Erlebnisse für die aktuelle Seite und zukünftige Ansichten an den Besucher zurückgegeben werden sollen. |
-| 6 | Zielgerichteter Inhalt wird zurück an die Seite übermittelt. Dieser enthält optional Profilwerte für eine weitere Personalisierung.<P>Zielgerichtete Inhalte auf der aktuellen Seite werden so schnell wie möglich angezeigt, ohne dass der Standardinhalt flackert.<P>Zielgerichteter Inhalt für Ansichten, die als Ergebnis von Benutzeraktionen in einer SPA angezeigt werden, die im Browser zwischengespeichert wird, sodass er sofort ohne zusätzlichen Server-Aufruf angewendet werden kann, wenn die Ansichten durch `triggerView()` ausgelöst werden. |
+| 6 | Zielgerichteter Inhalt wird zurück an die Seite übermittelt. Dieser enthält optional Profilwerte für eine weitere Personalisierung.<P>Zielgerichtete Inhalte auf der aktuellen Seite werden so schnell wie möglich angezeigt, ohne dass der Standardinhalt flackert.<P>Zielgerichtete Inhalte für Ansichten, die als Ergebnis von Benutzeraktionen in einer SPA angezeigt werden, werden im Browser zwischengespeichert, sodass die SPA sofort ohne zusätzlichen Server-Aufruf angezeigt werden kann, wenn die Ansichten durch `triggerView()` ausgelöst werden. |
 | 7 | [!UICONTROL Analytics]-Daten werden an Datenerfassungsserver übermittelt. |
 | 8 | Zielgruppendaten werden über die SDID mit [!UICONTROL Analytics] abgeglichen und in den [!UICONTROL Analytics]-Reporting-Speicher verarbeitet.<P>[!UICONTROL Analytics] Daten können dann sowohl in [!UICONTROL Analytics] als auch [!DNL Target] über [!UICONTROL Analytics for Target] (A4T)-Berichte angezeigt werden. |
 
-Egal, wo `triggerView()` in Ihrer SPA implementiert ist, werden die Ansichten und Aktionen aus dem Cache abgerufen und dem Benutzer ohne Serveraufruf gezeigt. `triggerView()` sendet außerdem eine Benachrichtigungsanfrage an das [!DNL Target]-Backend, um Impressions-Zählungen zu erhöhen und aufzuzeichnen.
+Egal, wo `triggerView()` in Ihrer SPA implementiert ist, werden die Ansichten und Aktionen aus dem Cache abgerufen und dem Benutzer ohne Serveraufruf gezeigt. `triggerView()` sendet außerdem eine Benachrichtigungsanfrage an das [!DNL Target]-Back-End, um Impressions-Zählungen zu erhöhen und aufzuzeichnen.
 
 (Klicken Sie auf das Bild, um es auf die volle Breite zu erweitern.)
 
@@ -57,7 +57,7 @@ Egal, wo `triggerView()` in Ihrer SPA implementiert ist, werden die Ansichten un
 
 ## Bereitstellen von at.js 2 *x*  
 
-Bereitstellen von at.js 2 *x* über Tags in der Erweiterung {2[&#128279;](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)Adobe Experience Platform}.
+Bereitstellen von at.js 2 *x* über Tags in der Erweiterung {2[Adobe Experience Platform}.](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md)
 
 >[!NOTE]
 >
@@ -231,7 +231,7 @@ at.js 2.*x* verwendet eine neue API, die wir Bereitstellungs-API nennen. Um zu d
 
 ### [!DNL Target] Globale Mbox wird nicht mehr verwendet
 
-In at.js 2.*x* wird in den Netzwerkaufrufen kein &quot;`target-global-mbox`&quot; mehr angezeigt. Stattdessen haben wir in der JSON-Payload, die an die [!DNL Target]-Server gesendet wird, die Syntax &quot;`target-global-mbox`&quot; durch &quot;`execute > pageLoad`&quot; ersetzt, wie unten dargestellt:
+In at.js 2.*x* wird in den Netzwerkaufrufen kein &quot;`target-global-mbox`&quot; mehr angezeigt. Stattdessen haben wir in der JSON-Payload, die an die `target-global-mbox`-Server gesendet wird, die Syntax &quot;`execute > pageLoad`&quot; durch &quot;[!DNL Target]&quot; ersetzt, wie unten dargestellt:
 
 ```json {line-numbers="true"}
 {
@@ -288,9 +288,9 @@ Durch domänenübergreifendes Tracking können Besucher auf verschiedenen Domän
 >
 >Domain-übergreifendes Tracking wird ab at.js 2.10 unterstützt, wird aber in at.js 2 nicht standardmäßig unterstützt.*x* vor 2.10. Domain-übergreifendes Tracking wird in at.js 2 unterstützt.*x* über die Experience Cloud ID (ECID)-Bibliothek v 4.3.0+ unterstützt.
 
-[!DNL Target] wird das Drittanbieter-Cookie in `<CLIENTCODE>.tt.omtrdc.net` gespeichert. Das Erstanbieter-Cookie wird in `clientdomain.com` gespeichert. Die erste Anfrage gibt HTTP-Antwort-Header zurück, die versuchen, Drittanbieter-Cookies namens `mboxSession` und `mboxPC` festzulegen. Eine Weiterleitungsanfrage wird zusammen mit einem zusätzlichen Parameter (`mboxXDomainCheck=true`) zurückgesendet. Wenn der Browser Drittanbieter-Cookies akzeptiert, enthält die Weiterleitungsanfrage diese Cookies und das Erlebnis wird zurückgegeben. Dieser Arbeitsablauf ist möglich, da wir die HTTP GET-Methode verwenden.
+[!DNL Target] wird das Drittanbieter-Cookie in `<CLIENTCODE>.tt.omtrdc.net` gespeichert. Das Erstanbieter-Cookie wird in `clientdomain.com` gespeichert. Die erste Anfrage gibt HTTP-Antwort-Header zurück, die versuchen, Drittanbieter-Cookies namens `mboxSession` und `mboxPC` festzulegen. Eine Weiterleitungsanfrage wird zusammen mit einem zusätzlichen Parameter (`mboxXDomainCheck=true`) zurückgesendet. Wenn der Browser Drittanbieter-Cookies akzeptiert, enthält die Weiterleitungsanfrage diese Cookies und das Erlebnis wird zurückgegeben. Dieser Workflow ist möglich, da wir die HTTP GET-Methode verwenden.
 
-In at.js 2 jedoch.*x*, HTTP-GET wird nicht verwendet. Stattdessen wird die HTTP-POST über at.js 2 verwendet.*x*, um JSON-Payloads an [!DNL Target] Edge-Server zu senden Die Verwendung der HTTP-POST bedeutet, dass die Umleitungsanfrage, um zu überprüfen, ob ein Browser Drittanbieter-Cookies unterstützt, beschädigt wird. Dies liegt daran, dass HTTP GET-Anfragen idempotent sind, während HTTP POST nicht idempotent ist und nicht willkürlich wiederholt werden darf. Daher wird domänenübergreifendes Tracking in at.js 2.*x* (vor 2.10) wird standardmäßig nicht unterstützt. Nur at.js 1.*x* verfügt über native Unterstützung für domänenübergreifendes Tracking.
+In at.js 2 jedoch.*x*, HTTP-GET wird nicht verwendet. Stattdessen wird HTTP POST über at.js 2 verwendet.*x*, um JSON-Payloads an [!DNL Target] Edge-Server zu senden Die Verwendung von HTTP-POST bedeutet, dass die Umleitungsanfrage, um zu überprüfen, ob ein Browser Drittanbieter-Cookies unterstützt, beschädigt wird. Dies liegt daran, dass HTTP GET-Anfragen idempotent sind, während HTTP POST nicht idempotent ist und nicht willkürlich wiederholt werden darf. Daher wird domänenübergreifendes Tracking in at.js 2.*x* (vor 2.10) wird standardmäßig nicht unterstützt. Nur at.js 1.*x* verfügt über native Unterstützung für domänenübergreifendes Tracking.
 
 Um Domain-übergreifendes Tracking für at.js v2.10 oder höher zu verwenden, haben Sie folgende Möglichkeiten:
 
@@ -768,8 +768,9 @@ Version wird als Abfragezeichenfolgenparameter über den Versionsparameter gesen
 
 ## Schulungsvideo: at.js 2.*x* Architekturdiagramm ![Übersichts-Badge](../../assets/overview.png)
 
-at.js 2.*x* erweitert die Unterstützung von Adobe [!DNL Target] für SPA und integriert sich in andere Experience Cloud-Lösungen. In diesem Video wird erklärt, wie alles zusammenkommt.
+at.js 2.*x* erweitert die Unterstützung von Adobe [!DNL Target] für SPAs und integriert diese in andere Experience Cloud-Lösungen. In diesem Video wird erklärt, wie alles zusammenkommt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
 Siehe [So verstehen Sie at.js 2.*x* funktioniert](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=de) für weitere Informationen.
+
