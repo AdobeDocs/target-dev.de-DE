@@ -2,7 +2,7 @@
 user-guide-title: Adobe Target-Entwicklerhandbuch
 breadcrumb-title: Target-Entwicklerhandbuch
 user-guide-description: Erfahren Sie, wie Sie das Kundenerlebnis so anpassen und personalisieren können, dass Sie den Umsatz Ihrer Websites, Mobile Sites, Mobile Apps, Social Media und anderer digitaler Kanäle maximieren können.
-source-git-commit: 4ecb4c12d7727689f14fdf0461ec7f92be54620c
+source-git-commit: 3fd5a42213a7c15df28ee4c9da4430ac6c7fbece
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 41%
@@ -125,7 +125,7 @@ ht-degree: 41%
       + [Personalisierung bereitstellen](implement/server-side/sdk-guides/on-device-decisioning/deliver-personalization.md)
       + [Übersicht über die unterstützten Funktionen](implement/server-side/sdk-guides/on-device-decisioning/supported-features.md)
       + [Fehlerbehebung bei der geräteinternen Entscheidungsfindung](implement/server-side/sdk-guides/on-device-decisioning/troubleshooting.md)
-      + [Best Practices  &#x200B;](implement/server-side/sdk-guides/best-practices/best-practices.md)
+      + [Best Practices  ](implement/server-side/sdk-guides/best-practices/best-practices.md)
    + Node.js-SDK-Referenz {#node-js}
       + [Übersicht über Node.js SDK](implement/server-side/node-js/overview.md)
       + [Installieren der Node.js-SDK](implement/server-side/node-js/install-sdk.md)
