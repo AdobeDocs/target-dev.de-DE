@@ -1,7 +1,8 @@
 ---
 cloud: Experience Cloud
 solution: Target
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
 product: target
 type: Documentation
 feature-set: Target
@@ -21,4 +22,4 @@ ht-degree: 0%
 
 Die Datei „metadata.md“ enthält Metadaten auf Repo-Ebene, die an die im Repository enthaltenen TOC.md-Dateien des Benutzerhandbuchs weitergegeben werden. Wenn Sie den Inhalt von „metadata.md“ für ein Benutzerhandbuch ändern möchten, verwenden Sie dazu eine beliebige Inhaltsverzeichnisdatei (.md).
 
-Unter [Metadaten](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/editing/user-guide-setup/metadata.html) finden Sie eine Liste gültiger Werte für **Lösung**, **** und **Typ**.
+Unter [Metadaten](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/editing/user-guide-setup/metadata.html) finden Sie eine Liste gültiger Werte für **Lösung**, **&#x200B;**&#x200B;und **Typ**.
