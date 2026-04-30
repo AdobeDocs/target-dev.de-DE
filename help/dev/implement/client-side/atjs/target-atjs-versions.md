@@ -4,10 +4,10 @@ description: Zeigen Sie die Details der Änderungen in den einzelnen Versionen d
 title: Was ist in jeder Version von at.js enthalten?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: e00d56b2515124abd23979dfc3159999e80b0ab0
+source-git-commit: a85cbaafb3c666478dd4d283661ff4b1125aa0dd
 workflow-type: tm+mt
-source-wordcount: '5018'
-ht-degree: 64%
+source-wordcount: '5144'
+ht-degree: 61%
 
 ---
 
@@ -17,13 +17,13 @@ Details zu den Änderungen in den einzelnen Versionen der at.js-JavaScript-Bibli
 
 >[!IMPORTANT]
 >
->[!DNL Adobe Target] unterstützt sowohl at.js 1.*x* und in at.js 2.*x*.
+>[!DNL Adobe Target] unterstützt at.js 1.*x* und at.js 2.*x*.
 >
 >at.js 1.*x* wurde in den Wartungsmodus versetzt. Das [!DNL Target]-Team veröffentlicht bei Bedarf Fehlerbehebungen und Sicherheits-Patches.
 >
 >Das [!DNL Target]-Team bietet vollständige Unterstützung für at.js 2.*x* und veröffentlicht laufend Fehlerbehebungen, Sicherheits-Patches, Funktionen und Leistungsoptimierung.
 >
->Sie sollten auf die neuesten Versionen von entweder 1 aktualisieren.*x* oder 2 *x*, um Fehlerbehebungen und Sicherheitspatches für Probleme zu erhalten, die in einer früheren Nebenversion der entsprechenden Hauptversion entdeckt wurden.
+>Sie sollten auf die neuesten Versionen von entweder 1.*x* oder 2.*x* aktualisieren, um Fehlerbehebungen und Sicherheits-Patches für Probleme zu erhalten, die in einer früheren Nebenversion der entsprechenden Hauptversion entdeckt wurden.
 
 Tags in [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) sind die bevorzugte Methode zum Aktualisieren von at.js. Erweiterungsentwickler fügen ihren Erweiterungen kontinuierlich neue Funktionen hinzu und beheben häufig Fehler. Diese Aktualisierungen werden in neue Versionen einer Erweiterung gepackt und im Adobe Experience Platform-Katalog als Aktualisierungen verfügbar gemacht. Weitere Informationen finden Sie unter [Erweiterungs-Upgrades](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html?lang=de) im Handbuch *Übersicht über Tags*.
 
@@ -164,14 +164,14 @@ Diese Version von at.js ist eine Wartungsversion, die die folgende Fehlerbehebun
 
 Diese Version von at.js ist eine Wartungsversion, die die folgende Fehlerbehebung enthält:
 
-* Ein Problem wurde behoben, dass dazu führte, dass at.js 1.*x* bei Verwendung von CNAME und eines Edge-Override die Serverdomäne nicht korrekt erstellte, wodurch die [!DNL Target]-Anforderung fehl schlug. (TNT-35064)
+* Es wurde ein Problem bei der Verwendung von CNAME und Edge Override behoben, bei dem at.js 1.*x* fälschlicherweise die Server-Domain erstellte, wodurch die [!DNL Target]-Anfrage fehlschlug. (TNT-35064)
 
 ## at.js 2.3.1-Versionen (15. Juni 2020)
 
 Diese Version von at.js ist eine Wartungsversion, die die folgenden Erweiterungen und Fehlerbehebungen enthält:
 
 * Die Einstellung `deviceIdLifetime` kann nun mit [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md) überschrieben werden. (TNT-36349)
-* Ein Problem wurde behoben, dass dazu führte, dass at.js 2.*x* bei Verwendung von CNAME und eines Edge-Override die Serverdomäne nicht korrekt erstellte, wodurch die [!DNL Target]-Anforderung fehl schlug. (TNT-35065)
+* Es wurde ein Problem bei der Verwendung von CNAME und Edge Override behoben, bei dem at.js 2.*x* fälschlicherweise die Server-Domain erstellte, wodurch die [!DNL Target]-Anfrage fehlschlug. (TNT-35065)
 * Fehlerkorrektur - Bei der Verwendung von [!DNL Target] Extension v2 und der [!UICONTROL Adobe Analytics Launch]-Erweiterung wird der [!DNL Analytics] `sendBeacon`-Aufruf [!DNL Target] verzögert. (TNT-36407, TNT-35990, TNT-36000)
 
 ## at.js-Version 2.3.0 (Donnerstag, 25. März 2020)
@@ -201,7 +201,7 @@ Diese Version von at.js umfasst die folgenden Verbesserungen und Fehlerbehebunge
 >
 >Aktualisieren Sie Ihre ECID-Erweiterung auf Version 4.4, um diese Leistungsverbesserung nutzen zu können.
 
-* at.js 2.2 bietet außerdem eine neue Einstellung namens `serverState`. Diese Einstellung kann verwendet werden, um die Seitenleistung zu optimieren, wenn eine Hybrid-Integration von [!DNL Target] implementiert ist. Hybrid-Integration bedeutet, dass Sie zur Bereitstellung Ihrer Erlebnisse sowohl at.js v2.2+ auf der Client-Seite als auch die Bereitstellungs-API oder eine [!DNL Target] SDK auf der Server-Seite verwenden. `serverState` bietet at.js v2.2+ die Möglichkeit, Erlebnisse direkt aus Inhalten anzuwenden, die auf Serverseite abgerufen und als Teil der bereitzustellenden Seite an den Client zurückgegeben wurden. Weitere Informationen finden Sie unter „serverState“ in [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverstate).
+* at.js 2.2 bietet außerdem eine neue Einstellung namens `serverState`. Diese Einstellung kann verwendet werden, um die Seitenleistung zu optimieren, wenn eine Hybrid-Integration von [!DNL Target] implementiert ist. Hybrid-Integration bedeutet, dass Sie zur Bereitstellung Ihrer Erlebnisse sowohl at.js v2.2+ auf der Client-Seite als auch die Bereitstellungs-API oder eine [!DNL Target] SDK auf der Server-Seite verwenden. `serverState` ermöglicht at.js v2.2+, Erlebnisse direkt aus Inhalten anzuwenden, die auf Serverseite abgerufen und als Teil der bereitzustellenden Seite an den Client zurückgegeben wurden. Weitere Informationen finden Sie unter „serverState“ in [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverstate).
 
 ## at.js-Version 1.8.0 (Freitag, 10. Oktober 2019)
 
@@ -320,7 +320,7 @@ at.js 1.6.4 ist eine Wartungsversion, die folgendes Problem behebt:
 
 at.js, Version 1.6.3, enthält die folgenden Fehlerbehebungen und Verbesserungen:
 
-* Selektoren sind jetzt CSS-escaped, wenn sie IDs oder CSS-Klassen enthalten, die mit einer Ziffer, zwei Bindestrichen oder einem Bindestrich, gefolgt von einer Ziffer (z. B. #-123), beginnen. (TNT-31061)
+* Selektoren sind jetzt CSS-escaped, wenn sie IDs oder CSS-Klassen enthalten, die mit einer Ziffer, zwei Bindestrichen oder einem Bindestrich gefolgt von einer Ziffer (z. B. #-123) beginnen. (TNT-31061)
 * Es wurde ein Problem behoben, das mit at.js 1.6.2 eingeführt wurde: Angebote von Visual Experience Composer (VEC) aus verschiedenen Aktivitäten, die für denselben CSS-Selektor gelten, berücksichtigten nicht die Aktivitätenpriorität. (TNT-31052)
 * Es wurde ein Problem behoben, bei dem Zeitüberschreitungen für Zusagen in Umgebungen auftraten, in denen Zusagen nativ nicht unterstützt werden. (TNT-30974)
 * Probleme werden jetzt korrekt erfasst und über das Ereignis „Inhaltswiedergabe fehlgeschlagen“ gemeldet. Zuvor wurde unter Umständen gemeldet, dass JavaScript erfolgreich ausgeführt wurde, selbst wenn dies nicht der Fall war. (TNT-30599)
@@ -333,7 +333,7 @@ Dies ist eine Wartungsversion, die folgendes Problem behebt:
 
 >[!WARNING]
 >
->Darüber hinaus enthält at.js, Version 1.6.2, auch alle Verbesserungen und Fehlerbehebungen der Versionen 1.6.1 und 1.6.0. Diese Versionen stehen nicht mehr zum Download zur Verfügung. Wenn Sie noch Version 1.6.1 oder 1.6.0 verwenden, empfehlen wir ein Upgrade auf Version 1.6.2
+>Darüber hinaus enthält at.js Version 1.6.2 alle in at.js Version 1.6.1 und 1.6.0 enthaltenen Verbesserungen und Fehlerbehebungen. Diese Versionen stehen nicht mehr zum Download zur Verfügung. Wenn Sie noch Version 1.6.1 oder 1.6.0 verwenden, empfehlen wir ein Upgrade auf Version 1.6.2
 
 Im Folgenden finden Sie einige Verbesserungen und Fehlerbehebungen in „at.js“-Version 1.6.1:
 
@@ -483,14 +483,14 @@ Die folgenden Verbesserungen und Fehlerbehebungen sind in at.js-Version 0.9.6 en
 * Die Konsolenprotokollierung für nicht unterstützte `<!DOCTYPE>`-Deklarationen wurde hinzugefügt.
 * Es wurde ein Problem behoben, bei dem [!DNL Target Classic] Plug-ins nicht korrekt angewendet wurden, wenn mehrere Standardangebote an eine einzelne Mbox gesendet wurden. (TGT-22664)
 * Die Cookie-Einstellung für zwei Domains auf oberster Ebene (TLDs) mit zwei Buchstaben wurde verbessert, um sicherzustellen, dass das mbox-Cookie für diese Domains korrekt festgelegt wird (z. B. test.no, autodrives.ca usw.).
-* Der Algorithmus zum Extrahieren der Domain der obersten Ebene, die beim Speichern von Cookies verwendet werden sollte, hat sich in at.js-Version 0.9.6 geändert. Aufgrund dieser Änderung können keine Cookies für Adressen gespeichert werden, die IP verwenden. IP-Adressen werden größtenteils zu Testzwecken verwendet. Als Problemumgehung können Sie jedoch DNS-Einträge verwenden oder die Hosts-Datei auf einer lokalen Box anpassen.
+* Der Algorithmus zum Extrahieren der Domain der obersten Ebene, die beim Speichern von Cookies verwendet werden sollte, hat sich in at.js-Version 0.9.6 geändert. Aufgrund dieser Änderung können keine Cookies für Adressen gespeichert werden, die IP verwenden. IP-Adressen werden größtenteils zu Testzwecken verwendet. Als Problemumgehung können Sie jedoch DNS-Einträge verwenden oder die Hosts-Datei auf einer lokalen Box anpassen.
 * Die Verarbeitung von Aktionen zum Verschieben und Neuanordnen bei Zeichenfolgenwerten anstelle von Ganzzahlen als Eigenschaften wurde korrigiert.
 
 ## „at.js“-Version 0.9.4
 
 **Datum:** 19. Januar 2017
 
-* Mbox-Namen können jetzt Sonderzeichen wie das kaufmännische Und ( &amp; ) enthalten.
+* Mbox-Namen können jetzt Sonderzeichen wie das kaufmännische Und (&amp;) enthalten.
 
   Eine Liste der zulässigen Sonderzeichen finden Sie unter [at.js-Konfiguration](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md).
 
@@ -539,7 +539,7 @@ Die folgenden Verbesserungen und Fehlerbehebungen sind in at.js-Version 0.9.6 en
 
 * Neue at.js-Benachrichtigungs-API.
 
-  Dieses Benachrichtigungssystem soll Ihnen einen besseren Einblick geben, was at.js auf der Seite tut und wann es Probleme gibt. Ein häufig im VEC auftretendes Problem ist, dass sich bei einem IT-Release die Seite ändert. Somit wird ein VEC-Selektor beschädigt und der Test kann Inhalte nicht mehr ordnungsgemäß bereitstellen. Ziel dieses Benachrichtigungssystems ist es, die Seite auf dieses Bereitstellungsproblem aufmerksam zu machen, sodass Entwickler auf die Informationen zugreifen, sie an ein System wie [!DNL Adobe Analytics] weiterleiten und Nachrichten an den Geschäftsinhaber übermitteln können, um darüber zu informieren, dass der Test nicht mehr funktioniert.
+  Ziel dieses Benachrichtigungssystems ist es, mehr Informationen darüber bereitzustellen, was at.js auf der Seite tut und wann es Probleme gibt. Ein häufig im VEC auftretendes Problem ist, dass sich bei einem IT-Release die Seite ändert. Somit wird ein VEC-Selektor beschädigt und der Test kann Inhalte nicht mehr ordnungsgemäß bereitstellen. Ziel dieses Benachrichtigungssystems ist es, die Seite auf dieses Bereitstellungsproblem aufmerksam zu machen, sodass Entwickler auf die Informationen zugreifen, sie an ein System wie [!DNL Adobe Analytics] weiterleiten und Nachrichten an den Geschäftsinhaber übermitteln können, um darüber zu informieren, dass der Test nicht mehr funktioniert.
 
 * Neue `targetGlobalSettings()`-API-Methode.
 
@@ -565,3 +565,4 @@ Achten Sie bei der Implementierung von „at.js“ auf Folgendes:
 * Asynchrone Implementierung bedeutet, dass ältere Integrationen wie das [!UICONTROL Test&Target to SiteCatalyst]-Plug-in möglicherweise nicht funktionieren.
 * [!DNL Target]-Plug-ins, die auf mbox.js-Objekte und -Methoden verweisen, werden nicht unterstützt.
 * Alle [!DNL Target]-Aufrufe werden über XMLHTTPRequest getätigt und Inhalt wird über JSON zurückgegeben.
+
