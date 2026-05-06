@@ -1,52 +1,52 @@
 ---
-title: Adobe Target-Bereitstellungs-API und SDKs
-description: Adobe Target-Bereitstellungs-API und SDKs
+title: Bereitstellungs-API und SDKs für Adobe Target
+description: Bereitstellungs-API und SDKs für Adobe Target
 keywords: Bereitstellungs-API
 exl-id: fc3996e6-8945-437c-9574-cc3f1a406f54
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
-workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 2%
+workflow-type: ht
+source-wordcount: '283'
+ht-degree: 100%
 
 ---
 
 # SDKs
 
-[!DNL Adobe Target] bietet [Server-seitige SDKs](../../implement/server-side/server-side-overview.md), um mit der [!DNL Target Delivery API] zu interagieren und die [!UICONTROL Target] Integration mit anderen [!DNL Adobe Experience Cloud]-Lösungen wie [!UICONTROL Adobe Analytics] und [!DNL Adobe Audience Manager] zu erleichtern.
+[!DNL Adobe Target] bietet [Server-seitige SDKs](../../implement/server-side/server-side-overview.md), um mit der [!DNL Target Delivery API] zu interagieren und die [!UICONTROL Target]-Integration mit anderen [!DNL Adobe Experience Cloud]-Lösungen wie [!UICONTROL Adobe Analytics] und [!DNL Adobe Audience Manager] zu erleichtern.
 
-Mit den SDKs können Sie Best Practices bei der Verwaltung von Sitzungen und Cookies befolgen. Es wird dringend empfohlen, eine SDK zu nutzen, um jegliche Komplexität zu beseitigen und eine fehlerhafte Verwendung der API zu verhindern.
+Die SDKs helfen Ihnen dabei, Best Practices bei der Verwaltung von Sitzungen und Cookies zu folgen. Es wird dringend empfohlen, ein SDK zu nutzen, um Komplexitäten zu beseitigen und eine fehlerhafte Verwendung der API zu verhindern.
 
 ## Node.js-SDK
 
-Weitere Informationen finden Sie unter [Übersicht über die SDK von Node.js](/help/dev/implement/server-side/node-js/overview.md).
+Weitere Informationen finden Sie unter [Node.js-SDK – Überblick](/help/dev/implement/server-side/node-js/overview.md).
 
-Die [Node.js SDK](https://github.com/adobe/target-nodejs-sdk) ist Open-Source-basiert und wird in GitHub gepflegt, wo Sie die Dokumentation und Nutzungsanweisungen finden.
+Das [Node.js-SDK](https://github.com/adobe/target-nodejs-sdk) basiert auf Open Source und wird in GitHub verwaltet. Dort finden Sie die Dokumentation und Nutzungsanweisungen.
 
-Lesen Sie [changelog](https://github.com/adobe/target-nodejs-sdk/blob/main/CHANGELOG.md) für die Node.js-SDK.
+Lesen Sie das [Änderungsprotokoll](https://github.com/adobe/target-nodejs-sdk/blob/main/CHANGELOG.md) für das Node.js-SDK.
 
 ## Java-SDK
 
-Weitere Informationen finden Sie unter [Übersicht über Java SDK](/help/dev/implement/server-side/java/overview.md).
+Weitere Informationen finden Sie unter [Java-SDK – Überblick](/help/dev/implement/server-side/java/overview.md).
 
-Die [Java SDK](https://github.com/adobe/target-java-sdk) ist Open-Source-basiert und wird in GitHub gepflegt, wo Sie die Dokumentation und Anweisungen zur Verwendung finden.
+Das [Java-SDK](https://github.com/adobe/target-java-sdk) basiert auf Open Source und wird in GitHub verwaltet. Dort finden Sie die Dokumentation und Nutzungsanweisungen.
 
-Lesen Sie das [Änderungsprotokoll](https://github.com/adobe/target-java-sdk/blob/main/CHANGELOG.md) für die Java-SDK.
+Lesen Sie das [Änderungsprotokoll](https://github.com/adobe/target-java-sdk/blob/main/CHANGELOG.md) für das Java-SDK.
 
-## .NET SDK
+## .NET-SDK
 
-Weitere Informationen finden Sie unter Übersicht über [.Net-SDK](/help/dev/implement/server-side/net/overview.md).
+Weitere Informationen finden Sie unter [.Net-SDK – Überblick](/help/dev/implement/server-side/net/overview.md).
 
-[.NET SDK](https://github.com/adobe/target-dotnet-sdk) ist Open-Source-basiert und wird in GitHub gepflegt. Dort finden Sie die Dokumentation und die Gebrauchsanweisungen.
+Das [.NET-SDK](https://github.com/adobe/target-dotnet-sdk) basiert auf Open Source und wird in GitHub verwaltet. Dort finden Sie die Dokumentation und Nutzungsanweisungen.
 
-Informationen zu .NET SDK [Versionen](https://github.com/adobe/target-dotnet-sdk/releases)
+Informationen zu [Versionen](https://github.com/adobe/target-dotnet-sdk/releases) des .NET-SDK
 
-## Python SDK
+## Python-SDK
 
-Weitere Informationen finden Sie unter [Python SDK](/help/dev/implement/server-side/python/overview.md).
+Weitere Informationen finden Sie unter [Python-SDK](/help/dev/implement/server-side/python/overview.md).
 
-[Python SDK](https://github.com/adobe/target-python-sdk) ist Open-Source-basiert und wird in GitHub gepflegt. Dort finden Sie die Dokumentation und die Gebrauchsanweisungen.
+Das [Python-SDK](https://github.com/adobe/target-python-sdk) basiert auf Open Source und wird in GitHub verwaltet. Dort finden Sie die Dokumentation und Nutzungsanweisungen.
 
-Lesen Sie [Changelog](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md) für die Python-SDK.
+Lesen Sie das [Änderungsprotokoll](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md) für das Python-SDK.
 
-&lt;!— Judy: Diese Seite entfernen oder ändern? Anderswo ausreichend abgedeckt? Oder Links zu analogen Informationen für die .NET- und Python-SDKs hinzufügen? —>
+&lt;!--- Judy: remove or modify this page? adequately covered elsewhere? Or, add links to analogous info for the .NET and Python SDKs? --->
