@@ -49,4 +49,4 @@ Das [Python-SDK](https://github.com/adobe/target-python-sdk) basiert auf Open So
 
 Lesen Sie das [Änderungsprotokoll](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md) für das Python-SDK.
 
-&lt;!--- Judy: remove or modify this page? adequately covered elsewhere? Or, add links to analogous info for the .NET and Python SDKs? --->
+&lt;!-- Judy: remove or modify this page? adequately covered elsewhere? Or, add links to analogous info for the .NET and Python SDKs? -->
