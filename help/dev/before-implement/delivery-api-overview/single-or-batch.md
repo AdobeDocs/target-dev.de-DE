@@ -4,9 +4,12 @@ description: Wie verwende ich [!UICONTROL Adobe Target Delivery API] einzelnen o
 keywords: Bereitstellungs-API
 exl-id: 525cd1f2-616a-486c-8f49-8117615500bb
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/NMNCubmUyiVOWfq2MnkONSrQCZRqNEh0VJTfFBGptOk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: 448
 ht-degree: 0%
 
 ---
@@ -252,4 +255,4 @@ Im obigen Beispiel für einen Batch-Bereitstellungsaufruf werden Erlebnisse abge
 }
 ```
 
-In der obigen Antwort können Sie sehen, dass im `content` jeder Mbox die HTML-Darstellung des Erlebnisses, die Benutzenden für jede Mbox angezeigt wird, abgerufen werden kann.
+In der obigen Antwort können Sie sehen, dass im `content` jeder Mbox die HTML-Darstellung des Erlebnisses, das Benutzenden für jede Mbox angezeigt wird, abgerufen werden kann.

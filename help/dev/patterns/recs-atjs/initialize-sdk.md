@@ -5,10 +5,16 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 250a8382-1fdd-4a70-b712-a25af5adad71
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/PxAKvxntUCdacBLopvANAI7-8OWe-ELQqFRJu-n3RWo
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1558'
-ht-degree: 5%
+source-wordcount: 1797
+ht-degree: 4%
 
 ---
 
@@ -53,33 +59,33 @@ Klicken Sie auf die folgenden Links, um zu den gewünschten Abschnitten zu navig
 
 Mit diesem Schritt können Sie sicherstellen, dass die `VisitorAPI.js` Bibliothek ordnungsgemäß geladen, konfiguriert und initialisiert wird.
 
-+++Siehe Details
++++Details anzeigen
 
 ![SDK-Diagramm zum Laden der Besucher-API](/help/dev/patterns/recs-atjs/assets/load-visitor-combined.png){width="400" zoomable="yes"}
 
 **Voraussetzungen**
 
-* Um den Besucher-ID-/API-Service verwenden zu können, muss Ihr Unternehmen für die [!DNL Adobe Experience Cloud] aktiviert sein und über eine [!UICONTROL Organization ID] verfügen. Weitere Informationen finden Sie unter [Experience Cloud-Anforderungen: Organisations](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=de&){target=_blank}ID im *Identity Service-*).
-* Sie benötigen die `VisitorAPI.js`. Sie sollten diese Datei bereits haben, falls Sie sie implementiert [!DNL Adobe Analytics]. Diese Datei kann auch über die [[!DNL Adobe Experience Platform] Tags-Erweiterung](https://experienceleague.adobe.com/docs/tags.html?lang=de){target=_blank} hinzugefügt oder aus dem [Adobe Analytics Code Manager heruntergeladen &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=de){target=_blank}.
+* Um den Besucher-ID-/API-Service verwenden zu können, muss Ihr Unternehmen für die [!DNL Adobe Experience Cloud] aktiviert sein und über eine [!UICONTROL Organization ID] verfügen. Weitere Informationen finden Sie unter [Experience Cloud-Anforderungen: Organisations](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank}ID im *Identity Service-*).
+* Sie benötigen die `VisitorAPI.js`. Sie sollten diese Datei bereits haben, falls Sie sie implementiert [!DNL Adobe Analytics]. Diese Datei kann auch über die [[!DNL Adobe Experience Platform] Tags-Erweiterung](https://experienceleague.adobe.com/docs/tags.html){target=_blank} hinzugefügt oder aus dem [Adobe Analytics Code Manager heruntergeladen ](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html){target=_blank}.
 
 **Konfigurieren und Verweisen auf VisitorAPI.js**
 
-Weitere Informationen finden Sie unter [Implementieren des Experience Cloud-Service für Target](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=de){target=_blank}.
+Weitere Informationen finden Sie unter [Implementieren des Experience Cloud-Service für Target](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html){target=_blank}.
 
 **Messwerte**
 
-* [Übersicht über den Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=de){target=_blank}
-* [Über den ID-Service](https://experienceleague.adobe.com/docs/id-service/using/intro/about-id-service.html?lang=de){target=_blank}
-* [Cookies und der Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=de){target=_blank}
-* [Anfordern und Festlegen von IDs durch den Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=de){target=_blank}
-* [Grundlegendes zu ID-Synchronisierung und Übereinstimmungsraten](https://experienceleague.adobe.com/docs/id-service/using/intro/match-rates.html?lang=de){target=_blank}
+* [Übersicht über den Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html){target=_blank}
+* [Über den ID-Service](https://experienceleague.adobe.com/docs/id-service/using/intro/about-id-service.html){target=_blank}
+* [Cookies und der Experience Cloud Identity-Service](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html){target=_blank}
+* [Anfordern und Festlegen von IDs durch den Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html){target=_blank}
+* [Grundlegendes zu ID-Synchronisierung und Übereinstimmungsraten](https://experienceleague.adobe.com/docs/id-service/using/intro/match-rates.html){target=_blank}
 
 **Aktionen**
 
 * Einbetten der `VisitorAPI.js`-Datei auf Ihren Web-Seiten.
-* Lesen Sie mehr über die [verfügbaren Konfigurationen für den Besucher-ID-/API-Service](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=de){target=_blank}.
+* Lesen Sie mehr über die [verfügbaren Konfigurationen für den Besucher-ID-/API-Service](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html){target=_blank}.
 * Nachdem die `VisitorAPI.js` geladen wurde, verwenden Sie die `Visitor.getInstance` Methode , um mit den erforderlichen Konfigurationen zu initialisieren.
-* Machen Sie sich mit den [verfügbaren Methoden](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=de){target=_blank} vertraut.
+* Machen Sie sich mit den [verfügbaren Methoden](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html){target=_blank} vertraut.
 
 +++
 
@@ -89,7 +95,7 @@ Weitere Informationen finden Sie unter [Implementieren des Experience Cloud-Serv
 
 Dieser Schritt stellt sicher, dass die bekannten IDs Ihrer Besucher (CRM-ID, Benutzer-ID usw.) zur geräteübergreifenden Personalisierung mit der anonymen ID von [!DNL Adobe] verknüpft sind.
 
-+++Siehe Details
++++Details anzeigen
 
 ![Kunden-ID festlegen](/help/dev/patterns/recs-atjs/assets/set-customer-id-combined.png){width="400" zoomable="yes"}
 
@@ -98,11 +104,11 @@ Dieser Schritt stellt sicher, dass die bekannten IDs Ihrer Besucher (CRM-ID, Ben
 * Die bekannte ID der Besucher sollte in der Datenschicht verfügbar sein.
 
 **Kunden-ID festlegen**
-Weitere Informationen finden Sie unter [setCustomerIDs](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=de){target=_blank}.
+Weitere Informationen finden Sie unter [setCustomerIDs](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html){target=_blank}.
 
 **Messwerte**
 
-* [Echtzeit-Profilsynchronisierung für mbox3rdPartyId](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=de){target=_blank}
+* [Echtzeit-Profilsynchronisierung für mbox3rdPartyId](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html){target=_blank}
 
 **Aktionen**
 
@@ -116,7 +122,7 @@ Weitere Informationen finden Sie unter [setCustomerIDs](https://experienceleague
 
 Dieser Schritt ermöglicht at.js das Abrufen aller Erlebnisse, die auf der Seite gerendert werden müssen, während die at.js-JavaScript-Bibliotheksdatei geladen wird.
 
-+++Siehe Details
++++Details anzeigen
 
 ![Konfigurieren der automatischen Seitenladeanfrage](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request-combined.png){width="400" zoomable="yes"}
 
@@ -145,7 +151,7 @@ Erfahren Sie mehr über die `pageLoadEnabled` in [targetGlobalSettings()](/help/
 
 Mit diesem Schritt wird sichergestellt, dass beim Bereitstellen von Erlebnissen kein Seitenflackern auftritt.
 
-+++Siehe Details
++++Details anzeigen
 
 ![Konfigurieren des Flimmerhandhabungsdiagramms](/help/dev/patterns/recs-atjs/assets/flicker-handling-combined.png){width="400" zoomable="yes"}
 
@@ -178,7 +184,7 @@ Wenn Sie `bodyHidingEnabled` deaktiviert haben, weil Sie APLR nicht auslösen m�
 
 Mit diesem Schritt stellen Sie sicher, dass alle Daten, die an [!DNL Target] gesendet werden müssen, festgelegt sind.
 
-+++Siehe Details
++++Details anzeigen
 
 ![Datenzuordnungsdiagramm](/help/dev/patterns/recs-atjs/assets/data-mapping-combined.png){width="400" zoomable="yes"}
 
@@ -213,15 +219,15 @@ Weitere Informationen finden Sie unter [targetPageParams()](/help/dev/implement/
 
 ## 1.6: Absatzförderung {#promotion}
 
-Fügen Sie hochgestufte Elemente hinzu und steuern Sie deren Platzierung in Ihren [!DNL Target Recommendations] [Designs](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=de){target=_blank}.
+Fügen Sie hochgestufte Elemente hinzu und steuern Sie deren Platzierung in Ihren [!DNL Target Recommendations] [Designs](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}.
 
-+++Siehe Details
++++Details anzeigen
 
 **Verfügbare Optionen**
 
 * Nach IDs hochstufen
-* [Nach Sammlung bewerben](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html?lang=de){target=_blank}
-* [Hochstufen nach Attribut](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=de){target=_blank}
+* [Nach Sammlung hochstufen](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
+* [Nach Attribut hochstufen](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
 **Entitätsparameter erforderlich**
 
@@ -235,7 +241,7 @@ Fügen Sie hochgestufte Elemente hinzu und steuern Sie deren Platzierung in Ihre
 
 Empfehlungen auf der Grundlage des Warenkorbinhalts des Benutzers aussprechen.
 
-+++Siehe Details
++++Details anzeigen
 
 **Verfügbare Kriterien**
 
@@ -249,7 +255,7 @@ Empfehlungen auf der Grundlage des Warenkorbinhalts des Benutzers aussprechen.
 
 **Messwerte**
 
-* [Warenkorbbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=de#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Warenkorbbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -259,7 +265,7 @@ Empfehlungen auf der Grundlage des Warenkorbinhalts des Benutzers aussprechen.
 
 Empfehlungen auf der Grundlage der allgemeinen Popularität eines Elements auf Ihrer Website oder auf der Grundlage der Popularität von Elementen innerhalb der Lieblings- oder am häufigsten angezeigten Kategorie, Marke, Genre usw.
 
-+++Siehe Details
++++Details anzeigen
 
 **Verfügbare Kriterien**
 
@@ -278,7 +284,7 @@ Empfehlungen auf der Grundlage der allgemeinen Popularität eines Elements auf I
 
 **Messwerte**
 
-* [Beliebtheitsbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=de#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Beliebtheitsbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -288,7 +294,7 @@ Empfehlungen auf der Grundlage der allgemeinen Popularität eines Elements auf I
 
 Empfehlungen aussprechen, die darauf basieren, ähnliche Elemente zu finden wie ein Element, das der Benutzer gerade anzeigt oder kürzlich angeschaut hat.
 
-+++Siehe Details
++++Details anzeigen
 
 **Verfügbare Kriterien**
 
@@ -303,7 +309,7 @@ Empfehlungen aussprechen, die darauf basieren, ähnliche Elemente zu finden wie 
 
 **Messwerte**
 
-* [Elementbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=de#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Elementbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -313,7 +319,7 @@ Empfehlungen aussprechen, die darauf basieren, ähnliche Elemente zu finden wie 
 
 Empfehlungen auf der Grundlage des Benutzerverhaltens aussprechen.
 
-+++Siehe Details
++++Details anzeigen
 
 **Verfügbare Kriterien**
 
@@ -326,7 +332,7 @@ Empfehlungen auf der Grundlage des Benutzerverhaltens aussprechen.
 
 **Messwerte**
 
-* [Benutzerbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=de#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Benutzerbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -336,7 +342,7 @@ Empfehlungen auf der Grundlage des Benutzerverhaltens aussprechen.
 
 Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochladen.
 
-+++Siehe Details
++++Details anzeigen
 
 **Verfügbare Kriterien**
 
@@ -348,7 +354,7 @@ Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochla
 
 **Messwerte**
 
-* [Benutzerdefinierte Kriterien](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=de#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Benutzerdefinierte Kriterien](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -356,11 +362,11 @@ Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochla
 
 ## 1.12: Angabe der in Einschlussregeln verwendeten Attribute {#inclusion}
 
-+++Siehe Details
++++Details anzeigen
 
 **Messwerte**
 
-* [Verwenden dynamischer und statischer Einschlussregeln](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=de){target=_blank}
+* [Verwenden dynamischer und statischer Einschlussregeln](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
 
 +++
 
@@ -370,11 +376,11 @@ Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochla
 
 Übergeben Sie Entitäts-IDs für Entitäten, die Sie aus Ihren Empfehlungen ausschließen möchten. Beispielsweise können Sie Artikel ausschließen, die sich bereits im Warenkorb befinden.
 
-+++Siehe Details
++++Details anzeigen
 
 **Messwerte**
 
-* [Kann ich eine Entität dynamisch ausschließen?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=de#exclude){target=_blank}
+* [Kann ich eine Entität dynamisch ausschließen?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
@@ -384,11 +390,11 @@ Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochla
 
 Verwenden Sie Entitätsattribute, um Produkt- oder Inhaltsinformationen an [!DNL Target Recommendations] zu übergeben.
 
-+++Siehe Details
++++Details anzeigen
 
 **Messwerte**
 
-* [Entitätsattribute](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=de){target=_blank}
+* [Entitätsattribute](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=en){target=_blank}
 
 +++
 
@@ -398,7 +404,7 @@ Verwenden Sie Entitätsattribute, um Produkt- oder Inhaltsinformationen an [!DNL
 
 Dieser Schritt stellt sicher, dass alle Daten, die an [!DNL Target] gesendet werden müssen, festgelegt sind.
 
-+++Siehe Details
++++Details anzeigen
 
 ![Remote-Datenzuordnungsdiagramm](/help/dev/patterns/recs-atjs/assets/remote-data-mapping-combined.png){width="400" zoomable="yes"}
 
@@ -426,7 +432,7 @@ Verwenden Sie die Funktion `targetPageParams()` , um alle erforderlichen Daten f
 
 Dieser Schritt stellt sicher, dass die at.js-JavaScript-Bibliothek geladen und initialisiert wird.
 
-+++Siehe Details
++++Details anzeigen
 
 ![Laden des Adobe Target-Diagramms „at.js“](/help/dev/patterns/recs-atjs/assets/load-atjs-combined.png){width="400" zoomable="yes"}
 
@@ -436,7 +442,7 @@ Dieser Schritt stellt sicher, dass die at.js-JavaScript-Bibliothek geladen und i
 
 *Messwerte*
 
-* [Funktionsweise von Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=de){target=_blank}
+* [Funktionsweise von Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html){target=_blank}
 * [Funktionsweise von „at.js“](/help/dev/implement/client-side/atjs/how-atjs-works/how-atjs-works.md)
 * [Implementieren von Target ohne einen Tag-Manager](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)
 

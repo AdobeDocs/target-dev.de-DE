@@ -3,9 +3,14 @@ title: Verwenden von getOffers() in  [!DNL Adobe Target]  bei Verwendung der Jav
 description: Erfahren Sie, wie Sie mit getOffers() eine Entscheidung ausführen und ein Erlebnis aus abrufen können [!DNL Adobe Target].
 feature: APIs/SDKs
 exl-id: 9d7bf956-9d6a-4b4f-a401-2e6814f17f3d
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/2oYkwezf-GkZnybeQUKUbCE6sPAHNQkg3Z1KH8s2a-g
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: 652
 ht-degree: 13%
 
 ---
@@ -71,7 +76,7 @@ Die Werte der einzelnen Felder sollten *[!UICONTROL Target View Delivery API]* A
 
 ## Antwort
 
-Die von `TargetDeliveryResponse` zurückgegebene `TargetClient.getOffers(` weist die folgende Struktur auf:
+Die von `TargetClient.getOffers(` zurückgegebene `TargetDeliveryResponse` weist die folgende Struktur auf:
 
 | Name | Typ | Beschreibung |
 | --- | --- | --- |

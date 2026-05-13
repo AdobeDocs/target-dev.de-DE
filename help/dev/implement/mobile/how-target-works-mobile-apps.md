@@ -3,10 +3,15 @@ description: Erfahren Sie, wie Sie mit  [!DNL Adobe Mobile SDK]  die optimalen E
 title: Wie funktioniert  [!DNL Target]  in Mobile Apps?
 feature: Implement Mobile
 exl-id: 33001f01-fde6-48cb-ac02-d1a632b2150d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/R3B-i9BFKaoTkbfzVLOU-j8VV2K-MpNrf0WTCkMceT8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 17%
+source-wordcount: 237
+ht-degree: 16%
 
 ---
 
@@ -16,7 +21,7 @@ Der [!DNL Adobe Mobile SDK] kontaktiert den [!DNL Target]-Server, um den Inhalt 
 
 >[!IMPORTANT]
 >
->Unterstützung für die [!DNL Adobe Mobile] Version 4.*x* SDKs sind seit dem 31. August 2021 ausgelaufen und werden für [!DNL Adobe Target] Mobilbenutzer nicht mehr empfohlen.
+>Die Unterstützung für die [!DNL Adobe Mobile] Version 4.*x*-SDKs endete am 31. August 2021 und wird für [!DNL Adobe Target] Mobilbenutzer nicht mehr empfohlen.
 >
 >Die [Adobe Experience Platform SDK für Mobile Apps](https://developer.adobe.com/client-sdks/documentation/){target=_blank} ist die empfohlene Lösung für [!DNL Adobe Experience Cloud] Lösungen und Services in Ihren Mobile Apps.
 
@@ -24,7 +29,7 @@ Der [!DNL Adobe Mobile SDK] kontaktiert den [!DNL Target]-Server, um den Inhalt 
 
 Ein *Zielspeicherort* wird auch als Mbox bezeichnet. Ein in der Anwendung identifizierter Ort wird für Tests oder Personalisierung aktiviert (beispielsweise die Willkommensnachricht auf dem Starbildschirm). Diese Orte werden während der Testerstellung festgelegt.
 
-Eine *[Erfolgsmetrik](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=de)* ist eine vom Benutzer durchgeführte Aktion, die angibt, ob eine bestimmte Aktivität erfolgreich war (z. B. Anmeldung, Kauf, Buchung eines Tickets usw.).
+Eine *[Erfolgsmetrik](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)* ist eine vom Benutzer durchgeführte Aktion, die angibt, ob eine bestimmte Aktivität erfolgreich war (z. B. Anmeldung, Kauf, Buchung eines Tickets usw.).
 
 ![ALT-Bild](assets/mobile-target-location.png)
 

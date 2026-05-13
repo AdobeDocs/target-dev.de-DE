@@ -4,9 +4,13 @@ description: Integration mit Experience Cloud, A4T-Reporting, Analytics for Targ
 keywords: Bereitstellungs-API, serverseitig, serverseitig, Integration, A4T
 exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
 feature: Implement Server-side
-source-git-commit: cbae0f1758fb0dee4837e8c237f8617ecb46eb25
+TQID: https://experienceleague.adobe.com/Qx5xwszkQLumkFhGJDbvyIofPe7qxUDN922iqmhsClk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: 392
 ht-degree: 6%
 
 ---
@@ -115,7 +119,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## Benutzer ruft Analytics-Payload von [!DNL Adobe Target] ab
 
-Ein Benutzer kann die [!DNL Adobe Analytics] Payload für eine bestimmte Mbox abrufen und dann über die „Data Insertion [!DNL Adobe Analytics]&quot; an [&#128279;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Wenn eine [!DNL Adobe Target]-Anfrage ausgelöst wird, übergeben Sie `client_side` an das Feld `logging` in der Anfrage. Diese Anfrage gibt eine Payload zurück, wenn die angegebene Mbox in einer Aktivität vorhanden ist, die [!DNL Analytics] als Berichtsquelle verwendet.
+Ein Benutzer kann die [!DNL Adobe Analytics] Payload für eine bestimmte Mbox abrufen und dann über die „Data Insertion [&quot; an [!DNL Adobe Analytics] ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Wenn eine [!DNL Adobe Target]-Anfrage ausgelöst wird, übergeben Sie `client_side` an das Feld `logging` in der Anfrage. Diese Anfrage gibt eine Payload zurück, wenn die angegebene Mbox in einer Aktivität vorhanden ist, die [!DNL Analytics] als Berichtsquelle verwendet.
 
 >[!BEGINTABS]
 

@@ -1,11 +1,17 @@
 ---
-title: Experience Cloud-ID-Dienst (ECID-Dienst)
-description: Auch wenn die Verwendung der  [!DNL Target] SDKs zum Abrufen von Inhalten aus  [!DNL Target]  sehr nützlich sein kann, geht der Mehrwert der Verwendung der [!UICONTROL Experience Cloud ID] (ECID) für das Benutzer-Tracking über Adobe [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud] Produkte und -Funktionen wie A4T-Reporting und  [!DNL Adobe Audience Manager] (AAM)-Segmente hinaus.
+title: Experience Cloud ID-Dienst (ECID)
+description: Auch wenn die Verwendung der  [!DNL Target] SDKs zum Abrufen von Inhalten aus  [!DNL Target]  leistungsstark sein kann, geht der Mehrwert der Verwendung der [!UICONTROL Experience Cloud ID] (ECID) für das Benutzer-Tracking über Adobe [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud] Produkte und -Funktionen wie A4T-Reporting und  [!DNL Adobe Audience Manager] AAM)-Segmente hinaus.
 exl-id: fd7e5c3e-51c1-4965-ab6a-f50a6b0c910b
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+TQID: https://experienceleague.adobe.com/751nWT-fW5Ct1rZ2DgnTz2Pkt9W7-JfcusQ6eqrDp1A
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: df62f171-ac37-440f-8f0f-f41a72ebdd34
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: 261
 ht-degree: 0%
 
 ---
@@ -14,7 +20,7 @@ ht-degree: 0%
 
 ## Integration von [!UICONTROL Experience Cloud ID] (ECID)
 
-Die Verwendung der [!DNL Target]-SDKs zum Abrufen von Inhalten aus [!DNL Target] kann sich zwar als wirkungsvoll erweisen, der zusätzliche Nutzen der Verwendung der [!UICONTROL Experience Cloud ID] (ECID) für das Benutzer-Tracking geht jedoch über die [!DNL Adobe Target] hinaus. Mit der ECID können Sie [!DNL Adobe Experience Cloud] Produkte und Funktionen nutzen, z. B. die AAM-Segmente (Reporting and [!DNL Adobe Audience Manager]) von A4T.
+Die Verwendung der [!DNL Target]-SDKs zum Abrufen von Inhalten aus [!DNL Target] kann sich zwar als wirkungsvoll erweisen, der zusätzliche Nutzen der Verwendung der [!UICONTROL Experience Cloud ID] (ECID) für das Benutzer-Tracking geht jedoch über die [!DNL Adobe Target] hinaus. Mit der ECID können Sie [!DNL Adobe Experience Cloud] Produkte und Funktionen nutzen, z. B. die Segmente A4T-Reporting und -[!DNL Adobe Audience Manager] (AAM).
 
 Die ECID wird von `visitor.js` generiert und gepflegt, wobei ein eigener Status beibehalten wird. Die `visitor.js`-Datei erstellt ein Cookie mit dem Namen `AMCV_{organizationId}`, das von [!DNL Target] SDKs für die ECID-Integration verwendet wird. Wenn die [!DNL Target] Antwort zurückgegeben wird, müssen Sie die Besucherinstanz auf der Client-Seite mit den von den [!DNL Target] SDKs zurückgegebenen `thevisitorState` aktualisieren.
 

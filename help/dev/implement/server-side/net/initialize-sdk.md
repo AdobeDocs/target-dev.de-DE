@@ -3,10 +3,13 @@ title: Initialisieren von .NET SDK mithilfe der create-Methode
 description: Erfahren Sie, wie Sie mit der create-Methode die Java-SDK initialisieren und die [!UICONTROL TargetClient] instanziieren können, um  [!DNL Adobe Target]  für Experimente und personalisierte Erlebnisse aufzurufen.
 feature: APIs/SDKs
 exl-id: 501010c3-22f4-49a8-b2ac-c7307232d180
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/uOEojoWWjXmcDl2yY1UmSRD-EXL0j9p-p-eE8PXa7Rk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 16%
+source-wordcount: 359
+ht-degree: 15%
 
 ---
 
@@ -24,7 +27,8 @@ Verwenden Sie danach die `Initialize`-Methode von SDK, um die SDK zu konfigurier
 
 `TargetClient` wird mithilfe von `TargetClient.Create` erstellt.
 
-## C\#
+## C\
+#
 
 ```csharp {line-numbers="true"}
 TargetClient TargetClient.Create(TargetClientConfig clientConfig)
@@ -32,7 +36,8 @@ TargetClient TargetClient.Create(TargetClientConfig clientConfig)
 
 `ClientConfig` wird mit ClientConfig.Builder erstellt.
 
-## C\#
+## C\
+#
 
 ```csharp {line-numbers="true"}
 TargetClientConfig.Builder TargetClientConfig.Builder()
@@ -47,26 +52,27 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 | Client | string | Ja | Keine | [!UICONTROL Target Client Id] |
 | OrganizationId | string | Ja | Keine | [!UICONTROL Experience Cloud Organization ID] |
 | Zeitüberschreitung | int | Nein | 10000 | Zeitüberschreitung für alle Anforderungen in Millisekunden |
-| Proxy | WebProxy | Nein | null  | Proxy für alle [!DNL Target] |
-| Richtlinie wiederholen | Richtlinie | Nein | null  | Richtlinie für alle [!DNL Target] wiederholen |
-| AsyncRetryPolicy | AsyncPolicy | Nein | null  | Asynchrone Wiederholungsrichtlinie für alle [!DNL Target] |
-| Logger | ILogger | Nein | null  | Wird für die Debug-Protokollierung von [!DNL Target] und Antworten verwendet |
+| Proxy | WebProxy | Nein | null | Proxy für alle [!DNL Target] |
+| Richtlinie wiederholen | Richtlinie | Nein | null | Richtlinie für alle [!DNL Target] wiederholen |
+| AsyncRetryPolicy | AsyncPolicy | Nein | null | Asynchrone Wiederholungsrichtlinie für alle [!DNL Target] |
+| Logger | ILogger | Nein | null | Wird für die Debug-Protokollierung von [!DNL Target] und Antworten verwendet |
 | ServerDomain | string | Nein | `client.tt.omtrdc.net` | Überschreibt den Standard-Host-Namen |
 | Sicher | boolesch | Nein | wahr | Einstellung zur Durchsetzung des HTTP-Schemas |
-| DefaultPropertyToken | string | Nein | null  | Legt das standardmäßige Eigenschafts-Token für jeden `getOffers` fest |
+| DefaultPropertyToken | string | Nein | null | Legt das standardmäßige Eigenschafts-Token für jeden `getOffers` fest |
 | Telemetrie aktiviert | boolesch | Nein | wahr | Senden von Telemetriedaten zur Verbesserung der SDK-Nutzung |
 | decisioningMethod | DecisioningMethod-Enumeration | Nein | Server-seitig | Muss auf „OnDevice“ oder „Hybrid“ festgelegt werden, um die geräteinterne Entscheidungsfindung zu aktivieren |
-| OnDeviceDecisioningReady | Aktion | Nein | null  | Delegieren des Ereignisses „Bereit für On-Device Decisioning“ (wird einmal aufgerufen, wenn die On-Device Decisioning bereit ist) |
-| Artefakt-Download erfolgreich | Aktion | Nein | null  | Delegieren für „Artefakt-Download auf dem Gerät“ (wird bei jedem erfolgreichen Artefakt-Download aufgerufen) |
-| artifactDownload fehlgeschlagen | Aktion | Nein | null  | Delegieren für Fehler beim Herunterladen von Artefakten auf dem Gerät beim Decisioning (wird bei jedem fehlgeschlagenen Artefakt-Download aufgerufen) |
+| OnDeviceDecisioningReady | Aktion | Nein | null | Delegieren des Ereignisses „Bereit für On-Device Decisioning“ (wird einmal aufgerufen, wenn die On-Device Decisioning bereit ist) |
+| Artefakt-Download erfolgreich | Aktion | Nein | null | Delegieren für „Artefakt-Download auf dem Gerät“ (wird bei jedem erfolgreichen Artefakt-Download aufgerufen) |
+| artifactDownload fehlgeschlagen | Aktion | Nein | null | Delegieren für Fehler beim Herunterladen von Artefakten auf dem Gerät beim Decisioning (wird bei jedem fehlgeschlagenen Artefakt-Download aufgerufen) |
 | OnDeviceEnvironment | string | Nein | Produktion | Kann verwendet werden, um eine andere On-Device-Umgebung wie Staging anzugeben |
 | OnDeviceConfigHost-Name | string | Nein | `assets.adobetarget.com` | Kann verwendet werden, um einen anderen Host zum Herunterladen der Artefaktdatei für die geräteinterne Entscheidungsfindung anzugeben |
 | OnDeviceDecisioningPollingIntSecs | int | Nein | 300 (5 min) | Anzahl der Sekunden zwischen den Abrufen der Artefaktdatei für die geräteinterne Entscheidungsfindung |
-| OnDeviceArtifactPayload | string | Nein | null  | Bietet geräteinterne Entscheidungsfindung mit einer lokalen Artefakt-Payload, um die sofortige Ausführung zu ermöglichen |
+| OnDeviceArtifactPayload | string | Nein | null | Bietet geräteinterne Entscheidungsfindung mit einer lokalen Artefakt-Payload, um die sofortige Ausführung zu ermöglichen |
 
 ## Beispiel
 
-## C\#
+## C\
+#
 
 ```csharp {line-numbers="true"}
 var targetClientConfig = new TargetClientConfig.Builder("acmeclient", "ABCDEF012345677890ABCDEF0@AdobeOrg")

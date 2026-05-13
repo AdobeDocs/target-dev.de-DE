@@ -4,10 +4,14 @@ description: Wie kann ich einen Benutzer in identifizieren [!DNL Adobe Target]?
 keywords: Bereitstellungs-API
 exl-id: 5b8c28aa-caad-44a9-880a-3c5f844e47b2
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/ciTxaPn8odyuyHzrnqhPWzdmpcU2bknOATGCt-ZtAZw
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 7%
+source-wordcount: 789
+ht-degree: 9%
 
 ---
 
@@ -22,7 +26,7 @@ Target verwendet drei Kennungen:
 | `tntId` | Der `tntId` ist die primäre Kennung in [!DNL Target] für einen Benutzer. Sie können diese ID angeben oder [!DNL Target] generiert sie automatisch, wenn die Anfrage keine enthält. |
 | `thirdPartyId` | Die `thirdPartyId` ist die Kennung Ihres Unternehmens für den Benutzer, die Sie mit jedem Aufruf senden können. Wenn sich ein(e) Benutzende(r) auf der Website eines Unternehmens anmeldet, erstellt das Unternehmen normalerweise eine ID, die mit dem Konto, der Treuekarte, der Mitgliedschaftsnummer oder anderen Kennungen des/der Besuchenden für dieses Unternehmen verknüpft ist. |
 | `marketingCloudVisitorId` | Die `marketingCloudVisitorId` wird verwendet, um Daten zwischen verschiedenen Adobe-Lösungen zusammenzuführen und freizugeben. Die `marketingCloudVisitorId` ist für Integrationen mit Adobe Analytics und Adobe Audience Manager erforderlich. |
-| `customerIds` | Neben der Experience Cloud-Besucher-ID können zusätzliche [Kunden-IDs](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=de) und ein Authentifizierungsstatus für jeden Besucher verwendet werden. |
+| `customerIds` | Neben der Experience Cloud-Besucher-ID können zusätzliche [Kunden-IDs](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) und ein authentifizierter Status für jeden Besucher verwendet werden. |
 
 ## [!DNL Target] ID
 
@@ -77,7 +81,7 @@ Der generierte `tntId` ist `10abf6304b2714215b1fd39a870f01afc.28_20`. Beachten S
 
 ## Marketing Cloud-Besucher-ID
 
-Die `marketingCloudVisitorId` ist eine universelle und persistente ID, die Ihre Besuchenden über alle Lösungen hinweg auf der Experience Cloud identifiziert. Wenn Ihr Unternehmen den ID-Service implementiert, können Sie mit dieser ID denselben Site-Besucher und dessen Daten in verschiedenen Experience Cloud-Lösungen wie Adobe Target, Adobe Analytics oder Adobe Audience Manager identifizieren. Beachten Sie, dass die `marketingCloudVisitorId` bei der Nutzung und Integration mit Analytics und Audience Manager erforderlich ist.
+Die `marketingCloudVisitorId` ist eine universelle und persistente ID, die Ihre Besucher über alle Experience Cloud-Lösungen hinweg identifiziert. Wenn Ihr Unternehmen den ID-Service implementiert, können Sie mit dieser ID denselben Site-Besucher und dessen Daten in verschiedenen Experience Cloud-Lösungen wie Adobe Target, Adobe Analytics oder Adobe Audience Manager identifizieren. Beachten Sie, dass die `marketingCloudVisitorId` bei der Nutzung und Integration mit Analytics und Audience Manager erforderlich ist.
 
 ```
 curl -X POST \
@@ -112,7 +116,7 @@ curl -X POST \
 }'
 ```
 
-Der obige Beispielaufruf zeigt, wie ein `marketingCloudVisitorId`, das vom Experience Cloud-ID-Service abgerufen wurde, an Adobe Target übergeben wird. In diesem Szenario generiert [!DNL Target] eine `tntId`, da sie nicht an den ursprünglichen Aufruf übergeben wurde, der dem bereitgestellten `marketingCloudVisitorId` zugeordnet wird, wie in der Antwort unten dargestellt.
+Der obige Beispielaufruf zeigt, wie ein `marketingCloudVisitorId`, das vom Experience Cloud ID-Service abgerufen wurde, an Adobe Target übergeben wird. In diesem Szenario generiert [!DNL Target] eine `tntId`, da sie nicht an den ursprünglichen Aufruf übergeben wurde, der dem bereitgestellten `marketingCloudVisitorId` zugeordnet wird, wie in der Antwort unten dargestellt.
 
 ## Drittanbieter-ID
 
@@ -169,11 +173,11 @@ Der obige Beispielaufruf zeigt eine `thirdPartyId`. Dies ist eine persistente ID
 
 ## Customer ID
 
-[Kunden-IDs](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=de) können hinzugefügt und mit einer Experience Cloud-Besucher-ID verknüpft werden. Bei Versand `customerIds` muss auch die `marketingCloudVisitorId` angegeben werden. Darüber hinaus kann für jeden Besucher ein Authentifizierungsstatus zusammen mit jedem `customerId` angegeben werden. Der folgende Authentifizierungsstatus kann berücksichtigt werden:
+[Kunden-IDs](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) können hinzugefügt und mit einer Experience Cloud-Besucher-ID verknüpft werden. Bei Versand `customerIds` muss auch die `marketingCloudVisitorId` angegeben werden. Darüber hinaus kann für jeden Besucher ein Authentifizierungsstatus zusammen mit jedem `customerId` angegeben werden. Der folgende Authentifizierungsstatus kann berücksichtigt werden:
 
 | Authentifizierungsstatus | Benutzerstatus |
 | --- | --- |
-| `unknown` | Unbekannt oder nie authentifiziert. Dieser Status kann für Szenarien wie einen Besucher verwendet werden, der auf Ihrer Site gelandet ist, indem er auf eine Display-Anzeige klickt. |
+| `unknown` | Unbekannt oder noch nie authentifiziert. Dieser Status kann für Szenarien wie einen Besucher verwendet werden, der auf Ihrer Site gelandet ist, indem er auf eine Display-Anzeige klickt. |
 | `authenticated` | Der Benutzer ist zurzeit in einer aktiven Sitzung auf Ihrer Website oder in Ihrer Applikation authentifiziert. |
 | `logged_out` | Der Benutzer war authentifiziert, hat sich dann aber aktiv abgemeldet. Der authentifizierte Status wurde absichtlich beendet. Der Benutzer möchte nicht mehr als authentifiziert behandelt werden. |
 
@@ -220,11 +224,11 @@ curl -X POST \
     }'
 ```
 
-Der obige Beispielaufruf zeigt, wie ein `customerId` mit einem `authenticatedState` gesendet wird. Beim Senden eines `customerId` sind die `integrationCode`, `id` und `authenticatedState` sowie die `marketingCloudVisitorId` erforderlich. Der `integrationCode` ist der Alias der [Kundenattributdatei), &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=de) Sie über CRS bereitgestellt haben.
+Der obige Beispielaufruf zeigt, wie ein `customerId` mit einem `authenticatedState` gesendet wird. Beim Senden eines `customerId` sind die `integrationCode`, `id` und `authenticatedState` sowie die `marketingCloudVisitorId` erforderlich. Der `integrationCode` ist der Alias der [Kundenattributdatei), ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=de) Sie über CRS bereitgestellt haben.
 
 ## Zusammengeführtes Profil
 
-Sie können `tntId`, `thirdPartyID` und `marketingCloudVisitorId` in derselben Anfrage kombinieren. In diesem Szenario verwaltet Adobe Target die Zuordnung all dieser IDs und heftet sie an einen Besucher an. Erfahren Sie, wie Profile mithilfe [&#x200B; verschiedenen Kennungen in Echtzeit zusammengeführt &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=de) synchronisiert werden.
+Sie können `tntId`, `thirdPartyID` und `marketingCloudVisitorId` in derselben Anfrage kombinieren. In diesem Szenario verwaltet Adobe Target die Zuordnung all dieser IDs und heftet sie an einen Besucher an. Erfahren Sie, wie Profile mithilfe [ verschiedenen Kennungen in Echtzeit zusammengeführt ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html) synchronisiert werden.
 
 ```
 curl -X POST \

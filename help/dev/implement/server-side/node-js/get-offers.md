@@ -3,10 +3,13 @@ title: Verwenden von [!UICONTROL getOffers()] in  [!DNL Adobe Target]  bei Verwe
 description: Erfahren Sie, wie Sie mit [!UICONTROL getOffers()] eine Entscheidung ausführen und ein Erlebnis von abrufen können [!DNL Adobe Target].
 feature: APIs/SDKs
 exl-id: 3c4125ea-68d4-405e-9b9a-5fa832743153
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 22%
+source-wordcount: 326
+ht-degree: 21%
 
 ---
 
@@ -52,7 +55,7 @@ Das `options`-Objekt hat die folgende Struktur:
 | targetCookie | Objekt | Cookie [!DNL Target] |
 | targetLocationHintCookie | Objekt | Cookie für [!DNL Target]-Standorthinweise |
 | analyticsDetails | Array | Analytics-Payload im Fall einer Client-seitigen Analytics-Nutzung |
-| responseTokens | Array | Eine Liste von [Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=de&). |
+| responseTokens | Array | Eine Liste von [Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?). |
 | Spur | Array | Aggregierte Trace-Daten für alle Anfrage-Mboxes/-Ansichten |
 | status | Objekt | Ein Objekt, das den Status der Antwort enthält. |
 | decisioningMethod | Zeichenfolge | Bestimmt, welche Entscheidungsmethode verwendet werden soll ([geräteintern](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md) Server-seitig, hybrid) |

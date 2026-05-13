@@ -3,10 +3,15 @@ title: Verwalten von Rollouts für Funktionstests
 description: Erfahren Sie, wie Sie Rollouts für Funktionstests mit [!UICONTROL on-device decisioning] verwalten.
 feature: APIs/SDKs
 exl-id: caa91728-6ac0-4583-a594-0c8fe616342d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/soG8leVV3R4Y4FSns5oIJ43oziIhtOb2zJ5bkFYxeo0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 0%
+source-wordcount: 525
+ht-degree: 1%
 
 ---
 
@@ -22,7 +27,7 @@ ht-degree: 0%
 1. Aktivieren von A/B-Aktivitäten
 1. Rollout und Traffic-Zuordnung nach Bedarf anpassen
 
-## 1. Aktivieren von [!UICONTROL on-device decisioning] für Ihr Unternehmen
+## &#x200B;1. Aktivieren von [!UICONTROL on-device decisioning] für Ihr Unternehmen
 
 Durch die Aktivierung der geräteinternen Entscheidungsfindung wird sichergestellt, dass eine A/B-Aktivität mit einer Latenz von nahezu null ausgeführt wird. Um diese Funktion zu aktivieren, navigieren Sie in [!DNL Adobe Target] zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** und aktivieren Sie den Umschalter **[!UICONTROL On-Device Decisioning]** .
 
@@ -30,11 +35,11 @@ Durch die Aktivierung der geräteinternen Entscheidungsfindung wird sichergestel
 
 >[!NOTE]
 >
->Sie müssen über die Rolle Administrator oder Genehmiger [Benutzer) verfügen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=de) um den Umschalter [!UICONTROL On-Device Decisioning] zu aktivieren oder zu deaktivieren.
+>Sie müssen über die Rolle Administrator oder Genehmiger [Benutzer) verfügen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) um den Umschalter [!UICONTROL On-Device Decisioning] zu aktivieren oder zu deaktivieren.
 
 Nach der Aktivierung des [!UICONTROL On-Device Decisioning]-Umschalters beginnt [!DNL Adobe Target] mit der Generierung *Regelartefakte* für Ihren Client.
 
-## 2. Erstellen einer [!UICONTROL A/B Test] Aktivität
+## &#x200B;2. [!UICONTROL A/B Test] erstellen
 
 1. Navigieren Sie in [!DNL Adobe Target] zur Seite **[!UICONTROL Activities]** und wählen Sie dann **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]** aus.
 
@@ -44,7 +49,7 @@ Nach der Aktivierung des [!UICONTROL On-Device Decisioning]-Umschalters beginnt 
 
    ![ALT-Bild](assets/asset-form.png)
 
-## 3. Definieren der Funktionen und Rollout-Einstellungen
+## &#x200B;3. Definieren der Funktions- und Rollout-Einstellungen
 
 Geben Sie im **[!UICONTROL Experiences]** Schritt der Aktivitätserstellung einen Namen für Ihre Aktivität ein (1). Geben Sie den Namen des Speicherorts (2) innerhalb Ihrer Anwendung ein, an dem Sie Rollouts für Ihre Funktion verwalten möchten. Beispielsweise sind `ondevice-rollout` oder `homepage-addtocart-rollout` Ortsnamen, die die Ziele für die Verwaltung von Funktions-Rollouts angeben. Im folgenden Beispiel ist `ondevice-rollout` der für Erlebnis A definierte Speicherort. Sie können optional Zielgruppenverfeinerungen (4) hinzufügen, um die Qualifizierung auf die Aktivität zu beschränken.
 
@@ -74,7 +79,7 @@ Geben Sie im **[!UICONTROL Experiences]** Schritt der Aktivitätserstellung eine
 
    ![ALT-Bild](assets/asset-conv-rollout.png)
 
-## 4. Implementieren und rendern der Funktion in der Anwendung
+## &#x200B;4. Implementieren und Rendern der Funktion in der Anwendung
 
 >[!BEGINTABS]
 
@@ -103,7 +108,7 @@ targetClient.getAttributes(["ondevice-rollout"]).then(function(attributes) {
 
 >[!ENDTABS]
 
-## 5. Implementieren des Trackings für Ereignisse in der Anwendung
+## &#x200B;5. Implementieren des Trackings für Ereignisse in der Anwendung
 
 Nachdem Sie die Feature Flag-Variable in der Anwendung verfügbar gemacht haben, können Sie damit alle Funktionen aktivieren, die bereits Teil Ihrer Anwendung sind. Wenn ein Besucher nicht für die Aktivität qualifiziert ist, bedeutet dies, dass er nicht in den als Zielgruppe definierten 10-%-Bereich einbezogen wurde.
 
@@ -155,11 +160,11 @@ else {
 
 >[!ENDTABS]
 
-## 6. Aktivieren der Rollout-Aktivität
+## &#x200B;6. Aktivieren der Rollout-Aktivität
 
 ![ALT-Bild](assets/asset-activate-rollout.png)
 
-## 7. Passen Sie Rollout und Traffic-Zuordnung nach Bedarf an
+## &#x200B;7. Rollout und Traffic-Zuordnung nach Bedarf anpassen
 
 Nachdem Sie Ihre Aktivität aktiviert haben, können Sie sie jederzeit bearbeiten, um die Traffic-Zuordnung nach Bedarf zu erhöhen oder zu verringern.
 

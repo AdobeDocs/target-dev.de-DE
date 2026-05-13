@@ -4,9 +4,12 @@ description: Erfahren Sie, wie Sie mit Adobe Target-Profil-APIs Besucherdaten ab
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: b422ae68-49b3-4d60-9ea4-0fa67b6934b0
-source-git-commit: b8ccfdcaff6aa17a325727df0a9ffd716e44519b
+TQID: https://experienceleague.adobe.com/sCVfAY8W0oYu2ak-W4MYvcWSoUiAuaU3762JEhocZSE
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: 294
 ht-degree: 0%
 
 ---
@@ -17,7 +20,7 @@ Ein [!DNL Target] kann auf drei Arten abgerufen werden: mithilfe eines `[!DNL Ex
 
 ## Verwenden einer [!DNL Experience Cloud Visitor ID] (ECID)
 
-Basierend auf dem `ECID` können Sie ein Profil abrufen. Die HTTP-Methode muss GET lauten.
+Basierend auf dem `ECID` können Sie ein Profil abrufen. Die HTTP-Methode muss GET sein.
 
 Die URL sieht wie im folgenden Beispiel aus:
 
@@ -65,7 +68,7 @@ Wenn dieser Aufruf erfolgt, versucht [!DNL Target], das Profil zuerst in dem Clu
 
 ## Authentifizierung
 
-Das [!DNL Target Profile API] kann gesichert werden, indem die Authentifizierung über die [!DNL Target]-Benutzeroberfläche aktiviert wird, wie hier beschrieben. Sobald die Authentifizierung aktiviert ist, muss bei allen Profil-API-Anfragen das Profil-Authentifizierungstoken in den Anfragekopfzeilen festgelegt sein. Das Token selbst kann über die [!DNL Target]-Benutzeroberfläche oder mithilfe der oben im Abschnitt &quot;[-Authentifizierungstoken“ &#x200B;](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} Schritte generiert werden.
+Das [!DNL Target Profile API] kann gesichert werden, indem die Authentifizierung über die [!DNL Target]-Benutzeroberfläche aktiviert wird, wie hier beschrieben. Sobald die Authentifizierung aktiviert ist, muss bei allen Profil-API-Anfragen das Profil-Authentifizierungstoken in den Anfragekopfzeilen festgelegt sein. Das Token selbst kann über die [!DNL Target]-Benutzeroberfläche oder mithilfe der oben im Abschnitt &quot;[-Authentifizierungstoken“ ](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} Schritte generiert werden.
 
 ## Messung
 

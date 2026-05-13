@@ -1,12 +1,17 @@
 ---
-title: Integration mit Experience Cloud-AAM-Segmenten
+title: Integration mit Experience Cloud AAM-Segmenten
 description: Integration mit Experience Cloud, Audience Manager-Integration
 keywords: Bereitstellungs-API, Server-seitig, Server-seitig, Integration, Audience Manager, AAM
 exl-id: c21e0200-23ba-4a0b-adf4-38e03c087f00
 feature: Implement Server-side
-source-git-commit: e3f14e97fa48ffb1f07b29aca5711d16e75faa80
+TQID: https://experienceleague.adobe.com/mc55SxaUU8BJ81hKLji9xi0-OHCux3W4R0syuVoGrIo
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: 431
 ht-degree: 4%
 
 ---
@@ -21,7 +26,7 @@ ht-degree: 4%
 
 | Feldname | Erforderlich | Beschreibung |
 | --- | --- | --- |
-| `locationHint` | Ja | Mit dem DCS-Standorthinweis wird bestimmt, welcher AAM-DCS-Endpunkt aufgerufen werden muss, um das Profil abzurufen. Muss >= 1 sein. |
+| `locationHint` | Ja | Mit dem DCS-Standorthinweis wird bestimmt, auf welchen AAM DCS-Endpunkt geklickt werden soll, um das Profil abzurufen. Muss >= 1 sein. |
 | `marketingCloudVisitorId` | Ja | Marketing Cloud-Besucher-ID |
 | `blob` | Ja | AAM Blob wird verwendet, um zusätzliche Daten an AAM zu senden. Darf nicht leer sein und die Größe &lt;= 1024. |
 
@@ -46,7 +51,7 @@ Angenommen, ein Benutzer gibt eine URL in einen Browser ein, der eine Anfrage an
 1. Der -Server ruft die `getOffers`-Methode der [!DNL Target] SDK auf und gibt dabei die Cookies für Besucher und Ziel an, sofern verfügbar.
 1. Wenn der `getOffers` erfüllt ist, werden die Werte für `targetCookie` und `visitorState` aus der Antwort verwendet.
    1. In der Antwort wird ein Cookie mit Werten gesetzt, die von `targetCookie` übernommen werden. Dies geschieht mithilfe der `Set-Cookie`-Antwortkopfzeile, die den Browser anweist, das Ziel-Cookie zu persistieren.
-   1. Es wird eine HTML-Antwort vorbereitet, die `VisitorAPI.js` initialisiert und `visitorState` aus der Zielantwort übergibt.
+   1. Es wird eine HTML-Antwort vorbereitet, die `VisitorAPI.js` initialisiert und `visitorState` aus der Target-Antwort übergibt.
 1. Die HTML-Antwort wird in den Browser geladen…
    1. `VisitorAPI.js` ist in der Kopfzeile des Dokuments enthalten.
    1. VisitorAPI wird mit `visitorState` aus der `getOffers` SDK-Antwort initialisiert. Dadurch wird das Besucher-Cookie im Browser gesetzt, sodass es bei nachfolgenden Anfragen an den Server gesendet wird.
@@ -298,4 +303,4 @@ public class TargetClientService {
 
 >[!ENDTABS]
 
-Weitere Informationen zu `TargetRequestUtils.java` finden Sie unter [Dienstprogrammmethoden (Java)](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html?lang=de){target=_blank}
+Weitere Informationen zu `TargetRequestUtils.java` finden Sie unter [Dienstprogrammmethoden (Java)](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html){target=_blank}

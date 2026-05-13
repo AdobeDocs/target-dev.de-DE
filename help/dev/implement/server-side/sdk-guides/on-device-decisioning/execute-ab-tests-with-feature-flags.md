@@ -3,10 +3,15 @@ title: Ausführen von A/B-Tests mit Feature Flags und geräteinterner Entscheidu
 description: Führen Sie A/B-Tests mit Feature Flags mithilfe der geräteinternen Entscheidungsfindung aus.
 feature: APIs/SDKs
 exl-id: abf66e00-742d-4d40-9b6e-9bd71638c31a
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/OnRFP7WgNvPy-9v8Ea8te3v5QAUlcR2WUlD7yGB-QzQ
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 0%
+source-wordcount: 749
+ht-degree: 1%
 
 ---
 
@@ -29,7 +34,7 @@ ht-degree: 0%
 >
 >Angenommen, Sie möchten ermitteln, ob Ihre Herbstumgestaltung Ihrer Homepage bei Ihren Nutzern gut ankommt. Sie können sie testen, indem Sie ein A/B-Experiment in [!DNL Adobe Target] durchführen. Sie sollten auch sicherstellen, dass das Experiment mit hoher Leistung durchgeführt wird, damit die Ergebnisse bei einem negativen oder langsamen Benutzererlebnis nicht verzerrt werden.
 
-## 1. Aktivieren von [!UICONTROL on-device decisioning] für Ihr Unternehmen
+## &#x200B;1. Aktivieren von [!UICONTROL on-device decisioning] für Ihr Unternehmen
 
 Durch die Aktivierung der geräteinternen Entscheidungsfindung wird sichergestellt, dass eine A/B-Aktivität mit einer Latenz von nahezu null ausgeführt wird. Um diese Funktion zu aktivieren, navigieren Sie in [!DNL Adobe Target] zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** und aktivieren Sie den Umschalter **[!UICONTROL On-Device Decisioning]** .
 
@@ -38,11 +43,11 @@ Durch die Aktivierung der geräteinternen Entscheidungsfindung wird sichergestel
 
 >[!NOTE]
 >
->Sie müssen über die Admin- oder Genehmiger[Benutzerrolle verfügen, &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=de) den Umschalter Geräteinterne Entscheidungsfindung zu aktivieren oder zu deaktivieren.
+>Sie müssen über die Admin- oder Genehmiger[Benutzerrolle verfügen, ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) den Umschalter Geräteinterne Entscheidungsfindung zu aktivieren oder zu deaktivieren.
 
 Nach der Aktivierung des **[!UICONTROL On-Device Decisioning]**-Umschalters beginnt [!DNL Adobe Target] mit der Generierung von Regelartefakten für Ihren Client.
 
-## 2. Erstellen einer [!UICONTROL A/B Test] Aktivität
+## &#x200B;2. [!UICONTROL A/B Test] erstellen
 
 Navigieren Sie in [!DNL Adobe Target] zur Seite **[!UICONTROL Activities]** und wählen Sie dann **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]** aus.
 
@@ -52,7 +57,7 @@ Lassen Sie im **[!UICONTROL Create A/B Test Activity]**-Modal die Option **[!UIC
 
 ![ALT-Bild](assets/asset-form.png)
 
-## 3. Definieren Sie A und B
+## &#x200B;3. A und B definieren
 
 1. Geben Sie im **[!UICONTROL Experiences]** Schritt der Aktivitätserstellung einen Namen für Ihre Aktivität ein (1) und fügen Sie ein zweites Erlebnis, Erlebnis B, hinzu, indem Sie auf die Schaltfläche **[!UICONTROL Add Experience]** (2) klicken. Geben Sie den Namen des Speicherorts (3) in Ihrer Anwendung ein, an dem Sie Ihren A/B-Test durchführen möchten. Im folgenden Beispiel ist „homepage“ der für Erlebnis A definierte Speicherort. (Es ist auch der für Erlebnis B definierte Speicherort.)
 
@@ -77,7 +82,7 @@ Lassen Sie im **[!UICONTROL Create A/B Test Activity]**-Modal die Option **[!UIC
 
    ![ALT-Bild](assets/asset-homepage.png)
 
-## 4. Hinzufügen einer Audience
+## &#x200B;4. Hinzufügen einer Audience
 
 Angenommen, Sie möchten das Redesign zunächst an Ihren treuen Kunden testen, die Sie identifizieren können, je nachdem, ob sie angemeldet sind oder nicht.
 
@@ -89,29 +94,29 @@ Angenommen, Sie möchten das Redesign zunächst an Ihren treuen Kunden testen, d
 
    ![ALT-Bild](assets/asset-audience.png)
 
-## 5. Festlegen der Traffic-Zuordnung
+## &#x200B;5. Traffic-Zuordnung festlegen
 
 Definieren Sie den Prozentsatz der angemeldeten Benutzer, mit denen Sie Ihr neues Homepage-Redesign testen möchten. Mit anderen Worten, zu welchem Prozentsatz der Benutzer möchten Sie diesen Test durchführen? Um diesen Test in diesem Beispiel für alle angemeldeten Benutzer bereitzustellen, sollten Sie die Traffic-Zuordnung bei 100 % belassen.
 
 ![ALT-Bild](assets/asset-allocation.png)
 
-## 6. Festlegen der Traffic-Verteilung auf Varianten
+## &#x200B;6. Festlegen der Traffic-Verteilung auf Varianten
 
 Definieren Sie den Prozentsatz Ihrer angemeldeten Benutzer, die das aktuelle Design der Homepage oder das komplett neue Redesign sehen werden. Behalten Sie in diesem Beispiel die Traffic-Verteilung als 50/50-Aufteilung zwischen den Erlebnissen A und B bei.
 
 ![ALT-Bild](assets/asset-traffic-distribution.png)
 
-## 7. Einrichten von Berichten
+## &#x200B;7. Einrichten von Berichten
 
 Wählen Sie im **[!UICONTROL Goals & Settings]** Schritt **[!UICONTROL Adobe Target]** als **[!UICONTROL Reporting Source]** aus, um die Aktivitätsergebnisse in der [!DNL Adobe Target] Benutzeroberfläche anzuzeigen, oder wählen Sie **[!UICONTROL Adobe Analytics]** aus, um sie in der Benutzeroberfläche von Adobe Analytics anzuzeigen.
 
 ![ALT-Bild](assets/asset-reporting.png)
 
-## 8. Hinzufügen von Metriken für Tracking-KPIs
+## &#x200B;8. Metriken für Tracking-KPIs hinzufügen
 
 Wählen Sie eine **[!UICONTROL Goal Metric]** aus, um den A/B-Test zu messen. In diesem Beispiel basiert eine erfolgreiche Konversion darauf, ob der Benutzer das Seitenende erreicht, was auf eine Interaktion hinweist. Daher wird **[!UICONTROL Conversion]** davon abhängig bestimmt, ob der Benutzer den Ort mit dem Namen „Seitenende“ angesehen hat.
 
-## 9. Implementieren Sie Code zum Ausführen von A/B-Tests mit Feature Flags in Ihrer Anwendung
+## &#x200B;9. Implementieren Sie Code zum Ausführen von A/B-Tests mit Feature Flags in Ihrer Anwendung
 
 >[!BEGINTABS]
 
@@ -165,6 +170,6 @@ String flag = attributes.getString("homepage", "feature-flag");
 
 >[!ENDTABS]
 
-## 10. Aktivieren Sie Ihren A/B-Test mit Feature Flag
+## &#x200B;10. Aktivieren des A/B-Tests mit Feature Flag
 
 ![ALT-Bild](assets/asset-activate.png)

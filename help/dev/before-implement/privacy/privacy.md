@@ -4,10 +4,15 @@ description: Erfahren Sie [!DNL Adobe Target]  wie die geltenden Datenschutzgese
 title: Wie behandelt Target Datenschutzprobleme, einschließlich personenbezogener Daten?
 feature: Privacy & Security
 exl-id: 4330e034-2483-4a25-9c87-48dbef6fc9de
-source-git-commit: 88bde40aa6dfb96e1d53e4db6ba5547d38dbbb99
+TQID: https://experienceleague.adobe.com/lEllQscRLJ1I-5mu3r2TyoxYfaOb2nLHVQzG9YnL0ig
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 43%
+source-wordcount: 799
+ht-degree: 44%
 
 ---
 
@@ -25,7 +30,7 @@ Die IP-Adresse eines Besuchers Ihrer Website wird an das Adobe-Datenverarbeitung
 
 ## Ersetzen des letzten Oktetts von IP-Adressen
 
-Adobe hat eine Einstellung für „eingebauten Datenschutz“ entwickelt, die Anwender für Adobe-[!DNL Target] aktivieren können. Wenn diese Option aktiviert ist, verschleiert Adobe [!DNL Target] sofort das letzte Oktett (den letzten Teil) der IP-Adresse zum Zeitpunkt der Erfassung der IP-Adresse. Diese Anonymisierung wird vor jeder weiteren Verarbeitung der IP-Adresse durchgeführt, auch vor einer optionalen Geo-Suche der IP-Adresse.
+Adobe hat eine Einstellung für den eingebauten Datenschutz entwickelt, die Benutzende für Adobe [!DNL Target] aktivieren können. Wenn diese Option aktiviert ist, verschleiert Adobe [!DNL Target] sofort das letzte Oktett (den letzten Teil) der IP-Adresse zum Zeitpunkt der Erfassung der IP-Adresse. Diese Anonymisierung wird vor jeder weiteren Verarbeitung der IP-Adresse durchgeführt, auch vor einer optionalen Geo-Suche der IP-Adresse.
 
 Wenn diese Funktion aktiviert ist, wird die IP-Adresse so stark anonymisiert, dass sie nicht mehr als persönliche Information identifiziert werden kann. Daher können [!DNL Target] in Übereinstimmung mit den Datenschutzgesetzen in Ländern verwendet werden, die die Erfassung personenbezogener Daten nicht zulassen. Das Ermitteln von Information auf Stadtebene wird durch die Verschleierung der IP-Adresse wahrscheinlich merklich beeinträchtigt. Das Ermitteln von Informationen auf Regions- und Landesebene dürfte nur leicht beeinträchtigt sein.
 
@@ -43,7 +48,7 @@ Die folgenden Einstellungen sind in der [!DNL Target]-Benutzeroberfläche verfü
 
 Bei Verwendung der [!DNL Platform Web SDK] (Version 23.4 oder höher) hat die Einstellung für die IP-Verschleierung auf Datenstromebene Vorrang vor allen in [!DNL Target] festgelegten IP-Verschleierungsoptionen. Wenn beispielsweise die Option zur IP-Verschleierung auf Datenstromebene auf [!UICONTROL Full] und die Option zur [!DNL Target]-IP-Verschleierung auf [!UICONTROL Last octet obfuscation] festgelegt ist, erhält [!DNL Target] eine vollständig verschleierte IP.
 
-Weitere Informationen finden Sie unter [!UICONTROL IP Obfuscation] in [Konfigurieren eines &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=de){target=_blank}) im Handbuch *[!DNL Adobe Experience Platfrom]Datenströme*.
+Weitere Informationen finden Sie unter [!UICONTROL IP Obfuscation] in [Konfigurieren eines ](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=de){target=_blank}) im Handbuch *[!DNL Adobe Experience Platfrom]Datenströme*.
 
 ## GeoSegmentation
 

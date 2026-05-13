@@ -5,10 +5,16 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/uHFbc8JEhjjGYIulJUvhkH7cXXht6Rht9rY43HjuNqg
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 4%
+source-wordcount: 1060
+ht-degree: 3%
 
 ---
 
@@ -26,7 +32,7 @@ Befolgen Sie die Schritte im Diagramm *Erlebnisse rendern*, um sicherzustellen, 
 
 ## Rendering-Erlebnisdiagramm {#diagram}
 
-Eine automatische vordefinierte Flackerbehandlung, die mit at.js verfügbar ist, ist nur sinnvoll, wenn Sie [!UICONTROL Automatic Page Load Request] aktiviert haben. Diese Option blendet den gesamten HTML-Textkörper aus, während die Erlebnisse aus [!DNL Target] abgerufen werden. In diesem Fall liegt es in Ihrer Verantwortung, mit Flackern umzugehen. Suchen Sie nach verfügbaren Implementierungsmustern für die Flimmerhandhabung, um eine Anleitung zu erhalten.
+Eine automatische vordefinierte Flackerbehandlung, die mit at.js verfügbar ist, ist nur sinnvoll, wenn Sie [!UICONTROL Automatic Page Load Request] aktiviert haben. Diese Option blendet den gesamten HTML-Hauptteil aus, während die Erlebnisse aus [!DNL Target] abgerufen werden. In diesem Fall liegt es in Ihrer Verantwortung, mit Flackern umzugehen. Suchen Sie nach verfügbaren Implementierungsmustern für die Flimmerhandhabung, um eine Anleitung zu erhalten.
 
 >[!NOTE]
 >
@@ -53,13 +59,13 @@ Klicken Sie auf die folgenden Links, um zu den gewünschten Abschnitten zu navig
 
 Fügen Sie hochgestufte Elemente hinzu und steuern Sie deren Platzierung im Recommendations-Design, indem Sie in der [!DNL Target]-Benutzeroberfläche beim Erstellen der Aktivität Heraufstufungen nach vorne oder hinten auswählen.
 
-+++Siehe Details
++++Details anzeigen
 
 **Verfügbare Optionen**
 
 * Nach IDs hochstufen
-* [Nach Sammlung bewerben](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html?lang=de){target=_blank}
-* [Hochstufen nach Attribut](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=de){target=_blank}
+* [Nach Sammlung hochstufen](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
+* [Nach Attribut hochstufen](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
 **Entitätsparameter erforderlich**
 
@@ -67,7 +73,7 @@ Fügen Sie hochgestufte Elemente hinzu und steuern Sie deren Platzierung im Reco
 
 **Messwerte**
 
-* [Hinzufügen von Promotions](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html?lang=de){target=_blank}
+* [Hinzufügen von Promotions](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -77,7 +83,7 @@ Fügen Sie hochgestufte Elemente hinzu und steuern Sie deren Platzierung im Reco
 
 Empfehlungen auf der Grundlage des Warenkorbinhalts des Benutzers aussprechen.
 
-+++Siehe Details
++++Details anzeigen
 
 **Verfügbare Kriterien**
 
@@ -91,7 +97,7 @@ Empfehlungen auf der Grundlage des Warenkorbinhalts des Benutzers aussprechen.
 
 **Messwerte**
 
-* [Warenkorbbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=de#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Warenkorbbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -101,7 +107,7 @@ Empfehlungen auf der Grundlage des Warenkorbinhalts des Benutzers aussprechen.
 
 Empfehlungen auf der Grundlage der allgemeinen Popularität eines Elements auf Ihrer Website oder auf der Grundlage der Popularität von Elementen innerhalb der Lieblings- oder am häufigsten angezeigten Kategorie, Marke, Genre usw. eines Besuchers.
 
-+++Siehe Details
++++Details anzeigen
 
 **Verfügbare Kriterien**
 
@@ -120,7 +126,7 @@ Empfehlungen auf der Grundlage der allgemeinen Popularität eines Elements auf I
 
 **Messwerte**
 
-* [Beliebtheitsbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=de#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Beliebtheitsbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -130,7 +136,7 @@ Empfehlungen auf der Grundlage der allgemeinen Popularität eines Elements auf I
 
 Empfehlungen aussprechen, die darauf basieren, ähnliche Elemente zu finden wie ein Element, das der Benutzer gerade anzeigt oder kürzlich angeschaut hat.
 
-+++Siehe Details
++++Details anzeigen
 
 **Verfügbare Kriterien**
 
@@ -146,7 +152,7 @@ Empfehlungen aussprechen, die darauf basieren, ähnliche Elemente zu finden wie 
 
 **Messwerte**
 
-* [Elementbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=de#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Elementbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -156,7 +162,7 @@ Empfehlungen aussprechen, die darauf basieren, ähnliche Elemente zu finden wie 
 
 Empfehlungen auf der Grundlage des Benutzerverhaltens aussprechen.
 
-+++Siehe Details
++++Details anzeigen
 
 **Verfügbare Kriterien**
 
@@ -169,7 +175,7 @@ Empfehlungen auf der Grundlage des Benutzerverhaltens aussprechen.
 
 **Messwerte**
 
-* [Benutzerbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=de#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Benutzerbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -179,7 +185,7 @@ Empfehlungen auf der Grundlage des Benutzerverhaltens aussprechen.
 
 Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochladen.
 
-+++Siehe Details
++++Details anzeigen
 
 **Verfügbare Kriterien**
 
@@ -191,7 +197,7 @@ Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochla
 
 **Messwerte**
 
-* [Benutzerdefinierte Kriterien](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=de#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Benutzerdefinierte Kriterien](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -199,11 +205,11 @@ Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochla
 
 ## 3.7: Angabe der in Einschlussregeln verwendeten Attribute {#inclusion}
 
-+++Siehe Details
++++Details anzeigen
 
 **Messwerte**
 
-* [Verwenden dynamischer und statischer Einschlussregeln](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=de){target=_blank}
+* [Verwenden dynamischer und statischer Einschlussregeln](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
 
 +++
 
@@ -213,11 +219,11 @@ Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochla
 
 Übergeben Sie Entitäts-IDs für Entitäten, die Sie aus Ihren Empfehlungen ausschließen möchten. Beispielsweise können Sie Artikel ausschließen, die sich bereits im Warenkorb befinden.
 
-+++Siehe Details
++++Details anzeigen
 
 **Messwerte**
 
-* [Kann ich eine Entität dynamisch ausschließen?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=de#exclude){target=_blank}
+* [Kann ich eine Entität dynamisch ausschließen?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
@@ -225,13 +231,13 @@ Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochla
 
 ## 3.9: Entitätsattribute angeben, um den Produktkatalog für [!DNL Recommendations] zu aktualisieren {#entity-attributes}
 
-+++Siehe Details
++++Details anzeigen
 
 **Messwerte**
 
-* [Entitätsattribute](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=de){target=_blank}
+* [Entitätsattribute](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-Sie können diesen Schritt auch durchführen, indem Sie [Produkt-Feeds](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=de){target=_blank} über die [!DNL Target]-Benutzeroberfläche erstellen, um den Produktkatalog für [!DNL Recommendations] zu aktualisieren.
+Sie können diesen Schritt auch durchführen, indem Sie [Produkt-Feeds](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} über die [!DNL Target]-Benutzeroberfläche erstellen, um den Produktkatalog für [!DNL Recommendations] zu aktualisieren.
 
 +++
 
@@ -245,7 +251,7 @@ Geben Sie die Profilattribute an, die als Schlüssel für Einschlussregeln in de
 
 **Messwerte**
 
-* [Profilattribute](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=de){target=_blank}
+* [Profilattribute](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html){target=_blank}
 
 +++
 
@@ -253,9 +259,9 @@ Geben Sie die Profilattribute an, die als Schlüssel für Einschlussregeln in de
 
 ## 3.11: Auslösen einer Seitenladeanforderung {#fire}
 
-In diesem Schritt wird ein [!DNL Delivery API]-Aufruf mit `execute` > Payload `pageLoad` in der Anfrage Trigger. Die `getOffers()`-Methode ruft das Erlebnis ab und rendert das Erlebnis `applyOffers()` auf der Seite. Die `pageLoad`-Anfrage wird für das Rendern von Erlebnissen benötigt, die in [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=de){target=_blank} (VEC) verfasst wurden.
+In diesem Schritt wird ein [!DNL Delivery API]-Aufruf mit `execute` > Payload `pageLoad` in der Anfrage Trigger. Die `getOffers()`-Methode ruft das Erlebnis ab und rendert das Erlebnis `applyOffers()` auf der Seite. Die `pageLoad`-Anfrage wird für das Rendern von Erlebnissen benötigt, die in [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC) verfasst wurden.
 
-+++Siehe Details
++++Details anzeigen
 
 ![Diagramm „Auslösen einer Seitenladeanfrage](/help/dev/patterns/recs-atjs/assets/fire-page-load-request-combined.png){width="400" zoomable="yes"}
 
@@ -280,7 +286,7 @@ In diesem Schritt wird ein [!DNL Delivery API]-Aufruf mit `execute` > Payload `p
 
 In diesem Schritt wird ein [!DNL Delivery API]-Aufruf mit `execute` > Payload `mboxes` in der Anfrage Trigger. Die `getOffers`-Methode ruft das Erlebnis ab und rendert das Erlebnis `applyOffers` auf der Seite. Sie können unter `execute` > `mboxes` Payload mehr als eine Mbox senden.
 
-+++Siehe Details
++++Details anzeigen
 
 ![Diagramm mit regionalen Standortanfragen auslösen](/help/dev/patterns/recs-atjs/assets/fire-regional-location-request-combined.png){width="400" zoomable="yes"}
 

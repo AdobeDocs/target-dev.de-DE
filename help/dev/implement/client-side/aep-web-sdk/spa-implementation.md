@@ -4,9 +4,14 @@ description: Erfahren Sie, wie Sie eine SPA-Implementierung (Single Page Applica
 keywords: Target;Adobe Target;XDM-Ansichten;Ansichten;Einzelseitenanwendungen;SPA;SPA-Lebenszyklus;Client-seitig;AB-Tests;AB;Erlebnis-Targeting;XT;VEC
 feature: AEP Web SDK
 exl-id: 17e71e47-c7cc-421a-bc9c-53f45f587449
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: 1747
 ht-degree: 2%
 
 ---
@@ -61,7 +66,7 @@ Das Konzept der [!UICONTROL Views] kann weit über dieses Szenario hinaus erweit
 
 [!UICONTROL XDM Views] können genutzt werden, [!DNL Target] es Marketing-Experten zu ermöglichen, A/B- und XT-Tests über die -[!UICONTROL Visual Experience Composer] auf SPAs durchzuführen. Dies erfordert die Durchführung der folgenden Schritte, um eine einmalige Entwicklereinrichtung abzuschließen:
 
-1. [Adobe Experience Platform Web SDK installieren](https://experienceleague.adobe.com/de/docs/experience-platform/web-sdk/install/overview).
+1. [Adobe Experience Platform Web SDK installieren](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview).
 2. Bestimmen Sie alle [!UICONTROL XDM Views] in Ihrem Einzelseitenprogramm, die Sie personalisieren möchten.
 3. Implementieren Sie nach der Definition der [!UICONTROL XDM Views] für die Bereitstellung von A/B- oder XT-VEC-Aktivitäten die `sendEvent()`, wobei `renderDecisions` auf `true` und die entsprechenden [!UICONTROL XDM View] in Ihrer Single Page Application festgelegt sind. Die [!UICONTROL XDM View] muss in `xdm.web.webPageDetails.viewName` übergeben werden. In diesem Schritt können Marketing-Fachleute die [!UICONTROL Visual Experience Composer] zum Starten von A/B- und XT-Tests für diese XDM nutzen.
 
@@ -221,7 +226,7 @@ Wenn Sie mit der Definition Ihrer [!UICONTROL XDM Views] und der Implementierung
 
 >[!NOTE]
 >
->Um den VEC für Ihre SPA zu verwenden, müssen Sie entweder die [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) oder die [Chrome VEC Helper-Erweiterung](https://experienceleague.adobe.com/de/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension) installieren und aktivieren.
+>Um den VEC für Ihre SPA zu verwenden, müssen Sie entweder die [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) oder die [Chrome VEC Helper-Erweiterung](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension) installieren und aktivieren.
 
 ### [!UICONTROL Modifications]
 
@@ -235,8 +240,8 @@ Durch Klicken auf eine Aktion wird das Element auf der Site hervorgehoben, auf d
 |---|---|
 | Informationen | Zeigt die Details der Aktion an. |
 | Bearbeiten | Ermöglicht die direkte Bearbeitung der Eigenschaften dieser Aktion. |
-| Klonen | Klonen Sie die Aktion zu einem oder mehreren [!UICONTROL Views] im [!UICONTROL Modifications] oder zu einem oder mehreren [!UICONTROL Views], die Sie im VEC durchsucht und aufgerufen haben. Die Aktion muss nicht unbedingt im [!UICONTROL Modifications] vorhanden sein.<br/><br/>**Hinweis:** Nachdem ein Klonvorgang durchgeführt wurde, müssen Sie über [!UICONTROL View] zur [!UICONTROL Browse] in VEC navigieren, um zu sehen, ob die geklonte Aktion ein gültiger Vorgang war. Wenn die Aktion nicht auf die [!UICONTROL View] angewendet werden kann, wird ein Fehler angezeigt. |
-| Verschieben  | Verschiebt die Aktion in eine [!UICONTROL Page Load Event] oder eine andere [!UICONTROL View], die bereits im [!UICONTROL Modifications] vorhanden ist.<br/><br/>**Seitenladeereignis** Alle Aktionen, die dem Seitenladeereignis entsprechen, werden beim ersten Laden der Seite Ihrer Web-Anwendung angewendet. <br/><br/>**Hinweis:** Nachdem ein Verschiebevorgang durchgeführt wurde, müssen Sie über [!UICONTROL View] zum [!UICONTROL Browse] in VEC navigieren, um zu sehen, ob der Verschiebevorgang gültig war. Wenn die Aktion nicht auf die [!UICONTROL View] angewendet werden kann, wird ein Fehler angezeigt. |
+| Klonen | Klonen Sie die Aktion zu einem oder mehreren [!UICONTROL Views] im [!UICONTROL Modifications] oder zu einem oder mehreren [!UICONTROL Views], die Sie im VEC durchsucht und aufgerufen haben. Die Aktion muss nicht unbedingt im [!UICONTROL Modifications] vorhanden sein.<br/><br/>**Hinweis:** Nachdem ein Klonvorgang durchgeführt wurde, müssen Sie über [!UICONTROL Browse] zum [!UICONTROL View] in VEC navigieren, um zu sehen, ob die geklonte Aktion ein gültiger Vorgang war. Wenn die Aktion nicht auf die [!UICONTROL View] angewendet werden kann, wird ein Fehler angezeigt. |
+| Verschieben | Verschiebt die Aktion in eine [!UICONTROL Page Load Event] oder eine andere [!UICONTROL View], die bereits im [!UICONTROL Modifications] vorhanden ist.<br/><br/>**Seitenladeereignis** Alle Aktionen, die dem Seitenladeereignis entsprechen, werden beim ersten Laden der Seite Ihrer Web-Anwendung angewendet. <br/><br/>**Hinweis:** Nachdem ein Verschiebevorgang durchgeführt wurde, müssen Sie über [!UICONTROL Browse] zum [!UICONTROL View] in VEC navigieren, um zu sehen, ob der Verschiebevorgang gültig war. Wenn die Aktion nicht auf die [!UICONTROL View] angewendet werden kann, wird ein Fehler angezeigt. |
 | Löschen | Löscht die Aktion. |
 
 ## Beispiele für die Verwendung von VEC für SPAs

@@ -3,10 +3,15 @@ title: Herunterladen, Speichern und Aktualisieren des Artefakts der geräteinter
 description: Dieser Ansatz empfiehlt sich, wenn die Anwendung so strukturiert ist, dass die SDK für jede Datei initialisiert werden muss, in der sie SDK-Methoden verwendet.
 feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/knFQFgPKL-DBOtBnWUIz2-7usi35DPtxd-FSINqHHhY
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e7840a7b-a94f-4256-aed0-4e94b08e157bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 0%
+source-wordcount: 298
+ht-degree: 1%
 
 ---
 
@@ -20,7 +25,7 @@ Dieser Ansatz empfiehlt sich, wenn die Anwendung so strukturiert ist, dass die S
 1. SDK initialisieren
 1. Speichern und Verwenden der JSON-Payload
 
-## 1. Installieren des SDKS
+## &#x200B;1. Installieren von SDK
 
 >[!BEGINTABS]
 
@@ -42,7 +47,7 @@ npm i @adobe/target-nodejs-sdk -P
 
 >[!ENDTABS]
 
-## 2. SDK initialisieren
+## &#x200B;2. SDK initialisieren
 
 1. Importieren Sie zunächst die SDK. Importieren Sie in dieselbe Datei, von der aus Sie den Serverstart steuern können.
 
@@ -115,10 +120,10 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. Sowohl der Client als auch die `organizationId` können von abgerufen werden[!DNL Adobe Target] indem Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** navigieren, wie hier dargestellt.
 
-   &lt;!— insert image-client-code.png —>
+   &lt;!— Einfügen image-client-code.png —>
    ![ALT-Bild](assets/asset-rule-artifact-3.png)
 
-## 3. Speichern und Wiederverwenden der JSON-Payload
+## &#x200B;3. Speichern und Wiederverwenden der JSON-Payload
 
 Der Mechanismus zum Speichern der JSON-Payload hängt von Ihrer Systemarchitektur ab. Sie können eine lokale Datei, eine Datenbank oder ein Speicherobjekt-Caching-System wie Memcached verwenden. Sie müssen in der Lage sein, diese JSON aus Ihrer Anwendung für den Verbrauch zu lesen. In diesem Handbuch verwenden wir eine lokale Datei als Speicher.
 

@@ -3,10 +3,15 @@ title: Initialisieren Sie die Node.js-SDK mit der create-Methode
 description: Erfahren Sie, wie Sie mit der create-Methode die Node.js-SDK initialisieren und den  [!DNL Target] -Client instanziieren können, um  [!DNL Adobe Target]  Experimente und personalisierte Erlebnisse aufzurufen.
 feature: APIs/SDKs
 exl-id: 71516e44-508a-4d8d-9f2b-7c54243e9c60
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/uawle0-l5bcv-FuXMLkPc8kIf8DvbkRqAYelr-ehNLk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 19%
+source-wordcount: 321
+ht-degree: 18%
 
 ---
 
@@ -45,7 +50,7 @@ TargetClient.create(options: Object): TargetClient
 | artifactLocation | Zeichenfolge | Nein | Keine | Eine vollständig qualifizierte URL zum [Artefakt der geräteinternen Entscheidungsregel](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md). Überschreibt den intern festgelegten Speicherort. |
 | artifactPayload | Objekt | Nein | Keine | Die JSON-Payload des [Artefakts der geräteinternen Entscheidungsregel](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md). Wenn angegeben, wird sie verwendet, anstatt eine URL anzufordern. |
 | [events](sdk-events.md) | Objekt&lt;Zeichenfolge, Funktion> | Nein | Keine | Ein optionales Objekt mit Ereignisnamenschlüsseln und Rückruffunktionswerten |
-| telemetrisch aktiviert | Boolesch | Nein | wahr | Nach der Aktivierung erfasst Adobe Daten zur Nutzung von SDK-Funktionen und Daten der Leistungsmessung. Personenbezogene Daten werden nicht erfasst. |
+| telemetrisch aktiviert | Boolesch | Nein | wahr | Nach der Aktivierung erfasst Adobe Daten zur Nutzung von SDK-Funktionen und Leistungstelemetriedaten. Personenbezogene Daten werden nicht erfasst. |
 
 ## Beispiel
 

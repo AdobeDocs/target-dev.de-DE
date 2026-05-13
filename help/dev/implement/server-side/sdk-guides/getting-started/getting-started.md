@@ -3,10 +3,15 @@ title: Erste Schritte mit Target-SDKs
 description: Wie verwende ich die Adobe Target SDKs?
 feature: APIs/SDKs
 exl-id: a5ae9826-7bb5-41de-8796-76edc4f5b281
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/oW9op2s6buvt5Jp18DYzrwh7aBXSNEPAikq9EPISaWQ
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 0%
+source-wordcount: 622
+ht-degree: 1%
 
 ---
 
@@ -29,7 +34,7 @@ Um loszulegen, empfehlen wir Ihnen, Ihre erste [On-Device Decisioning](../on-dev
 1. Implementieren des Trackings für Ereignisse in der Anwendung
 1. Aktivieren der [!UICONTROL A/B Test] Aktivität
 
-## 1. Aktivieren der geräteinternen Entscheidungsfindung für Ihre Organisation
+## &#x200B;1. Aktivieren der geräteinternen Entscheidungsfindung für Ihre Organisation
 
 Durch die Aktivierung der geräteinternen Entscheidungsfindung wird sichergestellt, dass eine [!UICONTROL A/B Test] Aktivität mit einer Latenz von nahezu null ausgeführt wird. Um diese Funktion zu aktivieren, navigieren Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** und aktivieren Sie den Umschalter **[!UICONTROL On-Device Decisioning]** .
 
@@ -37,11 +42,11 @@ Durch die Aktivierung der geräteinternen Entscheidungsfindung wird sichergestel
 
 >[!NOTE]
 >
->Sie müssen über die **[!UICONTROL Admin]** oder **[!UICONTROL Approver]** Benutzerrolle[&#x200B; verfügen, &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=de) den **[!UICONTROL On-Device Decisioning]**-Umschalter zu aktivieren oder zu deaktivieren.
+>Sie müssen über die **[!UICONTROL Admin]** oder **[!UICONTROL Approver]** Benutzerrolle[ verfügen, ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) den **[!UICONTROL On-Device Decisioning]**-Umschalter zu aktivieren oder zu deaktivieren.
 
 Nach der Aktivierung des **[!UICONTROL On-Device Decisioning]**-Umschalters beginnt [!DNL Adobe Target] mit der Generierung [Regelartefakte](../on-device-decisioning/rule-artifact-overview.md) für Ihren Client.
 
-## 2. Installieren des SDKS
+## &#x200B;2. Installieren von SDK
 
 Führen Sie für Node.js, Java und Python den folgenden Befehl in Ihrem Projektverzeichnis im Terminal aus. Für .NET fügen Sie es als Abhängigkeit hinzu, indem Sie [von NuGet installieren](https://www.nuget.org/packages/Adobe.Target.Client).
 
@@ -77,7 +82,7 @@ pip install target-python-sdk
 
 >[!ENDTABS]
 
-## 3. SDK initialisieren
+## &#x200B;3. SDK initialisieren
 
 Das Regelartefakt wird während des SDK-Initialisierungsschritts heruntergeladen. Sie können den Initialisierungsschritt anpassen, um zu bestimmen, wie das Artefakt heruntergeladen und verwendet wird.
 
@@ -146,7 +151,7 @@ target_client = TargetClient.create(CONFIG)
 
 >[!ENDTABS]
 
-## 4. Richten Sie die Feature Flags in einer [!DNL Adobe Target] [!UICONTROL A/B Test] ein
+## &#x200B;4. Richten Sie die Feature Flags in einer [!DNL Adobe Target] [!UICONTROL A/B Test] ein
 
 1. Navigieren Sie in [!DNL Target] zur Seite **[!UICONTROL Activities]** und wählen Sie dann **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]** aus.
 
@@ -204,7 +209,7 @@ target_client = TargetClient.create(CONFIG)
 
    ![ALT-Bild](assets/asset-conv.png)
 
-## 5. Implementieren und rendern der Funktion in der Anwendung
+## &#x200B;5. Implementieren und Rendern der Funktion in der Anwendung
 
 Nachdem Sie die Feature Flag-Variablen in [!DNL Target] eingerichtet haben, ändern Sie den Anwendungs-Code, um sie zu verwenden. Nachdem Sie beispielsweise das Feature Flag in der Anwendung erhalten haben, können Sie es verwenden, um Funktionen zu aktivieren und das Erlebnis zu rendern, für das sich der Besucher qualifiziert hat.
 
@@ -272,7 +277,7 @@ def target_client_ready():
 
 >[!ENDTABS]
 
-## 6. Implementieren des zusätzlichen Trackings für Ereignisse in der Anwendung
+## &#x200B;6. Implementieren des zusätzlichen Trackings für Ereignisse in der Anwendung
 
 Optional können Sie mit der Funktion sendNotification() zusätzliche Ereignisse zum Tracking von Konversionen senden.
 
@@ -382,12 +387,12 @@ target_client.send_notifications({
 
 >[!ENDTABS]
 
-## 7. Aktivieren der [!UICONTROL A/B Test] Aktivität
+## &#x200B;7. Aktivieren der [!UICONTROL A/B Test] Aktivität
 
 1. Klicken Sie auf **[!UICONTROL Activate]** (1), um Ihre [!UICONTROL A/B Test] zu aktivieren.
 
    >[!NOTE]
    >
-   >Sie müssen über die **[!UICONTROL Approver]** oder **[!UICONTROL Publisher]** Benutzerrolle[&#x200B; verfügen, &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=de) diesen Schritt auszuführen.
+   >Sie müssen über die **[!UICONTROL Approver]** oder **[!UICONTROL Publisher]** Benutzerrolle[ verfügen, ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) diesen Schritt auszuführen.
 
    ![ALT-Bild](assets/asset-activate.png)
