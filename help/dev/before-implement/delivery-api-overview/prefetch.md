@@ -136,7 +136,7 @@ In der Antwort sehen Sie das `content` Feld mit dem Erlebnis, das dem Besucher f
 
 ## Vorabrufen von Mboxes mit `clickTrack` Metriken bei Verwendung von [!UICONTROL Analytics for Target] (A4T)
 
-[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) ist eine lösungsübergreifende Integration, die Ihnen das Erstellen von Aktivitäten ermöglicht, die auf [!DNL Analytics] Konversionsmetriken und Zielgruppensegmenten basieren.
+[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=de){target=_blank} (A4T) ist eine lösungsübergreifende Integration, die Ihnen das Erstellen von Aktivitäten ermöglicht, die auf [!DNL Analytics] Konversionsmetriken und Zielgruppensegmenten basieren.
 
 Das folgende Code-Snippet ist eine Antwort von einem Vorabruf einer Mbox mit `clickTrack` Metriken, um [!DNL Analytics] darüber zu informieren, dass auf ein Angebot geklickt wurde:
 
@@ -181,7 +181,7 @@ Das folgende Code-Snippet ist eine Antwort von einem Vorabruf einer Mbox mit `cl
 
 ## Ansichten vorab abrufen
 
-Ansichten unterstützen Single Page Applications (SPA) und Mobile Apps nahtloser. Ansichten können als logische Gruppe visueller Elemente betrachtet werden, aus denen sich eine SPA oder ein mobiles Erlebnis zusammensetzt. Über die Bereitstellungs-API können jetzt von VEC erstellte [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank}- und [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T-Aktivitäten mit Änderungen in [Ansichten für SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) vorab abgerufen werden.
+Ansichten unterstützen Single Page Applications (SPA) und Mobile Apps nahtloser. Ansichten können als logische Gruppe visueller Elemente betrachtet werden, aus denen sich eine SPA oder ein mobiles Erlebnis zusammensetzt. Über die Bereitstellungs-API können jetzt von VEC erstellte [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=de){target=_blank}- und [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=de){target=_blank} (X)T-Aktivitäten mit Änderungen in [Ansichten für SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) vorab abgerufen werden.
 
 ```shell  {line-numbers="true"}
 curl -X POST \
