@@ -6,11 +6,18 @@ feature: Recommendations
 hide: true
 exl-id: 0a9c9649-195b-44e2-987e-d02eaf98cc54
 TQID: https://experienceleague.adobe.com/A7j0oJbyO3oei-a2l02I58o9I0vCPrRcqWC-QgQUxBo
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
 source-wordcount: 1644
@@ -52,7 +59,7 @@ Um hochwertige Empfehlungen zu geben, müssen [!UICONTROL Target] die Produkte o
 | Methode | Was es ist | Einsatz | Zusätzliche Informationen |
 | --- | --- | --- | --- |
 | Katalog-Feed | Planen Sie einen Feed (CSV, [!DNL Google] Product XML oder [!UICONTROL Analytics Product Classifications]), der täglich hochgeladen und aufgenommen werden soll. | Zum Senden von Informationen über mehrere Elemente gleichzeitig. Für den Versand von Informationen, die sich selten ändern. | Siehe [Feeds](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/feeds). |
-| Entitäten-API | Rufen Sie eine API auf, um minutengenaue Aktualisierungen für ein einzelnes Element zu senden. | Zum Senden von Aktualisierungen, wenn diese jeweils nur für ein Element erfolgen. Für den Versand von Informationen, die sich häufig ändern (z. B. Preis, Bestand/Lagerbestand). | Siehe Entwicklerdokumentation [ Entitäten-API](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities). |
+| Entitäten-API | Rufen Sie eine API auf, um minutengenaue Aktualisierungen für ein einzelnes Element zu senden. | Zum Senden von Aktualisierungen, wenn diese jeweils nur für ein Element erfolgen. Für den Versand von Informationen, die sich häufig ändern (z. B. Preis, Bestand/Lagerbestand). | Siehe Entwicklerdokumentation [&#x200B; Entitäten-API](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities). |
 | Weitergeben von Aktualisierungen auf der Seite | Senden Sie minutengenaue Aktualisierungen für ein einzelnes Element mit JavaScript auf der Seite oder mithilfe der Bereitstellungs-API. | Zum Senden von Aktualisierungen, wenn diese jeweils nur für ein Element erfolgen. Für den Versand von Informationen, die sich häufig ändern (z. B. Preis, Bestand/Lagerbestand). | Siehe [Artikelansichten/Produktseiten](#item-views-or-product-pages) unten. |
 
 Die meisten Kundinnen und Kunden sollten mindestens einen Feed implementieren. Anschließend können Sie Ihren Feed mit Aktualisierungen für häufig geänderte Attribute oder Elemente ergänzen, indem Sie entweder die Entitäten-API oder die On-the-Page-Methode verwenden.
@@ -197,7 +204,7 @@ Allgemein ist es am besten, lediglich kompatible Kriterien anzuzeigen. Wenn für
 
 Adobe empfiehlt, diese Option bei Verwendung einer Tag-Management-Lösung zu deaktivieren.
 
-Weitere Informationen zu dieser Option finden Sie unter [[!UICONTROL Recommendations] häufig gestellten ](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank} im Handbuch für *[!DNL Adobe Target]Business Practices*.
+Weitere Informationen zu dieser Option finden Sie unter [[!UICONTROL Recommendations] häufig gestellten &#x200B;](https://experienceleague.adobe.com/en/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank} im Handbuch für *[!DNL Adobe Target]Business Practices*.
 
 ### [!UICONTROL Product Catalog]
 
@@ -244,4 +251,4 @@ Klicken Sie auf **[!UICONTROL Add]** , um eine neue Konfiguration zu erstellen, 
 
 ## &#x200B;6. (Optional) Verwalten von [!UICONTROL Recommendations] mithilfe von Admin-APIs
 
-Informationen zum Konfigurieren und Verwenden [ APIs für die [!UICONTROL Target]-Verwaltung ](../../before-administer/recs-api/overview.md) Bereitstellungs-APIs für [!UICONTROL Recommendations] finden Sie im praxisorientierten Handbuch zum Verwenden von [!UICONTROL Recommendations]-APIs .
+Informationen zum Konfigurieren und Verwenden [&#x200B; APIs für die [!UICONTROL Target]-Verwaltung &#x200B;](../../before-administer/recs-api/overview.md) Bereitstellungs-APIs für [!UICONTROL Recommendations] finden Sie im praxisorientierten Handbuch zum Verwenden von [!UICONTROL Recommendations]-APIs .

@@ -4,10 +4,15 @@ description: Wie generiere ich Authentifizierungs-Token, die für die erfolgreic
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
 TQID: https://experienceleague.adobe.com/sgdBKse1b-0kPKjzDx4fDoFsNpnIzXAT8TpDUkQ7fGw
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 1937
@@ -102,7 +107,7 @@ Es gibt viele Möglichkeiten, die Details Ihres Projekts in Postman anzugeben, a
 >
 >Videoanweisungen für alle Experience Cloud-Lösungen, einschließlich [!DNL Target], finden Sie unter [Verwenden von Postman mit Experience Platform-APIs](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html). Die folgenden Abschnitte sind für die [!DNL Target]-APIs relevant: 1. Erstellen und Exportieren der Experience Platform-API nach Postman 2. Erstellen eines Zugriffs-Tokens mit Postman. Diese Schritte werden ebenfalls unten beschrieben.
 
-1. Navigieren Sie noch in der {0](https://developer.adobe.com/console/home)Adobe Developer Console}, um die **[!UICONTROL Service Account (JWT)]** Anmeldedaten Ihres neuen Projekts anzuzeigen. [Verwenden Sie entweder den linken Navigationsbereich oder den **[!UICONTROL Credentials]**, wie abgebildet.
+1. Navigieren Sie noch in der {0[&#128279;](https://developer.adobe.com/console/home)Adobe Developer Console}, um die **[!UICONTROL Service Account (JWT)]** Anmeldedaten Ihres neuen Projekts anzuzeigen. Verwenden Sie entweder den linken Navigationsbereich oder den **[!UICONTROL Credentials]**, wie abgebildet.
 
    ![JWT1](assets/configure-io-target-jwt1.png)
 
@@ -236,4 +241,4 @@ In dieser Übung verwenden Sie Ihr neues Bearer-Zugriffstoken, indem Sie eine AP
 
    ![testToken6](assets/configure-io-target-testtoken6.png)
 
-Nachdem Sie nun Ihre Adobe-Authentifizierung überprüft haben, können Sie sie für die Interaktion mit [!DNL Adobe Target]-APIs (sowie anderen Adobe-APIs) verwenden. Sie können beispielsweise [Recommendations-APIs verwenden](recs-api/overview.md) um Recommendations zu erstellen oder zu verwalten, oder Sie können sie mit der Target[Bereitstellungs-API ](/help/dev/implement/delivery-api/overview.md).
+Nachdem Sie nun Ihre Adobe-Authentifizierung überprüft haben, können Sie sie für die Interaktion mit [!DNL Adobe Target]-APIs (sowie anderen Adobe-APIs) verwenden. Sie können beispielsweise [Recommendations-APIs verwenden](recs-api/overview.md) um Recommendations zu erstellen oder zu verwalten, oder Sie können sie mit der Target[Bereitstellungs-API &#x200B;](/help/dev/implement/delivery-api/overview.md).
