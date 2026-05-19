@@ -3,10 +3,21 @@ title: Ausführen von Funktionstests mit Attributen
 description: Ausführen von Funktionstests mit Attributen
 feature: APIs/SDKs
 exl-id: c89d337c-20a9-454c-930c-79d9217e23b6
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/y2Mwmnn2k91-LKBy1UmZ5a1s6dZeb5VMyHdyJc2lc34
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '877'
-ht-degree: 0%
+source-wordcount: 891
+ht-degree: 1%
 
 ---
 
@@ -30,7 +41,7 @@ ht-degree: 0%
 >
 >Angenommen, Sie sind ein E-Commerce-Einzelhandelsunternehmen. Sie möchten die Konversionsrate erhöhen, wenn Kunden Ihren Produktkatalog durchsuchen und sortieren. Sie haben die Hypothese, dass bestimmte Sortieralgorithmen und Paginierungsstrategien bessere Ergebnisse liefern als andere. Um diese Theorie zu testen, führen Sie einen Funktionstest durch, bei dem das Sortier-Widget mit verschiedenen Sortieroptionen für Ihre Endbenutzenden neu gestaltet wird. Sie sollten sicherstellen, dass dieser Funktionstest mit einer Latenz nahe null ausgeführt wird, damit die Benutzererfahrung nicht beeinträchtigt wird und die Ergebnisse nicht verzerrt werden.
 
-## 1. Aktivieren von [!UICONTROL on-device decisioning] für Ihr Unternehmen
+## &#x200B;1. Aktivieren von [!UICONTROL on-device decisioning] für Ihr Unternehmen
 
 Durch die Aktivierung der geräteinternen Entscheidungsfindung wird sichergestellt, dass eine A/B-Aktivität mit einer Latenz von nahezu null ausgeführt wird. Um diese Funktion zu aktivieren, navigieren Sie in [!DNL Adobe Target] zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** und aktivieren Sie den Umschalter **[!UICONTROL On-Device Decisioning]** .
 
@@ -42,7 +53,7 @@ Durch die Aktivierung der geräteinternen Entscheidungsfindung wird sichergestel
 
 Nach der Aktivierung des **[!UICONTROL On-Device Decisioning]**-Umschalters beginnt [!DNL Adobe Target] mit der Generierung *Regelartefakte* für Ihren Client.
 
-## 2. Erstellen einer [!UICONTROL A/B Test] Aktivität
+## &#x200B;2. [!UICONTROL A/B Test] erstellen
 
 1. Navigieren Sie in [!DNL Adobe Target] zur Seite **[!UICONTROL Activities]** und wählen Sie dann **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]** aus.
 
@@ -52,7 +63,7 @@ Nach der Aktivierung des **[!UICONTROL On-Device Decisioning]**-Umschalters begi
 
    ![ALT-Bild](assets/asset-form.png)
 
-## 3. Definieren Sie A und B
+## &#x200B;3. A und B definieren
 
 1. Geben Sie im **[!UICONTROL Experiences]** Schritt der Aktivitätserstellung einen Namen für Ihre Aktivität ein (1) und fügen Sie ein zweites Erlebnis, Erlebnis B, hinzu, indem Sie auf die Schaltfläche **[!UICONTROL Add Experience]** (2) klicken. Geben Sie den Namen des Speicherorts (3) innerhalb Ihrer Anwendung ein, an dem Sie Ihren Funktionstest mit Attributen ausführen möchten. Im folgenden Beispiel ist `product-results-page` der für Erlebnis A definierte Speicherort. (Es ist auch der für Erlebnis B definierte Speicherort.)
 
@@ -88,35 +99,35 @@ Nach der Aktivierung des **[!UICONTROL On-Device Decisioning]**-Umschalters begi
 
    ![ALT-Bild](assets/asset-sorting-b.png)
 
-## 4. Hinzufügen einer Audience
+## &#x200B;4. Hinzufügen einer Audience
 
 Behalten Sie im **[!UICONTROL Targeting]** Schritt die **[!UICONTROL All Visitors]** Zielgruppe bei. Auf diese Weise können Sie die Auswirkungen Ihrer Sortierfunktion verstehen und feststellen, welcher Algorithmus und welche Anzahl von Elementen die Ergebnisse am besten beeinflussen.
 
 ![ALT-Bild](assets/asset-audience-b.png)
 
-## 5. Festlegen der Traffic-Zuordnung
+## &#x200B;5. Traffic-Zuordnung festlegen
 
 Definieren Sie den Prozentsatz Ihrer Besucher, mit denen Sie Ihre Sortieralgorithmen und Ihre Paginierungsstrategie testen möchten. Mit anderen Worten, zu welchem Prozentsatz der Benutzer möchten Sie diesen Test durchführen? Um diesen Test in diesem Beispiel für alle angemeldeten Benutzer bereitzustellen, sollten Sie die Traffic-Zuordnung bei 100 % belassen.
 
 ![ALT-Bild](assets/asset-allocation-100.png)
 
-## 6. Festlegen der Traffic-Verteilung auf Varianten
+## &#x200B;6. Festlegen der Traffic-Verteilung auf Varianten
 
 Definieren Sie den Prozentsatz Ihrer Besucher, die den empfohlenen Sortieralgorithmus im Vergleich zum Best-Sellers-Sortieralgorithmus sehen, mit einer Beschränkung von 50 Produkten pro Seite. Behalten Sie in diesem Beispiel die Traffic-Verteilung als 50/50-Aufteilung zwischen den Erlebnissen A und B bei.
 
 ![ALT-Bild](assets/asset-variations-50.png)
 
-## 7. Einrichten von Berichten
+## &#x200B;7. Einrichten von Berichten
 
 Wählen Sie im **[!UICONTROL Goals & Settings]** Schritt **[!UICONTROL Adobe Target]** als **[!UICONTROL Reporting Source]** aus, um Ihre A/B-Testergebnisse in der [!DNL Adobe Target]-Benutzeroberfläche anzuzeigen, oder wählen Sie **[!UICONTROL Adobe Analytics]** aus, um sie in der Adobe Analytics-Benutzeroberfläche anzuzeigen.
 
 ![ALT-Bild](assets/asset-reporting-b.png)
 
-## 8. Hinzufügen von Metriken für Tracking-KPIs
+## &#x200B;8. Metriken für Tracking-KPIs hinzufügen
 
 Wählen Sie eine **[!UICONTROL Goal Metric]** aus, um den Funktionstest mit Attributen zu messen. In diesem Beispiel hängt der Erfolg davon ab, ob der Benutzer ein Produkt kauft, je nach dem Sortieralgorithmus und der Paginierungsstrategie, die er angezeigt hat.
 
-## 9. Implementieren von Funktionstests mit Attributen in das Programm
+## &#x200B;9. Implementieren von Funktionstests mit Attributen in Ihr Programm
 
 >[!BEGINTABS]
 
@@ -173,7 +184,7 @@ String paginationLimit = attributes.getString("product-results-page", "paginatio
 
 >[!ENDTABS]
 
-## 10. Implementieren von Code zum Tracking von Konversionsereignissen
+## &#x200B;10. Implementieren von Code zum Tracking von Konversionsereignissen
 
 >[!BEGINTABS]
 
@@ -242,6 +253,6 @@ String paginationLimit = attributes.getString("product-results-page", "paginatio
 
 >[!ENDTABS]
 
-## 11. Aktivieren Sie Ihre Funktionstests mit Attributen
+## &#x200B;11. Aktivieren von Funktionstests mit Attributen
 
 ![ALT-Bild](assets/asset-activate.png)

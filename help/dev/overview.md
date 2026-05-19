@@ -5,10 +5,36 @@ description: Wie implementiere und verwalte ich und  [!DNL Adobe Target]  mit se
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: 599aa4c965e331bb2681523d50708a03fc933875
+TQID: https://experienceleague.adobe.com/lTn4veG9PKL-ZXohH3qv1UH7lpyLfn80nwuxgehXSy0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+subfeature_v2:
+  - id: a94ced60-8199-4549-b453-ede2acb4101e
+  - id: c011fe9c-b94b-4a88-93d8-f2acece55112
+  - id: c5abb976-5170-45d6-bcac-66d15d10a4d4
+  - id: cd7b6938-5837-4ee0-9790-5840997133d9
+  - id: e22d67ea-317b-44f8-abd1-52e07f636ca8
+  - id: fc9c2184-9102-403f-bd6c-0055021e4bea
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 6%
+source-wordcount: 501
+ht-degree: 11%
 
 ---
 
@@ -34,7 +60,7 @@ Dieses *[!DNL Adobe Target]-Entwicklerhandbuch* enthält Ressourcen und Anleitun
 
 ## Client-seitige Implementierung
 
-[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md): Mit dem [!DNL Adobe Experience Platform Web SDK] können Sie über die [!DNL Experience Cloud] mit den verschiedenen Services in der [!DNL Target] (einschließlich [!UICONTROL Adobe Experience Edge Network]) interagieren.
+[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md): Mit dem [!DNL Adobe Experience Platform Web SDK] können Sie über die [!UICONTROL Adobe Experience Edge Network] mit den verschiedenen Services in der [!DNL Experience Cloud] (einschließlich [!DNL Target]) interagieren.
 
 [**Target at.js-JavaScript-Bibliothek**](/help/dev/implement/client-side/overview.md): Die at.js-JavaScript-Bibliothek verbessert die Seitenladezeiten für Web-Implementierungen, verbessert die Sicherheit und bietet bessere Implementierungsoptionen für Single-Page-Anwendungen.
 
@@ -90,11 +116,11 @@ Dieses *[!DNL Adobe Target]-Entwicklerhandbuch* enthält Ressourcen und Anleitun
 
 ## Ressourcen
 
-* [Adobe Open Source-Repository](https://github.com/adobe)
+* [Adobe Open Source Repository](https://github.com/adobe)
 * [Zielknoten JS SDK Source](https://github.com/adobe/target-nodejs-sdk)
-* [Target Node JS SDK Examples repo](https://github.com/adobe/target-nodejs-sdk-samples)
+* [SDK-Beispiel-Repository für Zielknoten JS](https://github.com/adobe/target-nodejs-sdk-samples)
 * [Target Java SDK Source](https://github.com/adobe/target-java-sdk)
-* [Target Java SDK-Beispiel-Repository](https://github.com/adobe/target-java-sdk-samples)
+* [Beispiel-Repository für Target Java SDK](https://github.com/adobe/target-java-sdk-samples)
 * [Target-Implementierung](./before-implement/prepare-to-implement-target.md)
 * [Verwaltung von Target](./before-administer/target-api-overview.md)
 * [Adobe Target Dev Docs GitHub Repo](https://github.com/AdobeDocs/target-developers)

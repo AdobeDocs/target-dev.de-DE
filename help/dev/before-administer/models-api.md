@@ -3,9 +3,20 @@ title: Übersicht über die Adobe Models-API
 description: Übersicht über die Models-API, mit der Benutzer verhindern können, dass Funktionen in Modelle für maschinelles Lernen aufgenommen werden.
 exl-id: e34b9b03-670b-4f7c-a94e-0c3cb711d8e4
 feature: APIs/SDKs, Recommendations, Administration & Configuration
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/1Q28459Ct9BcEynSmD6oBPnGaEY2Hgnp9frKhWB4M-Q
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1288'
+source-wordcount: 1316
 ht-degree: 2%
 
 ---
@@ -24,7 +35,7 @@ Blockierungslisten können pro Aktivität (Aktivitätsebene) oder für alle Akti
 
 Die Models-API-Spezifikation [hier](../administer/models-api/models-api-overview.md).
 
-## Voraussetzungen 
+## Voraussetzungen
 
 Um die Models-API zu verwenden, müssen Sie die Authentifizierung mithilfe der [Adobe Developer Console](https://developer.adobe.com/console/home) konfigurieren, genau wie bei der [Target Admin-API](../administer/admin-api/admin-api-overview-new.md). Weitere Informationen finden Sie unter [Konfigurieren der Authentifizierung](../before-administer/configure-authentication.md).
 
@@ -34,7 +45,7 @@ Verwalten von Blockierungslisten
 
 [**Schritt 1:**](#step1) Liste der Funktionen für eine Aktivität anzeigen
 
-auf die Blockierungsliste setzen [**Schritt 2:**](#step2) der Aktivität prüfen
+[**Schritt 2:**](#step2) der Aktivität prüfen
 
 [**Schritt 3:**](#step3) Funktionen zur Blockierungsliste der Aktivität hinzufügen
 
@@ -45,7 +56,7 @@ auf die Blockierungsliste setzen [**Schritt 2:**](#step2) der Aktivität prüfen
 
 ## Schritt 1: Anzeigen einer Liste der Funktionen einer Aktivität {#step1}
 
-Auf die Blockierungsliste setzen Bevor Sie eine Funktion bearbeiten, zeigen Sie die Liste der Funktionen an, die derzeit in den Modellen für diese Aktivität enthalten sind.
+Bevor Sie eine Funktion bearbeiten, zeigen Sie die Liste der Funktionen an, die derzeit in den Modellen für diese Aktivität enthalten sind.
 
 >[!BEGINTABS]
 
@@ -102,7 +113,7 @@ In dem hier gezeigten Beispiel prüft der Benutzer, ob die Liste der Funktionen 
 
 Der **[!UICONTROL externalName]** ist ein benutzerfreundlicher Name für eine Funktion. Er wird von [!DNL Target] erstellt und es ist möglich, dass sich dieser Wert im Laufe der Zeit ändert. Benutzer können diese benutzerfreundlichen Namen im [Personalization Insights-Bericht anzeigen](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=de).
 
-Die **[!UICONTROL internalName]** ist die tatsächliche Kennung der Funktion. Es wird auch von [!DNL Target] erstellt, kann jedoch nicht geändert werden. Auf die Blockierungsliste setzen Dies ist der Wert, auf den Sie verweisen müssen, um die Funktion(en) zu identifizieren, die Sie ändern möchten.
+Die **[!UICONTROL internalName]** ist die tatsächliche Kennung der Funktion. Es wird auch von [!DNL Target] erstellt, kann jedoch nicht geändert werden. Dies ist der Wert, auf den Sie verweisen müssen, um die Funktion(en) zu identifizieren, die Sie ändern möchten.
 
 Damit die Funktionsliste mit Werten gefüllt werden kann (d. h. damit sie nicht null ist), muss eine Aktivität sein:
 
@@ -201,11 +212,11 @@ In dem hier gezeigten Beispiel blockiert der Benutzer zwei Funktionen, `SES_PREV
 
 ![Schritt 3](assets/models-api-step-3.png)
 
-Beachten Sie, dass Sie nach der Blockierungsauflistung auf die Blockierungsliste setzte einer Funktion die aktualisierte Datei überprüfen sollten, indem Sie [Schritt 2](#step2) erneut ausführen (GET auf die Blockierungsliste setzte). Überprüfen Sie, ob die Ergebnisse erwartungsgemäß angezeigt werden (stellen Sie sicher, dass die Ergebnisse die Funktionen enthalten, die von der neuesten PUT-Anfrage hinzugefügt wurden).
+Beachten Sie, dass Sie nach der Blockierungsauflistung einer Funktion die aktualisierte Datei überprüfen sollten, indem Sie [Schritt 2](#step2) erneut ausführen (GETS). Überprüfen Sie, ob die Ergebnisse erwartungsgemäß angezeigt werden (stellen Sie sicher, dass die Ergebnisse die Funktionen enthalten, die von der neuesten PUT-Anfrage hinzugefügt wurden).
 
 ## Schritt 4: (Optional) Entsperren {#step4}
 
-Auf die Blockierungsliste setzen Um die Blockierung aller Funktionen aufzuheben, löschen Sie die Werte aus `blockedFeatureSources` oder `blockedFeatures`.
+Um die Blockierung aller Funktionen aufzuheben, löschen Sie die Werte aus `blockedFeatureSources` oder `blockedFeatures`.
 
 >[!BEGINTABS]
 
@@ -241,11 +252,11 @@ Wie immer wird nach der Änderung der Blockierungsliste empfohlen, [Schritt 2](#
 
 Frage: Wie kann ich einige, aber nicht alle einer Blockierungsliste löschen?
 
-Antwort: Um eine einzelne Teilmenge auf die Blockierungsliste gesetzt Funktionen aus einer Multi-Feature-Blockierungsliste auf die Blockierungsliste setzen auf die Blockierungsliste setzte zu entfernen, können Benutzende einfach die aktualisierte Liste der Funktionen senden, die sie in [der -Funktionsanfrage](#step3) blockieren möchten, anstatt die gesamte -Datei zu löschen und die gewünschten Funktionen erneut hinzuzufügen. Mit anderen Worten, senden Sie die aktualisierte Funktionsliste (wie in [Schritt 3](#step3)) und stellen Sie sicher, dass Sie die Funktionen, die Sie „löschen“ möchten, aus der Blockierungsliste ausschließen.
+Antwort: Um eine einzelne Teilmenge auf die Blockierungsliste gesetzt Funktionen aus einer Multi-Feature-Blockierungsliste zu entfernen, können Benutzende einfach die aktualisierte Liste der Funktionen senden, die sie in [der -Funktionsanfrage](#step3) blockieren möchten, anstatt die gesamte -Datei zu löschen und die gewünschten Funktionen erneut hinzuzufügen. Mit anderen Worten, senden Sie die aktualisierte Funktionsliste (wie in [Schritt 3](#step3)) und stellen Sie sicher, dass Sie die Funktionen, die Sie „löschen“ möchten, aus der Blockierungsliste ausschließen.
 
 ## Schritt 5: (Optional) Verwalten der globalen Blockierungsliste {#step5}
 
-Die obigen Beispiele bezogen sich alle auf eine einzige Aktivität. Sie können auch Funktionen für alle Aktivitäten auf einem bestimmten Client (Mandanten) blockieren, anstatt die Blockierungsliste für jede Aktivität einzeln angeben zu müssen. Auf die Blockierungsliste setzen Um eine globale durchzuführen, verwenden Sie den `/blockList/global`-Aufruf anstelle von `blockList/<campaignId>`.
+Die obigen Beispiele bezogen sich alle auf eine einzige Aktivität. Sie können auch Funktionen für alle Aktivitäten auf einem bestimmten Client (Mandanten) blockieren, anstatt die Blockierungsliste für jede Aktivität einzeln angeben zu müssen. Um eine globale durchzuführen, verwenden Sie den `/blockList/global`-Aufruf anstelle von `blockList/<campaignId>`.
 
 >[!BEGINTABS]
 

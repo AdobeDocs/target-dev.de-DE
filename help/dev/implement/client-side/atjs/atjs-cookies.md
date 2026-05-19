@@ -4,20 +4,36 @@ description: Details zum  [!DNL Adobe Target]  von at.js 2.x und at.js 1.x mit C
 title: at.js-Cookies
 feature: at.js
 exl-id: 154a844a-6855-4af7-8aed-0719b4c389f5
-source-git-commit: 16132bc7a624ab4849651b183bde9b3064b4a676
+TQID: https://experienceleague.adobe.com/BRauW1ppIMya4aX-vTJDGZFCv1fijYgDuxbHjXCI6D8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: '1716'
-ht-degree: 72%
+source-wordcount: 1830
+ht-degree: 67%
 
 ---
 
 # „at.js“-Cookies
 
-Informationen zum Cookie-Verhalten von at.js 2.x und at.js 1.*x*.
+Informationen zum Verhalten von at.js 2.x- und at.js 1.*x*-Cookies.
 
 ## Cookie-Verhalten von at.js 2.x
 
-Bei at.js-Version 2.x (bis Version 2.10.0, aber ohne Version) werden *nur Erstanbieter-Cookies unterstützt*. Genau wie in at.js 1.*x* wird das Erstanbieter-Cookie, „mbox“, in `clientdomain.com` gespeichert, wobei `clientdomain` Ihre Domain ist.
+Bei at.js-Version 2.x (bis Version 2.10.0, aber ohne Version) werden *nur Erstanbieter-Cookies unterstützt*. Genau wie bei at.js 1.*x* wird das Erstanbieter-Cookie, „mbox“, in `clientdomain.com` gespeichert, wobei `clientdomain` Ihre Domain ist.
 
 at.js erzeugt eine Sitzungs-ID und speichert sie im Cookie. Die erste Antwort enthält alle Aktivitätsinformationen sowie die `TNT` oder `PC ID`, die von den [!DNL Target]-Servern generiert wurde. at.js fügt dann die `TNT/PC ID` zum Cookie hinzu.
 
@@ -29,7 +45,7 @@ Das `AMCV_###@AdobeOrg` Erstanbieter-Cookie wird immer vom Experience Cloud ID-S
 
 ### Unterstützung für Drittanbieter-Cookies und Domain-übergreifendes Tracking
 
-Domänenübergreifendes Tracking ermöglicht die Anzeige von Sitzungen auf zwei verwandten Sites mit verschiedenen Domänen als einzelne Sitzung. Sie können eine [!DNL Target]-Aktivität erstellen, die sich über `siteA.com` und `siteB.com` erstreckt, während der Besucher im selben Erlebnis verbleibt, wenn er von einer Domain in die andere wechselt. Diese Funktionalität hängt mit at.js 1.*x* zusammen und damit, wie Erst- und Drittanbieter-Cookies behandelt werden.
+Domänenübergreifendes Tracking ermöglicht die Anzeige von Sitzungen auf zwei verwandten Sites mit verschiedenen Domänen als einzelne Sitzung. Sie können eine [!DNL Target]-Aktivität erstellen, die sich über `siteA.com` und `siteB.com` erstreckt, während der Besucher im selben Erlebnis verbleibt, wenn er von einer Domain in die andere wechselt. Diese Funktion ist mit dem Verhalten von Drittanbietern *Erstanbieter-Cookies at.js 1.* x verbunden.
 
 >[!NOTE]
 >
@@ -38,7 +54,7 @@ Domänenübergreifendes Tracking ermöglicht die Anzeige von Sitzungen auf zwei 
 
 ## at.js 1.*x* Cookie-Verhalten
 
-Für at.js 1.*x* ist das Verhalten von Cookies davon abhängig, ob es sich um ein Erstanbieter-Cookie, ein Drittanbieter-Cookie mit Erstanbieter-Cookie oder nur um ein Drittanbieter-Cookie handelt.
+Bei at.js-Versionen 1.*x* hängt das Cookie-Verhalten davon ab, ob es sich um ein Erstanbieter-Cookie, ein Drittanbieter-Cookie mit einem Erstanbieter-Cookie oder nur um ein Drittanbieter-Cookie handelt.
 
 ### Verwenden von Erstanbieter-Cookies und Drittanbieter-Cookies
 
@@ -134,7 +150,7 @@ Berücksichtigen Sie Folgendes:
 | Cookies | Details |
 |--- |--- |
 | Erstanbieter-Domänen | Dies ist die Standardimplementierung für [!DNL Target].  Die „Mbox“-Cookies werden in der Domain des Kunden festgelegt. |
-| Drittanbieter-Tracking | Das Tracking von Drittanbietern ist für Anwendungsfälle von Werbung und Targeting in [!DNL Target] und [!DNL Adobe Audience Manager] (AAM) wichtig.  Für das Drittanbieter-Tracking sind siteübergreifende Techniken zur Skripterstellung erforderlich.  [!DNL Target] verwendet zwei Cookies, „mboxSession“ und „mboxPC“, die in der `clientcode.tt.omtrd.net` Domain festgelegt sind. |
+| Drittanbieter-Tracking | Das Tracking von Drittanbietern ist für Anwendungsfälle von Werbung und Targeting in [!DNL Target] und [!DNL Adobe Audience Manager] (AAM) wichtig.  Für das Tracking von Drittanbietern sind Cross-Site-Scripting-Techniken erforderlich.  [!DNL Target] verwendet zwei Cookies, „mboxSession“ und „mboxPC“, die in der `clientcode.tt.omtrd.net` Domain festgelegt sind. |
 
 ### Welchen Ansatz verfolgt Apple?
 

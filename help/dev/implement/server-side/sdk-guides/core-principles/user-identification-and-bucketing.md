@@ -3,10 +3,18 @@ title: Benutzeridentifizierung und Bucketing
 description: Benutzeridentifizierung und Bucketing
 exl-id: 4fcf235b-6a58-442c-ae13-9d05ec1033fc
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+TQID: https://experienceleague.adobe.com/V9hK5oj7F-SV2wou2sz-Ve3RVJ1EMsFJDmcNF4ctV5o
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 3%
+source-wordcount: 1172
+ht-degree: 4%
 
 ---
 
@@ -21,7 +29,7 @@ Es gibt mehrere Möglichkeiten, einen Benutzer innerhalb von [!DNL Adobe Target]
 | `tntID` | Der `tntId` ist die primäre Kennung in [!DNL Target] für einen Benutzer. Sie können diese ID bereitstellen oder [!DNL Target] generiert sie automatisch, wenn die Anfrage keine enthält. |
 | `thirdPartyId` | Der `thirdPartyId` ist die Kennung des Benutzers in Ihrem Unternehmen, die Sie mit jedem Aufruf senden können. Wenn sich ein(e) Benutzende(r) auf der Website eines Unternehmens anmeldet, erstellt das Unternehmen normalerweise eine ID, die mit dem Konto, der Treuekarte, der Mitgliedschaftsnummer oder anderen Kennungen des/der Besuchenden für dieses Unternehmen verknüpft ist. |
 | `marketingCloudVisitorId` | Die `marketingCloudVisitorId` wird verwendet, um Daten zwischen verschiedenen Adobe-Lösungen zusammenzuführen und freizugeben. Die marketingCloudVisitorId ist für Integrationen mit Adobe Analytics und Adobe Audience Manager erforderlich. |
-| `customerIds` | Neben der Experience Cloud-Besucher-ID können auch zusätzliche [Kunden-IDs](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=de) und ein Authentifizierungsstatus für jeden Besucher verwendet werden. |
+| `customerIds` | Neben der Experience Cloud-Besucher-ID können auch zusätzliche [Kunden-IDs](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=de) und ein authentifizierter Status für jeden Besucher verwendet werden. |
 
 ## [!DNL Target]-ID (tntID)
 
@@ -167,9 +175,9 @@ In diesem Szenario generiert [!DNL Adobe Target] eine `tntId`, da sie nicht an d
 
 ## Marketing Cloud-Besucher-ID (marketingCloudVisitorId)
 
-Die `marketingCloudVisitorId` ist eine universelle und persistente ID, die Ihre Besucher über alle Adobe Experience Cloud-Lösungen hinweg identifiziert. Wenn Ihr Unternehmen den ID-Service implementiert, können Sie mit dieser ID denselben Site-Besucher und dessen Daten in verschiedenen Experience Cloud-Lösungen identifizieren, einschließlich [!DNL Adobe Target], Adobe Analytics und Adobe Audience Manager. Beachten Sie, dass die `marketingCloudVisitorId` bei der Integration von [!DNL Target] mit [!DNL Adobe Analytics] und [!DNL Adobe Audience Manager] erforderlich ist.
+Die `marketingCloudVisitorId` ist eine universelle und persistente ID, die Ihre Besucher über alle Adobe Experience Cloud-Lösungen hinweg identifiziert. Wenn Ihr Unternehmen den ID-Service implementiert, können Sie mit dieser ID denselben Site-Besucher und dessen Daten in verschiedenen Experience Cloud-Lösungen, einschließlich [!DNL Adobe Target], Adobe Analytics und Adobe Audience Manager, identifizieren. Beachten Sie, dass die `marketingCloudVisitorId` bei der Integration von [!DNL Target] mit [!DNL Adobe Analytics] und [!DNL Adobe Audience Manager] erforderlich ist.
 
-Der folgende Beispielaufruf zeigt, wie ein `marketingCloudVisitorId`, das vom Experience Cloud-ID-Service abgerufen wurde, an [!DNL Target] übergeben wird.
+Der folgende Beispielaufruf zeigt, wie ein vom Experience Cloud ID-Service abgerufenes `marketingCloudVisitorId` an [!DNL Target] übergeben wird.
 
 >[!BEGINTABS]
 
@@ -237,7 +245,7 @@ In diesem Szenario generiert [!DNL Target] eine `tntId`, da sie nicht an den urs
 
 | Authentifizierungsstatus | Benutzerstatus |
 | --- | --- |
-| `unknown` | Unbekannt oder nie authentifiziert. Dieser Status kann für Szenarien wie das Szenario verwendet werden, in dem ein Besucher durch Klicken auf eine Display-Anzeige auf Ihre Site gelangt. |
+| `unknown` | Unbekannt oder noch nie authentifiziert. Dieser Status kann für Szenarien wie das Szenario verwendet werden, in dem ein Besucher durch Klicken auf eine Display-Anzeige auf Ihre Site gelangt. |
 | `authenticated` | Der Benutzer ist zurzeit in einer aktiven Sitzung auf Ihrer Website oder in Ihrer Applikation authentifiziert. |
 | `logged_out` | Der Benutzer war authentifiziert, hat sich dann aber aktiv abgemeldet. Der Benutzer beabsichtigt, die Verbindung zum authentifizierten Status zu trennen. Der Benutzer möchte nicht mehr als authentifiziert behandelt werden. |
 

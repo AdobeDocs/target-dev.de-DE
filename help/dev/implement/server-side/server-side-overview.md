@@ -4,10 +4,26 @@ description: Erfahren Sie mehr  [!DNL Adobe Target]  die Server-seitigen Bereits
 title: Wo erhalte ich Informationen  [!DNL Target]  Server-seitigen Bereitstellungs-APIs und -SDKs?
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
-source-git-commit: 75af30045684b95d5989b0a1f877ba95bb8cd883
+TQID: https://experienceleague.adobe.com/x5WKb9Eenz2bw-idOnxlpWdtiivTx05n38sNXEt3DNc
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: a6cc21b9-1a36-4fa6-9c61-4acd04d9c88c
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 13%
+source-wordcount: 603
+ht-degree: 12%
 
 ---
 
@@ -44,11 +60,11 @@ Link: [Server-seitige Bereitstellungs-APIs](/help/dev/implement/delivery-api/ove
 
 Über die [!DNL Target]-Bereitstellungs-API haben Sie folgende Möglichkeiten:
 
-* Bereitstellen von Erlebnissen über Web, einschließlich SPA- und Mobile-Kanälen sowie Nicht-Browser-basierten IoT-Geräten wie vernetzten TVs, Kiosks oder digitalen Bildschirmen in Ladengeschäften.
+* Bereitstellen von Erlebnissen im Web, einschließlich SPAs und mobilen Kanälen sowie Nicht-Browser-basierten IoT-Geräten, wie z. B. vernetzten TVs, Kiosks oder digitalen Bildschirmen in Geschäften.
 * Bereitstellen von Erlebnissen von jeder Server-seitigen Plattform oder Anwendung, die HTTP/s-Aufrufe ausführen kann.
 * Bereitstellen konsistenter und personalisierter Erlebnisse für einen Besucher, unabhängig davon, über welchen Kanal oder welche Geräte der Besucher mit Ihrem Unternehmen interagiert hat.
 * Speichern Sie die Erlebnisse für einen Besucher innerhalb einer Sitzung auf Ihrem Server zwischen, damit mehrere API-Aufrufe vermieden werden können und so eine bessere Leistung erzielt wird.
-* Nahtlose Integration mit Adobe Experience Cloud-Produkten wie Adobe Analytics, Adobe Audience Manager (AAM) und dem Experience Cloud-ID-Service von der Serverseite aus.
+* Nahtlose Integration mit Adobe Experience Cloud-Produkten wie Adobe Analytics, Adobe Audience Manager (AAM) und dem Experience Cloud ID-Service von der Serverseite aus.
 
 ## Server-seitige SDKs
 
@@ -62,7 +78,7 @@ Die [!DNL Adobe Target] Server-seitige SDK-Dokumentation hilft Ihnen, [!DNL Targ
 Mit den Server-seitigen SDKs von [!DNL Adobe Target] können Sie:
 
 * Ausführen und Ausführen von **Feature**-, **Rollouts**- und **A/B-** mit **Latenz**.
-* Bereitstellen von Erlebnissen über **Web**, einschließlich **SPA** und **Mobile-** Kanälen) sowie Nicht-Browser-basierten **Internet of Things (IoT)-Geräten** z. B. einem vernetzten TV, Kiosk oder digitalen Bildschirm im Geschäft.
+* Bereitstellen von Erlebnissen über **Web**, einschließlich **SPAs** und **Mobile-** sowie Nicht-Browser-basierten **Internet of Things (IoT)-Geräten** z. B. einem vernetzten TV, Kiosk oder digitalen Bildschirm in einem Geschäft.
 * Stellen Sie **(ML)-gesteuerte personalisierte Erlebnisse für** bereit, unabhängig davon, über welchen Kanal oder welches Gerät der Benutzer mit Ihrem Unternehmen interagiert hat.
 * **Nahtlose Integration mit Adobe Experience Cloud**-Produkten wie **Adobe Analytics**, **Adobe Audience Manager** und dem **Experience Cloud ID-** von Serverseite aus.
 
@@ -72,6 +88,6 @@ Schauen Sie sich unsere [Sample Apps](sdk-guides/sample-apps/sample-apps.md) an,
 
 ## [!DNL Target Recommendations]-APIs
 
-Link: [Target Recommendations APIs](https://developers.adobetarget.com/api/recommendations) und [Adobe Recommendations API-Übersicht](../../before-administer/recs-api/overview.md).
+Link: [Target Recommendations-APIs](https://developers.adobetarget.com/api/recommendations) und [Übersicht über die Adobe Recommendations-API](../../before-administer/recs-api/overview.md).
 
 Mit den Recommendations-APIs können Sie programmgesteuert mit [!DNL Target] Recommendations-Servern interagieren. Diese APIs können in verschiedene Anwendungs-Stacks integriert werden, um Funktionen durchzuführen, die Sie für gewöhnlich über die [!DNL Target] Benutzeroberfläche ausführen würden.

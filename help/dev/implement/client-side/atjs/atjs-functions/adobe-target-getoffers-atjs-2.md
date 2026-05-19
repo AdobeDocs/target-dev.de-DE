@@ -4,10 +4,23 @@ description: Verwenden Sie die [!UICONTROL adobe.target.getOffers()]-Funktion un
 title: Wie verwende ich die [!UICONTROL adobe.target.getOffers()]?
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/jJXcWyQzJ48GNCNcOT165vxcO-CLExTj-t-3kbR2FZ0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 62%
+source-wordcount: 1340
+ht-degree: 60%
 
 ---
 
@@ -17,7 +30,7 @@ Mit dieser Funktion können Sie mehrere Angebote abrufen, indem Sie mehrere Mbox
 
 >[!NOTE]
 >
->Diese Funktion wurde mit at.js 2.x eingeführt. Diese Funktion steht für at.js Version 1 nicht zur Verfügung.*x*.
+>Diese Funktion wurde mit at.js 2.x eingeführt. Diese Funktion ist nicht verfügbar für at.js-Version 1.*x*.
 
 | Schlüssel | Typ | Erforderlich? | Beschreibung |
 | --- | --- | --- | --- |
@@ -204,7 +217,7 @@ adobe.target.getOffers({
 }
 ```
 
-Die Payload kann dann über die „Data Insertion [!DNL Adobe Analytics]&quot; an [&#x200B; weitergeleitet &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+Die Payload kann dann über die „Data Insertion [&quot; an [!DNL Adobe Analytics] weitergeleitet &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
 ## Abrufen und Rendern von Daten aus mehreren Mboxes über [!UICONTROL getOffers()] und [!UICONTROL applyOffers()]
 
@@ -287,7 +300,7 @@ Beachten Sie, dass dieses Beispiel `prefetch > mboxes` verwendet, Sie könnten a
 
 ## Aufrufen von [!UICONTROL getOffers()] zum Ausführen eines Seitenladevorgangs
 
-Das folgende Beispiel zeigt, wie Sie einen pageLoad mit [!UICONTROL getOffers()] mit at.js 2 durchführen.*x*  
+Das folgende Beispiel zeigt, wie Sie einen pageLoad mit [!UICONTROL getOffers()] mit at.js 2.*x durchführen*
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({

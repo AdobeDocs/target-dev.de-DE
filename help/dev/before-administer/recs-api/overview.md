@@ -6,37 +6,45 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 0d03c650-0b00-44b8-a794-10e5d738e42c
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/-bWsxWNZK7LXp0VvKZmsZc68jXcit57v7Wki9hR3wH4
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '330'
-ht-degree: 2%
+source-wordcount: 343
+ht-degree: 3%
 
 ---
 
 # Übersicht über die Adobe Recommendations-API
 
-Zu den für Recommendations relevanten APIs gehören [Admin-](../../before-administer/target-api-overview.md)), mit denen Sie:
+Zu den für Recommendations relevanten APIs gehören [Admin-APIs](../../before-administer/target-api-overview.md) mit denen Sie:
 
 * Katalog mit empfohlenen Produkten oder Inhalten verwalten
 * Verwalten von Recommendations-Algorithmen und -Aktivitäten
 
-Mit der Target [Bereitstellungs-API](../../implement/delivery-api/overview.md) mit Recommendations können Sie auch:
+Wenn Sie die Target [Bereitstellungs-API](../../implement/delivery-api/overview.md) mit Recommendations verwenden, können Sie auch:
 
-* Rufen Sie Empfehlungen in JSON-, HTML- oder XML-Objekten ab, damit sie in Web-, Mobile-, E-Mail-, Internet der Dinge (IOT) und anderen Kanälen angezeigt werden können.
+* Rufen Sie Empfehlungen in JSON-, HTML- oder XML-Objekten ab, damit sie in Web-, Mobile-, E-Mail-, Internet of Things (IOT)- und anderen Kanälen angezeigt werden können.
 
 ## Beschreibung
 
-Dieses Handbuch zu den Recommendations-APIs führt Entwicklerinnen und Entwickler durch die praktische Verwendung der Recommendations-APIs zum Konfigurieren und Verwalten von Recommendations-Katalogen und benutzerdefinierten Kriterien sowie die Verwendung der Bereitstellungs-API zum Abrufen von Recommendations-Inhalten. Am Ende werden Sie in der Lage sein,
+Dieses Handbuch zu den Recommendations-APIs führt Entwicklerinnen und Entwicklern praktische Übungen zum Verwenden der Recommendations-APIs zum Konfigurieren und Verwalten von Recommendations-Katalogen und benutzerdefinierten Kriterien sowie zum Verwenden der Bereitstellungs-API zum Abrufen von Recommendations-Inhalten. Am Ende werden Sie in der Lage sein,
 
-* Konfigurieren und Verwalten von Entitäten mit der Recommendations-API
+* Konfigurieren und Verwalten von Entitäten mithilfe der Recommendations-API
 * Konfigurieren und Verwalten benutzerdefinierter Kriterien mithilfe der Recommendations-API
-* Erfahren Sie, wie Sie Recommendations mit der Bereitstellungs-API verwenden können, um Recommendations-Ergebnisse auf Nicht-HTML-Geräten zu verwenden
+* Erfahren Sie, wie Sie Recommendations mit der Bereitstellungs-API verwenden können, um Recommendations-Ergebnisse auf Geräten zu nutzen, die nicht zu HTML gehören
 
 ## Zielgruppe
 
 Dieses Handbuch richtet sich an Entwicklerinnen und Entwickler, die noch nicht mit Target-APIs oder Recommendations-APIs vertraut sind.
 
-## Voraussetzungen  {#prerequisites}
+## Voraussetzungen {#prerequisites}
 
 Die Target-Admin-APIs erfordern eine Einrichtung der [Adobe-Authentifizierung](../configure-authentication.md). Stellen Sie sicher, dass Sie dies konfiguriert haben, bevor Sie die Recommendations-API verwenden.
 

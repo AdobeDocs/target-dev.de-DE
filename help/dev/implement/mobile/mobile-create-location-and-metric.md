@@ -4,10 +4,17 @@ description: Sehen Sie sich den Beispiel-Code an, um zu erfahren, wie Sie Stando
 title: Wie erstelle ich  [!DNL Target]  und Erfolgsmetriken in einer iOS-App?
 feature: Implement Mobile
 exl-id: 755c8b26-5c60-48fc-9e7e-5e97a25edb78
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/frolzqCgdL0iz5Z3E8OaJmP6yiVq7jEYiWn6LD4bocA
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 66%
+source-wordcount: 469
+ht-degree: 63%
 
 ---
 
@@ -17,7 +24,7 @@ Um [!DNL Target] in Ihrer Mobile App zu verwenden, erstellen Sie einen Standort 
 
 >[!IMPORTANT]
 >
->Unterstützung für die [!DNL Adobe Mobile] Version 4.*x* SDKs sind seit dem 31. August 2021 ausgelaufen und werden für [!DNL Adobe Target] Mobilbenutzer nicht mehr empfohlen.
+>Die Unterstützung für die [!DNL Adobe Mobile] Version 4.*x*-SDKs endete am 31. August 2021 und wird für [!DNL Adobe Target] Mobilbenutzer nicht mehr empfohlen.
 >
 >Die [Adobe Experience Platform SDK für Mobile Apps](https://developer.adobe.com/client-sdks/documentation/){target=_blank} ist die empfohlene Lösung für [!DNL Adobe Experience Cloud] Lösungen und Services in Ihren Mobile Apps.
 

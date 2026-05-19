@@ -4,9 +4,29 @@ description: Erfahren Sie, wie Sie [!UICONTROL on-device decisioning] mit der at
 title: Wie funktioniert die geräteinterne Entscheidungsfindung mit der at.js-JavaScript-Bibliothek?
 feature: at.js
 exl-id: bd0e062f-c259-46f3-adba-e380af058ac8
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/5cYQQDwAwUbKanR3Wbt7ckKnGwHvz3arqn0zjdz6SBc
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '3478'
+source-wordcount: 3621
 ht-degree: 4%
 
 ---
@@ -25,16 +45,16 @@ Ab Version 2.5.0 bietet at.js [!UICONTROL on-device decisioning]. [!UICONTROL On
 
 Zu den Vorteilen von [!UICONTROL on-device decisioning] gehören:
 
-* **Schnelle Entscheidungen und Erlebnisse liefern** Bucketing und die Entscheidungsfindung werden im Arbeitsspeicher und im Browser durchgeführt, um das Blockieren von Netzwerkanfragen zu vermeiden.
-* **Verbesserung der Anwendungsleistung.** führen Sie Experimente durch und stellen Sie Ihren Kunden und Benutzern Personalisierungen bereit, ohne die Erlebnisse der Endbenutzer zu beeinträchtigen.
-* **Verbesserung der Google Site-Qualitätsbewertung.** Da die Entscheidungsfindung im Arbeitsspeicher stattfindet, verbessern Sie den Google-Site-Qualitätsindex Ihres Online-Unternehmens, damit es von Verbrauchern besser gefunden werden kann.
-* **Lernen Sie von der Echtzeit-Analyse.** Gewinnen Sie Erkenntnisse aus Ihrer Aktivitätsleistung in Echtzeit über die Berichterstellung [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=de) (A4T). Mit A4T können Sie Ihre Strategie in kritischen Momenten umstellen.
+* **Schnelle Entscheidungen und Erlebnisse.** Bucketing und Entscheidungsfindung werden im Arbeitsspeicher und im Browser durchgeführt, um das Blockieren von Netzwerkanfragen zu vermeiden.
+* **Verbesserung der Anwendungsleistung.** Führen Sie Experimente durch und stellen Sie Ihren Kunden und Benutzern Personalisierung bereit, ohne die Erlebnisse der Endbenutzer zu beeinträchtigen.
+* **Google Site-Qualitätsbewertung verbessern.** Da die Entscheidungsfindung im Arbeitsspeicher stattfindet, verbessern Sie den Google-Site-Qualitätsindex Ihres Online-Unternehmens, damit es von Verbrauchern besser gefunden werden kann.
+* **Lernen aus der Echtzeit-Analyse.** Erkenntnisse aus Ihrer Aktivitätsleistung in Echtzeit über die Berichterstellung von [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=de) (A4T) gewinnen. Mit A4T können Sie Ihre Strategie in kritischen Momenten umstellen.
 
 ## Unterstützte Funktionen
 
 Die [!DNL Adobe Target] JS-SDK bietet Kundinnen und Kunden die Flexibilität, bei Entscheidungen zwischen Leistung und Aktualität der Daten zu wählen. Mit anderen Worten: Wenn die Bereitstellung der relevantesten und ansprechendsten personalisierten Inhalte über maschinelles Lernen für Sie am wichtigsten ist, sollte ein Live-Server-Aufruf erfolgen. Wenn die Leistung jedoch kritischer ist, sollte eine Entscheidung auf dem Gerät und im Arbeitsspeicher getroffen werden. Informationen zum [!UICONTROL on-device decisioning] finden Sie in der Liste der unterstützten Funktionen:
 
-* Aktivitätstypen 
+* Aktivitätstypen
 * Zielgruppen-Targeting
 * Zuordnungsmethode
 
@@ -73,10 +93,10 @@ Die folgende Liste entspricht den Zahlen im Diagramm:
 | Schritt | Beschreibung |
 | --- | --- |
 | 1 | Die Experience Cloud-Besucher-ID wird vom [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=de&) abgerufen. |
-| 2 | Die Bibliothek at.js wird synchron geladen und im Dokumentenkörper verborgen.<br />   Die at.js-Bibliothek kann auch asynchron geladen werden, wobei ein optionales pre-hiding-Snippet auf der Seite implementiert ist. |
+| 2 | Die at.js-Bibliothek wird synchron geladen und blendet den Hauptteil des Dokuments aus.<br />   Die at.js-Bibliothek kann auch asynchron geladen werden, wobei ein optionales pre-hiding-Snippet auf der Seite implementiert ist. |
 | 3 | Die at.js-Bibliothek blendet den Hauptteil aus, um Flackern zu verhindern. |
 | 4 | Es wird eine Seitenladeanfrage gestellt, die alle konfigurierten Parameter wie (ECID, Kunden-ID, benutzerdefinierte Parameter, Benutzerprofil usw.) enthält. |
-| 5 | Profilskripte werden ausgeführt und dann in den Profilspeicher eingespeist.<br />Der Profilspeicher fordert qualifizierte Zielgruppen aus der Zielgruppenbibliothek an (z. B. aus Adobe Analytics, Adobe Audience Manager freigegebene Zielgruppen).<br />Kundenattribute werden in einem Batch-Prozess an den Profilspeicher übermittelt. |
+| 5 | Profilskripte werden ausgeführt und fließen dann in den Profilspeicher ein.<br />Der Profilspeicher fordert qualifizierte Zielgruppen aus der Zielgruppenbibliothek an (z. B. aus Adobe Analytics, Adobe Audience Manager freigegebene Zielgruppen usw.).<br />Kundenattribute werden in einem Batch-Prozess an den Profilspeicher gesendet. |
 | 6 | Der Profilspeicher wird für die Zielgruppen-Qualifizierung und Bucketing zum Filtern von Aktivitäten verwendet. |
 | 7 | Der resultierende Inhalt wird ausgewählt, nachdem das Erlebnis aus Live-[!DNL Target]-Aktivitäten ermittelt wurde. |
 | 8 | Die at.js-Bibliothek blendet die entsprechenden Elemente auf der Seite aus, die mit dem Erlebnis verknüpft sind, das gerendert werden muss. |
@@ -122,7 +142,7 @@ Die folgende Liste entspricht den Zahlen im Diagramm:
 | 9 | Die at.js-Bibliothek bearbeitet das DOM, um das Erlebnis aus dem zwischengespeicherten JSON-Regel-Artefakt zu rendern. |
 | 10 | Das Erlebnis wird für den Besucher dargestellt. |
 | 11 | Die gesamte Webseite wird geladen. |
-| 12 | Analytics-Daten werden an Datenerfassungs-Server gesendet. Zielgruppendaten werden über die SDID mit den Analytics-Daten abgeglichen und in den Analytics-Reporting-Speicher verarbeitet. Analytics-Daten können dann sowohl in Analytics als auch in [!DNL Target] über [!UICONTROL Analytics for Target] (A4T)-Berichte angezeigt werden. |
+| 12 | Analytics-Daten werden an Datenerfassungsserver übermittelt. Zielgruppendaten werden über die SDID mit den Analytics-Daten abgeglichen und in den Analytics-Reporting-Speicher verarbeitet. Analytics-Daten können dann sowohl in Analytics als auch in [!DNL Target] über [!UICONTROL Analytics for Target] (A4T)-Berichte angezeigt werden. |
 
 Das folgende Diagramm veranschaulicht die Interaktion zwischen Ihrem Besucher, dem Browser, at.js 2.5.0+ und dem zwischengespeicherten JSON-Regel-Artefakt für den nachfolgenden Seitenaufruf oder wiederkehrenden Besuch des Besuchers. Da das JSON-Regelartefakt bereits zwischengespeichert und im Browser verfügbar ist, wird die Entscheidung sofort ohne einen blockierenden Netzwerkaufruf getroffen. Dieses Flussdiagramm erfasst die nachfolgende Seitennavigation oder wiederkehrende Besucher.
 
@@ -147,7 +167,7 @@ Die folgende Liste entspricht den Zahlen im Diagramm:
 | 7 | Die at.js-Bibliothek bearbeitet das DOM, um das Erlebnis aus dem zwischengespeicherten JSON-Regel-Artefakt zu rendern. |
 | 8 | Das Erlebnis wird für den Besucher dargestellt. |
 | 9 | Die gesamte Webseite wird geladen. |
-| 10 | Analytics-Daten werden an Datenerfassungs-Server gesendet. Zielgruppendaten werden über die SDID mit den Analytics-Daten abgeglichen und in den Analytics-Reporting-Speicher verarbeitet. Analytics-Daten können dann sowohl in Analytics als auch in [!DNL Target] über [!UICONTROL Analytics for Target] (A4T)-Berichte angezeigt werden. |
+| 10 | Analytics-Daten werden an Datenerfassungsserver übermittelt. Zielgruppendaten werden über die SDID mit den Analytics-Daten abgeglichen und in den Analytics-Reporting-Speicher verarbeitet. Analytics-Daten können dann sowohl in Analytics als auch in [!DNL Target] über [!UICONTROL Analytics for Target] (A4T)-Berichte angezeigt werden. |
 
 ### Hybrid
 
@@ -187,7 +207,7 @@ Die folgende Liste entspricht den Zahlen im Diagramm:
 | 12 | Die at.js-Bibliothek bearbeitet das DOM, um das Erlebnis aus der [!DNL Target] Edge Network zu rendern. |
 | 13 | Das Erlebnis wird für den Besucher dargestellt. |
 | 14 | Die gesamte Webseite wird geladen. |
-| 15 | Analytics-Daten werden an Datenerfassungs-Server gesendet. Zielgruppendaten werden über die SDID mit den Analytics-Daten abgeglichen und in den Analytics-Reporting-Speicher verarbeitet. Analytics-Daten können dann sowohl in Analytics als auch in [!DNL Target] über [!UICONTROL Analytics for Target] (A4T)-Berichte angezeigt werden. |
+| 15 | Analytics-Daten werden an Datenerfassungsserver übermittelt. Zielgruppendaten werden über die SDID mit den Analytics-Daten abgeglichen und in den Analytics-Reporting-Speicher verarbeitet. Analytics-Daten können dann sowohl in Analytics als auch in [!DNL Target] über [!UICONTROL Analytics for Target] (A4T)-Berichte angezeigt werden. |
 
 Das folgende Diagramm veranschaulicht die Interaktion zwischen Ihrem Besucher, dem Browser, at.js 2.5.0+ und dem zwischengespeicherten JSON-Regelartefakt für eine nachfolgende Seitennavigation oder einen erneuten Besuch. In diesem Diagramm sollten Sie sich nur auf den Anwendungsfall konzentrieren, dass eine geräteinterne Entscheidung für die nachfolgende Seitennavigation oder den erneuten Besuch getroffen wird. Beachten Sie, dass je nachdem, welche Aktivitäten für bestimmte Seiten aktiv sind, ein Server-seitiger Aufruf erfolgen kann, um Server-seitige Entscheidungen auszuführen.
 
@@ -213,7 +233,7 @@ Die folgende Liste entspricht den Zahlen im Diagramm:
 | 8 | Die at.js-Bibliothek bearbeitet das DOM, um das Erlebnis aus dem zwischengespeicherten JSON-Regel-Artefakt zu rendern. |
 | 9 | Das Erlebnis wird für den Besucher dargestellt. |
 | 10 | Die gesamte Webseite wird geladen. |
-| 11 | Analytics-Daten werden an Datenerfassungs-Server gesendet. Zielgruppendaten werden über die SDID mit den Analytics-Daten abgeglichen und in den Analytics-Reporting-Speicher verarbeitet. Analytics-Daten können dann sowohl in Analytics als auch in [!DNL Target] über [!UICONTROL Analytics for Target] (A4T)-Berichte angezeigt werden. |
+| 11 | Analytics-Daten werden an Datenerfassungsserver übermittelt. Zielgruppendaten werden über die SDID mit den Analytics-Daten abgeglichen und in den Analytics-Reporting-Speicher verarbeitet. Analytics-Daten können dann sowohl in Analytics als auch in [!DNL Target] über [!UICONTROL Analytics for Target] (A4T)-Berichte angezeigt werden. |
 
 ## Wie aktiviere ich [!UICONTROL on-device decisioning]?
 

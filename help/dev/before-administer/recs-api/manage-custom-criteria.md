@@ -6,9 +6,16 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: 930
 ht-degree: 0%
 
 ---
@@ -116,4 +123,4 @@ In diesem Fall zeigt der erwartete 404-Fehler an, dass die gelöschten Kriterien
 
 Herzlichen Glückwunsch! Sie können jetzt mithilfe der Recommendations-API benutzerdefinierte Kriterien erstellen, auflisten, bearbeiten, löschen und Details dazu abrufen. Im nächsten Abschnitt verwenden Sie die Target-Bereitstellungs-API zum Abrufen von Empfehlungen.
 
-&lt;!— [Weiter &quot;Recommendations mit der Server-seitigen Bereitstellungs-API abrufen“ >](fetch-recs-server-side-delivery-api.md) —>
+&lt;!— [Nächste „Empfehlungen mit der Server-seitigen Bereitstellungs-API abrufen“ >](fetch-recs-server-side-delivery-api.md) —>

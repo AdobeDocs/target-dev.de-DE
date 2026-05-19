@@ -4,10 +4,15 @@ description: Verwenden Sie Vorschau-Links auf Mobilgeräten, um End-to-End-QA f�
 title: Wie verwende ich mobile Vorschau-Links in  [!DNL Adobe Target] -Mobile?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: 15e42d0fb049f9243ff5468ff5f22a8e79c55c79
+TQID: https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 23%
+source-wordcount: 552
+ht-degree: 18%
 
 ---
 
@@ -17,7 +22,7 @@ Verwenden Sie Vorschau-Links auf Mobilgeräten, um eine einfache End-to-End-QA f
 
 Mit der Mobile-Vorschau-Funktion können Sie Ihre Mobile-App-Aktivitäten vollständig testen, bevor Sie sie live starten.
 
-## Voraussetzungen 
+## Voraussetzungen
 
 1. **Unterstützte Version von SDK verwenden:** Die Mobile-Vorschaufunktion erfordert, dass Sie die entsprechende Version des [!DNL Adobe Mobile SDK] in Ihre entsprechenden Apps herunterladen und installieren.
 
@@ -74,10 +79,10 @@ Mit der Mobile-Vorschau-Funktion können Sie Ihre Mobile-App-Aktivitäten vollst
 
 1. Wählen Sie die gewünschte Erlebniskombination aus und klicken Sie dann auf **[!UICONTROL Launch Experiences]**.
 
-   |![mobile preview 1](assets/mobile-preview-experience-selection-1.png)|![mobile Vorschau 2](assets/mobile-preview-experience-result-1-france.png)|![mobile Vorschau 3](assets/mobile-preview-experience-result-1-shipfree.png)|
-|![mobile Vorschau 4](assets/mobile-preview-experience-selection-2.png)|![mobile Vorschau 5](assets/mobile-preview-experience-result-2-aus.png)|![mobile Vorschau 6](assets/mobile-preview-experience-result-2-10off.png)|
+   |![Mobile Preview 1](assets/mobile-preview-experience-selection-1.png)|![Mobile Preview 2](assets/mobile-preview-experience-result-1-france.png)|![Mobile Preview 3](assets/mobile-preview-experience-result-1-shipfree.png)|
+|![Mobile Preview 4](assets/mobile-preview-experience-selection-2.png)|![Mobile Preview 5](assets/mobile-preview-experience-result-2-aus.png)|![Mobile Preview 6](assets/mobile-preview-experience-result-2-10off.png)|
 
-## Einschränkungen  
+## Einschränkungen
 
 * Die Ansicht muss erneut geladen werden, damit der neue Inhalt angezeigt wird, nachdem auf die Schaltfläche **[!UICONTROL Launch Experiences]** geklickt wurde. Die einfachste Möglichkeit ist, zu einem anderen Bildschirm zu wechseln und danach zu dem Bildschirm zurückzukehren, auf dem die Änderung bewirkt werden soll.
 * Die mobile Vorschau wird nicht für frühere Android-Versionen als API-19 (KitKat) unterstützt.

@@ -4,10 +4,21 @@ description: Erfahren Sie, wie Sie die Authentifizierung für Batch-Aktualisieru
 title: Wie verwende ich Profil-API-Einstellungen, um Batch-Aktualisierungen zu aktivieren oder zu deaktivieren?
 feature: APIs/SDKs
 exl-id: 968f33d0-296b-4248-8c9a-8e6f3077bdfa
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/-KYSphaCrm0ICK7g92v9x-uK--nwirs4-DWBR3G5rTM
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 28%
+source-wordcount: 347
+ht-degree: 33%
 
 ---
 
@@ -17,7 +28,7 @@ Aktivieren oder deaktivieren Sie die Authentifizierung für Batch-Aktualisierung
 
 [!DNL Adobe Target] erstellt und verwaltet ein Profil für jeden einzelnen Benutzer. Dieses Profil wird im [!DNL Target] Edge-Cluster gespeichert und nach jedem Besuch in Echtzeit aktualisiert. Sie können ein Profil auch einzeln oder stapelweise über die API aktualisieren.
 
-Um die Sicherheit zu erhöhen, können Sie festlegen, dass beim API-Aufruf für die Massenaktualisierung ein gültiges Zugriffstoken in der -Kopfzeile der Anfrage übergeben werden muss.
+Für noch mehr Sicherheit können Sie festlegen, dass beim API-Aufruf für die Massenaktualisierung ein gültiges Zugriffstoken im Header der Anforderung übergeben werden muss.
 
 **So erfordern Sie eine Authentifizierung und generieren ein Zugriffs-Token über die [!DNL Target] Benutzeroberfläche:**
 

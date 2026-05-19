@@ -3,9 +3,20 @@ title: Fehlerbehebung bei der geräteinternen Entscheidungsfindung
 description: Informationen zur Fehlerbehebung bei [!UICONTROL on-device decisioning]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
-source-git-commit: 1d892d4d4d6f370f7772d0308ee0dd0d5c12e700
+TQID: https://experienceleague.adobe.com/Fp25tLDtuk-CqqcbofshX2-0MzQzayE2xN8OvNT3zVo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: 1158
 ht-degree: 0%
 
 ---
@@ -20,9 +31,9 @@ ht-degree: 0%
 1. Stellen Sie sicher, dass [!DNL Target] Traces aktiviert ist
 1. Stellen Sie sicher[!UICONTROL on-device decisioning] dass *Regelartefakt* gemäß dem definierten Abrufintervall abgerufen und zwischengespeichert wurde.
 1. Validieren der Inhaltsbereitstellung über das zwischengespeicherte Regelartefakt durch Erstellen einer Test-[!UICONTROL on-device decisioning]-Aktivität über den formularbasierten Experience Composer.
-1. Inspect - Fehler beim Senden von Benachrichtigungen
+1. Überprüfen von Fehlern beim Senden von Benachrichtigungen
 
-## 1. Stellen Sie sicher, dass der Logger konfiguriert ist
+## &#x200B;1. Stellen Sie sicher, dass der Logger konfiguriert ist
 
 Stellen Sie bei der Initialisierung von SDK sicher, dass Sie die Protokollierung aktivieren.
 
@@ -56,7 +67,7 @@ Außerdem sollte JVM mit dem folgenden Befehlszeilenparameter gestartet werden:
 java -Dorg.slf4j.simpleLogger.defaultLogLevel=DEBUG ...
 ```
 
-## 2. Stellen Sie sicher[!DNL Target] dass „Traces“ aktiviert ist
+## &#x200B;2. [!DNL Target] aktiviert ist
 
 Durch Aktivieren von Traces werden zusätzliche Informationen aus [!DNL Adobe Target] in Bezug auf das Regelartefakt ausgegeben.
 
@@ -113,7 +124,7 @@ Durch Aktivieren von Traces werden zusätzliche Informationen aus [!DNL Adobe Ta
      AT: LD.ArtifactProvider artifact received - status=200
    ```
 
-## 3. Stellen Sie sicher[!UICONTROL on-device decisioning] dass *Regelartefakt* gemäß dem definierten Abrufintervall abgerufen und zwischengespeichert wurde.
+## &#x200B;3. Stellen Sie sicher[!UICONTROL on-device decisioning] dass *Regelartefakt* gemäß dem definierten Abrufintervall abgerufen und zwischengespeichert wurde.
 
 1. Warten Sie die Dauer des Abrufintervalls (standardmäßig 20 Minuten) und stellen Sie sicher, dass das Artefakt vom SDK abgerufen wird. Dieselben Terminal-Protokolle werden ausgegeben.
 
@@ -135,7 +146,7 @@ Durch Aktivieren von Traces werden zusätzliche Informationen aus [!DNL Adobe Ta
      },
    ```
 
-## 4. Validieren der Inhaltsbereitstellung über das zwischengespeicherte Regelartefakt durch Erstellen einer Test-[!UICONTROL on-device decisioning]-Aktivität über den formularbasierten Experience Composer
+## &#x200B;4. Validieren der Inhaltsbereitstellung über das zwischengespeicherte Regelartefakt durch Erstellen einer [!UICONTROL on-device decisioning]-Aktivität über den formularbasierten Experience Composer
 
 1. Navigieren Sie zur [!DNL Target]-Benutzeroberfläche in Experience Cloud
 
@@ -149,7 +160,7 @@ Durch Aktivieren von Traces werden zusätzliche Informationen aus [!DNL Adobe Ta
 
    ![ALT-Bild](assets/asset-mbox-location-ui.png)
 
-1. Ändern Sie den Inhalt entweder in ein HTML- oder JSON-Angebot. Dieser wird in der [!DNL Target] an Ihr Programm zurückgegeben. Belassen Sie die Zielgruppenbestimmung für die Aktivität auf „Alle Besucher“ und wählen Sie eine beliebige Metrik aus, die Sie verwenden möchten. Benennen Sie die Aktivität, speichern Sie sie, und aktivieren Sie sie dann, um sicherzustellen, dass die verwendete mbox/location nur für die Entwicklung vorgesehen ist.
+1. Ändern Sie den Inhalt entweder in ein HTML-Angebot oder in ein JSON-Angebot. Dieser wird in der [!DNL Target] an Ihr Programm zurückgegeben. Belassen Sie die Zielgruppenbestimmung für die Aktivität auf „Alle Besucher“ und wählen Sie eine beliebige Metrik aus, die Sie verwenden möchten. Benennen Sie die Aktivität, speichern Sie sie, und aktivieren Sie sie dann, um sicherzustellen, dass die verwendete mbox/location nur für die Entwicklung vorgesehen ist.
 
    ![ALT-Bild](assets/asset-target-content-ui.png)
 
@@ -201,7 +212,7 @@ Durch Aktivieren von Traces werden zusätzliche Informationen aus [!DNL Adobe Ta
    Response:  <div>test</div>
    ```
 
-## Inspect - Fehler beim Senden von Benachrichtigungen
+## Überprüfen von Fehlern beim Senden von Benachrichtigungen
 
 Bei Verwendung der geräteinternen Entscheidungsfindung werden Benachrichtigungen für GET-Angebote automatisch gesendet, um Anforderungen auszuführen. Diese Anfragen werden im Hintergrund ohne Nachfrage gesendet. Sie können alle Fehler überprüfen, indem Sie ein Ereignis namens `sendNotificationError` abonnieren. Hier ist ein Codebeispiel, das zeigt, wie Benachrichtigungsfehler mit der Node.js-SDK abonniert werden.
 

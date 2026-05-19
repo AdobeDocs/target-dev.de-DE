@@ -4,10 +4,26 @@ description: Erfahren Sie mehr über Target und die Datenschutz-Grundverordnung 
 title: Wie handhabt Target Datenschutzbestimmungen?
 feature: Privacy & Security
 exl-id: 40bac3c5-8e6f-4a90-ac0c-eddce1dbe6c0
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/W-aYBengoNH5uKTcFZNHARelgAFX3-QrZixh09n0FU0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '2329'
-ht-degree: 62%
+source-wordcount: 2432
+ht-degree: 61%
 
 ---
 
@@ -15,7 +31,7 @@ ht-degree: 62%
 
 Hier erhalten Sie Informationen zur Datenschutz-Grundverordnung (DSGVO) der Europäischen Union, zum California Consumer Privacy Act (CCPA) und zu anderen Datenschutzbestimmungen. Erfahren Sie, wie sich diese Vorschriften auf Ihr Unternehmen und Adobe Target auswirken.
 
-## Überblick über den Datenschutz und die Datenschutz-Grundverordnung (DSGVO) 
+## Überblick über den Datenschutz und die Datenschutz-Grundverordnung (DSGVO)
 
 Am 25. Mai 2018 trat die DSGVO der Europäischen Union in Kraft. Weitere Informationen darüber, was diese Verordnung für Sie bedeutet, finden Sie unter [DSGVO und Ihr Unternehmen](https://business.adobe.com/de/privacy/general-data-protection-regulation.html).
 
@@ -32,7 +48,7 @@ Weitere Informationen finden Sie unter:
 
 * [Übersicht über Adobe Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=de)
 * [Privacy Service-API-Handbuch](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/overview.html?lang=de)
-* Übersicht über die [Privacy Service-Benutzeroberfläche](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=de)
+* [Übersicht über die Privacy Service-Benutzeroberfläche](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=de)
 
 ## Übersicht über den California Consumer Privacy Act (CCPA)
 
@@ -200,7 +216,7 @@ Zusätzlich zu den Anforderungen der Central Privacy Service enthält eine gült
 }
 ```
 
-### Welche Arten von Antworten von Target über die DSGVO-API kann ich erwarten? 
+### Welche Arten von Antworten von Target über die DSGVO-API kann ich erwarten?
 
 | Anfragestatus | Target-Antwortnachricht | Szenario |
 |--- |--- |--- |
@@ -261,7 +277,7 @@ Beispiel für eine Antwort der Target-API auf eine Zugriffsanfrage:
 | value | Die ID des Namespace/der Datenquelle. Siehe „Welche IDs werden unterstützt, um Kunden zu helfen, Datenzugriffs- und Löschungsanfragen gemäß DSGVO oder CCPA in Target nachzukommen?“ für gültige Werte. |
 | integration code | Bei Integrationscode handelt es sich um Anzeigenamen für Ihre Datenquellen, die statt Datenquellen-IDs verwendet werden, um Ihnen den Überblick über Ihre Datenquellen zu erleichtern. |
 
-Wenn mehrere Werte zur Bestimmung von Profilen angegeben werden, verfügt jede gültige ID über eine Profildatei. Eine oder mehrere Profildateien werden in Form einer JSON-Antwort des Zielprofils über die zentrale DSGVO-API an das zentrale DSGVO-Azure Blob gesendet.
+Wenn mehrere Werte zur Bestimmung von Profilen angegeben werden, verfügt jede gültige ID über eine Profildatei. Eine oder mehrere Profildateien werden in Form einer JSON-Antwort des Zielprofils über die zentrale DSGVO-API an das zentrale DSGVO-Azure-Blob gesendet.
 
 Im Folgenden finden Sie ein Beispiel für eine Target-Profil-JSON:
 
@@ -292,7 +308,7 @@ Die im Beispiel verwendeten JSON-Felder des Profils werden in der folgenden Tabe
 >
 >Dieses Code-Beispiel ist eine gekürzte Version einer JSON-Datei des Zielprofils. Bei zahlreichen Feldern im Target-Profil handelt es sich nicht um Standardfelder. Die zurückgegebenen Daten hängen von den Informationen im jeweiligen Besucherprofil ab.
 
-### Unterstützt Target IP-Verschleierung? 
+### Unterstützt Target IP-Verschleierung?
 
 Target unterstützt die IP-Verschleierung, wenn Sie sie im Rahmen Ihrer DSGVO- oder CCPA-Implementierungsstrategie verwenden. Weitere Informationen finden Sie unter [Datenschutz](privacy.md#replacement-of-last-octet-of-ip-addresses).
 

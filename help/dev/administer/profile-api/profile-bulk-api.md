@@ -4,10 +4,22 @@ description: Erfahren Sie, wie Sie  [!DNL Adobe Target] [!UICONTROL Bulk Profile
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 23cbece45828cf057594445b010a353d865d36ed
+TQID: https://experienceleague.adobe.com/EVlP71oFI-NIFoTe9fyx2Xzsr9v-sZq0JGdpti1XI64
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 6%
+source-wordcount: 1063
+ht-degree: 7%
 
 ---
 
@@ -17,7 +29,7 @@ Mit dem [!DNL Adobe Target] [!UICONTROL Bulk Profile Update API] können Sie Ben
 
 Mit dem [!UICONTROL Bulk Profile Update API] können Sie bequem detaillierte Besucherprofildaten in Form von Profilparametern senden, damit viele Benutzer aus beliebigen externen Quellen [!DNL Target] können. Zu den externen Quellen können CRM (Customer Relationship Management)- oder POS (Point of Sale)-Systeme gehören, die normalerweise nicht auf einer Web-Seite verfügbar sind.
 
-| Version  | URL-Beispiel | Funktionen |
+| Version | URL-Beispiel | Funktionen |
 | --- | --- | --- |
 | v1 | `http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/profile/batchUpdate` | Unterstützung nur für die Massenaktualisierung von Profilen. |
 | v2 | `http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate` | <ul><li>Profil erstellen, wenn nicht gefunden.</li><li>Statusaktualisierung pro Zeile.</li></ul> |
@@ -64,7 +76,7 @@ batch=pcId,param1,param2,param3,param4
 Sie verweisen im POST-Aufruf an [!DNL Target] Server auf diese Datei, um die Datei zu verarbeiten. Beachten Sie beim Erstellen der Batch-Datei Folgendes:
 
 * In der ersten Zeile der Datei müssen die Spaltenüberschriften angegeben werden.
-* Die erste Kopfzeile sollte entweder ein `pcId` oder ein `thirdPartyId` sein. Die [!UICONTROL Marketing Cloud visitor ID] wird nicht unterstützt. [!UICONTROL pcId] ist eine [!DNL Target] Besucher-ID. `thirdPartyId` ist eine von der Client-Anwendung angegebene ID, die über einen Mbox-Aufruf als [!DNL Target] an `mbox3rdPartyId` übergeben wird. Sie muss hier als `thirdPartyId` bezeichnet werden.
+* Die erste Kopfzeile sollte entweder ein `pcId` oder ein `thirdPartyId` sein. Die [!UICONTROL Marketing Cloud visitor ID] wird nicht unterstützt. [!UICONTROL pcId] ist eine [!DNL Target] Besucher-ID. `thirdPartyId` ist eine von der Client-Anwendung angegebene ID, die über einen Mbox-Aufruf als `mbox3rdPartyId` an [!DNL Target] übergeben wird. Sie muss hier als `thirdPartyId` bezeichnet werden.
 * Parameter und Werte, die Sie in der Batch-Datei angeben, müssen aus Sicherheitsgründen mit UTF-8 URL-codiert sein. Parameter und Werte können zur Verarbeitung über HTTP-Anfragen an andere Edge-Knoten weitergeleitet werden.
 * Die Parameter dürfen nur das Format `paramName` haben. Parameter werden in [!DNL Target] als `profile.paramName` angezeigt.
 * Wenn Sie [!UICONTROL Bulk Profile Update API] v2 verwenden, müssen Sie nicht alle Parameterwerte für jede `pcId` angeben. Profile werden für alle `pcId` oder `mbox3rdPartyId` erstellt, die nicht in [!DNL Target] gefunden werden. Wenn Sie v1 verwenden, werden Profile nicht für fehlende pcIds oder mbox3rdPartyIds erstellt. Weitere Informationen finden Sie unter [Umgang mit leeren Werten in der  [!DNL Bulk Profile Update API]](#empty) unten.

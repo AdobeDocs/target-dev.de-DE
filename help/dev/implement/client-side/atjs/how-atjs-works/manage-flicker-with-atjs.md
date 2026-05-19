@@ -4,9 +4,21 @@ description: Erfahren Sie, wie at.js und [!DNL Target] Flimmern verhindern (Stan
 title: Wie verwaltet at.js Flackern?
 feature: at.js
 exl-id: 8aacf254-ec3d-4831-89bb-db7f163b3869
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/r8uyzkf1gSHmppyDHPOcn5jrH86Hedb4ArMmtigq93w
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: 717
 ht-degree: 57%
 
 ---
@@ -21,13 +33,13 @@ Ein Flackern tritt dann auf, wenn Besuchern vorübergehend Standardinhalt angeze
 
 Wenn Sie die Einstellung [Globale Mbox automatisch erstellen](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md) bei der Konfigurierung von at.js aktivieren, reduziert at.js Flackern durch Ändern der Deckkrafteinstellung beim Laden der Seite. Beim Laden von at.js wird die Deckkrafteinstellung des `<body>`-Elements in „0“ geändert, sodass die Seite für Besuchende zunächst unsichtbar wird. Nachdem eine Antwort von [!DNL Target] eingegangen ist - oder wenn ein Fehler mit der [!DNL Target]-Anfrage erkannt wird - setzt at.js die Deckkraft auf „1“ zurück. So wird gewährleistet, dass der Besucher die Seite erst sieht, nachdem der Inhalt Ihrer Aktivitäten angewendet wurde.
 
-Wenn Sie die Einstellung bei der Konfiguration von at.js aktivieren, wird die Deckkraft des HTML-BODY von at.js auf 0 gesetzt. Nachdem eine Antwort von [!DNL Target] eingegangen ist, setzt at.js die Deckkraft des HTML-Textkörpers auf 1 zurück.
+Wenn Sie die Einstellung bei der Konfiguration von at.js aktivieren, wird die Deckkraft des HTML-BODY von at.js auf 0 gesetzt. Nachdem eine Antwort von [!DNL Target] eingegangen ist, setzt at.js die HTML-TEXTKÖRPERDECKKRAFT auf 1 zurück.
 
 Mit einer Deckkraft von 0 ist der Seiteninhalt nicht sichtbar, sodass Flackern verhindert wird. Der Browser kann die Seite jedoch bereits rendern und lädt alle nötigen Assets wie CSS, Bilder usw.
 
 Wenn `opacity: 0` in Ihrer Implementierung nicht funktioniert, können Sie Flackern auch handhaben, indem Sie `bodyHiddenStyle` anpassen und auf `body {visibility:hidden !important}` setzen. Sie können entweder `body {opacity:0 !important}` oder `body {visibility:hidden !important}` verwenden, je nachdem, was für Ihre spezifischen Umstände am besten geeignet ist.
 
-Die folgende Abbildung zeigt die Aufrufe „Hide Body“ und „Show Body“ sowohl in at.js 1.*x* als auch in at.js 2.x.
+Die folgende Abbildung zeigt die Aufrufe von Hide Body und Show Body sowohl in at.js 1.*x* als auch in at.js 2.x.
 
 **at.js 2.x**
 
@@ -35,7 +47,7 @@ Die folgende Abbildung zeigt die Aufrufe „Hide Body“ und „Show Body“ sow
 
 ![Target-Fluss: at.js-Seitenladeanfrage](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png "Target-Fluss: at.js-Seitenladeanfrage"){zoomable="yes"}
 
-**at.js 1.*x***  
+**at.js 1.*x***
 
 (Klicken Sie auf das Bild, um es auf die volle Breite zu erweitern.)
 
@@ -47,7 +59,7 @@ Weitere Informationen zum Überschreiben mit `bodyHiddenStyle` finden Sie unter 
 
 Das asynchrone Laden von at.js eignet sich hervorragend, um zu verhindern, dass das Rendern des Browsers blockiert wird. Bei dieser Technik kann es jedoch zu Flackereffekten auf der Webseite kommen.
 
-Um ein Flackern zu vermeiden, können Sie ein pre-hiding-Snippet verwenden, das angezeigt wird, nachdem die entsprechenden HTML-Elemente von Target personalisiert wurden.
+Sie können das Flackern verhindern, indem Sie einen vorab ausgeblendeten Ausschnitt verwenden, der sichtbar ist, nachdem die relevanten HTML-Elemente von Target personalisiert wurden.
 
 at.js kann asynchron geladen werden, entweder direkt in die Seite eingebettet oder über einen Tag-Manager (z. B. Adobe Experience Platform Launch).
 

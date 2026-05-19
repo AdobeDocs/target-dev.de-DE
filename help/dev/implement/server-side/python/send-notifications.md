@@ -3,9 +3,18 @@ title: Senden von Anzeige- oder Klickbenachrichtigungen an  [!DNL Adobe Target] 
 description: Erfahren Sie, wie Sie mit sendNotifications() Anzeigen- oder Klick-Benachrichtigungen an senden können [!DNL Adobe Target]  um Messungen und Berichte durchzuführen.
 feature: APIs/SDKs
 exl-id: 03827b18-a546-4ec8-8762-391fcb3ac435
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/r7j2MaCmcZBEsx7TmTlKL9R-IKlncZJw5DhSfcKmVNU
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: 411
 ht-degree: 8%
 
 ---
@@ -155,7 +164,7 @@ notification = Notification(
 notification_request = DeliveryRequest(notifications=[notification])
 ```
 
-Beachten Sie, dass wir sowohl den Mbox-Status als auch das Ereignis-Token entsprechend dem [!DNL Target] Angebot in der Prefetch-Antwort eingeschlossen haben. Nachdem wir die Benachrichtigungsanfrage erstellt haben, können wir sie über die [!DNL Target]-API-Methode an `send_notifications()` senden:
+Beachten Sie, dass wir sowohl den Mbox-Status als auch das Ereignis-Token entsprechend dem [!DNL Target] Angebot in der Prefetch-Antwort eingeschlossen haben. Nachdem wir die Benachrichtigungsanfrage erstellt haben, können wir sie über die `send_notifications()`-API-Methode an [!DNL Target] senden:
 
 ### Python
 

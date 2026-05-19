@@ -4,9 +4,21 @@ description: Erfahren Sie, wie Sie [!UICONTROL Recommendations] Aktivitäten in 
 title: Wie implementiere ich [!UICONTROL Recommendations] Aktivitäten?
 feature: Recommendations
 exl-id: af1e8b60-6dbb-451b-aa4f-e167d1800d1c
-source-git-commit: 94a4122244065384f487ca9a29dfa1b414168cb8
+TQID: https://experienceleague.adobe.com/XHlWA44OdaG0N-lQoXiKvCSUS2OBHwAsFRla4exneEI
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: 1544
 ht-degree: 21%
 
 ---
@@ -66,7 +78,7 @@ Um hochwertige Empfehlungen zu geben, müssen [!UICONTROL Target] die Produkte o
 
 Die meisten Kundinnen und Kunden sollten mindestens einen Feed implementieren. Anschließend können Sie Ihren Feed mit Aktualisierungen für häufig geänderte Attribute oder Elemente ergänzen, indem Sie entweder die Entitäten-API oder die On-the-Page-Methode verwenden.
 
-## &#x200B;3. Weitergabe von Verhaltensinformationen und -kontext
+## &#x200B;3. Übergeben von Verhaltensinformationen und Kontext
 
 Die Verhaltensinformationen und der Kontext, den Sie an [!UICONTROL Target] übergeben sollten, hängen von der Aktion ab, die Ihr Besucher durchführt und die häufig mit der Art der Seite verbunden ist, mit der Ihr Besucher interagiert.
 
@@ -143,11 +155,11 @@ function targetPageParams() {
 
 Wenn ein Kaufereignis auftritt, übergeben Sie die Identität des gekauften Artikels oder der gekauften Artikel. Siehe [Konversionen verfolgen](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions) im Artikel [Bereitstellen von at.js > Implementieren von [!UICONTROL Target] ohne Tag-Manager](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md) .
 
-## &#x200B;4. Konfigurieren globaler Ausschlüsse
+## &#x200B;4. Globale Ausschlüsse konfigurieren
 
 Schließen Sie alle Elemente auf globaler Ebene aus, die Sie einem Besucher nie empfehlen möchten. Siehe [Ausschlüsse](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/exclusions.html?lang=de) im Handbuch für *[!DNL Adobe Target]Business Practices*.
 
-## &#x200B;5. Konfigurieren der [!UICONTROL Recommendations]
+## &#x200B;5. [!UICONTROL Recommendations] konfigurieren
 
 Verwalten Sie Ihre Implementierung von [!UICONTROL Recommendations] mithilfe der Einstellungen.
 
@@ -168,4 +180,4 @@ Die folgenden Optionen sind verfügbar:
 
 ## &#x200B;6. (Optional) Verwalten von [!UICONTROL Recommendations] mithilfe von Admin-APIs
 
-Informationen zum Konfigurieren und Verwenden [&#x200B; APIs für die [!UICONTROL Recommendations]-Verwaltung &#x200B;](../../before-administer/recs-api/overview.md) Bereitstellungs-APIs für [!UICONTROL Target] finden Sie im praxisorientierten Handbuch zum Verwenden von [!UICONTROL Recommendations]-APIs .
+Informationen zum Konfigurieren und Verwenden [&#x200B; APIs für die [!UICONTROL Target]-Verwaltung &#x200B;](../../before-administer/recs-api/overview.md) Bereitstellungs-APIs für [!UICONTROL Recommendations] finden Sie im praxisorientierten Handbuch zum Verwenden von [!UICONTROL Recommendations]-APIs .

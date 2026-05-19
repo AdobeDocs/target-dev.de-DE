@@ -1,13 +1,26 @@
 ---
-keywords: Implementieren, Implementierung, Adobe Launch, Launch, Race, Redirect, Experience platform launch, platform launch, Tags, Adobe Platform, Implementierung2
+keywords: Implementieren, Implementierung, Adobe Launch, Launch, Race, Redirect, Experience Platform Launch, Platform Launch, Tags, Adobe Platform, Implementierung2
 description: Erfahren Sie, wie Sie die at [!DNL Adobe Target] js-Bibliothek mithilfe von  [!DNL Adobe Experience Platform], der bevorzugten Methode zur Implementierung von Target, implementieren.
 title: Wie implementiere ich  [!DNL Target]  mit  [!DNL Adobe Experience Platform]?
 feature: Implement Server-side
 exl-id: 0a325871-194a-479c-a3bf-294e3dde3e9a
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/5dXJlXYYvlu5sskrNED2j55SNmeggtWTb1jLgXRXAEo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 59%
+source-wordcount: 446
+ht-degree: 61%
 
 ---
 

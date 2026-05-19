@@ -3,18 +3,28 @@ title: Echtzeit-Profilsynchronisierung für mbox3rdPartyId
 description: Erfahren Sie, wie Sie mbox3rdPartyId mit dem  [!DNL Adobe Experience Platform Web SDK].
 keywords: Personalisierung;Target;Adobe Target;renderDecisions;sendEvent;mbox3rdPartyId;
 feature: AEP Web SDK
-source-git-commit: b694698b0957db499172af34ff3a61c10d22b0d1
+exl-id: 1c5067ef-38b3-4bf1-bd39-ea0f2cbd1074
+TQID: https://experienceleague.adobe.com/Ej2sYVnBD9orRTlsMQG85JJV7dvn-9gnABDa0b8uBlM
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 16%
+source-wordcount: 170
+ht-degree: 34%
 
 ---
 
 # mbox3rdPartyId verwenden
 
-Die `mbox3rdPartyId` in [!DNL Adobe Target] ist die Besucher-ID Ihres Unternehmens, wie z. B. die Mitgliedschafts-ID des Treueprogramms Ihres Unternehmens.
+Die `mbox3rdPartyId` in [!DNL Adobe Target] ist die Besucher-ID Ihres Unternehmens, wie z. B. die Zugehörigkeits-ID des Treueprogramms Ihres Unternehmens.
 
-Wenn sich ein Besucher auf der Website eines Unternehmens anmeldet, erstellt das Unternehmen in der Regel eine ID, die mit dem Konto, der Treuekarte, der Mitgliedschaftsnummer oder anderen Kennungen des Besuchers für dieses Unternehmen verknüpft ist. [Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=de)
+Wenn sich ein Besucher bei einer Unternehmenswebsite anmeldet, erstellt das Unternehmen in der Regel eine ID, die seinem Konto, seiner Treuekarte, seiner Mitgliedsnummer oder anderen für das Unternehmen relevanten Identifikatoren zugeordnet wird. [Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=de)
 
 ## Verwendung von `mbox3rdPartyId` mit dem [!DNL Platform Web SDK]
 

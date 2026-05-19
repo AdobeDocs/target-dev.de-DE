@@ -3,9 +3,19 @@ title: Automatisches Herunterladen, Speichern und Aktualisieren des Artefakts de
 description: Erfahren Sie, wie Sie beim Initialisieren der  [!DNL Adobe Target] SDK mit dem Artefakt „Entscheidungsregel auf dem Gerät“ arbeiten.
 feature: APIs/SDKs
 exl-id: be41a723-616f-4aa3-9a38-8143438bd18a
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/o4oNaCtd3PS1cDndSJHkI10pDke1DTaEnBn8u9pIQk8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: 354
 ht-degree: 0%
 
 ---
@@ -20,7 +30,7 @@ Dieser Ansatz eignet sich am besten, wenn Sie die [!DNL Adobe Target] SDK initia
 1. SDK initialisieren
 1. Speichern und Verwenden des Regelartefakts
 
-## 1. Installieren des SDKS
+## &#x200B;1. Installieren von SDK
 
 >[!BEGINTABS]
 
@@ -42,7 +52,7 @@ npm i @adobe/target-nodejs-sdk -P
 
 >[!ENDTABS]
 
-## 2. SDK initialisieren
+## &#x200B;2. SDK initialisieren
 
 1. Importieren Sie zunächst die SDK. Importieren Sie in dieselbe Datei, von der aus Sie den Serverstart steuern können.
 
@@ -94,10 +104,10 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. Sowohl die Client- als auch die Organisations-ID können aus [!DNL Adobe Target] abgerufen werden, indem Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** navigieren, wie hier dargestellt.
 
-   &lt;!— insert image-client-code.png —>
+   &lt;!— Einfügen image-client-code.png —>
    ![Implementierungsseite unter „Administration“ in Target](assets/asset-rule-artifact-3.png)
 
-## 3. Speichern und verwenden Sie das Regelartefakt
+## &#x200B;3. Speichern und Verwenden des Regelartefakts
 
 Sie müssen das Regelartefakt nicht selbst verwalten, und der Aufruf der SDK-Methoden sollte unkompliziert sein.
 

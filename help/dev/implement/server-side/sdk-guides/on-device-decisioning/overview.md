@@ -4,16 +4,34 @@ description: Erfahren Sie, wie Sie mithilfe von [!UICONTROL on-device decisionin
 title: Was ist On-Device Decisioning?
 feature: Implement Server-side
 exl-id: 22ed3072-56f0-4075-9d1a-d642afe3b649
-source-git-commit: ff0becf3fe3a6fd6694e13243b6a93b910316434
+TQID: https://experienceleague.adobe.com/-HHGn3lG5fOh2GLXQ6jOLRQmX7H24lN-2fseOg4y5H4
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1020'
-ht-degree: 9%
+source-wordcount: 1233
+ht-degree: 8%
 
 ---
 
 # Übersicht über On-device Decisioning
 
-Die [!DNL Adobe Target]-SDKs der nächsten Generation bieten jetzt [!UICONTROL on-device decisioning], mit denen Sie Ihre A/B- und Experience Targeting(XT)-Kampagnen auf Ihrem Server zwischenspeichern und speicherinterne Entscheidungen mit einer Latenz von nahezu null durchführen können, ohne Netzwerkanfragen an das Edge Network von [!DNL Adobe Target] zu blockieren.
+Die [!DNL Adobe Target]-SDKs der nächsten Generation bieten jetzt [!UICONTROL on-device decisioning], mit denen Sie Ihre A/B- und Experience Targeting(XT)-Kampagnen auf Ihrem Server zwischenspeichern und speicherinterne Entscheidungsfindungen mit einer Latenz von nahezu null durchführen können, ohne Netzwerkanfragen an die Edge Network von [!DNL Adobe Target] zu blockieren.
 
 [!DNL Adobe Target] bietet außerdem die Flexibilität, über einen Live-Server-Aufruf das relevanteste und aktuellste Erlebnis aus Ihren Experiment- und ML-basierten Personalisierungskampagnen bereitzustellen. Mit anderen Worten: Wenn die Leistung am wichtigsten ist, können Sie [!UICONTROL on-device decisioning] nutzen. Wenn jedoch das relevanteste und aktuellste Erlebnis benötigt wird, können Sie stattdessen einen Server-Aufruf ausführen. Siehe [Wann wird die geräteinterne vs. Edge-](../../sdk-guides/on-device-decisioning/supported-features.md) verwendet?, um mehr über Anwendungsfälle zu erfahren, die die Verwendung des einen über den anderen rechtfertigen.
 
@@ -33,10 +51,10 @@ Das folgende Diagramm zeigt die [!UICONTROL on-device decisioning]. Klicken, um 
 
 ## Was sind die Vorteile?
 
-* **Entscheidungen mit nahezu null Latenzen treffen.** Bucketing und die Entscheidungsfindung werden im Arbeitsspeicher und auf dem Gerät durchgeführt, um zu vermeiden, dass Netzwerkanfragen blockiert werden.
-* **Verbesserung der Anwendungsleistung.** führen Sie Experimente durch und stellen Sie Ihren Kunden und Benutzern Personalisierungen bereit, ohne die Erlebnisse der Endbenutzer zu beeinträchtigen.
-* **Verbesserung der Google Site-Qualitätsbewertung.** Da die Entscheidungsfindung im Arbeitsspeicher und auf der Serverseite erfolgt, verbessern Sie den Google-Site-Qualitätsindex Ihres Online-Unternehmens, damit es von Verbrauchern leichter gefunden werden kann.
-* **Lernen Sie von der Echtzeit-Analyse.** Gewinnen Sie in Echtzeit über [!DNL Adobe Target]- oder A4T-Berichte Einblicke in Ihre Aktivitätsleistung, sodass Sie Ihre Strategie in kritischen Momenten umstellen können.
+* **Entscheidungen mit nahezu null Latenzen treffen.** Bucketing und Entscheidungsfindung werden im Arbeitsspeicher und auf dem Gerät durchgeführt, um das Blockieren von Netzwerkanfragen zu vermeiden.
+* **Verbesserung der Anwendungsleistung.** Führen Sie Experimente durch und stellen Sie Ihren Kunden und Benutzern Personalisierung bereit, ohne die Erlebnisse der Endbenutzer zu beeinträchtigen.
+* **Google Site-Qualitätsbewertung verbessern.** Da die Entscheidungsfindung im Arbeitsspeicher und auf der Serverseite erfolgt, verbessern Sie den Google-Site-Qualitätsindex Ihres Online-Unternehmens, damit es von Verbrauchern leichter gefunden werden kann.
+* **Lernen aus der Echtzeit-Analyse.** Gewinnen Sie Erkenntnisse aus Ihrer Aktivitätsleistung in Echtzeit über [!DNL Adobe Target]- oder A4T-Berichte, sodass Sie Ihre Strategie in kritischen Momenten umstellen können.
 
 ## Unterstützte Funktionen
 
@@ -59,7 +77,7 @@ Die geräteinterne Entscheidungsfindung unterstützt die folgenden Zielgruppenre
 
 | Zielgruppenregel | On-device Decisioning |
 | --- | --- |
-| [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=de) | Ja<P>Bei der Verwendung der geräteinternen Entscheidungsfindung werden die folgenden Geoattribute unterstützt:<ul><li>Land/Region</li><li>Stadt</li><li>Breitengrad</li><li>Längengrad</li></ul> |
+| [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=de) | Ja<P>Bei der Verwendung der geräteinternen Entscheidungsfindung werden die folgenden Geoattribute unterstützt:<ul><li>Land/Region</li><li>Ort</li><li>Breitengrad</li><li>Längengrad</li></ul> |
 | [Netzwerk](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=de) | Nein |
 | [Mobile](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=de) | Nein |
 | [Benutzerdefinierte Parameter](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=de) | Ja |
@@ -144,7 +162,7 @@ Dieses 7-minütige Video:
 
 >[!VIDEO](https://video.tv.adobe.com/v/329032/?quality=12)
 
-Weitere Videos und Tutorials finden Sie in den [[!DNL Adobe Target] Tutorials](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=de).
+Weitere Videos und Tutorials finden Sie unter [[!DNL Adobe Target] Tutorials](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=de).
 
 ### Adobe Tech Blog - Part 1: Führen Sie [!DNL Adobe Target] NodeJS SDK zum Experimentieren und Personalisieren auf Edge-Plattformen aus (Akamai Edge Workers)
 

@@ -4,10 +4,24 @@ description: Erfahren Sie [!DNL Adobe Target]  wie der SameSite-IETF-Standard ge
 title: Wie handhabt  [!DNL Target]  die SameSite-Cookie-Richtlinien von Google?
 feature: Privacy & Security
 exl-id: 58a83def-9625-4d44-914f-203509c6c434
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/vidrxxFMqtYLAHQEiqbpEpgcab6OBie-oEhKoWljHwo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1973'
-ht-degree: 68%
+source-wordcount: 2019
+ht-degree: 63%
 
 ---
 
@@ -17,7 +31,7 @@ Google implementierte mit der Release von Chrome 80 Anfang 2020 neue Cookie-Rich
 
 Ab Chrome 80 müssen Web-Entwickler explizit angeben, welche Cookies Website-übergreifend genutzt werden. Dies ist die erste von vielen Ankündigungen, die Google zur Verbesserung des Datenschutzes und der Sicherheit im Internet plant.
 
-In Anbetracht der Tatsache, dass Facebook in Bezug auf Datenschutz und Sicherheit in der Kritik steht, haben andere große Unternehmen wie Apple und jetzt auch Google die Gelegenheit genutzt, um sich in der neuen Rolle als Verfechter des Datenschutzes und der Sicherheit zu beweisen. Apple war das erste Unternehmen, das aktiv wurde, und kündigte Anfang des Jahres mit ITP 2.1 und kürzlich mit ITP 2.2 Änderungen an seinen Cookie-Richtlinien an. Mit ITP 2.1 blockiert Apple Cookies von Drittanbietern vollständig und speichert Cookies, die im Browser erstellt werden, nur sieben Tage lang. Mit ITP 2.2 werden Cookies nur einen Tag lang aufbewahrt. Googles Ankündigung ist bei weitem nicht so aggressiv wie die Apples, aber sie ist der erste Schritt in Richtung desselben Ziels. Weitere Informationen zu den Apple-Richtlinien finden Sie unter [Apple Intelligent Tracking Prevention (ITP) 2.x](/help/dev/before-implement/privacy/apple-itp-2x.md).
+In Anbetracht der Tatsache, dass Facebook in Bezug auf Datenschutz und Sicherheit in der Kritik steht, haben andere große Unternehmen wie Apple und jetzt auch Google die Gelegenheit genutzt, um sich in der neuen Rolle als Verfechter des Datenschutzes und der Sicherheit zu beweisen. Apple war das erste Unternehmen, das Anfang dieses Jahres mit ITP 2.1 und kürzlich mit ITP 2.2 Änderungen an seinen Cookie-Richtlinien ankündigte. In ITP 2.1 blockiert Apple Cookies von Drittanbietern vollständig und speichert Cookies, die im Browser erstellt werden, nur sieben Tage lang. Mit ITP 2.2 werden Cookies nur einen Tag lang aufbewahrt. Googles Ankündigung ist bei weitem nicht so aggressiv wie die Apples, aber sie ist der erste Schritt in Richtung desselben Ziels. Weitere Informationen zu den Apple-Richtlinien finden Sie unter [Apple Intelligent Tracking Prevention (ITP) 2.x](/help/dev/before-implement/privacy/apple-itp-2x.md).
 
 ## Was sind Cookies und wie werden sie verwendet?
 
@@ -80,7 +94,7 @@ Wenn Sie sich jedoch für die Verwendung des Domain-übergreifenden Trackings en
 
 Um zu verstehen, was Sie tun müssen, damit [!DNL Target] weiterhin für Benutzer von Google Chrome 80 (und höher) funktioniert, sehen Sie sich die unten stehende Tabelle an, in der die folgenden Spalten angezeigt werden:
 
-* **Target JavaScript-Bibliothek**: Wenn Sie at.js 1.*x* oder at.js 2.*x* auf Ihren Sites verwenden.
+* **Target JavaScript Library**: Wenn Sie at.js 1.*x* oder at.js 2.*x* auf Ihren Sites verwenden.
 * **Standard-SameSite-Cookies = Aktiviert**: Gibt an, was passiert, wenn Ihre Besucher in Chrome „Standard-SameSite-Cookies“ aktiviert haben, welche Auswirkungen dies auf Sie hat und ob Sie etwas tun müssen, damit [!DNL Target] weiterhin funktioniert.
 * **Cookies ohne SameSite müssen sicher sein = Aktiviert**: Gibt an, welche Auswirkungen es auf Sie hat, wenn Ihre Besucher „Cookies ohne SameSite müssen sicher sein“ in Chrome und höher aktiviert haben, und ob Sie etwas tun müssen, damit [!DNL Target] weiterhin funktioniert.
 
@@ -88,7 +102,7 @@ Um zu verstehen, was Sie tun müssen, damit [!DNL Target] weiterhin für Benutze
 | --- | --- | --- |
 | at.js 1.*x* mit Erstanbieter-Cookie. | Keine Auswirkung. | Keine Auswirkung, wenn Sie kein Domain-übergreifendes Tracking verwenden. |
 | at.js 1.*x* mit aktiviertem Domain-übergreifendem Tracking. | Keine Auswirkung. | Sie müssen das HTTPS-Protokoll für ihre Website aktivieren.<br />Target verwendet ein Drittanbieter-Cookie, um Benutzer zu tracken, und Google verlangt, dass Drittanbieter-Cookies die Flags &quot;`SameSite = None`&quot; und „Sicher“ verwenden. Das Flag „Sicher“ erfordert, dass Ihre Sites das HTTPS-Protokoll verwenden. |
-| at.js 2.*x*  | Keine Auswirkung. | Keine Auswirkung. |
+| at.js 2.*x* | Keine Auswirkung. | Keine Auswirkung. |
 
 ## Was muss [!DNL Target] tun?
 
@@ -98,12 +112,12 @@ Was mussten wir also in unserer Plattform tun, damit Sie die neuen SameSite-Cook
 | --- | --- | --- |
 | at.js 1.*x* mit Erstanbieter-Cookie. | Keine Auswirkung. | Keine Auswirkung, wenn Sie kein Domain-übergreifendes Tracking verwenden. |
 | at.js 1.*x* mit aktiviertem Domain-übergreifendem Tracking. | Keine Auswirkung. | at.js 1.*x* mit aktiviertem Domain-übergreifendem Tracking. |
-| at.js 2.*x*  | Keine Auswirkung. | Keine Auswirkung. |
+| at.js 2.*x* | Keine Auswirkung. | Keine Auswirkung. |
 
 ## Was passiert, wenn Sie nicht zum HTTPS-Protokoll wechseln?
 
-Das einzige Szenario, das eine Auswirkung auf Sie hat, ist, wenn Sie über at.js 1 die Domain-übergreifende Tracking-Funktion in [!DNL Target] nutzen.*x*. Wenn Sie nicht zu HTTPS wechseln, was von Google gefordert wird, werden Sie einen Anstieg der Unique Visitors in Ihren Domains feststellen, da das von uns verwendete Drittanbieter-Cookie von Google gelöscht wird. Und weil das Drittanbieter-Cookie gelöscht wird, ist [!DNL Target] nicht in der Lage, Benutzern ein konsistentes und personalisiertes Erlebnis bereitzustellen, wenn sie von einer Domain zu einer anderen navigieren. Das Drittanbieter-Cookie wird hauptsächlich zur Identifizierung eines einzelnen Benutzers verwendet, der zwischen mehreren Domains wechselt, deren Inhaber Sie sind.
+Das einzige Szenario, das eine Auswirkung auf Sie hat, ist, wenn Sie über at.js 1.x *die Domain-übergreifende Tracking-Funktion in [!DNL Target]*. Wenn Sie nicht zu HTTPS wechseln, was von Google gefordert wird, werden Sie einen Anstieg der Unique Visitors in Ihren Domains feststellen, da das von uns verwendete Drittanbieter-Cookie von Google gelöscht wird. Und weil das Drittanbieter-Cookie gelöscht wird, ist [!DNL Target] nicht in der Lage, Benutzern ein konsistentes und personalisiertes Erlebnis bereitzustellen, wenn sie von einer Domain zu einer anderen navigieren. Das Drittanbieter-Cookie wird hauptsächlich zur Identifizierung eines einzelnen Benutzers verwendet, der zwischen mehreren Domains wechselt, deren Inhaber Sie sind.
 
-## Schlussfolgerung 
+## Schlussfolgerung
 
-Die Branche unternimmt große Anstrengungen, um das Internet für Verbraucher sicherer zu machen. Daher setzt sich Adobe mit aller Kraft dafür ein, unseren Kunden zu ermöglichen, personalisierte Erlebnisse auf eine Art und Weise bereitzustellen, durch die die Sicherheit und der Datenschutz der Endbenutzer gewährleistet ist. Sie müssen lediglich die oben genannten Best Practices befolgen und die [!DNL Target] nutzen, um die neuen SameSite-Cookie-Richtlinien von Google Chrome einzuhalten.
+Die Branche unternimmt große Anstrengungen, um das Internet für Verbraucher sicherer zu machen. Adobe setzt sich mit aller Kraft dafür ein, unseren Kunden zu ermöglichen, personalisierte Erlebnisse auf eine Weise bereitzustellen, durch die die Sicherheit und der Datenschutz der Endbenutzer gewährleistet ist. Sie müssen lediglich die oben genannten Best Practices befolgen und die [!DNL Target] nutzen, um die neuen SameSite-Cookie-Richtlinien von Google Chrome einzuhalten.

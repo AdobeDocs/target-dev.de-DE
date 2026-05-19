@@ -3,9 +3,14 @@ title: Abonnieren von Ereignissen in der  [!DNL Adobe Target] -Java-SDK
 description: Erfahren Sie, wie Sie mithilfe des [!UICONTROL OnDeviceDecisioningHandler]-Objekts verschiedene Ereignisse abonnieren, die in der Java-SDK auftreten.
 feature: APIs/SDKs
 exl-id: f2d56762-6bf7-4c6b-9c14-fb20e5cfd60d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/x3aig-jM-GXzmLNcUNclZUK9Y49tuSF9-sdkxzJFtiM
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: 134
 ht-degree: 5%
 
 ---
@@ -16,7 +21,7 @@ ht-degree: 5%
 
 Beim [Initialisieren der SDK](initialize-sdk.md) kann ein optionales `OnDeviceDecisioningHandler`-Objekt für das `ClientConfig` bereitgestellt werden. Sie kann verwendet werden, um verschiedene Ereignisse zu abonnieren, die innerhalb der SDK auftreten. Beispielsweise kann das `onDeviceDecisioningReady`-Ereignis mit einer Rückruffunktion verwendet werden, die aufgerufen wird, wenn die SDK für Methodenaufrufe bereit ist.
 
-## Ereignis- 
+## Ereignis-
 
 Das `OnDeviceDecisioningHandler`-Objekt enthält die folgenden Callbacks, die für bestimmte Ereignisse aufgerufen werden:
 

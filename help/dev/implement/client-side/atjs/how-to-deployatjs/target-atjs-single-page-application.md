@@ -1,13 +1,31 @@
 ---
-keywords: Einzelseitenanwendungsimplementierung, Einzelseitenanwendung implementieren, SPA, at.js 2.x, at.js, Einzelseitenanwendung, Einzelseitenanwendung, SPA, SPA, Einzelseitenanwendungsimplementierung
-description: Erfahren Sie, wie Sie at [!DNL Adobe Target] js 2.x verwenden, um  [!DNL Target]  für Single Page Applications (SPA) zu implementieren.
-title: Kann ich  [!DNL Target]  für Single Page Applications (SPA) implementieren?
+keywords: Implementierung von Einzelseitenanwendungen, Implementieren von Einzelseitenanwendungen, SPA, at.js 2.x, at.js, Einzelseitenanwendungen, Einzelseitenanwendungen, SPA, SPAs, Implementierung von Einzelseitenanwendungen
+description: Erfahren Sie, wie Sie at [!DNL Adobe Target] js 2.x verwenden, um  [!DNL Target]  für Single Page Applications (SPAs) zu implementieren.
+title: Kann ich  [!DNL Target]  für Single Page Applications (SPAs) implementieren?
 feature: Implement Server-side
 exl-id: d59d7683-0a63-47a9-bbb5-0fe4a5bb7766
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/zFYKCYv740tA3UXvJfJx-eiNst-r0xYlj3RP-LbCcOo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '2728'
-ht-degree: 58%
+source-wordcount: 2848
+ht-degree: 53%
 
 ---
 
@@ -27,7 +45,7 @@ Hier einige Vorteile der Verwendung von at.js 2.x, die in früheren Versionen ni
 
 ## [!DNL Adobe Target] und Einzelseitenanwendungen
 
-Das [!DNL Adobe Target] VEC für SPA nutzt ein neues Konzept namens „Ansichten“: eine logische Gruppe visueller Elemente, die zusammen ein SPA-Erlebnis bilden. Eine SPA kann also als eine Reihe von Ansichten anstelle von URLs betrachtet werden, die je nach Benutzerinteraktion aufgerufen werden. Eine Ansicht umfasst in der Regel eine ganze Site oder eine Gruppe visueller Elemente innerhalb einer Site.
+Der [!DNL Adobe Target] VEC für SPAs nutzt ein neues Konzept namens Ansichten: eine logische Gruppe visueller Elemente, die zusammen ein SPA-Erlebnis bilden. Eine SPA kann also als eine Reihe von Ansichten anstelle von URLs betrachtet werden, die je nach Benutzerinteraktion aufgerufen werden. Eine Ansicht umfasst in der Regel eine ganze Site oder eine Gruppe visueller Elemente innerhalb einer Site.
 
 Um weiter zu erklären, was Ansichten sind, gehen wir zu dieser hypothetischen Online-E-Commerce-Site, die in React implementiert ist, und sehen uns einige Beispielansichten an. Klicken Sie auf die folgenden Links, um diese Website auf einer neuen Browser-Registerkarte zu öffnen.
 
@@ -35,19 +53,19 @@ Um weiter zu erklären, was Ansichten sind, gehen wir zu dieser hypothetischen O
 
 ![Homepage](assets/home.png)
 
-Wenn wir zur Homepage navigieren, können wir sofort ein Hero-Bild sehen, das einen Osterverkauf bewirbt, sowie die neuesten Produkte, die auf der Site verkauft werden. In diesem Fall kann die gesamte Homepage als Ansicht definiert werden. Dies sollte beachtet werden, da wir darauf im Abschnitt Implementieren von [!DNL Adobe Target] weiter unten näher eingehen werden.
+Wenn wir zur Homepage navigieren, können wir sofort ein Hero Image sehen, das einen Osterverkauf bewirbt, sowie die neuesten Produkte, die auf der Site verkauft werden. In diesem Fall kann die gesamte Homepage als Ansicht definiert werden. Dies sollte beachtet werden, da wir darauf im Abschnitt Implementieren von [!DNL Adobe Target] weiter unten näher eingehen werden.
 
 **Link: [Produktseite](https://target.enablementadobe.com/react/demo/#/products)**
 
 ![Produktseite](assets/product-site.png)
 
-Da uns die Produkte dieses Unternehmens interessieren, klicken wir auf den Link zu den Produkten. Ähnlich wie die Homepage kann die gesamte Produktseite als Ansicht definiert werden. Wir können diese Ansicht „Produkte“ nennen, genau wie der Pfadname in `https://target.enablementadobe.com/react/demo/#/products)`.
+Da uns die Produkte dieses Unternehmens interessieren, klicken wir auf den Link zu den Produkten. Ähnlich wie die Homepage kann die gesamte Produkt-Site als Ansicht definiert werden. Wir können diese Ansicht „Produkte“ nennen, genau wie der Pfadname in `https://target.enablementadobe.com/react/demo/#/products)`.
 
-![Produktseite 2](assets/product-site-2.png)
+![Produkt-Site 2](assets/product-site-2.png)
 
 Am Anfang dieses Abschnitts haben wir Ansichten als ganze Site oder sogar als eine Gruppe visueller Elemente auf der Site definiert. Wie oben gezeigt, können die vier auf der Site angezeigten Produkte auch gruppiert und als Ansicht betrachtet werden. Als Name für diese Ansicht käme „Produkte“ in Frage.
 
-![Produktseite 3](assets/product-site-3.png)
+![Produkt-Site 3](assets/product-site-3.png)
 
 Klicken Sie auf die Schaltfläche „Mehr laden“, um weitere Produkte auf der Site zu erkunden. In diesem Fall ändert sich die Website-URL nicht. Hier kann auch nur die zweite Zeile der oben gezeigten Produkte als Ansicht angesehen werden. Der Name der Ansicht könnte also „PRODUKTSEITE-2“ lauten.
 
@@ -63,17 +81,17 @@ Ihre Marketing-Experten können auch einen A/B-Test durchführen, um zu sehen, o
 
 ## Implementieren von [!DNL Adobe Target]
 
-Nachdem wir nun die [!DNL Adobe Target] Ansichten behandelt haben, können wir dieses Konzept nutzen, [!DNL Target] es Marketing-Experten zu ermöglichen, A/B- und XT-Tests über den VEC auf SPA durchzuführen. Dies erfordert eine einmalige Einrichtung durch den Entwickler. Führen wir die Schritte zur Einrichtung durch.
+Nachdem wir nun behandelt haben, was [!DNL Adobe Target] Ansichten sind, können wir dieses Konzept nutzen, [!DNL Target] es Marketing-Experten zu ermöglichen, A/B- und XT-Tests über den VEC auf SPAs durchzuführen. Dies erfordert eine einmalige Einrichtung durch den Entwickler. Führen wir die Schritte zur Einrichtung durch.
 
 1. Installieren Sie at.js 2.*x*.
 
-   Zunächst müssen wir at.js 2 installieren.*x*. Diese Version von at.js wurde mit Blick auf SPA entwickelt. Frühere Versionen von at.js unterstützen keine [!DNL Adobe Target] Views und VEC für SPA.
+   Zunächst müssen wir at.js 2.*x* installieren. Diese Version von at.js wurde mit Blick auf SPAs entwickelt. Frühere Versionen von at.js unterstützen keine [!DNL Adobe Target] Ansichten und VEC für SPAs.
 
-   Herunterladen von at.js 2.*x* über die [!DNL Adobe Target]-Benutzeroberfläche unter **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**. at.js 2.*x* kann auch über Tags in [!DNL Adobe Experience Platform] bereitgestellt werden.
+   Laden Sie at.js 2.*x* über die [!DNL Adobe Target]-Benutzeroberfläche unter **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** herunter. at.js 2.*x* kann auch über Tags in [!DNL Adobe Experience Platform] bereitgestellt werden.
 
-1. Implementieren von at.js 2.*x*-Funktion, `[triggerView()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)` auf Ihren Sites.
+1. Implementieren Sie die Funktion at.js 2.*x*, `[triggerView()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)` auf Ihren Sites.
 
-   Nachdem Sie die Ansichten Ihrer SPA definiert haben, in denen Sie einen A/B- oder XT-Test ausführen möchten, implementieren Sie at.js 2.*x* `triggerView()` Funktion mit den als Parameter übergebenen Ansichten. Dadurch können Marketing-Experten VEC zum Entwerfen und Ausführen der A/B- und XT-Tests für diese Ansichten verwenden. Wenn die `triggerView()`-Funktion für diese Ansichten nicht definiert wurde, erkennt VEC die Ansichten nicht, sodass Marketing-Experten den VEC nicht zum Entwerfen und Ausführen von A/B- und XT-Tests verwenden können.
+   Nachdem Sie die Ansichten Ihrer SPA definiert haben, in denen Sie einen A/B- oder XT-Test ausführen möchten, implementieren Sie die `triggerView()`-Funktion at.js 2.*x* mit den als Parameter übergebenen Ansichten. Dadurch können Marketing-Experten VEC zum Entwerfen und Ausführen der A/B- und XT-Tests für diese Ansichten verwenden. Wenn die `triggerView()`-Funktion für diese Ansichten nicht definiert wurde, erkennt VEC die Ansichten nicht, sodass Marketing-Experten den VEC nicht zum Entwerfen und Ausführen von A/B- und XT-Tests verwenden können.
 
    >[!NOTE]
    >
@@ -83,11 +101,11 @@ Nachdem wir nun die [!DNL Adobe Target] Ansichten behandelt haben, können wir d
 
    | Parameter | Typ | Erforderlich? | Validierung | Beschreibung |
    | --- | --- | --- | --- | --- |
-   | viewName | Zeichenfolge | Ja | 1. Keine nachfolgenden Leerzeichen.<br />2. Darf nicht leer sein.<br />3. Der Name der Ansicht sollte für alle Seiten eindeutig sein.<br />4. **Warnung:** Der Anzeigename sollte nicht mit „`/`“ beginnen oder enden. Dies liegt daran, dass der Kunde den Anzeigenamen im Allgemeinen aus dem URL-Pfad entnimmt. Für uns sind „home“ und „`/home`“ unterschiedlich.<br />5. **Warnung:** Dieselbe Ansicht sollte nicht mehrmals hintereinander mit der Option `{page: true}` ausgelöst werden. | Geben Sie eine beliebige Zeichenfolge als Namen für Ihre Ansicht an. Dieser Ansichtsname wird im **[!UICONTROL Modifications]** des VEC angezeigt, damit Marketer Aktionen erstellen und ihre A/B- und XT-Aktivitäten ausführen können. |
+   | viewName | Zeichenfolge | Ja | &#x200B;1. Keine nachfolgenden Leerzeichen.<br />2. Darf nicht leer sein.<br />3. Der Ansichtsname muss für alle Seiten eindeutig sein.<br />4. **Warnung:** Der Anzeigename sollte nicht mit „`/`“ beginnen oder enden. Dies liegt daran, dass der Kunde den Anzeigenamen im Allgemeinen aus dem URL-Pfad entnimmt. Für uns sind „Home“ und &quot;`/home`&quot; unterschiedlich.<br />5. **Warnung:** Dieselbe Ansicht sollte nicht mehrmals hintereinander mit der Option `{page: true}` ausgelöst werden. | Geben Sie eine beliebige Zeichenfolge als Namen für Ihre Ansicht an. Dieser Ansichtsname wird im **[!UICONTROL Modifications]** des VEC angezeigt, damit Marketer Aktionen erstellen und ihre A/B- und XT-Aktivitäten ausführen können. |
    | options | Objekt | Nein |  |  |
-   | Optionen > Seite | Boolesch | Nein |  | **TRUE**: Der Standardwert der Seite ist „wahr“. Bei `page=true` werden Benachrichtigungen zur Erhöhung der Impressions-Anzahl an die Edge-Server gesendet.<br />**FALSE**: Bei der `page=false` werden keine Benachrichtigungen gesendet, um die Anzahl der Impressionen zu erhöhen. Dies sollte verwendet werden, wenn Sie nur eine Komponente auf einer Seite mit einem Angebot neu rendern möchten. |
+   | Optionen > Seite | Boolesch | Nein |  | **TRUE**: Der Standardwert der Seite ist „wahr“. Bei der `page=true` werden Benachrichtigungen an die Edge-Server gesendet, um die Impressionsanzahl zu erhöhen.<br />**FALSE**: Bei der `page=false` werden keine Benachrichtigungen gesendet, um die Impressionsanzahl zu erhöhen. Dies sollte verwendet werden, wenn Sie nur eine Komponente auf einer Seite mit einem Angebot neu rendern möchten. |
 
-   Sehen wir uns nun einige Beispielanwendungsfälle an, in denen beschrieben wird, wie die `triggerView()` in React für unsere hypothetische E-Commerce-SPA aufgerufen wird:
+   Sehen wir uns nun einige Beispiel-Anwendungsfälle zum Aufrufen der `triggerView()` in React für unsere hypothetische E-Commerce-SPA an:
 
    **Link: [Startseite](https://target.enablementadobe.com/react/demo/#/)**
 
@@ -190,22 +208,22 @@ Ihre Marketing-Experten können auch einen A/B-Test durchführen, um zu sehen, o
 
 ## Systemdiagramme in at.js 2.x
 
-Die folgenden Diagramme helfen Ihnen dabei, den Arbeitsablauf von at.js 2.x mit Ansichten zu verstehen und wie dieser die Integration der SPAs verbessert. Eine bessere Einführung in die in at.js 2.x verwendeten Konzepte finden Sie unter [Implementieren von Einzelseiten-Apps](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Die folgenden Diagramme helfen Ihnen dabei, den Workflow von at.js 2.x mit Ansichten zu verstehen und wie dieser die Integration der SPAs verbessert. Eine bessere Einführung in die in at.js 2.x verwendeten Konzepte finden Sie unter [Implementieren von Einzelseiten-Apps](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 ![Target-Ablauf mit at.js 2.x](../../assets/system-diagram-atjs-20.png)
 
 | Schritt | Details |
 | --- | --- |
 | 1 | Ein Aufruf gibt die Experience Cloud-ID zurück, wenn der Benutzer authentifiziert ist; ein anderer Aufruf synchronisiert die Kunden-ID. |
-| 2 | Die Bibliothek at.js wird synchron geladen und im Dokumentenkörper verborgen.<br />at.js kann auch asynchron mit einem optionalen Pre-hiding-Snippet geladen werden, das auf der Seite implementiert wird. |
+| 2 | Die at.js-Bibliothek wird synchron geladen und blendet den Dokumentkörper aus.<br />at.js kann auch asynchron geladen werden, wobei die Option Snippet zum Vorab-Ausblenden auf der Seite implementiert wird. |
 | 3 | Es wird eine Seitenlade-Anfrage durchgeführt, in der alle konfigurierten Parameter (MCID, SDID und Kunden-ID) enthalten sind. |
-| 4 | Profilskripte werden ausgeführt und anschließend in den Profilspeicher eingespeist. Der Speicher ruft geeignete Zielgruppen aus der Zielgruppenbibliothek ab (beispielsweise über Adobe Analytics, Zielgruppen-Management etc. bereitgestellte Zielgruppen).<br />Kundenattribute werden in einem Batch-Prozess an den Profilspeicher übermittelt. |
+| 4 | Profilskripte werden ausgeführt und anschließend in den Profilspeicher eingespeist. Der Store fordert qualifizierte Zielgruppen aus der Zielgruppenbibliothek an (z. B. von Adobe Analytics freigegebene Zielgruppen, Zielgruppenverwaltung usw.). <br />Kundenattribute werden in einem Batch-Prozess an den Profilspeicher gesendet. |
 | 5 | Basierend auf den URL-Anfrageparametern und den Profildaten entscheidet [!DNL Target], welche Aktivitäten und Erlebnisse für die aktuelle Seite und zukünftige Ansichten an den Besucher zurückgegeben werden sollen. |
 | 6 | Zielgerichteter Inhalt wird zurück an die Seite übermittelt. Dieser enthält optional Profilwerte für eine weitere Personalisierung.<br />Die zielgerichteten Inhalte auf der aktuellen Seite werden so schnell wie möglich bereitgestellt, ohne dass Standardinhalte aufflackern.<br />Zielgerichtete Inhalte für Ansichten, die als Ergebnis von Benutzeraktionen in einer SPA, die im Browser zwischengespeichert wird, angezeigt werden. Die SPA kann sofort ohne zusätzlichen Serveraufruf angewendet werden, wenn die Ansichten durch `triggerView()` ausgelöst werden. |
 | 7 | Analytics-Daten werden an Datenerfassungsserver übermittelt. |
 | 8 | Zielgruppendaten werden über die SDID mit [!DNL Analytics] abgeglichen und in den [!DNL Analytics]-Reporting-Speicher verarbeitet.<br />Analytics-Daten können dann sowohl in [!DNL Analytics] als auch [!DNL Target] über [!DNL Analytics] für [!DNL Target] (A4T)-Berichte angezeigt werden. |
 
-Egal, wo `triggerView()` in Ihrer SPA implementiert ist, werden die Ansichten und Aktionen aus dem Cache abgerufen und dem Benutzer ohne Serveraufruf gezeigt. `triggerView()` sendet außerdem eine Benachrichtigungsanfrage an das [!DNL Target]-Backend, um Impressions-Zählungen zu erhöhen und aufzuzeichnen.
+Egal, wo `triggerView()` in Ihrer SPA implementiert ist, werden die Ansichten und Aktionen aus dem Cache abgerufen und dem Benutzer ohne Serveraufruf gezeigt. `triggerView()` sendet außerdem eine Benachrichtigungsanfrage an das [!DNL Target]-Back-End, um Impressions-Zählungen zu erhöhen und aufzuzeichnen.
 
 ![Target-Ablauf at.js 2.x triggerView](../../assets/atjs-20-triggerview.png)
 
@@ -226,7 +244,7 @@ Nachdem Sie die Installation von at.js 2.x abgeschlossen und `triggerView()` zu 
 >
 >VEC für SPAs ist eigentlich derselbe VEC, den Sie auch auf normalen Webseiten verwenden. Es sind jedoch einige zusätzliche Funktionen verfügbar, wenn Sie eine Einzelseiten-App öffnen, bei der `triggerView()` implementiert ist.
 
-## Verwenden Sie TriggerView, um sicherzustellen, dass A4T ordnungsgemäß mit at.js 2.x und SPA funktioniert
+## Verwenden Sie TriggerView, um sicherzustellen, dass A4T ordnungsgemäß mit at.js 2.x und SPAs funktioniert
 
 Um sicherzustellen, [&#x200B; „Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=de) (A4T) ordnungsgemäß mit at.js 2.x funktioniert, müssen Sie dieselbe SDID in der [!DNL Target]-Anfrage und in der [!DNL Analytics]-Anfrage senden.
 
@@ -292,7 +310,7 @@ In den folgenden Informationen wird die Reihenfolge der Vorgänge beschrieben, d
 | 5 | Rufen Sie den Beacon für die [!DNL Analytics] Seitenansicht auf | Dieses Beacon sendet die mit den Schritten 3 und 4 verknüpfte SDID zum Daten-Stitching an [!DNL Analytics]. |
 | 6 | Aufrufen zusätzlicher `triggerView({"page": false})` | Dies ist ein optionaler Schritt für SPA-Frameworks, die bestimmte Komponenten auf der Seite möglicherweise erneut rendern können, ohne dass eine Änderung der Ansicht erfolgt. In solchen Fällen ist es wichtig, dass Sie diese API aufrufen, um sicherzustellen, dass [!DNL Target] Erlebnisse erneut angewendet werden, nachdem das SPA-Framework die Komponenten erneut gerendert hat. Sie können diesen Schritt so oft ausführen, wie Sie sicherstellen möchten, dass [!DNL Target] Erlebnisse in Ihren SPA-Ansichten bestehen bleiben. |
 
-### Reihenfolge der Vorgänge bei Änderung der SPA-Ansicht (kein vollständiges Neuladen der Seite)
+### Reihenfolge der Vorgänge für die Änderung der SPA-Ansicht (kein vollständiges Neuladen der Seite)
 
 | Schritt | Aktion | Details |
 | --- | --- | --- |
@@ -315,12 +333,12 @@ Weitere Informationen finden Sie unter [Funktionsweise von at.js 2.x](https://ex
 
 ### Implementieren von at.js 2.x in einer SPA
 
->[!VIDEO](https://video.tv.adobe.com/v/34771/?quality=12&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/34771/?captions=ger&quality=12)
 
-Weitere Informationen finden [&#x200B; unter „Implementieren von at.js 2.x von Adobe Target in einer Einzelseiten](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=de)Anwendung (SPA)“.
+Weitere [&#x200B; finden Sie unter „Implementieren von at.js 2.x von Adobe Target in einer Single Page Application &#x200B;](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=de)SPA)“.
 
-### Verwenden des VEC für SPA in [!DNL Adobe Target]
+### Verwenden von VEC für SPAs in [!DNL Adobe Target]
 
->[!VIDEO](https://video.tv.adobe.com/v/34777/?quality=12&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/34777/?captions=ger&quality=12)
 
-Weitere [&#x200B; finden Sie unter „Verwenden des Visual Experience Composer für Einzelseitenanwendungen (SPA VEC) &#x200B;](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=de) Adobe Target&quot;.
+Weitere [&#x200B; finden Sie unter „Verwenden des Visual Experience Composer für Einzelseiten-Apps (SPA VEC) &#x200B;](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=de) Adobe Target&quot;.

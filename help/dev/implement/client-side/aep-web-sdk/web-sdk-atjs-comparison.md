@@ -4,9 +4,26 @@ description: Erfahren Sie, wie die at.js-Funktionen im Vergleich zu  [!DNL Exper
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;Entscheidungsumfänge;Snippet vorab ausblenden;VEC;Form-Based Experience Composer;xdm;Zielgruppen;Entscheidungen;Umfang;Schema;Systemdiagramm;Diagramm
 feature: AEP Web SDK
 exl-id: 31c9722b-5d92-4653-aa20-4183d166c097
-source-git-commit: 158c45b824df8d3bd565ac7c654b65f1fd631e2c
+TQID: https://experienceleague.adobe.com/Ly2ytp87gfQ5mCES-43K5tU4-4fhTjdcdk-OxRRL-II
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '2006'
+source-wordcount: 2303
 ht-degree: 5%
 
 ---
@@ -869,7 +886,7 @@ Mit diesem Code-Snippet wird die Antwort-Payload wie folgt dargestellt:
 }
 ```
 
-Die [!DNL Analytics]-Payload (`tnta`-Token) sollte mit der Dateneinfüge-[!DNL Analytics] in den [-Treffer &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+Die [!DNL Analytics]-Payload (`tnta`-Token) sollte mit der Dateneinfüge-[&#x200B; in den [!DNL Analytics]-Treffer &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
 #### [!DNL Analytics] Server-seitige Protokollierung
 
@@ -879,7 +896,7 @@ Die Daten fließen dann wie folgt:
 
 ![Diagramm mit dem Server-seitigen Analytics-Protokollierungs-Workflow](/help/dev/implement/client-side/aep-web-sdk/assets/a4t-server-side-atjs.png)
 
-[Weitere Informationen](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=de)
+[Mehr erfahren](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=de)
 
 ### Verwenden von [!DNL Platform Web SDK]
 
@@ -894,7 +911,7 @@ Web-SDK unterstützt auch:
 
 ![Diagramm mit dem Client-seitigen Analytics-Protokollierungs-Workflow](/help/dev/implement/client-side/aep-web-sdk/assets/analytics-disabled-datastream-config.png)
 
-Die Kundin bzw. der Kunde hat Zugriff auf das [!DNL Analytics]-Token (`tnta`), das über die [!DNL Analytics]Dateneinfüge-API[&#x200B; mit &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) geteilt werden muss, indem der `sendEvent`-Befehl verkettet wird und das resultierende Vorschläge-Array iteriert wird.
+Die Kundin bzw. der Kunde hat Zugriff auf das [!DNL Analytics]-Token (`tnta`), das über die [Dateneinfüge-API](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md) mit [!DNL Analytics] geteilt werden muss, indem der `sendEvent`-Befehl verkettet wird und das resultierende Vorschläge-Array iteriert wird.
 
 **Beispiel**
 
@@ -1234,7 +1251,7 @@ adobe.target.getOffers({
 
 >[!NOTE]
 >
->Adobe empfiehlt sicherzustellen, dass jede `mbox` im `mboxes`-Array über einen eigenen Index verfügt. Normalerweise hat die erste Mbox die nächste `index=0` und so weiter `index=1,`.
+>Adobe empfiehlt sicherzustellen, dass jede `mbox` im `mboxes`-Array über einen eigenen Index verfügt. Normalerweise hat die erste Mbox die nächste `index=1,` und so weiter `index=0`.
 
 ### Verwenden von [!DNL Platform Web SDK]
 

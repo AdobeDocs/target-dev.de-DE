@@ -3,10 +3,15 @@ title: Erste Schritte mit der  [!DNL Adobe Target] .js-SDK
 description: Erfahren Sie [!DNL Adobe Target]  wie Kunden die Node.js-SDK installieren, initialisieren und verwenden können.
 feature: APIs/SDKs
 exl-id: 74f31f6f-6ada-49c5-9b61-98a91288347f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/rRdr0BmXxOBYBqzO5s5ejxvTwlcohks7s8hsfd6hFv4
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 5%
+source-wordcount: 138
+ht-degree: 14%
 
 ---
 
@@ -37,4 +42,4 @@ Um die Referenzdokumentation zur Node.js-SDK zu lesen und zu verstehen, beginnen
 
 * [Node.js SDK GitHub Repo](https://github.com/adobe/target-nodejs-sdk)
 * [Changelog](https://github.com/adobe/target-nodejs-sdk/blob/main/CHANGELOG.md)
-&#x200B;&#x200B;
+&#x200B;

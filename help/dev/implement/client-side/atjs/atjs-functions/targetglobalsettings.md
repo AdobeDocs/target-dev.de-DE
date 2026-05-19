@@ -4,10 +4,28 @@ description: Verwenden Sie die [!UICONTROL targetGlobalSettings()] für die Java
 title: Wie verwende ich die [!UICONTROL targetGlobalSettings()]?
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
-source-git-commit: 12cf430b65695d38d1651f2a97df418d82d231f3
+TQID: https://experienceleague.adobe.com/6IeQo7RCys6Qe6bPydmmtgaAERi7rnneBYFOzseaL2g
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '2565'
-ht-degree: 58%
+source-wordcount: 2702
+ht-degree: 56%
 
 ---
 
@@ -67,7 +85,7 @@ Folgende Einstellungen können überschrieben werden:
 
 * **Typ**: String
 * **Standardwert**: Wert, der über die Benutzeroberfläche festgelegt wird.
-* **Beschreibung**: Gibt an, ob domänenübergreifende Verfolgung aktiviert ist oder nicht. Die zulässigen Werte hängen von Ihrer at.js-Version ab. Für at.js v1.*x*, geben Sie an, ob domänenübergreifende Funktionen `disabled` sind (Browser setzen Cookies nur in Ihrer Domain (Erstanbieter-Cookies), `x only` (Browser setzen Cookies nur in der Domain von [!DNL Target]) oder beides, indem Sie `enabled` auswählen (Browser setzen sowohl Cookies von Erstanbietern als auch von Drittanbietern). Geben Sie für at.js v2.10 und höher an, ob domänenübergreifende Funktionen `enabled` (Browser setzen sowohl Cookies von Erstanbietern als auch von Drittanbietern) oder `disabled` (Browser setzen keine Cookies von Drittanbietern) sind.
+* **Beschreibung**: Gibt an, ob domänenübergreifende Verfolgung aktiviert ist oder nicht. Die zulässigen Werte hängen von Ihrer at.js-Version ab. Geben Sie für at.js v1.*x* an, ob domänenübergreifende Funktionen `disabled` sind (Browser setzen Cookies nur in Ihrer Domain (Erstanbieter-Cookies)), `x only` (Browser setzen Cookies nur in der Domain von [!DNL Target]) oder beides, indem Sie `enabled` auswählen (Browser setzen sowohl Cookies von Erstanbietern als auch von Drittanbietern). Geben Sie für at.js v2.10 und höher an, ob domänenübergreifende Funktionen `enabled` (Browser setzen sowohl Cookies von Erstanbietern als auch von Drittanbietern) oder `disabled` (Browser setzen keine Cookies von Drittanbietern) sind.
 
 ### cspScriptNonce
 
@@ -79,7 +97,7 @@ Folgende Einstellungen können überschrieben werden:
 
 * **Typ**: Siehe [Content Security-Richtlinie](#content-security-policy) weiter unten.
 * **Standardwert**: Siehe [Content Security-Richtlinie](#content-security-policy) weiter unten.
-* **Beschreibung**: Siehe [Content Security](#content-security-policy)-Richtlinie weiter unten.
+* **Beschreibung**: Siehe [Content Security-Richtlinie](#content-security-policy) weiter unten.
 
 ### dataProviders
 
@@ -135,7 +153,7 @@ Folgende Einstellungen können überschrieben werden:
 ### defaultContentVisibleStyle
 
 * **Typ**: String
-* **Standardwert**: Sichtbarkeit: sichtbar 
+* **Standardwert**: Sichtbarkeit: sichtbar
 * **Beschreibung**: Wird nur für das Umbrechen von Mboxes verwendet, bei denen DIV mit dem Klassennamen „mboxDefault“ eingesetzt wird und die über `mboxCreate()`, `mboxUpdate()` oder `mboxDefine()` ausgeführt werden, um Standardinhalte oder angewendete Angebote einzublenden.
 
 ### deviceIdLifetime
@@ -186,7 +204,7 @@ Folgende Einstellungen können überschrieben werden:
 * **Standardwert**: wahr (ab at.js-Version 1.6.2)
 * **Beschreibung**: Zeigt an, ob die Domäne `<clientCode>.tt.omtrdc.net` oder die Domäne `mboxedge<clusterNumber>.tt.omtrdc.net` verwendet werden soll.
 
-  Ist dieser Wert wahr, wird die Domäne `mboxedge<clusterNumber>.tt.omtrdc.net` in einem Cookie gespeichert. Funktioniert derzeit nicht mit [CNAME](/help/dev/before-implement/implement-cname-support-in-target.md) bei der Verwendung von at.js-Versionen vor at.js 1.8.2 und at.js 2.3.1. Wenn dies ein Problem für Sie ist, sollten Sie [at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md) evtl. auf eine neuere, unterstützte Version aktualisieren.
+  Ist dieser Wert wahr, wird die Domäne `mboxedge<clusterNumber>.tt.omtrdc.net` in einem Cookie gespeichert. Funktioniert derzeit nicht mit [CNAME](/help/dev/before-implement/implement-cname-support-in-target.md) wenn at.js-Versionen vor at.js 1.8.2 und at.js 2.3.1 verwendet werden. Wenn dies ein Problem für Sie ist, sollten Sie [at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md) auf eine neuere, unterstützte Version aktualisieren.
 
 ### overrideMboxEdgeServerTimeout
 
@@ -250,7 +268,7 @@ Folgende Einstellungen können überschrieben werden:
 
 * **Typ**: Boolean
 * **Standardwert**: wahr
-* **Beschreibung**: Wenn diese Option aktiviert ist, werden Ansichten beim Laden der Seite automatisch abgerufen. Wenn `triggerView` aufgerufen wird, werden die entsprechenden Ansichten im Browser angezeigt. Wenn diese Option deaktiviert ist, werden Ansichten nicht beim Laden der Seite abgerufen und `triggerView` tut nichts. Ansichten werden in at.js 2 unterstützt.*x*, zutrifft.
+* **Beschreibung**: Wenn diese Option aktiviert ist, werden Ansichten beim Laden der Seite automatisch abgerufen. Wenn `triggerView` aufgerufen wird, werden die entsprechenden Ansichten im Browser angezeigt. Wenn diese Option deaktiviert ist, werden Ansichten nicht beim Laden der Seite abgerufen und `triggerView` tut nichts. Ansichten werden nur in at.js 2.*x* unterstützt.
 
 ### visitorApiTimeout
 
@@ -272,7 +290,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-## Datenanbieter   {#data-providers}
+## Datenanbieter {#data-providers}
 
 Mit dieser Einstellung können Kundinnen und Kunden Daten von Drittanbieterdatenanbietern wie Demandbase, BlueKai und benutzerdefinierten Services erfassen und die Daten als Mbox-Parameter in der globalen Mbox-Anfrage an [!DNL Target] übergeben. Sie unterstützt die Sammlung von Daten von mehreren Anbietern über asynchrone und synchrone Anfragen. Mit diesem Ansatz ist es ein Leichtes, Flicker- oder Standardinhalte zu verwalten und gleichzeitig unabhängige Timeouts für die einzelnen Anbieter festzulegen, um die Auswirkungen auf die Seitenleistung zu begrenzen
 
@@ -295,7 +313,7 @@ Jeder Datenanbieter weist die folgende Struktur auf:
 |--- |--- |--- |
 | name | Zeichenfolge | Name des Anbieters. |
 | version | Zeichenfolge | Anbieterversion. Dieser Schlüssel wird für die Anbieterentwicklung verwendet. |
-| Zeitüberschreitung | Nummer | Gibt die Anbieter-Zeitüberschreigung an, wenn es sich hierbei um eine Netzwerkanfrage handelt.  Dieser Schlüssel ist optional. |
+| Zeitüberschreitung | Nummer | Gibt den Anbieter-Timeout an, wenn es sich hierbei um eine Netzwerkanfrage handelt.  Dieser Schlüssel ist optional. |
 | provider | Funktion | Die Funktion, welche die Logik zum Abrufen der Anbieterdaten enthält.<p>Die Funktion verfügt über einen einzelnen erforderlichen Parameter: `callback`. Der Parameter „callback“ ist eine Funktion, die nur aufgerufen werden sollte, wenn die Daten erfolgreich abgerufen wurden oder ein Fehler vorliegt.<p>Der Callback erwartet zwei Parameter:<ul><li>error: Gibt an, ob ein Fehler aufgetreten ist. Wenn alles in Ordnung ist, sollte dieser Parameter auf „null“ festgelegt sein.</li><li>params: Ein JSON-Objekt, das die Parameter darstellt, die in einer [!DNL Target]-Anfrage gesendet werden.</li></ul> |
 
 Im folgenden Beispiel wird gezeigt, wo der Datenanbieter die Synchronisierungsausführung verwendet:
@@ -537,7 +555,7 @@ Beachten Sie bei der Verwendung von `serverState` Folgendes:
    * Mit VEC erstellte Aktivitäten, die beim Laden der Seite ausgeführt werden.
    * Vorab abgerufene Ansichten.
 
-     SPA Im Falle der Verwendung von [!DNL Target] Views und `triggerView()` in der at.js-API speichert at.js v2.2 den Inhalt für alle Ansichten, die vorab auf der Serverseite abgerufen wurden, zwischen und wendet diese an, sobald jede Ansicht über `triggerView()` ausgelöst wird, auch wieder ohne dass zusätzliche Aufrufe zum Abrufen von Inhalten an [!DNL Target] ausgelöst werden.
+     Bei der Verwendung von [!DNL Target] Views und `triggerView()` in der at.js-API durch SPAs speichert at.js v2.2 den Inhalt für alle Ansichten, die vorab auf der Server-Seite abgerufen wurden, zwischen und wendet diese an, sobald jede Ansicht über `triggerView()` ausgelöst wird, auch wieder ohne dass zusätzliche Aufrufe zum Abrufen von Inhalten an [!DNL Target] ausgelöst werden.
 
    * **Hinweis**: Derzeit werden auf der Server-Seite abgerufene mboxes in `serverState` nicht unterstützt.
 
