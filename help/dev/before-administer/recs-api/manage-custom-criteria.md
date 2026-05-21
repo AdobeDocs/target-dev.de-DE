@@ -7,9 +7,12 @@ thumbnail: null
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
 TQID: https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: f05a93102cc0f9b86a6521ff8007aa59f2af3c1a
 workflow-type: tm+mt
 source-wordcount: 921
@@ -21,7 +24,7 @@ ht-degree: 0%
 
 Manchmal können die von Recommendations bereitgestellten Algorithmen bestimmte Elemente, die Sie bewerben möchten, nicht aufdecken. In einem solchen Fall bieten benutzerdefinierte Kriterien eine Möglichkeit, einen bestimmten Satz empfohlener Elemente für ein bestimmtes Schlüsselelement oder eine bestimmte Kategorie bereitzustellen.
 
-Um benutzerdefinierte Kriterien zu erstellen, definieren und importieren Sie die gewünschte Zuordnung zwischen dem Schlüsselelement oder der Kategorie und den empfohlenen Elementen. Dieser Prozess wird in der [Dokumentation zu benutzerdefinierten Kriterien“ ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html). Wie in dieser Dokumentation erwähnt, können Sie benutzerdefinierte Kriterien über die Benutzeroberfläche von Target erstellen, bearbeiten und löschen. Target bietet jedoch auch eine Reihe von APIs für benutzerdefinierte Kriterien, die eine detailliertere Verwaltung Ihrer benutzerdefinierten Kriterien ermöglichen.
+Um benutzerdefinierte Kriterien zu erstellen, definieren und importieren Sie die gewünschte Zuordnung zwischen dem Schlüsselelement oder der Kategorie und den empfohlenen Elementen. Dieser Prozess wird in der [Dokumentation zu benutzerdefinierten Kriterien“ &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html). Wie in dieser Dokumentation erwähnt, können Sie benutzerdefinierte Kriterien über die Benutzeroberfläche von Target erstellen, bearbeiten und löschen. Target bietet jedoch auch eine Reihe von APIs für benutzerdefinierte Kriterien, die eine detailliertere Verwaltung Ihrer benutzerdefinierten Kriterien ermöglichen.
 
 >[!WARNING]
 >

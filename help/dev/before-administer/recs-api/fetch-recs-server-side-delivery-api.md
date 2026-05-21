@@ -7,10 +7,15 @@ thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
 TQID: https://experienceleague.adobe.com/K94vITD8ZSDXLkC42Vm02eC5RmHudBvukXNcdPFVjzk
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 129298289889a3b133eb07d0caeade2fd0b5568e
 workflow-type: tm+mt
 source-wordcount: 1366
@@ -100,7 +105,7 @@ Die folgenden Ressourcen enthalten Beispiele für verschiedene Implementierungen
 
 In den meisten Fällen werden Empfehlungen in der Adobe Target-Benutzeroberfläche konfiguriert und dann über die Target-APIs verwendet oder aufgerufen, beispielsweise aus den in den obigen Abschnitten genannten Gründen. Diese UI-API-Koordination ist üblich. Manchmal möchten die Benutzer jedoch möglicherweise alle Aktionen über APIs durchführen - sowohl die Einrichtung als auch die Verwendung der Ergebnisse. Obwohl dies weniger häufig vorkommt, können Benutzer die Ergebnisse von Recommendations absolut konfigurieren *ausführen und* vollständig mithilfe der -APIs nutzen.
 
-In einem [ Abschnitt haben wir gelernt](manage-catalog.md) wie Adobe Target Recommendations-Entitäten verwaltet und Server-seitig bereitgestellt werden. Ebenso können Sie mit der [Adobe Developer Console](https://developer.adobe.com/console/home) Kriterien, Promotions, Sammlungen und Design-Vorlagen verwalten, ohne sich bei Adobe Target anmelden zu müssen. Eine vollständige Liste aller Recommendations-APIs finden Sie [hier](https://developer.adobe.com/target/administer/recommendations-api/), aber hier finden Sie eine Zusammenfassung als Referenz.
+In einem [&#x200B; Abschnitt haben wir gelernt](manage-catalog.md) wie Adobe Target Recommendations-Entitäten verwaltet und Server-seitig bereitgestellt werden. Ebenso können Sie mit der [Adobe Developer Console](https://developer.adobe.com/console/home) Kriterien, Promotions, Sammlungen und Design-Vorlagen verwalten, ohne sich bei Adobe Target anmelden zu müssen. Eine vollständige Liste aller Recommendations-APIs finden Sie [hier](https://developer.adobe.com/target/administer/recommendations-api/), aber hier finden Sie eine Zusammenfassung als Referenz.
 
 | Ressource | Details |
 | --- | --- |
