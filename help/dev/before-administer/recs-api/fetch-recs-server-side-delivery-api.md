@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
+source-git-commit: 129298289889a3b133eb07d0caeade2fd0b5568e
 workflow-type: tm+mt
-source-wordcount: 1449
+source-wordcount: 1366
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ Gehen Sie wie folgt vor, um mit der Bereitstellungs-API Target-Erlebnisse einsch
 1. Erstellen Sie eine Target-Aktivität (A/B, XT, AP oder Recommendations) mit dem formularbasierten Composer (nicht dem Visual Experience Composer).
 1. Verwenden Sie die Bereitstellungs-API , um eine Antwort auf die Anfragen zu erhalten, die von der soeben erstellten Target-Aktivität generiert wurden.
 
-&lt;!—!— Q: Warum sind BEIDE Schritte hierfür erforderlich? Wenn Sie eine formularbasierte Empfehlung für eine Mbox definiert haben, worin besteht dann der Vorteil, dass die Bereitstellungs-API ebenfalls integriert wird, um Ergebnisse abzurufen? Warum können Sie die Ergebnisse nicht einfach mit dem formularbasierten Rec auf dem Zielgerät bereitstellen lassen?..?? A: Siehe den unten stehenden Anwendungsfall … Dies ist der Fall, wenn Sie die ausstehenden Ergebnisse „abfangen“ möchten, um mehr Aufgaben auszuführen, bevor Sie die Ergebnisse anzeigen. Dinge wie Echtzeit-Vergleiche zu Beständen. --->
+<!-- Q: Why are BOTH steps necessary for this? If you have a Form-based recommendation defined for an mbox, what's the point/benefit of ALSO having the Delivery API step in to retrieve results? Why can't you just have the Form-based Rec deliver the results in the destination device...?? A: See use case below... it's when you want to "intercept" the pending results in order to do more stuff prior to displaying the results. Things like real-time comparisons to inventory levels. -->
 
 ## Erstellen einer Empfehlung mit dem formularbasierten Experience Composer
 
