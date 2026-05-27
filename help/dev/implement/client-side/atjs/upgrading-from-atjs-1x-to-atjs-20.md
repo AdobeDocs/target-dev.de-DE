@@ -5,24 +5,11 @@ title: Wie führe ich ein Upgrade von at.js Version 1.x auf Version 2.x durch?
 feature: at.js
 exl-id: fbfa5743-0fa5-44c6-89b3-fdee9b50e126
 TQID: https://experienceleague.adobe.com/JGsuogzhCvThr4QGHJ5g4d8ZqGVZ8ClAf7hXuoh7X0Q
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2:
-  - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: df62f171-ac37-440f-8f0f-f41a72ebdd34id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
 source-wordcount: 3037
@@ -336,7 +323,7 @@ Kunden können einen globalen Mbox-Namen über **[!UICONTROL Target]** > **[!UIC
 
 Ja, die benutzerdefinierten at.js-Ereignisse gelten auch für `triggerView()`.
 
-### Wenn ich `triggerView()` mit &lbrace;`"page" : "true"`&rbrace; aufrufe, werde eine Benachrichtigung an das [!DNL Target]-Backend gesendet und die Impression erhöht. Führt dies auch dazu, dass die Profilskripts ausgeführt werden?
+### Wenn ich `triggerView()` mit &amp;lbrace;`"page" : "true"`&amp;rbrace; aufrufe, werde eine Benachrichtigung an das [!DNL Target]-Backend gesendet und die Impression erhöht. Führt dies auch dazu, dass die Profilskripts ausgeführt werden?
 
 Wenn ein Prefetch-Aufruf an das [!DNL Target]-Backend erfolgt, werden die Profilskripts ausgeführt. Anschließend werden die betroffenen Profildaten verschlüsselt und an die Client-Seite zurückgegeben. Nachdem `triggerView()` mit `{"page": "true"}` aufgerufen wurde, wird eine Benachrichtigung zusammen mit den verschlüsselten Profildaten gesendet. Dann entschlüsselt das [!DNL Target]-Backend die Profildaten und speichert sie in den Datenbanken.
 
@@ -393,7 +380,7 @@ Die folgenden Tabellen erläutern die at.js. 2.*x* Kompatibilität mit verschied
 | [Adobe Experience Platform-Erweiterung](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) | Ja |
 | Debugger | Ja |
 | Auditor | Regeln für at.js 2.*wurden noch nicht aktualisiert* |
-| Opt-in-Unterstützung für [DSGVO](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) | Dies wird in [at.js-Version 2.1.0 &#x200B;](/help/dev/implement/client-side/atjs/target-atjs-versions.md#atjs-version-210-june-3-2019) höher unterstützt. |
+| Opt-in-Unterstützung für [DSGVO](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) | Dies wird in [at.js-Version 2.1.0 ](/help/dev/implement/client-side/atjs/target-atjs-versions.md#atjs-version-210-june-3-2019) höher unterstützt. |
 | AEM Enhanced Personalization powered by [!DNL Adobe Target] | Nein |
 
 ### Funktionen
@@ -424,7 +411,7 @@ Die folgenden Tabellen erläutern die at.js. 2.*x* Kompatibilität mit verschied
 
 ## Antwort-Token
 
-at.js 2.*x* verwendet genau wie at.js 1.*x* die benutzerdefinierte `at-request-succeeded`, um Antwort-Token zu präsentieren. Codebeispiele, die das `at-request-succeeded` benutzerdefinierte Ereignis verwenden, finden Sie unter [Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=de).
+at.js 2.*x* verwendet genau wie at.js 1.*x* die benutzerdefinierte `at-request-succeeded`, um Antwort-Token zu präsentieren. Codebeispiele, die das `at-request-succeeded` benutzerdefinierte Ereignis verwenden, finden Sie unter [Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html).
 
 ## at.js 1.*x*-Parameter zur at.js 2.*x*-Payload-Zuordnung
 
@@ -791,5 +778,5 @@ at.js 2.*x* erweitert die Unterstützung von Adobe [!DNL Target] für SPAs und i
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-Weitere Informationen finden [&#x200B; unter „Funktionsweise von at *js*.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=de) .
+Weitere Informationen finden [ unter „Funktionsweise von at *js*.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html) .
 
