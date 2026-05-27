@@ -5,11 +5,16 @@ title: Wie erstelle ich eine AdBox für ein Bild?
 feature: Implement Email
 exl-id: ad1eb6c4-7a16-4054-ae76-57971261e931
 TQID: https://experienceleague.adobe.com/OPo9T2Eb7afF8Ir8PAlY62OX83zhxtruUMKWCfUthxY
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 335
@@ -23,7 +28,7 @@ Verwenden Sie eine AdBox, um Bilder in einer Offsite-Implementierung mithilfe vo
 
 Eine AdBox funktioniert wie eine Mbox, wird aber mithilfe einer URL statt mit JavaScript gesteuert. AdBoxes werden mit einer speziellen AdBox-URL erstellt, die eine „Werbeanzeigen“-Mbox (oder AdBox) in Ihr Adobe-Konto lädt. Verwenden Sie diese AdBox anstelle der Mbox für Ihre Aktivitäten. Verwenden Sie die AdBox-URL anstelle eines direkten Bildverweises in E-Mail- oder anderen Nicht-JavaScript-Implementierungen.
 
-Hilfe bei der Auswahl des richtigen Setups [ Sie unter (Nicht-JavaScript-basierte Implementierungen](/help/dev/implement/email/overview.md).
+Hilfe bei der Auswahl des richtigen Setups [&#x200B; Sie unter (Nicht-JavaScript-basierte Implementierungen](/help/dev/implement/email/overview.md).
 
 1. Erstellen der AdBox-URL:
 
