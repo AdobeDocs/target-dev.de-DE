@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie  [!DNL Adobe Target]  SDK Prehide integrieren
 title: Handbuch zur SDK-Integration vorab ausblenden
 feature: Implementation
 hide: true
-source-git-commit: 81818370d32ee8c3f3538e5d8d942f66c13e6a13
+source-git-commit: 2f7a53b667990474dfab7ca66a8ea93d2e946548
 workflow-type: tm+mt
-source-wordcount: '1137'
-ht-degree: 1%
+source-wordcount: '1007'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +43,6 @@ Eine winzige synchrone JavaScript-Bibliothek, die das visuelle Flackern verhinde
    ```html
    <script>
      window.PrehideConfig = {
-       org: "your-client-code",
        sdk: "alloy"            // or "atjs" (defaults to "alloy")
      };
    </script>
@@ -110,26 +109,13 @@ Es gibt zwei Möglichkeiten, `prehide.min.js` einzubeziehen:
 
 SDK akzeptiert Konfigurationen aus zwei Quellen in der Reihenfolge der Priorität. Es liest, was zuerst verfügbar ist.
 
-### A: Platzhalter für Download-Zeiten (keine Laufzeitkonfiguration)
-
-Beim Herunterladen von `prehide.min.js` über die Flimmermanager-Benutzeroberfläche ersetzt der Server drei Platzhalter innerhalb des Pakets:
-
-| Platzhalter | Ersetzt durch | Fallback, wenn nicht ersetzt |
-| --- | --- | --- |
-| `__FM_CLIENT_CODE__` | Ihr Client-Code (z. B. `"acmecorp"`) | Liest `window.PrehideConfig.org` |
-| `__FM_TIMEOUT__` | Zeitgeberdauer des Guards in ms (z. B. `"3000"`) | `5000` ms |
-| `__FM_VERSION__` | SDK-Version (z. B. `"1.0.0"`) | `"0.0.0-dev"` |
-
-Wenn Sie das von der Benutzeroberfläche heruntergeladene Bundle verwenden, ist kein `PrehideConfig` erforderlich. Einfach das Script inline schalten.
-
-### B: `window.PrehideConfig` (manuelle Integration)
+### Runtime `window.PrehideConfig` (manuelle Integration)
 
 Deklarieren Sie für selbstgehostete oder unveränderte Bundles ein config-Objekt, bevor das Prehide-Skript ausgeführt wird:
 
 ```html
 <script>
   window.PrehideConfig = {
-    org: "acmecorp",        // required (or rely on baked-in __FM_CLIENT_CODE__)
     sdk: "alloy"             // optional: "alloy" (default) or "atjs"
   };
 </script>
@@ -137,7 +123,6 @@ Deklarieren Sie für selbstgehostete oder unveränderte Bundles ein config-Objek
 
 | Feld | Typ | Erforderlich | Beschreibung |
 | --- | --- | --- | --- |
-| `org` | string | Ja (sofern nicht eingebacken) | Ihr Kunden-Clientcode. Wird als das Organisationssegment der CDN-URL verwendet, von der Vorschauregeln abgerufen werden. |
 | `sdk` | `"alloy"` \| `"atjs"` | Nein | Die Adobe SDK wurde auf der Seite geladen. Siehe [SDK-Auswahl](#sdk-selection). |
 
 ## SDK-Auswahl {#sdk-selection}
@@ -149,12 +134,16 @@ Deklarieren Sie für selbstgehostete oder unveränderte Bundles ein config-Objek
 | `"alloy"` *(Standard)* | `<style id="alloy-prehiding">` | Alloy SDK on personalize-complete | Sie laden Alloy / Adobe Web SDK auf dieser Seite. |
 | `"atjs"` | `<style id="at-body-style">` | at.js unter personalize-complete | Die klassische at.js-Bibliothek wird auf dieser Seite geladen. |
 
+>[!NOTE]
+>
+>Bei at.js-SDK werden nur die Versionen 2.x und höher unterstützt.
+
 ### So legen Sie es fest
 
 ```html
 <!-- For at.js -->
 <script>
-  window.PrehideConfig = { org: "acmecorp", sdk: "atjs" };
+  window.PrehideConfig = { sdk: "atjs" };
 </script>
 <script> /* prehide.min.js inline */ </script>
 <script src="https://cdn.adobe.com/.../at.js"></script>

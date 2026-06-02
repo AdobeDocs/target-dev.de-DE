@@ -3,10 +3,10 @@ user-guide-title: Adobe Target-Entwicklerhandbuch
 breadcrumb-title: Target-Entwicklerhandbuch
 user-guide-description: Erfahren Sie, wie Sie das Kundenerlebnis so anpassen und personalisieren können, dass Sie den Umsatz Ihrer Websites, Mobile Sites, Mobile Apps, Social Media und anderer digitaler Kanäle maximieren können.
 nudge: true
-source-git-commit: 2a992af7a1a8bbc6dba4ce23263d7af7db773333
+source-git-commit: b7f74bef7a9e00aa9f794f63e5a29b391558808e
 workflow-type: tm+mt
 source-wordcount: '854'
-ht-degree: 41%
+ht-degree: 42%
 
 ---
 
@@ -43,8 +43,7 @@ ht-degree: 41%
    + [Änderungen der TLS-Verschlüsselung (Transport Layer Security)](before-implement/tls-transport-layer-security-encryption.md)
    + [CNAME und Adobe Target](before-implement/implement-cname-support-in-target.md)
 + Client-seitige Implementierung {#client-side}
-   + [Übersicht: Target für clientseitiges Web implementieren](implement/client-side/overview.md)
-     <!--+ Prehide SDK {#prehide-sdk}-->
+   + [Übersicht: Target für Client-seitiges Web implementieren](implement/client-side/overview.md)
    + {hide-from-toc}[Handbuch zur SDK-Integration vorab ausblenden](implement/client-side/prehide-sdk/prehide-sdk.md)
    + Adobe Experience Platform Web SDK-Implementierung {#aep}
       + [Übersicht über die Implementierung von Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
