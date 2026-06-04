@@ -4,17 +4,12 @@ description: Erfahren Sie, wie Sie mit sendNotifications() Anzeigen- oder Klick-
 feature: APIs/SDKs
 exl-id: 03827b18-a546-4ec8-8762-391fcb3ac435
 TQID: https://experienceleague.adobe.com/r7j2MaCmcZBEsx7TmTlKL9R-IKlncZJw5DhSfcKmVNU
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 411
+source-wordcount: 420
 ht-degree: 8%
 
 ---
@@ -50,7 +45,7 @@ target_client.send_notifications(options)
 
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
-| Anfrage | Versandanfrage | Ja | Keine | Entspricht der [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) |
+| Anfrage | Versandanfrage | Ja | Keine | Entspricht der Anfrage [[!UICONTROL Target-Bereitstellungs-API]](/help/dev/implement/delivery-api/overview.md) |
 | target_cookie | str | no | Keine | Cookie [!DNL Target] |
 | target_location_hint | str | no | Keine | [!DNL Target] Standorthinweis |
 | consumer_id | str | no | Keine | Beim Zusammenfügen mehrerer Aufrufe sollten verschiedene Verbraucher-IDs angegeben werden |
@@ -70,12 +65,12 @@ target_client.send_notifications(options)
 | target_location_hint_cookie | verordnen | Cookie für [!DNL Target]-Standorthinweise |
 | analytics_details | list[analyticsResponse] | [!DNL Analytics] Payload im Falle einer Client-seitigen [!DNL Analytics] |
 | Spur | list[dict] | Aggregierte Trace-Daten für alle Anfrage-Mboxes/-Ansichten |
-| response_token | list[dict] | Eine Liste von [&#x200B;Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=de) |
+| response_token | list[dict] | Eine Liste von [&#x200B;Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) |
 | meta | verordnen | Zusätzliche Entscheidungsmetadaten zur Verwendung mit der geräteinternen Entscheidungsfindung |
 
 ## Beispiel
 
-Erstellen wir zunächst die [!UICONTROL Target Delivery API] Anfrage zum Vorabrufen von Inhalten für die `home`- und `product1`-Mboxes.
+Erstellen wir zunächst die Anfrage [!UICONTROL Target-Bereitstellungs-API] zum Vorabrufen von Inhalten für die `home`- und `product1`-Mboxes.
 
 ### Python
 
@@ -89,7 +84,7 @@ delivery_request = DeliveryRequest(prefetch=prefetch)
 response = target_client.get_offers({ "request": delivery_request })
 ```
 
-Eine erfolgreiche Antwort enthält ein [!UICONTROL Target Delivery API] Antwortobjekt, das vorab abgerufene Inhalte für die angeforderten Mboxes enthält. Ein Beispielobjekt `target_response["response"]` (formatiert als dict) kann wie folgt aussehen:
+Eine erfolgreiche Antwort enthält ein Antwortobjekt [!UICONTROL Target-Bereitstellungs-API], das vorab abgerufene Inhalte für die angeforderten Mboxes enthält. Ein Beispielobjekt `target_response["response"]` (formatiert als dict) kann wie folgt aussehen:
 
 ### Python
 

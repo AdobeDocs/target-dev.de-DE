@@ -4,10 +4,8 @@ description: Die  [!DNL Target] SDKs unterstützen Benutzerberechtigungen und Ei
 exl-id: 612faf1a-e8f9-4321-b831-90fba69ead3a
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/4l6qKRuEw14xYjcEsY49-3AAjYl6gouoKWIjkNuchdI
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 123
@@ -17,7 +15,7 @@ ht-degree: 8%
 
 # Benutzerberechtigungen und Eigenschaften
 
-Die [!DNL Target]-SDKs unterstützen Benutzerberechtigungen und Eigenschaften. Wenn Sie nicht genau wissen, wie [!DNL Adobe Target] mit Unternehmensberechtigungen über Arbeitsbereiche und Eigenschaften umgeht, können Sie mehr darüber in [Berechtigungen für Unternehmensbenutzer“ &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=de).
+Die [!DNL Target]-SDKs unterstützen Benutzerberechtigungen und Eigenschaften. Wenn Sie nicht genau wissen, wie [!DNL Adobe Target] mit Unternehmensberechtigungen über Arbeitsbereiche und Eigenschaften umgeht, können Sie mehr darüber in [Berechtigungen für Unternehmensbenutzer“ ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=de).
 
 Der Client kann ein Eigenschafts-Token auf zwei Arten verwenden.
 

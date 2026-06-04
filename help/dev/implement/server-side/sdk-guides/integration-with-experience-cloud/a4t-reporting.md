@@ -1,25 +1,21 @@
 ---
 title: Integration mit Experience Cloud A4T-Reporting
-description: Integration mit Experience Cloud, A4T-Reporting, Analytics for Target-Integration
+description: Integration mit Experience Cloud, A4T-Reporting, Integration von Analytics for Target
 keywords: Bereitstellungs-API, serverseitig, serverseitig, Integration, A4T
 exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/Qx5xwszkQLumkFhGJDbvyIofPe7qxUDN922iqmhsClk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 392
+source-wordcount: 399
 ht-degree: 6%
 
 ---
 
-# [!UICONTROL Analytics for Target] (A4T)-Reporting
+# Reporting [!UICONTROL Analytics for Target] (A4T)
 
 [!DNL Adobe Target] unterstützt A4T-Reporting sowohl für die geräteinterne Entscheidungsfindung als auch für Server-seitige [!DNL Target]. Es gibt zwei Konfigurationsoptionen zum Aktivieren von A4T-Berichten:
 
@@ -33,7 +29,7 @@ ht-degree: 6%
 ## Voraussetzungen
 
 1. Konfigurieren Sie die Aktivität in der [!DNL Adobe Target]-Benutzeroberfläche mit [!DNL Adobe Analytics] als Berichtsquelle und stellen Sie sicher, dass die Konten für A4T aktiviert sind.
-1. Der API-Benutzer generiert die Adobe-[!UICONTROL Marketing Cloud Visitor ID] und stellt sicher, dass diese ID verfügbar ist, wenn die [!DNL Target] ausgeführt wird.
+1. Der API-Benutzer generiert die Adobe-[!UICONTROL Marketing Cloud-Besucher]ID und stellt sicher, dass diese ID verfügbar ist, wenn die [!DNL Target] ausgeführt wird.
 
 ## [!DNL Adobe Target] leitet die [!DNL Analytics] Payload automatisch weiter
 
@@ -123,7 +119,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## Benutzer ruft Analytics-Payload von [!DNL Adobe Target] ab
 
-Ein Benutzer kann die [!DNL Adobe Analytics] Payload für eine bestimmte Mbox abrufen und dann über die „Data Insertion [&quot; an [!DNL Adobe Analytics] &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Wenn eine [!DNL Adobe Target]-Anfrage ausgelöst wird, übergeben Sie `client_side` an das Feld `logging` in der Anfrage. Diese Anfrage gibt eine Payload zurück, wenn die angegebene Mbox in einer Aktivität vorhanden ist, die [!DNL Analytics] als Berichtsquelle verwendet.
+Ein Benutzer kann die [!DNL Adobe Analytics] Payload für eine bestimmte Mbox abrufen und dann über die „Data Insertion [&quot; an [!DNL Adobe Analytics] ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Wenn eine [!DNL Adobe Target]-Anfrage ausgelöst wird, übergeben Sie `client_side` an das Feld `logging` in der Anfrage. Diese Anfrage gibt eine Payload zurück, wenn die angegebene Mbox in einer Aktivität vorhanden ist, die [!DNL Analytics] als Berichtsquelle verwendet.
 
 >[!BEGINTABS]
 

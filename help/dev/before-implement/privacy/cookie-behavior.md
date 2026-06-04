@@ -5,22 +5,11 @@ title: Wo finde ich Informationen zu  [!DNL Target] -Cookies?
 feature: at.js
 exl-id: d44e02ce-8920-4130-bcad-699ca77c0dad
 TQID: https://experienceleague.adobe.com/Uc9Gb06t9DIkvBvLQJ9ZhopE8pyJovjyrQdsUmFD9-o
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 1692
@@ -34,7 +23,7 @@ Das Verhalten von Cookies ist davon abhängig, ob es sich um ein Erstanbieter-Co
 
 >[!NOTE]
 >
->Ausführliche Informationen zu den verschiedenen von [!DNL Target] verwendeten Cookies finden Sie unter [[!DNL Adobe Target] Cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-target.html?lang=de){target=_blank} im *Komponentenhandbuch für die zentrale Experience Cloud-Benutzeroberfläche*.
+>Ausführliche Informationen zu den verschiedenen von [!DNL Target] verwendeten Cookies finden Sie unter [[!DNL Adobe Target] Cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-target.html?lang=de){target=_blank} im Komponentenhandbuch *Zentrale Benutzeroberfläche von Experience Cloud*.
 >
 >Dieses Thema enthält Informationen zu `mboxSession` und `mboxPC`. Best Practices für die Implementierung empfehlen, keine vertraulichen Informationen mit den Cookie-Daten zu verknüpfen oder zu speichern: `mboxSession` oder `mboxPC`.
 
@@ -42,7 +31,7 @@ Siehe auch [Löschen des  [!DNL Target] -](cookie-deleting.md).
 
 ## Verwendung von Erstanbieter- oder Drittanbieter-Cookies
 
-Durch Ihre Site-Einrichtung wird bestimmt, welche Cookies Sie verwenden. Es ist hilfreich zu verstehen, wie [!DNL Target] funktioniert, wenn Sie versuchen, Erstanbieter- und Drittanbieter-Cookies zu verstehen. Weitere Informationen finden [&#x200B; unter  [!DNL Adobe] [!DNL Target]Funktionsweise](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=de) .
+Durch Ihre Site-Einrichtung wird bestimmt, welche Cookies Sie verwenden. Es ist hilfreich zu verstehen, wie [!DNL Target] funktioniert, wenn Sie versuchen, Erstanbieter- und Drittanbieter-Cookies zu verstehen. Weitere Informationen finden [ unter  [!DNL Adobe] [!DNL Target]Funktionsweise](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html) .
 
 Es gibt drei Haupt-Nutzungsszenarien für Cookies:
 
@@ -157,4 +146,4 @@ Von Apple (übersetzter Auszug):
 | Betroffene Funktionalität | Details |
 |--- |--- |
 | Abmeldeunterstützung | Wegen der durch das WebKit von Apple bewirkten Änderungen am Tracking ist die Unterstützung für Ausschlüsse hinfällig.<br />Der Target-Ausschluss verwendet ein Cookie in der `clientcode.tt.omtrdc.net`-Domain. Weitere Informationen finden Sie unter [Datenschutz](privacy.md).<br />Target unterstützt zwei Opt-outs:<ul><li>Einen pro Kunde (der Kunde verwaltet den Ausschluss-Link).</li><li>Eine über [!DNL Adobe], die den Benutzer von allen [!DNL Target]-Funktionen für alle Kunden ausschließt.</li></ul>Beide Methoden verwenden den Drittanbieter-Cookie. |
-| Target-Aktivitäten | Kunden können ihre [Lebensdauer des Profils](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html?lang=de) für ihre [!DNL Target] Konten auswählen (bis zu 90 Tage). Problematisch ist Folgendes: Wenn die Profillebensdauer des Kontos länger als 30 Tage ist und das Erstanbieter-Cookie gelöscht wird, da die Domain des Kunden als Tracking-Benutzer über mehrere Sites hinweg gekennzeichnet wurde, das Verhalten für Safari-Besucher in Target wie folgt beeinflusst wird:<br />**Target-Berichte**: Wenn ein Safari-Benutzer eine Aktivität beginnt, nach 30 Tagen zurückkehrt und dann konvertiert, zählt dieser Benutzer als zwei Besucher und eine Konversion.<br />Dieses Verhalten ist bei Aktivitäten, die Analytics verwenden, identisch mit dem Verhalten der Berichtsquelle (A4T).<br />**Profil- und Aktivitätsmitgliedschaft**:<ul><li>Profildaten werden gelöscht, wenn das Erstanbieter-Cookie abläuft.</li><li>Die Aktivitätsmitgliedschaft wird gelöscht, wenn das Erstanbieter-Cookie abläuft.</li><li> [!DNL Target] funktioniert in Safari nicht für Konten, die eine Drittanbieter-Cookie-Implementierung oder eine Erstanbieter- und Drittanbieter-Cookie-Implementierung verwenden. Dieses Verhalten ist nicht neu. Safari lässt Cookies von Drittanbietern schon eine Weile nicht mehr zu.</li></ul><br />**Vorschläge**: Wenn Sie befürchten, dass die Domain des Kunden möglicherweise als Domain markiert wird, die Besucher sitzungsübergreifend verfolgt, ist es am sichersten, die Profillebensdauer in Target auf 30 Tage oder weniger festzulegen. Diese Begrenzung stellt sicher, dass Benutzer in Safari und allen anderen Browsern ähnlich verfolgt werden. |
+| Target-Aktivitäten | Kunden können ihre [Lebensdauer des Profils](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) für ihre [!DNL Target] Konten auswählen (bis zu 90 Tage). Problematisch ist Folgendes: Wenn die Profillebensdauer des Kontos länger als 30 Tage ist und das Erstanbieter-Cookie gelöscht wird, da die Domain des Kunden als Tracking-Benutzer über mehrere Sites hinweg gekennzeichnet wurde, das Verhalten für Safari-Besucher in Target wie folgt beeinflusst wird:<br />**Target-Berichte**: Wenn ein Safari-Benutzer eine Aktivität beginnt, nach 30 Tagen zurückkehrt und dann konvertiert, zählt dieser Benutzer als zwei Besucher und eine Konversion.<br />Dieses Verhalten ist bei Aktivitäten, die Analytics verwenden, identisch mit dem Verhalten der Berichtsquelle (A4T).<br />**Profil- und Aktivitätsmitgliedschaft**:<ul><li>Profildaten werden gelöscht, wenn das Erstanbieter-Cookie abläuft.</li><li>Die Aktivitätsmitgliedschaft wird gelöscht, wenn das Erstanbieter-Cookie abläuft.</li><li> [!DNL Target] funktioniert in Safari nicht für Konten, die eine Drittanbieter-Cookie-Implementierung oder eine Erstanbieter- und Drittanbieter-Cookie-Implementierung verwenden. Dieses Verhalten ist nicht neu. Safari lässt Cookies von Drittanbietern schon eine Weile nicht mehr zu.</li></ul><br />**Vorschläge**: Wenn Sie befürchten, dass die Domain des Kunden möglicherweise als Domain markiert wird, die Besucher sitzungsübergreifend verfolgt, ist es am sichersten, die Profillebensdauer in Target auf 30 Tage oder weniger festzulegen. Diese Begrenzung stellt sicher, dass Benutzer in Safari und allen anderen Browsern ähnlich verfolgt werden. |

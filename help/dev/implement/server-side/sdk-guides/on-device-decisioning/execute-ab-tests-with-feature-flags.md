@@ -4,20 +4,13 @@ description: Führen Sie A/B-Tests mit Feature Flags mithilfe der geräteinterne
 feature: APIs/SDKs
 exl-id: abf66e00-742d-4d40-9b6e-9bd71638c31a
 TQID: https://experienceleague.adobe.com/OnRFP7WgNvPy-9v8Ea8te3v5QAUlcR2WUlD7yGB-QzQ
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 749
+source-wordcount: 813
 ht-degree: 1%
 
 ---
@@ -26,8 +19,8 @@ ht-degree: 1%
 
 ## Zusammenfassung der Schritte
 
-1. Aktivieren von [!UICONTROL on-device decisioning] für Ihr Unternehmen
-1. [!UICONTROL A/B Test] erstellen
+1. Aktivieren [!UICONTROL On-Device Decisioning] für Ihre Organisation
+1. Erstellen einer [!UICONTROL A/B-Test]-Aktivität
 1. A und B definieren
 1. Hinzufügen einer Audience
 1. Traffic-Zuordnung festlegen
@@ -41,32 +34,32 @@ ht-degree: 1%
 >
 >Angenommen, Sie möchten ermitteln, ob Ihre Herbstumgestaltung Ihrer Homepage bei Ihren Nutzern gut ankommt. Sie können sie testen, indem Sie ein A/B-Experiment in [!DNL Adobe Target] durchführen. Sie sollten auch sicherstellen, dass das Experiment mit hoher Leistung durchgeführt wird, damit die Ergebnisse bei einem negativen oder langsamen Benutzererlebnis nicht verzerrt werden.
 
-## &#x200B;1. Aktivieren von [!UICONTROL on-device decisioning] für Ihr Unternehmen
+## &#x200B;1. Aktivieren [!UICONTROL On-Device Decisioning] für Ihre Organisation
 
-Durch die Aktivierung der geräteinternen Entscheidungsfindung wird sichergestellt, dass eine A/B-Aktivität mit einer Latenz von nahezu null ausgeführt wird. Um diese Funktion zu aktivieren, navigieren Sie in [!DNL Adobe Target] zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** und aktivieren Sie den Umschalter **[!UICONTROL On-Device Decisioning]** .
+Durch die Aktivierung der geräteinternen Entscheidungsfindung wird sichergestellt, dass eine A/B-Aktivität mit einer Latenz von nahezu null ausgeführt wird. Um diese Funktion zu aktivieren, navigieren Sie **[!UICONTROL [!DNL Adobe Target] zu]** > **[!UICONTROL Implementierung]** > **[!UICONTROL Kontodetails]** und aktivieren Sie den Umschalter **[!UICONTROL On-Device Decisioning]**.
 
 &lt;!— insert image-odd4.png —>
 ![ALT-Bild](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->Sie müssen über die Admin- oder Genehmiger[Benutzerrolle verfügen, &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=de) den Umschalter Geräteinterne Entscheidungsfindung zu aktivieren oder zu deaktivieren.
+>Sie müssen über die Admin- oder Genehmiger[Benutzerrolle verfügen, ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) den Umschalter Geräteinterne Entscheidungsfindung zu aktivieren oder zu deaktivieren.
 
-Nach der Aktivierung des **[!UICONTROL On-Device Decisioning]**-Umschalters beginnt [!DNL Adobe Target] mit der Generierung von Regelartefakten für Ihren Client.
+Nach der Aktivierung **[!UICONTROL Umschalters]** On-Device Decisioning“ beginnt [!DNL Adobe Target] mit der Generierung von Regelartefakten für Ihren Client.
 
-## &#x200B;2. [!UICONTROL A/B Test] erstellen
+## &#x200B;2. Erstellen einer [!UICONTROL A/B-Test]-Aktivität
 
-Navigieren Sie in [!DNL Adobe Target] zur Seite **[!UICONTROL Activities]** und wählen Sie dann **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]** aus.
+Navigieren Sie in [!DNL Adobe Target] zur Seite **[!UICONTROL Aktivitäten]** und wählen Sie dann **[!UICONTROL Aktivität erstellen]** > **[!UICONTROL A/B-Test]**.
 
 ![ALT-Bild](assets/asset-ab.png)
 
-Lassen Sie im **[!UICONTROL Create A/B Test Activity]**-Modal die Option **[!UICONTROL Web]** ausgewählt (1), wählen Sie **[!UICONTROL Form]** als Experience Composer (2), wählen Sie **[!UICONTROL Default Workspace]** ohne **[!UICONTROL Property Restrictions]** (3) und klicken Sie auf **[!UICONTROL Next]** (4).
+Lassen Sie im Modal **[!UICONTROL A/B-]** erstellen“ die Standardoption **[!UICONTROL Web]** ausgewählt (1), wählen Sie **[!UICONTROL Form]** als Experience Composer (2) aus, wählen Sie **[!UICONTROL Standard-Workspace]** ohne **[!UICONTROL Eigenschaftsbeschränkungen]** (3) aus und klicken Sie auf **[!UICONTROL Weiter]** (4).
 
 ![ALT-Bild](assets/asset-form.png)
 
 ## &#x200B;3. A und B definieren
 
-1. Geben Sie im **[!UICONTROL Experiences]** Schritt der Aktivitätserstellung einen Namen für Ihre Aktivität ein (1) und fügen Sie ein zweites Erlebnis, Erlebnis B, hinzu, indem Sie auf die Schaltfläche **[!UICONTROL Add Experience]** (2) klicken. Geben Sie den Namen des Speicherorts (3) in Ihrer Anwendung ein, an dem Sie Ihren A/B-Test durchführen möchten. Im folgenden Beispiel ist „homepage“ der für Erlebnis A definierte Speicherort. (Es ist auch der für Erlebnis B definierte Speicherort.)
+1. Geben **[!UICONTROL im Schritt]** Erlebnisse“ der Aktivitätserstellung einen Namen für Ihre Aktivität ein (1) und fügen Sie ein zweites Erlebnis hinzu, Erlebnis B, indem Sie auf die Schaltfläche **[!UICONTROL Erlebnis hinzufügen]** (2) klicken. Geben Sie den Namen des Speicherorts (3) in Ihrer Anwendung ein, an dem Sie Ihren A/B-Test durchführen möchten. Im folgenden Beispiel ist „homepage“ der für Erlebnis A definierte Speicherort. (Es ist auch der für Erlebnis B definierte Speicherort.)
 
    Erlebnis A definiert das Steuerelement, d. h. das aktuelle Homepage-Design.
 
@@ -76,7 +69,7 @@ Lassen Sie im **[!UICONTROL Create A/B Test Activity]**-Modal die Option **[!UIC
 
    ![ALT-Bild](assets/asset-exp-b.png)
 
-1. Klicken Sie in Erlebnis B auf , um den Inhalt von **[!UICONTROL Default Content]** in den neu gestalteten Inhalt zu ändern, indem Sie **[!UICONTROL Create JSON Offer]** wie unten dargestellt auswählen (1).
+1. Klicken Sie in Erlebnis B auf , um den Inhalt von **[!UICONTROL Standardinhalt]** in den neu gestalteten Inhalt zu ändern, indem Sie **[!UICONTROL JSON-Angebot erstellen]** wie unten dargestellt (1) auswählen.
 
    ![ALT-Bild](assets/asset-offer.png)
 
@@ -93,11 +86,11 @@ Lassen Sie im **[!UICONTROL Create A/B Test Activity]**-Modal die Option **[!UIC
 
 Angenommen, Sie möchten das Redesign zunächst an Ihren treuen Kunden testen, die Sie identifizieren können, je nachdem, ob sie angemeldet sind oder nicht.
 
-1. Klicken Sie im **[!UICONTROL Targeting]** Schritt wie abgebildet auf , um die **[!UICONTROL All Visitors]** Zielgruppe zu ersetzen.
+1. Klicken Sie **[!UICONTROL Schritt]** Targeting“, um die Zielgruppe **[!UICONTROL Alle Besucher]** zu ersetzen, wie dargestellt.
 
    ![ALT-Bild](assets/asset-all-audiences.png)
 
-1. Definieren Sie im **[!UICONTROL Create Audience]**-Modal eine benutzerdefinierte Regel, in der `logged-in = true` ist. Dies definiert die Gruppe der angemeldeten Benutzer. Diese Zielgruppe in Ihrer Aktivität verwenden.
+1. Definieren Sie **[!UICONTROL Modal &quot;]** erstellen“ eine benutzerdefinierte Regel, in der `logged-in = true` wird. Dies definiert die Gruppe der angemeldeten Benutzer. Diese Zielgruppe in Ihrer Aktivität verwenden.
 
    ![ALT-Bild](assets/asset-audience.png)
 
@@ -115,13 +108,13 @@ Definieren Sie den Prozentsatz Ihrer angemeldeten Benutzer, die das aktuelle Des
 
 ## &#x200B;7. Einrichten von Berichten
 
-Wählen Sie im **[!UICONTROL Goals & Settings]** Schritt **[!UICONTROL Adobe Target]** als **[!UICONTROL Reporting Source]** aus, um die Aktivitätsergebnisse in der [!DNL Adobe Target] Benutzeroberfläche anzuzeigen, oder wählen Sie **[!UICONTROL Adobe Analytics]** aus, um sie in der Benutzeroberfläche von Adobe Analytics anzuzeigen.
+Wählen Sie im Schritt **[!UICONTROL Ziele und Einstellungen]** die Option **[!UICONTROL Adobe Target]** als **[!UICONTROL Reporting-Source]** aus, um Aktivitätsergebnisse in der [!DNL Adobe Target]-Benutzeroberfläche anzuzeigen, oder wählen Sie **[!UICONTROL Adobe Analytics]** aus, um sie in der Adobe Analytics-Benutzeroberfläche anzuzeigen.
 
 ![ALT-Bild](assets/asset-reporting.png)
 
 ## &#x200B;8. Metriken für Tracking-KPIs hinzufügen
 
-Wählen Sie eine **[!UICONTROL Goal Metric]** aus, um den A/B-Test zu messen. In diesem Beispiel basiert eine erfolgreiche Konversion darauf, ob der Benutzer das Seitenende erreicht, was auf eine Interaktion hinweist. Daher wird **[!UICONTROL Conversion]** davon abhängig bestimmt, ob der Benutzer den Ort mit dem Namen „Seitenende“ angesehen hat.
+Wählen Sie eine **[!UICONTROL Zielmetrik]**, um den A/B-Test zu messen. In diesem Beispiel basiert eine erfolgreiche Konversion darauf, ob der Benutzer das Seitenende erreicht, was auf eine Interaktion hinweist. Daher wird **[!UICONTROL Konversion]** danach bestimmt, ob der Benutzer den Ort mit dem Namen „Seitenende“ angesehen hat.
 
 ## &#x200B;9. Implementieren Sie Code zum Ausführen von A/B-Tests mit Feature Flags in Ihrer Anwendung
 

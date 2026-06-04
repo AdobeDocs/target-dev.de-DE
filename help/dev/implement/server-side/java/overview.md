@@ -4,14 +4,12 @@ description: Erfahren Sie [!DNL Adobe Target]  wie -Kunden die Java-SDK installi
 feature: APIs/SDKs
 exl-id: ccdd33f5-a9c7-4832-beba-b9692203d42c
 TQID: https://experienceleague.adobe.com/BtTvCc3i4bYN5rujWFkp-h6TNewSovwrxC8UKvEYZpI
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 120
-ht-degree: 9%
+source-wordcount: 123
+ht-degree: 8%
 
 ---
 
@@ -32,7 +30,7 @@ Um zu sehen, wie Sie mit der Java-SDK beginnen können, navigieren Sie zum Handb
 
 Testen Sie die Java-SDK:
 
-* Indem Sie die [[!DNL Adobe Target] [!UICONTROL on-device decisioning] Demo-Site besuchen](https://github.com/adobe/on-device-decisioning-demo-site)
+* Indem Sie die Demo[[!DNL Adobe Target] [!UICONTROL Site ]On-Device Decisioning“ besuchen](https://github.com/adobe/on-device-decisioning-demo-site)
 * In einer [Beispielanwendung](../sdk-guides/sample-apps/sample-apps.md).
 
 ## Referenz

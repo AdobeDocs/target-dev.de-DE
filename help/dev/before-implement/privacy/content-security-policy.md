@@ -5,19 +5,11 @@ title: Wie handhabt  [!DNL Target]  Content Security Policies (CSP)?
 feature: Privacy & Security
 exl-id: ec6942e5-36d8-4f88-b3d6-47f9eaca03a8
 TQID: https://experienceleague.adobe.com/gGNgYyblw6-D-RiHBtzAtrOOdhVOsIzYQ-HhkhCtyuI
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 610
@@ -27,7 +19,7 @@ ht-degree: 28%
 
 # Richtlinien zur Content Security Policy (CSP)
 
-Wenn Sie die [Content Security Policy](https://de.wikipedia.org/wiki/Content_Security_Policy) (CSP) für Ihre [!DNL Adobe Target]-Implementierung verwenden, sollten Sie die folgenden CSP-Anweisungen hinzufügen, wenn Sie at.[&#x200B; 2.1 oder höher verwenden](../../implement/client-side/atjs/target-atjs-versions.md):
+Wenn Sie die [Content Security Policy](https://de.wikipedia.org/wiki/Content_Security_Policy) (CSP) für Ihre [!DNL Adobe Target]-Implementierung verwenden, sollten Sie die folgenden CSP-Anweisungen hinzufügen, wenn Sie at.[ 2.1 oder höher verwenden](../../implement/client-side/atjs/target-atjs-versions.md):
 
 * `connect-src` mit `*.tt.omtrdc.net` auf der Zulassungsliste. Erforderlich, um die Netzwerkanfrage an das [!DNL Target]-Edge-Netzwerk zuzulassen.
 * `style-src unsafe-inline`. Erforderlich, um die Flimmerregelung vorab auszublenden.
@@ -51,7 +43,7 @@ Adobe speichert keine personenbezogenen oder anderen sensiblen Informationen auf
 
 ### Wie kann ich zulassen oder verhindern, dass meine Website als iFrame unter fremden Domains eingebettet wird?
 
-Damit der [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=de){target=_blank} (VEC) Ihre Website in einen iFrame einbetten kann, muss die CSP (falls festgelegt) in der Webservereinstellung geändert werden. [!DNL Adobe]-Domains müssen auf die Whitelist gesetzt und konfiguriert werden.
+Damit der [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC) Ihre Website in einen iFrame einbetten kann, muss die CSP (falls festgelegt) in der Webservereinstellung geändert werden. [!DNL Adobe]-Domains müssen auf die Whitelist gesetzt und konfiguriert werden.
 
 Aus Sicherheitsgründen möchten Sie möglicherweise verhindern, dass Ihre Site als iFrame unter fremden Domains eingebettet wird.
 

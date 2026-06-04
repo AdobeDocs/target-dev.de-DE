@@ -1,24 +1,17 @@
 ---
 title: Vorabruf der Adobe Target-Bereitstellungs-API
-description: Wie verwende ich den Prefetch im [!UICONTROL Adobe Target Delivery API]?
+description: Wie verwende ich den Vorabruf in der [!UICONTROL Adobe Target-Bereitstellungs-API]?
 keywords: Bereitstellungs-API
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/gthn2vJrIjEkmQdpsf4J818OrzFiLpeRvXXRAUp2SiY
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 548
+source-wordcount: 578
 ht-degree: 0%
 
 ---
@@ -37,7 +30,7 @@ Bei der Verwendung des Vorabrufs ist es wichtig, mit den folgenden Begriffen ver
 
 ## Prefetch-Mboxes
 
-Clients wie Mobile Apps und Server können mehrere Mboxes für einen bestimmten Besucher innerhalb einer Sitzung im Voraus abrufen und zwischenspeichern, um mehrere Aufrufe an die [!UICONTROL Adobe Target Delivery API] zu vermeiden.
+Clients wie Mobile Apps und Server können innerhalb einer Sitzung mehrere Mboxes für einen bestimmten Besucher im Voraus abrufen und zwischenspeichern, um mehrere Aufrufe an die [!UICONTROL Adobe Target-Bereitstellungs-API] zu vermeiden.
 
 ```shell shell-session
 curl -X POST \
@@ -132,11 +125,11 @@ Fügen Sie innerhalb des Felds `prefetch` ein oder mehrere `mboxes` hinzu, die S
 }
 ```
 
-In der Antwort sehen Sie das `content` Feld mit dem Erlebnis, das dem Besucher für eine bestimmte `mbox` angezeigt werden soll. Dies ist sehr nützlich, wenn es auf Ihrem Server zwischengespeichert wird. Wenn ein Besucher innerhalb einer Sitzung mit Ihrer Web- oder Mobile-App interagiert und eine `mbox` auf einer bestimmten Seite Ihrer Anwendung besucht, kann das Erlebnis aus dem Cache bereitgestellt werden, anstatt einen weiteren [!UICONTROL Adobe Target Delivery API]-Aufruf durchzuführen. Wenn dem Besucher jedoch ein Erlebnis über die `mbox` bereitgestellt wird, wird über einen Bereitstellungs-API-Aufruf ein `notification` gesendet, damit die Impression protokolliert wird. Dies liegt daran, dass die Antwort der `prefetch`-Aufrufe zwischengespeichert wird, was bedeutet, dass der Besucher die Erlebnisse zum Zeitpunkt des `prefetch` Aufrufs nicht gesehen hat. Weitere Informationen zum `notification` finden Sie unter [Benachrichtigungen](notifications.md).
+In der Antwort sehen Sie das `content` Feld mit dem Erlebnis, das dem Besucher für eine bestimmte `mbox` angezeigt werden soll. Dies ist sehr nützlich, wenn Sie auf Ihrem Server zwischenspeichern. Wenn ein Besucher innerhalb einer Sitzung mit Ihrer Web- oder Mobile-App interagiert und eine `mbox` auf einer bestimmten Seite Ihrer Anwendung besucht, kann das Erlebnis aus dem Cache bereitgestellt werden, anstatt einen weiteren [!UICONTROL Aufruf der Adobe Target-Bereitstellungs-API] durchzuführen. Wenn dem Besucher jedoch ein Erlebnis über die `mbox` bereitgestellt wird, wird über einen Bereitstellungs-API-Aufruf ein `notification` gesendet, damit die Impression protokolliert wird. Dies liegt daran, dass die Antwort der `prefetch`-Aufrufe zwischengespeichert wird, was bedeutet, dass der Besucher die Erlebnisse zum Zeitpunkt des `prefetch` Aufrufs nicht gesehen hat. Weitere Informationen zum `notification` finden Sie unter [Benachrichtigungen](notifications.md).
 
-## Vorabrufen von Mboxes mit `clickTrack` Metriken bei Verwendung von [!UICONTROL Analytics for Target] (A4T)
+## Prefetch von Mboxes mit `clickTrack` Metriken bei Verwendung von [!UICONTROL Analytics for Target] (A4T)
 
-[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=de){target=_blank} (A4T) ist eine lösungsübergreifende Integration, die Ihnen das Erstellen von Aktivitäten ermöglicht, die auf [!DNL Analytics] Konversionsmetriken und Zielgruppensegmenten basieren.
+[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) ist eine lösungsübergreifende Integration, mit der Sie Aktivitäten basierend auf [!DNL Analytics] Konversionsmetriken und Zielgruppensegmenten erstellen können.
 
 Das folgende Code-Snippet ist eine Antwort von einem Vorabruf einer Mbox mit `clickTrack` Metriken, um [!DNL Analytics] darüber zu informieren, dass auf ein Angebot geklickt wurde:
 
@@ -181,7 +174,7 @@ Das folgende Code-Snippet ist eine Antwort von einem Vorabruf einer Mbox mit `cl
 
 ## Ansichten vorab abrufen
 
-Ansichten unterstützen Single Page Applications (SPA) und Mobile Apps nahtloser. Ansichten können als logische Gruppe visueller Elemente betrachtet werden, aus denen sich eine SPA oder ein mobiles Erlebnis zusammensetzt. Über die Bereitstellungs-API können jetzt von VEC erstellte [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=de){target=_blank}- und [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=de){target=_blank} (X)T-Aktivitäten mit Änderungen in [Ansichten für SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) vorab abgerufen werden.
+Ansichten unterstützen Single Page Applications (SPA) und Mobile Apps nahtloser. Ansichten können als logische Gruppe visueller Elemente betrachtet werden, aus denen sich eine SPA oder ein mobiles Erlebnis zusammensetzt. Über die Bereitstellungs-API können jetzt von VEC erstellte [[!UICONTROL A/B]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank}- und [[!UICONTROL Erlebnis-Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank}(X)T-Aktivitäten mit Änderungen in [Ansichten für SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) vorab abgerufen werden.
 
 ```shell  {line-numbers="true"}
 curl -X POST \
@@ -211,7 +204,7 @@ curl -X POST \
 }'
 ```
 
-Mit dem obigen Beispielaufruf werden alle Ansichten, die über den SPA VEC für [!UICONTROL A/B Test]- und XT-Aktivitäten erstellt wurden, vorab abgerufen, um sie für die Web-`channel` anzuzeigen. Beachten Sie, dass durch den Aufruf alle Ansichten aus den [!UICONTROL A/B Test]- oder XT-Aktivitäten abgerufen werden, für die ein Besucher mit `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131`, der die `url`:`https://target.enablementadobe.com/react/demo/#/` besucht, qualifiziert ist.
+Mit dem obigen Beispielaufruf werden alle Ansichten, die über den SPA VEC für [!UICONTROL A/B-Test] und XT-Aktivitäten erstellt wurden, vorab abgerufen, um sie für die Web-`channel` anzuzeigen. Beachten Sie, dass durch den Aufruf alle Ansichten aus den [!UICONTROL A/B-Test]- oder XT-Aktivitäten vorab abgerufen werden, für die ein Besucher mit `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131`, der die `url`:`https://target.enablementadobe.com/react/demo/#/` besucht, qualifiziert ist.
 
 ```JSON  {line-numbers="true"}
 {

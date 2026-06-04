@@ -5,12 +5,9 @@ title: Wie erstelle ich  [!DNL Target]  und Erfolgsmetriken in einer iOS-App?
 feature: Implement Mobile
 exl-id: 755c8b26-5c60-48fc-9e7e-5e97a25edb78
 TQID: https://experienceleague.adobe.com/frolzqCgdL0iz5Z3E8OaJmP6yiVq7jEYiWn6LD4bocA
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 469
@@ -28,11 +25,11 @@ Um [!DNL Target] in Ihrer Mobile App zu verwenden, erstellen Sie einen Standort 
 >
 >Die [Adobe Experience Platform SDK für Mobile Apps](https://developer.adobe.com/client-sdks/documentation/){target=_blank} ist die empfohlene Lösung für [!DNL Adobe Experience Cloud] Lösungen und Services in Ihren Mobile Apps.
 
-In diesem Abschnitt finden Sie Beispiel-Code, der als Vorlage für Ihre App verwendet werden kann. Die Beispiele in diesem Abschnitt enthalten Code für iOS. Die gleichen Muster gelten jedoch auch für Android. Android-spezifische Syntax finden Sie im Handbuch [Android SDK 4.x for Experience Cloud Solutions](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html?lang=de).
+In diesem Abschnitt finden Sie Beispiel-Code, der als Vorlage für Ihre App verwendet werden kann. Die Beispiele in diesem Abschnitt enthalten Code für iOS. Die gleichen Muster gelten jedoch auch für Android. Android-spezifische Syntax finden Sie im Handbuch [Android SDK 4.x for Experience Cloud Solutions](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html).
 
 >[!NOTE]
 >
->In der [Mobile-Dokumentation](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html?lang=de) finden Sie eine Liste aller verfügbaren [!DNL Target].
+>In der [Mobile-Dokumentation](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html) finden Sie eine Liste aller verfügbaren [!DNL Target].
 
 Um einen [!DNL Target] Speicherort in Ihrer App zu erstellen und eine Anfrage zu stellen, gibt es zwei primäre Methoden:
 

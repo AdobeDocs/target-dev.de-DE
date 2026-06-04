@@ -4,7 +4,7 @@ description: Integration mit Experience Cloud
 keywords: Bereitstellungs-API
 source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '482'
 ht-degree: 7%
 
 ---
@@ -176,7 +176,7 @@ Nachdem Sie `logging` = `client_side` angegeben haben, erhalten Sie die Payload 
 }
 ```
 
-Wenn die Target-Antwort etwas in der `analytics` `payload` -> enthält, leiten Sie es wie gewünscht an Adobe Analytics weiter. Analytics weiß, wie diese Payload verarbeitet wird. Dies kann in einer GET-Anfrage im folgenden Format erfolgen:
+Wenn die Target-Antwort etwas in der `payload` `analytics` -> enthält, leiten Sie es wie gewünscht an Adobe Analytics weiter. Analytics weiß, wie diese Payload verarbeitet wird. Dies kann in einer GET-Anfrage im folgenden Format erfolgen:
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}

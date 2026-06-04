@@ -5,20 +5,14 @@ title: Welche Browser werden  [!DNL Target]  unterstützt?
 feature: Implementation
 exl-id: 1d778e14-26b0-477b-ac28-d304db70a133
 TQID: https://experienceleague.adobe.com/xYilaZkJzo4zLIJ4uvIxkuRkhl5E1D52OFmf1eZNtDs
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 436
+source-wordcount: 443
 ht-degree: 19%
 
 ---
@@ -45,7 +39,7 @@ Die [!DNL Target]-Schnittstelle unterstützt die folgenden Browser und Geräte:
 
 ## Anforderungen an die visuelle Bearbeitung
 
-Damit Sie Ihre Web-Seiten zuverlässig im [!UICONTROL Visual Experience Composer] (VEC) öffnen, erstellen und in der Vorschau anzeigen können, muss die Browser-Erweiterung [Adobe Experience Cloud Visual Editing Helper](https://experienceleague.adobe.com/de/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} in Ihrem Webbrowser installiert sein oder [!UICONTROL Enhanced Experience Composer (EEC)] verwenden.
+Damit Sie Ihre Web-Seiten zuverlässig im [!UICONTROL Visual Experience Composer] (VEC) öffnen, erstellen und in der Vorschau anzeigen können, muss die Browser-Erweiterung [Adobe Experience Cloud Visual Editing Helper](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} in Ihrem Webbrowser installiert sein oder [!UICONTROL Enhanced Experience Composer (EEC) verwenden].
 
 >[!NOTE]
 >
@@ -67,5 +61,5 @@ Beachten Sie Folgendes:
 * Die [!DNL Adobe Experience Platform Web SDK] wurde für eine optimale Funktionsweise in den neuesten Versionen von [!DNL Google Chrome], [!DNL Safari], [!DNL Firefox] und [!DNL Microsoft Edge Chromium] entwickelt. Bei der Verwendung bestimmter Funktionen in älteren Versionen dieser Browser oder veralteten Browsern, wie z. B. [!DNL Internet Explorer], können Probleme auftreten.
 * Bei at.js-Implementierungen zeigt [!DNL Target] Standardinhalte in früheren Versionen von Internet Explorer und möglicherweise in früheren Versionen der oben aufgeführten Browser an.
 * In Internet Explorer werden alle unbekannten Elemente (z. B. benutzerdefinierte Elemente) als derselbe Elementtyp behandelt. Daher funktioniert der Versand nicht mit benutzerdefinierten Elementen.
-* [!DNL Target] zeigt Standardinhalte in Browsern an, die oben nicht aufgeführt sind, und in Browsern, die den [Quirks-Modus“ &#x200B;](https://en.wikipedia.org/wiki/Quirks_mode). Für at.js ist ein Dokumenttyp erforderlich, der im Standardmodus dargestellt wird, beispielsweise `<!DOCTYPE html>`.
+* [!DNL Target] zeigt Standardinhalte in Browsern an, die oben nicht aufgeführt sind, und in Browsern, die den [Quirks-Modus“ ](https://en.wikipedia.org/wiki/Quirks_mode). Für at.js ist ein Dokumenttyp erforderlich, der im Standardmodus dargestellt wird, beispielsweise `<!DOCTYPE html>`.
 * [!DNL Adobe] Bereitstellungsinfrastruktur wird nach dem 12. September 2018 so gesichert, dass TLS 1.0-Geräte und -Browser NICHT mehr unterstützt werden. Siehe [Änderungen hinsichtlich der Verschlüsselung mit TLS (Transport Layer Security)](../before-implement/tls-transport-layer-security-encryption.md), um die Gesamtauswirkungen dieser Änderung zu verstehen.

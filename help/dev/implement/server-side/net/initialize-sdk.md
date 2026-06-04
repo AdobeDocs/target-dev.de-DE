@@ -1,16 +1,14 @@
 ---
 title: Initialisieren von .NET SDK mithilfe der create-Methode
-description: Erfahren Sie, wie Sie mit der create-Methode die Java-SDK initialisieren und die [!UICONTROL TargetClient] instanziieren können, um  [!DNL Adobe Target]  für Experimente und personalisierte Erlebnisse aufzurufen.
+description: Erfahren Sie, wie Sie mit der create-Methode die Java-SDK initialisieren und den [!UICONTROL TargetClient] instanziieren können, um  [!DNL Adobe Target]  Experimente und personalisierte Erlebnisse aufzurufen.
 feature: APIs/SDKs
 exl-id: 501010c3-22f4-49a8-b2ac-c7307232d180
 TQID: https://experienceleague.adobe.com/uOEojoWWjXmcDl2yY1UmSRD-EXL0j9p-p-eE8PXa7Rk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: b18c88053a47a97d6718a69cb72cb4e5d99969c8
 workflow-type: tm+mt
-source-wordcount: 359
+source-wordcount: 369
 ht-degree: 15%
 
 ---
@@ -19,7 +17,7 @@ ht-degree: 15%
 
 ## Beschreibung
 
-Verwenden Sie die `Create`-Methode, um .NET SDK zu initialisieren und die [!UICONTROL Target Client] zu instanziieren und [!DNL Adobe Target] für Experimente und personalisierte Erlebnisse aufzurufen.
+Verwenden Sie die `Create`-Methode, um .NET SDK zu initialisieren und den [!UICONTROL Target-Client] zu instanziieren, um [!DNL Adobe Target] für Experimente und personalisierte Erlebnisse aufzurufen.
 
 Fügen Sie bei Verwendung von .NET Dependency Injection einfach den Konfigurationsschritt SDK at service hinzu, indem Sie `services.AddTargetLibrary()`; aufrufen, und fügen Sie dann `ITargetClient targetClient` in den Konstruktor Ihrer App ein.
 
@@ -29,7 +27,7 @@ Verwenden Sie danach die `Initialize`-Methode von SDK, um die SDK zu konfigurier
 
 `TargetClient` wird mithilfe von `TargetClient.Create` erstellt.
 
-## C&#35;
+## C#
 
 ```csharp {line-numbers="true"}
 TargetClient TargetClient.Create(TargetClientConfig clientConfig)
@@ -37,7 +35,7 @@ TargetClient TargetClient.Create(TargetClientConfig clientConfig)
 
 `ClientConfig` wird mit ClientConfig.Builder erstellt.
 
-## C&#35;
+## C#
 
 ```csharp {line-numbers="true"}
 TargetClientConfig.Builder TargetClientConfig.Builder()
@@ -49,8 +47,8 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
-| Client | string | Ja | Keine | [!UICONTROL Target Client Id] |
-| OrganizationId | string | Ja | Keine | [!UICONTROL Experience Cloud Organization ID] |
+| Client | string | Ja | Keine | [!UICONTROL Target-Client-ID] |
+| OrganizationId | string | Ja | Keine | [!UICONTROL Experience Cloud-Organisations-ID] |
 | Zeitüberschreitung | int | Nein | 10000 | Zeitüberschreitung für alle Anforderungen in Millisekunden |
 | Proxy | WebProxy | Nein | null | Proxy für alle [!DNL Target] |
 | Richtlinie wiederholen | Richtlinie | Nein | null | Richtlinie für alle [!DNL Target] wiederholen |
@@ -71,7 +69,7 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 
 ## Beispiel
 
-## C&#35;
+## C#
 
 ```csharp {line-numbers="true"}
 var targetClientConfig = new TargetClientConfig.Builder("acmeclient", "ABCDEF012345677890ABCDEF0@AdobeOrg")

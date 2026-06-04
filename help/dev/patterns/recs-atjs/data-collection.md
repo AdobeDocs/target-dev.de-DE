@@ -6,15 +6,10 @@ level: Experienced
 role: Developer
 exl-id: 66e0f18d-c78c-463b-8c47-132ef6332927
 TQID: https://experienceleague.adobe.com/fg3xJnwYAVyz-N-xzT5Piu35Ajd2UMEvuTvTQs2wj3c
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 401
@@ -32,7 +27,7 @@ Befolgen Sie die Schritte im *Datenerfassung*-Diagramm, um sicherzustellen, dass
 
 Die Datenschicht ist beim Laden der Seite bereit oder die Datenschicht ändert sich nach dem Laden der Seite.
 
-Wenn Sie bereits während der Initialisierungsphase von [&#x200B; Daten zugeordnet haben](/help/dev/patterns/recs-atjs/initialize-sdk.md) müssen Sie die Schritte in diesem Diagramm ausführen, wenn:
+Wenn Sie bereits während der Initialisierungsphase von [ Daten zugeordnet haben](/help/dev/patterns/recs-atjs/initialize-sdk.md) müssen Sie die Schritte in diesem Diagramm ausführen, wenn:
 
 * Ihre Datenschicht wird auf dieselbe Seite in beliebiger Weise erweitert, und Sie möchten diese zusätzlichen Daten an [!DNL Target] senden
 * Sie möchten Produktkatalogdaten an [!DNL Target Recommendations] senden
@@ -81,11 +76,11 @@ Link zu Entitätsattributen, um den Produktkatalog für [!DNL Target Recommendat
 
 **Messwerte**
 
-* [Entitätsattribute](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=de){target=_blank}
+* [Entitätsattribute](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
 **Zu beachten**
 
-* Eine alternative Möglichkeit, Entitätsattribute zu übergeben, besteht darin, den Produktkatalog in der [!DNL Target]-Benutzeroberfläche zu aktualisieren, um [Recommendations-Produkt-Feeds](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=de){target=_blank} zu verwenden.
+* Eine alternative Möglichkeit, Entitätsattribute zu übergeben, besteht darin, den Produktkatalog in der [!DNL Target]-Benutzeroberfläche zu aktualisieren, um [Recommendations-Produkt-Feeds](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} zu verwenden.
 * Die Übergabe von Entitätsattributen ist nur auf Seiten anwendbar, auf denen Produktkatalogdaten in der Datenschicht verfügbar sind.
 * Die Übergabe des `entity.event.detailsOnly=true` bei jedem Aufruf hat Priorität.
 
@@ -103,7 +98,7 @@ Dieser Schritt stellt sicher, dass alle Daten, die an [!DNL Target] gesendet wer
 
 **Voraussetzungen**
 
-* Die gesamte Datenzuordnung muss mit der Funktion [targetPageParams“ durchgeführt &#x200B;](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md).
+* Die gesamte Datenzuordnung muss mit der Funktion [targetPageParams“ durchgeführt ](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md).
 
 **Messwerte**
 

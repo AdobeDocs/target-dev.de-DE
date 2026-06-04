@@ -1,27 +1,21 @@
 ---
 title: Fehlerbehebung bei der geräteinternen Entscheidungsfindung
-description: Informationen zur Fehlerbehebung bei [!UICONTROL on-device decisioning]
+description: Erfahren Sie, wie Sie [!UICONTROL On-Device Decisioning“ beheben können]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/Fp25tLDtuk-CqqcbofshX2-0MzQzayE2xN8OvNT3zVo
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1158
+source-wordcount: 1188
 ht-degree: 0%
 
 ---
 
-# Fehlerbehebung [!UICONTROL on-device decisioning]
+# Fehlerbehebung [!UICONTROL geräteinterne Entscheidungsfindung]
 
 ## Konfiguration wird validiert
 
@@ -29,8 +23,8 @@ ht-degree: 0%
 
 1. Stellen Sie sicher, dass die `logger` konfiguriert ist
 1. Stellen Sie sicher, dass [!DNL Target] Traces aktiviert ist
-1. Stellen Sie sicher[!UICONTROL on-device decisioning] dass *Regelartefakt* gemäß dem definierten Abrufintervall abgerufen und zwischengespeichert wurde.
-1. Validieren der Inhaltsbereitstellung über das zwischengespeicherte Regelartefakt durch Erstellen einer Test-[!UICONTROL on-device decisioning]-Aktivität über den formularbasierten Experience Composer.
+1. Stellen Sie sicher dass das *Entscheidungsartefakt* On-Device Decisioning) gemäß dem definierten Abrufintervall abgerufen und zwischengespeichert wurde.
+1. Validieren der Inhaltsbereitstellung über das zwischengespeicherte Regelartefakt durch Erstellen einer Test[!UICONTROL Entscheidungsaktivität auf dem ] über den formularbasierten Experience Composer.
 1. Überprüfen von Fehlern beim Senden von Benachrichtigungen
 
 ## &#x200B;1. Stellen Sie sicher, dass der Logger konfiguriert ist
@@ -75,7 +69,7 @@ Durch Aktivieren von Traces werden zusätzliche Informationen aus [!DNL Adobe Ta
 
    ![ALT-Bild](assets/asset-target-ui-1.png)
 
-1. Navigieren Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** und klicken Sie auf **[!UICONTROL Generate New Authorization Token]**.
+1. Navigieren Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** und klicken Sie auf **[!UICONTROL Neues Autorisierungstoken erstellen]**.
 
    ![ALT-Bild](assets/asset-target-ui-2.png)
 
@@ -124,7 +118,7 @@ Durch Aktivieren von Traces werden zusätzliche Informationen aus [!DNL Adobe Ta
      AT: LD.ArtifactProvider artifact received - status=200
    ```
 
-## &#x200B;3. Stellen Sie sicher[!UICONTROL on-device decisioning] dass *Regelartefakt* gemäß dem definierten Abrufintervall abgerufen und zwischengespeichert wurde.
+## &#x200B;3. Stellen Sie sicher dass das *Entscheidungsartefakt* On-Device Decisioning) gemäß dem definierten Abrufintervall abgerufen und zwischengespeichert wurde.
 
 1. Warten Sie die Dauer des Abrufintervalls (standardmäßig 20 Minuten) und stellen Sie sicher, dass das Artefakt vom SDK abgerufen wird. Dieselben Terminal-Protokolle werden ausgegeben.
 
@@ -146,7 +140,7 @@ Durch Aktivieren von Traces werden zusätzliche Informationen aus [!DNL Adobe Ta
      },
    ```
 
-## &#x200B;4. Validieren der Inhaltsbereitstellung über das zwischengespeicherte Regelartefakt durch Erstellen einer [!UICONTROL on-device decisioning]-Aktivität über den formularbasierten Experience Composer
+## &#x200B;4. Validieren der Inhaltsbereitstellung über das zwischengespeicherte Regelartefakt durch Erstellen einer Test[!UICONTROL Entscheidungsaktivität auf dem ] über den formularbasierten Experience Composer
 
 1. Navigieren Sie zur [!DNL Target]-Benutzeroberfläche in Experience Cloud
 
@@ -250,11 +244,11 @@ client = TargetClient.create({
 
 ## Häufige Fehlerbehebungsszenarien
 
-Überprüfen Sie die [unterstützten Funktionen](supported-features.md) auf [!UICONTROL on-device decisioning], wenn Probleme auftreten.
+Überprüfen Sie bei Problemen unbedingt [unterstützte Funktionen](supported-features.md) für [!UICONTROL On-Device Decisioning].
 
 ### Entscheidungsaktivitäten auf dem Gerät werden aufgrund von nicht unterstützten Zielgruppen oder Aktivitäten nicht ausgeführt
 
-Ein häufiges Problem besteht darin, dass [!UICONTROL on-device decisioning] Aktivitäten nicht ausgeführt werden, da die verwendete Zielgruppe oder der Aktivitätstyp nicht unterstützt wird.
+Ein häufiges Problem, das auftreten kann, ist [!UICONTROL On-Device Decisioning]-Aktivitäten, die nicht ausgeführt werden, da die verwendete Zielgruppe oder der Aktivitätstyp nicht unterstützt wird.
 
 (1) Überprüfen Sie mithilfe der Logger-Ausgabe die Einträge in der Trace-Eigenschaft in Ihrem Antwortobjekt. Geben Sie insbesondere die Eigenschaft Kampagnen an:
 

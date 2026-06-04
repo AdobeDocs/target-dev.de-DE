@@ -6,8 +6,8 @@ feature: Implement Mobile
 exl-id: 4263b96a-23c8-4513-8302-00080122181d
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 28%
+source-wordcount: '302'
+ht-degree: 38%
 
 ---
 
@@ -25,13 +25,13 @@ Fügen Sie die [!UICONTROL Adobe Mobile Services SDK] zu Ihrer App hinzu.
 
 1. Fügen Sie die [!DNL Adobe Mobile Services SDK] zu Ihrer App hinzu.
 
-   Anweisungen hierzu finden Sie unter [Kernimplementierung und Lebenszyklus](https://experienceleague.adobe.com/docs/mobile-services/ios/getting-started-ios/dev-qs.html?lang=de).
+   Anweisungen hierzu finden Sie unter [Kernimplementierung und Lebenszyklus](https://experienceleague.adobe.com/docs/mobile-services/ios/getting-started-ios/dev-qs.html).
 
 1. Fügen Sie Kunden-Code und Zeitüberschreitung hinzu und aktivieren Sie SSL.
 
-   Öffnen Sie in der Experience Cloud Mobile Services und navigieren Sie zu **[!UICONTROL Manage App Settings]** > **[!UICONTROL SDK Target Options]**.
+   Öffnen Sie „Mobile Services“ in der Experience Cloud und navigieren Sie zu **[!UICONTROL App-Einstellungen verwalten]** > **[!UICONTROL SDK-Target-Optionen]**.
 
-   Fügen Sie Ihren [!DNL Target] Clientcode und die maximale Wartezeit hinzu. Der Kunden-Code ist ein eindeutiger Code für Ihr Konto oder Unternehmen. Die maximale Wartezeit ist die Zeit in Sekunden, bis zu der [!DNL Target] auf eine Antwort warten, bevor der Standardinhalt angezeigt wird. Stellen Sie sicher, dass die Option **[!UICONTROL Use HTTPS]** auf der Seite Mobile-App-Einstellungen verwalten in Adobe Mobile Services aktiviert ist. Wenn HTTPS nicht aktiviert ist, werden alle Aufrufe in iOS9+ blockiert, es sei denn, der [!DNL Target] wird auf die Zulassungsliste gesetzt.
+   Fügen Sie Ihren [!DNL Target] Clientcode und die maximale Wartezeit hinzu. Der Kunden-Code ist ein eindeutiger Code für Ihr Konto oder Unternehmen. Die maximale Wartezeit ist die Zeit in Sekunden, bis zu der [!DNL Target] auf eine Antwort warten, bevor der Standardinhalt angezeigt wird. Stellen Sie sicher, dass Sie die Option **[!UICONTROL HTTPS verwenden]** auf der Seite „App-Einstellungen verwalten“ in Adobe Mobile Services aktiviert haben. Wenn HTTPS nicht aktiviert ist, werden alle Aufrufe in iOS9+ blockiert, es sei denn, der [!DNL Target] wird auf die Zulassungsliste gesetzt.
 
    ![ALT-Bild](assets/mobile-clientcode.png)
 

@@ -6,21 +6,14 @@ level: Experienced
 role: Developer
 exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
 TQID: https://experienceleague.adobe.com/uHFbc8JEhjjGYIulJUvhkH7cXXht6Rht9rY43HjuNqg
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1060
+source-wordcount: 1144
 ht-degree: 3%
 
 ---
@@ -39,7 +32,7 @@ Befolgen Sie die Schritte im Diagramm *Erlebnisse rendern*, um sicherzustellen, 
 
 ## Rendering-Erlebnisdiagramm {#diagram}
 
-Eine automatische vordefinierte Flackerbehandlung, die mit at.js verfügbar ist, ist nur sinnvoll, wenn Sie [!UICONTROL Automatic Page Load Request] aktiviert haben. Diese Option blendet den gesamten HTML-Hauptteil aus, während die Erlebnisse aus [!DNL Target] abgerufen werden. In diesem Fall liegt es in Ihrer Verantwortung, mit Flackern umzugehen. Suchen Sie nach verfügbaren Implementierungsmustern für die Flimmerhandhabung, um eine Anleitung zu erhalten.
+Die automatische vordefinierte Flimmerhandhabung, die mit at.js verfügbar ist, ist nur sinnvoll, wenn [!UICONTROL Automatische Seitenladeanforderung] aktiviert ist. Diese Option blendet den gesamten HTML-Hauptteil aus, während die Erlebnisse aus [!DNL Target] abgerufen werden. In diesem Fall liegt es in Ihrer Verantwortung, mit Flackern umzugehen. Suchen Sie nach verfügbaren Implementierungsmustern für die Flimmerhandhabung, um eine Anleitung zu erhalten.
 
 >[!NOTE]
 >
@@ -71,8 +64,8 @@ Fügen Sie hochgestufte Elemente hinzu und steuern Sie deren Platzierung im Reco
 **Verfügbare Optionen**
 
 * Nach IDs hochstufen
-* [Nach Sammlung hochstufen](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html?lang=de){target=_blank}
-* [Nach Attribut hochstufen](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=de){target=_blank}
+* [Nach Sammlung hochstufen](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
+* [Nach Attribut hochstufen](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
 **Entitätsparameter erforderlich**
 
@@ -80,7 +73,7 @@ Fügen Sie hochgestufte Elemente hinzu und steuern Sie deren Platzierung im Reco
 
 **Messwerte**
 
-* [Hinzufügen von Promotions](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html?lang=de){target=_blank}
+* [Hinzufügen von Promotions](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -94,9 +87,9 @@ Empfehlungen auf der Grundlage des Warenkorbinhalts des Benutzers aussprechen.
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL Personen, die diese angesehen haben, sahen diese an]
+* [!UICONTROL Leute, die diese angesehen haben, kauften diese]
+* [!UICONTROL Personen, die diese gekauft haben, kauften diese]
 
 **Entitätsparameter erforderlich**
 
@@ -104,7 +97,7 @@ Empfehlungen auf der Grundlage des Warenkorbinhalts des Benutzers aussprechen.
 
 **Messwerte**
 
-* [Warenkorbbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=de#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Warenkorbbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -118,13 +111,13 @@ Empfehlungen auf der Grundlage der allgemeinen Popularität eines Elements auf I
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* [!UICONTROL Am häufigsten auf der Website angezeigt]
+* [!UICONTROL Am häufigsten angezeigt nach Kategorie]
+* [!UICONTROL Am häufigsten angezeigt nach Elementattribut]
+* [!UICONTROL Topverkäufe auf der Website]
+* [!UICONTROL Topverkäufe nach Kategorie]
+* [!UICONTROL Topverkäufe nach Artikelattribut]
+* [!UICONTROL Am besten nach Analytics-Metrik]
 
 **Entitätsparameter erforderlich**
 
@@ -133,7 +126,7 @@ Empfehlungen auf der Grundlage der allgemeinen Popularität eines Elements auf I
 
 **Messwerte**
 
-* [Beliebtheitsbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=de#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Beliebtheitsbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -147,10 +140,10 @@ Empfehlungen aussprechen, die darauf basieren, ähnliche Elemente zu finden wie 
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL Personen, die dies angesehen haben, haben dies angesehen]
+* [!UICONTROL Leute, die das angesehen haben, kauften das]
+* [!UICONTROL Personen, die das gekauft haben, kauften das]
+* [!UICONTROL Elemente mit ähnlichen Attributen]
 
 **Entitätsparameter erforderlich**
 
@@ -159,7 +152,7 @@ Empfehlungen aussprechen, die darauf basieren, ähnliche Elemente zu finden wie 
 
 **Messwerte**
 
-* [Elementbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=de#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Elementbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -173,8 +166,8 @@ Empfehlungen auf der Grundlage des Benutzerverhaltens aussprechen.
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL Vor Kurzem aufgerufene Artikel]
+* [!UICONTROL Empfohlen für Sie]
 
 **Entitätsparameter erforderlich**
 
@@ -182,7 +175,7 @@ Empfehlungen auf der Grundlage des Benutzerverhaltens aussprechen.
 
 **Messwerte**
 
-* [Benutzerbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=de#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Benutzerbasiert](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -196,7 +189,7 @@ Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochla
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL Benutzerdefinierter Algorithmus]
 
 **Entitätsparameter erforderlich**
 
@@ -204,7 +197,7 @@ Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochla
 
 **Messwerte**
 
-* [Benutzerdefinierte Kriterien](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=de#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Benutzerdefinierte Kriterien](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -216,7 +209,7 @@ Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochla
 
 **Messwerte**
 
-* [Verwenden dynamischer und statischer Einschlussregeln](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=de){target=_blank}
+* [Verwenden dynamischer und statischer Einschlussregeln](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
 
 +++
 
@@ -230,7 +223,7 @@ Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochla
 
 **Messwerte**
 
-* [Kann ich eine Entität dynamisch ausschließen?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=de#exclude){target=_blank}
+* [Kann ich eine Entität dynamisch ausschließen?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
@@ -242,9 +235,9 @@ Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochla
 
 **Messwerte**
 
-* [Entitätsattribute](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=de){target=_blank}
+* [Entitätsattribute](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-Sie können diesen Schritt auch durchführen, indem Sie [Produkt-Feeds](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=de){target=_blank} über die [!DNL Target]-Benutzeroberfläche erstellen, um den Produktkatalog für [!DNL Recommendations] zu aktualisieren.
+Sie können diesen Schritt auch durchführen, indem Sie [Produkt-Feeds](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} über die [!DNL Target]-Benutzeroberfläche erstellen, um den Produktkatalog für [!DNL Recommendations] zu aktualisieren.
 
 +++
 
@@ -258,7 +251,7 @@ Geben Sie die Profilattribute an, die als Schlüssel für Einschlussregeln in de
 
 **Messwerte**
 
-* [Profilattribute](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=de){target=_blank}
+* [Profilattribute](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html){target=_blank}
 
 +++
 
@@ -266,7 +259,7 @@ Geben Sie die Profilattribute an, die als Schlüssel für Einschlussregeln in de
 
 ## 3.11: Auslösen einer Seitenladeanforderung {#fire}
 
-In diesem Schritt wird ein [!DNL Delivery API]-Aufruf mit `execute` > Payload `pageLoad` in der Anfrage Trigger. Die `getOffers()`-Methode ruft das Erlebnis ab und rendert das Erlebnis `applyOffers()` auf der Seite. Die `pageLoad`-Anfrage wird für das Rendern von Erlebnissen benötigt, die in [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=de){target=_blank} (VEC) verfasst wurden.
+In diesem Schritt wird ein [!DNL Delivery API]-Aufruf mit `execute` > Payload `pageLoad` in der Anfrage Trigger. Die `getOffers()`-Methode ruft das Erlebnis ab und rendert das Erlebnis `applyOffers()` auf der Seite. Die `pageLoad`-Anfrage wird für das Rendern von Erlebnissen benötigt, die in [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC) verfasst wurden.
 
 +++Details anzeigen
 

@@ -1,25 +1,23 @@
 ---
 title: Benutzerberechtigungen für die Adobe Target-Bereitstellungs-API
 description: Benutzerberechtigungen für die Adobe Target-Bereitstellungs-API
-badgePremium: label="Premium" type="Positive" url="https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=de#premium newtab=true" tooltip="Hier finden Sie Informationen zum Lieferumfang von Target Premium."
+badgePremium: label="Premium" type="Positive" url="https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=en#premium newtab=true" tooltip="Hier finden Sie Informationen zum Lieferumfang von Target Premium."
 keywords: Bereitstellungs-API
 exl-id: 332f90bd-4079-4653-aa38-b35837631c94
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/V7F8WjDNUMJJySyep0nVCg0wMK05ZfdV4XPtMjXOBvM
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 180
+source-wordcount: 184
 ht-degree: 1%
 
 ---
 
 # Benutzerberechtigungen (Premium)
 
-[!DNL Adobe] ermöglicht Kunden die Verwaltung von Benutzerberechtigungen bei der Verwendung von Adobe Target. Um einen erfolgreichen [!UICONTROL Adobe Target Delivery API]-Aufruf durchzuführen, muss innerhalb des API-Aufrufs ein Token mit den richtigen Berechtigungen übergeben werden. Weitere Informationen zu Benutzerberechtigungen und zum Abrufen des Tokens finden Sie unter [diese Dokumentation](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=de).
+[!DNL Adobe] ermöglicht Kunden die Verwaltung von Benutzerberechtigungen bei der Verwendung von Adobe Target. Um einen erfolgreichen Aufruf der [!UICONTROL Adobe Target-Bereitstellungs-] durchzuführen, muss innerhalb des API-Aufrufs ein Token mit den richtigen Berechtigungen übergeben werden. Weitere Informationen zu Benutzerberechtigungen und zum Abrufen des Tokens finden Sie unter [diese Dokumentation](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
 
 ```
 curl -X POST \

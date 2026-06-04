@@ -1,26 +1,19 @@
 ---
 keywords: adobe.target.getOffer, getOffer, getoffer, Angebot abrufen, at.js, Funktionen, Funktion, $8
-description: Verwenden Sie die [!UICONTROL adobe.target.getOffer()]-Funktion und ihre Optionen für die  [!DNL Adobe Target] .js-Bibliothek, um Anfragen auszulösen, um ein Angebot  [!DNL Target]  erhalten.
-title: Wie verwende ich die [!UICONTROL adobe.target.getOffer()]?
+description: Verwenden Sie die Funktion [!UICONTROL adobe.target.getOffer()] und ihre Optionen für die Bibliothek " [!DNL Adobe Target] .js“, um Anfragen zum Abrufen eines  [!DNL Target]  auszulösen.
+title: Wie verwende ich die Funktion [!UICONTROL adobe.target.getOffer()]?
 feature: at.js
 exl-id: 7b917d42-06e8-4838-a09d-0c4872c9beaa
 TQID: https://experienceleague.adobe.com/GcXVIt-42-PV0j4Q4oe5uePTZAn7PDIMicIAULDXz-s
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 463
-ht-degree: 74%
+source-wordcount: 472
+ht-degree: 72%
 
 ---
 
@@ -36,7 +29,7 @@ Verwenden Sie sie mit `[!UICONTROL adobe.target.applyOffer()]`, um die Antwort z
 | params | Objekt | Nein | Mbox-Parameter Ein Objekt aus Schlüssel-Wert-Paaren mit der folgenden Struktur:<P>`{ "param1": "value1", "param2": "value2"}` |
 | success | Funktion | Ja | Rückruf wird ausgeführt, wenn eine Antwort vom Server eingegangen ist. Die Rückruffunktion „success“ erhält einen einzelnen Parameter, der ein Array von Angebotsobjekten enthält. Im Folgenden finden Sie ein Beispiel für einen erfolgreichen Callback:<P>`function handleSuccess(response){......}`<P>Details finden Sie unten unter „Antworten“. |
 | error | Funktion | Ja | Auszuführender Rückruf bei Eingang eines Fehlers Es gibt einige Fälle, die als fehlerhaft angesehen werden:<ul><li>Der HTTP-Status-Code weicht von „200 OK“ ab.</li><li>Die Antwort kann nicht analysiert werden. Dies kann zum Beispiel bei schlecht programmiertem JSON-Code oder HTML- statt JSON-Code auftreten.</li><li>Die Antwort enthält den Schlüssel „error“. Dies kann zum Beispiel der Fall sein, wenn eine Ausnahme auf dem Edgeserver auftritt und eine Anforderung nicht richtig verarbeitet werden konnte. Es konnte ein Fehler ausgegeben werden, wenn eine Mbox blockiert wurde und wir keinen Inhalt abrufen konnten usw. Die Rückruffunktion für Fehler erhält zwei Parameter: Status und Fehler. Im Folgenden finden Sie ein Beispiel für einen Fehler-Callback: `function handleError(status, error){......}`</li></ul>Details finden Sie unten unter „Fehlermeldungen“. |
-| Zeitüberschreitung | Nummer | Nein | Zeitüberschreitung in Millisekunden Wird kein Wert festgelegt, kommt der Standardwert für die Zeitüberschreitung in at.js zum Einsatz.<P>Die standardmäßige maximale Wartezeit kann über die [!DNL Target]-Benutzeroberfläche unter [!UICONTROL Administration] > [!UICONTROL Implementation] festgelegt werden. |
+| Zeitüberschreitung | Nummer | Nein | Zeitüberschreitung in Millisekunden Wird kein Wert festgelegt, kommt der Standardwert für die Zeitüberschreitung in at.js zum Einsatz.<P>Die standardmäßige maximale Wartezeit kann über die [!DNL Target]-Benutzeroberfläche unter [!UICONTROL Administration] > [!UICONTROL Implementierung] festgelegt werden. |
 
 ## Beispiele
 
@@ -61,7 +54,7 @@ adobe.target.getOffer({
 });
 ```
 
-Hinzufügen von Parametern und Profilparametern mit [!UICONTROL getOffer()] und Verwenden von [!UICONTROL applyOffer()] für die erfolgreiche Verarbeitung:
+Hinzufügen von Parametern und Profilparametern mit [!UICONTROL getOffer()] und Verwendung von [!UICONTROL applyOffer()] für die erfolgreiche Verarbeitung:
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   

@@ -5,18 +5,11 @@ title: Wie werden  [!DNL Target] Edge-Knoten Auf die Zulassungsliste gesetzt?
 feature: Privacy & Security
 exl-id: a7e5d2fc-da8e-414d-a3da-2441ea21503d
 TQID: https://experienceleague.adobe.com/-XCVJpuvQ1xV9vQBZbomDKU3F-60b5FS-LU8lIBp4GQ
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: a94ced60-8199-4549-b453-ede2acb4101e
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: a94ced60-8199-4549-b453-ede2acb4101e
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 373
@@ -28,7 +21,7 @@ ht-degree: 0%
 
 Informationen und eine aktuelle Liste der Hosts, die Ihnen bei der Zulassungsliste [!DNL Adobe Target] Edges helfen.
 
-Ein Edge ist eine geografisch verteilte Serving-Architektur, die Endbenutzern bei der Inhaltsanfrage optimale Reaktionszeiten bietet, unabhängig davon, wo sie sich befinden. Jeder Edge-Knoten verfügt über alle Informationen, die erforderlich sind, um auf die Inhaltsanfrage des Benutzers zu reagieren und Analysedaten zu dieser Anfrage zu verfolgen. Benutzeranfragen werden an den nächsten Edge-Knoten weitergeleitet. Weitere Informationen finden Sie unter [Das Edge-Netzwerk](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=de#concept_0AE2ED8E9DE64288A8B30FCBF1040934).
+Ein Edge ist eine geografisch verteilte Serving-Architektur, die Endbenutzern bei der Inhaltsanfrage optimale Reaktionszeiten bietet, unabhängig davon, wo sie sich befinden. Jeder Edge-Knoten verfügt über alle Informationen, die erforderlich sind, um auf die Inhaltsanfrage des Benutzers zu reagieren und Analysedaten zu dieser Anfrage zu verfolgen. Benutzeranfragen werden an den nächsten Edge-Knoten weitergeleitet. Weitere Informationen finden Sie unter [Das Edge-Netzwerk](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#concept_0AE2ED8E9DE64288A8B30FCBF1040934).
 
 Bei Bedarf können [!DNL Target] Edge-Knoten auf die Zulassungsliste gesetzt werden.
 
@@ -36,7 +29,7 @@ Bei Bedarf können [!DNL Target] Edge-Knoten auf die Zulassungsliste gesetzt wer
 >
 >Zusätzlich zur Zulassungsauflistung der NAT-IP-Adressen (Network Address Translation) von [!DNL Target]-Edges und [!DNL Target]-Edge-IP-Adressen, die im Artikel behandelt werden, sollten Sie auch alle [!DNL Adobe Analytics]-IP-Adressblöcke hinzufügen.
 >
->Weitere Informationen finden Sie unter [Alle Adobe Analytics-IP-Adressblöcke](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=de#all-adobe-analytics-ip-address-blocks){target=_blank} in der Dokumentation *Technotes zu Adobe Analytics*.
+>Weitere Informationen finden Sie unter [Alle Adobe Analytics-IP-Adressblöcke](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=en#all-adobe-analytics-ip-address-blocks){target=_blank} in der Dokumentation *Technotes zu Adobe Analytics*.
 >
 >[!DNL Adobe Target] Infrastruktur wird aktualisiert, und Kunden, die Adressen ändern möchten, müssen beide IP-Sätze verwenden. Andernfalls hat dies Auswirkungen auf Kunden, die Server-seitige oder Hybridimplementierungen verwenden, bei denen Target-API-Aufrufe zum Abrufen von Erlebnissen aus einem Netzwerk hinter einer Firewall stammen, die für die Verwendung einer -Zulassungsliste konfiguriert ist.
 

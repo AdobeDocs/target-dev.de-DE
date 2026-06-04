@@ -1,31 +1,25 @@
 ---
 keywords: Implementierung, JavaScript-Bibliothek, js, atjs, Entscheidungsfindung auf dem Gerät, Entscheidungsfindung auf dem Gerät, at.js, On-Device, On-Device, Fehlerbehebung, Fehlerbehebung, Implementierung2
-description: Erfahren Sie, wie Sie [!UICONTROL on-device decisioning] mit der at.js-Bibliothek beheben.
+description: Erfahren Sie, wie Sie [!UICONTROL On-Device Decisioning] mit der at.js-Bibliothek beheben können.
 title: Wie kann ich Fehler bei der geräteinternen Entscheidungsfindung mit der at.js-JavaScript-Bibliothek beheben?
 feature: at.js
 exl-id: b9530cc7-5e83-4fdf-bde9-b2492e0861ff
 TQID: https://experienceleague.adobe.com/Ji3jAHC0Ek7FrVnabEEMm-KCtxJLJ5rSz4uyi6sWpiE
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 267
+source-wordcount: 281
 ht-degree: 0%
 
 ---
 
-# Fehlerbehebung bei [!UICONTROL on-device decisioning] für at.js
+# Fehlerbehebung [!UICONTROL On-Device Decisioning] für at.js
 
-Führen Sie die folgenden Schritte aus, um [!UICONTROL on-device decisioning] in [!UICONTROL Adobe Target] mit der at.js-JavaScript-Bibliothek zu beheben:
+Führen Sie die folgenden Schritte aus, um [!UICONTROL On-Device Decisioning] in [!UICONTROL Adobe Target] mit der at.js-JavaScript-Bibliothek zu beheben:
 
 ## Schritt 1: Konsolenprotokoll für at.js aktivieren
 
@@ -60,7 +54,7 @@ So öffnen Sie beispielsweise DevTools in Google Chrome:
 
 ## Schritt 3: Überprüfen des Download-Regelartefakts mithilfe von benutzerdefinierten at.js-Ereignissen
 
-Die at.js-Bibliothek sendet zwei neue benutzerdefinierte Ereignisse, um [!UICONTROL on-device decisioning] zu unterstützen.
+Die at.js-Bibliothek sendet zwei neue benutzerdefinierte Ereignisse, um die [!UICONTROL geräteinterne Entscheidungsfindung“ ] unterstützen.
 
 * `adobe.target.event.ARTIFACT_DOWNLOAD_SUCCEEDED`
 * `adobe.target.event.ARTIFACT_DOWNLOAD_FAILED`

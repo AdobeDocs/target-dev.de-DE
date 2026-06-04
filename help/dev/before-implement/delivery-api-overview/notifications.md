@@ -1,19 +1,16 @@
 ---
 title: Adobe Target-Bereitstellungs-API-Benachrichtigungen
-description: Wie löse ich Benachrichtigungen mithilfe der [!UICONTROL Adobe Target Delivery API] aus?
+description: Wie löse ich Benachrichtigungen mithilfe der [!UICONTROL Adobe Target-Bereitstellungs-API aus]?
 keywords: Bereitstellungs-API
 exl-id: 711388fd-2c1f-4ca4-939f-c56dc4bdc04a
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/rooWLG-bh7lu7eBELTQys3KoNtS-6ZicxfHoQcU6TU0
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 414
+source-wordcount: 426
 ht-degree: 0%
 
 ---
@@ -26,7 +23,7 @@ Damit Benachrichtigungen für die richtige Mbox oder Ansicht ausgelöst werden, 
 
 ## Benachrichtigungen für im Voraus abgerufene Mboxes
 
-Eine oder mehrere Benachrichtigungen können über einen einzigen Versandaufruf gesendet werden. Ermitteln Sie, ob es sich bei der zu verfolgenden Metrik entweder um eine `click` oder eine `display` für jede Mbox handelt, damit die `type` der Benachrichtigung korrekt dargestellt werden kann. Übergeben Sie außerdem für jede Benachrichtigung eine `id`, damit festgestellt werden kann, ob eine Benachrichtigung korrekt über die gesendet wurde[!UICONTROL &#x200B; Adobe Target Delivery API]. Die `timestamp` ist auch wichtig, an [!DNL Target] weitergeleitet zu werden, um anzugeben, wann die `click` oder `display` für eine bestimmte Mbox zu Berichtszwecken aufgetreten ist.
+Eine oder mehrere Benachrichtigungen können über einen einzigen Versandaufruf gesendet werden. Ermitteln Sie, ob es sich bei der zu verfolgenden Metrik entweder um eine `click` oder eine `display` für jede Mbox handelt, damit die `type` der Benachrichtigung korrekt dargestellt werden kann. Übergeben Sie außerdem für jede Benachrichtigung einen `id`, damit festgestellt werden kann, ob eine Benachrichtigung korrekt über die Adobe Target[!UICONTROL Bereitstellungs-API gesendet wurde]. Die `timestamp` ist auch wichtig, an [!DNL Target] weitergeleitet zu werden, um anzugeben, wann die `click` oder `display` für eine bestimmte Mbox zu Berichtszwecken aufgetreten ist.
 
 ```
 curl -X POST \
@@ -117,7 +114,7 @@ Wenn alle an [!DNL Target] gesendeten `notifications` ordnungsgemäß verarbeite
 
 ## Benachrichtigungen für vorab abgerufene Ansichten
 
-Eine oder mehrere Benachrichtigungen können über einen einzigen Versandaufruf gesendet werden. Ermitteln Sie, ob es sich bei der zu verfolgenden Metrik entweder um eine `click` oder eine `display` für jede Mbox handelt, damit der Typ der Benachrichtigung korrekt dargestellt werden kann. Übergeben Sie außerdem für jede Benachrichtigung einen `id`, damit festgestellt werden kann, ob eine Benachrichtigung korrekt über die [!UICONTROL Adobe Target Delivery API] gesendet wurde. Der Zeitstempel ist auch wichtig, um an [!DNL Target] weitergeleitet zu werden, um anzugeben, wann die `click` oder `display` für eine bestimmte Ansicht zu Berichtszwecken aufgetreten ist.
+Eine oder mehrere Benachrichtigungen können über einen einzigen Versandaufruf gesendet werden. Ermitteln Sie, ob es sich bei der zu verfolgenden Metrik entweder um eine `click` oder eine `display` für jede Mbox handelt, damit der Typ der Benachrichtigung korrekt dargestellt werden kann. Übergeben Sie außerdem für jede Benachrichtigung einen `id`, damit festgestellt werden kann, ob eine Benachrichtigung korrekt über die [!UICONTROL Adobe Target-Bereitstellungs-API gesendet wurde]. Der Zeitstempel ist auch wichtig, um an [!DNL Target] weitergeleitet zu werden, um anzugeben, wann die `click` oder `display` für eine bestimmte Ansicht zu Berichtszwecken aufgetreten ist.
 
 ```
 curl -X POST \

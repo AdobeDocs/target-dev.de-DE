@@ -1,30 +1,28 @@
 ---
 title: Adobe Target-Bereitstellungs-API Einzel- oder Batch-Bereitstellung
-description: Wie verwende ich [!UICONTROL Adobe Target Delivery API] einzelnen oder Batch-Bereitstellungsaufrufe?
+description: Wie verwende ich die [!UICONTROL Adobe Target-Bereitstellungs]API für einzelne oder Batch-Bereitstellungsaufrufe?
 keywords: Bereitstellungs-API
 exl-id: 525cd1f2-616a-486c-8f49-8117615500bb
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/NMNCubmUyiVOWfq2MnkONSrQCZRqNEh0VJTfFBGptOk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 448
+source-wordcount: 460
 ht-degree: 0%
 
 ---
 
 # Einzel- oder Batch-Versand
 
-Die [!UICONTROL Adobe Target Delivery API] unterstützt einen einzelnen oder Batch-Bereitstellungsaufruf. Eine Server-Anfrage für Inhalte für einzelne oder mehrere Mboxes ist möglich.
+Die Adobe Target-Bereitstellungs-API {0] unterstützt einen einzelnen oder Batch-Bereitstellungsaufruf. [!UICONTROL Eine Server-Anfrage für Inhalte für einzelne oder mehrere Mboxes ist möglich.
 
 Gewichtung der Leistungskosten bei der Entscheidung für einen einzelnen Aufruf gegenüber einem Batch-Aufruf. Wenn Sie alle Inhalte kennen, die für eine Benutzerin oder einen Benutzer angezeigt werden müssen, ist die Best Practice, Inhalte für alle Mboxes mit einem einzigen Batch-Bereitstellungsaufruf abzurufen, um zu vermeiden, dass mehrere einzelne Bereitstellungsaufrufe durchgeführt werden.
 
 ## Einzelversand-Aufruf
 
-Sie können ein Erlebnis abrufen, das Benutzenden für eine Mbox über die [!UICONTROL Adobe Target Delivery API] angezeigt wird. Beachten Sie, dass Sie bei einem einzelnen Versandaufruf einen weiteren Server-Aufruf initiieren müssen, um zusätzliche Inhalte für eine Mbox für einen Benutzer abzurufen. Dies kann im Laufe der Zeit sehr kostspielig werden. Daher sollten Sie bei der Verwendung des einzelnen Bereitstellungs-API-Aufrufs unbedingt Ihren Ansatz evaluieren.
+Sie können ein Erlebnis abrufen, das Benutzenden für eine Mbox über die [!UICONTROL Adobe Target-Bereitstellungs-API angezeigt ] soll. Beachten Sie, dass Sie bei einem einzelnen Versandaufruf einen weiteren Server-Aufruf initiieren müssen, um zusätzliche Inhalte für eine Mbox für einen Benutzer abzurufen. Dies kann im Laufe der Zeit sehr kostspielig werden. Daher sollten Sie bei der Verwendung des einzelnen Bereitstellungs-API-Aufrufs unbedingt Ihren Ansatz evaluieren.
 
 ```
 curl -X POST \

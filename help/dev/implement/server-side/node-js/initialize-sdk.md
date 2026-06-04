@@ -4,18 +4,13 @@ description: Erfahren Sie, wie Sie mit der create-Methode die Node.js-SDK initia
 feature: APIs/SDKs
 exl-id: 71516e44-508a-4d8d-9f2b-7c54243e9c60
 TQID: https://experienceleague.adobe.com/uawle0-l5bcv-FuXMLkPc8kIf8DvbkRqAYelr-ehNLk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 321
+source-wordcount: 332
 ht-degree: 18%
 
 ---
@@ -40,9 +35,9 @@ TargetClient.create(options: Object): TargetClient
 
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
-| Kunde | Zeichenfolge | Ja | Keine | [!UICONTROL Adobe Target Client ID] |
-| OrganizationId | Zeichenfolge | Ja | Keine | [!UICONTROL Experience Cloud Organization ID] |
-| Umgebung | Zeichenfolge | Nein | Produktion | Name der Zielumgebung. Wählen Sie in der [!DNL Target]-Benutzeroberfläche [!UICONTROL Administration] > [!UICONTROL Environments]. |
+| Kunde | Zeichenfolge | Ja | Keine | [!UICONTROL Adobe Target-Client-ID] |
+| OrganizationId | Zeichenfolge | Ja | Keine | [!UICONTROL Experience Cloud-Organisations-ID] |
+| Umgebung | Zeichenfolge | Nein | Produktion | Name der Zielumgebung. Wählen Sie in der [!DNL Target]-Benutzeroberfläche [!UICONTROL Administration] > [!UICONTROL Umgebungen]. |
 | Zeitüberschreitung | Nummer | Nein | 3000 | Timeout in Millisekunden |
 | serverDomain | Zeichenfolge | Nein | `*client*.tt.omtrdc.net` | Überschreibt den Standard-Host-Namen |
 | sicher | Boolesch | Nein | wahr | Einstellung zur Durchsetzung des HTTP-Schemas |

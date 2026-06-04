@@ -5,21 +5,11 @@ title: Wie handhabt Target Datenschutzbestimmungen?
 feature: Privacy & Security
 exl-id: 40bac3c5-8e6f-4a90-ac0c-eddce1dbe6c0
 TQID: https://experienceleague.adobe.com/W-aYBengoNH5uKTcFZNHARelgAFX3-QrZixh09n0FU0
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 2432
@@ -69,7 +59,7 @@ Wenn Sie sich im letzten Jahr auf das europäische Datenschutzrecht (DSGVO) vorb
 
 ## Opt-in-Funktion in Adobe Target und Adobe Experience Platform
 
-Target unterstützt die Opt-in-Funktionalität über Tags in Adobe Experience Platform und hilft Ihnen bei der Einwilligungsverwaltung. Mit der Opt-in-Funktion können Kunden steuern, wie und wann das Target-Tag ausgelöst wird. Es gibt auch eine Option über Adobe Experience Platform, um das Target-Tag vorab zu genehmigen. Um die Möglichkeit der Verwendung von Opt-in in der Target at.js-Bibliothek zu aktivieren, sollten Sie `targetGlobalSettings` verwenden und die `optinEnabled=true` hinzufügen. Wählen Sie in Adobe Experience Platform in der Dropdown-Liste DSGVO-Opt-in im Installationsfenster der Erweiterung „Aktivieren“ aus. Weitere [&#x200B; finden Sie unter „Implementieren von Target &#x200B;](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) Adobe Experience Platform&quot;.
+Target unterstützt die Opt-in-Funktionalität über Tags in Adobe Experience Platform und hilft Ihnen bei der Einwilligungsverwaltung. Mit der Opt-in-Funktion können Kunden steuern, wie und wann das Target-Tag ausgelöst wird. Es gibt auch eine Option über Adobe Experience Platform, um das Target-Tag vorab zu genehmigen. Um die Möglichkeit der Verwendung von Opt-in in der Target at.js-Bibliothek zu aktivieren, sollten Sie `targetGlobalSettings` verwenden und die `optinEnabled=true` hinzufügen. Wählen Sie in Adobe Experience Platform in der Dropdown-Liste DSGVO-Opt-in im Installationsfenster der Erweiterung „Aktivieren“ aus. Weitere [ finden Sie unter „Implementieren von Target ](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) Adobe Experience Platform&quot;.
 
 Im folgenden Code-Snippet wird gezeigt, wie Sie die `optinEnabled=true`-Einstellung aktivieren:
 
@@ -89,7 +79,7 @@ In Verbindung mit dem Opt-in gibt es drei Szenarien:
 
 1. **Das Target-Tag wird vorab über Adobe Experience Platform genehmigt (oder die betroffene Person hat zuvor über Target genehmigt):** Das Target-Tag wird nicht für die Einwilligung gespeichert und funktioniert wie erwartet.
 1. **Das Target-Tag wird NICHT vorab genehmigt und `bodyHidingEnabled` ist FALSE:** Das Target-Tag wird erst ausgelöst, wenn die Einwilligung vom Kunden eingeholt wurde. Bevor die Einwilligung eingeholt wird, ist nur der Standardinhalt verfügbar. Nachdem die Einwilligung eingeholt wurde, wird Target aufgerufen und der personalisierte Inhalte wird der betroffenen Person (Besucher) zur Verfügung gestellt. Da vor der Einwilligung nur der Standardinhalt verfügbar ist, ist die richtige Strategie entscheidend, wie z. B. eine Splash-Seite, die Seitenteile mit personalisierten Inhalten überdeckt. So wird gewährleistet, dass das Erlebnis für die betroffene Person (Besucher) einheitlich bleibt.
-1. **Das Target-Tag wird NICHT vorab genehmigt und `bodyHidingEnabled` ist TRUE:** Das Target-Tag wird erst ausgelöst, wenn die Einwilligung vom Kunden eingeholt wurde. Bevor die Einwilligung eingeholt wird, ist nur der Standardinhalt verfügbar. Da jedoch `bodyHidingEnabled` auf TRUE festgelegt ist, bestimmt `bodyHiddenStyle`, welcher Inhalt auf der Seite ausgeblendet wird, bis das Target-Tag ausgelöst wird (oder die betroffene Person den Opt-in ablehnt, woraufhin der Standardinhalt angezeigt wird). `bodyHiddenStyle` ist standardmäßig als `body { opacity:0;}` festgelegt, wodurch das HTML-Body-Tag ausblendet wird. Die empfohlene Seitenkonfiguration von Adobe finden Sie unten. So können Sie den gesamten Hauptteil der Seite – abgesehen vom Einwilligungsdialog – ausblenden, indem Sie den Seiteninhalt in einen und den Einwilligungsdialog in einen anderen Container einfügen. Mit diesem Setup wird Target so konfiguriert, dass nur der Container mit dem Seiteninhalt ausgeblendet wird. Siehe [Übersicht über Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=de&).
+1. **Das Target-Tag wird NICHT vorab genehmigt und `bodyHidingEnabled` ist TRUE:** Das Target-Tag wird erst ausgelöst, wenn die Einwilligung vom Kunden eingeholt wurde. Bevor die Einwilligung eingeholt wird, ist nur der Standardinhalt verfügbar. Da jedoch `bodyHidingEnabled` auf TRUE festgelegt ist, bestimmt `bodyHiddenStyle`, welcher Inhalt auf der Seite ausgeblendet wird, bis das Target-Tag ausgelöst wird (oder die betroffene Person den Opt-in ablehnt, woraufhin der Standardinhalt angezeigt wird). `bodyHiddenStyle` ist standardmäßig als `body { opacity:0;}` festgelegt, wodurch das HTML-Body-Tag ausblendet wird. Die empfohlene Seitenkonfiguration von Adobe finden Sie unten. So können Sie den gesamten Hauptteil der Seite – abgesehen vom Einwilligungsdialog – ausblenden, indem Sie den Seiteninhalt in einen und den Einwilligungsdialog in einen anderen Container einfügen. Mit diesem Setup wird Target so konfiguriert, dass nur der Container mit dem Seiteninhalt ausgeblendet wird. Siehe [Übersicht über Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?).
 
    Die empfohlene Seitenkonfiguration für Szenario 3 lautet wie folgt:
 
@@ -135,7 +125,7 @@ Alle DSGVO- und CCPA-Anfragen in Experience Cloud-Lösungen, einschließlich Tar
 
 ### Für welche Informationen ermöglicht Adobe eine Löschung, wenn Kunden von betroffenen Personen oder Benutzern dazu aufgefordert werden?
 
-In Target sind die Informationen zu den einzelnen Besuchern im jeweiligen Target-Besucherprofil enthalten. Target ermöglicht Kunden das Löschen aller Daten, die mit einer ID in ihrem Besucherprofil verbunden sind. Beispiele für die Profildatenspeicher in Target finden Sie unter [Besucherprofil](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=de).
+In Target sind die Informationen zu den einzelnen Besuchern im jeweiligen Target-Besucherprofil enthalten. Target ermöglicht Kunden das Löschen aller Daten, die mit einer ID in ihrem Besucherprofil verbunden sind. Beispiele für die Profildatenspeicher in Target finden Sie unter [Besucherprofil](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html).
 
 Aggregierte oder anonymisierte Daten (beispielsweise Berichtsdaten), in denen keine Person identifiziert wird, oder Daten, die nicht mit einer bestimmten Person in Verbindung gebracht werden können (beispielsweise Inhaltsdaten), werden bei der Löschungsanfrage eines Benutzers nicht berücksichtigt.
 
@@ -147,7 +137,7 @@ Target unterstützt die folgenden ID-Typen zum Auffinden eines Kundenprofils:
 
 | Benutzer-ID | Namespace-ID-Typ | Namespace-ID | Definition |
 |--- |--- |--- |--- |
-| Experience Cloud ID (ECID) | Standard | 4 | Adobe Experience Cloud ID, früher als Besucher-ID oder Experience Cloud ID bezeichnet. Sie können die JavaScript-API verwenden, um diese ID zu finden (siehe Details unten). |
+| Experience Cloud ID (ECID) | Standard | 4 | Adobe Experience Cloud-ID, früher als Besucher-ID oder Experience Cloud-ID bezeichnet. Sie können die JavaScript-API verwenden, um diese ID zu finden (siehe Details unten). |
 | TnT-ID/Cookie-ID (TNTID) | Standard | 9 | Zielkennung, die als Cookie im Browser des Besuchers festgelegt wird. Sie können die JavaScript-API verwenden, um diese ID zu finden (siehe Details unten). |
 | Drittanbieter-ID/CRM-ID (THIRDPARTYID) | Target-spezifisch | K. A. | Wenn Sie Target mit Ihrem CRM oder andere eindeutige Kennungsinformationen für Ihre Kunden bereitstellen. |
 
@@ -163,7 +153,7 @@ Adobe bietet zurzeit keine Lösung zur Verwaltung von Einwilligungen. Auf dem Ma
 
 Target bietet Opt-in-Funktionalität über Adobe Experience Platform zur Unterstützung Ihrer Einwilligungsverwaltung. Mit der Opt-in-Funktion können Kunden steuern, wie und wann das Target-Tag ausgelöst wird. Es gibt auch eine Option über Adobe Experience Platform, um das Target-Tag vorab zu genehmigen. Opt-in-Verwaltung mit Adobe Experience Platform wird empfohlen. In Adobe Experience Platform gibt es eine präzisere Steuerung, um ausgewählte Seitenelemente vor der Target-Auslösung auszublenden, was Ihnen bei der Einwilligungsverwaltung helfen kann.
 
-Weitere Informationen zur DSGVO, zum CCPA und zur Adobe Experience Platform finden Sie unter [Die Adobe Privacy JavaScript Library und die DSGVO](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=de&). Lesen Sie auch den obigen Abschnitt *Adobe Target- und Adobe Experience Platform-Opt-in*.
+Weitere Informationen zur DSGVO, zum CCPA und zur Adobe Experience Platform finden Sie unter [Die Adobe Privacy JavaScript Library und die DSGVO](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?). Lesen Sie auch den obigen Abschnitt *Adobe Target- und Adobe Experience Platform-Opt-in*.
 
 ### Übermittelt `AdobePrivacy.js` Informationen an die DSGVO-API?
 
@@ -302,7 +292,7 @@ Die im Beispiel verwendeten JSON-Felder des Profils werden in der folgenden Tabe
 | Sample_Parameter | Viele Informationen im Target-Profil werden vom Datenverantwortlichen hochgeladen oder direkt bereitgestellt. In diesem Beispiel wurde ein Parameter im Target-Profil mithilfe der API zur Profilaktualisierung hochgeladen. Weitere Informationen finden Sie unter [Verfahren für die Datenübernahme in Target](/help/dev/before-implement/methods-to-get-data-into-target/methods-to-get-data-into-target.md). |
 | user.ReturnTimeOfDay | Dieses Standardfeld enthält die Tageszeit des letzten wiederkehrenden Besuchs einer Benutzerin oder eines Benutzers. |
 | firstSessionStart | Dieses Standardfeld enthält die Tageszeit, zu der die erste Sitzung des Benutzers begonnen hat. |
-| user.sessionCountScript | Viele Informationen im Target-Profil werden vom Datenverantwortlichen hochgeladen oder direkt bereitgestellt. In diesem Beispiel erhöht ein Profilskript die Anzahl der Sitzungen, die dieser Besucher auf der Website des Datenverantwortlichen durchgeführt hat. Weitere Informationen finden Sie unter [Profilskript-Attribute](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=de). |
+| user.sessionCountScript | Viele Informationen im Target-Profil werden vom Datenverantwortlichen hochgeladen oder direkt bereitgestellt. In diesem Beispiel erhöht ein Profilskript die Anzahl der Sitzungen, die dieser Besucher auf der Website des Datenverantwortlichen durchgeführt hat. Weitere Informationen finden Sie unter [Profilskript-Attribute](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html). |
 
 >[!NOTE]
 >
