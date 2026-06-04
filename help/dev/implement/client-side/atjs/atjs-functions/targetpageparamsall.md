@@ -1,7 +1,7 @@
 ---
 keywords: targetPageParamsAll, targetpageparamsall, PageParamsAll, pageparamsall, Seitenparameter, Seitenparameter, at.js, Funktionen, Funktion, targetPageParamsAll0
-description: Verwenden Sie die [!UICONTROL targetPageParamsAll()] für die  [!DNL Adobe Target] .js-JavaScript-Bibliothek, um Parameter von außerhalb des Anforderungs-Codes an alle Mboxes anzuhängen.
-title: Wie verwende ich die [!UICONTROL targetPageParamsAll()]?
+description: Verwenden Sie die Funktion [!UICONTROL targetPageParamsAll()] für die JavaScript-Bibliothek " [!DNL Adobe Target] .js“, um Parameter von außerhalb des Anforderungs-Codes an alle Mboxes anzuhängen.
+title: Wie verwende ich die Funktion [!UICONTROL targetPageParamsAll()]?
 feature: at.js
 exl-id: 32045e60-6904-42a1-bf71-fd7e167a829f
 TQID: https://experienceleague.adobe.com/A2sZYp7CeE3-zGcqfbvgo32auAtXBKN0dYNa84grs1Q
@@ -18,8 +18,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 160
-ht-degree: 70%
+source-wordcount: 171
+ht-degree: 54%
 
 ---
 
@@ -27,9 +27,9 @@ ht-degree: 70%
 
 Mit dieser Methode können Sie Parameter von außerhalb des Anforderungscodes an alle Mboxes anfügen.
 
-Dies ist sehr nützlich, wenn dieselbe Parameterkonfiguration für mehrere Mbox-Aufrufe verwendet werden soll. Sie muss vom Kunden definiert werden. Sie sollte ein Array von Parametern zurückgeben, die an alle Mbox-Aufrufe auf der Seite übergeben werden. Diese Funktion kann definiert werden, bevor at.js geladen wird, oder alternativ unter **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit]** > **[!UICONTROL Code Settings]** > **[!UICONTROL Library Header]**.
+Dies ist sehr nützlich, wenn dieselbe Parameterkonfiguration für mehrere Mbox-Aufrufe verwendet werden soll. Sie muss vom Kunden definiert werden. Sie sollte ein Array von Parametern zurückgeben, die an alle Mbox-Aufrufe auf der Seite übergeben werden. Diese Funktion kann definiert werden, bevor at.js geladen wird, oder unter **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** > **[!UICONTROL Bearbeiten]** > **[!UICONTROL Code-Einstellungen]** > **[!UICONTROL Bibliothekskopfzeile]**.
 
-Verwenden Sie die Funktion „[!UICONTROL targetPageParamsAll()]“ auf eine der folgenden Arten, um Parameter an „target-global-mbox“ zu übergeben:
+Sie können Parameter mithilfe der Funktion [!UICONTROL targetPageParamsAll() auf eine der folgenden Arten &#x200B;] target-global-mbox übergeben:
 
 * Als eine durch kaufmännisches Und getrennte Liste
 * Als Array

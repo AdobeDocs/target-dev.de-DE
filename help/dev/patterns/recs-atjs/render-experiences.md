@@ -20,7 +20,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1060
+source-wordcount: 1144
 ht-degree: 3%
 
 ---
@@ -39,7 +39,7 @@ Befolgen Sie die Schritte im Diagramm *Erlebnisse rendern*, um sicherzustellen, 
 
 ## Rendering-Erlebnisdiagramm {#diagram}
 
-Eine automatische vordefinierte Flackerbehandlung, die mit at.js verfügbar ist, ist nur sinnvoll, wenn Sie [!UICONTROL Automatic Page Load Request] aktiviert haben. Diese Option blendet den gesamten HTML-Hauptteil aus, während die Erlebnisse aus [!DNL Target] abgerufen werden. In diesem Fall liegt es in Ihrer Verantwortung, mit Flackern umzugehen. Suchen Sie nach verfügbaren Implementierungsmustern für die Flimmerhandhabung, um eine Anleitung zu erhalten.
+Die automatische vordefinierte Flimmerhandhabung, die mit at.js verfügbar ist, ist nur sinnvoll, wenn [!UICONTROL Automatische Seitenladeanforderung] aktiviert ist. Diese Option blendet den gesamten HTML-Hauptteil aus, während die Erlebnisse aus [!DNL Target] abgerufen werden. In diesem Fall liegt es in Ihrer Verantwortung, mit Flackern umzugehen. Suchen Sie nach verfügbaren Implementierungsmustern für die Flimmerhandhabung, um eine Anleitung zu erhalten.
 
 >[!NOTE]
 >
@@ -94,9 +94,9 @@ Empfehlungen auf der Grundlage des Warenkorbinhalts des Benutzers aussprechen.
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL Personen, die diese angesehen haben, sahen diese an]
+* [!UICONTROL Leute, die diese angesehen haben, kauften diese]
+* [!UICONTROL Personen, die diese gekauft haben, kauften diese]
 
 **Entitätsparameter erforderlich**
 
@@ -118,13 +118,13 @@ Empfehlungen auf der Grundlage der allgemeinen Popularität eines Elements auf I
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* [!UICONTROL Am häufigsten auf der Website angezeigt]
+* [!UICONTROL Am häufigsten angezeigt nach Kategorie]
+* [!UICONTROL Am häufigsten angezeigt nach Elementattribut]
+* [!UICONTROL Topverkäufe auf der Website]
+* [!UICONTROL Topverkäufe nach Kategorie]
+* [!UICONTROL Topverkäufe nach Artikelattribut]
+* [!UICONTROL Am besten nach Analytics-Metrik]
 
 **Entitätsparameter erforderlich**
 
@@ -147,10 +147,10 @@ Empfehlungen aussprechen, die darauf basieren, ähnliche Elemente zu finden wie 
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL Personen, die dies angesehen haben, haben dies angesehen]
+* [!UICONTROL Leute, die das angesehen haben, kauften das]
+* [!UICONTROL Personen, die das gekauft haben, kauften das]
+* [!UICONTROL Elemente mit ähnlichen Attributen]
 
 **Entitätsparameter erforderlich**
 
@@ -173,8 +173,8 @@ Empfehlungen auf der Grundlage des Benutzerverhaltens aussprechen.
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL Vor Kurzem aufgerufene Artikel]
+* [!UICONTROL Empfohlen für Sie]
 
 **Entitätsparameter erforderlich**
 
@@ -196,7 +196,7 @@ Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochla
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL Benutzerdefinierter Algorithmus]
 
 **Entitätsparameter erforderlich**
 

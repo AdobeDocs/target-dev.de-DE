@@ -1,6 +1,6 @@
 ---
 title: Abonnieren von Ereignissen in der  [!DNL Adobe Target] .js-SDK
-description: Erfahren Sie, wie Sie mithilfe des [!UICONTROL OnDeviceDecisioningHandler]-Objekts verschiedene Ereignisse in der Node.js-SDK abonnieren.
+description: Erfahren Sie, wie Sie verschiedene Ereignisse in der Node.js-SDK mit dem [!UICONTROL OnDeviceDecisioningHandler]-Objekt abonnieren.
 feature: APIs/SDKs
 exl-id: 40c53840-a560-4819-ae04-f527c36b22fe
 TQID: https://experienceleague.adobe.com/KWuJT-p-Er-1mx766Y-itlFn7REZnqkUksdHKCy-2-U
@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 163
+source-wordcount: 164
 ht-degree: 2%
 
 ---

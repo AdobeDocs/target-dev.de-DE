@@ -23,7 +23,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1797
+source-wordcount: 1879
 ht-degree: 4%
 
 ---
@@ -75,7 +75,7 @@ Mit diesem Schritt können Sie sicherstellen, dass die `VisitorAPI.js` Bibliothe
 
 **Voraussetzungen**
 
-* Um den Besucher-ID-/API-Service verwenden zu können, muss Ihr Unternehmen für die [!DNL Adobe Experience Cloud] aktiviert sein und über eine [!UICONTROL Organization ID] verfügen. Weitere Informationen finden Sie unter [Experience Cloud-Anforderungen: Organisations](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=de&){target=_blank}ID im *Identity Service-*).
+* Um den Besucher-ID-/API-Service verwenden zu können, muss Ihr Unternehmen für die [!DNL Adobe Experience Cloud] aktiviert sein und über eine [!UICONTROL Organisations-ID] verfügen. Weitere Informationen finden Sie unter [Experience Cloud-Anforderungen: Organisations](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=de&){target=_blank}ID) im *Identity Service-*.
 * Sie benötigen die `VisitorAPI.js`. Sie sollten diese Datei bereits haben, falls Sie sie implementiert [!DNL Adobe Analytics]. Diese Datei kann auch über die [[!DNL Adobe Experience Platform] Tags-Erweiterung](https://experienceleague.adobe.com/docs/tags.html?lang=de){target=_blank} hinzugefügt oder aus dem [Adobe Analytics Code Manager heruntergeladen &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=de){target=_blank}.
 
 **Konfigurieren und Verweisen auf VisitorAPI.js**
@@ -255,9 +255,9 @@ Empfehlungen auf der Grundlage des Warenkorbinhalts des Benutzers aussprechen.
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL Personen, die diese angesehen haben, sahen diese an]
+* [!UICONTROL Leute, die diese angesehen haben, kauften diese]
+* [!UICONTROL Personen, die diese gekauft haben, kauften diese]
 
 **Entitätsparameter erforderlich**
 
@@ -279,13 +279,13 @@ Empfehlungen auf der Grundlage der allgemeinen Popularität eines Elements auf I
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* [!UICONTROL Am häufigsten auf der Website angezeigt]
+* [!UICONTROL Am häufigsten angezeigt nach Kategorie]
+* [!UICONTROL Am häufigsten angezeigt nach Elementattribut]
+* [!UICONTROL Topverkäufe auf der Website]
+* [!UICONTROL Topverkäufe nach Kategorie]
+* [!UICONTROL Topverkäufe nach Artikelattribut]
+* [!UICONTROL Am besten nach Analytics-Metrik]
 
 **Entitätsparameter erforderlich**
 
@@ -308,10 +308,10 @@ Empfehlungen aussprechen, die darauf basieren, ähnliche Elemente zu finden wie 
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL Personen, die dies angesehen haben, haben dies angesehen]
+* [!UICONTROL Leute, die das angesehen haben, kauften das]
+* [!UICONTROL Personen, die das gekauft haben, kauften das]
+* [!UICONTROL Elemente mit ähnlichen Attributen]
 
 **Entitätsparameter erforderlich**
 
@@ -333,8 +333,8 @@ Empfehlungen auf der Grundlage des Benutzerverhaltens aussprechen.
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL Vor Kurzem aufgerufene Artikel]
+* [!UICONTROL Empfohlen für Sie]
 
 **Entitätsparameter erforderlich**
 
@@ -356,7 +356,7 @@ Empfehlungen basierend auf einer benutzerdefinierten Datei geben, die Sie hochla
 
 **Verfügbare Kriterien**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL Benutzerdefinierter Algorithmus]
 
 **Entitätsparameter erforderlich**
 

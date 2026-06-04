@@ -19,8 +19,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 689
-ht-degree: 63%
+source-wordcount: 697
+ht-degree: 62%
 
 ---
 
@@ -57,7 +57,7 @@ Bevor Sie eine Weiterleitung verwenden können, müssen Sie diese erst erstellen
 
    * Bei `yourclientcode` handelt es sich um den Clientcode Ihres Unternehmens. Der Clientcode Ihres Unternehmens enthält ausschließlich Kleinbuchstaben und keine Sonderzeichen.
 
-     Der Client-Code ist oben auf der Seite **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** der [!DNL Target]-Benutzeroberfläche verfügbar.
+     Der Client-Code ist oben auf der Seite **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** der [!DNL Target] verfügbar.
 
    * `redirectorlink_456` ist der Name der Weiterleitungs-mbox, die in Ihrem Konto zur Verwendung für Kampagnen und Tests angezeigt wird.
 
@@ -107,7 +107,7 @@ Verwenden Sie eine Weiterleitung, um die Kosten pro Klick weiterzugeben.
 
 >[!NOTE]
 >
->Best Practice ist es, den Kostenwert mithilfe der **[!UICONTROL Score per visit]** Interaktionsmetrik zu bestimmen.
+>Best Practice ist es, den Kostenwert mithilfe der Metrik **[!UICONTROL Score pro Besuch]** Interaktion zu bestimmen.
 
 Fügen Sie `&mboxPageValue=-value` zur URL hinzu. Beachten Sie den Negativwert.
 
@@ -124,7 +124,7 @@ Verwenden Sie eine Weiterleitung, um den Umsatz pro Klick weiterzugeben.
 
 >[!NOTE]
 >
->Best Practice ist es, den Umsatzwert mithilfe der Metrik Interaktion mit **[!UICONTROL Score per visit]** zu bestimmen.
+>Best Practice ist es, den Umsatzwert mithilfe der Metrik **[!UICONTROL Score pro Besuch]** Interaktion zu ermitteln.
 
 Fügen Sie `&mboxPageValue=value` zur URL hinzu.
 

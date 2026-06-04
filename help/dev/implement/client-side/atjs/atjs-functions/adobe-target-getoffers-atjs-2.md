@@ -1,7 +1,7 @@
 ---
 keywords: adobe.target.getOffers, getOffers, getOffers, getOffers, at.js, Funktionen, Funktion, $8
-description: Verwenden Sie die [!UICONTROL adobe.target.getOffers()]-Funktion und ihre Optionen für die  [!DNL Adobe Target] .js-Bibliothek, um Anfragen auszulösen, um mehrere  [!DNL Target]  zu erhalten. (at.js 2.x)
-title: Wie verwende ich die [!UICONTROL adobe.target.getOffers()]?
+description: Verwenden Sie die Funktion [!UICONTROL adobe.target.getOffers()] und ihre Optionen für die Bibliothek " [!DNL Adobe Target] .js“, um Anfragen zum Abrufen mehrerer  [!DNL Target]  auszulösen. (at.js 2.x)
+title: Wie verwende ich die Funktion [!UICONTROL adobe.target.getOffers()]?
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
 TQID: https://experienceleague.adobe.com/jJXcWyQzJ48GNCNcOT165vxcO-CLExTj-t-3kbR2FZ0
@@ -19,8 +19,8 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1340
-ht-degree: 60%
+source-wordcount: 1357
+ht-degree: 57%
 
 ---
 
@@ -51,7 +51,7 @@ Mit dieser Funktion können Sie mehrere Angebote abrufen, indem Sie mehrere Mbox
 | Anfrage > ID > thirdPartyId | Nein | Maximale Größe = 128. |  |
 | Request > experienceCloud | Nein |  |  |
 | Request > experienceCloud > analytics | Nein |  | Adobe Analytics-Integration |
-| Request > experienceCloud > analytics > logging | Nein | Folgendes muss auf der Seite implementiert werden:<ul><li>Besucher-ID-Service</li><li>Appmeasurement.js</li></ul> | Die folgenden Werte werden unterstützt:<P>**client_side**: Wenn angegeben, wird eine Analytics-Payload an den Aufrufer zurückgegeben, die zum Senden an [!UICONTROL Adobe Analytics] über die [!UICONTROL Data Insertion API] verwendet werden sollte.<P>**server_side**: Dies ist der Standardwert, bei dem der [!DNL Target] und [!DNL Analytics] Backend die SDID verwenden, um die Aufrufe zu Berichtszwecken zusammenzufügen. |
+| Request > experienceCloud > analytics > logging | Nein | Folgendes muss auf der Seite implementiert werden:<ul><li>Besucher-ID-Service</li><li>Appmeasurement.js</li></ul> | Die folgenden Werte werden unterstützt:<P>**client_side**: Wenn angegeben, wird eine Analytics-Payload an den Aufrufer zurückgegeben, die zum Senden an [!UICONTROL Adobe Analytics] über die [!UICONTROL Dateneinfüge-API] verwendet werden sollte.<P>**server_side**: Dies ist der Standardwert, bei dem der [!DNL Target] und [!DNL Analytics] Backend die SDID verwenden, um die Aufrufe zu Berichtszwecken zusammenzufügen. |
 | Anfrage > Vorab abrufen | Nein |  |  |
 | Anfrage > Vorab abrufen > Ansichten | Nein | Maximale Anzahl 50.<P>Name nicht leer.<P>Namenslänge `<=` 128.<P>Wertelänge `<=` 5000.<P>Der Name darf nicht mit „profile“ beginnen.<P>Nicht zulässige Namen: „orderId“, „orderTotal“, „productPurchasedId“. | Parameter übergeben, die zum Aufrufen relevanter Ansichten in aktiven Aktivitäten verwendet werden können. |
 | Anfrage > Vorab abrufen > Ansichten > profileParameters | Nein | Maximale Anzahl 50.<P>Name nicht leer.<P>Namenslänge `<=` 128.<P>Wertelänge `<=` 5000.<P>Akzeptiert nur Zeichenfolgenwerte.<P>Der Name darf nicht mit „profile“ beginnen. | Profilparameter übergeben, die zum Aufrufen relevanter Ansichten in aktiven Aktivitäten verwendet werden können. |
@@ -86,7 +86,7 @@ Mit dieser Funktion können Sie mehrere Angebote abrufen, indem Sie mehrere Mbox
 | Anfrage > Ausführen > Mboxes > Mbox > Bestellung > Gesamtsumme | Nein | `>=` 0. | Angebote für eine bestimmte Mbox mit den angegebenen Gesamtbestellsummen abrufen. |
 | Anfrage > Ausführen > Mboxes > Mbox > Bestellung > purchasedProductIds | Nein | Keine leeren Werte.<P>Maximale Länge jedes Werts = 50.<P>Verkettet und durch Kommas getrennt.<P>Produkt-IDs `<=` 250. | Angebote für eine bestimmte Mbox mit den angegebenen IDs der gekauften Produkte der Bestellung abrufen. |
 
-## Benutzen Sie [!UICONTROL getOffers()], um alle Ansichten aufzurufen
+## Aufruf [!UICONTROL getOffers()] für alle Ansichten
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -98,7 +98,7 @@ adobe.target.getOffers({
 });
 ```
 
-## [!UICONTROL getOffers()] aufrufen, um eine geräteinterne Entscheidung zu treffen
+## Rufen Sie [!UICONTROL getOffers()] auf, um eine geräteinterne Entscheidungsfindung durchzuführen
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({ 
@@ -117,7 +117,7 @@ adobe.target.getOffers({
 }); 
 ```
 
-## Benutzen Sie [!UICONTROL getOffers()], um die neuesten Ansichten mit den übergebenen Parametern und Profilparametern aufzurufen
+## Rufen Sie [!UICONTROL getOffers()] auf, um die neuesten Ansichten mit den übergebenen Parametern und Profilparametern abzurufen
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -138,7 +138,7 @@ adobe.target.getOffers({
 });
 ```
 
-## Benutzen Sie [!UICONTROL getOffers()], um Mboxes mit den übergebenen Parametern und Profilparametern aufzurufen
+## Rufen Sie [!UICONTROL getOffers()] auf, um Mboxes mit übergebenen Parametern und Profilparametern abzurufen.
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({
@@ -298,9 +298,9 @@ In diesem Beispiel werden die CSS-Selektoren mit einer Zähl-Variablen erstellt.
 
 Beachten Sie, dass dieses Beispiel `prefetch > mboxes` verwendet, Sie könnten aber auch `execute > mboxes` verwenden. Stellen Sie sicher, dass Sie bei Verwendung von Vorausholen (prefetch) in `getOffers()` auch beim Aufruf von `applyOffers()` Vorausholen verwenden sollten.
 
-## Aufrufen von [!UICONTROL getOffers()] zum Ausführen eines Seitenladevorgangs
+## Aufruf [!UICONTROL getOffers()], um einen Seitenladevorgang durchzuführen
 
-Das folgende Beispiel zeigt, wie Sie einen pageLoad mit [!UICONTROL getOffers()] mit at.js 2.*x durchführen*
+Das folgende Beispiel zeigt, wie Sie einen pageLoad mit [!UICONTROL getOffers() &#x200B;] at.js 2.*x durchführen*
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({

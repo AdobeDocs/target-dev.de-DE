@@ -14,7 +14,7 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 411
+source-wordcount: 420
 ht-degree: 8%
 
 ---
@@ -50,7 +50,7 @@ target_client.send_notifications(options)
 
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
-| Anfrage | Versandanfrage | Ja | Keine | Entspricht der [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) |
+| Anfrage | Versandanfrage | Ja | Keine | Entspricht der Anfrage [[!UICONTROL Target-Bereitstellungs-API]](/help/dev/implement/delivery-api/overview.md) |
 | target_cookie | str | no | Keine | Cookie [!DNL Target] |
 | target_location_hint | str | no | Keine | [!DNL Target] Standorthinweis |
 | consumer_id | str | no | Keine | Beim Zusammenfügen mehrerer Aufrufe sollten verschiedene Verbraucher-IDs angegeben werden |
@@ -75,7 +75,7 @@ target_client.send_notifications(options)
 
 ## Beispiel
 
-Erstellen wir zunächst die [!UICONTROL Target Delivery API] Anfrage zum Vorabrufen von Inhalten für die `home`- und `product1`-Mboxes.
+Erstellen wir zunächst die Anfrage [!UICONTROL Target-Bereitstellungs-API] zum Vorabrufen von Inhalten für die `home`- und `product1`-Mboxes.
 
 ### Python
 
@@ -89,7 +89,7 @@ delivery_request = DeliveryRequest(prefetch=prefetch)
 response = target_client.get_offers({ "request": delivery_request })
 ```
 
-Eine erfolgreiche Antwort enthält ein [!UICONTROL Target Delivery API] Antwortobjekt, das vorab abgerufene Inhalte für die angeforderten Mboxes enthält. Ein Beispielobjekt `target_response["response"]` (formatiert als dict) kann wie folgt aussehen:
+Eine erfolgreiche Antwort enthält ein Antwortobjekt [!UICONTROL Target-Bereitstellungs-API], das vorab abgerufene Inhalte für die angeforderten Mboxes enthält. Ein Beispielobjekt `target_response["response"]` (formatiert als dict) kann wie folgt aussehen:
 
 ### Python
 

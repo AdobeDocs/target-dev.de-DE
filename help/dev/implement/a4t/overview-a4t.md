@@ -22,7 +22,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 262
+source-wordcount: 265
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Wenn Sie [!DNL Analytics] Reporting verwenden, müssen [!DNL Target] den [!DNL A
 * Welche Erfahrung sie gesehen haben
 * Welche Konversion erreicht wurde
 
-Die [!DNL Adobe Experience Platform Web SDK] unterstützt zwei Arten der [!DNL Analytics] für [!UICONTROL Analytics for Target] (A4T)-Anwendungsfälle:
+Die [!DNL Adobe Experience Platform Web SDK] unterstützt zwei Arten der [!DNL Analytics] für Anwendungsfälle [!UICONTROL Analytics for Target] (A4T):
 
 | Protokollierungsmethode | Beschreibung |
 | --- | --- |

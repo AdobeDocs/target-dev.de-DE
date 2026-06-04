@@ -11,7 +11,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 184
+source-wordcount: 188
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 Die [!DNL Adobe Target Delivery API] basiert auf REST. In dieser Dokumentation werden die Ressourcen beschrieben, aus denen die [!DNL Adobe Target] [!DNL Delivery API] besteht. HTTP-Methoden werden verwendet, um Vorgänge für diese Ressourcen auszuführen.
 
-Mit [!UICONTROL Adobe Target's Delivery API] können Sie:
+Mit der Bereitstellungs-API von {}Adobe Target haben Sie folgende Möglichkeiten:
 
 * Bereitstellen von Erlebnissen im Web, einschließlich SPAs und mobilen Kanälen sowie Nicht-Browser-basierten IoT-Geräten wie einem verbundenen TV, Kiosk oder digitalen Bildschirmen im Geschäft.
 * Bereitstellen von Erlebnissen von jeder Server-seitigen Plattform oder Anwendung, die HTTP/s-Aufrufe ausführen kann.

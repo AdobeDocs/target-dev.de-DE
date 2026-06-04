@@ -1,6 +1,6 @@
 ---
 title: Adobe Target-API zur Aktualisierung von einzelnen Profilen
-description: Erfahren Sie, wie Sie  [!DNL Adobe Target] [!UICONTROL Single Profile Update API] verwenden, um die Profildaten eines einzelnen Besuchers an zu senden [!DNL Target].
+description: Erfahren Sie, wie Sie  [!DNL Adobe Target] [!UICONTROL &#x200B; API zur Aktualisierung &#x200B;] einzelnen Profilen verwenden können, um die Profildaten eines einzelnen Besuchers an zu senden [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 4e022db3-215f-461b-9222-38ce2f2dbc28
@@ -15,25 +15,25 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 6fac79420aef0a73c109b2c19f363266c1f8027a
 workflow-type: tm+mt
-source-wordcount: 361
+source-wordcount: 396
 ht-degree: 4%
 
 ---
 
 # [!DNL Adobe Target Single Profile Update API]
 
-Mit dem [!DNL Adobe Target] [!UICONTROL Single Profile Update API] können Sie eine Profilaktualisierung für einen einzelnen Benutzer senden. Der [!UICONTROL Single Profile Update API] ist fast identisch mit dem [!UICONTROL Bulk Profile Update API], aber es wird jeweils ein Besucherprofil aktualisiert, und zwar inline mit dem API-Aufruf anstelle mit einer .cvs-Datei.
+Mit [!DNL Adobe Target] [!UICONTROL API zur Aktualisierung einzelner Profile] können Sie eine Aktualisierung von Profilen für einzelne Benutzer senden. Die [!UICONTROL API zur Aktualisierung einzelner Profile] ist fast identisch mit der [!UICONTROL API zur Aktualisierung von Massenprofilen], aber es wird jeweils ein Besucherprofil aktualisiert, und zwar inline mit dem API-Aufruf anstelle mit einer .cvs-Datei.
 
-Die [!UICONTROL Single Profile Update API] und werden im Allgemeinen verwendet, wenn eine Aktualisierung in Bezug auf eine Transaktion erfolgen muss, die in einem Kanal stattfindet, der [!DNL Target] nicht implementiert wurde. Sie möchten beispielsweise das Profil eines einzelnen Besuchers aktualisieren, der eine Offline-Aktion ausführt. Aktionen können das Erreichen eines Callcenters, ein Kredit wird finanziert, eine Kundenkarte im Geschäft verwenden, auf einen Kiosk zugreifen und so weiter.
+Die [!UICONTROL API zur Aktualisierung von Einzelprofilen] und wird im Allgemeinen verwendet, wenn eine Aktualisierung in Bezug auf eine Transaktion erfolgen muss, die in einem Kanal stattfindet, der [!DNL Target] nicht implementiert wurde. Sie möchten beispielsweise das Profil eines einzelnen Besuchers aktualisieren, der eine Offline-Aktion ausführt. Aktionen können das Erreichen eines Callcenters, ein Kredit wird finanziert, eine Kundenkarte im Geschäft verwenden, auf einen Kiosk zugreifen und so weiter.
 
-Zu den Vorteilen des [!UICONTROL Single Profile Update API] gehören:
+Die Vorteile der [!UICONTROL API zur Aktualisierung von einzelnen Profilen] umfassen:
 
 * Keine Begrenzung der Anzahl der Profilattribute.
 * Profilattribute, die über die Site gesendet werden, können über die API aktualisiert werden und umgekehrt.
 
 ## Einschränkungen
 
-* Die [!UICONTROL Single Profile Update API] ist auf die Durchführung von 1 Million Aktualisierungen in einem rollierenden Zeitraum von 24 Stunden beschränkt.
+* Die [!UICONTROL API zur Aktualisierung einzelner Profile] ist auf die Durchführung von 1 Million Aktualisierungen in einem rollierenden Zeitraum von 24 Stunden beschränkt.
 * Aktualisierungen werden im Allgemeinen in weniger als einer Stunde durchgeführt, es kann jedoch bis zu 24 Stunden dauern, bis sie widergespiegelt werden.
 
   Wenn Sie mehr Aktualisierungen senden müssen oder Aktualisierungen in kürzeren Zeitrahmen verarbeitet werden müssen, sollten Sie Transaktionsprofilaktualisierungen über Client-seitige Aktualisierungen (bevorzugt) oder über die [!DNL Adobe Target] Server-seitige [Bereitstellungs-API) &#x200B;](/help/dev/implement/delivery-api/overview.md).
@@ -56,7 +56,7 @@ Um das Profil für eine `mbox3rdPartyId` zu aktualisieren, verwenden Sie:
 shell http://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPartyId=123456&profile.attr=0&profile.attr2=1...
 ```
 
-Die [!UICONTROL Single Profile Update API] ist nur für Aktualisierungen vorgesehen. Wenn nichts gefunden wird, wird kein Profil erstellt.
+Die [!UICONTROL API zur Aktualisierung einzelner Profile] dient nur zu Aktualisierungen. Wenn nichts gefunden wird, wird kein Profil erstellt.
 
 ## Hinweise
 

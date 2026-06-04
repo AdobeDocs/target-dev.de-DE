@@ -20,8 +20,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 799
-ht-degree: 44%
+source-wordcount: 814
+ht-degree: 43%
 
 ---
 
@@ -43,10 +43,10 @@ Adobe hat eine Einstellung für den eingebauten Datenschutz entwickelt, die Benu
 
 Wenn diese Funktion aktiviert ist, wird die IP-Adresse so stark anonymisiert, dass sie nicht mehr als persönliche Information identifiziert werden kann. Daher können [!DNL Target] in Übereinstimmung mit den Datenschutzgesetzen in Ländern verwendet werden, die die Erfassung personenbezogener Daten nicht zulassen. Das Ermitteln von Information auf Stadtebene wird durch die Verschleierung der IP-Adresse wahrscheinlich merklich beeinträchtigt. Das Ermitteln von Informationen auf Regions- und Landesebene dürfte nur leicht beeinträchtigt sein.
 
-Die folgenden Einstellungen sind in der [!DNL Target]-Benutzeroberfläche verfügbar, indem Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** navigieren:
+Die folgenden Einstellungen sind in der [!DNL Target]-Benutzeroberfläche verfügbar, indem Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** navigieren:
 
-* [!UICONTROL Last octet obfuscation]: [!DNL Target] blendet das letzte Oktett der IP-Adresse aus.
-* [!UICONTROL Entire IP obfuscation]: [!DNL Target] blendet die gesamte IP-Adresse aus.
+* [!UICONTROL Letzte Oktett-Verschleierung]: [!DNL Target] blendet das letzte Oktett der IP-Adresse aus.
+* [!UICONTROL Gesamte IP-Verschleierung]: [!DNL Target] blendet die gesamte IP-Adresse aus.
 * [!UICONTROL None]: [!DNL Target] blendet keinen Teil der IP-Adresse aus.
 
   ![obfuscate-ip-options](assets/obfuscate-ip.png)
@@ -55,9 +55,9 @@ Die folgenden Einstellungen sind in der [!DNL Target]-Benutzeroberfläche verfü
 
 ### IP-Verschleierung auf Datenstromebene bei Verwendung der [!DNL Adobe Experience Platform Web SDK] {#aep}
 
-Bei Verwendung der [!DNL Platform Web SDK] (Version 23.4 oder höher) hat die Einstellung für die IP-Verschleierung auf Datenstromebene Vorrang vor allen in [!DNL Target] festgelegten IP-Verschleierungsoptionen. Wenn beispielsweise die Option zur IP-Verschleierung auf Datenstromebene auf [!UICONTROL Full] und die Option zur [!DNL Target]-IP-Verschleierung auf [!UICONTROL Last octet obfuscation] festgelegt ist, erhält [!DNL Target] eine vollständig verschleierte IP.
+Bei Verwendung der [!DNL Platform Web SDK] (Version 23.4 oder höher) hat die Einstellung für die IP-Verschleierung auf Datenstromebene Vorrang vor allen in [!DNL Target] festgelegten IP-Verschleierungsoptionen. Wenn beispielsweise die Option zur IP-Verschleierung auf Datenstromebene auf &quot;[!UICONTROL &quot; &#x200B;] und die Option zur [!DNL Target] IP-Verschleierung auf &quot;[!UICONTROL &#x200B; Oktett-]&quot; eingestellt ist, erhält [!DNL Target] eine vollständig verschleierte IP.
 
-Weitere Informationen finden Sie unter [!UICONTROL IP Obfuscation] in [Konfigurieren eines &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=de){target=_blank}) im Handbuch *[!DNL Adobe Experience Platfrom]Datenströme*.
+Weitere Informationen finden Sie unter [!UICONTROL IP-Verschleierung] in [Konfigurieren eines &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=de){target=_blank}) im Handbuch *[!DNL Adobe Experience Platfrom]Datenströme*.
 
 ## GeoSegmentation
 

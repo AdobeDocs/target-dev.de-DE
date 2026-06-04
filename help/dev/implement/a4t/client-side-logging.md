@@ -20,7 +20,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1139
+source-wordcount: 1166
 ht-degree: 0%
 
 ---
@@ -147,7 +147,7 @@ Im Folgenden finden Sie ein Beispiel für eine `interact`-Antwort, wenn [!DNL An
 }
 ```
 
-Vorschläge für [!UICONTROL Form-based Experience Composer] Aktivitäten können unter demselben Vorschlag sowohl Inhalts- als auch Klick-Metrik-Elemente enthalten. Anstatt also ein einzelnes Analytics-Token für die Inhaltsanzeige in `scopeDetails.characteristics.analyticsToken` Eigenschaft zu haben, können diese entsprechend sowohl ein Anzeige- als auch ein Klick-Analytics-Token in den `scopeDetails.characteristics.analyticsDisplayToken`- und `scopeDetails.characteristics.analyticsClickToken`-Eigenschaften angegeben haben.
+Vorschläge für [!UICONTROL Form-Based Experience Composer]-Aktivitäten können unter demselben Vorschlag sowohl Inhalts- als auch Klickmetrik-Elemente enthalten. Anstatt also ein einzelnes Analytics-Token für die Inhaltsanzeige in `scopeDetails.characteristics.analyticsToken` Eigenschaft zu haben, können diese entsprechend sowohl ein Anzeige- als auch ein Klick-Analytics-Token in den `scopeDetails.characteristics.analyticsDisplayToken`- und `scopeDetails.characteristics.analyticsClickToken`-Eigenschaften angegeben haben.
 
 ```json
 {
@@ -242,7 +242,7 @@ Sie können die [!DNL Platform Web SDK] verwenden, um die Ausführung von Vorsch
 
 Wenn Sie Vorschläge für einen bestimmten Entscheidungsumfang anfordern, enthält der zurückgegebene Vorschlag das entsprechende [!DNL Analytics]-Token. Best Practice ist es, den [!DNL Experience Platform Web SDK] `sendEvent`-Befehl zu verketten und durch die zurückgegebenen Vorschläge zu iterieren, um sie auszuführen, während gleichzeitig die [!DNL Analytics]-Token erfasst werden.
 
-Sie können einen `sendEvent`-Befehl für einen [!UICONTROL Form-Based Experience Composer] Aktivitätsbereich wie den folgenden Trigger ausführen:
+Sie können einen `sendEvent`-Befehl für einen [!UICONTROL Form-Based Experience Composer]-Aktivitätsbereich wie den folgenden ausführen:
 
 ```javascript
 alloy("sendEvent", {
@@ -402,7 +402,7 @@ function getDisplayAnalyticsPayload(proposition) {
 }
 ```
 
-Ein Vorschlag kann verschiedene Arten von Elementen aufweisen, wie in der `schema` Eigenschaft des betreffenden Elements angegeben. Für [!UICONTROL Form-Based Experience Composer] Aktivitäten werden vier Schemata für Vorschlagselemente unterstützt:
+Ein Vorschlag kann verschiedene Arten von Elementen aufweisen, wie in der `schema` Eigenschaft des betreffenden Elements angegeben. Es werden vier Vorschlagselement-Schemata für die Aktivitäten [!UICONTROL Form-Based Experience Composer] unterstützt:
 
 ```javascript
 var HTML_SCHEMA = "https://ns.adobe.com/personalization/html-content-item";
@@ -432,9 +432,9 @@ function getClickAnalyticsPayload(proposition) {
 
 #### Zusammenfassung der Implementierung {#implementation-summary}
 
-Zusammenfassend lässt sich sagen, dass beim Anwenden [!UICONTROL Form-Based Experience Composer] Aktivitäten mit dem [!DNL Experience Platform Web SDK] die folgenden Schritte ausgeführt werden müssen:
+Zusammenfassend lässt sich sagen, dass bei der Anwendung von [!UICONTROL Form-Based Experience Composer]-Aktivitäten mit dem [!DNL Experience Platform Web SDK] die folgenden Schritte ausgeführt werden müssen:
 
-1. Senden eines Ereignisses, das [!UICONTROL Form-Based Experience Composer] Aktivitätsangebote abruft;
+1. Senden Sie ein Ereignis, das [!UICONTROL Form-Based Experience Composer]-Aktivitätsangebote abruft.
 1. Anwenden der Inhaltsänderungen auf die Seite
 1. Senden des `decisioning.propositionDisplay` Benachrichtigungsereignisses;
 1. Erfassen Sie die [!DNL Analytics] Display-Token aus der SDK-Antwort und erstellen Sie eine Payload für den [!DNL Analytics].

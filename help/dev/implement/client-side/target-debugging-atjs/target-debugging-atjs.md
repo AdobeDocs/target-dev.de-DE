@@ -1,7 +1,7 @@
 ---
-keywords: at.js, AT.js debuggen, Adobe Experience Cloud Debugger, Experience Cloud Debugger, Mbox Trace, Mbox Highlight, Debug, Debugging, $9
-description: Verwenden Sie die [!UICONTROL Adobe Experience Cloud Debugger], um Ihre Bibliothekskonfiguration anzuzeigen, Anfragen zu untersuchen, die Konsolenprotokollierung zu aktivieren,  [!DNL Target] -Anfragen zu deaktivieren und vieles mehr.
-title: Wie kann ich bei debuggen?Js mit [!UICONTROL Adobe Experience Cloud Debugger]?
+keywords: at.js, debug at.js, Adobe Experience Cloud Debugger, Experience Cloud Debugger, Mbox Trace, Mbox Highlight, Debug, Debugging, 9 $
+description: Verwenden Sie den [!UICONTROL Adobe Experience Cloud Debugger], um Ihre Bibliothekskonfiguration anzuzeigen, Anfragen zu untersuchen, die Konsolenprotokollierung zu aktivieren [!DNL Target]  Anfragen zu deaktivieren und vieles mehr.
+title: Wie kann ich bei debuggen?JS mit [!UICONTROL Adobe Experience Cloud Debugger]?
 feature: at.js
 exl-id: ac215560-3f6f-4269-947c-961e7a43c9e1
 TQID: https://experienceleague.adobe.com/pZtiohItxWcjKFJTCXX8JtvOpEjFMsG1SJdp9ANalOE
@@ -17,24 +17,24 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 162
+source-wordcount: 178
 ht-degree: 6%
 
 ---
 
-# „at.js“-Debugging mit dem [!UICONTROL Adobe Experience Cloud Debugger]
+# Fehlerbehebung in at.js mithilfe von [!UICONTROL Adobe Experience Cloud Debugger]
 
-Informationen zur Verwendung der [!UICONTROL Adobe Experience Cloud Debugger]-Erweiterung, wodurch Ihre [!DNL Target]-Implementierung schnell und einfach verständlich ist.
+Informationen zur Verwendung der [!UICONTROL Adobe Experience Cloud Debugger]-Erweiterung, die Ihre [!DNL Target]-Implementierung schnell und einfach verständlich macht.
 
 Sie können Ihre Bibliothekskonfiguration schnell anzeigen, Anfragen überprüfen, um sicherzustellen, dass Ihre benutzerdefinierten Parameter korrekt weitergeleitet werden, die Konsolenprotokollierung aktivieren und alle [!DNL Target] Anfragen deaktivieren. Authentifizierung bei der [!DNL Experience Cloud] und Sie können das leistungsstarke Tool Mbox Trace verwenden, um Ihre Aktivität und Zielgruppenqualifikationen sowie Ihr Besucherprofil zu überprüfen.
 
-Überprüfen Sie die Übersicht über den [Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=de){target=_blank}.
+Gehen Sie die [Übersicht zu Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=de){target=_blank} durch.
 
 ## Schulungsvideos
 
 Die folgenden Videos führen Sie Schritt für Schritt durch den Debugging-Prozess:
 
-### Fügen Sie die Adobe Experience Cloud Debugger-Erweiterung ![Übersichts-Badge) &#x200B;](../../assets/overview.png)
+### Hinzufügen der Adobe Experience Cloud Debugger-Erweiterung ![Übersichts-Badge](../../assets/overview.png)
 
 >[!VIDEO](https://video.tv.adobe.com/v/33823/?captions=ger&quality=12)
 

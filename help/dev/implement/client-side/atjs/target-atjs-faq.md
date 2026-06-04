@@ -19,8 +19,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2981
-ht-degree: 66%
+source-wordcount: 2994
+ht-degree: 64%
 
 ---
 
@@ -63,7 +63,7 @@ In den folgenden Abschnitten wird die Aktionssequenz für neue und zurückkehren
    * Sie wird das Besucher-Objekt instanziieren.
    * Die [!DNL Target]-Bibliothek versucht, Experience Cloud-Besucher-ID-Daten abzurufen.
    * Weil es sich um einen neuen Besucher handelt, versendet die Besucher-API eine domänenübergreifende Anfrage an demdex.net.
-   * Nachdem Experience Cloud-Besucher-ID-Daten abgerufen wurden, wird eine Anfrage an [!DNL Target] ausgelöst.
+   * Nachdem die Besucher-ID-Daten von Experience Cloud abgerufen wurden, wird eine Anfrage an [!DNL Target] ausgelöst.
 
 ### Zurückkehrende Besucher
 
@@ -74,7 +74,7 @@ In den folgenden Abschnitten wird die Aktionssequenz für neue und zurückkehren
    * Sie wird das Besucher-Objekt instanziieren.
    * Die [!DNL Target]-Bibliothek versucht, Experience Cloud-Besucher-ID-Daten abzurufen.
    * Die Besucher-API ruft Cookie-Daten ab.
-   * Nachdem Experience Cloud-Besucher-ID-Daten abgerufen wurden, wird eine Anfrage an [!DNL Target] ausgelöst.
+   * Nachdem die Besucher-ID-Daten von Experience Cloud abgerufen wurden, wird eine Anfrage an [!DNL Target] ausgelöst.
 
 >[!NOTE]
 >
@@ -123,7 +123,7 @@ Das asynchrone Laden von at.js eignet sich hervorragend, um zu verhindern, dass 
 
 Sie können ein Flackern vermeiden, indem Sie ein pre-hiding-Snippet verwenden, das die Seite (oder bestimmte Teile) ausblendet und diese dann nach at.js einblendet und die globale Anfrage geladen hat. Der Ausschnitt muss vor dem Laden von at.js hinzugefügt werden.
 
-Wenn Sie at.js über eine asynchrone [!UICONTROL Adobe Experience Platform]-Implementierung bereitstellen, stellen Sie sicher, dass Sie das pre-hiding-Snippet direkt auf Ihren Seiten einfügen, bevor Sie [!DNL Target] mit [!UICONTROL Adobe Experience Platform]-Einbettungs-Code implementieren.
+Wenn Sie at.js über eine asynchrone [!UICONTROL Adobe Experience Platform]-Implementierung bereitstellen, stellen Sie sicher, dass Sie das pre-hiding-Snippet direkt auf Ihren Seiten einfügen, bevor Sie den [!DNL Target] mit [!UICONTROL Adobe Experience Platform]-Einbettungs-Code implementieren.
 
 Wenn Sie at.js über eine synchrone DTM-Implementierung bereitstellen, kann das vor-ausgeblendete Snippet über eine Seitenladeregel hinzugefügt werden, die oben auf der Seite ausgelöst wird.
 
@@ -131,7 +131,7 @@ Weitere Informationen finden Sie unter [Verwaltung von Flackern mit „at.js“]
 
 ## Ist at.js mit der [!DNL Adobe Experience Manager]-Integration (Experience Manager) kompatibel?
 
-[!DNL Adobe Experience Manager] 6.2 mit FP-11577 (oder höher) unterstützt jetzt at.js-Implementierungen mit ihrer [!UICONTROL Adobe Target Cloud Services].
+[!DNL Adobe Experience Manager] 6.2 mit FP-11577 (oder höher) unterstützt jetzt at.js-Implementierungen mit der [!UICONTROL Adobe Target Cloud Services]-Integration.
 
 ## Wie kann ich mit at.js ein Flackern beim Laden von Seiten verhindern ?
 

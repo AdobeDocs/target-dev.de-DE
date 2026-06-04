@@ -1,6 +1,6 @@
 ---
 keywords: Implementierung, JavaScript-Bibliothek, JS, ATJS, On-Device Decisioning, On-Device Decisioning, Unterstützte Funktionen, $8
-description: Erfahren Sie, welche Funktionen für [!UICONTROL on-device decisioning] unterstützt werden.
+description: Erfahren Sie, welche Funktionen für [!UICONTROL On-Device Decisioning] unterstützt werden.
 title: Welche Funktionen bei der geräteinternen Entscheidungsfindung unterstützt werden
 feature: at.js
 exl-id: bdd65658-6c4a-41ae-a222-59c00a11bdac
@@ -21,18 +21,18 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 720
+source-wordcount: 747
 ht-degree: 8%
 
 ---
 
-# Unterstützte Funktionen für [!UICONTROL on-device decisioning]
+# Unterstützte Funktionen für [!UICONTROL On-Device Decisioning]
 
-Die [!DNL Adobe Target] JS-SDK bietet Kundinnen und Kunden die Flexibilität, bei Entscheidungen zwischen Leistung und Aktualität der Daten zu wählen. Mit anderen Worten: Wenn die Bereitstellung der relevantesten und ansprechendsten personalisierten Inhalte über maschinelles Lernen für Sie am wichtigsten ist, sollte ein Live-Server-Aufruf erfolgen. Wenn die Leistung jedoch kritischer ist, sollte eine Entscheidung auf dem Gerät und im Arbeitsspeicher getroffen werden. Damit [!UICONTROL on-device decisioning] funktioniert, lesen Sie die folgenden Abschnitte, in denen die unterstützten Funktionen aufgelistet sind.
+Die [!DNL Adobe Target] JS-SDK bietet Kundinnen und Kunden die Flexibilität, bei Entscheidungen zwischen Leistung und Aktualität der Daten zu wählen. Mit anderen Worten: Wenn die Bereitstellung der relevantesten und ansprechendsten personalisierten Inhalte über maschinelles Lernen für Sie am wichtigsten ist, sollte ein Live-Server-Aufruf erfolgen. Wenn die Leistung jedoch kritischer ist, sollte eine Entscheidung auf dem Gerät und im Arbeitsspeicher getroffen werden. Damit [!UICONTROL On-Device Decisioning] funktioniert, lesen Sie die folgenden Abschnitte, in denen die unterstützten Funktionen aufgeführt sind.
 
 ## Unterstützte Aktivitätstypen
 
-Die folgende Tabelle gibt an, welche [Aktivitätstypen](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=de), die vom [formularbasierten Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de) oder [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=de) (VEC) erstellt wurden, für [!UICONTROL on-device decisioning] unterstützt oder nicht unterstützt werden.
+Die folgende Tabelle gibt an, welche [Aktivitätstypen](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=de), die vom [formularbasierten Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de) oder [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=de) (VEC) erstellt wurden, für [!UICONTROL &#x200B; Entscheidungsfindung auf dem Gerät unterstützt oder nicht unterstützt werden].
 
 | Aktivitätstyp | Unterstützt? |
 | --- | --- |
@@ -47,11 +47,11 @@ Die folgende Tabelle gibt an, welche [Aktivitätstypen](https://experienceleague
 
 ## Zielgruppen-Targeting
 
-Die folgende Tabelle gibt an, welche Zielgruppenregeln für [!UICONTROL on-device decisioning] unterstützt oder nicht unterstützt werden.
+Die folgende Tabelle gibt an, welche Zielgruppenregeln für die Entscheidungsfindung [!UICONTROL &#x200B; Gerät unterstützt oder nicht &#x200B;] werden.
 
 | Zielgruppenregel | Unterstützt? |
 | --- | --- |
-| [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=de) | Ja<P>Bei der Verwendung der geräteinternen Entscheidungsfindung werden die folgenden Geoattribute unterstützt:<ul><li>Land/Region</li><li>Ort</li><li>Breitengrad</li><li>Längengrad</li></ul> |
+| [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=de) | Ja<P>Bei der Verwendung der geräteinternen Entscheidungsfindung werden die folgenden Geoattribute unterstützt:<ul><li>Land/Region</li><li>Stadt</li><li>Breitengrad</li><li>Längengrad</li></ul> |
 | [Netzwerk](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=de) | Nein |
 | [Mobile](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=de) | Nein |
 | [Benutzerdefinierte Parameter](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=de) | Ja |
@@ -63,9 +63,9 @@ Die folgende Tabelle gibt an, welche Zielgruppenregeln für [!UICONTROL on-devic
 | [Zeitrahmen](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=de) | Ja |
 | Adobe Experience Cloud-Zielgruppen<P>([!DNL Audiences from Adobe Analytics], [!DNL Adobe Audience Manager] und [!DNL Adobe Experience Manager]) | Nein |
 
-### Geotargeting für [!UICONTROL on-device decisioning]
+### Geotargeting für [!UICONTROL On-Device Decisioning]
 
-Um eine minimale Latenz für [!UICONTROL on-device decisioning] Aktivitäten mit geobasierten Zielgruppen zu wahren, empfiehlt Adobe, die Geowerte selbst im Aufruf von [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md) anzugeben. Legen Sie das Geo-Objekt im Kontext der Anfrage fest. Dies bedeutet, dass Sie über den Browser den Standort jedes Besuchers ermitteln können. Sie können beispielsweise mithilfe eines von Ihnen konfigurierten Services eine IP-zu-Geo-Suche durchführen. Einige Hosting-Anbieter wie Google Cloud bieten diese Funktion über benutzerdefinierte Header in jedem `HttpServletRequest`.
+Um bei Aktivitäten mit [!UICONTROL -basierten Zielgruppen eine minimale Latenz &#x200B;] Entscheidungsfindung auf dem Gerät zu erhalten, empfiehlt Adobe, die Geowerte selbst in dem Aufruf von [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md) anzugeben. Legen Sie das Geo-Objekt im Kontext der Anfrage fest. Dies bedeutet, dass Sie über den Browser den Standort jedes Besuchers ermitteln können. Sie können beispielsweise mithilfe eines von Ihnen konfigurierten Services eine IP-zu-Geo-Suche durchführen. Einige Hosting-Anbieter wie Google Cloud bieten diese Funktion über benutzerdefinierte Header in jedem `HttpServletRequest`.
 
 ```javascript {line-numbers="true"}
 window.adobe.target.getOffers({ 
@@ -87,7 +87,7 @@ window.adobe.target.getOffers({
 })
 ```
 
-Wenn Sie jedoch keine IP-zu-Geo-Suchen auf Ihrem Server durchführen können, aber dennoch [!UICONTROL on-device decisioning] für [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)-Anfragen durchführen möchten, die geobasierte Zielgruppen enthalten, wird dies ebenfalls unterstützt. Der Nachteil dieses Ansatzes besteht darin, dass eine Remote-IP-zu-Geo-Suche verwendet wird, die zu jedem `getOffers`-Aufruf eine Latenz hinzufügt. Diese Latenz sollte niedriger sein als ein `getOffers` Aufruf bei Server-seitiger Entscheidungsfindung, da sie auf ein CDN trifft, das sich in der Nähe Ihres Servers befindet. Geben Sie im Geo-Objekt nur das Feld „ipAddress“ im Kontext Ihrer Anfrage an, dass die SDK den geografischen Standort der IP-Adresse Ihres Besuchers abruft. Wenn zusätzlich zur „IP-Adresse“ ein anderes Feld angegeben wird, ruft die [!DNL Target] SDK die Geolokalisierungs-Metadaten nicht zur Auflösung ab.
+Wenn Sie jedoch keine IP-zu-Geo-Suchen auf Ihrem Server durchführen können, aber dennoch [!UICONTROL On-Device Decisioning] für [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)-Anfragen durchführen möchten, die geobasierte Zielgruppen enthalten, wird dies ebenfalls unterstützt. Der Nachteil dieses Ansatzes besteht darin, dass eine Remote-IP-zu-Geo-Suche verwendet wird, die zu jedem `getOffers`-Aufruf eine Latenz hinzufügt. Diese Latenz sollte niedriger sein als ein `getOffers` Aufruf bei Server-seitiger Entscheidungsfindung, da sie auf ein CDN trifft, das sich in der Nähe Ihres Servers befindet. Geben Sie im Geo-Objekt nur das Feld „ipAddress“ im Kontext Ihrer Anfrage an, dass die SDK den geografischen Standort der IP-Adresse Ihres Besuchers abruft. Wenn zusätzlich zur „IP-Adresse“ ein anderes Feld angegeben wird, ruft die [!DNL Target] SDK die Geolokalisierungs-Metadaten nicht zur Auflösung ab.
 
 ```javascript {line-numbers="true"}
 window.adobe.target.getOffers({ 
@@ -107,7 +107,7 @@ window.adobe.target.getOffers({
 
 ### Zuordnungsmethode
 
-Die folgende Tabelle gibt an, welche Zuordnungsmethoden für [!UICONTROL on-device decisioning] unterstützt oder nicht unterstützt werden.
+Die folgende Tabelle gibt an, welche Zuordnungsmethoden für die [!UICONTROL On-Device Decisioning“ unterstützt oder nicht &#x200B;] werden.
 
 | Zuordnungsmethode | Unterstützt? |
 | --- | --- |

@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 310
+source-wordcount: 316
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ Die SDK ist auf dem [Adobe Marketing Cloud-Git](https://github.com/Adobe-Marketi
 
 ## Welche SDKs sind heute verfügbar?
 
-Die Adobe Experience Platform Mobile SDKs unterstützen derzeit iOS, Android und React. Weitere Informationen finden Sie im Handbuch zu [Adobe Experience Cloud Platform Mobile SDKs](https://experienceleague.adobe.com/docs/mobile.html?lang=de){target=_blank}.
+Die Adobe Experience Platform Mobile SDKs unterstützen derzeit iOS, Android und React. Weitere Informationen finden Sie im Handbuch [Adobe Experience Cloud Platform Mobile SDKs](https://experienceleague.adobe.com/docs/mobile.html?lang=de){target=_blank}.
 
 ## Wie häufig wird die standortbasierte Funktion verwendet, um den Breiten- und Längengrad zu überprüfen?
 
@@ -42,7 +42,7 @@ Nein, Sie benötigen at.js nicht, um die Mobile SDKs zu verwenden. at.js ist die
 
 ## Ist [!DNL Target] Mobile nur eine Funktion [!DNL Adobe Target] Premium-Produkt-SKU?
 
-Nein. Für [!DNL Adobe Target Standard]-Kunden können Sie unsere Mobile SDKs nur mit dem Add-on Mobile App von [!DNL Target Standard] für [!UICONTROL A/B Test]- und [!UICONTROL Experience Targeting] (XT)-Aktivitäten verwenden. Wenn Sie [!UICONTROL Recommendations] oder KI-gestützte Funktionen in der Mobile App verwenden möchten, benötigen Sie eine [Adobe Target Premium](https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=de#premium)-Lizenz.
+Nein. Für [!DNL Adobe Target Standard]-Kunden können Sie unsere Mobile SDKs für [!UICONTROL A/B-Test]- und [!UICONTROL Experience Targeting] (XT)-Aktivitäten nur mit dem Add-on [!DNL Target Standard] Mobile App verwenden. Wenn Sie in der Mobile App [!UICONTROL Recommendations] oder KI-gestützte Funktionen verwenden möchten, benötigen Sie eine [Adobe Target Premium](https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=de#premium)-Lizenz.
 
 ## Gibt es eine Mobile-App-Integration zwischen [!DNL Adobe Experience Manager] (AEM) und [!DNL Target] Aktivitäten für Mobilgeräte?
 

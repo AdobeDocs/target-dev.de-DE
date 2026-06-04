@@ -18,7 +18,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 129298289889a3b133eb07d0caeade2fd0b5568e
 workflow-type: tm+mt
-source-wordcount: 1366
+source-wordcount: 1284
 ht-degree: 1%
 
 ---
@@ -57,12 +57,12 @@ Um Empfehlungen zu erstellen, die mit der Bereitstellungs-API verwendet werden k
 1. Erstellen und speichern Sie zunächst ein JSON-basiertes Design, das Sie in Ihrer Empfehlung verwenden können. Beispiel-JSON sowie Hintergrundinformationen dazu, wie JSON-Antworten bei der Konfiguration einer formularbasierten Aktivität zurückgegeben werden können, finden Sie in der Dokumentation unter [Erstellen von Empfehlungsentwürfen](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=de). In diesem Beispiel trägt der Entwurf den Namen *Einfaches JSON.*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
-1. Gehen Sie in Target zu **[!UICONTROL Activities]** > **[!UICONTROL Create Activity]** > **[!UICONTROL Recommendations]** und klicken Sie dann auf **[!UICONTROL Form]**.
+1. Navigieren Sie in Target zu **[!UICONTROL Aktivitäten]** > **[!UICONTROL Aktivität erstellen]** > **[!UICONTROL Recommendations]** und wählen Sie **[!UICONTROL Formular]**.
 
    ![server-side-create-recs.png](assets/server-side-create-recs.png)
 
-1. Wählen Sie eine Eigenschaft aus und klicken Sie auf **[!UICONTROL Next]**.
-1. Definieren Sie den Speicherort, an dem Benutzer die Antwort der Empfehlung erhalten sollen. Im folgenden Beispiel wird ein Speicherort namens *api_charter* verwendet. Wählen Sie Ihr zuvor erstelltes JSON-basiertes Design mit dem Namen &quot;*JSON“ aus.*
+1. Wählen Sie eine Eigenschaft aus und klicken Sie auf **[!UICONTROL Weiter]**.
+1. Definieren Sie den Speicherort, an dem Benutzer die Antwort der Empfehlung erhalten sollen. Im folgenden Beispiel wird ein Speicherort namens *api_charter* verwendet. Wählen Sie Ihr zuvor erstelltes JSON-basiertes Design mit dem Namen *Einfaches JSON.*
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
 1. Speichern und aktivieren Sie die Empfehlung. Es wird Ergebnisse generieren. [Sobald die Ergebnisse fertig sind](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=de) können Sie die Bereitstellungs-API verwenden, um sie abzurufen.
 
@@ -74,7 +74,7 @@ Die Syntax für die [Bereitstellungs-API](/help/dev/implement/delivery-api/overv
 
 1. Beachten Sie, dass der Clientcode erforderlich ist. Zur Erinnerung: Ihr Clientcode befindet sich möglicherweise in Adobe Target, indem Sie zu **[!UICONTROL Recommendations]** > **[!UICONTROL Settings]** navigieren. Beachten Sie den **Client-Code** im Abschnitt **Recommendations-API-**&quot;.
    ![client-code.png](assets/client-code.png)
-1. Nachdem Sie Ihren Client-Code haben, erstellen Sie Ihren Bereitstellungs-API-Aufruf. Das folgende Beispiel beginnt mit den in der Sammlung &quot;[-API-Postman](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection) bereitgestellten **[!UICONTROL Web Batched Mboxes Delivery API Call]** und nimmt entsprechende Änderungen vor. Beispiel:
+1. Nachdem Sie Ihren Client-Code haben, erstellen Sie Ihren Bereitstellungs-API-Aufruf. Das folgende Beispiel beginnt mit dem **[!UICONTROL Aufruf der Bereitstellungs-API für Web-Batch]** Mboxes in der [Postman-Sammlung der Bereitstellungs-API](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection) und nimmt relevante Änderungen vor. Beispiel:
    * Die **browser**- und **address**-Objekte wurden aus dem **body** entfernt, da sie für Anwendungsfälle außerhalb von HTML nicht erforderlich sind
    * *api_charter* wird in diesem Beispiel als Standortname aufgeführt
    * entity.id wird angegeben, da diese Empfehlung auf Inhaltsähnlichkeit basiert, d. h., es muss ein aktueller Elementschlüssel an Target übergeben werden.

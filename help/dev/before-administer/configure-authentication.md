@@ -15,7 +15,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: addda914fcf7ba1616ae9a9d49118e737b3ad923
 workflow-type: tm+mt
-source-wordcount: 1849
+source-wordcount: 1927
 ht-degree: 1%
 
 ---
@@ -56,27 +56,27 @@ In diesem Abschnitt greifen Sie auf die [!DNL Adobe Developer Console] zu und er
 
 1. Stellen Sie in der [Adobe Admin Console](https://adminconsole.adobe.com/) sicher, dass Ihrem [!DNL Adobe]-Benutzerkonto sowohl [Produktadministrator](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) als auch [Entwickler](https://helpx.adobe.com/de/enterprise/using/manage-developers.html) Zugriff auf [!DNL Target] gewährt wurde.
 
-1. Wählen Sie in der [Adobe Developer Console](https://developer.adobe.com/console/home) die [!UICONTROL Experience Cloud Organization] aus, für die Sie diese Integration erstellen möchten. (Beachten Sie, dass Sie wahrscheinlich nur Zugriff auf eine einzige [!UICONTROL Experience Cloud Organization] haben.)
+1. Wählen Sie in der {0[&#128279;](https://developer.adobe.com/console/home)Adobe Developer Console} die [!UICONTROL Experience Cloud-Organisation] für die Sie diese Integration erstellen möchten. (Beachten Sie, dass Sie wahrscheinlich nur Zugriff auf eine einzige [!UICONTROL Experience Cloud-Organisation] haben.)
 
    ![configure-io-target-createproject2.png](assets/configure-io-target-createproject2.png)
 
-1. Klicken Sie auf **[!UICONTROL Create new project]**.
+1. Klicken Sie **[!UICONTROL Neues Projekt erstellen]**.
 
    ![configure-io-target-createproject3.png](assets/configure-io-target-createproject3.png)
 
-1. Klicken Sie auf **[!UICONTROL Add API]** , um Ihrem Projekt eine REST-API für den Zugriff auf [!DNL Adobe] Services und Produkte hinzuzufügen.
+1. Klicken Sie **[!UICONTROL API hinzufügen]**, um Ihrem Projekt eine REST-API hinzuzufügen, um auf [!DNL Adobe] Services und Produkte zuzugreifen.
 
    ![API hinzufügen](assets/configure-io-target-createproject4.png)
 
-1. Wählen Sie **[!DNL Adobe Target]** als den [!DNL Adobe]-Service aus, mit dem Sie eine Integration vornehmen möchten. Klicken Sie auf die **[!UICONTROL Next]**.
+1. Wählen Sie **[!DNL Adobe Target]** als den [!DNL Adobe]-Service aus, mit dem Sie eine Integration vornehmen möchten. Klicken Sie auf die **[!UICONTROL Weiter]** Schaltfläche, die angezeigt wird.
 
    ![configure-io-target-createproject5](assets/configure-io-target-createproject5.png)
 
-1. Wählen Sie eine Option aus, um öffentliche und private Schlüssel mit der Service-Kontointegration zu verknüpfen, die Sie für [!DNL Target] erstellen. Wählen Sie für dieses Beispiel **[!UICONTROL Option 1: Generate a key pair]** aus und klicken Sie auf **[!UICONTROL Generate keypair]**.
+1. Wählen Sie eine Option aus, um öffentliche und private Schlüssel mit der Service-Kontointegration zu verknüpfen, die Sie für [!DNL Target] erstellen. Wählen Sie für dieses Beispiel **[!UICONTROL Option 1: Schlüsselpaar generieren]** und klicken Sie auf **[!UICONTROL Schlüsselpaar generieren]**.
 
    ![configure-io-target-createproject6](assets/configure-io-target-createproject6.png)
 
-1. Notieren Sie sich wie angewiesen die automatisch heruntergeladene Konfigurationsdatei (`config`), die Ihren privaten Schlüssel enthält. Klicken Sie auf **[!UICONTROL Next]**.
+1. Notieren Sie sich wie angewiesen die automatisch heruntergeladene Konfigurationsdatei (`config`), die Ihren privaten Schlüssel enthält. Klicken Sie **[!UICONTROL Weiter]**.
 
    ![configure-io-target-createproject7](assets/configure-io-target-createproject7.png)
 
@@ -84,18 +84,18 @@ In diesem Abschnitt greifen Sie auf die [!DNL Adobe Developer Console] zu und er
 
    ![configure-io-target-createproject8](assets/configure-io-target-createproject8.png)
 
-1. Zurück in der Adobe Developer Console wählen Sie [Produktprofil(e](https://helpx.adobe.com/de/enterprise/using/manage-products-and-profiles.html) aus, die den Eigenschaften entsprechen, in denen Sie Adobe Recommendations verwenden. (Wenn Sie keine Eigenschaften verwenden, wählen Sie die Option Standard-Workspace aus.) Klicken Sie auf **[!UICONTROL Save configured API]**.
+1. Zurück in der Adobe Developer Console wählen Sie [Produktprofil(e](https://helpx.adobe.com/de/enterprise/using/manage-products-and-profiles.html) aus, die den Eigenschaften entsprechen, in denen Sie Adobe Recommendations verwenden. (Wenn Sie keine Eigenschaften verwenden, wählen Sie die Option Standard-Workspace aus.) Klicken Sie **[!UICONTROL Konfigurierte API speichern]**.
 
    ![configure-io-target-createproject9](assets/configure-io-target-createproject9.png)
 
-1. Klicken Sie auf **[!UICONTROL Create Integration]**. Sie sollten eine temporäre Meldung erhalten, die angibt, dass Ihre API erfolgreich konfiguriert wurde.
-1. Benennen Sie in einem letzten Schritt Ihr Projekt um, sodass es einen aussagekräftigeren Namen hat als das ursprüngliche `Project 1`. Navigieren Sie dazu mithilfe des angezeigten Navigationspfads zum Projekt, klicken Sie auf **[!UICONTROL Edit project]** , um auf das **[!UICONTROL Edit Project]** Modal zuzugreifen, und benennen Sie das Projekt um.
+1. Klicken Sie **[!UICONTROL Integration erstellen]**. Sie sollten eine temporäre Meldung erhalten, die angibt, dass Ihre API erfolgreich konfiguriert wurde.
+1. Benennen Sie in einem letzten Schritt Ihr Projekt um, sodass es einen aussagekräftigeren Namen hat als das ursprüngliche `Project 1`. Navigieren Sie dazu über den angezeigten Navigationspfad zum Projekt, klicken Sie auf **[!UICONTROL Projekt bearbeiten]**, um auf das Modal **[!UICONTROL Projekt bearbeiten]** zuzugreifen, und benennen Sie das Projekt um.
 
    ![configure-io-target-createproject11](assets/configure-io-target-createproject11.png)
 
 >[!NOTE]
 >
->In diesem Beispiel nennen wir unser Projekt &quot;[!DNL Target] Integration“. Wenn Sie davon ausgehen, dass Sie Ihr Projekt länger als [!DNL Adobe Target] verwenden werden, sollten Sie es entsprechend benennen. Sie können ihn beispielsweise &quot;Adobe-APIs“ oder &quot;Experience Cloud-APIs“ nennen, da er mit anderen Lösungen in der Adobe Experience Cloud verwendet werden kann.
+>In diesem Beispiel nennen wir unser Projekt &quot;[!DNL Target] Integration“. Wenn Sie davon ausgehen, dass Sie Ihr Projekt länger als [!DNL Adobe Target] verwenden werden, sollten Sie es entsprechend benennen. Beispielsweise können Sie den Namen &quot;Adobe-APIs“ oder „Experience Cloud-APIs“ wählen, da sie mit anderen Lösungen in Adobe Experience Cloud verwendet werden können.
 
 ## Projektdetails exportieren
 
@@ -107,11 +107,11 @@ Es gibt viele Möglichkeiten, die Details Ihres Projekts in Postman anzugeben, a
 >
 >Videoanweisungen für alle Experience Cloud-Lösungen, einschließlich [!DNL Target], finden Sie unter [Verwenden von Postman mit Experience Platform-APIs](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=de). Die folgenden Abschnitte sind für die [!DNL Target]-APIs relevant: 1. Erstellen und Exportieren der Experience Platform-API nach Postman 2. Erstellen eines Zugriffs-Tokens mit Postman. Diese Schritte werden ebenfalls unten beschrieben.
 
-1. Navigieren Sie noch in der {0[&#128279;](https://developer.adobe.com/console/home)Adobe Developer Console}, um die **[!UICONTROL Service Account (JWT)]** Anmeldedaten Ihres neuen Projekts anzuzeigen. Verwenden Sie entweder den linken Navigationsbereich oder den **[!UICONTROL Credentials]**, wie abgebildet.
+1. Navigieren Sie noch in der {0[&#128279;](https://developer.adobe.com/console/home)Adobe Developer Console}, um die Anmeldeinformationen für das **[!UICONTROL Service-Konto (JWT) Ihres neuen Projekts]**. Verwenden Sie entweder die linke Navigation oder den **[!UICONTROL Anmeldedaten]** Abschnitt wie dargestellt.
 
    ![JWT1](assets/configure-io-target-jwt1.png)
 
-   Beachten Sie **[!UICONTROL Credential details]**, dass Sie Ihre **[!UICONTROL Public key(s)]**, **[!UICONTROL Client ID]** und andere Informationen zu Ihrem Service-Konto anzeigen können.
+   Beachten Sie **[!UICONTROL Anmeldeinformationen]**, dass Sie Ihre **[!UICONTROL öffentlichen Schlüssel)]**, **[!UICONTROL Client-ID]** und andere Informationen zu Ihrem Service-Konto anzeigen können.
 
    ![JWT1a](assets/configure-io-target-jwt1a.png)
 
@@ -119,7 +119,7 @@ Es gibt viele Möglichkeiten, die Details Ihres Projekts in Postman anzugeben, a
 
    ![JWT2](assets/configure-io-target-jwt2.png)
 
-1. Klicken Sie auf **[!UICONTROL Download for Postman]** > **[!UICONTROL Service Account (JWT)]** , um eine JSON-Datei zu erstellen, die Ihre Authentifizierungsinformationen für eine Postman-Umgebung erfasst.
+1. Klicken Sie **[!UICONTROL Für Postman herunterladen]** > **[!UICONTROL Service-Konto (JWT)]**, um eine JSON-Datei zu erstellen, die Ihre Authentifizierungsinformationen für eine Postman-Umgebung erfasst.
 
    ![JWT3](assets/configure-io-target-jwt3.png)
 
@@ -127,11 +127,11 @@ Es gibt viele Möglichkeiten, die Details Ihres Projekts in Postman anzugeben, a
 
    ![JWT3a](assets/configure-io-target-jwt3a.png)
 
-1. Klicken Sie in Postman auf das Zahnradsymbol, um Ihre Umgebungen zu verwalten, und klicken Sie dann auf **[!UICONTROL Import]** , um die JSON-Datei (Umgebung) zu importieren.
+1. Klicken Sie in Postman auf das Zahnradsymbol, um Ihre Umgebungen zu verwalten, und dann auf **[!UICONTROL Importieren]**, um die JSON-Datei (Umgebung) zu importieren.
 
    ![JWT4](assets/configure-io-target-jwt4.png)
 
-1. Wählen Sie Ihre Datei aus und klicken Sie auf **[!UICONTROL Open]**.
+1. Wählen Sie Ihre Datei aus und klicken Sie auf **[!UICONTROL Öffnen]**.
 
    ![JWT5](assets/configure-io-target-jwt5.png)
 
@@ -151,11 +151,11 @@ Es gibt viele Möglichkeiten, die Details Ihres Projekts in Postman anzugeben, a
 
    ![JWT9](assets/configure-io-target-jwt9.png)
 
-1. Fügen Sie in Postman Ihren privaten Schlüsselwert in die Felder **[!UICONTROL INITIAL VALUE]** und **[!UICONTROL CURRENT VALUE]** ein.
+1. Fügen Sie in Postman den Wert Ihres privaten Schlüssels in die Felder **[!UICONTROL ANFANGSWERT]** und **[!UICONTROL AKTUELLER WERT]** ein.
 
    ![JWT10](assets/configure-io-target-jwt10.png)
 
-1. Klicken Sie auf **[!UICONTROL Update]** und schließen Sie das Modal Umgebungen .
+1. Klicken Sie **[!UICONTROL Aktualisieren]** und schließen Sie das Modal Umgebungen .
 
 ## Erzeugen des Bearer-Zugriffstoken
 
@@ -165,19 +165,19 @@ In diesem Abschnitt generieren Sie Ihr Bearer-Zugriffstoken, das zum Authentifiz
 
    ![token1](assets/configure-io-target-generatetoken1.png)
 
-1. Klicken Sie auf die **[!UICONTROL Adobe I/O Access Token Generation Postman collection]**.
+1. Klicken Sie auf die Postman-Sammlung zur Generierung von Adobe I/O-Zugriffstoken **.**
 
    ![token2](assets/configure-io-target-generatetoken2.png)
 
-1. Rufen Sie die rohe JSON für diese Sammlung ab, indem Sie auf **[!UICONTROL Raw]** klicken und dann die resultierende JSON in Ihre Zwischenablage kopieren. (Sie können die rohe JSON auch als JSON-Datei speichern.)
+1. Rufen Sie die rohe JSON für diese Sammlung ab, indem Sie auf **[!UICONTROL Roh]** klicken und dann die resultierende JSON in die Zwischenablage kopieren. (Sie können die rohe JSON auch als JSON-Datei speichern.)
 
    ![token3](assets/configure-io-target-generatetoken3.png)
 
-1. Importieren Sie in Postman die Sammlung, indem Sie die rohe JSON aus der Zwischenablage einfügen und senden. (Sie können auch die JSON-Datei hochladen, die Sie gespeichert haben.) Klicken Sie auf **[!UICONTROL Continue]**.
+1. Importieren Sie in Postman die Sammlung, indem Sie die rohe JSON aus der Zwischenablage einfügen und senden. (Sie können auch die JSON-Datei hochladen, die Sie gespeichert haben.) Klicken Sie auf **[!UICONTROL Weiter]**.
 
    ![token4](assets/configure-io-target-generatetoken4.png)
 
-1. Wählen Sie die **[!UICONTROL IMS: JWT Generate + Auth via User Token]** Anfrage in der Postman-Sammlung zur Erzeugung von Adobe I/O-Zugriffstoken aus, stellen Sie sicher, dass Ihre Umgebung ausgewählt ist, und klicken Sie auf **[!UICONTROL Send]** , um das Token zu generieren.
+1. Wählen Sie die Anfrage **[!UICONTROL IMS: JWT-Generierung + Auth über Benutzer-Token]** in der Postman-Sammlung zur Adobe I/O-Zugriffstoken-Generierung aus, stellen Sie sicher, dass Ihre Umgebung ausgewählt ist, und klicken Sie auf **[!UICONTROL Senden]**, um das Token zu generieren.
 
    ![token5](assets/configure-io-target-generatetoken5.png)
 
@@ -205,7 +205,7 @@ In dieser Übung verwenden Sie Ihr neues Bearer-Zugriffstoken, indem Sie eine AP
 
    ![testToken1](assets/configure-io-target-testtoken0.png)
 
-1. Erweitern Sie die Sammlung und notieren Sie sich die **[!UICONTROL List activities]**.
+1. Erweitern Sie die Sammlung und beachten Sie die Anfrage **[!UICONTROL Aktivitäten auflisten]** .
 
    ![testToken1](assets/configure-io-target-testtoken1.png)
 
@@ -229,13 +229,13 @@ In dieser Übung verwenden Sie Ihr neues Bearer-Zugriffstoken, indem Sie eine AP
 
    ![JWT11](assets/configure-io-target-jwt11.png)
 
-1. Tippen Sie, um eine neue `{{TENANT_ID}}`-Umgebungsvariable hinzuzufügen. Kopieren Sie Ihren Mandanten-ID-Wert und fügen Sie ihn in die Felder **[!UICONTROL INITIAL VALUE]** und **[!UICONTROL CURRENT VALUE]** für Ihre neue `TENANT_ID`-Umgebungsvariable ein.
+1. Tippen Sie, um eine neue `{{TENANT_ID}}`-Umgebungsvariable hinzuzufügen. Kopieren Sie Ihren Mandanten-ID-Wert und fügen Sie ihn in die Felder **[!UICONTROL ANFANGSWERT]** und **[!UICONTROL AKTUELLER WERT]** für Ihre neue `TENANT_ID`-Umgebungsvariable ein.
 
    ![testToken5](assets/configure-io-target-testtoken5.png)
 
    >[!NOTE]
    >
-   >Die Mandanten-ID unterscheidet sich von Ihrer [!DNL Target]-`clientcode`. Die Mandanten-ID ist in der URL vorhanden, wenn Sie bei [!DNL Target] angemeldet sind. Um Ihre Mandanten-ID zu erhalten, melden Sie sich bei der Adobe Experience Cloud an, öffnen Sie [!DNL Target] und klicken Sie auf die Target-Karte. Verwenden Sie den Mandanten-ID-Wert, wie in der URL-Subdomain angegeben. Wenn beispielsweise Ihre URL bei der Anmeldung bei [!DNL Adobe Target] `<https://mycompany.experiencecloud.adobe.com/...>` ist, lautet Ihre Mandanten-ID „mycompany“.
+   >Die Mandanten-ID unterscheidet sich von Ihrer [!DNL Target]-`clientcode`. Die Mandanten-ID ist in der URL vorhanden, wenn Sie bei [!DNL Target] angemeldet sind. Um Ihre Mandanten-ID zu erhalten, melden Sie sich bei Adobe Experience Cloud an, öffnen Sie [!DNL Target] und klicken Sie auf die Target-Karte. Verwenden Sie den Mandanten-ID-Wert, wie in der URL-Subdomain angegeben. Wenn beispielsweise Ihre URL bei der Anmeldung bei [!DNL Adobe Target] `<https://mycompany.experiencecloud.adobe.com/...>` ist, lautet Ihre Mandanten-ID „mycompany“.
 
 1. Senden Sie die Anfrage, nachdem Sie sichergestellt haben, dass Sie die richtige Umgebung ausgewählt haben. Sie sollten eine Antwort erhalten, die Ihre Liste der Aktivitäten enthält.
 

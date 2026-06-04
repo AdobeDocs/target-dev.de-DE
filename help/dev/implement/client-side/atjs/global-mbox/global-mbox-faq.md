@@ -19,8 +19,8 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 309
-ht-degree: 35%
+source-wordcount: 316
+ht-degree: 34%
 
 ---
 
@@ -34,7 +34,7 @@ Für Ihr Konto wird nur eine globale Mbox unterstützt.
 
 Sie können den Ausführungsort Ihrer Aktivitäten beschränken, indem Sie Ihren Aktivitäten URL-Regeln hinzufügen. Weitere Informationen finden Sie unter [Gleiches Erlebnis auf ähnlichen Seiten](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html?lang=de).
 
-Sie können auch mit [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) einen Parameter auf der Seite übergeben und diese Parameter dann im Abschnitt „URL konfigurieren“ im [!UICONTROL Visual Experience Composer] (VEC) auswählen oder indem Sie die Parameter im [!UICONTROL Form-Based Experience Composer] als „Verfeinerungen“ hinzufügen.
+Sie können auch mit [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) einen Parameter auf der Seite übergeben und diese Parameter dann im Abschnitt „URL konfigurieren“ im [!UICONTROL Visual Experience Composer] (VEC) auswählen oder indem Sie die Parameter im [!UICONTROL formularbasierten Experience Composer) als „Verfeinerungen“ &#x200B;].
 
 ## Wie gebe ich Umsatzdaten an eine [!DNL Target] globale Mbox weiter?
 

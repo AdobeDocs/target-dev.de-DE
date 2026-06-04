@@ -1,6 +1,6 @@
 ---
 title: Initialisieren Sie die Java-SDK mit der create-Methode
-description: Erfahren Sie, wie Sie mit der create-Methode die Java-SDK initialisieren und die [!UICONTROL TargetClient] instanziieren können, um  [!DNL Adobe Target]  für Experimente und personalisierte Erlebnisse aufzurufen.
+description: Erfahren Sie, wie Sie mit der create-Methode die Java-SDK initialisieren und den [!UICONTROL TargetClient] instanziieren können, um  [!DNL Adobe Target]  Experimente und personalisierte Erlebnisse aufzurufen.
 feature: APIs/SDKs
 exl-id: 0e0ddead-7de8-4549-b81c-e72598558e4b
 TQID: https://experienceleague.adobe.com/B1Ev7NnjlFMg4VoicF6Z4whyqfJYDjCwPeYRKEk2viY
@@ -12,8 +12,8 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 460
-ht-degree: 17%
+source-wordcount: 471
+ht-degree: 16%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 17%
 
 ## Beschreibung
 
-Verwenden Sie die `create`-Methode, um die Java-SDK zu initialisieren und die [!UICONTROL Target Client] zu instanziieren und [!DNL Adobe Target] für Experimente und personalisierte Erlebnisse aufzurufen.
+Verwenden Sie die `create`-Methode, um die Java-SDK zu initialisieren und den [!UICONTROL Target-Client] zu instanziieren, um Aufrufe an [!DNL Adobe Target] für Experimente und personalisierte Erlebnisse auszuführen.
 
 ## Methode
 
@@ -45,8 +45,8 @@ ClientConfigBuilder ClientConfig.builder()
 
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
-| Kunde | Zeichenfolge | Ja | Keine | [!UICONTROL Target Client Id] |
-| OrganizationId | Zeichenfolge | Ja | Keine | [!UICONTROL Experience Cloud Organization ID] |
+| Kunde | Zeichenfolge | Ja | Keine | [!UICONTROL Target-Client-ID] |
+| OrganizationId | Zeichenfolge | Ja | Keine | [!UICONTROL Experience Cloud-Organisations-ID] |
 | connectTimeout | Nummer | Nein | 10000 | Verbindungs-Timeout für alle Anfragen in Millisekunden |
 | socketTimeout | Nummer | Nein | 10000 | Socket-Zeitüberschreitung für alle Anfragen in Millisekunden |
 | maxConnectionsPerHost | Nummer | Nein | 100 | Max. Verbindungen pro [!DNL Target] |

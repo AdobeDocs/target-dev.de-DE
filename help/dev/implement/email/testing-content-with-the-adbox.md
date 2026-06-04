@@ -17,8 +17,8 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 335
-ht-degree: 68%
+source-wordcount: 337
+ht-degree: 67%
 
 ---
 
@@ -40,7 +40,7 @@ Hilfe bei der Auswahl des richtigen Setups [&#x200B; Sie unter (Nicht-JavaScript
 
    * Bei `myClientCode` handelt es sich um den Clientcode Ihres Unternehmens. Der Clientcode Ihres Unternehmens enthält ausschließlich Kleinbuchstaben und keine Sonderzeichen.
 
-     Der Client-Code ist oben auf der Seite **[!UICONTROL Administation]** > **[!UICONTROL Implementation]** der [!DNL Target]-Benutzeroberfläche verfügbar.
+     Der Client-Code ist oben auf der Seite **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** der [!DNL Target] verfügbar.
 
    * Bei `image` handelt es sich um den Aufruftyp. In diesem Fall handelt es sich um ein Bild.
 

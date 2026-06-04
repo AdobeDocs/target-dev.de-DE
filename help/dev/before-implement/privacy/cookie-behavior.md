@@ -34,7 +34,7 @@ Das Verhalten von Cookies ist davon abhängig, ob es sich um ein Erstanbieter-Co
 
 >[!NOTE]
 >
->Ausführliche Informationen zu den verschiedenen von [!DNL Target] verwendeten Cookies finden Sie unter [[!DNL Adobe Target] Cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-target.html?lang=de){target=_blank} im *Komponentenhandbuch für die zentrale Experience Cloud-Benutzeroberfläche*.
+>Ausführliche Informationen zu den verschiedenen von [!DNL Target] verwendeten Cookies finden Sie unter [[!DNL Adobe Target] Cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-target.html?lang=de){target=_blank} im Komponentenhandbuch *Zentrale Benutzeroberfläche von Experience Cloud*.
 >
 >Dieses Thema enthält Informationen zu `mboxSession` und `mboxPC`. Best Practices für die Implementierung empfehlen, keine vertraulichen Informationen mit den Cookie-Daten zu verknüpfen oder zu speichern: `mboxSession` oder `mboxPC`.
 

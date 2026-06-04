@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 140
+source-wordcount: 143
 ht-degree: 12%
 
 ---
@@ -32,7 +32,7 @@ Um zu sehen, wie Sie mit .NET SDK beginnen können, navigieren Sie zum Handbuch 
 
 Testen Sie Laufwerk the.NET SDK:
 
-* Indem Sie die [[!DNL Adobe Target] [!UICONTROL on-device decisioning] Demo-Site besuchen](https://github.com/adobe/on-device-decisioning-demo-site)
+* Indem Sie die Demo[[!DNL Adobe Target] [!UICONTROL Site &#x200B;]On-Device Decisioning“ besuchen](https://github.com/adobe/on-device-decisioning-demo-site)
 * In einer [Beispielanwendung](../sdk-guides/sample-apps/sample-apps.md).
 
 ### Referenz

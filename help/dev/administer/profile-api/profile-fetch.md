@@ -11,7 +11,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 294
+source-wordcount: 297
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Die URL sieht wie im folgenden Beispiel aus:
 https://<clientCode>.tt.omtrdc.net/rest/v1/profiles/marketingCloudVisitorId/<ECID>?client=<clientCode>
 ```
 
-Ersetzen Sie `<clientCode>` durch Ihre [!DNL Target] [!UICONTROL Client Code] und `<ECID>` durch Ihre [!DNL Experience Cloud Visitor ID] ([!DNL Marketing Cloud Visitor ID]).
+Ersetzen Sie `<clientCode>` durch Ihren [!DNL Target] [!UICONTROL Client-Code] und `<ECID>` durch Ihre [!DNL Experience Cloud Visitor ID] ([!DNL Marketing Cloud Visitor ID]).
 
 ## Verwenden einer tntid
 
@@ -60,7 +60,7 @@ Das folgende Beispiel zeigt das Anfrageformat zum Abrufen eines Profils mithilfe
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?client=<your-client-code>
 ```
 
-Ersetzen Sie `<your-client-code>` und `your-thirdpartyid` und lösen Sie eine GET-Anfrage aus. Im Folgenden finden Sie ein Beispiel für einen Aufruf zum Abrufen von Profilen mit einem [!UICONTROL thirdpartyid]:
+Ersetzen Sie `<your-client-code>` und `your-thirdpartyid` und lösen Sie eine GET-Anfrage aus. Im Folgenden finden Sie ein Beispiel für einen Aufruf zum Abrufen von Profilen mit einer [!UICONTROL ThirdPartyId]:
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>

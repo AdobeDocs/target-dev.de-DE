@@ -6,7 +6,7 @@ feature: Implement Mobile
 exl-id: 9cf8e8fd-1898-43b1-b339-d7a21cb35d57
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '417'
 ht-degree: 55%
 
 ---
@@ -17,7 +17,7 @@ Sie können zusätzliche Informationen über den Speicherort oder den Benutzer s
 
 >[!IMPORTANT]
 >
->Unterstützung für die [!DNL Adobe Mobile] Version 4.*x* SDKs sind seit dem 31. August 2021 ausgelaufen und werden für [!DNL Adobe Target] Mobilbenutzer nicht mehr empfohlen.
+>Die Unterstützung für die [!DNL Adobe Mobile] Version 4.*x*-SDKs endete am 31. August 2021 und wird für [!DNL Adobe Target] Mobilbenutzer nicht mehr empfohlen.
 >
 >Die [Adobe Experience Platform SDK für Mobile Apps](https://developer.adobe.com/client-sdks/documentation/){target=_blank} ist die empfohlene Lösung für [!DNL Adobe Experience Cloud] Lösungen und Services in Ihren Mobile Apps.
 

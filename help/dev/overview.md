@@ -33,7 +33,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 501
+source-wordcount: 510
 ht-degree: 11%
 
 ---
@@ -60,7 +60,7 @@ Dieses *[!DNL Adobe Target]-Entwicklerhandbuch* enthält Ressourcen und Anleitun
 
 ## Client-seitige Implementierung
 
-[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md): Mit dem [!DNL Adobe Experience Platform Web SDK] können Sie über die [!UICONTROL Adobe Experience Edge Network] mit den verschiedenen Services in der [!DNL Experience Cloud] (einschließlich [!DNL Target]) interagieren.
+[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md): Mit dem [!DNL Adobe Experience Platform Web SDK] können Sie über die [!UICONTROL Adobe Experience Edge Network] mit den verschiedenen Services der [!DNL Experience Cloud] interagieren (einschließlich [!DNL Target].
 
 [**Target at.js-JavaScript-Bibliothek**](/help/dev/implement/client-side/overview.md): Die at.js-JavaScript-Bibliothek verbessert die Seitenladezeiten für Web-Implementierungen, verbessert die Sicherheit und bietet bessere Implementierungsoptionen für Single-Page-Anwendungen.
 
@@ -104,7 +104,7 @@ Dieses *[!DNL Adobe Target]-Entwicklerhandbuch* enthält Ressourcen und Anleitun
 
 [**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profiles-api.md): Abrufen [!DNL Adobe Target] Benutzerprofilinformationen.
 
-[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): Abrufen von [!UICONTROL A/B Test]- und [!UICONTROL Automated Personalization].
+[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): Abrufen von [!UICONTROL A/B-]- und [!UICONTROL Automated Personalization]-Aktivitätsberichtdaten.
 
 [**[!DNL Target Recommendations API]**](https://developer.adobe.com/target/administer/recommendations-api/): Verwenden Sie die [!DNL Target Recommendations]-API.
 

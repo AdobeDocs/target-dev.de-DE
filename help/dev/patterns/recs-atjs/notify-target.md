@@ -16,7 +16,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 368
+source-wordcount: 369
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Sie müssen die Attribute für die Bestellkonvertierung nicht in diesen Aufruf e
    * `orderTotal`: Bestellsumme für den Kauf.
    * `orderId`: Auftrags-ID des Kaufs.
 
-  Die folgende Abbildung zeigt eine [Regel für [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=de){target=_blank}, die nur auf der [!UICONTROL Confirmation]-Seite ausgelöst werden sollte.
+  Die folgende Abbildung zeigt eine [Regel für [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=de){target=_blank}, die nur auf der Seite [!UICONTROL Bestätigung] ausgelöst werden sollte.
 
   ![Seite „Aktionskonfiguration“](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 

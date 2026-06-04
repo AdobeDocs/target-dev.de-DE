@@ -80,7 +80,7 @@ Ab dem 1. März 2020 unterstützen [!DNL Target] APIs keine TLS 1.1-Verschlüsse
 * API-Clients, die Java 8 verwenden, sollten nicht beeinträchtigt werden, da die Standardeinstellung TLS 1.2 ist.
 * Bei API-Clients, die andere Frameworks verwenden, müssen Sie die Details zur Unterstützung von TLS 1.2 beim jeweiligen Anbieter erfragen.
 
-## Zugriff auf Experience Cloud Solutions-Benutzeroberflächen
+## Zugriff auf Benutzeroberflächen von Experience Cloud-Lösungen
 
 Da die Benutzeroberfläche von [!DNL Target] Standard/Premium bereits einen [modernen Webbrowser](supported-browsers.md) erfordert, gehen wir von Problemen nicht aus. Wenn Sie keine Verbindung zu Target herstellen können, sollten Sie Ihren Browser auf die neueste Version aktualisieren.
 

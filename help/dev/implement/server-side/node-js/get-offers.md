@@ -1,6 +1,6 @@
 ---
-title: Verwenden von [!UICONTROL getOffers()] in  [!DNL Adobe Target]  bei Verwendung der Node.js-SDK
-description: Erfahren Sie, wie Sie mit [!UICONTROL getOffers()] eine Entscheidung ausführen und ein Erlebnis von abrufen können [!DNL Adobe Target].
+title: Verwenden [!UICONTROL getOffers()] in [!DNL Adobe Target]  bei Verwendung der Node.js-SDK
+description: Erfahren Sie, wie Sie [!UICONTROL getOffers()] verwenden, um eine Entscheidung auszuführen und ein Erlebnis daraus abzurufen [!DNL Adobe Target].
 feature: APIs/SDKs
 exl-id: 3c4125ea-68d4-405e-9b9a-5fa832743153
 TQID: https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4
@@ -10,12 +10,12 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 326
-ht-degree: 21%
+source-wordcount: 342
+ht-degree: 20%
 
 ---
 
-# [!UICONTROL Get Offers] (node.js)
+# [!UICONTROL Angebote abrufen] (Node.js)
 
 ## Beschreibung
 
@@ -40,7 +40,7 @@ Das `options`-Objekt hat die folgende Struktur:
 | visitorCookie | Zeichenfolge | Nein | Keine | ECID-Cookie (VisitorId) |
 | targetCookie | Zeichenfolge | Nein | Keine | Cookie [!DNL Target] |
 | targetLocationHint | Zeichenfolge | Nein | Keine | [!DNL Target] Standorthinweis |
-| consumerId | Zeichenfolge | Nein | Keine | Zuordnung von consumerIds für [!UICONTROL Analytics for Target] (A4T) |
+| consumerId | Zeichenfolge | Nein | Keine | consumerIds für das [!UICONTROL Analytics for Target] (A4T)-Stitching |
 | Kunden-IDs | Array | Nein | Keine | Kunden-IDs im VisitorId-kompatiblen Format |
 | sessionId | Zeichenfolge | Nein | Keine | Wird zum Verknüpfen mehrerer [!DNL Target] verwendet |
 | Besucher | Objekt | Nein | new VisitorId | Externe VisitorId-Instanz bereitstellen |
@@ -51,8 +51,8 @@ Das `options`-Objekt hat die folgende Struktur:
 
 | Name | Typ | Beschreibung |
 | --- | --- | --- |
-| Anfrage | Objekt | Anfrage [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) |
-| Antwort | Objekt | [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) Antwort |
+| Anfrage | Objekt | [[!UICONTROL Target-Bereitstellungs-API]](/help/dev/implement/delivery-api/overview.md) Anfrage |
+| Antwort | Objekt | [[!UICONTROL Target-Bereitstellungs-API]](/help/dev/implement/delivery-api/overview.md) Antwort |
 | visitorState | Objekt | Objekt, das an die Besucher-API-`getInstance()` übergeben werden soll |
 | targetCookie | Objekt | Cookie [!DNL Target] |
 | targetLocationHintCookie | Objekt | Cookie für [!DNL Target]-Standorthinweise |
@@ -76,7 +76,7 @@ Das `status` -Objekt, das zur Anzeige des Status der Zielantwort verwendet wird,
 | --- | --- | --- |
 | status | Nummer | HTTP-Status-Code |
 | message | Zeichenfolge | Eine Meldung zur Antwort. Beispielsweise kann es angeben, ob die Antwort [On-Device](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md) oder Server-seitig festgelegt wurde |
-| remoteMboxes | Array | Wenn die Entscheidungsmethode `on-device` wird, wird ein Array von Mbox-Namen angegeben, über die auf dem Gerät nicht vollständig entschieden werden konnte. Mit anderen Worten, es ist eine [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) erforderlich. |
+| remoteMboxes | Array | Wenn die Entscheidungsmethode `on-device` wird, wird ein Array von Mbox-Namen angegeben, über die auf dem Gerät nicht vollständig entschieden werden konnte. Mit anderen Worten, eine [[!UICONTROL Target-Bereitstellungs-API]](/help/dev/implement/delivery-api/overview.md)-Anfrage ist erforderlich. |
 
 ## Beispiel
 

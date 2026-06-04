@@ -15,7 +15,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0fe52344f654f22d1ff7aaace0ba5a99e92d036d
 workflow-type: tm+mt
-source-wordcount: 901
+source-wordcount: 930
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Sie können jetzt die [Recommendations-APIs](https://developer.adobe.com/target/
 
 >[!NOTE]
 >
->Senden Sie die **[!UICONTROL IMS: JWT Generate + Auth via User Token]**-Anfrage immer dann, wenn Sie Ihr Zugriffstoken zur Authentifizierung aktualisieren müssen, da es nach 24 Stunden abläuft. Anweisungen finden [&#x200B; unter „Konfigurieren der &#x200B;](../configure-authentication.md)-Authentifizierung für Adobe&quot;.
+>Senden Sie die Anfrage **[!UICONTROL IMS: JWT Generate + Auth via User Token]** immer dann, wenn Sie Ihr Zugriffs-Token zur Authentifizierung aktualisieren müssen, da es nach 24 Stunden abläuft. Anweisungen finden [&#x200B; unter „Konfigurieren der &#x200B;](../configure-authentication.md)-Authentifizierung für Adobe&quot;.
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
@@ -44,7 +44,7 @@ POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
 
 Zum Beispiel können „Entitäten speichern“ verwendet werden, um Artikel zu aktualisieren, wenn bestimmte Schwellenwerte - wie Schwellenwerte für den Bestand oder Preis - erreicht werden, um diese Artikel zu kennzeichnen und zu verhindern, dass sie empfohlen werden.
 
-1. Navigieren Sie zu **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL CONTROL Environments]** , um die Zielumgebungs-ID abzurufen, in der Sie ein Element hinzufügen oder aktualisieren möchten.
+1. Navigieren Sie zu **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL CONTROL-Umgebungen]**, um die Zielumgebungs-ID abzurufen, in der Sie ein Element hinzufügen oder aktualisieren möchten.
 
    ![SaveEntities1](assets/SaveEntities01.png)
 
@@ -79,7 +79,7 @@ Zum Beispiel können „Entitäten speichern“ verwendet werden, um Artikel zu 
        }
    ```
 
-1. Klicken Sie auf **[!UICONTROL Send]**. Sie sollten die folgende Antwort erhalten.
+1. Klicken Sie auf **[!UICONTROL Senden]**. Sie sollten die folgende Antwort erhalten.
 
    ![SaveEntities5.png](assets/SaveEntities05.png)
 
@@ -123,11 +123,11 @@ Zum Beispiel können „Entitäten speichern“ verwendet werden, um Artikel zu 
        }
    ```
 
-1. Jetzt seid ihr dran! Verwenden Sie die **[!UICONTROL Save Entities]**-API, um die folgenden Elemente zu Ihrem Katalog hinzuzufügen. Verwenden Sie die obige Beispiel-JSON als Ausgangspunkt. (Sie müssen die JSON-Datei erweitern, um zusätzliche Entitäten einzuschließen.)
+1. Jetzt seid ihr dran! Verwenden Sie die **[!UICONTROL Entitäten speichern]**-API, um die folgenden Elemente zu Ihrem Katalog hinzuzufügen. Verwenden Sie die obige Beispiel-JSON als Ausgangspunkt. (Sie müssen die JSON-Datei erweitern, um zusätzliche Entitäten einzuschließen.)
 
    ![SaveEntities6.png](assets/SaveEntities06.png)
 
-Die letzten beiden Elemente gehören anscheinend nicht dazu. Sehen wir uns diese mithilfe der **[!UICONTROL Get Entity]**-API an und löschen Sie sie ggf. mithilfe der **[!UICONTROL Delete Entities]**-API.
+Die letzten beiden Elemente gehören anscheinend nicht dazu. Sehen wir uns diese mithilfe der API **[!UICONTROL Entität abrufen]** an und löschen Sie sie ggf. mithilfe der API **[!UICONTROL Entitäten löschen]**.
 
 ## Abrufen von Elementdetails mit der Get Entity API
 
@@ -162,11 +162,11 @@ Wenn Sie einen Fehler erhalten, der besagt, dass die Entität nicht gefunden wur
 
    ![GetEntity4](assets/GetEntity4.png)
 
-1. Senden Sie eine weitere **[!UICONTROL Get Entity]**-Anfrage, dieses Mal, um die Entität zu überprüfen, deren entityId=kit2005 ist.
+1. Senden Sie eine weitere **[!UICONTROL Entität abrufen]**-Anfrage, dieses Mal, um die Entität zu überprüfen, deren entityId=kit2005 ist.
 
    ![GetEntity5](assets/GetEntity5.png)
 
-Angenommen, Sie entscheiden, dass diese Entitäten aus Ihrem Katalog entfernt werden müssen. Verwenden wir die **[!UICONTROL Delete Entities]**-API.
+Angenommen, Sie entscheiden, dass diese Entitäten aus Ihrem Katalog entfernt werden müssen. Verwenden wir die API **[!UICONTROL Löschen von Entitäten]**.
 
 ## Löschen von Elementen mit der Delete Entities-API
 
@@ -180,7 +180,7 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 >
 >Die Delete Entities-API löscht Entitäten, auf die von den von Ihnen angegebenen IDs verwiesen wird. Wenn keine Entitäts-IDs angegeben werden, werden alle Entitäten in der angegebenen Umgebung gelöscht. Wenn keine Umgebungs-ID angegeben wird, werden Entitäten aus allen Umgebungen gelöscht. Verwenden Sie dies mit Vorsicht!
 
-1. Navigieren Sie zu **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL Environments]** , um die Zielumgebungs-ID abzurufen, aus der Sie Elemente löschen möchten.
+1. Navigieren Sie zu **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL Umgebungen]**, um die Zielumgebungs-ID abzurufen, aus der Sie Elemente löschen möchten.
 
    ![DeleteEntities1](assets/SaveEntities01.png)
 
@@ -200,7 +200,7 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 
    ![DeleteEntities5](assets/DeleteEntities5.png)
 
-1. Überprüfen Sie Ihre Ergebnisse mit **[!UICONTROL Get Entity]**, das nun anzeigen sollte, dass die gelöschten Entitäten nicht gefunden werden können.
+1. Überprüfen Sie Ihre Ergebnisse mit **[!UICONTROL Entität abrufen]** die jetzt anzeigen sollte, dass die gelöschten Entitäten nicht gefunden werden können.
 
    ![DeleteEntities6](assets/DeleteEntities6.png)
 

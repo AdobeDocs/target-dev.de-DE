@@ -24,7 +24,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2848
+source-wordcount: 2851
 ht-degree: 53%
 
 ---
@@ -87,7 +87,7 @@ Nachdem wir nun behandelt haben, was [!DNL Adobe Target] Ansichten sind, können
 
    Zunächst müssen wir at.js 2.*x* installieren. Diese Version von at.js wurde mit Blick auf SPAs entwickelt. Frühere Versionen von at.js unterstützen keine [!DNL Adobe Target] Ansichten und VEC für SPAs.
 
-   Laden Sie at.js 2.*x* über die [!DNL Adobe Target]-Benutzeroberfläche unter **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** herunter. at.js 2.*x* kann auch über Tags in [!DNL Adobe Experience Platform] bereitgestellt werden.
+   Laden Sie at.js 2.*x* über die [!DNL Adobe Target]-Benutzeroberfläche unter **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** herunter. at.js 2.*x* kann auch über Tags in [!DNL Adobe Experience Platform] bereitgestellt werden.
 
 1. Implementieren Sie die Funktion at.js 2.*x*, `[triggerView()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)` auf Ihren Sites.
 
@@ -101,7 +101,7 @@ Nachdem wir nun behandelt haben, was [!DNL Adobe Target] Ansichten sind, können
 
    | Parameter | Typ | Erforderlich? | Validierung | Beschreibung |
    | --- | --- | --- | --- | --- |
-   | viewName | Zeichenfolge | Ja | &#x200B;1. Keine nachfolgenden Leerzeichen.<br />2. Darf nicht leer sein.<br />3. Der Ansichtsname muss für alle Seiten eindeutig sein.<br />4. **Warnung:** Der Anzeigename sollte nicht mit „`/`“ beginnen oder enden. Dies liegt daran, dass der Kunde den Anzeigenamen im Allgemeinen aus dem URL-Pfad entnimmt. Für uns sind „Home“ und &quot;`/home`&quot; unterschiedlich.<br />5. **Warnung:** Dieselbe Ansicht sollte nicht mehrmals hintereinander mit der Option `{page: true}` ausgelöst werden. | Geben Sie eine beliebige Zeichenfolge als Namen für Ihre Ansicht an. Dieser Ansichtsname wird im **[!UICONTROL Modifications]** des VEC angezeigt, damit Marketer Aktionen erstellen und ihre A/B- und XT-Aktivitäten ausführen können. |
+   | viewName | Zeichenfolge | Ja | &#x200B;1. Keine nachfolgenden Leerzeichen.<br />2. Darf nicht leer sein.<br />3. Der Ansichtsname muss für alle Seiten eindeutig sein.<br />4. **Warnung:** Der Anzeigename sollte nicht mit „`/`“ beginnen oder enden. Dies liegt daran, dass der Kunde den Anzeigenamen im Allgemeinen aus dem URL-Pfad entnimmt. Für uns sind „Home“ und &quot;`/home`&quot; unterschiedlich.<br />5. **Warnung:** Dieselbe Ansicht sollte nicht mehrmals hintereinander mit der Option `{page: true}` ausgelöst werden. | Geben Sie eine beliebige Zeichenfolge als Namen für Ihre Ansicht an. Dieser Ansichtsname wird im Bedienfeld **[!UICONTROL Änderungen]** des VEC angezeigt, damit Marketer Aktionen erstellen und ihre A/B- und XT-Aktivitäten ausführen können. |
    | options | Objekt | Nein |  |  |
    | Optionen > Seite | Boolesch | Nein |  | **TRUE**: Der Standardwert der Seite ist „wahr“. Bei der `page=true` werden Benachrichtigungen an die Edge-Server gesendet, um die Impressionsanzahl zu erhöhen.<br />**FALSE**: Bei der `page=false` werden keine Benachrichtigungen gesendet, um die Impressionsanzahl zu erhöhen. Dies sollte verwendet werden, wenn Sie nur eine Komponente auf einer Seite mit einem Angebot neu rendern möchten. |
 

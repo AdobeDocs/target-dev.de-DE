@@ -16,7 +16,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 4131354373a42c475db9a4f8dcf8090dd0cbdfcd
 workflow-type: tm+mt
-source-wordcount: 294
+source-wordcount: 296
 ht-degree: 1%
 
 ---
@@ -124,7 +124,7 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. Sowohl der Client als auch die `organizationId` können von abgerufen werden[!DNL Adobe Target] indem Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** navigieren, wie hier dargestellt.
+1. Sowohl der Client als auch die `organizationId` können von abgerufen werden[!DNL Adobe Target] indem Sie zu **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** navigieren, wie hier dargestellt.
 
    <!-- Insert image-client-code.png -->
    ![ALT-Bild](assets/asset-rule-artifact-3.png)

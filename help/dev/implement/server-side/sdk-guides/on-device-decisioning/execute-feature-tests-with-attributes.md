@@ -16,7 +16,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 891
+source-wordcount: 960
 ht-degree: 1%
 
 ---
@@ -25,8 +25,8 @@ ht-degree: 1%
 
 ## Zusammenfassung der Schritte
 
-1. Aktivieren von [!UICONTROL on-device decisioning] für Ihr Unternehmen
-1. [!UICONTROL A/B Test] erstellen
+1. Aktivieren [!UICONTROL On-Device Decisioning] für Ihre Organisation
+1. Erstellen einer [!UICONTROL A/B-Test]-Aktivität
 1. A und B definieren
 1. Hinzufügen einer Audience
 1. Traffic-Zuordnung festlegen
@@ -41,41 +41,41 @@ ht-degree: 1%
 >
 >Angenommen, Sie sind ein E-Commerce-Einzelhandelsunternehmen. Sie möchten die Konversionsrate erhöhen, wenn Kunden Ihren Produktkatalog durchsuchen und sortieren. Sie haben die Hypothese, dass bestimmte Sortieralgorithmen und Paginierungsstrategien bessere Ergebnisse liefern als andere. Um diese Theorie zu testen, führen Sie einen Funktionstest durch, bei dem das Sortier-Widget mit verschiedenen Sortieroptionen für Ihre Endbenutzenden neu gestaltet wird. Sie sollten sicherstellen, dass dieser Funktionstest mit einer Latenz nahe null ausgeführt wird, damit die Benutzererfahrung nicht beeinträchtigt wird und die Ergebnisse nicht verzerrt werden.
 
-## &#x200B;1. Aktivieren von [!UICONTROL on-device decisioning] für Ihr Unternehmen
+## &#x200B;1. Aktivieren [!UICONTROL On-Device Decisioning] für Ihre Organisation
 
-Durch die Aktivierung der geräteinternen Entscheidungsfindung wird sichergestellt, dass eine A/B-Aktivität mit einer Latenz von nahezu null ausgeführt wird. Um diese Funktion zu aktivieren, navigieren Sie in [!DNL Adobe Target] zu **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** und aktivieren Sie den Umschalter **[!UICONTROL On-Device Decisioning]** .
+Durch die Aktivierung der geräteinternen Entscheidungsfindung wird sichergestellt, dass eine A/B-Aktivität mit einer Latenz von nahezu null ausgeführt wird. Um diese Funktion zu aktivieren, navigieren Sie **[!UICONTROL [!DNL Adobe Target] zu]** > **[!UICONTROL Implementierung]** > **[!UICONTROL Kontodetails]** und aktivieren Sie den Umschalter **[!UICONTROL On-Device Decisioning]**.
 
 ![ALT-Bild](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->Sie müssen über die Rolle Administrator oder Genehmiger [Benutzer) verfügen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=de) um den Umschalter **[!UICONTROL On-Device Decisioning]** zu aktivieren oder zu deaktivieren.
+>Sie müssen über die Admin- oder Genehmiger[Benutzerrolle verfügen, &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=de) den Umschalter **[!UICONTROL On-Device Decisioning]** zu aktivieren oder zu deaktivieren.
 
-Nach der Aktivierung des **[!UICONTROL On-Device Decisioning]**-Umschalters beginnt [!DNL Adobe Target] mit der Generierung *Regelartefakte* für Ihren Client.
+Nach der Aktivierung **[!UICONTROL Umschalters]** On-Device Decisioning“ beginnt [!DNL Adobe Target] mit der Erstellung *Regelartefakte* für Ihren Client.
 
-## &#x200B;2. [!UICONTROL A/B Test] erstellen
+## &#x200B;2. Erstellen einer [!UICONTROL A/B-Test]-Aktivität
 
-1. Navigieren Sie in [!DNL Adobe Target] zur Seite **[!UICONTROL Activities]** und wählen Sie dann **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]** aus.
+1. Navigieren Sie in [!DNL Adobe Target] zur Seite **[!UICONTROL Aktivitäten]** und wählen Sie dann **[!UICONTROL Aktivität erstellen]** > **[!UICONTROL A/B-Test]**.
 
    ![ALT-Bild](assets/asset-ab.png)
 
-1. Lassen Sie im **[!UICONTROL Create A/B Test Activity]**-Modal die Option **[!UICONTROL Web]** ausgewählt (1), wählen Sie **[!UICONTROL Form]** als Experience Composer (2) aus, wählen Sie **[!UICONTROL Default Workspace]** mit **[!UICONTROL No Property Restrictions]** (3) aus und klicken Sie auf **[!UICONTROL Next]** (4).
+1. Lassen Sie im Modal **[!UICONTROL A/B-]** erstellen“ die Standardoption **[!UICONTROL Web]** ausgewählt (1), wählen Sie **[!UICONTROL Form]** als Experience Composer (2) aus, wählen Sie **[!UICONTROL Standard-Workspace]** mit **[!UICONTROL Keine Eigenschaftsbeschränkungen]** (3) aus und klicken Sie auf **[!UICONTROL Weiter]** (4).
 
    ![ALT-Bild](assets/asset-form.png)
 
 ## &#x200B;3. A und B definieren
 
-1. Geben Sie im **[!UICONTROL Experiences]** Schritt der Aktivitätserstellung einen Namen für Ihre Aktivität ein (1) und fügen Sie ein zweites Erlebnis, Erlebnis B, hinzu, indem Sie auf die Schaltfläche **[!UICONTROL Add Experience]** (2) klicken. Geben Sie den Namen des Speicherorts (3) innerhalb Ihrer Anwendung ein, an dem Sie Ihren Funktionstest mit Attributen ausführen möchten. Im folgenden Beispiel ist `product-results-page` der für Erlebnis A definierte Speicherort. (Es ist auch der für Erlebnis B definierte Speicherort.)
+1. Geben **[!UICONTROL im Schritt]** Erlebnisse“ der Aktivitätserstellung einen Namen für Ihre Aktivität ein (1) und fügen Sie ein zweites Erlebnis hinzu, Erlebnis B, indem Sie auf die Schaltfläche **[!UICONTROL Erlebnis hinzufügen]** (2) klicken. Geben Sie den Namen des Speicherorts (3) innerhalb Ihrer Anwendung ein, an dem Sie Ihren Funktionstest mit Attributen ausführen möchten. Im folgenden Beispiel ist `product-results-page` der für Erlebnis A definierte Speicherort. (Es ist auch der für Erlebnis B definierte Speicherort.)
 
    ![ALT-Bild](assets/asset-location.png)
 
-   **[!UICONTROL Experience A]** enthält die JSON-Datei, die Ihrer Geschäftslogik signalisiert, Folgendes zu tun:
+   **[!UICONTROL Erlebnis A]** enthält die JSON-Datei, die Ihrer Geschäftslogik signalisiert, Folgendes zu tun:
 
    * Starten Sie die Sortieralgorithmus-Funktion über das Feature Flag &quot;`test_sorting`&quot;
    * Ausführen des im `sorting_algorithm _**_attribute` definierten empfohlenen Sortieralgorithmus
    * Gibt 50 Produkte pro Seite zurück, wie durch die in der `pagination_limit` definierte Paginierungsstrategie definiert
 
-1. Klicken Sie in Erlebnis A auf , um den Inhalt von **[!UICONTROL Default Content]** in JSON zu ändern, indem Sie **[!UICONTROL Create JSON Offer]** wie unten dargestellt auswählen (1).
+1. Klicken Sie in Erlebnis A auf , um den Inhalt von **[!UICONTROL Standardinhalt]** in JSON zu ändern, indem Sie **[!UICONTROL JSON-Angebot erstellen]** wie unten dargestellt (1) auswählen.
 
    ![ALT-Bild](assets/asset-offer.png)
 
@@ -87,7 +87,7 @@ Nach der Aktivierung des **[!UICONTROL On-Device Decisioning]**-Umschalters begi
 
    ![ALT-Bild](assets/asset-sorting.png)
 
-   **[!UICONTROL Experience B]** definieren die JSON-Datei, die Ihrer Geschäftslogik signalisiert, Folgendes zu tun:
+   **[!UICONTROL Erlebnis B]** definiert die JSON, die Ihrer Geschäftslogik signalisiert, Folgendes zu tun:
 
    * Starten Sie die Sortieralgorithmusfunktion über das Feature Flag test_sort .
    * Führen Sie den im `sorting_algorithm _**_attribute` definierten `best_sellers` aus
@@ -101,7 +101,7 @@ Nach der Aktivierung des **[!UICONTROL On-Device Decisioning]**-Umschalters begi
 
 ## &#x200B;4. Hinzufügen einer Audience
 
-Behalten Sie im **[!UICONTROL Targeting]** Schritt die **[!UICONTROL All Visitors]** Zielgruppe bei. Auf diese Weise können Sie die Auswirkungen Ihrer Sortierfunktion verstehen und feststellen, welcher Algorithmus und welche Anzahl von Elementen die Ergebnisse am besten beeinflussen.
+Behalten **[!UICONTROL Schritt]** Targeting“ die Zielgruppe **[!UICONTROL Alle Besucher]** bei. Auf diese Weise können Sie die Auswirkungen Ihrer Sortierfunktion verstehen und feststellen, welcher Algorithmus und welche Anzahl von Elementen die Ergebnisse am besten beeinflussen.
 
 ![ALT-Bild](assets/asset-audience-b.png)
 
@@ -119,13 +119,13 @@ Definieren Sie den Prozentsatz Ihrer Besucher, die den empfohlenen Sortieralgori
 
 ## &#x200B;7. Einrichten von Berichten
 
-Wählen Sie im **[!UICONTROL Goals & Settings]** Schritt **[!UICONTROL Adobe Target]** als **[!UICONTROL Reporting Source]** aus, um Ihre A/B-Testergebnisse in der [!DNL Adobe Target]-Benutzeroberfläche anzuzeigen, oder wählen Sie **[!UICONTROL Adobe Analytics]** aus, um sie in der Adobe Analytics-Benutzeroberfläche anzuzeigen.
+Wählen Sie im Schritt **[!UICONTROL Ziele und Einstellungen]** die Option **[!UICONTROL Adobe Target]** als **[!UICONTROL Reporting-Source]** aus, um Ihre A/B-Testergebnisse in der [!DNL Adobe Target]-Benutzeroberfläche anzuzeigen, oder wählen Sie **[!UICONTROL Adobe Analytics]** aus, um sie in der Adobe Analytics-Benutzeroberfläche anzuzeigen.
 
 ![ALT-Bild](assets/asset-reporting-b.png)
 
 ## &#x200B;8. Metriken für Tracking-KPIs hinzufügen
 
-Wählen Sie eine **[!UICONTROL Goal Metric]** aus, um den Funktionstest mit Attributen zu messen. In diesem Beispiel hängt der Erfolg davon ab, ob der Benutzer ein Produkt kauft, je nach dem Sortieralgorithmus und der Paginierungsstrategie, die er angezeigt hat.
+Wählen Sie eine **[!UICONTROL Zielmetrik]**, um den Funktionstest mit Attributen zu messen. In diesem Beispiel hängt der Erfolg davon ab, ob der Benutzer ein Produkt kauft, je nach dem Sortieralgorithmus und der Paginierungsstrategie, die er angezeigt hat.
 
 ## &#x200B;9. Implementieren von Funktionstests mit Attributen in Ihr Programm
 

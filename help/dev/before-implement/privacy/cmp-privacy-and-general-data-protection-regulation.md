@@ -147,7 +147,7 @@ Target unterstützt die folgenden ID-Typen zum Auffinden eines Kundenprofils:
 
 | Benutzer-ID | Namespace-ID-Typ | Namespace-ID | Definition |
 |--- |--- |--- |--- |
-| Experience Cloud ID (ECID) | Standard | 4 | Adobe Experience Cloud ID, früher als Besucher-ID oder Experience Cloud ID bezeichnet. Sie können die JavaScript-API verwenden, um diese ID zu finden (siehe Details unten). |
+| Experience Cloud ID (ECID) | Standard | 4 | Adobe Experience Cloud-ID, früher als Besucher-ID oder Experience Cloud-ID bezeichnet. Sie können die JavaScript-API verwenden, um diese ID zu finden (siehe Details unten). |
 | TnT-ID/Cookie-ID (TNTID) | Standard | 9 | Zielkennung, die als Cookie im Browser des Besuchers festgelegt wird. Sie können die JavaScript-API verwenden, um diese ID zu finden (siehe Details unten). |
 | Drittanbieter-ID/CRM-ID (THIRDPARTYID) | Target-spezifisch | K. A. | Wenn Sie Target mit Ihrem CRM oder andere eindeutige Kennungsinformationen für Ihre Kunden bereitstellen. |
 

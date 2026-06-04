@@ -28,7 +28,7 @@ Target Standard-Kunden können fünf Attribute anwenden, [!DNL Target Premium] K
 
 ## Format
 
-Eine CSV-Datei mit [!DNL Experience Cloud]-IDs (ECIDs) und Attributnamen/Attributwertpaaren wird per FTP oder manuell in die Experience Cloud-Benutzeroberfläche hochgeladen.
+Eine CSV-Datei mit [!DNL Experience Cloud]-IDs (ECIDs) und Attributnamen/Attributwert-Paaren wird per FTP oder manuell in die Experience Cloud-Benutzeroberfläche hochgeladen.
 
 ## Anwendungsbeispiele
 

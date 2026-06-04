@@ -18,7 +18,7 @@ topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 436
+source-wordcount: 443
 ht-degree: 19%
 
 ---
@@ -45,7 +45,7 @@ Die [!DNL Target]-Schnittstelle unterstützt die folgenden Browser und Geräte:
 
 ## Anforderungen an die visuelle Bearbeitung
 
-Damit Sie Ihre Web-Seiten zuverlässig im [!UICONTROL Visual Experience Composer] (VEC) öffnen, erstellen und in der Vorschau anzeigen können, muss die Browser-Erweiterung [Adobe Experience Cloud Visual Editing Helper](https://experienceleague.adobe.com/de/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} in Ihrem Webbrowser installiert sein oder [!UICONTROL Enhanced Experience Composer (EEC)] verwenden.
+Damit Sie Ihre Web-Seiten zuverlässig im [!UICONTROL Visual Experience Composer] (VEC) öffnen, erstellen und in der Vorschau anzeigen können, muss die Browser-Erweiterung [Adobe Experience Cloud Visual Editing Helper](https://experienceleague.adobe.com/de/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} in Ihrem Webbrowser installiert sein oder [!UICONTROL Enhanced Experience Composer (EEC) verwenden].
 
 >[!NOTE]
 >

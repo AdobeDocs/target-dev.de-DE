@@ -11,8 +11,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 552
-ht-degree: 18%
+source-wordcount: 578
+ht-degree: 24%
 
 ---
 
@@ -43,15 +43,15 @@ Mit der Mobile-Vorschau-Funktion können Sie Ihre Mobile-App-Aktivitäten vollst
 
 ## Einen Vorschau-Link erstellen
 
-1. Klicken Sie in der [!DNL Target]-Benutzeroberfläche auf das Symbol **[!UICONTROL More Options]** (das vertikale Auslassungszeichen) und wählen Sie dann **[!UICONTROL Create Mobile Preview Link]** aus.
+1. Klicken Sie in der [!DNL Target]-Benutzeroberfläche auf das Symbol **[!UICONTROL Weitere Optionen]** (das vertikale Auslassungszeichen) und wählen Sie dann **[!UICONTROL Vorschau-Link für Mobilgeräte erstellen]**.
 
    ![ALT-Bild](assets/mobile-preview-create.png)
 
-1. Wählen Sie die Aktivitäten aus, die Sie in der Vorschau anzeigen möchten, und klicken Sie dann auf **[!UICONTROL Generate Mobile Preview Link]**.
+1. Wählen Sie die Aktivitäten aus, die Sie in der Vorschau anzeigen möchten, und klicken Sie dann auf **[!UICONTROL Link für mobile Vorschau generieren]**.
 
    >[!NOTE]
    >
-   >Sie können nur formularbasierte [!UICONTROL A/B Test] und [!UICONTROL Experience Targeting] (XT)-Aktivitäten auswählen.
+   >Sie können nur formularbasierte Aktivitäten [!UICONTROL A/B-]) und [!UICONTROL Erlebnis-Targeting] (XT) auswählen.
 
    ![ALT-Bild](assets/mobile-preview-select-activities.png)
 
@@ -61,7 +61,7 @@ Mit der Mobile-Vorschau-Funktion können Sie Ihre Mobile-App-Aktivitäten vollst
 
    ![ALT-Bild](assets/mobile-preview-enter-url-scheme.png)
 
-1. Klicken Sie auf **[!UICONTROL Generate Mobile Preview Link]** und kopieren Sie dann den Link.
+1. Klicken Sie auf **[!UICONTROL Vorschaulink für Mobilversion erzeugen]** und kopieren Sie den Link.
 
    ![ALT-Bild](assets/mobile-preview-generate-and-copy.png)
 
@@ -75,14 +75,14 @@ Mit der Mobile-Vorschau-Funktion können Sie Ihre Mobile-App-Aktivitäten vollst
 
    |![Vorschau Deep Link 1](assets/mobile-preview-open-deeplink.png)|![Vorschau Deep Link 2](assets/mobile-preview-open-app.png)|
 
-   Ihre App wird geöffnet und startet die [!DNL Target] [!UICONTROL Mobile Preview Mode].
+   Ihre App wird geöffnet und startet den [!DNL Target] [!UICONTROL Mobile-Vorschaumodus].
 
-1. Wählen Sie die gewünschte Erlebniskombination aus und klicken Sie dann auf **[!UICONTROL Launch Experiences]**.
+1. Wählen Sie die Kombination aus Erlebnissen aus, die Sie sehen möchten, und klicken Sie auf **[!UICONTROL Erlebnisse starten]**.
 
    |![Mobile Preview 1](assets/mobile-preview-experience-selection-1.png)|![Mobile Preview 2](assets/mobile-preview-experience-result-1-france.png)|![Mobile Preview 3](assets/mobile-preview-experience-result-1-shipfree.png)|
 |![Mobile Preview 4](assets/mobile-preview-experience-selection-2.png)|![Mobile Preview 5](assets/mobile-preview-experience-result-2-aus.png)|![Mobile Preview 6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## Einschränkungen
 
-* Die Ansicht muss erneut geladen werden, damit der neue Inhalt angezeigt wird, nachdem auf die Schaltfläche **[!UICONTROL Launch Experiences]** geklickt wurde. Die einfachste Möglichkeit ist, zu einem anderen Bildschirm zu wechseln und danach zu dem Bildschirm zurückzukehren, auf dem die Änderung bewirkt werden soll.
+* Die Ansicht muss erneut laden, damit der neue Inhalt angezeigt werden kann, nachdem die Schaltfläche **[!UICONTROL Erlebnisse starten]** aktiviert wurde. Die einfachste Möglichkeit ist, zu einem anderen Bildschirm zu wechseln und danach zu dem Bildschirm zurückzukehren, auf dem die Änderung bewirkt werden soll.
 * Die mobile Vorschau wird nicht für frühere Android-Versionen als API-19 (KitKat) unterstützt.

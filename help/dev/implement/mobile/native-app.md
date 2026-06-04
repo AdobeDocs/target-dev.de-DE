@@ -18,7 +18,7 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 611
+source-wordcount: 624
 ht-degree: 0%
 
 ---
@@ -71,8 +71,8 @@ https://vadymus.github.io/ateng/at-order-confirmation/index.html?a=1&b=2&adobe_m
 Wie Sie sehen können, ist an die URL `adobe_mc` Parameter angehängt. Dieser Parameter enthält kodierte Werte für:
 
 * TS=1660667205: Der aktuelle Zeitstempel. Dieser Zeitstempel stellt sicher, dass die Web-Ansicht keine abgelaufenen Werte erhält.
-* MCMID=69624092487065093697422606480535692677: Die [!UICONTROL Experience Cloud ID] (ECID). Wird auch als MID oder [!UICONTROL Marketing Cloud ID] bezeichnet, die für [!DNL Adobe] lösungsübergreifende Besucheridentifizierung erforderlich sind.
-* MCORGID=EB9CAE8B56E003697F000101@AdobeOrg: Die [!UICONTROL Adobe Organization ID].
+* MCMID=69624092487065093697422606480535692677: Die [!UICONTROL Experience Cloud ID] (ECID). Auch als MID oder [!UICONTROL Marketing Cloud ID bezeichnet] erforderlich für [!DNL Adobe] lösungsübergreifende Besucheridentifizierung.
+* MCORGID=EB9CAE8B56E003697F000101@AdobeOrg: Die [!UICONTROL Adobe-Organisations-ID].
 
 Die `Identity.getUrlVariables` ist eine alternative [!DNL Adobe Experience Platform Mobile SDK]-Methode, die eine entsprechend geformte Zeichenfolge zurückgibt, die die [!DNL Experience Cloud Identity Service] URL-Variablen enthält. Weitere Informationen finden Sie unter [getUrlVariables](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#geturlvariables){target=_blank} in der *Identity API-Referenz*.
 
@@ -90,7 +90,7 @@ Target.getSessionId { (id, err) in
 
 ## Testen in den Web-Ansichten
 
-Webvorschau-Links werden auf der Seite [!UICONTROL Activity detail] generiert, indem Sie auf den Link [[!UICONTROL Adobe QA] klicken](/help/dev/implement/mobile/target-mobile-preview.md) um ein Popup zum Kopieren jedes Erlebnisvorschau-Links anzuzeigen, ähnlich dem folgenden:
+Webvorschau-Links werden auf der Seite [!UICONTROL Aktivitätsdetail] generiert, indem auf den [[!UICONTROL Link für die &#x200B;] von Adobe geklickt &#x200B;](/help/dev/implement/mobile/target-mobile-preview.md), um ein Popup zum Kopieren jedes Erlebnisvorschau-Links anzuzeigen, ähnlich dem folgenden:
 
 ```
 ?at_preview_token=mhFIzJSF7JWb-RsnakpBqi_s83Sl64hZp928VWpkwvI&at_preview_index=1_1&at_preview_listed_activities_only=true

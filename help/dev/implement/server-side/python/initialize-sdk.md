@@ -1,6 +1,6 @@
 ---
 title: Initialisieren von Python SDK mithilfe der create-Methode
-description: Erfahren Sie, wie Sie mit der create-Methode die Python-SDK initialisieren und die [!UICONTROL TargetClient] instanziieren können, um  [!DNL Adobe Target]  Experimente und personalisierte Erlebnisse aufzurufen.
+description: Erfahren Sie, wie Sie mit der create-Methode die Python-SDK initialisieren und den [!UICONTROL TargetClient] instanziieren können, um  [!DNL Adobe Target]  Experimente und personalisierte Erlebnisse aufzurufen.
 feature: APIs/SDKs
 exl-id: 3e231e8e-696d-45c7-b733-79bf99da5bec
 TQID: https://experienceleague.adobe.com/la4hiAeSKSTgV7-WPLuW-MudsVJAm3qbq1vT7rnzymQ
@@ -10,15 +10,15 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 276
-ht-degree: 17%
+source-wordcount: 287
+ht-degree: 16%
 
 ---
 
 # Initialisieren von Python SDK
 
 Beschreibung
-Verwenden Sie die `create`-Methode, um die Python-SDK zu initialisieren und die [!UICONTROL Target Client] zu instanziieren und [!DNL Adobe Target] für Experimente und personalisierte Erlebnisse aufzurufen.
+Verwenden Sie die `create`-Methode, um die Python-SDK zu initialisieren und den [!UICONTROL Target-Client] zu instanziieren, damit [!DNL Adobe Target] Experimente und personalisierte Erlebnisse aufrufen kann.
 
 ## Methode
 
@@ -34,8 +34,8 @@ TargetClient.create(options)
 
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
-| Kunde | str | Ja | Keine | [!UICONTROL Adobe Target client ID] |
-| ORGANIZATION_ID | str | Ja | Keine | [!UICONTROL Experience Cloud Organization ID] |
+| Kunde | str | Ja | Keine | [!UICONTROL Adobe Target-Client-ID] |
+| ORGANIZATION_ID | str | Ja | Keine | [!UICONTROL Experience Cloud-Organisations-ID] |
 | Zeitüberschreitung | int | Nein | 3000 | Timeout in Millisekunden |
 | server_domain | str | Nein | `client.tt.omtrdc.net` | Überschreibt den Standard-Host-Namen |
 | sicher | boolesch | Nein | wahr | Einstellung zur Durchsetzung des HTTP-Schemas |

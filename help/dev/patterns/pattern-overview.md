@@ -19,7 +19,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 383
+source-wordcount: 398
 ht-degree: 0%
 
 ---
@@ -54,19 +54,19 @@ Um dem Team beim Erstellen neuer Muster zu helfen oder vorhandene Muster zu verb
    >
    >Sie müssen angemeldet sein, `github.com` ein Problem in [!DNL Experience League] zu öffnen. Lesen Sie die beitragenden Richtlinien und Verhaltenskodex-Anweisungen , wenn Sie zum ersten Mal ein Problem öffnen.
 
-1. (Bedingt) Um eine Idee für ein neues Muster oder für Verbesserungen vorhandener Muster vorzuschlagen, klicken Sie auf **[!UICONTROL Detailed feedback options]** und dann auf **[!UICONTROL Report an issue]**.
+1. (Bedingt) Um eine Idee für ein neues Muster oder eine Verbesserung vorhandener Muster vorzuschlagen, klicken Sie auf **[!UICONTROL Detaillierte Feedback-Optionen]** und dann auf **[!UICONTROL Problem melden]**.
 
    1. Geben Sie einen Titel ein und geben Sie dann Ihre Kommentare in das Textfeld ein.
 
       Hängen Sie bei Bedarf Dateien oder Screenshots an.
 
-   1. Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Submit new issue]** .
+   1. Klicken Sie **[!UICONTROL Abschließen]** wenn Sie fertig sind.
 
-1. (Bedingt) Um Text für ein vorhandenes Muster zu bearbeiten, klicken Sie im Modell „Feedback-Optionen“ für den entsprechenden Artikel auf **[!UICONTROL Suggest an edit]** und dann auf das **[!UICONTROL Edit]** (Bleistiftsymbol).
+1. (Bedingt) Um Text für ein vorhandenes Muster zu bearbeiten, klicken Sie im Modell „Feedback-Optionen“ für den entsprechenden Artikel auf **[!UICONTROL Bearbeitung vorschlagen]** und dann auf das Symbol **[!UICONTROL Bearbeiten]** (Stiftsymbol).
 
    1. Nehmen Sie Änderungen mithilfe der Markdown-Syntax vor.
 
-   1. Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Commit changes]** .
+   1. Klicken Sie **[!UICONTROL Abschluss auf]**&#x200B;Änderungen übernehmen“.
 
 Das [!DNL Target]-Team kann Ihre Kommentare oder Bearbeitungen überprüfen und mit Ihnen kommunizieren, um zusätzliche Informationen zu sammeln oder bei Bedarf weitere Klarstellungen zu erhalten.
 
