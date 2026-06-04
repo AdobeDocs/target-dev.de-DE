@@ -5,10 +5,23 @@ title: Was ist On-Device Decisioning?
 feature: Implement Server-side
 exl-id: 22ed3072-56f0-4075-9d1a-d642afe3b649
 TQID: https://experienceleague.adobe.com/-HHGn3lG5fOh2GLXQ6jOLRQmX7H24lN-2fseOg4y5H4
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 1349
@@ -47,7 +60,7 @@ Das folgende Diagramm zeigt die Architektur [!UICONTROL On-Device Decisioning]. 
 
 ### Aktivitäten
 
-Die geräteinterne Entscheidungsfindung unterstützt die folgenden Aktivitätstypen, die vom ([-basierten Experience Composer) erstellt ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html):
+Die geräteinterne Entscheidungsfindung unterstützt die folgenden Aktivitätstypen, die vom ([-basierten Experience Composer) erstellt &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html):
 
 * [!UICONTROL A/B-Test]
 * [!UICONTROL Experience Targeting] (XT)
@@ -92,7 +105,7 @@ Nach der Aktivierung des Umschalters „Geräteinterne Entscheidungsfindung“ b
 >
 >Stellen Sie sicher, dass Sie den Umschalter aktivieren, bevor Sie [!DNL Adobe Target] SDK für die Verwendung [!UICONTROL On-Device Decisioning] initialisieren. Die Regelartefakte müssen zunächst generiert und an die Akamai-CDNs weitergegeben werden, damit [!UICONTROL On-Device Decisioning] funktioniert.
 
-### Alle vorhandenen ([!UICONTROL  Entscheidungsfindung auf dem Gerät] qualifizierten Aktivitäten in den Artefakt-Umschalter einschließen
+### Alle vorhandenen ([!UICONTROL &#x200B; Entscheidungsfindung auf dem Gerät] qualifizierten Aktivitäten in den Artefakt-Umschalter einschließen
 
 Schalten Sie dieses **ein** wenn alle Ihre Live [!DNL Target]-Aktivitäten, die für die [!UICONTROL Entscheidungsfindung auf dem Gerät] qualifiziert sind, automatisch in das Artefakt aufgenommen werden sollen.
 
@@ -112,7 +125,7 @@ Sie können auch alle Aktivitäten anzeigen, die [!UICONTROL On-Device Decisioni
 >
 >Nach dem Erstellen und Aktivieren einer Aktivität, die [!UICONTROL On-Device Decisioning]-fähig ist, kann es 20 Minuten dauern, bis sie in das Regelartefakt aufgenommen wird, das generiert und an die Akamai CDN-Pos weitergegeben wird.
 
-## Wie lautet die Zusammenfassung der Schritte, die ich ausführen muss, um sicherzustellen, [!UICONTROL  meine ]-Aktivitäten erfolgreich über die Server-seitige SDK von [!DNL Adobe Target] bereitgestellt werden?
+## Wie lautet die Zusammenfassung der Schritte, die ich ausführen muss, um sicherzustellen, [!UICONTROL &#x200B; meine &#x200B;]-Aktivitäten erfolgreich über die Server-seitige SDK von [!DNL Adobe Target] bereitgestellt werden?
 
 1. Rufen Sie die [!DNL Adobe Target]-Benutzeroberfläche auf und navigieren Sie **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** > **[!UICONTROL Kontodetails]**, um den Umschalter **[!UICONTROL Geräteinterne Entscheidungsfindung]** zu aktivieren.
 1. Aktivieren Sie den **[!UICONTROL Alle vorhandenen [!UICONTROL geräteinternen Entscheidungsfindung einbeziehen] qualifizierten Aktivitäten im Artefakt]**.
@@ -121,7 +134,7 @@ Sie können auch alle Aktivitäten anzeigen, die [!UICONTROL On-Device Decisioni
 1. Implementieren Sie `getOffers()` oder `getAttributes()` in Ihrem Code, um ein Erlebnis auf dem Gerät abzurufen.
 1. Bereitstellen des Codes.
 
-Beispiele, die die ersten Schritte mit den Schritten 1-3 oben veranschaulichen, finden Sie [ Abschnitt „Erste Schritte](../getting-started/getting-started.md).
+Beispiele, die die ersten Schritte mit den Schritten 1-3 oben veranschaulichen, finden Sie [&#x200B; Abschnitt „Erste Schritte](../getting-started/getting-started.md).
 
 
 ## Zusätzliche Ressourcen
@@ -144,7 +157,7 @@ Dieses 7-minütige Video:
 * Beschreibt [!UICONTROL On-Device Decisioning] einschließlich dessen Vergleich mit anderen Methoden [!DNL Target] Implementierung
 * Veranschaulicht, wie die [!UICONTROL On-Device Decisioning] in Target aktiviert wird
 * Untersucht eine beispielhafte formularbasierte Composer-Aktivität, die mit JSON-Inhalten konfiguriert wurde
-* Zeigt beispielhaften Node.js-SDK-Code mit der Schlüsselkonfiguration, die für [!UICONTROL  Entscheidungsfindung auf dem Gerät erforderlich ist]
+* Zeigt beispielhaften Node.js-SDK-Code mit der Schlüsselkonfiguration, die für [!UICONTROL &#x200B; Entscheidungsfindung auf dem Gerät erforderlich ist]
 * Zeigt Ergebnisse in einem Browser an
 
 >[!VIDEO](https://video.tv.adobe.com/v/329032/?quality=12)

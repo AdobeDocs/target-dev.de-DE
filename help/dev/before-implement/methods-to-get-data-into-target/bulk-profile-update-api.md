@@ -5,10 +5,14 @@ title: Wie integriere ich Daten in  [!DNL Target]  mit der [!UICONTROL Bulk Prof
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
 TQID: https://experienceleague.adobe.com/vBcIsBR6wwYr7MbRh7UJvt71ULDEq6iXVZ5spZlif-0
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 284
@@ -18,7 +22,7 @@ ht-degree: 5%
 
 # API zur Massenaktualisierung von Profilen
 
-Mit der [!DNL Adobe Target] [!UICONTROL API zur Massenaktualisierung von ]) können Sie Benutzerprofile für mehrere Besucher einer Website mithilfe einer Batch-Datei stapelweise aktualisieren.
+Mit der [!DNL Adobe Target] [!UICONTROL API zur Massenaktualisierung von &#x200B;]) können Sie Benutzerprofile für mehrere Besucher einer Website mithilfe einer Batch-Datei stapelweise aktualisieren.
 
 Mit der [!UICONTROL Bulk Profile Update API] können Sie für viele Benutzer bequem detaillierte Besucherprofildaten in Form von Profilparametern senden, um sie aus einer beliebigen externen Quelle zu [!DNL Target]. Zu den externen Quellen können CRM (Customer Relationship Management)- oder POS (Point of Sale)-Systeme gehören, die normalerweise nicht auf einer Web-Seite verfügbar sind.
 

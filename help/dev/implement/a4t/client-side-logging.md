@@ -7,10 +7,17 @@ keywords: Target;A4T;Protokollierung;Web SDK;Experience Platform;Plattform
 feature: Implementation
 exl-id: fef34eec-128f-4433-a557-42f1347cf2c3
 TQID: https://experienceleague.adobe.com/A-6Z757zzqoIW12ICTs9WBwXjHbapgLArhGSoIgMulo
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 1166
@@ -22,7 +29,7 @@ ht-degree: 0%
 
 Mit dem [!DNL Adobe Experience Platform Web SDK] können Sie [Daten von Adobe Analytics for Target (A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) Client-seitig in Ihrer Web-Anwendung erfassen.
 
-Client-seitige Protokollierung bedeutet, dass relevante [!DNL Target]-Daten Client-seitig zurückgegeben werden, sodass Sie Daten erfassen und für [!DNL Analytics] freigeben können. Diese Option sollte aktiviert werden, wenn Sie Daten manuell über die „Data Insertion [&quot; an Analytics ](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html) möchten.
+Client-seitige Protokollierung bedeutet, dass relevante [!DNL Target]-Daten Client-seitig zurückgegeben werden, sodass Sie Daten erfassen und für [!DNL Analytics] freigeben können. Diese Option sollte aktiviert werden, wenn Sie Daten manuell über die „Data Insertion [&quot; an Analytics &#x200B;](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html) möchten.
 
 >[!NOTE]
 >
@@ -44,7 +51,7 @@ In den folgenden Unterabschnitten wird beschrieben, wie Sie [!DNL Analytics] Cli
 
 ### Aktivieren [!DNL Analytics] Client-seitigen Protokollierung {#enable-analytics-client-side-logging}
 
-Um [!DNL Analytics] Client-seitige Protokollierung für Ihre Implementierung aktivieren zu können, müssen Sie die [!DNL Adobe Analytics]-Konfiguration in Ihrem [Datenstrom“ ](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview).
+Um [!DNL Analytics] Client-seitige Protokollierung für Ihre Implementierung aktivieren zu können, müssen Sie die [!DNL Adobe Analytics]-Konfiguration in Ihrem [Datenstrom“ &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview).
 
 ![Analytics-Datenstromkonfiguration deaktiviert](/help/dev/implement/a4t/assets/disable-analytics-datastream.png)
 
@@ -544,4 +551,4 @@ alloy("configure", {
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Handbuch wurde die Client-seitige Protokollierung für A4T-Daten im [!DNL Platform Web SDK] behandelt. Weitere Informationen zum Umgang mit [4T-Daten in Edge Network finden ](/help/dev/implement/a4t/server-side-a4t.md) im Handbuch zur Server-seitigen Protokollierung.
+In diesem Handbuch wurde die Client-seitige Protokollierung für A4T-Daten im [!DNL Platform Web SDK] behandelt. Weitere Informationen zum Umgang mit [4T-Daten in Edge Network finden &#x200B;](/help/dev/implement/a4t/server-side-a4t.md) im Handbuch zur Server-seitigen Protokollierung.

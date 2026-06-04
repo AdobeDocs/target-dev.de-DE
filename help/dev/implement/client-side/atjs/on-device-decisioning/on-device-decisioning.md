@@ -5,11 +5,25 @@ title: Wie funktioniert die geräteinterne Entscheidungsfindung mit der at.js-Ja
 feature: at.js
 exl-id: bd0e062f-c259-46f3-adba-e380af058ac8
 TQID: https://experienceleague.adobe.com/5cYQQDwAwUbKanR3Wbt7ckKnGwHvz3arqn0zjdz6SBc
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: e1e0219c-f879-479f-8427-888ed2a6e9c2id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 3835
@@ -25,11 +39,11 @@ Ab Version 2.5.0 bietet at.js [!UICONTROL On-Device Decisioning]. [!UICONTROL Ge
 >
 >[!UICONTROL On-Device Decisioning] ist sowohl für Client- als auch für Server-seitige Implementierungen verfügbar. In diesem Artikel wird [!UICONTROL On-Device Decisioning] für Client-seitig beschrieben. Informationen zu [!UICONTROL On-Device Decisioning] für Server-seitig finden Sie in der Dokumentation zur Server-seitigen Implementierung [hier](../../../server-side/sdk-guides/on-device-decisioning/overview.md).
 
-[!DNL Target] bietet außerdem die Flexibilität, über einen Live-Server-Aufruf das relevanteste und aktuellste Erlebnis aus Ihren experimentellen und auf maschinellem Lernen (ML-gesteuert) basierenden Personalisierungsaktivitäten bereitzustellen. Mit anderen Worten: Wenn die Leistung am wichtigsten ist, können Sie die [!UICONTROL geräteinterne Entscheidungsfindung“ ]. Wenn jedoch das relevanteste, aktuellste und ML-gesteuerte Erlebnis benötigt wird, kann stattdessen ein Server-Aufruf durchgeführt werden.
+[!DNL Target] bietet außerdem die Flexibilität, über einen Live-Server-Aufruf das relevanteste und aktuellste Erlebnis aus Ihren experimentellen und auf maschinellem Lernen (ML-gesteuert) basierenden Personalisierungsaktivitäten bereitzustellen. Mit anderen Worten: Wenn die Leistung am wichtigsten ist, können Sie die [!UICONTROL geräteinterne Entscheidungsfindung“ &#x200B;]. Wenn jedoch das relevanteste, aktuellste und ML-gesteuerte Erlebnis benötigt wird, kann stattdessen ein Server-Aufruf durchgeführt werden.
 
 ## Was sind die Vorteile [!UICONTROL On-Device Decisioning]?
 
-Die Vorteile [!UICONTROL  geräteinternen Entscheidungsfindung ]:
+Die Vorteile [!UICONTROL &#x200B; geräteinternen Entscheidungsfindung &#x200B;]:
 
 * **Schnelle Entscheidungen und Erlebnisse.** Bucketing und Entscheidungsfindung werden im Arbeitsspeicher und im Browser durchgeführt, um das Blockieren von Netzwerkanfragen zu vermeiden.
 * **Verbesserung der Anwendungsleistung.** Führen Sie Experimente durch und stellen Sie Ihren Kunden und Benutzern Personalisierung bereit, ohne die Erlebnisse der Endbenutzer zu beeinträchtigen.
@@ -38,7 +52,7 @@ Die Vorteile [!UICONTROL  geräteinternen Entscheidungsfindung ]:
 
 ## Unterstützte Funktionen
 
-Die [!DNL Adobe Target] JS-SDK bietet Kundinnen und Kunden die Flexibilität, bei Entscheidungen zwischen Leistung und Aktualität der Daten zu wählen. Mit anderen Worten: Wenn die Bereitstellung der relevantesten und ansprechendsten personalisierten Inhalte über maschinelles Lernen für Sie am wichtigsten ist, sollte ein Live-Server-Aufruf erfolgen. Wenn die Leistung jedoch kritischer ist, sollte eine Entscheidung auf dem Gerät und im Arbeitsspeicher getroffen werden. Informationen [!UICONTROL  Funktionsweise von ]On-Device Decisioning“ finden Sie in der Liste der unterstützten Funktionen:
+Die [!DNL Adobe Target] JS-SDK bietet Kundinnen und Kunden die Flexibilität, bei Entscheidungen zwischen Leistung und Aktualität der Daten zu wählen. Mit anderen Worten: Wenn die Bereitstellung der relevantesten und ansprechendsten personalisierten Inhalte über maschinelles Lernen für Sie am wichtigsten ist, sollte ein Live-Server-Aufruf erfolgen. Wenn die Leistung jedoch kritischer ist, sollte eine Entscheidung auf dem Gerät und im Arbeitsspeicher getroffen werden. Informationen [!UICONTROL &#x200B; Funktionsweise von &#x200B;]On-Device Decisioning“ finden Sie in der Liste der unterstützten Funktionen:
 
 * Aktivitätstypen
 * Zielgruppen-Targeting
@@ -97,7 +111,7 @@ Die folgende Liste entspricht den Zahlen im Diagramm:
 
 Nur auf dem Gerät ist die Entscheidungsmethode, die in at.js 2.5.0 oder höher festgelegt werden muss, wenn [!UICONTROL Entscheidungsfindung auf dem Gerät] nur auf Ihren Web-Seiten verwendet werden sollte.
 
-[!UICONTROL On-Device Decisioning] kann Ihre Erlebnisse und Personalisierungsaktivitäten schnell bereitstellen, da die Entscheidungen aus einem zwischengespeicherten Regelartefakt getroffen werden, das alle Ihre Aktivitäten enthält, die für die Entscheidungsfindung [!UICONTROL  Gerät qualifiziert ].
+[!UICONTROL On-Device Decisioning] kann Ihre Erlebnisse und Personalisierungsaktivitäten schnell bereitstellen, da die Entscheidungen aus einem zwischengespeicherten Regelartefakt getroffen werden, das alle Ihre Aktivitäten enthält, die für die Entscheidungsfindung [!UICONTROL &#x200B; Gerät qualifiziert &#x200B;].
 
 Weitere Informationen dazu, welche Aktivitäten für die [!UICONTROL On-Device Decisioning] qualifiziert sind, finden Sie unter [Unterstützte Funktionen in [!UICONTROL On-Device Decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md).
 
@@ -229,14 +243,14 @@ So aktivieren Sie [!UICONTROL On-Device Decisioning]:
 
 >[!NOTE]
 >
->Sie müssen über die Admin- oder Genehmiger[Benutzerrolle verfügen, ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) den Umschalter Geräteinterne Entscheidungsfindung zu aktivieren oder zu deaktivieren.
+>Sie müssen über die Admin- oder Genehmiger[Benutzerrolle verfügen, &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) den Umschalter Geräteinterne Entscheidungsfindung zu aktivieren oder zu deaktivieren.
 
 1. Klicken Sie **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** > **[!UICONTROL Kontodetails]**.
 1. Schieben **[!UICONTROL unter &quot;]**&quot; den Umschalter **[!UICONTROL On-Device Decisioning]** auf die Position „Ein“.
 
    ![[!UICONTROL On-Device Decisioning]-Umschalter](assets/on-device-decisioning-toggle.png)
 
-   Die Option „Alle vorhandenen [!UICONTROL geräteinternen Entscheidungsfindung] qualifizierten Aktivitäten in das Artefakt einbeziehen“ wird angezeigt, wenn Sie [!UICONTROL geräteinterne Entscheidungsfindung“ ].
+   Die Option „Alle vorhandenen [!UICONTROL geräteinternen Entscheidungsfindung] qualifizierten Aktivitäten in das Artefakt einbeziehen“ wird angezeigt, wenn Sie [!UICONTROL geräteinterne Entscheidungsfindung“ &#x200B;].
 1. (Bedingt) Schieben Sie den Umschalter auf die Position „Ein“, wenn alle Ihre Live [!DNL Target]-Aktivitäten, die für die [!UICONTROL Entscheidungsfindung auf dem Gerät] qualifiziert sind, automatisch in das Artefakt aufgenommen werden sollen.
 
    Wenn Sie diesen Umschalter deaktiviert lassen, müssen Sie alle [!UICONTROL Entscheidungsaktivitäten auf dem Gerät] neu erstellen und aktivieren, damit sie in das generierte Regelartefakt aufgenommen werden. Mit anderen Worten: Aktivitäten, die sich vor dem Aktivieren des Umschalters Geräteinterne Entscheidungsfindung im Live-Status befinden, sind nicht im Regelartefakt enthalten.
@@ -245,7 +259,7 @@ Nach der Aktivierung des Umschalters „Geräteinterne Entscheidungsfindung“ b
 
 >[!WARNING]
 >
->Stellen Sie sicher, dass Sie den Umschalter aktivieren, bevor Sie die [!DNL Adobe Target] SDK für die Verwendung [!UICONTROL On-Device Decisioning] initialisieren. Die Regelartefakte müssen zunächst generiert und an die Akamai-CDNs weitergegeben werden[!UICONTROL  damit die ] Entscheidungsfindung auf dem Gerät funktioniert. Es kann fünf bis zehn Minuten dauern, bis das erste Regelartefakt generiert und an das Akamai-CDN weitergegeben wird.
+>Stellen Sie sicher, dass Sie den Umschalter aktivieren, bevor Sie die [!DNL Adobe Target] SDK für die Verwendung [!UICONTROL On-Device Decisioning] initialisieren. Die Regelartefakte müssen zunächst generiert und an die Akamai-CDNs weitergegeben werden[!UICONTROL &#x200B; damit die &#x200B;] Entscheidungsfindung auf dem Gerät funktioniert. Es kann fünf bis zehn Minuten dauern, bis das erste Regelartefakt generiert und an das Akamai-CDN weitergegeben wird.
 
 ## Wie konfiguriere ich at.js 2.5.0+ für die Verwendung [!UICONTROL On-Device Decisioning]?
 
@@ -313,7 +327,7 @@ adobe.target.getOffers({
 
 ### Artefakt-Cache-TTL
 
-Target stellt Ihre Aktivitäten dar, die für [!UICONTROL On-Device Decisioning] qualifiziert sind, als Artefakt, das aus Metadaten, Regeln und Bedingungen besteht. Dieses Artefakt wird im Akamai-CDN zwischengespeichert. Beim ersten Besuch Ihres Benutzers lädt der Browser des Benutzers das Artefakt herunter und speichert es zwischen, das Ihre [!UICONTROL  Entscheidungsaktivitäten ] Gerät darstellt.
+Target stellt Ihre Aktivitäten dar, die für [!UICONTROL On-Device Decisioning] qualifiziert sind, als Artefakt, das aus Metadaten, Regeln und Bedingungen besteht. Dieses Artefakt wird im Akamai-CDN zwischengespeichert. Beim ersten Besuch Ihres Benutzers lädt der Browser des Benutzers das Artefakt herunter und speichert es zwischen, das Ihre [!UICONTROL &#x200B; Entscheidungsaktivitäten &#x200B;] Gerät darstellt.
 
 Bei nachfolgenden Besuchen Ihrer Site prüft der Browser automatisch, ob er eine neuere Version des Artefakts herunterladen muss. Diese Prüfung erhöht die Latenz. Die TTL für den Artefaktcache definiert die Anzahl der Minuten, die der Browser nicht auf ein aktualisiertes Artefakt seit dem letzten erfolgreichen Download überprüfen soll. Je länger der Zeitrahmen ist, desto besser ist die Leistung. Je kürzer der Zeitrahmen, desto besser die Datenfrische, aber auf Kosten der zusätzlichen Latenz.
 
@@ -323,9 +337,9 @@ Nachdem Sie eine Aktivität erstellt haben, die [!UICONTROL Entscheidungsfindung
 
 ![Kennzeichnung On-Device Decisioning auf der Seite Überblick der Aktivität.](assets/on-device-decisioning-eligible-label.png)
 
-Diese Beschriftung bedeutet nicht, dass die Aktivität immer über [!UICONTROL On-Device Decisioning“ bereitgestellt ]. Nur wenn at.js 2.5.0+ für die Verwendung [!UICONTROL On-Device Decisioning] konfiguriert ist, wird diese Aktivität auf dem Gerät ausgeführt. Wenn at.js 2.5.0+ nicht für die Verwendung auf dem Gerät konfiguriert ist, wird diese Aktivität weiterhin über einen Server-Aufruf von at.js bereitgestellt.
+Diese Beschriftung bedeutet nicht, dass die Aktivität immer über [!UICONTROL On-Device Decisioning“ bereitgestellt &#x200B;]. Nur wenn at.js 2.5.0+ für die Verwendung [!UICONTROL On-Device Decisioning] konfiguriert ist, wird diese Aktivität auf dem Gerät ausgeführt. Wenn at.js 2.5.0+ nicht für die Verwendung auf dem Gerät konfiguriert ist, wird diese Aktivität weiterhin über einen Server-Aufruf von at.js bereitgestellt.
 
-Sie können über den Filter [!UICONTROL  On-Device Decisioning nach allen Aktivitäten filtern, ] auf der Seite „Aktivitäten“ geeignet sind.
+Sie können über den Filter [!UICONTROL &#x200B; On-Device Decisioning nach allen Aktivitäten filtern, &#x200B;] auf der Seite „Aktivitäten“ geeignet sind.
 
 ![Auf der Seite „Aktivitäten“ kann ein Filter für On-Device Decisioning verwendet werden.](assets/on-device-decisioning-filter.png)
 

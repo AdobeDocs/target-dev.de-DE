@@ -6,11 +6,16 @@ feature: Implement Mobile
 role: Developer
 exl-id: 3dd2e1d7-c744-4ba8-aaa4-6c2fe64d01fa
 TQID: https://experienceleague.adobe.com/JrbjPpq3ds0sl4rkMnuzF9SYk2PI4r676hHqN-Pvn78
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: d051910f-2bda-47ea-a969-6ade9fcd71f1
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 624
@@ -85,7 +90,7 @@ Target.getSessionId { (id, err) in
 
 ## Testen in den Web-Ansichten
 
-Webvorschau-Links werden auf der Seite [!UICONTROL Aktivitätsdetail] generiert, indem auf den [[!UICONTROL Link für die ] von Adobe geklickt ](/help/dev/implement/mobile/target-mobile-preview.md), um ein Popup zum Kopieren jedes Erlebnisvorschau-Links anzuzeigen, ähnlich dem folgenden:
+Webvorschau-Links werden auf der Seite [!UICONTROL Aktivitätsdetail] generiert, indem auf den [[!UICONTROL Link für die &#x200B;] von Adobe geklickt &#x200B;](/help/dev/implement/mobile/target-mobile-preview.md), um ein Popup zum Kopieren jedes Erlebnisvorschau-Links anzuzeigen, ähnlich dem folgenden:
 
 ```
 ?at_preview_token=mhFIzJSF7JWb-RsnakpBqi_s83Sl64hZp928VWpkwvI&at_preview_index=1_1&at_preview_listed_activities_only=true

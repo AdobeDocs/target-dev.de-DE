@@ -16,9 +16,9 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->Erfahren Sie im Tutorial [Migrieren von Target von at.js 2.x zu Experience Platform Web SDK&quot;, wie Sie Ihre [!DNL Target]-Implementierung nach [!DNL Experience Platform Web SDK] ](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=de).
+>Erfahren Sie im Tutorial [Migrieren von Target von at.js 2.x zu Experience Platform Web SDK&quot;, wie Sie Ihre [!DNL Target]-Implementierung nach [!DNL Experience Platform Web SDK] &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=de).
 >
->Im Tutorial zur Implementierung von Adobe Experience [ mit Web SDK erfahren Sie, wie Sie [!DNL Target] zum ersten Mal ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=de). Spezifische Informationen zu [!DNL Target] finden Sie im Tutorial-Abschnitt [Einrichten von Target mit Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
+>Im Tutorial zur Implementierung von Adobe Experience [&#x200B; mit Web SDK erfahren Sie, wie Sie [!DNL Target] zum ersten Mal &#x200B;](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=de). Spezifische Informationen zu [!DNL Target] finden Sie im Tutorial-Abschnitt [Einrichten von Target mit Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
 
 Die folgenden Funktionen wurden getestet und werden derzeit in [!DNL Target] unterstützt:
 
@@ -62,17 +62,17 @@ Anschließend können Sie optional auch die folgenden Optionen hinzufügen:
 
 ## Verwenden des [!UICONTROL Adobe Target] VEC
 
-Um VEC mit einer [!DNL Web SDK] Implementierung zu verwenden, installieren und aktivieren Sie entweder die [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) oder die VEC Helper-Erweiterung {3](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)Chrome).[
+Um VEC mit einer [!DNL Web SDK] Implementierung zu verwenden, installieren und aktivieren Sie entweder die [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) oder die VEC Helper-Erweiterung &lbrace;3[&#128279;](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension)Chrome).
 
 Weitere Informationen finden Sie unter [Visual Experience Composer Helper](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) im *Adobe Target-Handbuch*.
 
 ## Rendern von personalisierten Inhalten
 
-Weitere Informationen [ Sie unter ](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content) von Personalisierungsinhalten .
+Weitere Informationen [&#x200B; Sie unter &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content) von Personalisierungsinhalten .
 
 ## Zielgruppen in XDM
 
-Beim Definieren von Zielgruppen für die [!DNL Target]-Aktivitäten, die über die [!DNL Web SDK] bereitgestellt werden[ muss ](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html)XDM) definiert und verwendet werden. Nachdem Sie XDM-Schemata, Klassen und Schemafeldgruppen definiert haben, können Sie eine [!DNL Target] Zielgruppenregel erstellen, die durch XDM-Daten für das Targeting definiert wird. In [!DNL Target] werden XDM-Daten in [!UICONTROL Audience Builder] als benutzerdefinierter Parameter angezeigt. Das XDM wird mit Punktnotation serialisiert (z. B. `web.webPageDetails.name`).
+Beim Definieren von Zielgruppen für die [!DNL Target]-Aktivitäten, die über die [!DNL Web SDK] bereitgestellt werden[&#x200B; muss &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html)XDM) definiert und verwendet werden. Nachdem Sie XDM-Schemata, Klassen und Schemafeldgruppen definiert haben, können Sie eine [!DNL Target] Zielgruppenregel erstellen, die durch XDM-Daten für das Targeting definiert wird. In [!DNL Target] werden XDM-Daten in [!UICONTROL Audience Builder] als benutzerdefinierter Parameter angezeigt. Das XDM wird mit Punktnotation serialisiert (z. B. `web.webPageDetails.name`).
 
 Wenn Sie über [!DNL Target] Aktivitäten mit vordefinierten Zielgruppen verfügen, die benutzerdefinierte Parameter oder ein Benutzerprofil verwenden, werden diese nicht ordnungsgemäß über die SDK bereitgestellt. Anstatt benutzerdefinierte Parameter oder das Benutzerprofil zu verwenden, müssen Sie stattdessen XDM verwenden. Es gibt jedoch vordefinierte Zielgruppen-Targeting-Felder, die über die [!DNL Web SDK] unterstützt werden und kein XDM erfordern. Diese Felder sind in der [!DNL Target]-Benutzeroberfläche verfügbar, die kein XDM erfordern:
 

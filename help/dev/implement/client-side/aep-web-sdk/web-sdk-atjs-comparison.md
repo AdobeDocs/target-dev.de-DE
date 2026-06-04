@@ -5,11 +5,22 @@ keywords: target;adobe target;activity.id;experience.id;renderDecisions;Entschei
 feature: AEP Web SDK
 exl-id: 31c9722b-5d92-4653-aa20-4183d166c097
 TQID: https://experienceleague.adobe.com/Ly2ytp87gfQ5mCES-43K5tU4-4fhTjdcdk-OxRRL-II
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 2308
@@ -27,13 +38,13 @@ Dieser Artikel bietet einen Überblick über die Unterschiede zwischen der `at.j
 
 ### Installieren von at.js
 
-[!DNL Adobe] können Kundinnen und Kunden die Bibliothek direkt über die Registerkarte [!DNL Adobe Experience Cloud] ([!UICONTROL ) ]. Die at.js-Bibliothek wird mit Einstellungen angepasst, die der Kunde hat: clientCode, imsOrgId usw.
+[!DNL Adobe] können Kundinnen und Kunden die Bibliothek direkt über die Registerkarte [!DNL Adobe Experience Cloud] ([!UICONTROL ) &#x200B;]. Die at.js-Bibliothek wird mit Einstellungen angepasst, die der Kunde hat: clientCode, imsOrgId usw.
 
 ### Installieren von Web SDK
 
 Die vordefinierte Version ist in einem CDN verfügbar. Sie können direkt auf Ihrer Seite auf die Bibliothek im CDN verweisen oder sie herunterladen und in Ihrer eigenen Infrastruktur hosten. Es ist in minimierten und nicht minimierten Formaten verfügbar. Die nicht minimierte Version ist zum Debuggen hilfreich.
 
-Weitere [ finden Sie unter „Installieren von Web SDK mithilfe ](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/library) JavaScript-Bibliothek“.
+Weitere [&#x200B; finden Sie unter „Installieren von Web SDK mithilfe &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/library) JavaScript-Bibliothek“.
 
 ## Konfigurieren der Bibliotheken
 
@@ -821,7 +832,7 @@ Wenn diese Option eingerichtet ist, sieht das Format der zurückgegebenen Payloa
 }
 ```
 
-Die Payload kann dann über den an [!DNL Analytics] weitergeleitet [!DNL  Data Insertion API].
+Die Payload kann dann über den an [!DNL Analytics] weitergeleitet [!DNL &#x200B; Data Insertion API].
 
 Beispiel 2: Konfiguration in jeder `getOffers`:
 
@@ -875,7 +886,7 @@ Mit diesem Code-Snippet wird die Antwort-Payload wie folgt dargestellt:
 }
 ```
 
-Die [!DNL Analytics]-Payload (`tnta`-Token) sollte mit der Dateneinfüge-[ in den [!DNL Analytics]-Treffer ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+Die [!DNL Analytics]-Payload (`tnta`-Token) sollte mit der Dateneinfüge-[&#x200B; in den [!DNL Analytics]-Treffer &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
 #### [!DNL Analytics] Server-seitige Protokollierung
 
@@ -1258,7 +1269,7 @@ Die at.js-Bibliothek stellt die folgenden Debugging-Funktionen bereit:
 
 >[!NOTE]
 >
->Alle diese Debugging-Funktionen sind in [Adobe Experience Platform Debugger mit erweiterten Funktionen ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
+>Alle diese Debugging-Funktionen sind in [Adobe Experience Platform Debugger mit erweiterten Funktionen &#x200B;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
 
 ### Verwenden von [!DNL Platform Web SDK]
 
@@ -1266,6 +1277,6 @@ Bei Verwendung von [!DNL Platform Web SDK] stehen mehrere Debugging-Funktionen z
 
 * Verwenden von [Assurance](https://experienceleague.adobe.com/de/docs/experience-platform/assurance/home)
 * [Web SDK Debug aktiviert](https://experienceleague.adobe.com/de/docs/experience-platform/assurance/home)
-* Verwenden [ Überwachungs-Hooks für Web SDK](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
+* Verwenden [&#x200B; Überwachungs-Hooks für Web SDK](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Verwenden Sie [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)
 * Zielspur

@@ -4,8 +4,10 @@ description: Erfahren Sie [!DNL Target]  wie Python SDK asynchrone Anforderungen
 feature: APIs/SDKs
 exl-id: 44ab74e5-3c1a-49cf-9fff-fe523b0c2592
 TQID: https://experienceleague.adobe.com/ZWRw2OlSbuEHorY0MXPOaBw3uePIW5dzpsuqho0Jtqk
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 142
@@ -55,4 +57,4 @@ mboxes = [MboxRequest(name="a1-serverside-ab", index=1)]
 return asyncio.run(get_target_delivery_response(mboxes)
 ```
 
-In diesem Beispiel wird davon ausgegangen, dass Sie Python 3.9+ verwenden. Wenn Sie eine ältere Python-Version verwenden, können Sie weiterhin asynchrone Anfragen senden, indem Sie `options.callback` an `get_offers` übergeben. In der Beispiel-Flask-App finden Sie weitere Informationen zur asynchronen Ausführung mithilfe von Callbacks oder async/await ([) ](https://github.com/adobe/target-python-sdk/blob/main/samples/app.py).
+In diesem Beispiel wird davon ausgegangen, dass Sie Python 3.9+ verwenden. Wenn Sie eine ältere Python-Version verwenden, können Sie weiterhin asynchrone Anfragen senden, indem Sie `options.callback` an `get_offers` übergeben. In der Beispiel-Flask-App finden Sie weitere Informationen zur asynchronen Ausführung mithilfe von Callbacks oder async/await ([) &#x200B;](https://github.com/adobe/target-python-sdk/blob/main/samples/app.py).

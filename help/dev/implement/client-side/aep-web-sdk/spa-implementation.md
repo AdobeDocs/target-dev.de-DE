@@ -5,10 +5,16 @@ keywords: Target;Adobe Target;XDM-Ansichten;Ansichten;Einzelseitenanwendungen;SP
 feature: AEP Web SDK
 exl-id: 17e71e47-c7cc-421a-bc9c-53f45f587449
 TQID: https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 1836
@@ -38,17 +44,17 @@ Die Verwendung von [!DNL Adobe Experience Platform Web SDK] für Single-Page-Anw
 
 Der [!UICONTROL Adobe Target] VEC für SPAs nutzt ein Konzept namens [!UICONTROL Views]: eine logische Gruppe visueller Elemente, die zusammen ein SPA-Erlebnis bilden. Ein Single Page Application kann daher basierend auf Benutzerinteraktionen als Übergang durch Ansichten anstelle von URLs betrachtet werden. Eine [!UICONTROL Ansicht] kann in der Regel eine ganze Site oder gruppierte visuelle Elemente innerhalb einer Site darstellen.
 
-Um näher zu erläutern, was Ansichten sind, wird im folgenden Beispiel eine hypothetische Online-E-Commerce-Site verwendet, die in implementiert ist, [!DNL React] Beispiele ([!UICONTROL ) ].
+Um näher zu erläutern, was Ansichten sind, wird im folgenden Beispiel eine hypothetische Online-E-Commerce-Site verwendet, die in implementiert ist, [!DNL React] Beispiele ([!UICONTROL ) &#x200B;].
 
 Nachdem Sie zur Startseite navigiert sind, fördert ein Hero-Bild einen Osterverkauf sowie die neuesten Produkte, die auf der Website verfügbar sind. In diesem Fall kann eine [!UICONTROL Ansicht] für den gesamten Startbildschirm definiert werden. Diese [!UICONTROL Ansicht] könnte einfach „Home“ genannt werden.
 
 ![Beispielbild eines Einzelseiten-Programms in einem Browser-Fenster.](/help/dev/implement/client-side/aep-web-sdk/assets/example-views.png)
 
-Wenn der Kunde sich mehr für die Produkte interessiert, die das Unternehmen verkauft, entscheidet er sich, auf den Link **Produkte** zu klicken. Ähnlich wie bei der -Startseite kann die gesamte Produkt-Site als „Ansicht[!UICONTROL  definiert ]. Diese [!UICONTROL Ansicht] könnte „products-all“ genannt werden.
+Wenn der Kunde sich mehr für die Produkte interessiert, die das Unternehmen verkauft, entscheidet er sich, auf den Link **Produkte** zu klicken. Ähnlich wie bei der -Startseite kann die gesamte Produkt-Site als „Ansicht[!UICONTROL &#x200B; definiert &#x200B;]. Diese [!UICONTROL Ansicht] könnte „products-all“ genannt werden.
 
 ![Beispielbild einer Single Page Application in einem Browser-Fenster, in dem alle Produkte angezeigt werden.](/help/dev/implement/client-side/aep-web-sdk/assets/example-products-all.png)
 
-Da eine [!UICONTROL Ansicht] als eine ganze Site oder eine Gruppe visueller Elemente auf einer Site definiert werden kann. Die vier auf der Produktseite angezeigten Produkte konnten gruppiert und als &quot;[!UICONTROL &quot; betrachtet ]. Diese Ansicht kann als „Produkte“ bezeichnet werden.
+Da eine [!UICONTROL Ansicht] als eine ganze Site oder eine Gruppe visueller Elemente auf einer Site definiert werden kann. Die vier auf der Produktseite angezeigten Produkte konnten gruppiert und als &quot;[!UICONTROL &quot; betrachtet &#x200B;]. Diese Ansicht kann als „Produkte“ bezeichnet werden.
 
 ![Beispielbild eines Einzelseiten-Programms in einem Browser-Fenster mit angezeigten Beispielprodukten.](/help/dev/implement/client-side/aep-web-sdk/assets/example-products.png)
 
@@ -179,7 +185,7 @@ Das Marketing-Team möchte einen A/B-Test durchführen, um zu sehen, ob die Farb
 
 ![Beispielbild einer Single Page Application in einem Browser-Fenster mit A/B-Tests.](/help/dev/implement/client-side/aep-web-sdk/assets/use-case-3.png)
 
-Um Inhalte auf der Website je nach ausgewählter Versandvoreinstellung zu personalisieren, kann für [!UICONTROL  Versandvoreinstellung ]Ansicht“ erstellt werden. Wenn **Normaler Versand** ausgewählt ist, kann [!UICONTROL Ansicht] als „Checkout-Normal“ bezeichnet werden. Wenn **Express-Versand** ausgewählt ist, kann [!UICONTROL Ansicht] als „Checkout-Express“ bezeichnet werden.
+Um Inhalte auf der Website je nach ausgewählter Versandvoreinstellung zu personalisieren, kann für [!UICONTROL &#x200B; Versandvoreinstellung &#x200B;]Ansicht“ erstellt werden. Wenn **Normaler Versand** ausgewählt ist, kann [!UICONTROL Ansicht] als „Checkout-Normal“ bezeichnet werden. Wenn **Express-Versand** ausgewählt ist, kann [!UICONTROL Ansicht] als „Checkout-Express“ bezeichnet werden.
 
 ```jsx
 function onViewChange(viewName) { 
@@ -241,7 +247,7 @@ Durch Klicken auf eine Aktion wird das Element auf der Site hervorgehoben, auf d
 | Informationen | Zeigt die Details der Aktion an. |
 | Bearbeiten | Ermöglicht die direkte Bearbeitung der Eigenschaften dieser Aktion. |
 | Klonen | Klonen Sie die Aktion zu einer oder mehreren [!UICONTROL Ansichten], die im Bedienfeld [!UICONTROL Änderungen] vorhanden sind, oder zu einer oder mehreren [!UICONTROL Ansichten], die Sie im VEC durchsucht und aufgerufen haben. Die Aktion muss nicht unbedingt im Bedienfeld [!UICONTROL Änderungen] vorhanden sein.<br/><br/>**Hinweis:** Nachdem ein Klonvorgang durchgeführt wurde, müssen Sie über [!UICONTROL Durchsuchen] zum [!UICONTROL Anzeigen] im VEC navigieren, um zu sehen, ob die geklonte Aktion ein gültiger Vorgang war. Wenn die Aktion nicht auf die [!UICONTROL Ansicht] angewendet werden kann, wird ein Fehler angezeigt. |
-| Verschieben | Verschiebt die Aktion in ein [!UICONTROL Seitenladeereignis] oder eine andere [!UICONTROL Ansicht] die bereits im [!UICONTROL Änderungen] vorhanden ist.<br/><br/>**Seitenladeereignis** Alle Aktionen, die dem Seitenladeereignis entsprechen, werden beim ersten Laden der Seite Ihrer Web-Anwendung angewendet. <br/><br/>**Hinweis:** Nachdem ein Verschiebevorgang durchgeführt wurde, müssen Sie über „Durchsuchen] zur [!UICONTROL Ansicht] [!UICONTROL  im VEC navigieren, um herauszufinden, ob der Verschiebevorgang gültig war. Wenn die Aktion nicht auf die [!UICONTROL Ansicht“ angewendet werden kann] wird ein Fehler angezeigt. |
+| Verschieben | Verschiebt die Aktion in ein [!UICONTROL Seitenladeereignis] oder eine andere [!UICONTROL Ansicht] die bereits im [!UICONTROL Änderungen] vorhanden ist.<br/><br/>**Seitenladeereignis** Alle Aktionen, die dem Seitenladeereignis entsprechen, werden beim ersten Laden der Seite Ihrer Web-Anwendung angewendet. <br/><br/>**Hinweis:** Nachdem ein Verschiebevorgang durchgeführt wurde, müssen Sie über „Durchsuchen zur [!UICONTROL Ansicht]  im VEC navigieren, um herauszufinden, ob der Verschiebevorgang gültig war. Wenn die Aktion nicht auf die [!UICONTROL Ansicht“ angewendet werden kann] wird ein Fehler angezeigt. |
 | Löschen | Löscht die Aktion. |
 
 ## Beispiele für die Verwendung von VEC für SPAs
@@ -289,6 +295,6 @@ Um diese Aktualisierungen in VEC vorzunehmen, sind die folgenden Schritte erford
 
 >[!NOTE]
 >
->Der „Checkout-Express“ [!UICONTROL Ansicht] wird erst im Bedienfeld [!UICONTROL Änderungen] angezeigt, wenn das Optionsfeld **Express-Versand** ausgewählt wird. Dies liegt daran, dass die `sendEvent()`-Funktion ausgeführt wird, wenn die Optionsschaltfläche **Express-Versand** ausgewählt ist. Daher ist dem VEC der „Checkout-Express“ ([!UICONTROL ) erst ], wenn die Optionsschaltfläche ausgewählt ist.
+>Der „Checkout-Express“ [!UICONTROL Ansicht] wird erst im Bedienfeld [!UICONTROL Änderungen] angezeigt, wenn das Optionsfeld **Express-Versand** ausgewählt wird. Dies liegt daran, dass die `sendEvent()`-Funktion ausgeführt wird, wenn die Optionsschaltfläche **Express-Versand** ausgewählt ist. Daher ist dem VEC der „Checkout-Express“ ([!UICONTROL ) erst &#x200B;], wenn die Optionsschaltfläche ausgewählt ist.
 
 ![Visual Experience Composer mit Auswahl der Versandvoreinstellungen.](/help/dev/implement/client-side/aep-web-sdk/assets/vec-delivery-preference.png)

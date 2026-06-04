@@ -4,9 +4,12 @@ description: Erfahren Sie, wie Sie mit getAttributes() Experimente und personali
 feature: APIs/SDKs
 exl-id: e493e1b9-7180-4a7c-b98d-be84cc3a57c3
 TQID: https://experienceleague.adobe.com/ZZy9nUXiyR-qwBmOgv-TPS6ZuilvAuW850gH1Doqquo
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 169
@@ -32,7 +35,7 @@ Attributes TargetClient.getAttributes(TargetDeliveryRequest targetRequest, Strin
 
 | Name | Typ | Erforderlich | Standardeinstellung | Beschreibung |
 | --- | --- | --- | --- | --- |
-| targetRequest | targetDeliveryRequest | Ja | Keine | &#x200B; Dieselbe Zielgruppenanfrage wie für „Angebote [&quot; ](get-offers.md) |
+| targetRequest | targetDeliveryRequest | Ja | Keine | &#x200B; Dieselbe Zielgruppenanfrage wie für „Angebote [&quot; &#x200B;](get-offers.md) |
 | mboxNames | var-args-Array | Nein | Keine | Ein var-args-Array von mbox-Namen |
 
 

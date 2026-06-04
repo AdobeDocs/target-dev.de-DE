@@ -5,11 +5,21 @@ title: Wo erhalte ich Informationen  [!DNL Target]  Server-seitigen Bereitstellu
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
 TQID: https://experienceleague.adobe.com/x5WKb9Eenz2bw-idOnxlpWdtiivTx05n38sNXEt3DNc
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: a6cc21b9-1a36-4fa6-9c61-4acd04d9c88cid: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: d095671a-1355-40aa-8b5f-06c33c68080bid: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: a6cc21b9-1a36-4fa6-9c61-4acd04d9c88c
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 618
@@ -72,7 +82,7 @@ Mit den Server-seitigen SDKs von [!DNL Adobe Target] können Sie:
 * Stellen Sie **(ML)-gesteuerte personalisierte Erlebnisse für** bereit, unabhängig davon, über welchen Kanal oder welches Gerät der Benutzer mit Ihrem Unternehmen interagiert hat.
 * **Nahtlose Integration mit Adobe Experience Cloud**-Produkten wie **Adobe Analytics**, **Adobe Audience Manager** und dem **Experience Cloud ID-** von Serverseite aus.
 
-Auf der Seite [Erste Schritte](sdk-guides/getting-started/getting-started.md) erfahren Sie, wie Sie einen Anwendungsfall mit einfachem Feature-Flag über [On-Device Decisioning“ ](sdk-guides/on-device-decisioning/overview.md).
+Auf der Seite [Erste Schritte](sdk-guides/getting-started/getting-started.md) erfahren Sie, wie Sie einen Anwendungsfall mit einfachem Feature-Flag über [On-Device Decisioning“ &#x200B;](sdk-guides/on-device-decisioning/overview.md).
 
 Schauen Sie sich unsere [Sample Apps](sdk-guides/sample-apps/sample-apps.md) an, um Spaß zu haben und herumzuspielen!
 

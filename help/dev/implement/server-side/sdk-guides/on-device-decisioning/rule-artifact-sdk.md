@@ -4,10 +4,15 @@ description: Erfahren Sie, wie Sie beim Initialisieren der  [!DNL Adobe Target] 
 feature: APIs/SDKs
 exl-id: be41a723-616f-4aa3-9a38-8143438bd18a
 TQID: https://experienceleague.adobe.com/o4oNaCtd3PS1cDndSJHkI10pDke1DTaEnBn8u9pIQk8
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 7a5aae2510a014c6efaeee63080cde3e7746f91c
 workflow-type: tm+mt
 source-wordcount: 352
@@ -151,7 +156,7 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->Im obigen Codebeispiel enthält das `TargetClient`-Objekt einen Verweis auf das speicherinterne Regelartefakt. Wenn Sie dieses Objekt zum Aufrufen von SDK-Standardmethoden verwenden, verwendet es das speicherinterne Regelartefakt für die Entscheidungsfindung. Wenn Ihre Anwendung so strukturiert ist, dass Sie die SDK-Methoden in anderen Dateien als derjenigen aufrufen müssen, die Client-Anfragen initialisiert und abhört, und wenn diese Dateien keinen Zugriff auf das TargetClient-Objekt haben, können Sie die JSON-Payload herunterladen und in einer lokalen JSON-Datei speichern, die für andere Dateien verwendet werden soll, die die SDK initialisieren müssen. Dies wird im nächsten Abschnitt bezüglich des [Herunterladens des Regelartefakts mithilfe einer JSON-Payload) ](rule-artifact-json.md).
+>Im obigen Codebeispiel enthält das `TargetClient`-Objekt einen Verweis auf das speicherinterne Regelartefakt. Wenn Sie dieses Objekt zum Aufrufen von SDK-Standardmethoden verwenden, verwendet es das speicherinterne Regelartefakt für die Entscheidungsfindung. Wenn Ihre Anwendung so strukturiert ist, dass Sie die SDK-Methoden in anderen Dateien als derjenigen aufrufen müssen, die Client-Anfragen initialisiert und abhört, und wenn diese Dateien keinen Zugriff auf das TargetClient-Objekt haben, können Sie die JSON-Payload herunterladen und in einer lokalen JSON-Datei speichern, die für andere Dateien verwendet werden soll, die die SDK initialisieren müssen. Dies wird im nächsten Abschnitt bezüglich des [Herunterladens des Regelartefakts mithilfe einer JSON-Payload) &#x200B;](rule-artifact-json.md).
 
 Im Folgenden finden Sie ein Beispiel, das eine Web-Anwendung nach der Initialisierung der [!DNL Adobe Target] SDK startet.
 

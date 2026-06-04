@@ -4,9 +4,13 @@ description: Benutzeridentifizierung und Bucketing
 exl-id: 4fcf235b-6a58-442c-ae13-9d05ec1033fc
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/V9hK5oj7F-SV2wou2sz-Ve3RVJ1EMsFJDmcNF4ctV5o
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: f7c7de77-382f-4f48-8b36-61a170f06d3d
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 1173
@@ -315,11 +319,11 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-Das obige Beispiel zeigt, wie ein `customerId` mit einem `authenticatedState` gesendet wird. Beim Senden eines `customerId` sind die `integrationCode`, `id` und `authenticatedState` sowie die `marketingCloudVisitorId` erforderlich. Der `integrationCode` ist der Alias der [Kundenattributdatei), ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=de) Sie über CRS bereitgestellt haben.
+Das obige Beispiel zeigt, wie ein `customerId` mit einem `authenticatedState` gesendet wird. Beim Senden eines `customerId` sind die `integrationCode`, `id` und `authenticatedState` sowie die `marketingCloudVisitorId` erforderlich. Der `integrationCode` ist der Alias der [Kundenattributdatei), &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=de) Sie über CRS bereitgestellt haben.
 
 ## Zusammengeführtes Profil
 
-Sie können `tntId`, `thirdPartyID` und `marketingCloudVisitorId` in derselben Anfrage kombinieren. In diesem Szenario verwaltet [!DNL Adobe Target] die Zuordnung aller dieser IDs und heftet sie an einen Besucher an. Erfahren Sie, wie Profile mithilfe [ verschiedenen Kennungen in Echtzeit zusammengeführt ](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html) synchronisiert werden.
+Sie können `tntId`, `thirdPartyID` und `marketingCloudVisitorId` in derselben Anfrage kombinieren. In diesem Szenario verwaltet [!DNL Adobe Target] die Zuordnung aller dieser IDs und heftet sie an einen Besucher an. Erfahren Sie, wie Profile mithilfe [&#x200B; verschiedenen Kennungen in Echtzeit zusammengeführt &#x200B;](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html) synchronisiert werden.
 
 >[!BEGINTABS]
 
