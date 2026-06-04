@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 6fac79420aef0a73c109b2c19f363266c1f8027a
 workflow-type: tm+mt
 source-wordcount: 361
 ht-degree: 4%
@@ -46,15 +46,15 @@ Geben Sie die Profilparameter im `profile.paramName=value` Format an.
 
 Um das Profil für eine `pcId` zu aktualisieren, verwenden Sie:
 
-``````
+```
 https://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mboxPC=1368007744041-575948.01_00&profile.attr=0&profile.attr2=1...
-``````
+```
 
 Um das Profil für eine `mbox3rdPartyId` zu aktualisieren, verwenden Sie:
 
-``````
+```
 shell http://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPartyId=123456&profile.attr=0&profile.attr2=1...
-``````
+```
 
 Die [!UICONTROL Single Profile Update API] ist nur für Aktualisierungen vorgesehen. Wenn nichts gefunden wird, wird kein Profil erstellt.
 
@@ -65,7 +65,7 @@ Die [!UICONTROL Single Profile Update API] ist nur für Aktualisierungen vorgese
 * Es müssen nicht alle Parameterwerte für alle pcIds und mbox3rdPartyIds vorhanden sein.
 * Bei Parametern und Werten wird zwischen Groß- und Kleinschreibung unterschieden.
 * Sowohl GET als auch POST werden unterstützt.
-* Die aktuellen Größenbeschränkungen für dieses Limit betragen 8 KB für GET und 60 KB für POST.
+* Die aktuellen Größenbeschränkungen für Limit sind 8 KB für GET und 60 KB für POST.
 
 ## Antwort
 
