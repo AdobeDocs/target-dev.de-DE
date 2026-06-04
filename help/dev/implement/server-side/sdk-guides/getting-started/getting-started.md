@@ -49,7 +49,7 @@ Durch die Aktivierung der geräteinternen Entscheidungsfindung wird sichergestel
 
 >[!NOTE]
 >
->Sie müssen über die **[!UICONTROL Admin]**- oder **[!UICONTROL Genehmiger]**&#x200B;[Benutzerrolle](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) verfügen, um den Umschalter **[!UICONTROL On-Device Decisioning]** zu aktivieren oder zu deaktivieren.
+>Sie müssen über die **[!UICONTROL Admin]**- oder **[!UICONTROL Genehmiger]**&#x200B;[Benutzerrolle](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=de) verfügen, um den Umschalter **[!UICONTROL On-Device Decisioning]** zu aktivieren oder zu deaktivieren.
 
 Nach der Aktivierung **[!UICONTROL Umschalters]** On-Device Decisioning“ beginnt [!DNL Adobe Target] mit der Erstellung [Regelartefakte](../on-device-decisioning/rule-artifact-overview.md) für Ihren Client.
 
@@ -400,6 +400,6 @@ target_client.send_notifications({
 
    >[!NOTE]
    >
-   >Sie müssen über die **[!UICONTROL Genehmiger]** oder **[!UICONTROL Publisher]** [Benutzerrolle](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) verfügen, um diesen Schritt auszuführen.
+   >Sie müssen über die **[!UICONTROL Genehmiger]** oder **[!UICONTROL Publisher]** [Benutzerrolle](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=de) verfügen, um diesen Schritt auszuführen.
 
    ![ALT-Bild](assets/asset-activate.png)

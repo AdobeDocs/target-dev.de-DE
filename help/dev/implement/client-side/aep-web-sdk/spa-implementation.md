@@ -72,7 +72,7 @@ Das Konzept [!UICONTROL Ansichten] kann weit über dieses Szenario hinaus erweit
 
 [!UICONTROL XDM Views] können in [!DNL Target] genutzt werden, um Marketing-Experten die Durchführung von A/B- und XT-Tests an SPAs über den [!UICONTROL Visual Experience Composer] zu ermöglichen. Dies erfordert die Durchführung der folgenden Schritte, um eine einmalige Entwicklereinrichtung abzuschließen:
 
-1. [Adobe Experience Platform Web SDK installieren](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview).
+1. [Adobe Experience Platform Web SDK installieren](https://experienceleague.adobe.com/de/docs/experience-platform/web-sdk/install/overview).
 2. Bestimmen Sie alle [!UICONTROL XDM-]) in Ihrem Einzelseitenprogramm, die Sie personalisieren möchten.
 3. Implementieren Sie nach der Definition der [!UICONTROL XDM-]) zur Bereitstellung von A/B- oder XT-VEC-Aktivitäten die `sendEvent()`-Funktion mit `renderDecisions` auf `true` und der entsprechenden [!UICONTROL XDM-Ansicht] in Ihrer Single Page Application. Die [!UICONTROL XDM-Ansicht] muss in `xdm.web.webPageDetails.viewName` übergeben werden. In diesem Schritt können Marketing-Fachleute den [!UICONTROL Visual Experience Composer] zum Starten von A/B- und XT-Tests für diese XDM-Dateien nutzen.
 
@@ -232,7 +232,7 @@ Wenn Sie mit der Definition Ihrer [!UICONTROL XDM-Ansichten] und der Implementie
 
 >[!NOTE]
 >
->Um den VEC für Ihre SPA zu verwenden, müssen Sie entweder die [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) oder die [Chrome VEC Helper-Erweiterung](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension) installieren und aktivieren.
+>Um den VEC für Ihre SPA zu verwenden, müssen Sie entweder die [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) oder die [Chrome VEC Helper-Erweiterung](https://experienceleague.adobe.com/de/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension) installieren und aktivieren.
 
 ### Bedienfeld [!UICONTROL Änderungen]
 
