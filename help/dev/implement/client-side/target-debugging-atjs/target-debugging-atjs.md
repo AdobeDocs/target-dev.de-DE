@@ -36,13 +36,13 @@ Die folgenden Videos führen Sie Schritt für Schritt durch den Debugging-Prozes
 
 ### Hinzufügen der Adobe Experience Cloud Debugger-Erweiterung ![Übersichts-Badge](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/23114/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33823/?captions=ger&quality=12)
 
 ### Grundlegende Fehlerbehebung in Adobe Target mithilfe von Adobe Experience Cloud Debugger ![Übersichts-Badge](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/23115/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33824/?captions=ger&quality=12)
 
 ### Mbox Trace ![Übersichts-Badge](../../assets/overview.png)
 
->[!VIDEO](https://video.tv.adobe.com/v/23113/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33896/?captions=ger&quality=12)
 
