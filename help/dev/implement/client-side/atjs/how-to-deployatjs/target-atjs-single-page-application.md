@@ -22,7 +22,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 2851
 ht-degree: 53%
@@ -214,7 +214,7 @@ Die folgenden Diagramme helfen Ihnen dabei, den Workflow von at.js 2.x mit Ansic
 
 | Schritt | Details |
 | --- | --- |
-| 1 | Ein Aufruf gibt die Experience Cloud-ID zurück, wenn der Benutzer authentifiziert ist; ein anderer Aufruf synchronisiert die Kunden-ID. |
+| 1 | Ein Aufruf gibt die Experience Cloud-ID zurück, wenn der Benutzer authentifiziert ist. Ein anderer Aufruf synchronisiert die Kunden-ID. |
 | 2 | Die at.js-Bibliothek wird synchron geladen und blendet den Dokumentkörper aus.<br />at.js kann auch asynchron geladen werden, wobei die Option Snippet zum Vorab-Ausblenden auf der Seite implementiert wird. |
 | 3 | Es wird eine Seitenlade-Anfrage durchgeführt, in der alle konfigurierten Parameter (MCID, SDID und Kunden-ID) enthalten sind. |
 | 4 | Profilskripte werden ausgeführt und anschließend in den Profilspeicher eingespeist. Der Store fordert qualifizierte Zielgruppen aus der Zielgruppenbibliothek an (z. B. von Adobe Analytics freigegebene Zielgruppen, Zielgruppenverwaltung usw.). <br />Kundenattribute werden in einem Batch-Prozess an den Profilspeicher gesendet. |
@@ -342,3 +342,4 @@ Weitere [&#x200B; finden Sie unter „Implementieren von at.js 2.x von Adobe Tar
 >[!VIDEO](https://video.tv.adobe.com/v/34777/?captions=ger&quality=12)
 
 Weitere [&#x200B; finden Sie unter „Verwenden des Visual Experience Composer für Einzelseiten-Apps (SPA VEC) &#x200B;](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=de) Adobe Target&quot;.
+

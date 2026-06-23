@@ -20,7 +20,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 1830
 ht-degree: 67%
@@ -37,7 +37,7 @@ Bei at.js-Version 2.x (bis Version 2.10.0, aber ohne Version) werden *nur Erstan
 
 at.js erzeugt eine Sitzungs-ID und speichert sie im Cookie. Die erste Antwort enthält alle Aktivitätsinformationen sowie die `TNT` oder `PC ID`, die von den [!DNL Target]-Servern generiert wurde. at.js fügt dann die `TNT/PC ID` zum Cookie hinzu.
 
-Das `AMCV_###@AdobeOrg` Erstanbieter-Cookie wird immer vom Experience Cloud ID-Service festgelegt, obwohl die `ECID` in [!DNL Target] Anfragen übergeben wird.
+Das `AMCV_###@AdobeOrg` Erstanbieter-Cookie wird immer vom Experience Cloud ID-Service festgelegt, auch wenn die `ECID` in [!DNL Target] Anfragen übergeben wird.
 
 >[!NOTE]
 >
@@ -172,4 +172,3 @@ Von Apple (übersetzter Auszug):
 |--- |--- |
 | Abmeldeunterstützung | Wegen der durch das WebKit von Apple bewirkten Änderungen am Tracking ist die Unterstützung für Ausschlüsse hinfällig.<P>[!DNL Target] Opt-out verwendet ein Cookie in der `clientcode.tt.omtrdc.net` Domain. Weitere Informationen finden Sie unter [Datenschutz](/help/dev/before-implement/privacy/privacy.md).<P>[!DNL Target] unterstützt zwei Opt-outs:<ul><li>Einen pro Kunde (der Kunde verwaltet den Ausschluss-Link).</li><li>Eine über Adobe, die den Benutzer von allen [!DNL Target]-Funktionen für alle Kunden ausschließt.</li></ul>Beide Methoden verwenden den Drittanbieter-Cookie. |
 | [!DNL Target] Aktivitäten | Kunden können die [Lebensdauer des Profils](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html?lang=de) für ihre [!DNL Target] Konten auswählen - bis zu 90 Tage. Problematisch ist Folgendes: Wenn die Profillebensdauer des Kontos länger als 30 Tage ist und das Erstanbieter-Cookie gelöscht wird, da die Domain des Kunden als Tracking-Benutzer über mehrere Sites hinweg gekennzeichnet wurde, das Verhalten für Safari-Besucher in [!DNL Target] in den folgenden Bereichen beeinflusst wird:<P>**[!DNL Target]Berichte**: Wenn ein Safari-Benutzer eine Aktivität beginnt, nach 30 Tagen zurückkehrt und dann konvertiert, zählt dieser Benutzer als zwei Besucher und eine Konversion.<P>Dieses Verhalten ist dasselbe für Aktivitäten, die [!DNL Analytics] als Berichtsquelle (A4T) verwenden.<P>**Profil- und Aktivitätsmitgliedschaft**:<ul><li>Profildaten werden gelöscht, wenn das Erstanbieter-Cookie abläuft.</li><li>Die Aktivitätsmitgliedschaft wird gelöscht, wenn das Erstanbieter-Cookie abläuft.</li><li> [!DNL Target] funktioniert in Safari nicht für Konten, die eine Drittanbieter-Cookie-Implementierung oder eine Erstanbieter- und Drittanbieter-Cookie-Implementierung verwenden. Beachten Sie, dass es sich dabei nicht um ein neues Verhalten handelt. Safari erlaubt schon seit einer Weile keine Drittanbieter-Cookies.</li></ul><P>**Vorschläge**: Wenn Sie befürchten, dass die Domain des Kunden möglicherweise als Domain markiert wird, die Besucher sitzungsübergreifend verfolgt, ist es am sichersten, die Profillebensdauer in [!DNL Target] auf 30 Tage oder weniger festzulegen. So wird sichergestellt, dass Benutzer in Safari und allen anderen Browsern auf ähnliche Weise verfolgt werden. |
-

@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 446
 ht-degree: 61%
@@ -51,3 +51,4 @@ Folgende Vorteile erzielen Sie nur, wenn Sie Tags in [!DNL Adobe Experience Plat
   >Verwenden Sie die Aktion Beacon senden in der [!DNL Adobe Analytics]-Erweiterung, damit der [!DNL Analytics]-Aufruf auf den [!DNL Target]-Aufruf wartet. Wenn Sie `s.t()` oder `s.tl()` direkt mit benutzerdefiniertem Code aufrufen, warten [!DNL Analytics]-Aufrufe nicht, bis [!DNL Target]-Aufrufe abgeschlossen sind.
 
 * **Verhindert fehlerhafte Verarbeitung von Umleitungsangeboten:** Wenn Sie [!DNL Target] und [!DNL Analytics] auf einer Seite haben und ein Umleitungsangebot von Target ausgeführt wird, kann eine Situation entstehen, in der der [!DNL Analytics]-Tracker fälschlicherweise eine Anfrage auslöst (da der Benutzer an eine andere URL umgeleitet wird). Wenn Sie [!DNL Target] und [!DNL Analytics] über Tags in [!DNL Adobe Experience Platform] implementieren, tritt dieses Problem nicht auf. Mithilfe von Tags in [!DNL Adobe Experience Platform] weist [!DNL Target] [!DNL Analytics] an, die [!DNL Analytics]-Beacon-Anforderung abzubrechen.
+

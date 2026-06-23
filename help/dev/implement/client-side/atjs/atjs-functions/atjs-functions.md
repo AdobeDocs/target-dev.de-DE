@@ -16,7 +16,7 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 557
 ht-degree: 38%
@@ -43,3 +43,4 @@ Liste der Funktionen, die mit der [!DNL Adobe Target] at.js-JavaScript-Bibliothe
 | [[!UICONTROL registerExtension(options)]](/help/dev/implement/client-side/atjs/atjs-functions/registerextension-atjs-1x.md)<P>(at.js 1.x) | Stellt eine Standardart zur Registrierung bestimmter Erweiterungen dar.<P>**Hinweis:** Diese Funktion ist nur für at.js-Versionen 1.*x* verfügbar. Diese Funktion wird seit der Veröffentlichung von at.js 2.x nicht mehr unterstützt. Diese Funktion gibt Standardinhalte zurück, wenn sie mit at.js 2.x verwendet wird. |
 | [[!UICONTROL Benutzerdefinierte at.js-Ereignisse]](/help/dev/implement/client-side/atjs/atjs-functions/atjs-custom-events.md) | Benutzerdefinierte at.js-Ereignisse teilen Ihnen mit, wenn eine Mbox-Anforderung oder ein Angebot erfolgreich oder fehlgeschlagen ist. |
 | [[!UICONTROL adobe.target.sendNotifications(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-sendnotifications-atjs-21.md)<P>(at.js 2.1.0) | Diese Funktion sendet eine Benachrichtigung an [!DNL Target] Edge, wenn ein Erlebnis ohne Verwendung von `[!UICONTROL adobe.target.applyOffer()]` oder `[!UICONTROL adobe.target.applyOffers()]` gerendert wird.<P>**Hinweis**: Diese Funktion wurde in at.js 2.1.0 eingeführt und wird für alle Versionen über 2.1.0 verfügbar sein. |
+
