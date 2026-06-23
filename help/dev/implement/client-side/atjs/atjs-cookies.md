@@ -5,11 +5,21 @@ title: at.js-Cookies
 feature: at.js
 exl-id: 154a844a-6855-4af7-8aed-0719b4c389f5
 TQID: https://experienceleague.adobe.com/BRauW1ppIMya4aX-vTJDGZFCv1fijYgDuxbHjXCI6D8
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d3cdead0-685a-4489-9250-4bb709942f66id: eb30f47f-d87a-400f-8f78-63ce7979ff56id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 1830
@@ -48,7 +58,7 @@ Bei at.js-Versionen 1.*x* hängt das Cookie-Verhalten davon ab, ob es sich um ei
 
 ### Verwenden von Erstanbieter-Cookies und Drittanbieter-Cookies
 
-Durch Ihre Site-Einrichtung wird bestimmt, welche Cookies Sie verwenden. Es ist hilfreich zu verstehen, wie [!DNL Target] funktioniert, wenn Sie versuchen, Erstanbieter- und Drittanbieter-Cookies zu verstehen. Weitere Informationen finden [ unter  [!DNL Adobe Target] Funktionsweise](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html).
+Durch Ihre Site-Einrichtung wird bestimmt, welche Cookies Sie verwenden. Es ist hilfreich zu verstehen, wie [!DNL Target] funktioniert, wenn Sie versuchen, Erstanbieter- und Drittanbieter-Cookies zu verstehen. Weitere Informationen finden [&#x200B; unter  [!DNL Adobe Target] Funktionsweise](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html).
 
 Es gibt drei Haupt-Nutzungsszenarien für Cookies:
 
@@ -119,7 +129,7 @@ Das Cookie verfügt über mehrere Standardeinstellungen. Sie können diese Einst
 | Cookie-Name | mbox. |
 | Cookie-Domäne | Die obersten und die darunter liegenden Ebenen der Domänen, von denen der Inhalt geliefert wird. Da die Belieferung von der Domain Ihres Unternehmens stattfindet, handelt es sich um ein Erstanbieter-Cookie. Beispiel: `mycompany.com`. |
 | Serverdomäne | `clientcode.tt.omtrdc.net`, unter Verwendung des Kundencodes für Ihr Konto. |
-| Cookie-Dauer | Das Cookie verbleibt zwei Jahre nach der letzten Anmeldung im Browser des Besuchers.<P>Die `deviceIdLifetime` Einstellung kann in at.js[Version 2.3.1 oder höher überschrieben ](../atjs/target-atjs-versions.md). Weitere Informationen finden Sie unter [targetGlobalSettings()](../../../implement/client-side/atjs/atjs-functions/targetglobalsettings.md). |
+| Cookie-Dauer | Das Cookie verbleibt zwei Jahre nach der letzten Anmeldung im Browser des Besuchers.<P>Die `deviceIdLifetime` Einstellung kann in at.js[Version 2.3.1 oder höher überschrieben &#x200B;](../atjs/target-atjs-versions.md). Weitere Informationen finden Sie unter [targetGlobalSettings()](../../../implement/client-side/atjs/atjs-functions/targetglobalsettings.md). |
 | P3P-Richtlinie | Das Cookie wird mit einer P3P-Richtlinie veröffentlicht, wie sie von den Standardeinstellungen in den meisten Browsern gefordert wird. Durch eine P3P-Richtlinie wird einem Browser angezeigt, wer das Cookie bereitstellt und wie die Informationen verwendet werden. |
 
 Das Cookie enthält verschiedene Werte, mit denen verwaltet werden kann, wie die Besucher die Kampagnen erleben:
