@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 203
 ht-degree: 46%
@@ -37,5 +37,6 @@ Diese Domänen sind neben vielen anderen Teil der [öffentlichen Suffix-Liste](h
 Die at.js-JavaScript-Bibliothek verwendet Cookies, um Benutzerinnen und Benutzer zu verfolgen und sicherzustellen, dass [!DNL [!DNL Target]] immer ein konsistentes Erlebnis bereitstellt. Wenn die [!DNL Target] JavaScript-Bibliothek keine Cookies speichern kann, werden Target-Anforderungen deaktiviert.
 
 **Lösung:** Wenn Sie Cloud-basierte Instanzen mit in der öffentlichen Suffix-Liste enthaltenen Domänen verwenden möchten, hat es sich bewährt, die `cookieDomain`-Einstellung anzupassen. Weitere Informationen finden Sie unter [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
+
 
 

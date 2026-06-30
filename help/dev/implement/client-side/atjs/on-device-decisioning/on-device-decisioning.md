@@ -24,7 +24,7 @@ topic_v2:
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 3835
 ht-degree: 4%
@@ -357,4 +357,5 @@ Sie können über den Filter [!UICONTROL &#x200B; On-Device Decisioning nach all
 1. Erstellen und aktivieren Sie einen [Aktivitätstyp, der von [!UICONTROL On-Device Decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md) unterstützt wird, und stellen Sie sicher, dass er [!UICONTROL On-Device Decisioning] geeignet ist.
 1. Legen Sie die **[!UICONTROL Entscheidungsmethode]** über die Benutzeroberfläche „at.js **[!UICONTROL Einstellungen entweder auf &quot;]**„oder **[!UICONTROL „Nur auf dem Gerät“]** fest.
 1. Laden Sie at.js 2.5.0+ herunter und stellen Sie es auf Ihren Seiten bereit.
+
 
