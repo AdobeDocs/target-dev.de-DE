@@ -5,17 +5,12 @@ title: Wie verwende ich die Funktion adobe.target.triggerView()?
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
 TQID: https://experienceleague.adobe.com/pBC1GRKG0mxeaZ1hfaByKv2tu-XScrSJfm7lUw-3yKw
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 446
 ht-degree: 19%
@@ -83,7 +78,7 @@ adobe.target.getOffers({
 
 ## Beispiel: Optimale Kompatibilität für `triggerView()` mit der Erweiterung [!UICONTROL Adobe Visual Editing Helper]
 
-Beachten Sie bei der Verwendung der [Adobe Visual Editing Helper-Erweiterung Folgendes](https://experienceleague.adobe.com/de/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}:
+Beachten Sie bei der Verwendung der [Adobe Visual Editing Helper-Erweiterung Folgendes](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}:
 
 Aufgrund der neuen V3-Manifestrichtlinien von [!DNL Googl]e für [!DNL Chrome]-Erweiterungen muss die Erweiterung [!UICONTROL Visual Editing Helper] auf das `DOMContentLoaded`-Ereignis warten, bevor die [!DNL Target]-Bibliotheken in VEC geladen werden. Diese Verzögerung kann dazu führen, dass Web-Seiten den `triggerView()`-Aufruf auslösen, bevor die Authoring-Bibliotheken bereit sind, was dazu führen kann, dass die Ansicht beim Laden nicht ausgefüllt wird.
 
@@ -104,6 +99,7 @@ if (document.readyState === "complete") {
     window.addEventListener("load", triggerViewIfLoaded);
 }
 ```
+
 
 
 
