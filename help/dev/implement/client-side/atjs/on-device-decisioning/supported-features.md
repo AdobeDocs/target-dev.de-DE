@@ -5,11 +5,20 @@ title: Welche Funktionen bei der geräteinternen Entscheidungsfindung unterstüt
 feature: at.js
 exl-id: bdd65658-6c4a-41ae-a222-59c00a11bdac
 TQID: https://experienceleague.adobe.com/ummFURb6WnrNCbiQNDtzWmtZq05am9CMn9UXL0SPaXo
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
 source-wordcount: 747
@@ -23,7 +32,7 @@ Die [!DNL Adobe Target] JS-SDK bietet Kundinnen und Kunden die Flexibilität, be
 
 ## Unterstützte Aktivitätstypen
 
-Die folgende Tabelle gibt an, welche [Aktivitätstypen](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html), die vom [formularbasierten Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) oder [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC) erstellt wurden, für [!UICONTROL  Entscheidungsfindung auf dem Gerät unterstützt oder nicht unterstützt werden].
+Die folgende Tabelle gibt an, welche [Aktivitätstypen](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html), die vom [formularbasierten Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) oder [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC) erstellt wurden, für [!UICONTROL &#x200B; Entscheidungsfindung auf dem Gerät unterstützt oder nicht unterstützt werden].
 
 | Aktivitätstyp | Unterstützt? |
 | --- | --- |
@@ -38,7 +47,7 @@ Die folgende Tabelle gibt an, welche [Aktivitätstypen](https://experienceleague
 
 ## Zielgruppen-Targeting
 
-Die folgende Tabelle gibt an, welche Zielgruppenregeln für die Entscheidungsfindung [!UICONTROL  Gerät unterstützt oder nicht ] werden.
+Die folgende Tabelle gibt an, welche Zielgruppenregeln für die Entscheidungsfindung [!UICONTROL &#x200B; Gerät unterstützt oder nicht &#x200B;] werden.
 
 | Zielgruppenregel | Unterstützt? |
 | --- | --- |
@@ -56,7 +65,7 @@ Die folgende Tabelle gibt an, welche Zielgruppenregeln für die Entscheidungsfin
 
 ### Geotargeting für [!UICONTROL On-Device Decisioning]
 
-Um bei Aktivitäten mit [!UICONTROL -basierten Zielgruppen eine minimale Latenz ] Entscheidungsfindung auf dem Gerät zu erhalten, empfiehlt Adobe, die Geowerte selbst in dem Aufruf von [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md) anzugeben. Legen Sie das Geo-Objekt im Kontext der Anfrage fest. Dies bedeutet, dass Sie über den Browser den Standort jedes Besuchers ermitteln können. Sie können beispielsweise mithilfe eines von Ihnen konfigurierten Services eine IP-zu-Geo-Suche durchführen. Einige Hosting-Anbieter wie Google Cloud bieten diese Funktion über benutzerdefinierte Header in jedem `HttpServletRequest`.
+Um bei Aktivitäten mit [!UICONTROL -basierten Zielgruppen eine minimale Latenz &#x200B;] Entscheidungsfindung auf dem Gerät zu erhalten, empfiehlt Adobe, die Geowerte selbst in dem Aufruf von [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md) anzugeben. Legen Sie das Geo-Objekt im Kontext der Anfrage fest. Dies bedeutet, dass Sie über den Browser den Standort jedes Besuchers ermitteln können. Sie können beispielsweise mithilfe eines von Ihnen konfigurierten Services eine IP-zu-Geo-Suche durchführen. Einige Hosting-Anbieter wie Google Cloud bieten diese Funktion über benutzerdefinierte Header in jedem `HttpServletRequest`.
 
 ```javascript {line-numbers="true"}
 window.adobe.target.getOffers({ 
@@ -98,7 +107,7 @@ window.adobe.target.getOffers({
 
 ### Zuordnungsmethode
 
-Die folgende Tabelle gibt an, welche Zuordnungsmethoden für die [!UICONTROL On-Device Decisioning“ unterstützt oder nicht ] werden.
+Die folgende Tabelle gibt an, welche Zuordnungsmethoden für die [!UICONTROL On-Device Decisioning“ unterstützt oder nicht &#x200B;] werden.
 
 | Zuordnungsmethode | Unterstützt? |
 | --- | --- |

@@ -5,11 +5,18 @@ title: Was sind häufige Fragen und Antworten zu at.js?
 feature: at.js
 exl-id: 362ccc5b-8731-46c0-bc52-3e55c273e216
 TQID: https://experienceleague.adobe.com/wOC67fpxKtZKP3-o-T86oA-HqySuPGebT9W5LUHuxSA
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
 source-wordcount: 2994
@@ -128,7 +135,7 @@ Weitere Informationen finden Sie unter [Verwaltung von Flackern mit „at.js“]
 
 ## Wie kann ich mit at.js ein Flackern beim Laden von Seiten verhindern ?
 
-[!DNL Target] bietet mehrere Möglichkeiten, ein Flackern beim Laden von Seiten zu verhindern. Weitere Informationen finden Sie unter &quot;[ mit at.js verhindern](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
+[!DNL Target] bietet mehrere Möglichkeiten, ein Flackern beim Laden von Seiten zu verhindern. Weitere Informationen finden Sie unter &quot;[&#x200B; mit at.js verhindern](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
 
 ## Wie groß ist at.js?
 
@@ -212,7 +219,7 @@ Nachfolgend finden Sie mögliche Grundursachen für diesen Warnhinweis:
 * Die zugrunde liegende Seite ist Teil eines Einzelseiten-Programms (SPA) oder die Seite enthält Elemente, die weiter unten auf der Seite auftauchen und der „at.js-Selektor-Polling-Mechanismus“ kann diese Elemente nicht finden. Es ist unter Umständen hilfreich, den `selectorsPollingTimeout` zu erhöhen. Weitere Informationen finden Sie unter [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 * Eine beliebige Klick-Tracking-Metrik versucht, sich zu jeder Seite hinzuzufügen, unabhängig von der URL, in der die Metrik eingerichtet wurde. Diese Situation ist zwar harmlos, hat aber viele dieser Warnhinweise zur Folge.
 
-  Um die bestmöglichen Ergebnisse zu erzielen, laden Sie bitte die [neueste Version von at.js) herunter ](/help/dev/implement/client-side/atjs/target-atjs-versions.md) verwenden Sie sie. Weitere Informationen zum Herunterladen von at.js finden Sie im Abschnitt [Herunterladen von at.js mithilfe der  [!DNL Target] -Schnittstelle](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface) im Artikel [*Bereitstellen von at.js* > *Implementieren von [!DNL Target] ohne Tag-Manager*](how-to-deployatjs/implement-target-without-a-tag-manager.md).
+  Um die bestmöglichen Ergebnisse zu erzielen, laden Sie bitte die [neueste Version von at.js) herunter &#x200B;](/help/dev/implement/client-side/atjs/target-atjs-versions.md) verwenden Sie sie. Weitere Informationen zum Herunterladen von at.js finden Sie im Abschnitt [Herunterladen von at.js mithilfe der  [!DNL Target] -Schnittstelle](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface) im Artikel [*Bereitstellen von at.js* > *Implementieren von [!DNL Target] ohne Tag-Manager*](how-to-deployatjs/implement-target-without-a-tag-manager.md).
 
 ## Was ist die Domain tt.omtrdc.net, zu der die Aufrufe des [!DNL Target]-Servers gehen?
 
