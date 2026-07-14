@@ -5,23 +5,12 @@ title: Kann ich  [!DNL Target]  Tag Manager implementieren?
 feature: Implement Server-side
 exl-id: f675ae21-105d-4aa3-9926-59291f1136b5
 TQID: https://experienceleague.adobe.com/UkFhxuka6uds6NVcJlZqo7soQlg4kqr7Z-rvuJPuRKk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
 workflow-type: tm+mt
 source-wordcount: 1785
 ht-degree: 32%
@@ -76,7 +65,7 @@ Die folgenden Einstellungen können im Bedienfeld Implementierungsmethoden konfi
 | [!UICONTROL Seitenladen aktiviert (globale Mbox automatisch erstellen)] | Wählen Sie aus, ob der globale Mbox-Aufruf in die Datei at.js eingebettet werden soll, damit er automatisch bei jedem Laden der Seite aktiviert wird. |
 | [!UICONTROL Globale mbox] | Wählen Sie einen Namen für die globale Mbox aus. Der Standardname lautet target-global-mbox.<p>Sonderzeichen wie kaufmännische Und-Zeichen (&amp;) können in Mbox-Namen mit at.js verwendet werden. |
 | [!UICONTROL Zeitüberschreitung (Sekunden)] | Falls [!DNL Target] nicht innerhalb des festgelegten Zeitraums mit Inhalten antwortet, erfolgt ein Timeout für den Server-Aufruf und es werden Standardinhalte angezeigt. Während der Sitzung des Besuchers werden weiter Aufrufe durchgeführt. Der Standardwert liegt bei 5 Sekunden.<p>Die at.js-Bibliothek verwendet die Zeitüberschreitungseinstellung in `XMLHttpRequest`. Die maximale Wartezeit beginnt, wenn die Anfrage ausgelöst wird, und endet, wenn [!DNL Target] eine Antwort vom Server erhält. Weitere Informationen finden Sie unter [XMLHttpRequest.timeout](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout) im Mozilla Developer Network.<p>Wenn die angegebene Zeitüberschreitung vor Erhalt der Antwort eintritt, wird der Standardinhalt angezeigt und der Besucher wird möglicherweise als Teilnehmer einer Aktivität gezählt, da die gesamte Datenerfassung am [!DNL Target] Edge erfolgt. Wenn die Anfrage den [!DNL Target] Edge erreicht, wird der Besucher gezählt.<p>Beim Konfigurieren der Timeout-Einstellung müssen Sie Folgendes beachten:<ul><li>Wenn der Wert zu niedrig ist, erhalten Besucher wahrscheinlich meist nur den Standardinhalt angezeigt, auch wenn sie möglicherweise als Teilnehmer in einer Aktivität gezählt werden.</li><li>Ist der Wert zu hoch, werden Besuchern unter Umständen leere Stellen auf Ihrer Webseite oder komplett leere Seiten angezeigt, falls Sie für längere Zeiträume Textausblendung einsetzen.</li></ul>Genaueres über Mbox-Antwortzeiten erfahren Sie auf der Registerkarte „Netzwerk“ in den Entwicklertools Ihres Browsers. Sie können auch Tools zur Überwachung der Webleistung einsetzen, die von Drittanbietern stammen, wie zum Beispiel Catchpoint.<p>**Hinweis**: Die Einstellung [visitorApiTimeout](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#visitorapitimeout) stellt sicher, dass [!DNL Target] nicht zu lange auf die Antwort der Besucher-API wartet. Diese Einstellung und die hier beschriebene Timeout-Einstellung für at.js beeinflussen sich nicht gegenseitig. |
-| [!UICONTROL Lebensdauer des Profils] | Mit dieser Einstellung legen Sie fest, wie lange Besucherprofile gespeichert werden. Profile werden standardmäßig zwei Wochen lang gespeichert. Diese Einstellung kann auf 90 Tage erhöht werden.<p>Um die Einstellung für die Profillebensdauer zu ändern, wenden Sie sich an [Kundenunterstützung](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=de#reference_ACA3391A00EF467B87930A450050077C). |
+| [!UICONTROL Lebensdauer des Profils] | Mit dieser Einstellung legen Sie fest, wie lange Besucherprofile gespeichert werden. Profile werden standardmäßig zwei Wochen lang gespeichert. Diese Einstellung kann auf 90 Tage erhöht werden.<p>Um die Einstellung für die Profillebensdauer zu ändern, wenden Sie sich an [Kundenunterstützung](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C). |
 
 ### Wichtigste Implementierungsmethode
 
@@ -90,7 +79,7 @@ Um die at.js-Einstellung zu bearbeiten, klicken Sie **[!UICONTROL Bearbeiten]** 
 
 >[!WARNING]
 >
->Bevor Sie diese Standardeinstellungen ändern, wenden Sie sich an [Kundenunterstützung](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=de#reference_ACA3391A00EF467B87930A450050077C), damit Ihre aktuelle Implementierung nicht beeinträchtigt wird.
+>Bevor Sie diese Standardeinstellungen ändern, wenden Sie sich an [Kundenunterstützung](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C), damit Ihre aktuelle Implementierung nicht beeinträchtigt wird.
 
 Zusätzlich zu den oben erläuterten Einstellungen sind auch die folgenden spezifischen at.js-Einstellungen verfügbar:
 
@@ -126,7 +115,7 @@ Weitere Informationen finden Sie unter [Datenschutz](/help/dev/before-implement/
 
 >[!NOTE]
 >
->Die Option „Legacy-Browser-Unterstützung“ war in at.js-Version 0.9.3 und früher verfügbar. Diese Option wurde in at.js, Version 0.9.4 entfernt. Eine Liste der von at.js unterstützten Browser finden Sie unter &quot;[&#x200B; Browser](/help/dev/before-implement/supported-browsers.md).<p>Bei älteren Browsern handelt es sich in der Regel um alte Versionen, die CORS (Cross Origin Resource Sharing) nicht vollständig unterstützen. Solche Browser sind zum Beispiel alle Versionen von Internet Explorer vor Version 11 oder Safari Version 6 und ältere Versionen. Wenn die Unterstützung älterer Browser deaktiviert war, haben [!DNL Target] in Berichten über diese Browser keine Inhalte bereitgestellt oder Besucher gezählt. Wenn diese Option aktiviert war, wird empfohlen, eine Qualitätssicherung in älteren Browsern durchzuführen, um ein gutes Kundenerlebnis zu gewährleisten.
+>Die Option „Legacy-Browser-Unterstützung“ war in at.js-Version 0.9.3 und früher verfügbar. Diese Option wurde in at.js, Version 0.9.4 entfernt. Eine Liste der von at.js unterstützten Browser finden Sie unter &quot;[ Browser](/help/dev/before-implement/supported-browsers.md).<p>Bei älteren Browsern handelt es sich in der Regel um alte Versionen, die CORS (Cross Origin Resource Sharing) nicht vollständig unterstützen. Solche Browser sind zum Beispiel alle Versionen von Internet Explorer vor Version 11 oder Safari Version 6 und ältere Versionen. Wenn die Unterstützung älterer Browser deaktiviert war, haben [!DNL Target] in Berichten über diese Browser keine Inhalte bereitgestellt oder Besucher gezählt. Wenn diese Option aktiviert war, wird empfohlen, eine Qualitätssicherung in älteren Browsern durchzuführen, um ein gutes Kundenerlebnis zu gewährleisten.
 
 ## „at.js“ herunterladen
 
@@ -295,5 +284,6 @@ Die Mbox für die Auftragsbestätigung verwendet die folgenden Parameter:
 | orderId | Eindeutiger Wert zur Identifizierung einer Bestellung für die Konversionszählung.<p>Die `orderId` muss eindeutig sein. Doppelte Bestellungen werden in Berichten ignoriert. |
 | orderTotal | Geldwert des Einkaufs.<p>Übergeben Sie den Wert ohne Währungssymbol. Verwenden Sie einen Dezimalpunkt (kein Komma), um die Dezimalwerte anzugeben. |
 | productPurchasedId (optional) | Kommagetrennte Liste von Produkt-IDs, die innerhalb der Bestellung gekauft wurden.<p>Diese Produkt-IDs werden im Audit-Bericht angezeigt, um zusätzliche Berichtsanalysen zu unterstützen. |
+
 
 
