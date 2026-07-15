@@ -3,7 +3,7 @@ user-guide-title: Adobe Target-Entwicklerhandbuch
 breadcrumb-title: Target-Entwicklerhandbuch
 user-guide-description: Erfahren Sie, wie Sie das Kundenerlebnis so anpassen und personalisieren können, dass Sie den Umsatz Ihrer Websites, Mobile Sites, Mobile Apps, Social Media und anderer digitaler Kanäle maximieren können.
 nudge: true
-source-git-commit: b7f74bef7a9e00aa9f794f63e5a29b391558808e
+source-git-commit: 894adb088e301a0628be687c7d381c30811f47e7
 workflow-type: tm+mt
 source-wordcount: '854'
 ht-degree: 42%
@@ -111,7 +111,7 @@ ht-degree: 42%
       + [Benutzerberechtigungen und Eigenschaften](implement/server-side/sdk-guides/core-principles/user-permissions-and-properties.md)
    + Integration {#integration}
       + [Übersicht über die Integration](implement/server-side/sdk-guides/integration-with-experience-cloud/overview.md)
-      + [Experience Cloud ID-Dienst (ECID)](implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md)
+      + [Experience Cloud ID Service (ECID)](implement/server-side/sdk-guides/integration-with-experience-cloud/ecid.md)
       + [Berichterstellung von Analytics for Target (A4T)](implement/server-side/sdk-guides/integration-with-experience-cloud/a4t-reporting.md)
       + [AAM-Segmente](implement/server-side/sdk-guides/integration-with-experience-cloud/aam-segments.md)
    + Geräteinterne Entscheidungsfindung {#on-device-decisioning}
