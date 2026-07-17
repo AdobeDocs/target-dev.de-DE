@@ -21,9 +21,9 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: b6b447ccb88925a8efb6ff6a80ae475c8780dbc8
 workflow-type: tm+mt
-source-wordcount: 2308
+source-wordcount: 2354
 ht-degree: 5%
 
 ---
@@ -33,6 +33,10 @@ ht-degree: 5%
 ## Überblick
 
 Dieser Artikel bietet einen Überblick über die Unterschiede zwischen der `at.js`-Bibliothek und der Experience Platform Web SDK.
+
+>[!NOTE]
+>
+>`at.js`-Implementierungen rufen die [!DNL Target]Bereitstellungs[API](/help/dev/implement/delivery-api/overview.md) direkt auf, z. B. `POST https://<clientCode>.tt.omtrdc.net/rest/v1/delivery`. [!DNL Platform Web SDK]-Implementierungen rufen stattdessen die Interact-API über den `sendEvent`-Befehl über die [!UICONTROL Experience Platform Edge Network] auf (z. B. `POST https://edge.adobedc.net/ee/v2/interact`). Hierbei handelt es sich um zwei verschiedene APIs, die nicht austauschbar sind.
 
 ## Installieren der Bibliotheken
 

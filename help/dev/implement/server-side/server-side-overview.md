@@ -20,10 +20,10 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 45af56b5ac64eb1db67c1bfdfecd6887dce990ff
 workflow-type: tm+mt
-source-wordcount: 618
-ht-degree: 12%
+source-wordcount: 825
+ht-degree: 9%
 
 ---
 
@@ -91,3 +91,26 @@ Schauen Sie sich unsere [Sample Apps](sdk-guides/sample-apps/sample-apps.md) an,
 Link: [Target Recommendations-APIs](https://developers.adobetarget.com/api/recommendations) und [Übersicht über die Adobe Recommendations-API](../../before-administer/recs-api/overview.md).
 
 Mit den Recommendations-APIs können Sie programmgesteuert mit [!DNL Target] Recommendations-Servern interagieren. Diese APIs können in verschiedene Anwendungs-Stacks integriert werden, um Funktionen durchzuführen, die Sie für gewöhnlich über die [!DNL Target] Benutzeroberfläche ausführen würden.
+
+## [!DNL Platform Edge Network] API-Aufrufe ohne SDK {#platform-edge-api-user-agent}
+
+Die [!UICONTROL Adobe Experience Platform Web SDK] und andere unterstützte SDK-Integrationen enthalten beim Aufrufen des -[!DNL Experience Platform Edge Network] einen browserähnlichen `User-Agent` in den HTTP-Anfrage-Headern. Serverseitige Integrationen, die die öffentliche [Interact-API) ohne SDK verwenden](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network/server-api/interact){target=_blank} müssen diese Kopfzeile explizit bereitstellen.
+
+Beachten Sie für Nicht-SDK Interact-API-Aufrufe die folgenden Anforderungen:
+
+* Schließen Sie eine gültige, Browser-ähnliche `User-Agent` in die HTTP-Anfrage-Header ein. Ein Besucher- oder Benutzeragentenwert allein im JSON-Anfragetext erfüllt die Bot-Erkennungsanforderungen für dieses Integrationsmuster nicht.
+* Verwenden Sie keine Platzhalter- oder Nicht-Browser-Werte, z. B. `MyApp/1.0`, solche Werte können zu einer Bot-Klassifizierung führen.
+* Für öffentliche Edge-API-Aufrufe ist kein SDK-Name oder keine SDK-Version erforderlich. Für dieses Szenario ist ein gültiger `User-Agent`-HTTP-Header das erforderliche Element.
+
+Wenn [!DNL Target] eine Anfrage als Bot-Traffic klassifiziert, kann die Personalisierung fehlschlagen oder unregelmäßig aussehen, da die Profilsuche, Segmentauswertung und personalisierte Inhalte für Aktivitäten wie [!UICONTROL Recommendations] und [!UICONTROL Automatisches Targeting] wie unten beschrieben unterdrückt werden.
+
+Weitere Informationen zur Implementierung von mit SDK finden Sie in der [[!DNL Adobe Experience Platform Web SDK] Übersicht](https://experienceleague.adobe.com/de/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}.
+
+**Beispiel einer Interact-API-Anfrage (Kopfzeilen müssen `User-Agent` enthalten):**
+
+```http
+POST https://edge.adobedc.net/ee/v2/interact?dataStreamId=YOUR_DATASTREAM_ID&requestId=YOUR_REQUEST_ID
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15
+Accept: */*
+Content-Type: text/plain; charset=UTF-8
+```
