@@ -5,14 +5,12 @@ keywords: Bereitstellungs-API
 exl-id: e760bddc-b1ae-4b7b-bff2-aba81c6b6d34
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/gPXGax6ccvZZPklT3jnZbqyOj3mCClEfSpdufAFPtSs
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: b6b447ccb88925a8efb6ff6a80ae475c8780dbc8
 workflow-type: tm+mt
-source-wordcount: 188
-ht-degree: 1%
+source-wordcount: 244
+ht-degree: 0%
 
 ---
 
@@ -20,7 +18,11 @@ ht-degree: 1%
 
 Die [!DNL Adobe Target Delivery API] basiert auf REST. In dieser Dokumentation werden die Ressourcen beschrieben, aus denen die [!DNL Adobe Target] [!DNL Delivery API] besteht. HTTP-Methoden werden verwendet, um Vorgänge für diese Ressourcen auszuführen.
 
-Mit der Bereitstellungs-API von {}Adobe Target haben Sie folgende Möglichkeiten:
+>[!IMPORTANT]
+>
+>Die hier dokumentierte [!DNL Delivery API] ist für [!DNL at.js] und direkte Server-seitige Implementierungen vorgesehen. Wenn Sie [!DNL Target] mithilfe der [!DNL Adobe Experience Platform Web SDK] implementieren, verwenden Sie die Interact-API, auf die über den `sendEvent`-Befehl über die [!UICONTROL Experience Platform-Edge Network] zugegriffen wird, anstatt die [!DNL Delivery API] direkt aufzurufen. Weitere Informationen finden Sie unter {0](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md) Adobe Experience Platform Web SDK[ und Vergleichen der at.js-Bibliothek mit der Experience Platform Web ](/help/dev/implement/client-side/aep-web-sdk/web-sdk-atjs-comparison.md)SDK).[
+
+Mit der Bereitstellungs-API von {]}Adobe Target haben Sie folgende Möglichkeiten:[!UICONTROL 
 
 * Bereitstellen von Erlebnissen im Web, einschließlich SPAs und mobilen Kanälen sowie Nicht-Browser-basierten IoT-Geräten wie einem verbundenen TV, Kiosk oder digitalen Bildschirmen im Geschäft.
 * Bereitstellen von Erlebnissen von jeder Server-seitigen Plattform oder Anwendung, die HTTP/s-Aufrufe ausführen kann.
