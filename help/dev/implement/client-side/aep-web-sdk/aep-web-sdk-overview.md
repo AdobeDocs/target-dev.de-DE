@@ -1,15 +1,26 @@
 ---
 keywords: Adobe Experience Platform Web SDK, AEP Web SDK, Web SDK, SDK, Adobe Experience Cloud, Platform Edge Network, Adobe Experience Platform Edge Network, Edge Network, AEP Edge Network, Adobe Experience Platform Web SDK0
-description: Erfahren Sie, wie Sie mit der [!UICONTROL Adobe Experience Platform Web SDK] über die [!UICONTROL AEP Edge Network mit den verschiedenen Services [!UICONTROL Adobe Experience ]) ].
+description: Erfahren Sie, wie Sie mit der [!UICONTROL Adobe Experience Platform Web SDK] über die [!UICONTROL AEP Edge Network mit den verschiedenen Services [!UICONTROL Adobe Experience &#x200B;]) &#x200B;].
 title: Wie implementiere ich mit dem [!UICONTROL Experience Platform Web SDK]?
 feature: AEP Web SDK
 exl-id: 35ee60d2-3d6d-4169-9f22-b2aef4c6548b
 TQID: https://experienceleague.adobe.com/j3-KSuCkcyyTB2KG4Icm2E7xpAfcuPkaOlhxitd5q-4
-product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2: id: df62f171-ac37-440f-8f0f-f41a72ebdd34id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2:
+  - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: b6b447ccb88925a8efb6ff6a80ae475c8780dbc8
 workflow-type: tm+mt
 source-wordcount: 844
@@ -36,7 +47,7 @@ Die folgenden Tutorials helfen Ihnen bei der Implementierung:
 
 ### Implementieren von [!DNL Adobe Experience Cloud] mit [!DNL Platform Web SDK]
 
-Erfahren Sie in diesem Tutorial, wie Sie [!DNL Experience Cloud]-Programme mithilfe von [!DNL Adobe Experience Platform Web SDK] [ implementieren](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=de). Spezifische Informationen zu [!DNL Target] finden Sie im Tutorial-Abschnitt [Einrichten [!DNL Target]  mit Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
+Erfahren Sie in diesem Tutorial, wie Sie [!DNL Experience Cloud]-Programme mithilfe von [!DNL Adobe Experience Platform Web SDK] [&#x200B; implementieren](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=de). Spezifische Informationen zu [!DNL Target] finden Sie im Tutorial-Abschnitt [Einrichten [!DNL Target]  mit Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
 
 ### Migrieren von [!DNL Target] aus at.js 2.*x* nach [!DNL Platform Web SDK]
 
@@ -55,5 +66,5 @@ Zusätzlich zur oben erwähnten [!UICONTROL Platform Web SDK]-Dokumentation enth
 | [Angebotsentscheidungen](https://experienceleague.adobe.com/docs/target/using/integrate/ajo/offer-decision.html) | Fügen Sie in [!DNL Adobe Journey Optimizer] erstellte Angebotsentscheidungen zu [!DNL Target] -Aktivitäten hinzu (manueller A/B-Test oder Erlebnis-Targeting), um das nächstbeste Angebot für Ihre Besucher im Web und auf Mobilgeräten zu ermitteln und bereitzustellen. |
 | [Umleitungsangebote – Häufig gestellte Fragen zu A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html) | Umleitungsangebote führen dazu, dass die Browser der Besucher zu einer neuen Seite umgeleitet werden.<p>Siehe [Unterstützt [!UICONTROL Adobe Experience Platform Web SDK] Umleitungsangebote für A4T?](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html#platform) |
 | [Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) | Mit Antwort-Token können Sie [!DNL Target] an Google Analytics und andere Drittanbieter-Integrationen senden.<p>Unter [Senden von Daten an Google Analytics über Platform Web SDK](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html#sending-data-to-google-analytics-via-platform-web-sdk) finden Sie ein Codebeispiel für die Durchführung dieser Aufgabe. |
-| [Implementierung von Einzelseitenanwendungen](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html) im Handbuch *[!UICONTROL Platform Web ]Übersicht* . | [!UICONTROL Adobe Experience Platform Web SDK] bietet umfangreiche Funktionen, mit denen Ihr Unternehmen Personalisierungen auf Client-seitigen Technologien der nächsten Generation wie Single Page Applications (SPAs) durchführen kann. |
+| [Implementierung von Einzelseitenanwendungen](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html) im Handbuch *[!UICONTROL Platform Web &#x200B;]Übersicht* . | [!UICONTROL Adobe Experience Platform Web SDK] bietet umfangreiche Funktionen, mit denen Ihr Unternehmen Personalisierungen auf Client-seitigen Technologien der nächsten Generation wie Single Page Applications (SPAs) durchführen kann. |
 | [Änderungen der TLS-Verschlüsselung (Transport Layer Security)](/help/dev/before-implement/tls-transport-layer-security-encryption.md) | TLS (Transport Layer Security) hilft Ihnen, die höchsten Sicherheitsstandards aufrechtzuerhalten und die Sicherheit von Kundendaten zu fördern. |
