@@ -35,7 +35,7 @@ Informationen zu [!DNL Adobe Target] Server-seitigen Bereitstellungs-APIs, SDKs 
 >
 >Wenn Ihre Implementierung at.js und [!DNL AppMeasurement] Client-seitig verwendet, sollten Sie die [!UICONTROL Target-Bereitstellungs-API] und Server-seitigen SDKs verwenden, die unten erläutert werden.
 >
->Wenn Ihre Implementierung die [!UICONTROL Adobe Experience Platform Web SDK] verwendet, sollten Sie die [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network-Server-API verwenden]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
+>Wenn Ihre Implementierung die [!UICONTROL Adobe Experience Platform Web SDK] verwendet, sollten Sie die [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network-Server-API verwenden]](https://experienceleague.adobe.com/de/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
 
 Der folgende Prozess wird in einer Server-seitigen Implementierung von [!DNL Target] ausgeführt:
 
@@ -104,7 +104,7 @@ Beachten Sie für Edge-API-Aufrufe, die nicht von SDK stammen, die folgenden Anf
 
 Wenn [!DNL Target] eine Anfrage als Bot-Traffic klassifiziert, kann die Personalisierung fehlschlagen oder unregelmäßig aussehen, da die Profilsuche, Segmentauswertung und personalisierte Inhalte für Aktivitäten wie [!UICONTROL Recommendations] und [!UICONTROL Automatisches Targeting] unterdrückt werden.
 
-Weitere Informationen zur Implementierung von mit SDK finden Sie in der [[!DNL Adobe Experience Platform Web SDK] Übersicht](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}.
+Weitere Informationen zur Implementierung von mit SDK finden Sie in der [[!DNL Adobe Experience Platform Web SDK] Übersicht](https://experienceleague.adobe.com/de/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}.
 
 **Beispiel einer Edge-API-Anfrage (Kopfzeilen müssen `User-Agent` enthalten):**
 
