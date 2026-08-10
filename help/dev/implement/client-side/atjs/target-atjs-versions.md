@@ -5,26 +5,11 @@ title: Was ist in jeder Version von at.js enthalten?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
 TQID: https://experienceleague.adobe.com/95lXe4YAZ7mD12XBtKPB3ddFtGCJYdvlXR632qosuG4
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-subfeature_v2:
-  - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: df62f171-ac37-440f-8f0f-f41a72ebdd34id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
 source-wordcount: 5174
@@ -46,7 +31,7 @@ Details zu den Änderungen in den einzelnen Versionen der at.js-JavaScript-Bibli
 >
 >Sie sollten auf die neuesten Versionen von entweder 1.*x* oder 2.*x* aktualisieren, um Fehlerbehebungen und Sicherheits-Patches für Probleme zu erhalten, die in einer früheren Nebenversion der entsprechenden Hauptversion entdeckt wurden.
 
-Tags in [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) sind die bevorzugte Methode zum Aktualisieren von at.js. Erweiterungsentwickler fügen ihren Erweiterungen kontinuierlich neue Funktionen hinzu und beheben häufig Fehler. Diese Aktualisierungen werden in neue Versionen einer Erweiterung gepackt und im Adobe Experience Platform-Katalog als Aktualisierungen verfügbar gemacht. Weitere Informationen finden Sie unter [Erweiterungs-Upgrades](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html?lang=de) im Handbuch *Übersicht über Tags*.
+Tags in [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) sind die bevorzugte Methode zum Aktualisieren von at.js. Erweiterungsentwickler fügen ihren Erweiterungen kontinuierlich neue Funktionen hinzu und beheben häufig Fehler. Diese Aktualisierungen werden in neue Versionen einer Erweiterung gepackt und im Adobe Experience Platform-Katalog als Aktualisierungen verfügbar gemacht. Weitere Informationen finden Sie unter [Erweiterungs-Upgrades](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) im Handbuch *Übersicht über Tags*.
 
 ## at.js-Version 2.11.8 (31. März 2025)
 
@@ -58,7 +43,7 @@ Tags in [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-
 
 ## at.js-Version 2.11.6 (29. September 2024)
 
-* Es wurde ein Problem behoben, das dazu führte, dass [!DNL Target] mit Umleitungsangeboten in [!UICONTROL Visual Experience Composer] (VEC) oder [!UICONTROL Form-Based Experience Composer) nicht korrekt &#x200B;].
+* Es wurde ein Problem behoben, das dazu führte, dass [!DNL Target] mit Umleitungsangeboten in [!UICONTROL Visual Experience Composer] (VEC) oder [!UICONTROL Form-Based Experience Composer) nicht korrekt ].
 
 ## at.js-Version 2.11.5 (14. August 2024)
 
@@ -151,7 +136,7 @@ Diese Version enthält die folgenden Änderungen:
 Diese Version von at.js umfasst die folgenden Verbesserungen und Änderungen:
 
 * Unterstützung der [geräteinternen Entscheidungsfindung](/help/dev/implement/client-side/atjs/on-device-decisioning/on-device-decisioning.md) für at.js.
-* Unterstützung für [Vorschau-Links](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=de) für Automated Personalization-Aktivitäten
+* Unterstützung für [Vorschau-Links](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html) für Automated Personalization-Aktivitäten
 
 Mit dieser Version endet auch die Unterstützung für Microsoft Internet Explorer 10 und höher.
 
@@ -263,7 +248,7 @@ Dieses Release umfasst die folgenden Funktionen und Erweiterungen:
 
 * **Client-seitige Analytics-Protokollierung**: Geben Sie Kunden die volle Kontrolle darüber, wie sie Analysedaten an [!DNL Adobe Analytics] senden möchten, ob Client- oder Server-seitig.
 
-  Weitere Informationen finden Sie unter [Client-seitig [!DNL Analytics] logging](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html?lang=de#client-side).
+  Weitere Informationen finden Sie unter [Client-seitig [!DNL Analytics] logging](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html#client-side).
 
 * **Benachrichtigungen senden**: Erlauben Entwicklern, Benachrichtigungen zu senden, wenn ein Erlebnis durch ihren Code statt über `applyOffer()` oder `applyOffers()` gerendert wird.
 
@@ -380,7 +365,7 @@ at.js Version 1.5.0 ist verfügbar.
 * Die Details des Ereignisses `at-request-succeeded` enthalten das Umleitungs-Flag. Mit diesem Flag lässt sich bestimmen, ob die Seite an eine andere URL umgeleitet wird. Die URL können Sie über `at-content-rendering-redirect` ermitteln. (TNT-29834)
 * Es wurde ein Problem behoben, bei dem `window.targetGlobalSettings.enabled` mit einem Laufzeitfehler fehlschlug, wenn es auf „false“ festgelegt war. (TNT-29829)
 * Es wurde ein Problem behoben, bei dem das Laden einer Seite im Visual Experience Composer (VEC) fehlschlug, wenn benutzerspezifischer Code verwendet wurde, um eine globale Mbox-Anfrage auszulösen, und der Body verborgen wurde. (TNT-29795)
-* Unterstützung für `screenOrientation`, `devicePixelRatio` und `webGLRenderer` wurde hinzugefügt. Diese neuen [!DNL Target]-Anforderungsparameter werden für die iPhone X- und andere moderne Geräteerkennung verwendet. Weitere Informationen finden Sie unter [Mobilgeräte](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=de). (TNT-29781)
+* Unterstützung für `screenOrientation`, `devicePixelRatio` und `webGLRenderer` wurde hinzugefügt. Diese neuen [!DNL Target]-Anforderungsparameter werden für die iPhone X- und andere moderne Geräteerkennung verwendet. Weitere Informationen finden Sie unter [Mobilgeräte](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html). (TNT-29781)
 * Es wurde ein Problem behoben, bei dem der Hinweis zum AAM-Standort (Adobe Audience Manager) nicht immer gesendet wurde. (TNT-29695)
 * Bei Browsern, die diese Funktion unterstützen, wechselt at.js 1.5.0 für den Selektorabruf zu MutationObserver. Versionen vor at.js 1.0.0 nutzten einen MutationObserver-Polyfill, der sich als problematisch erwies. Um die Polyfill-Probleme zu vermeiden, verwendet Version 1.5.0 folgenden Pseudocode, um zu entscheiden, welcher Planungsmechanismus verwendet wird:
 
@@ -399,11 +384,11 @@ at.js Version 1.3.0 ist verfügbar.
 
 * Die folgenden neuen Ereignisse stehen für die Ablaufverfolgungs-, Debugging- und Anpassungsinteraktionen mit at.js zur Verfügung:
 
-   * LIBRARY_LOADED
-   * REQUEST_START
-   * CONTENT_RENDERING_START
-   * CONTENT_RENDERING_NO_OFFERS
-   * CONTENT_RENDERING_REDIRECT
+  * LIBRARY_LOADED
+  * REQUEST_START
+  * CONTENT_RENDERING_START
+  * CONTENT_RENDERING_NO_OFFERS
+  * CONTENT_RENDERING_REDIRECT
 
   Weitere Informationen finden Sie unter [at.js – benutzerdefinierte Ereignisse](/help/dev/implement/client-side/atjs/atjs-functions/atjs-custom-events.md).
 
@@ -422,7 +407,7 @@ at.js Version 1.3.0 ist verfügbar.
 
 at.js Version 1.2.3 ist verfügbar.
 
-* Fügt Unterstützung für JSON-Angebote hinzu. JSON-Angebote werden nur bei Aktivitäten unterstützt, die mit dem formularbasierten Experience Composer erstellt wurden. Die einzige Möglichkeit, JSON-Angebote zu nutzen, läuft derzeit über direkte API-Aufrufe. Weitere Informationen finden Sie unter [Erstellen von JSON-Angeboten](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=de).
+* Fügt Unterstützung für JSON-Angebote hinzu. JSON-Angebote werden nur bei Aktivitäten unterstützt, die mit dem formularbasierten Experience Composer erstellt wurden. Die einzige Möglichkeit, JSON-Angebote zu nutzen, läuft derzeit über direkte API-Aufrufe. Weitere Informationen finden Sie unter [Erstellen von JSON-Angeboten](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html).
 
 ## „at.js“-Version 1.2.2
 
@@ -460,7 +445,7 @@ at.js Version 1.2 ist jetzt als Wartungsversion verfügbar, die hauptsächlich F
 
 Die folgenden Verbesserungen und Fehlerbehebungen sind in at.js-Version 1.1 enthalten:
 
-* Die Verarbeitung von Antwort-Token wurde hinzugefügt. Weitere Informationen finden Sie unter [Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=de).
+* Die Verarbeitung von Antwort-Token wurde hinzugefügt. Weitere Informationen finden Sie unter [Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html).
 * Es wurde ein Problem behoben, damit `document.currentScript polyfill` nicht mit Angular 1.X in Konflikt gerät.
 * Es wurden Änderungen vorgenommen, die sicherstellen, dass die Klick-Verfolgung nicht mit der Sichtbarkeitseigenschaft in Konflikt gerät. Klick-Verfolgungselemente sind mit der CSS-Klasse `at-element-click-tracking` statt mit `at-element-marker` markiert.
 
@@ -494,7 +479,7 @@ Die folgenden Verbesserungen und Fehlerbehebungen sind in at.js-Version 0.9.7 en
 
 Die folgenden Verbesserungen und Fehlerbehebungen sind in at.js-Version 0.9.6 enthalten:
 
-* Unterstützung für Umleitungsangebote für A4T. Nach dem Herunterladen und Installieren der at.js-Version 0.9.6 können Sie Umleitungsangebote in Aktivitäten verwenden, die [!UICONTROL Adobe Analytics als Reporting-Source für Target] (A4T) verwenden. Neben at.js Version 0.9.6 gibt es weitere Mindestanforderungen, die Ihre Implementierung erfüllen muss, um Umleitungsangebote und A4T nutzen zu können. Weitere wichtige Informationen finden Sie unter [Umleitungsangebote – A4T-FAQ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=de).
+* Unterstützung für Umleitungsangebote für A4T. Nach dem Herunterladen und Installieren der at.js-Version 0.9.6 können Sie Umleitungsangebote in Aktivitäten verwenden, die [!UICONTROL Adobe Analytics als Reporting-Source für Target] (A4T) verwenden. Neben at.js Version 0.9.6 gibt es weitere Mindestanforderungen, die Ihre Implementierung erfüllen muss, um Umleitungsangebote und A4T nutzen zu können. Weitere wichtige Informationen finden Sie unter [Umleitungsangebote – A4T-FAQ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html).
 * Vor at.js 0.9.6 galt: Wenn eine Besucher-API auf der Seite vorhanden und die `visitorApiTimeout` [!DNL Target] zu aggressiv war, konnte dies dazu führen, dass in der [!DNL Target]-Anfrage keine ECID-Daten gesendet wurden. So konnte es bei der Verwendung von A4T zu Problemen wie z. B. aufgetrennten Treffern in [!DNL Analytics] kommen.
 
   Dieses Verhalten wurde in at.js 0.9.6 geändert. Selbst wenn die `visitorApiTimeout` auf 1 ms eingestellt ist, versucht [!DNL Target], SDID-, Tracking-Server- und Kunden-IDs-Daten zu erfassen und in der [!DNL Target]-Anfrage zu senden.
@@ -553,10 +538,10 @@ Die folgenden Verbesserungen und Fehlerbehebungen sind in at.js-Version 0.9.6 en
 
   Diese neue API bietet Entwicklern Zugriff auf bestimmte jQuery-Module, die in at.js zur Entwicklung von Erweiterungen (auch als Plug-ins bezeichnet) für die -Bibliothek verwendet werden. Für diese Änderung gibt es verschiedene Gründe. Die Änderung wirkt sich nur auf Benutzer aus, die mit folgenden Funktionen arbeiten:
 
-   * Die `getSettings()`-API wurde entfernt, die gleichen Funktionen sind aber über `registerExtension()` verfügbar.
-   * Die `getTracking()`-API wurde entfernt, die gleichen Funktionen sind aber über `registerExtension()` verfügbar.
+  * Die `getSettings()`-API wurde entfernt, die gleichen Funktionen sind aber über `registerExtension()` verfügbar.
+  * Die `getTracking()`-API wurde entfernt, die gleichen Funktionen sind aber über `registerExtension()` verfügbar.
 
-   * Bestehende Erweiterungen (z. B. Erweiterungen für AngularJS) müssen aktualisiert werden, damit `registerExtension()` verwendet werden kann.
+  * Bestehende Erweiterungen (z. B. Erweiterungen für AngularJS) müssen aktualisiert werden, damit `registerExtension()` verwendet werden kann.
 
 * Neue at.js-Benachrichtigungs-API.
 
