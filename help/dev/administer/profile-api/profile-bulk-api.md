@@ -90,7 +90,7 @@ Sie verweisen im POST-Aufruf an [!DNL Target] Server auf diese Datei, um die Dat
 >
 >Alle Parameternamen und -werte müssen URL-kodiert (UTF-8) sein, bevor Sie den mit `Content-Type: application/x-www-form-urlencoded` gesendeten Batch übermitteln, wobei der Hauptteil mit `batch=` beginnt. Nicht kodierte reservierte Zeichen werden als Anfragesyntax anstelle von Daten gelesen, wodurch der Batch abgelehnt, abgeschnitten oder beschädigt werden kann.
 >
->Wenn Sie eine Antwort „Unerwarteter Fehler“ ohne ausgegebene `batchId` erhalten, finden Sie unter [API für die Massenaktualisierung von Profilen gibt „Unerwarteter Fehler“ &#x200B;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281) Schritte zur Fehlerbehebung zurück.
+>Wenn Sie eine Antwort „Unerwarteter Fehler“ ohne ausgegebene `batchId` erhalten, finden Sie unter [API für die Massenaktualisierung von Profilen gibt „Unerwarteter Fehler“ &#x200B;](https://experienceleague.adobe.com/de/docs/experience-cloud-kcs/kbarticles/ka-24281) Schritte zur Fehlerbehebung zurück.
 
 Die folgenden Zeichen sind normalerweise in Profilwerten vorhanden, haben jedoch eine besondere Bedeutung in `application/x-www-form-urlencoded`. Wenn Sie sie unverschlüsselt senden, schlägt die Anfrage fehl oder die Daten sind ohne offensichtlichen Fehler beschädigt:
 
