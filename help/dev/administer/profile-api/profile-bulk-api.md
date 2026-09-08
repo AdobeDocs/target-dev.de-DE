@@ -1,31 +1,24 @@
 ---
 title: Adobe Target-API zur Massenaktualisierung von Profilen
-description: Erfahren Sie, wie Sie  [!DNL Adobe Target] [!UICONTROL &#x200B; API zur Massenaktualisierung von Profilen &#x200B;], um die Profildaten mehrerer Besucher zur Verwendung  [!DNL Target]  Targeting an zu senden.
+description: Erfahren Sie, wie Sie  [!DNL Adobe Target] [!UICONTROL  API zur Massenaktualisierung von Profilen ], um die Profildaten mehrerer Besucher zur Verwendung  [!DNL Target]  Targeting an zu senden.
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
 TQID: https://experienceleague.adobe.com/EVlP71oFI-NIFoTe9fyx2Xzsr9v-sZq0JGdpti1XI64
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 64d250010899c671e73045b23b8e0c79cefaa2d6
 workflow-type: tm+mt
-source-wordcount: 1094
-ht-degree: 7%
+source-wordcount: 1311
+ht-degree: 6%
 
 ---
 
 # [!DNL Adobe Target Bulk Profile Update API]
 
-Mit der [!DNL Adobe Target] [!UICONTROL API zur Massenaktualisierung von &#x200B;]) können Sie Benutzerprofile für mehrere Besucher einer Website mithilfe einer Batch-Datei stapelweise aktualisieren.
+Mit der [!DNL Adobe Target] [!UICONTROL API zur Massenaktualisierung von ]) können Sie Benutzerprofile für mehrere Besucher einer Website mithilfe einer Batch-Datei stapelweise aktualisieren.
 
 Mit der [!UICONTROL Bulk Profile Update API] können Sie für viele Benutzer bequem detaillierte Besucherprofildaten in Form von Profilparametern senden, um sie aus einer beliebigen externen Quelle zu [!DNL Target]. Zu den externen Quellen können CRM (Customer Relationship Management)- oder POS (Point of Sale)-Systeme gehören, die normalerweise nicht auf einer Web-Seite verfügbar sind.
 
@@ -83,6 +76,27 @@ Sie verweisen im POST-Aufruf an [!DNL Target] Server auf diese Datei, um die Dat
 * Die Batch-Datei muss kleiner als 50 MB sein. Darüber hinaus sollte die Gesamtzahl der Zeilen 500.000 nicht überschreiten. Dadurch wird sichergestellt, dass Server nicht mit zu vielen Anfragen überflutet werden.
 * Die Anzahl der Attribute, die Sie hochladen können, ist nicht beschränkt. Die Gesamtgröße der externen Profildaten, zu denen Kundenattribute, Profil-API, In-Mbox-Profilparameter und Profilskriptausgabe gehören, darf jedoch 64 KB nicht überschreiten.
 * Bei Parametern und Werten wird zwischen Groß- und Kleinschreibung unterschieden.
+
+### URL-Kodierungsanforderungen {#url-encoding}
+
+>[!IMPORTANT]
+>
+>Alle Parameternamen und -werte müssen URL-kodiert (UTF-8) sein, bevor Sie den mit `Content-Type: application/x-www-form-urlencoded` gesendeten Batch übermitteln, wobei der Hauptteil mit `batch=` beginnt. Nicht kodierte reservierte Zeichen werden als Anfragesyntax anstelle von Daten gelesen, wodurch der Batch abgelehnt, abgeschnitten oder beschädigt werden kann.
+>
+>Wenn Sie eine Antwort „Unerwarteter Fehler“ ohne ausgegebene `batchId` erhalten, finden Sie unter [API für die Massenaktualisierung von Profilen gibt „Unerwarteter Fehler“ ](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281) Schritte zur Fehlerbehebung zurück.
+
+Die folgenden Zeichen sind normalerweise in Profilwerten vorhanden, haben jedoch eine besondere Bedeutung in `application/x-www-form-urlencoded`. Wenn Sie sie unverschlüsselt senden, schlägt die Anfrage fehl oder die Daten sind ohne offensichtlichen Fehler beschädigt:
+
+| Zeichen | Codieren als | Falls unverschlüsselt gesendet |
+|---|---|---|
+| `%` | `%25` | Der gesamte Stapel wird zurückgewiesen. Die Antwort gibt HTTP 200 mit `success=false` und der Meldung „Unerwarteter Fehler“ zurück, und es wird keine `batchId` ausgegeben. |
+| `&` | `%26` | Der Batch wird auf der ersten `&` ohne Nachfrage gekürzt. Die verbleibenden Zeilen werden gelöscht, was zu einer teilweisen Aktualisierung oder einer Antwort „Batch ist leer“ führen kann. |
+| `+` | `%2B` | Das Zeichen wird im Hintergrund in ein Leerzeichen umgewandelt, wodurch der gespeicherte Wert beschädigt wird. |
+| `=` | `%3D` | Das Zeichen kann als Feldgrenze falsch interpretiert werden. |
+
+_Beispielsweise muss der Wert `50% off & more` als `50%25 off %26 more` gesendet werden._
+
+Beachten Sie, dass Buchstaben, Ziffern, UTF-8-Zeichen mit Akzent und die `- . ! ~ _ * ( )` Zeichen keine Codierung erfordern. [!DNL Adobe] empfiehlt jedoch die Codierung aller Werte, um Mehrdeutigkeiten zu vermeiden.
 
 ## HTTP-POST-Anfrage
 
