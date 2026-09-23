@@ -3,13 +3,11 @@ user-guide-title: Adobe Target-Entwicklerhandbuch
 breadcrumb-title: Target-Entwicklerhandbuch
 user-guide-description: Erfahren Sie, wie Sie das Kundenerlebnis so anpassen und personalisieren können, dass Sie den Umsatz Ihrer Websites, Mobile Sites, Mobile Apps, Social Media und anderer digitaler Kanäle maximieren können.
 nudge: true
-source-git-commit: 5c19d83d1ba84165dee064183ec04a9803dd1a61
+source-git-commit: 59113ca1ef6c4d6e4ff2f7ad76e53a96fb5c255b
 workflow-type: tm+mt
 source-wordcount: '854'
 ht-degree: 42%
-
 ---
-
 
 # Adobe Target-Entwicklerhandbuch {#developer}
 
@@ -44,7 +42,7 @@ ht-degree: 42%
   + [CNAME und Adobe Target](before-implement/implement-cname-support-in-target.md)
 + Client-seitige Implementierung {#client-side}
   + [Übersicht: Target für Client-seitiges Web implementieren](implement/client-side/overview.md)
-  + {hide-from-toc}[Handbuch zur SDK-Integration vorab ausblenden](implement/client-side/prehide-sdk/prehide-sdk.md)
+  + [Handbuch zur SDK-Integration vorab ausblenden](implement/client-side/prehide-sdk/prehide-sdk.md)
   + Adobe Experience Platform Web SDK-Implementierung {#aep}
     + [Übersicht über die Implementierung von Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
     + [Personalisierung mit Adobe Target und Web SDK](/help/dev/implement/client-side/aep-web-sdk/target-overview.md)
