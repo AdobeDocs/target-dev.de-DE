@@ -1,16 +1,13 @@
 ---
 keywords: SDK vorab ausblenden, Flackern, Anti-Flackern, Vorab-Ausblenden, Legierung, at.js, Implementierung, Einverständnis, CMP, Skriptplatzierung, Inline, Extern, SDK-Auswahl
-description: Erfahren Sie, wie Sie  [!DNL Adobe Target]  SDK Prehide integrieren können, um das Flackern nicht personalisierter Inhalte (Flackern) beim Laden der Seite zu vermeiden. SDK arbeitet sowohl mit Adobe Alloy (Web SDK) als auch mit at.js.
+description: Erfahren Sie, wie Sie die [!DNL Adobe Target] Prehide SDK integrieren, um das Flackern nicht personalisierter Inhalte (Flackern) beim Laden der Seite zu vermeiden. SDK arbeitet sowohl mit Adobe Alloy (Web SDK) als auch mit at.js.
 title: Handbuch zur SDK-Integration vorab ausblenden
 feature: Implementation
-hide: true
-source-git-commit: bb3c2906a52daecca03cf29331d9bec5e2955d2e
+source-git-commit: 35ac4480ead5069169a2c55d35b43d3c1a81d78a
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 0%
-
+source-wordcount: '1066'
+ht-degree: 1%
 ---
-
 
 # Handbuch zur SDK-Integration vorab ausblenden
 
@@ -63,7 +60,8 @@ Eine winzige synchrone JavaScript-Bibliothek, die das visuelle Flackern verhinde
 >[!IMPORTANT]
 >
 >Die Prehide-SDK muss vor Alloy/at.js ausgeführt werden. Wenn „Alloy“ zuerst geladen wird, rendert die Seite nicht personalisierten Inhalt und rendert ihn dann erneut. Genau das ist das Flackern, das diese SDK verhindern soll.
-></br>>Fügen Sie keine `async` oder `defer` zum Prehide-Skript-Tag von SDK hinzu. Die synchrone Ausführung ist erforderlich, damit die Ausblendregel eingefügt wird, bevor der Browser mit dem Layout der Seite beginnt.
+></br>
+>Fügen Sie keine `async` oder `defer` zum Prehide-Skript-Tag von SDK hinzu. Die synchrone Ausführung ist erforderlich, damit die Ausblendregel eingefügt wird, bevor der Browser mit dem Layout der Seite beginnt.
 
 Die SDK zum Vorab-Ausblenden muss früher im Dokument angezeigt werden als die [!DNL Adobe Target] SDK, die danach bereinigt wird. Die Ladereihenfolge ist nicht verhandelbar:
 
