@@ -1,37 +1,50 @@
 ---
 keywords: at.js-Versionen, at.js-Versionen, Versionshinweise
-description: Zeigen Sie die Details der Änderungen in den einzelnen Versionen der  [!DNL Adobe Target] .js-JavaScript-Bibliothek an.
+description: Zeigen Sie die Details der Änderungen in den einzelnen Versionen der [!DNL Adobe Target] at.js-JavaScript-Bibliothek an.
 title: Was ist in jeder Version von at.js enthalten?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
 TQID: https://experienceleague.adobe.com/95lXe4YAZ7mD12XBtKPB3ddFtGCJYdvlXR632qosuG4
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
 subfeature_v2:
   - id: df62f171-ac37-440f-8f0f-f41a72ebdd34
+    internal-label: Analytics integration
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 235baadf4059d2c363368408012630d6619aef99
+    internal-label: Privacy
+source-git-commit: 1e9b96361fd11095248b8fcae6f7a185f74a39c8
 workflow-type: tm+mt
-source-wordcount: 5174
-ht-degree: 61%
-
+source-wordcount: '5217'
+ht-degree: 60%
 ---
-
 # „at.js“-Versionsdetails
 
 Details zu den Änderungen in den einzelnen Versionen der at.js-JavaScript-Bibliothek von [!DNL Adobe Target]
@@ -47,6 +60,10 @@ Details zu den Änderungen in den einzelnen Versionen der at.js-JavaScript-Bibli
 >Sie sollten auf die neuesten Versionen von entweder 1.*x* oder 2.*x* aktualisieren, um Fehlerbehebungen und Sicherheits-Patches für Probleme zu erhalten, die in einer früheren Nebenversion der entsprechenden Hauptversion entdeckt wurden.
 
 Tags in [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) sind die bevorzugte Methode zum Aktualisieren von at.js. Erweiterungsentwickler fügen ihren Erweiterungen kontinuierlich neue Funktionen hinzu und beheben häufig Fehler. Diese Aktualisierungen werden in neue Versionen einer Erweiterung gepackt und im Adobe Experience Platform-Katalog als Aktualisierungen verfügbar gemacht. Weitere Informationen finden Sie unter [Erweiterungs-Upgrades](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html?lang=de) im Handbuch *Übersicht über Tags*.
+
+## at.js-Version 2.11.9 (Februar 2026)
+
+* Es wurde ein Problem behoben, bei dem die Funktion at.js applyOffers Lightning-Web-Komponenten (LWC) nicht korrekt erkannte und änderte. Die at.js-Bibliothek wurde aktualisiert, um LWC-Komponenten zu erkennen und Änderungen vorzunehmen. (TGT-54478)
 
 ## at.js-Version 2.11.8 (31. März 2025)
 
