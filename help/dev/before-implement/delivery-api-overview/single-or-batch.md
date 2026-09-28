@@ -21,13 +21,13 @@ ht-degree: 0%
 ---
 # Einzel- oder Batch-Versand
 
-Die Adobe Target-Bereitstellungs-API {0] unterstützt einen einzelnen oder Batch-Bereitstellungsaufruf. [!UICONTROL Eine Server-Anfrage für Inhalte für einzelne oder mehrere Mboxes ist möglich.
+Die Adobe Target-Bereitstellungs-API &lbrace;0 unterstützt einen einzelnen oder Batch-Bereitstellungsaufruf. Eine Server-Anfrage für Inhalte für einzelne oder mehrere Mboxes ist möglich.
 
 Gewichtung der Leistungskosten bei der Entscheidung für einen einzelnen Aufruf gegenüber einem Batch-Aufruf. Wenn Sie alle Inhalte kennen, die für eine Benutzerin oder einen Benutzer angezeigt werden müssen, ist die Best Practice, Inhalte für alle Mboxes mit einem einzigen Batch-Bereitstellungsaufruf abzurufen, um zu vermeiden, dass mehrere einzelne Bereitstellungsaufrufe durchgeführt werden.
 
 ## Einzelversand-Aufruf
 
-Sie können ein Erlebnis abrufen, das Benutzenden für eine Mbox über die [!UICONTROL Adobe Target-Bereitstellungs-API angezeigt ] soll. Beachten Sie, dass Sie bei einem einzelnen Versandaufruf einen weiteren Server-Aufruf initiieren müssen, um zusätzliche Inhalte für eine Mbox für einen Benutzer abzurufen. Dies kann im Laufe der Zeit sehr kostspielig werden. Daher sollten Sie bei der Verwendung des einzelnen Bereitstellungs-API-Aufrufs unbedingt Ihren Ansatz evaluieren.
+Sie können ein Erlebnis abrufen, das Benutzenden für eine Mbox über die [!UICONTROL Adobe Target-Bereitstellungs-API angezeigt &#x200B;] soll. Beachten Sie, dass Sie bei einem einzelnen Versandaufruf einen weiteren Server-Aufruf initiieren müssen, um zusätzliche Inhalte für eine Mbox für einen Benutzer abzurufen. Dies kann im Laufe der Zeit sehr kostspielig werden. Daher sollten Sie bei der Verwendung des einzelnen Bereitstellungs-API-Aufrufs unbedingt Ihren Ansatz evaluieren.
 
 ```
 curl -X POST \

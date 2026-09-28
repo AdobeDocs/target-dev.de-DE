@@ -63,7 +63,7 @@ In diesem Abschnitt greifen Sie auf die [!DNL Adobe Developer Console] zu und er
 
 1. Stellen Sie in der [Adobe Admin Console](https://adminconsole.adobe.com/) sicher, dass Ihrem [!DNL Adobe]-Benutzerkonto sowohl [Produktadministrator](https://helpx.adobe.com/enterprise/using/admin-roles.html) als auch [Entwickler](https://helpx.adobe.com/enterprise/using/manage-developers.html) Zugriff auf [!DNL Target] gewährt wurde.
 
-1. Wählen Sie in der {0](https://developer.adobe.com/console/home)Adobe Developer Console} die [!UICONTROL Experience Cloud-Organisation] für die Sie diese Integration erstellen möchten. [(Beachten Sie, dass Sie wahrscheinlich nur Zugriff auf eine einzige [!UICONTROL Experience Cloud-Organisation] haben.)
+1. Wählen Sie in der {0[&#128279;](https://developer.adobe.com/console/home)Adobe Developer Console} die [!UICONTROL Experience Cloud-Organisation] für die Sie diese Integration erstellen möchten. (Beachten Sie, dass Sie wahrscheinlich nur Zugriff auf eine einzige [!UICONTROL Experience Cloud-Organisation] haben.)
 
    ![configure-io-target-createproject2.png](assets/configure-io-target-createproject2.png)
 
@@ -114,7 +114,7 @@ Es gibt viele Möglichkeiten, die Details Ihres Projekts in Postman anzugeben, a
 >
 >Eine Videoanleitung für jede Experience Cloud-Lösung, einschließlich [!DNL Target], finden Sie unter [Verwenden von Postman mit Experience Platform-APIs](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html). Die folgenden Abschnitte sind für die [!DNL Target]-APIs relevant: 1. Erstellen und Exportieren der Experience Platform-API nach Postman 2. Erstellen eines Zugriffs-Tokens mit Postman. Diese Schritte werden ebenfalls unten beschrieben.
 
-1. Navigieren Sie noch in der {0](https://developer.adobe.com/console/home)Adobe Developer Console}, um die Anmeldeinformationen für das **[!UICONTROL Service-Konto (JWT) Ihres neuen Projekts]**. [Verwenden Sie entweder die linke Navigation oder den **[!UICONTROL Anmeldedaten]** Abschnitt wie dargestellt.
+1. Navigieren Sie noch in der {0[&#128279;](https://developer.adobe.com/console/home)Adobe Developer Console}, um die Anmeldeinformationen für das **[!UICONTROL Service-Konto (JWT) Ihres neuen Projekts]**. Verwenden Sie entweder die linke Navigation oder den **[!UICONTROL Anmeldedaten]** Abschnitt wie dargestellt.
 
    ![JWT1](assets/configure-io-target-jwt1.png)
 
@@ -172,7 +172,7 @@ In diesem Abschnitt generieren Sie Ihr Bearer-Zugriffstoken, das zum Authentifiz
 
    ![token1](assets/configure-io-target-generatetoken1.png)
 
-1. Klicken Sie auf die Postman-Sammlung zur Generierung von Adobe I/O-Zugriffstoken ]**.**[!UICONTROL 
+1. Klicken Sie auf die Postman-Sammlung zur Generierung von Adobe I/O-Zugriffstoken **.**
 
    ![token2](assets/configure-io-target-generatetoken2.png)
 
@@ -248,4 +248,4 @@ In dieser Übung verwenden Sie Ihr neues Bearer-Zugriffstoken, indem Sie eine AP
 
    ![testToken6](assets/configure-io-target-testtoken6.png)
 
-Nachdem Sie nun Ihre Adobe-Authentifizierung überprüft haben, können Sie sie für die Interaktion mit [!DNL Adobe Target]-APIs (sowie anderen Adobe-APIs) verwenden. Sie können beispielsweise [Recommendations-APIs verwenden](recs-api/overview.md) um Recommendations zu erstellen oder zu verwalten, oder Sie können sie mit der Target[Bereitstellungs-API ](/help/dev/implement/delivery-api/overview.md).
+Nachdem Sie nun Ihre Adobe-Authentifizierung überprüft haben, können Sie sie für die Interaktion mit [!DNL Adobe Target]-APIs (sowie anderen Adobe-APIs) verwenden. Sie können beispielsweise [Recommendations-APIs verwenden](recs-api/overview.md) um Recommendations zu erstellen oder zu verwalten, oder Sie können sie mit der Target[Bereitstellungs-API &#x200B;](/help/dev/implement/delivery-api/overview.md).

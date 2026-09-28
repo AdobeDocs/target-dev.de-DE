@@ -128,7 +128,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 ## Benutzer ruft Analytics-Payload von [!DNL Adobe Target] ab
 
-Ein Benutzer kann die [!DNL Adobe Analytics] Payload für eine bestimmte Mbox abrufen und dann über die „Data Insertion [&quot; an [!DNL Adobe Analytics] ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Wenn eine [!DNL Adobe Target]-Anfrage ausgelöst wird, übergeben Sie `client_side` an das Feld `logging` in der Anfrage. Diese Anfrage gibt eine Payload zurück, wenn die angegebene Mbox in einer Aktivität vorhanden ist, die [!DNL Analytics] als Berichtsquelle verwendet.
+Ein Benutzer kann die [!DNL Adobe Analytics] Payload für eine bestimmte Mbox abrufen und dann über die „Data Insertion [&quot; an [!DNL Adobe Analytics] &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Wenn eine [!DNL Adobe Target]-Anfrage ausgelöst wird, übergeben Sie `client_side` an das Feld `logging` in der Anfrage. Diese Anfrage gibt eine Payload zurück, wenn die angegebene Mbox in einer Aktivität vorhanden ist, die [!DNL Analytics] als Berichtsquelle verwendet.
 
 >[!BEGINTABS]
 

@@ -36,7 +36,7 @@ ht-degree: 0%
 1. Stellen Sie sicher, dass die `logger` konfiguriert ist
 1. Stellen Sie sicher, dass [!DNL Target] Traces aktiviert ist
 1. Stellen Sie sicher dass das *Entscheidungsartefakt* On-Device Decisioning) gemäß dem definierten Abrufintervall abgerufen und zwischengespeichert wurde.
-1. Validieren der Inhaltsbereitstellung über das zwischengespeicherte Regelartefakt durch Erstellen einer Test[!UICONTROL Entscheidungsaktivität auf dem ] über den formularbasierten Experience Composer.
+1. Validieren der Inhaltsbereitstellung über das zwischengespeicherte Regelartefakt durch Erstellen einer Test[!UICONTROL Entscheidungsaktivität auf dem &#x200B;] über den formularbasierten Experience Composer.
 1. Überprüfen von Fehlern beim Senden von Benachrichtigungen
 
 ## &#x200B;1. Stellen Sie sicher, dass der Logger konfiguriert ist
@@ -152,7 +152,7 @@ Durch Aktivieren von Traces werden zusätzliche Informationen aus [!DNL Adobe Ta
      },
    ```
 
-## &#x200B;4. Validieren der Inhaltsbereitstellung über das zwischengespeicherte Regelartefakt durch Erstellen einer Test[!UICONTROL Entscheidungsaktivität auf dem ] über den formularbasierten Experience Composer
+## &#x200B;4. Validieren der Inhaltsbereitstellung über das zwischengespeicherte Regelartefakt durch Erstellen einer Test[!UICONTROL Entscheidungsaktivität auf dem &#x200B;] über den formularbasierten Experience Composer
 
 1. Navigieren Sie zur [!DNL Target]-Benutzeroberfläche in Experience Cloud
 

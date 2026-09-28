@@ -41,7 +41,7 @@ ht-degree: 1%
 1. Metriken für Tracking-KPIs hinzufügen
 1. Personalisierte Angebote in Ihrer Anwendung implementieren
 1. Implementieren von Code zum Tracking von Konversionsereignissen
-1. Aktivieren [!UICONTROL  Personalisierungsaktivität ]Experience Targeting) (XT)
+1. Aktivieren [!UICONTROL &#x200B; Personalisierungsaktivität &#x200B;]Experience Targeting) (XT)
 
 Angenommen, Sie sind ein Reiseunternehmen. Sie möchten ein personalisiertes Angebot von 25% Rabatt auf bestimmte Reisepakete anbieten. Damit das Angebot bei Ihren Nutzern Anklang findet, entscheiden Sie sich, ein Wahrzeichen der Zielstadt anzuzeigen. Sie sollten auch sicherstellen, dass die Bereitstellung Ihrer personalisierten Angebote mit einer Latenz nahe null erfolgt, damit die Benutzererlebnisse nicht beeinträchtigt werden und die Ergebnisse nicht verzerrt werden.
 
@@ -53,7 +53,7 @@ Angenommen, Sie sind ein Reiseunternehmen. Sie möchten ein personalisiertes Ang
 
    >[!NOTE]
    >
-   >Sie müssen über die Admin- oder Genehmiger[Benutzerrolle verfügen, ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) den Umschalter [!UICONTROL On-Device Decisioning] zu aktivieren oder zu deaktivieren.
+   >Sie müssen über die Admin- oder Genehmiger[Benutzerrolle verfügen, &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) den Umschalter [!UICONTROL On-Device Decisioning] zu aktivieren oder zu deaktivieren.
 
    Nach der Aktivierung **[!UICONTROL Umschalters]** On-Device Decisioning“ beginnt [!DNL Adobe Target] mit der Erstellung *Regelartefakte* für Ihren Client.
 

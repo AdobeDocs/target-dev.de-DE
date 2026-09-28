@@ -1,6 +1,6 @@
 ---
 title: Best Practices bei der Verwendung der geräteinternen Entscheidungsfindung
-description: Erfahren Sie mehr über Best Practices bei [!UICONTROL  Verwendung von ] in [!DNL Adobe Target]
+description: Erfahren Sie mehr über Best Practices bei [!UICONTROL &#x200B; Verwendung von &#x200B;] in [!DNL Adobe Target]
 feature: Implement Server-side
 exl-id: a0ca014d-ad9f-4ecc-961d-cb7ba236507f
 TQID: 'https://experienceleague.adobe.com/GgVJaAal4uS1RqpCK3wNCVwPjAOaXzjXNV7EoqWhwcY'

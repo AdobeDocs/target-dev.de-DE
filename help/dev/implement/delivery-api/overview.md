@@ -25,9 +25,9 @@ Die [!DNL Adobe Target Delivery API] basiert auf REST. In dieser Dokumentation w
 
 >[!IMPORTANT]
 >
->Die hier dokumentierte [!DNL Delivery API] ist für [!DNL at.js] und direkte Server-seitige Implementierungen vorgesehen. Wenn Sie [!DNL Target] mithilfe der [!DNL Adobe Experience Platform Web SDK] implementieren, verwenden Sie die Interact-API, auf die über den `sendEvent`-Befehl über die [!UICONTROL Experience Platform-Edge Network] zugegriffen wird, anstatt die [!DNL Delivery API] direkt aufzurufen. Weitere Informationen finden Sie unter {0](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md) Adobe Experience Platform Web SDK[ und Vergleichen der at.js-Bibliothek mit der Experience Platform Web ](/help/dev/implement/client-side/aep-web-sdk/web-sdk-atjs-comparison.md)SDK).[
+>Die hier dokumentierte [!DNL Delivery API] ist für [!DNL at.js] und direkte Server-seitige Implementierungen vorgesehen. Wenn Sie [!DNL Target] mithilfe der [!DNL Adobe Experience Platform Web SDK] implementieren, verwenden Sie die Interact-API, auf die über den `sendEvent`-Befehl über die [!UICONTROL Experience Platform-Edge Network] zugegriffen wird, anstatt die [!DNL Delivery API] direkt aufzurufen. Weitere Informationen finden Sie unter &lbrace;0[&#128279;](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md) Adobe Experience Platform Web SDK[&#x200B; und Vergleichen der at.js-Bibliothek mit der Experience Platform Web &#x200B;](/help/dev/implement/client-side/aep-web-sdk/web-sdk-atjs-comparison.md)SDK).
 
-Mit der Bereitstellungs-API von {]}Adobe Target haben Sie folgende Möglichkeiten:[!UICONTROL 
+Mit der Bereitstellungs-API von {}Adobe Target haben Sie folgende Möglichkeiten:
 
 * Bereitstellen von Erlebnissen im Web, einschließlich SPAs und mobilen Kanälen sowie Nicht-Browser-basierten IoT-Geräten wie einem verbundenen TV, Kiosk oder digitalen Bildschirmen im Geschäft.
 * Bereitstellen von Erlebnissen von jeder Server-seitigen Plattform oder Anwendung, die HTTP/s-Aufrufe ausführen kann.

@@ -35,7 +35,7 @@ Um zu sehen, wie Sie mit der Java-SDK beginnen können, navigieren Sie zum Handb
 
 Testen Sie die Java-SDK:
 
-* Indem Sie die Demo[[!DNL Adobe Target] [!UICONTROL Site ]On-Device Decisioning“ besuchen](https://github.com/adobe/on-device-decisioning-demo-site)
+* Indem Sie die Demo[[!DNL Adobe Target] [!UICONTROL Site &#x200B;]On-Device Decisioning“ besuchen](https://github.com/adobe/on-device-decisioning-demo-site)
 * In einer [Beispielanwendung](../sdk-guides/sample-apps/sample-apps.md).
 
 ## Referenz

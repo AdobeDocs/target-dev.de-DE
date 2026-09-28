@@ -35,7 +35,7 @@ ht-degree: 0%
 
 Manchmal können die von Recommendations bereitgestellten Algorithmen bestimmte Elemente, die Sie bewerben möchten, nicht aufdecken. In einem solchen Fall bieten benutzerdefinierte Kriterien eine Möglichkeit, einen bestimmten Satz empfohlener Elemente für ein bestimmtes Schlüsselelement oder eine bestimmte Kategorie bereitzustellen.
 
-Um benutzerdefinierte Kriterien zu erstellen, definieren und importieren Sie die gewünschte Zuordnung zwischen dem Schlüsselelement oder der Kategorie und den empfohlenen Elementen. Dieser Prozess wird in der [Dokumentation zu benutzerdefinierten Kriterien“ ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html). Wie in dieser Dokumentation erwähnt, können Sie benutzerdefinierte Kriterien über die Benutzeroberfläche von Target erstellen, bearbeiten und löschen. Target bietet jedoch auch eine Reihe von APIs für benutzerdefinierte Kriterien, die eine detailliertere Verwaltung Ihrer benutzerdefinierten Kriterien ermöglichen.
+Um benutzerdefinierte Kriterien zu erstellen, definieren und importieren Sie die gewünschte Zuordnung zwischen dem Schlüsselelement oder der Kategorie und den empfohlenen Elementen. Dieser Prozess wird in der [Dokumentation zu benutzerdefinierten Kriterien“ &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html). Wie in dieser Dokumentation erwähnt, können Sie benutzerdefinierte Kriterien über die Benutzeroberfläche von Target erstellen, bearbeiten und löschen. Target bietet jedoch auch eine Reihe von APIs für benutzerdefinierte Kriterien, die eine detailliertere Verwaltung Ihrer benutzerdefinierten Kriterien ermöglichen.
 
 >[!WARNING]
 >
@@ -65,7 +65,7 @@ Fahren Sie mit den folgenden Schritten erst fort, nachdem Sie die obige Warnung 
 
    ![CreateCustomCriteria3](assets/CreateCustomCriteria3.png)
 
-1. Um sicherzustellen, dass Ihre benutzerdefinierten Kriterien erstellt wurden, navigieren Sie in Adobe Target zu **[!UICONTROL Recommendations > Kriterien]** und suchen Sie nach Ihren Kriterien anhand des Namens, oder verwenden Sie im ]**nächsten Schritt die**[!UICONTROL  API für benutzerdefinierte Kriterien auflisten.
+1. Um sicherzustellen, dass Ihre benutzerdefinierten Kriterien erstellt wurden, navigieren Sie in Adobe Target zu **[!UICONTROL Recommendations > Kriterien]** und suchen Sie nach Ihren Kriterien anhand des Namens, oder verwenden Sie im **nächsten Schritt die** API für benutzerdefinierte Kriterien auflisten.
 
    ![CreateCustomCriteria4](assets/CreateCustomCriteria4.png)
 

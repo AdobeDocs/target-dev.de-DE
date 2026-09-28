@@ -40,7 +40,7 @@ Befolgen Sie die Schritte im *Datenerfassung*-Diagramm, um sicherzustellen, dass
 
 Die Datenschicht ist beim Laden der Seite bereit oder die Datenschicht ändert sich nach dem Laden der Seite.
 
-Wenn Sie bereits während der Initialisierungsphase von [ Daten zugeordnet haben](/help/dev/patterns/recs-atjs/initialize-sdk.md) müssen Sie die Schritte in diesem Diagramm ausführen, wenn:
+Wenn Sie bereits während der Initialisierungsphase von [&#x200B; Daten zugeordnet haben](/help/dev/patterns/recs-atjs/initialize-sdk.md) müssen Sie die Schritte in diesem Diagramm ausführen, wenn:
 
 * Ihre Datenschicht wird auf dieselbe Seite in beliebiger Weise erweitert, und Sie möchten diese zusätzlichen Daten an [!DNL Target] senden
 * Sie möchten Produktkatalogdaten an [!DNL Target Recommendations] senden
@@ -111,7 +111,7 @@ Dieser Schritt stellt sicher, dass alle Daten, die an [!DNL Target] gesendet wer
 
 **Voraussetzungen**
 
-* Die gesamte Datenzuordnung muss mit der Funktion [targetPageParams“ durchgeführt ](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md).
+* Die gesamte Datenzuordnung muss mit der Funktion [targetPageParams“ durchgeführt &#x200B;](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md).
 
 **Messwerte**
 

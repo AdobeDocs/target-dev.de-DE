@@ -33,13 +33,13 @@ ht-degree: 0%
 ---
 # Verwalten des Recommendations-Katalogs mithilfe von APIs
 
-[ Sie haben gelernt, wie Sie mit dem JWT-Authentifizierungsfluss [ein Zugriffstoken generieren](/help/dev/before-administer/configure-authentication.md) die [!DNL Adobe Target]-Admin-APIs auf der [Adobe Developer Console verwenden, um sicherzustellen, dass Sie die Anforderungen zur Verwendung der Recommendations](/help/dev/before-administer/recs-api/overview.md#prerequisites)API erfüllen](https://developer.adobe.com/console/home).
+[&#128279;](https://developer.adobe.com/console/home)&#x200B; Sie haben gelernt, wie Sie mit dem JWT-Authentifizierungsfluss [ein Zugriffstoken generieren](/help/dev/before-administer/configure-authentication.md) die [!DNL Adobe Target]-Admin-APIs auf der [Adobe Developer Console verwenden, um sicherzustellen, dass Sie die Anforderungen zur Verwendung der Recommendations](/help/dev/before-administer/recs-api/overview.md#prerequisites)API erfüllen.
 
 Sie können jetzt die [Recommendations-APIs](https://developer.adobe.com/target/administer/recommendations-api/) verwenden, um Elemente in Ihrem Recommendations-Katalog hinzuzufügen, zu aktualisieren oder zu löschen. Wie bei den anderen Adobe Target Admin-APIs müssen die Recommendations-APIs authentifiziert werden.
 
 >[!NOTE]
 >
->Senden Sie die Anfrage **[!UICONTROL IMS: JWT Generate + Auth via User Token]** immer dann, wenn Sie Ihr Zugriffs-Token zur Authentifizierung aktualisieren müssen, da es nach 24 Stunden abläuft. Anweisungen finden [ unter „Konfigurieren der ](../configure-authentication.md)-Authentifizierung für Adobe&quot;.
+>Senden Sie die Anfrage **[!UICONTROL IMS: JWT Generate + Auth via User Token]** immer dann, wenn Sie Ihr Zugriffs-Token zur Authentifizierung aktualisieren müssen, da es nach 24 Stunden abläuft. Anweisungen finden [&#x200B; unter „Konfigurieren der &#x200B;](../configure-authentication.md)-Authentifizierung für Adobe&quot;.
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
@@ -167,7 +167,7 @@ Entitätsdetails können jeweils nur für eine Entität abgerufen werden. Sie k�
 
    >[!NOTE]
    >
-   >Wenn keine Umgebung explizit angegeben ist, versucht Get Entity, die Entität nur aus Ihrer [Standardumgebung“ ](https://experienceleague.adobe.com/docs/target/using/administer/environments.html). Wenn Sie aus einer anderen Umgebung als der Standardumgebung abrufen möchten, müssen Sie die Umgebungs-ID angeben.
+   >Wenn keine Umgebung explizit angegeben ist, versucht Get Entity, die Entität nur aus Ihrer [Standardumgebung“ &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/environments.html). Wenn Sie aus einer anderen Umgebung als der Standardumgebung abrufen möchten, müssen Sie die Umgebungs-ID angeben.
 
 1. Fügen Sie bei Bedarf den `environmentId` Parameter hinzu und senden Sie die Anfrage erneut.
 

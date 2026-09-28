@@ -55,13 +55,13 @@ Dieser Artikel bietet einen Überblick über die Unterschiede zwischen der `at.j
 
 ### Installieren von at.js
 
-[!DNL Adobe] können Kundinnen und Kunden die Bibliothek direkt über die Registerkarte [!DNL Adobe Experience Cloud] ([!UICONTROL ) ]. Die at.js-Bibliothek wird mit Einstellungen angepasst, die der Kunde hat: clientCode, imsOrgId usw.
+[!DNL Adobe] können Kundinnen und Kunden die Bibliothek direkt über die Registerkarte [!DNL Adobe Experience Cloud] ([!UICONTROL ) &#x200B;]. Die at.js-Bibliothek wird mit Einstellungen angepasst, die der Kunde hat: clientCode, imsOrgId usw.
 
 ### Installieren von Web SDK
 
 Die vordefinierte Version ist in einem CDN verfügbar. Sie können direkt auf Ihrer Seite auf die Bibliothek im CDN verweisen oder sie herunterladen und in Ihrer eigenen Infrastruktur hosten. Es ist in minimierten und nicht minimierten Formaten verfügbar. Die nicht minimierte Version ist zum Debuggen hilfreich.
 
-Weitere [ finden Sie unter „Installieren von Web SDK mithilfe ](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/library) JavaScript-Bibliothek“.
+Weitere [&#x200B; finden Sie unter „Installieren von Web SDK mithilfe &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/library) JavaScript-Bibliothek“.
 
 ## Konfigurieren der Bibliotheken
 
@@ -849,7 +849,7 @@ Wenn diese Option eingerichtet ist, sieht das Format der zurückgegebenen Payloa
 }
 ```
 
-Die Payload kann dann über den an [!DNL Analytics] weitergeleitet [!DNL  Data Insertion API].
+Die Payload kann dann über den an [!DNL Analytics] weitergeleitet [!DNL &#x200B; Data Insertion API].
 
 Beispiel 2: Konfiguration in jeder `getOffers`:
 
@@ -903,7 +903,7 @@ Mit diesem Code-Snippet wird die Antwort-Payload wie folgt dargestellt:
 }
 ```
 
-Die [!DNL Analytics]-Payload (`tnta`-Token) sollte mit der Dateneinfüge-[ in den [!DNL Analytics]-Treffer ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+Die [!DNL Analytics]-Payload (`tnta`-Token) sollte mit der Dateneinfüge-[&#x200B; in den [!DNL Analytics]-Treffer &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
 #### [!DNL Analytics] Server-seitige Protokollierung
 
@@ -1286,7 +1286,7 @@ Die at.js-Bibliothek stellt die folgenden Debugging-Funktionen bereit:
 
 >[!NOTE]
 >
->Alle diese Debugging-Funktionen sind in [Adobe Experience Platform Debugger mit erweiterten Funktionen ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
+>Alle diese Debugging-Funktionen sind in [Adobe Experience Platform Debugger mit erweiterten Funktionen &#x200B;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob).
 
 ### Verwenden von [!DNL Platform Web SDK]
 
@@ -1294,6 +1294,6 @@ Bei Verwendung von [!DNL Platform Web SDK] stehen mehrere Debugging-Funktionen z
 
 * Verwenden von [Assurance](https://experienceleague.adobe.com/de/docs/experience-platform/assurance/home)
 * [Web SDK Debug aktiviert](https://experienceleague.adobe.com/de/docs/experience-platform/assurance/home)
-* Verwenden [ Überwachungs-Hooks für Web SDK](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
+* Verwenden [&#x200B; Überwachungs-Hooks für Web SDK](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Verwenden Sie [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)
 * Zielspur

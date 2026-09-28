@@ -41,7 +41,7 @@ Informationen zur Planung und Implementierung von [!DNL Adobe Target Recommendat
 
 Bevor Sie Ihre erste [!UICONTROL Recommendations]-Aktivität in [!DNL Adobe Target] einrichten, führen Sie die folgenden Schritte aus:
 
-1. [Target[!UICONTROL  auf ]](#implement-target) Oberflächen für Web und Mobile Apps implementieren, die Sie zur Erfassung des Benutzerverhaltens und zur Bereitstellung von Empfehlungen verwenden möchten.
+1. [Target[!UICONTROL &#x200B; auf &#x200B;]](#implement-target) Oberflächen für Web und Mobile Apps implementieren, die Sie zur Erfassung des Benutzerverhaltens und zur Bereitstellung von Empfehlungen verwenden möchten.
 1. [Richten Sie Ihren [!UICONTROL Recommendations]-Katalog](#set-up-your-recommendations-catalog) von Produkten oder Inhalten ein, die Sie Ihren Benutzern empfehlen möchten.
 1. [Übergeben Sie Verhaltensinformationen und Kontext](#pass-behavioral-information-and-context), um [!DNL Target Recommendations] zu ermöglichen, personalisierte Empfehlungen bereitzustellen.
 1. [Konfigurieren globaler Ausschlüsse](#configure-global-exclusions).
@@ -50,7 +50,7 @@ Bevor Sie Ihre erste [!UICONTROL Recommendations]-Aktivität in [!DNL Adobe Targ
 
 ## &#x200B;1. Implementieren von [!UICONTROL Target]
 
-[!DNL Target Recommendations] müssen Sie Adobe Experience Platform Web SDK oder at.js 0.9.2 (oder höher) implementieren. Weitere Informationen finden Sie [[!UICONTROL  Client]seitigen Implementierungshandbüchern ](../client-side/overview.md) Target .
+[!DNL Target Recommendations] müssen Sie Adobe Experience Platform Web SDK oder at.js 0.9.2 (oder höher) implementieren. Weitere Informationen finden Sie [[!UICONTROL &#x200B; Client]seitigen Implementierungshandbüchern &#x200B;](../client-side/overview.md) Target .
 
 ## &#x200B;2. Einrichten des [!UICONTROL Recommendations]Katalogs
 
@@ -65,7 +65,7 @@ Um hochwertige Empfehlungen zu geben, [!UICONTROL Target] die Produkte oder Inha
 | Methode | Was es ist | Einsatz | Zusätzliche Informationen |
 | --- | --- | --- | --- |
 | Katalog-Feed | Planen Sie einen Feed (CSV, Google Product XML oder Analytics Product Classifications), der täglich hochgeladen und aufgenommen werden soll. | Zum Senden von Informationen über mehrere Elemente gleichzeitig. Für den Versand von Informationen, die sich selten ändern. | Siehe [Feeds](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html). |
-| Entitäten-API | Rufen Sie eine API auf, um minutengenaue Aktualisierungen für ein einzelnes Element zu senden. | Zum Senden von Aktualisierungen, wenn diese jeweils nur für ein Element erfolgen. Für den Versand von Informationen, die sich häufig ändern (z. B. Preis, Bestand/Lagerbestand). | Siehe Entwicklerdokumentation [ Entitäten-API](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities). |
+| Entitäten-API | Rufen Sie eine API auf, um minutengenaue Aktualisierungen für ein einzelnes Element zu senden. | Zum Senden von Aktualisierungen, wenn diese jeweils nur für ein Element erfolgen. Für den Versand von Informationen, die sich häufig ändern (z. B. Preis, Bestand/Lagerbestand). | Siehe Entwicklerdokumentation [&#x200B; Entitäten-API](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities). |
 | Weitergeben von Aktualisierungen auf der Seite | Senden Sie minutengenaue Aktualisierungen für ein einzelnes Element mit JavaScript auf der Seite oder mithilfe der Bereitstellungs-API. | Zum Senden von Aktualisierungen, wenn diese jeweils nur für ein Element erfolgen. Für den Versand von Informationen, die sich häufig ändern (z. B. Preis, Bestand/Lagerbestand). | Siehe [Artikelansichten/Produktseiten](#item-views-or-product-pages) unten. |
 
 >[!IMPORTANT]

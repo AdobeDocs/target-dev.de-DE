@@ -31,7 +31,7 @@ ht-degree: 9%
 ---
 # Übersicht über die unterstützten Funktionen
 
-Die Server-seitigen SDKs von [!DNL Adobe Target] bieten Entwicklern die Flexibilität, bei Entscheidungen zwischen Leistung und Aktualität der Daten zu wählen. Mit anderen Worten: Wenn die Bereitstellung der relevantesten und ansprechendsten personalisierten Inhalte über maschinelles Lernen für Sie am wichtigsten ist, sollte ein Live-Server-Aufruf erfolgen. Wenn die Leistung jedoch kritischer ist, sollte eine geräteinterne Entscheidung getroffen werden. Informationen [!UICONTROL  Funktionsfähigkeit von ]On-Device Decisioning“ finden Sie in der folgenden Liste unterstützter Funktionen:
+Die Server-seitigen SDKs von [!DNL Adobe Target] bieten Entwicklern die Flexibilität, bei Entscheidungen zwischen Leistung und Aktualität der Daten zu wählen. Mit anderen Worten: Wenn die Bereitstellung der relevantesten und ansprechendsten personalisierten Inhalte über maschinelles Lernen für Sie am wichtigsten ist, sollte ein Live-Server-Aufruf erfolgen. Wenn die Leistung jedoch kritischer ist, sollte eine geräteinterne Entscheidung getroffen werden. Informationen [!UICONTROL &#x200B; Funktionsfähigkeit von &#x200B;]On-Device Decisioning“ finden Sie in der folgenden Liste unterstützter Funktionen:
 
 * Aktivitätstypen
 * Zielgruppen-Targeting
@@ -39,7 +39,7 @@ Die Server-seitigen SDKs von [!DNL Adobe Target] bieten Entwicklern die Flexibil
 
 ## Aktivitätstypen
 
-Die folgende Tabelle gibt an, welche [Aktivitätstypen](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) die mit dem [formularbasierten Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?) erstellt wurden, für die Entscheidungsfindung [!UICONTROL  Gerät unterstützt oder nicht ].
+Die folgende Tabelle gibt an, welche [Aktivitätstypen](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) die mit dem [formularbasierten Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?) erstellt wurden, für die Entscheidungsfindung [!UICONTROL &#x200B; Gerät unterstützt oder nicht &#x200B;].
 
 | Aktivitätstyp | „Unterstützt“ |
 | --- | --- |
@@ -55,7 +55,7 @@ Die folgende Tabelle gibt an, welche [Aktivitätstypen](https://experienceleague
 
 ## Zielgruppen-Targeting
 
-Die folgende Tabelle gibt an, welche Zielgruppenregeln für die Entscheidungsfindung [!UICONTROL  Gerät unterstützt oder nicht ] werden.
+Die folgende Tabelle gibt an, welche Zielgruppenregeln für die Entscheidungsfindung [!UICONTROL &#x200B; Gerät unterstützt oder nicht &#x200B;] werden.
 
 | Zielgruppenregel | On-device Decisioning |
 | --- | --- |
@@ -73,7 +73,7 @@ Die folgende Tabelle gibt an, welche Zielgruppenregeln für die Entscheidungsfin
 
 ### Geotargeting für [!UICONTROL On-Device Decisioning]
 
-Um bei Aktivitäten mit [!UICONTROL -basierten Zielgruppen eine Latenz von nahezu null für ] Entscheidungsfindung auf dem Gerät beizubehalten, empfiehlt Adobe, die Geowerte selbst in dem Aufruf an `getOffers` anzugeben. Legen Sie dazu das `Geo`-Objekt im `Context` der Anfrage fest. Das bedeutet, dass Ihr Server eine Möglichkeit benötigt, den Standort jedes Endbenutzers zu bestimmen. Ihr Server kann beispielsweise mithilfe eines von Ihnen konfigurierten Services eine IP-zu-Geo-Suche durchführen. Einige Hosting-Anbieter wie Google Cloud bieten diese Funktion über benutzerdefinierte Header in jedem `HttpServletRequest`.
+Um bei Aktivitäten mit [!UICONTROL -basierten Zielgruppen eine Latenz von nahezu null für &#x200B;] Entscheidungsfindung auf dem Gerät beizubehalten, empfiehlt Adobe, die Geowerte selbst in dem Aufruf an `getOffers` anzugeben. Legen Sie dazu das `Geo`-Objekt im `Context` der Anfrage fest. Das bedeutet, dass Ihr Server eine Möglichkeit benötigt, den Standort jedes Endbenutzers zu bestimmen. Ihr Server kann beispielsweise mithilfe eines von Ihnen konfigurierten Services eine IP-zu-Geo-Suche durchführen. Einige Hosting-Anbieter wie Google Cloud bieten diese Funktion über benutzerdefinierte Header in jedem `HttpServletRequest`.
 
 >[!BEGINTABS]
 
@@ -184,7 +184,7 @@ public class TargetRequestUtils {
 
 ## Zuordnungsmethode
 
-Die folgende Tabelle gibt an, welche Zuordnungsmethoden für die [!UICONTROL On-Device Decisioning“ unterstützt oder nicht ] werden.
+Die folgende Tabelle gibt an, welche Zuordnungsmethoden für die [!UICONTROL On-Device Decisioning“ unterstützt oder nicht &#x200B;] werden.
 
 | Zuordnungsmethode | „Unterstützt“ |
 | --- | --- |

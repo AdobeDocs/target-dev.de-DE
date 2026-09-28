@@ -30,7 +30,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Dieses Handbuch gilt für [!DNL at.js] und direkte Server-seitige Implementierungen, die die „Target[!UICONTROL Bereitstellungs-API“ ]. Wenn Sie [!DNL Target] mit der [!UICONTROL Adobe Experience Platform Web SDK] implementieren, verwenden Sie stattdessen die Interact-API (`sendEvent`-Befehl über die [!UICONTROL Experience Platform Edge Network]). Weitere Informationen finden Sie unter {0](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md) Adobe Experience Platform Web SDK.[
+>Dieses Handbuch gilt für [!DNL at.js] und direkte Server-seitige Implementierungen, die die „Target[!UICONTROL Bereitstellungs-API“ &#x200B;]. Wenn Sie [!DNL Target] mit der [!UICONTROL Adobe Experience Platform Web SDK] implementieren, verwenden Sie stattdessen die Interact-API (`sendEvent`-Befehl über die [!UICONTROL Experience Platform Edge Network]). Weitere Informationen finden Sie unter &lbrace;0[&#128279;](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md) Adobe Experience Platform Web SDK.
 
 Ein [!UICONTROL Target-Bereitstellungs]API-Aufruf sieht wie folgt aus:
 

@@ -73,7 +73,7 @@ Das folgende Diagramm zeigt die Architektur [!UICONTROL On-Device Decisioning]. 
 
 ### Aktivitäten
 
-Die geräteinterne Entscheidungsfindung unterstützt die folgenden Aktivitätstypen, die vom ([-basierten Experience Composer) erstellt ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html):
+Die geräteinterne Entscheidungsfindung unterstützt die folgenden Aktivitätstypen, die vom ([-basierten Experience Composer) erstellt &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html):
 
 * [!UICONTROL A/B-Test]
 * [!UICONTROL Experience Targeting] (XT)
@@ -118,7 +118,7 @@ Nach der Aktivierung des Umschalters „Geräteinterne Entscheidungsfindung“ b
 >
 >Stellen Sie sicher, dass Sie den Umschalter aktivieren, bevor Sie [!DNL Adobe Target] SDK für die Verwendung [!UICONTROL On-Device Decisioning] initialisieren. Die Regelartefakte müssen zunächst generiert und an die Akamai-CDNs weitergegeben werden, damit [!UICONTROL On-Device Decisioning] funktioniert.
 
-### Alle vorhandenen ([!UICONTROL  Entscheidungsfindung auf dem Gerät] qualifizierten Aktivitäten in den Artefakt-Umschalter einschließen
+### Alle vorhandenen ([!UICONTROL &#x200B; Entscheidungsfindung auf dem Gerät] qualifizierten Aktivitäten in den Artefakt-Umschalter einschließen
 
 Schalten Sie dieses **ein** wenn alle Ihre Live [!DNL Target]-Aktivitäten, die für die [!UICONTROL Entscheidungsfindung auf dem Gerät] qualifiziert sind, automatisch in das Artefakt aufgenommen werden sollen.
 
@@ -138,7 +138,7 @@ Sie können auch alle Aktivitäten anzeigen, die [!UICONTROL On-Device Decisioni
 >
 >Nach dem Erstellen und Aktivieren einer Aktivität, die [!UICONTROL On-Device Decisioning]-fähig ist, kann es 20 Minuten dauern, bis sie in das Regelartefakt aufgenommen wird, das generiert und an die Akamai CDN-Pos weitergegeben wird.
 
-## Wie lautet die Zusammenfassung der Schritte, die ich ausführen muss, um sicherzustellen, [!UICONTROL  meine ]-Aktivitäten erfolgreich über die Server-seitige SDK von [!DNL Adobe Target] bereitgestellt werden?
+## Wie lautet die Zusammenfassung der Schritte, die ich ausführen muss, um sicherzustellen, [!UICONTROL &#x200B; meine &#x200B;]-Aktivitäten erfolgreich über die Server-seitige SDK von [!DNL Adobe Target] bereitgestellt werden?
 
 1. Rufen Sie die [!DNL Adobe Target]-Benutzeroberfläche auf und navigieren Sie **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** > **[!UICONTROL Kontodetails]**, um den Umschalter **[!UICONTROL Geräteinterne Entscheidungsfindung]** zu aktivieren.
 1. Aktivieren Sie den **[!UICONTROL Alle vorhandenen [!UICONTROL geräteinternen Entscheidungsfindung einbeziehen] qualifizierten Aktivitäten im Artefakt]**.
@@ -147,7 +147,7 @@ Sie können auch alle Aktivitäten anzeigen, die [!UICONTROL On-Device Decisioni
 1. Implementieren Sie `getOffers()` oder `getAttributes()` in Ihrem Code, um ein Erlebnis auf dem Gerät abzurufen.
 1. Bereitstellen des Codes.
 
-Beispiele, die die ersten Schritte mit den Schritten 1-3 oben veranschaulichen, finden Sie [ Abschnitt „Erste Schritte](../getting-started/getting-started.md).
+Beispiele, die die ersten Schritte mit den Schritten 1-3 oben veranschaulichen, finden Sie [&#x200B; Abschnitt „Erste Schritte](../getting-started/getting-started.md).
 
 
 ## Zusätzliche Ressourcen
@@ -170,7 +170,7 @@ Dieses 7-minütige Video:
 * Beschreibt [!UICONTROL On-Device Decisioning] einschließlich dessen Vergleich mit anderen Methoden [!DNL Target] Implementierung
 * Veranschaulicht, wie die [!UICONTROL On-Device Decisioning] in Target aktiviert wird
 * Untersucht eine beispielhafte formularbasierte Composer-Aktivität, die mit JSON-Inhalten konfiguriert wurde
-* Zeigt beispielhaften Node.js-SDK-Code mit der Schlüsselkonfiguration, die für [!UICONTROL  Entscheidungsfindung auf dem Gerät erforderlich ist]
+* Zeigt beispielhaften Node.js-SDK-Code mit der Schlüsselkonfiguration, die für [!UICONTROL &#x200B; Entscheidungsfindung auf dem Gerät erforderlich ist]
 * Zeigt Ergebnisse in einem Browser an
 
 >[!VIDEO](https://video.tv.adobe.com/v/329032/?quality=12)

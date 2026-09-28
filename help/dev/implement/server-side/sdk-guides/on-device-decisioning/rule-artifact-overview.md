@@ -1,6 +1,6 @@
 ---
 title: Verstehen des Artefakts der geräteinternen Entscheidungsregel
-description: Erfahren Sie, wie Sie das Regelartefakt verwenden, das eine JSON-Darstellung Ihrer [!DNL Adobe Target]-Aktivitäten [!UICONTROL Entscheidungsfindung auf ] Gerät) ist.
+description: Erfahren Sie, wie Sie das Regelartefakt verwenden, das eine JSON-Darstellung Ihrer [!DNL Adobe Target]-Aktivitäten [!UICONTROL Entscheidungsfindung auf &#x200B;] Gerät) ist.
 feature: APIs/SDKs
 exl-id: 3dfb08df-eaa9-43d4-b009-e5f64c3a96d7
 TQID: 'https://experienceleague.adobe.com/mPzCK-vBYFAQnslX-8FPsBaeSiYtyxjZv76anbpHWuE'
@@ -29,7 +29,7 @@ ht-degree: 0%
 ---
 # Übersicht über Regelartefakte
 
-Das Regelartefakt ist eine JSON-Darstellung Ihrer [!DNL Adobe Target]-Aktivitäten [!UICONTROL Entscheidungsfindung auf ]. Sie wird von [!DNL Adobe Target] generiert und an das Akamai-CDN weitergegeben, um sicherzustellen, dass ein Regelartefakt so nah wie möglich bei Ihren Endbenutzern verfügbar ist. Sie enthält Metadaten, die eine präzise Ausführung und Bereitstellung Ihrer Aktivitäten sicherstellen und gleichzeitig über die Ereignisverfolgung Echtzeit-Analysen ermöglichen. Die [!DNL Adobe Target] SDKs können so konfiguriert werden, dass das Regelartefakt automatisch verwaltet werden kann. Dabei kann es in einem benutzerdefinierten Zeitintervall heruntergeladen oder aktualisiert werden. Darüber hinaus können Sie auch Ihre eigene lokale Kopie des Regelartefakts mithilfe eines verteilten Arbeitsspeicher-Caching-Systems wie [Memcached](https://memcached.org/) verwalten, um das [!DNL Adobe Target] SDK zu initialisieren, damit Ihre statuslosen Server Anfragen sofort bereitstellen können. Weitere Informationen zu diesen Optionen finden Sie in den folgenden Handbüchern:
+Das Regelartefakt ist eine JSON-Darstellung Ihrer [!DNL Adobe Target]-Aktivitäten [!UICONTROL Entscheidungsfindung auf &#x200B;]. Sie wird von [!DNL Adobe Target] generiert und an das Akamai-CDN weitergegeben, um sicherzustellen, dass ein Regelartefakt so nah wie möglich bei Ihren Endbenutzern verfügbar ist. Sie enthält Metadaten, die eine präzise Ausführung und Bereitstellung Ihrer Aktivitäten sicherstellen und gleichzeitig über die Ereignisverfolgung Echtzeit-Analysen ermöglichen. Die [!DNL Adobe Target] SDKs können so konfiguriert werden, dass das Regelartefakt automatisch verwaltet werden kann. Dabei kann es in einem benutzerdefinierten Zeitintervall heruntergeladen oder aktualisiert werden. Darüber hinaus können Sie auch Ihre eigene lokale Kopie des Regelartefakts mithilfe eines verteilten Arbeitsspeicher-Caching-Systems wie [Memcached](https://memcached.org/) verwalten, um das [!DNL Adobe Target] SDK zu initialisieren, damit Ihre statuslosen Server Anfragen sofort bereitstellen können. Weitere Informationen zu diesen Optionen finden Sie in den folgenden Handbüchern:
 
 * [Automatisches Herunterladen, Speichern und Aktualisieren des Regelartefakts über die  [!DNL Adobe Target] SDK](rule-artifact-sdk.md)
 * [Herunterladen, Speichern und Aktualisieren des Regelartefakts über die JSON-Payload](rule-artifact-json.md)
