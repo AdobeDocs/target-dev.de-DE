@@ -167,7 +167,7 @@ Entitätsdetails können jeweils nur für eine Entität abgerufen werden. Sie k�
 
    >[!NOTE]
    >
-   >Wenn keine Umgebung explizit angegeben ist, versucht Get Entity, die Entität nur aus Ihrer [Standardumgebung“ &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/environments.html). Wenn Sie aus einer anderen Umgebung als der Standardumgebung abrufen möchten, müssen Sie die Umgebungs-ID angeben.
+   >Wenn keine Umgebung explizit angegeben ist, versucht Get Entity, die Entität nur aus Ihrer [Standardumgebung“ &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=de). Wenn Sie aus einer anderen Umgebung als der Standardumgebung abrufen möchten, müssen Sie die Umgebungs-ID angeben.
 
 1. Fügen Sie bei Bedarf den `environmentId` Parameter hinzu und senden Sie die Anfrage erneut.
 
