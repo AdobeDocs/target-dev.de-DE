@@ -3,32 +3,43 @@ title: Verwalten des Recommendations-Katalogs mithilfe von APIs
 description: Schritte, die zur Verwendung von Adobe Target-APIs zum Erstellen, Aktualisieren, Speichern, Abrufen und Löschen von Entitäten im Recommendations-Katalog erforderlich sind.
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
-thumbnail: null
+thumbnail:
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
-TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
+TQID: 'https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0fe52344f654f22d1ff7aaace0ba5a99e92d036d
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 930
+source-wordcount: '930'
 ht-degree: 0%
-
 ---
-
 # Verwalten des Recommendations-Katalogs mithilfe von APIs
 
-[&#128279;](https://developer.adobe.com/console/home)&#x200B; Sie haben gelernt, wie Sie mit dem JWT-Authentifizierungsfluss [ein Zugriffstoken generieren](/help/dev/before-administer/configure-authentication.md) die [!DNL Adobe Target]-Admin-APIs auf der [Adobe Developer Console verwenden, um sicherzustellen, dass Sie die Anforderungen zur Verwendung der Recommendations](/help/dev/before-administer/recs-api/overview.md#prerequisites)API erfüllen.
+[ Sie haben gelernt, wie Sie mit dem JWT-Authentifizierungsfluss [ein Zugriffstoken generieren](/help/dev/before-administer/configure-authentication.md) die [!DNL Adobe Target]-Admin-APIs auf der [Adobe Developer Console verwenden, um sicherzustellen, dass Sie die Anforderungen zur Verwendung der Recommendations](/help/dev/before-administer/recs-api/overview.md#prerequisites)API erfüllen](https://developer.adobe.com/console/home).
 
 Sie können jetzt die [Recommendations-APIs](https://developer.adobe.com/target/administer/recommendations-api/) verwenden, um Elemente in Ihrem Recommendations-Katalog hinzuzufügen, zu aktualisieren oder zu löschen. Wie bei den anderen Adobe Target Admin-APIs müssen die Recommendations-APIs authentifiziert werden.
 
 >[!NOTE]
 >
->Senden Sie die Anfrage **[!UICONTROL IMS: JWT Generate + Auth via User Token]** immer dann, wenn Sie Ihr Zugriffs-Token zur Authentifizierung aktualisieren müssen, da es nach 24 Stunden abläuft. Anweisungen finden [&#x200B; unter „Konfigurieren der &#x200B;](../configure-authentication.md)-Authentifizierung für Adobe&quot;.
+>Senden Sie die Anfrage **[!UICONTROL IMS: JWT Generate + Auth via User Token]** immer dann, wenn Sie Ihr Zugriffs-Token zur Authentifizierung aktualisieren müssen, da es nach 24 Stunden abläuft. Anweisungen finden [ unter „Konfigurieren der ](../configure-authentication.md)-Authentifizierung für Adobe&quot;.
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
@@ -150,13 +161,13 @@ Entitätsdetails können jeweils nur für eine Entität abgerufen werden. Sie k�
 1. Senden Sie die Anfrage.
 
    ![GetEntity3](assets/GetEntity3.png)
-Wenn Sie einen Fehler erhalten, der besagt, dass die Entität nicht gefunden wurde, wie im Beispiel oben gezeigt, überprüfen Sie, ob Sie die Anfrage an die richtige Zielumgebung senden.
+   Wenn Sie einen Fehler erhalten, der besagt, dass die Entität nicht gefunden wurde, wie im Beispiel oben gezeigt, überprüfen Sie, ob Sie die Anfrage an die richtige Zielumgebung senden.
 
 
 
    >[!NOTE]
    >
-   >Wenn keine Umgebung explizit angegeben ist, versucht Get Entity, die Entität nur aus Ihrer [Standardumgebung“ &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=de). Wenn Sie aus einer anderen Umgebung als der Standardumgebung abrufen möchten, müssen Sie die Umgebungs-ID angeben.
+   >Wenn keine Umgebung explizit angegeben ist, versucht Get Entity, die Entität nur aus Ihrer [Standardumgebung“ ](https://experienceleague.adobe.com/docs/target/using/administer/environments.html). Wenn Sie aus einer anderen Umgebung als der Standardumgebung abrufen möchten, müssen Sie die Umgebungs-ID angeben.
 
 1. Fügen Sie bei Bedarf den `environmentId` Parameter hinzu und senden Sie die Anfrage erneut.
 

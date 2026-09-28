@@ -1,20 +1,23 @@
 ---
-title: Verwenden [!UICONTROL getOffers()] in [!DNL Adobe Target]  bei Verwendung der Node.js-SDK
-description: Erfahren Sie, wie Sie [!UICONTROL getOffers()] verwenden, um eine Entscheidung auszuführen und ein Erlebnis daraus abzurufen [!DNL Adobe Target].
+title: Verwenden [!UICONTROL getOffers()] in [!DNL Adobe Target] bei Verwendung der Node.js-SDK
+description: Erfahren Sie, wie Sie [!UICONTROL getOffers()] verwenden, um eine Entscheidung auszuführen und ein Erlebnis aus [!DNL Adobe Target] abzurufen.
 feature: APIs/SDKs
 exl-id: 3c4125ea-68d4-405e-9b9a-5fa832743153
-TQID: https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4
+TQID: 'https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 342
+source-wordcount: '343'
 ht-degree: 20%
-
 ---
-
 # [!UICONTROL Angebote abrufen] (Node.js)
 
 ## Beschreibung
@@ -57,7 +60,7 @@ Das `options`-Objekt hat die folgende Struktur:
 | targetCookie | Objekt | Cookie [!DNL Target] |
 | targetLocationHintCookie | Objekt | Cookie für [!DNL Target]-Standorthinweise |
 | analyticsDetails | Array | Analytics-Payload im Fall einer Client-seitigen Analytics-Nutzung |
-| responseTokens | Array | Eine Liste von [Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=de&). |
+| responseTokens | Array | Eine Liste von [Antwort-Token](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?). |
 | Spur | Array | Aggregierte Trace-Daten für alle Anfrage-Mboxes/-Ansichten |
 | status | Objekt | Ein Objekt, das den Status der Antwort enthält. |
 | decisioningMethod | Zeichenfolge | Bestimmt, welche Entscheidungsmethode verwendet werden soll ([geräteintern](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md) Server-seitig, hybrid) |

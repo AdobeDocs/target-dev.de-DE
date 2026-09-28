@@ -4,25 +4,32 @@ description: Wie verwende ich den Vorabruf in der [!UICONTROL Adobe Target-Berei
 keywords: Bereitstellungs-API
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-TQID: https://experienceleague.adobe.com/gthn2vJrIjEkmQdpsf4J818OrzFiLpeRvXXRAUp2SiY
+TQID: 'https://experienceleague.adobe.com/gthn2vJrIjEkmQdpsf4J818OrzFiLpeRvXXRAUp2SiY'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Mobile experience
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 578
+source-wordcount: '578'
 ht-degree: 0%
-
 ---
-
 # Vorabruf
 
 Durch das Vorabrufen können Clients wie Mobile Apps und Server Inhalte für mehrere Mboxes oder Ansichten in einer Anfrage abrufen, lokal zwischenspeichern und später [!DNL Target] benachrichtigen, wenn der Besucher diese Mboxes oder Ansichten besucht.
@@ -136,7 +143,7 @@ In der Antwort sehen Sie das `content` Feld mit dem Erlebnis, das dem Besucher f
 
 ## Prefetch von Mboxes mit `clickTrack` Metriken bei Verwendung von [!UICONTROL Analytics for Target] (A4T)
 
-[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=de){target=_blank} (A4T) ist eine lösungsübergreifende Integration, mit der Sie Aktivitäten basierend auf [!DNL Analytics] Konversionsmetriken und Zielgruppensegmenten erstellen können.
+[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) ist eine lösungsübergreifende Integration, mit der Sie Aktivitäten basierend auf [!DNL Analytics] Konversionsmetriken und Zielgruppensegmenten erstellen können.
 
 Das folgende Code-Snippet ist eine Antwort von einem Vorabruf einer Mbox mit `clickTrack` Metriken, um [!DNL Analytics] darüber zu informieren, dass auf ein Angebot geklickt wurde:
 
@@ -181,7 +188,7 @@ Das folgende Code-Snippet ist eine Antwort von einem Vorabruf einer Mbox mit `cl
 
 ## Ansichten vorab abrufen
 
-Ansichten unterstützen Single Page Applications (SPA) und Mobile Apps nahtloser. Ansichten können als logische Gruppe visueller Elemente betrachtet werden, aus denen sich eine SPA oder ein mobiles Erlebnis zusammensetzt. Über die Bereitstellungs-API können jetzt von VEC erstellte [[!UICONTROL A/B]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=de){target=_blank}- und [[!UICONTROL Erlebnis-Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=de){target=_blank}(X)T-Aktivitäten mit Änderungen in [Ansichten für SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) vorab abgerufen werden.
+Ansichten unterstützen Single Page Applications (SPA) und Mobile Apps nahtloser. Ansichten können als logische Gruppe visueller Elemente betrachtet werden, aus denen sich eine SPA oder ein mobiles Erlebnis zusammensetzt. Über die Bereitstellungs-API können jetzt von VEC erstellte [[!UICONTROL A/B]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank}- und [[!UICONTROL Erlebnis-Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank}(X)T-Aktivitäten mit Änderungen in [Ansichten für SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) vorab abgerufen werden.
 
 ```shell  {line-numbers="true"}
 curl -X POST \

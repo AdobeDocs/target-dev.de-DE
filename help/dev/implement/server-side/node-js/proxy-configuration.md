@@ -1,20 +1,23 @@
 ---
-title: Implementieren der Proxy-Konfiguration in der  [!DNL Adobe Target] .js-SDK
-description: Erfahren Sie, wie Sie die [!UICONTROL TargetClient]-Proxy-Konfiguration in der  [!DNL Adobe Target] .js-SDK konfigurieren.
+title: Implementieren der Proxy-Konfiguration in der [!DNL Adobe Target] Node.js-SDK
+description: Erfahren Sie, wie Sie die [!UICONTROL TargetClient]-Proxy-Konfiguration in der [!DNL Adobe Target] Node.js-SDK konfigurieren.
 feature: APIs/SDKs
 exl-id: c9f04e81-3fa3-4e64-a974-379420b0518a
-TQID: https://experienceleague.adobe.com/kaE-ZEOTteaVp5kWSHiVYCvEiHuQHSMqeWRq6r-mJaA
+TQID: 'https://experienceleague.adobe.com/kaE-ZEOTteaVp5kWSHiVYCvEiHuQHSMqeWRq6r-mJaA'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 84
+source-wordcount: '100'
 ht-degree: 0%
-
 ---
-
 # Proxy-Konfiguration (Node.js)
 
 Um einen Proxy für die HTTP-Anfragen des SDK-Knotens zu konfigurieren, überschreiben Sie die Abruf-API, die von der SDK während der Initialisierung verwendet wird.

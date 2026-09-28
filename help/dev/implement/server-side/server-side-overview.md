@@ -1,32 +1,42 @@
 ---
 keywords: Server-seitig, Server-seitig, API, SDK, Node.js, NodeJS, NodeJS, Recommendations-API, API, APIs, Server-seitig1
-description: Erfahren Sie mehr  [!DNL Adobe Target]  die Server-seitigen Bereitstellungs-APIs, SDKs und  [!DNL Target Recommendations] -APIs.
-title: Wo erhalte ich Informationen  [!DNL Target]  Server-seitigen Bereitstellungs-APIs und -SDKs?
+description: Erfahren Sie mehr über die [!DNL Adobe Target] Server-seitigen Bereitstellungs-APIs, SDKs und [!DNL Target Recommendations]-APIs.
+title: Wo erhalte ich Informationen über [!DNL Target] Server-seitige Bereitstellungs-APIs und -SDKs?
 feature: Implement Server-side
 exl-id: 3eb0a789-cf1a-4d02-acf7-3c895bcb662f
-TQID: https://experienceleague.adobe.com/x5WKb9Eenz2bw-idOnxlpWdtiivTx05n38sNXEt3DNc
+TQID: 'https://experienceleague.adobe.com/x5WKb9Eenz2bw-idOnxlpWdtiivTx05n38sNXEt3DNc'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 subfeature_v2:
   - id: a6cc21b9-1a36-4fa6-9c61-4acd04d9c88c
+    internal-label: Delivery API
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 7a393cc6a3f30a276a256cdabb5b42fe08f3c505
+    internal-label: Machine learning
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 820
+source-wordcount: '823'
 ht-degree: 9%
-
 ---
-
 # Serverseitig: [!DNL Target] implementieren
 
 Informationen zu [!DNL Adobe Target] Server-seitigen Bereitstellungs-APIs, SDKs und [!DNL Target Recommendations]-APIs.
@@ -35,7 +45,7 @@ Informationen zu [!DNL Adobe Target] Server-seitigen Bereitstellungs-APIs, SDKs 
 >
 >Wenn Ihre Implementierung at.js und [!DNL AppMeasurement] Client-seitig verwendet, sollten Sie die [!UICONTROL Target-Bereitstellungs-API] und Server-seitigen SDKs verwenden, die unten erläutert werden.
 >
->Wenn Ihre Implementierung die [!UICONTROL Adobe Experience Platform Web SDK] verwendet, sollten Sie die [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network-Server-API verwenden]](https://experienceleague.adobe.com/de/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
+>Wenn Ihre Implementierung die [!UICONTROL Adobe Experience Platform Web SDK] verwendet, sollten Sie die [[!UICONTROL Adobe Experience Platform] [!UICONTROL Edge Network-Server-API verwenden]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
 
 Der folgende Prozess wird in einer Server-seitigen Implementierung von [!DNL Target] ausgeführt:
 
@@ -82,7 +92,7 @@ Mit den Server-seitigen SDKs von [!DNL Adobe Target] können Sie:
 * Stellen Sie **(ML)-gesteuerte personalisierte Erlebnisse für** bereit, unabhängig davon, über welchen Kanal oder welches Gerät der Benutzer mit Ihrem Unternehmen interagiert hat.
 * **Nahtlose Integration mit Adobe Experience Cloud**-Produkten wie **Adobe Analytics**, **Adobe Audience Manager** und dem **Experience Cloud ID-** von Serverseite aus.
 
-Auf der Seite [Erste Schritte](sdk-guides/getting-started/getting-started.md) erfahren Sie, wie Sie einen Anwendungsfall mit einfachem Feature-Flag über [On-Device Decisioning“ &#x200B;](sdk-guides/on-device-decisioning/overview.md).
+Auf der Seite [Erste Schritte](sdk-guides/getting-started/getting-started.md) erfahren Sie, wie Sie einen Anwendungsfall mit einfachem Feature-Flag über [On-Device Decisioning“ ](sdk-guides/on-device-decisioning/overview.md).
 
 Schauen Sie sich unsere [Sample Apps](sdk-guides/sample-apps/sample-apps.md) an, um Spaß zu haben und herumzuspielen!
 
@@ -104,7 +114,7 @@ Beachten Sie für Edge-API-Aufrufe, die nicht von SDK stammen, die folgenden Anf
 
 Wenn [!DNL Target] eine Anfrage als Bot-Traffic klassifiziert, kann die Personalisierung fehlschlagen oder unregelmäßig aussehen, da die Profilsuche, Segmentauswertung und personalisierte Inhalte für Aktivitäten wie [!UICONTROL Recommendations] und [!UICONTROL Automatisches Targeting] unterdrückt werden.
 
-Weitere Informationen zur Implementierung von mit SDK finden Sie in der [[!DNL Adobe Experience Platform Web SDK] Übersicht](https://experienceleague.adobe.com/de/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}.
+Weitere Informationen zur Implementierung von mit SDK finden Sie in der [[!DNL Adobe Experience Platform Web SDK] Übersicht](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}.
 
 **Beispiel einer Edge-API-Anfrage (Kopfzeilen müssen `User-Agent` enthalten):**
 

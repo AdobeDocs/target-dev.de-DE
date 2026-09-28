@@ -1,46 +1,66 @@
 ---
 keywords: Target-Entwicklerhandbuch; Übersicht; Startseite
 title: Adobe Target-Entwicklerhandbuch
-description: Wie implementiere und verwalte ich und  [!DNL Adobe Target]  mit seinen APIs und SDKs?
+description: Wie implementiere und verwalte ich [!DNL Adobe Target] und arbeite mit seinen APIs und SDKs?
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-TQID: https://experienceleague.adobe.com/lTn4veG9PKL-ZXohH3qv1UH7lpyLfn80nwuxgehXSy0
+TQID: 'https://experienceleague.adobe.com/lTn4veG9PKL-ZXohH3qv1UH7lpyLfn80nwuxgehXSy0'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
   - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 subfeature_v2:
   - id: a94ced60-8199-4549-b453-ede2acb4101e
+    internal-label: Hybrid implementation
   - id: c011fe9c-b94b-4a88-93d8-f2acece55112
+    internal-label: Administration
   - id: c5abb976-5170-45d6-bcac-66d15d10a4d4
+    internal-label: Release notes
   - id: cd7b6938-5837-4ee0-9790-5840997133d9
+    internal-label: User management
   - id: e22d67ea-317b-44f8-abd1-52e07f636ca8
+    internal-label: Reporting
   - id: fc9c2184-9102-403f-bd6c-0055021e4bea
+    internal-label: Overview
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+    internal-label: Machine learning
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 510
-ht-degree: 11%
-
+source-wordcount: '511'
+ht-degree: 13%
 ---
-
 # [!DNL Adobe Target]-Entwicklerhandbuch
 
-**([Anzeigen [!DNL Target] Dokumentationsaktualisierungen](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html?lang=de){target=_blank})**
+**([Anzeigen [!DNL Target] Dokumentationsaktualisierungen](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank})**
 
 Dieses *[!DNL Adobe Target]-Entwicklerhandbuch* enthält Ressourcen und Anleitungen für [!DNL Target], einschließlich API- und SDK-Dokumentation, zur Implementierung und Verwaltung von [!DNL Target].
 
@@ -52,7 +72,7 @@ Dieses *[!DNL Adobe Target]-Entwicklerhandbuch* enthält Ressourcen und Anleitun
 >
 >* [*[!DNL Adobe Target] Tutorials *](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=de){target=_blank}
 >
->Versionsinformationen finden Sie unter [Target-Versionshinweise (aktuell)](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=de){target=_blank} im Handbuch für *[!DNL Adobe Target]Business Practices*.
+>Versionsinformationen finden Sie unter [Target-Versionshinweise (aktuell)](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html){target=_blank} im Handbuch für *[!DNL Adobe Target]Business Practices*.
 
 ## Erste Schritte mit der Implementierung
 
@@ -112,7 +132,7 @@ Dieses *[!DNL Adobe Target]-Entwicklerhandbuch* enthält Ressourcen und Anleitun
 
 [**Admin Console-APIs**](https://developer.adobe.com/umapi/): Verwalten Sie Benutzer und Produktberechtigungen über die APIs für Benutzerverwaltung und Benutzersynchronisierung von Adobe.
 
-[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=de): Verwenden Sie die [!DNL Adobe Experience Platform Edge Network Server]-API für eine Vielzahl von Anwendungsfällen für Datenerfassung, Personalisierung, Werbung und Marketing.
+[**[!DNL Adobe Experience Platform Edge Network Server API]**](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html): Verwenden Sie die [!DNL Adobe Experience Platform Edge Network Server]-API für eine Vielzahl von Anwendungsfällen für Datenerfassung, Personalisierung, Werbung und Marketing.
 
 ## Ressourcen
 
@@ -124,6 +144,6 @@ Dieses *[!DNL Adobe Target]-Entwicklerhandbuch* enthält Ressourcen und Anleitun
 * [Target-Implementierung](./before-implement/prepare-to-implement-target.md)
 * [Verwaltung von Target](./before-administer/target-api-overview.md)
 * [Adobe Target Dev Docs GitHub Repo](https://github.com/AdobeDocs/target-developers)
-* [Versionshinweise zu Adobe Target](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html?lang=de)
+* [Versionshinweise zu Adobe Target](https://experienceleague.adobe.com/docs/target/using/release-notes/release-notes.html)
 * [Adobe Target Business-Benutzerhandbuch](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=de)
 

@@ -1,27 +1,33 @@
 ---
 keywords: Implementierung, API, Profil, Profil-API-Einstellungen, Authentifizierungs-Token
-description: Erfahren Sie, wie Sie die Authentifizierung für Batch-Aktualisierungen über  [!DNL Adobe Target] -APIs konfigurieren und ein Profil-Authentifizierungstoken generieren.
+description: Erfahren Sie, wie Sie die Authentifizierung für Batch-Aktualisierungen über [!DNL Adobe Target] APIs konfigurieren und ein Profil-Authentifizierungstoken generieren.
 title: Wie verwende ich Profil-API-Einstellungen, um Batch-Aktualisierungen zu aktivieren oder zu deaktivieren?
 feature: APIs/SDKs
 exl-id: 968f33d0-296b-4248-8c9a-8e6f3077bdfa
-TQID: https://experienceleague.adobe.com/-KYSphaCrm0ICK7g92v9x-uK--nwirs4-DWBR3G5rTM
+TQID: 'https://experienceleague.adobe.com/-KYSphaCrm0ICK7g92v9x-uK--nwirs4-DWBR3G5rTM'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 363
+source-wordcount: '364'
 ht-degree: 31%
-
 ---
-
 # Profil-API-Einstellungen
 
 Aktivieren oder deaktivieren Sie die Authentifizierung für Batch-Aktualisierungen über [!DNL Adobe Target] APIs und generieren Sie ein Profil-Authentifizierungstoken.
@@ -47,11 +53,11 @@ Für noch mehr Sicherheit können Sie festlegen, dass beim API-Aufruf für die M
 
    * Administratorrolle oder mindestens über Rechte als genehmigende Person verfügen
 
-     Weitere Informationen für Target Standard-Kunden finden Sie unter [Festlegen von Rollen und Berechtigungen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=de#roles-permissions) in *Benutzer*. Weitere Informationen für [!DNL Target Premium]-Kunden finden Sie unter [Konfigurieren von Enterprise-Berechtigungen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=de).
+     Weitere Informationen für Target Standard-Kunden finden Sie unter [Festlegen von Rollen und Berechtigungen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions) in *Benutzer*. Weitere Informationen für [!DNL Target Premium]-Kunden finden Sie unter [Konfigurieren von Enterprise-Berechtigungen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
 
    * Administratorrolle auf der Ebene Arbeitsbereich/Produktprofil
 
-     Arbeitsbereiche stehen nur [!DNL Target Premium]-Kunden zur Verfügung. Weitere Informationen finden Sie unter [Konfigurieren von Enterprise-Berechtigungen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=de).
+     Arbeitsbereiche stehen nur [!DNL Target Premium]-Kunden zur Verfügung. Weitere Informationen finden Sie unter [Konfigurieren von Enterprise-Berechtigungen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
 
    * Administratorrechte (Berechtigung „Sysadmin“) auf der [!DNL Adobe Target]-Produktebene
 

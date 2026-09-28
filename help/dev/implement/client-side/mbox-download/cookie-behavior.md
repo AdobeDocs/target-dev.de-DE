@@ -4,13 +4,23 @@ description: Erfahren Sie mehr über das Verhalten von Target-Cookies (Erstanbie
 title: Wo finde ich Informationen über Target-Cookies?
 feature: at.js
 role: Developer
-source-git-commit: 39f390a0e5eedf8c6957333759d31d96ed11b321
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
 source-wordcount: '1688'
 ht-degree: 53%
-
 ---
-
 # Cookies in Target
 
 Das Verhalten von Cookies ist davon abhängig, ob es sich um ein Erstanbieter-Cookie, ein Drittanbieter-Cookie mit Erstanbieter-Cookie oder nur um ein Drittanbieter-Cookie handelt.
@@ -23,7 +33,7 @@ Siehe auch [Löschen des Target-](/help/dev/before-implement/privacy/cookie-dele
 
 ## Verwenden von Erstanbieter-Cookies und Drittanbieter-Cookies
 
-Durch Ihre Site-Einrichtung wird bestimmt, welche Cookies Sie verwenden. Um Erstanbieter- und Drittanbieter-Cookies zu verstehen, ist es hilfreich, die Funktionsweise von Target zu verstehen. Weitere Informationen finden [&#x200B; unter &#x200B;](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=de) von Adobe Target .
+Durch Ihre Site-Einrichtung wird bestimmt, welche Cookies Sie verwenden. Um Erstanbieter- und Drittanbieter-Cookies zu verstehen, ist es hilfreich, die Funktionsweise von Target zu verstehen. Weitere Informationen finden [ unter ](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html) von Adobe Target .
 
 Es gibt drei Haupt-Nutzungsszenarien für Cookies:
 
@@ -138,4 +148,4 @@ Von Apple (übersetzter Auszug):
 | Betroffene Funktionalität | Details |
 |--- |--- |
 | Abmeldeunterstützung | Wegen der durch das WebKit von Apple bewirkten Änderungen am Tracking ist die Unterstützung für Ausschlüsse hinfällig.<br />Der Target-Ausschluss verwendet ein Cookie in der `clientcode.tt.omtrdc.net`-Domain. Weitere Informationen finden Sie unter [Datenschutz](/help/dev/before-implement/privacy/privacy.md).<br />Target unterstützt zwei Opt-outs:<ul><li>Einen pro Kunde (der Kunde verwaltet den Ausschluss-Link).</li><li>Einen über Adobe, der den Benutzer für alle Target-Funktionalität für alle Benutzer ausschließt.</li></ul>Beide Methoden verwenden den Drittanbieter-Cookie. |
-| Target-Aktivitäten | Kunden können ihre [Lebensdauer](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html?lang=de) für ihre Target-Konten auswählen (bis zu 90 Tage). Problematisch ist Folgendes: Wenn die Profillebensdauer des Kontos länger als 30 Tage ist und das Erstanbieter-Cookie gelöscht wird, da die Domain des Kunden als Tracking-Benutzer über mehrere Sites hinweg gekennzeichnet wurde, das Verhalten für Safari-Besucher in Target wie folgt beeinflusst wird:<br />**[!UICONTROL Target-Berichte &#x200B;]**: Wenn ein Safari-Benutzer eine Aktivität beginnt, nach 30 Tagen zurückkehrt und dann konvertiert, zählt dieser Benutzer als zwei Besucher und eine Konversion.<br />Dieses Verhalten ist bei Aktivitäten, die Analytics verwenden, identisch mit dem Verhalten der Berichtsquelle (A4T).<br />**[!UICONTROL Profil- und Aktivitätsmitgliedschaft]**:<ul><li>Profildaten werden gelöscht, wenn das Erstanbieter-Cookie abläuft.</li><li>Die Aktivitätsmitgliedschaft wird gelöscht, wenn das Erstanbieter-Cookie abläuft.</li><li> Target funktioniert in Safari nicht bei Konten, die eine Implementation mit Drittanbieter-Cookie oder Erst- und Drittanbieter-Cookie verwenden. Dieses Verhalten ist nicht neu. Safari lässt Cookies von Drittanbietern schon eine Weile nicht mehr zu.</li></ul><br />**[!UICONTROL Vorschläge &#x200B;]**: Wenn Sie befürchten, dass die Domain des Kunden möglicherweise als Domain markiert wird, die Besucher sitzungsübergreifend verfolgt, ist es am sichersten, die Profillebensdauer in Target auf 30 Tage oder weniger festzulegen. Diese Begrenzung stellt sicher, dass Benutzer in Safari und allen anderen Browsern ähnlich verfolgt werden. |
+| Target-Aktivitäten | Kunden können ihre [Lebensdauer](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) für ihre Target-Konten auswählen (bis zu 90 Tage). Problematisch ist Folgendes: Wenn die Profillebensdauer des Kontos länger als 30 Tage ist und das Erstanbieter-Cookie gelöscht wird, da die Domain des Kunden als Tracking-Benutzer über mehrere Sites hinweg gekennzeichnet wurde, das Verhalten für Safari-Besucher in Target wie folgt beeinflusst wird:<br />**[!UICONTROL Target-Berichte ]**: Wenn ein Safari-Benutzer eine Aktivität beginnt, nach 30 Tagen zurückkehrt und dann konvertiert, zählt dieser Benutzer als zwei Besucher und eine Konversion.<br />Dieses Verhalten ist bei Aktivitäten, die Analytics verwenden, identisch mit dem Verhalten der Berichtsquelle (A4T).<br />**[!UICONTROL Profil- und Aktivitätsmitgliedschaft]**:<ul><li>Profildaten werden gelöscht, wenn das Erstanbieter-Cookie abläuft.</li><li>Die Aktivitätsmitgliedschaft wird gelöscht, wenn das Erstanbieter-Cookie abläuft.</li><li> Target funktioniert in Safari nicht bei Konten, die eine Implementation mit Drittanbieter-Cookie oder Erst- und Drittanbieter-Cookie verwenden. Dieses Verhalten ist nicht neu. Safari lässt Cookies von Drittanbietern schon eine Weile nicht mehr zu.</li></ul><br />**[!UICONTROL Vorschläge ]**: Wenn Sie befürchten, dass die Domain des Kunden möglicherweise als Domain markiert wird, die Besucher sitzungsübergreifend verfolgt, ist es am sichersten, die Profillebensdauer in Target auf 30 Tage oder weniger festzulegen. Diese Begrenzung stellt sicher, dass Benutzer in Safari und allen anderen Browsern ähnlich verfolgt werden. |

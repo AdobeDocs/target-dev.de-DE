@@ -1,30 +1,39 @@
 ---
 keywords: Client Care;CNAME;Zertifikatprogramm;kanonischer Name;Cookies;Zertifikat;AMC;Adobe Managed Certificate;DigiCert;Domain Control Validation;DCV
-description: Arbeiten Sie  [!DNL Adobe]  der Kundenunterstützung zusammen, um die CNAME-Unterstützung (Canonical Name [!DNL Adobe Target]  zu implementieren und Probleme mit der Anzeigenblockierung zu beheben.
+description: Wenden Sie sich an [!DNL Adobe] Kundenunterstützung, um CNAME-Unterstützung (Canonical Name) zu implementieren [!DNL Adobe Target] Probleme mit der Anzeigenblockierung zu beheben.
 title: Wie verwende ich CNAME in Target?
 feature: Privacy & Security
 role: Developer
 exl-id: bf533771-6d46-48ba-964c-3ad9ce9f7352
-TQID: https://experienceleague.adobe.com/gTS60hypD2WGc2fJh-sUkq2-pkzt2KnM4CzSQ050L40
+TQID: 'https://experienceleague.adobe.com/gTS60hypD2WGc2fJh-sUkq2-pkzt2KnM4CzSQ050L40'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1255
+source-wordcount: '1326'
 ht-degree: 1%
-
 ---
-
 # CNAME und [!DNL Target]
 
 Anweisungen für die Arbeit mit [!DNL Adobe] Client Care zur Implementierung der CNAME-Unterstützung (Canonical Name) in [!DNL Adobe Target]. Verwenden Sie CNAME, um Probleme mit Anzeigen oder Sperren von ITP-bezogenen (Intelligent Tracking Prevention) Cookie-Richtlinien zu behandeln. Mit CNAME wird eine Domain aufgerufen, die dem Kunden gehört, und keine Domain, die [!DNL Adobe] gehört.
@@ -32,18 +41,18 @@ Anweisungen für die Arbeit mit [!DNL Adobe] Client Care zur Implementierung der
 ## CNAME-Unterstützung in [!DNL Target] anfordern
 
 1. Bestimmen Sie die Liste der Hostnamen, die Sie für Ihr SSL-Zertifikat benötigen (siehe FAQ unten).
-1. [Füllen Sie dieses Formular aus](/help/dev/implement/assets/FPC_Request_Form.xlsx) und fügen Sie es ein, wenn Sie [ein Ticket für die  [!DNL Adobe] -Kundenunterstützung öffnen, um CNAME-Unterstützung anzufordern](https://experienceleague.adobe.com/de/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C):
+1. [Füllen Sie dieses Formular aus](/help/dev/implement/assets/FPC_Request_Form.xlsx) und fügen Sie es ein, wenn Sie [ein Ticket für die  [!DNL Adobe] -Kundenunterstützung öffnen, um CNAME-Unterstützung anzufordern](https://experienceleague.adobe.com/en/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C):
 
    * [!DNL Adobe Target] Clientcode:
    * Hostnamen für SSL-Zertifikate (Beispiel: `target.example.com target.example.org`):
    * SSL-Zertifikatkäufer ([!DNL Adobe] wird dringend empfohlen, siehe FAQ): Adobe/Kunde
    * Wenn der Kunde das Zertifikat, auch bekannt als „Bring Your Own Certificate“ (BYOC), kauft, füllen Sie diese zusätzlichen Details aus:
 
-      * Zertifikatorganisation (Beispiel: Firma Inc):
-      * Organisationseinheit des Zertifikats (optional, Beispiel: Marketing):
-      * Zertifikatland (Beispiel: USA):
-      * Zertifikatstaat/-region (Beispiel: Kalifornien):
-      * Zertifikatstadt (Beispiel: San Jose):
+     * Zertifikatorganisation (Beispiel: Firma Inc):
+     * Organisationseinheit des Zertifikats (optional, Beispiel: Marketing):
+     * Zertifikatland (Beispiel: USA):
+     * Zertifikatstaat/-region (Beispiel: Kalifornien):
+     * Zertifikatstadt (Beispiel: San Jose):
 
 1. Für jede Hostnamenanforderung erstellt Adobe die Implementierung und kehrt mit einem CNAME-Datensatznamen zurück, den Sie erstellen können. Dieser enthält eine zufällige Zeichenfolge mit dem Suffix `tt.omtrdc.net`
 
@@ -340,7 +349,7 @@ To check DNS propagation around the world, see whatsmydns.net:
 Wenn Sie CNAME verwenden, sollte der Ausschluss-Link beispielsweise den Parameter „client=`clientcode`&quot; enthalten:
 `https://my.cname.domain/optout?client=clientcode`.
 
-Ersetzen Sie `clientcode` durch Ihren Client-Code und fügen Sie dann den Text oder das Bild hinzu, das mit der [Opt-out-URL) verknüpft &#x200B;](/help/dev/before-implement/privacy/privacy.md) soll.
+Ersetzen Sie `clientcode` durch Ihren Client-Code und fügen Sie dann den Text oder das Bild hinzu, das mit der [Opt-out-URL) verknüpft ](/help/dev/before-implement/privacy/privacy.md) soll.
 
 ## Bekannte Einschränkungen
 

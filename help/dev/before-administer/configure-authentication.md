@@ -1,25 +1,32 @@
 ---
-title: Konfigurieren der Authentifizierung für  [!DNL Adobe Target] -APIs
-description: Wie generiere ich Authentifizierungs-Token, die für die erfolgreiche Interaktion mit  [!DNL Adobe Target] -APIs erforderlich sind?
+title: Konfigurieren der Authentifizierung für [!DNL Adobe Target] APIs
+description: Wie generiere ich Authentifizierungs-Token, die für die erfolgreiche Interaktion mit [!DNL Adobe Target]-APIs erforderlich sind?
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
-TQID: https://experienceleague.adobe.com/sgdBKse1b-0kPKjzDx4fDoFsNpnIzXAT8TpDUkQ7fGw
+TQID: 'https://experienceleague.adobe.com/sgdBKse1b-0kPKjzDx4fDoFsNpnIzXAT8TpDUkQ7fGw'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: addda914fcf7ba1616ae9a9d49118e737b3ad923
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1927
+source-wordcount: '1929'
 ht-degree: 1%
-
 ---
-
 # Konfigurieren der Authentifizierung für [!DNL Adobe Target] APIs
 
 Die [!DNL Adobe Target] Admin-APIs, einschließlich [!DNL Recommendations Admin]-APIs, werden durch Authentifizierung gesichert, um sicherzustellen, dass nur autorisierte Benutzer sie für den Zugriff auf [!DNL Adobe Target] verwenden. Verwenden Sie die [Adobe Developer Console](https://developer.adobe.com/console/home), um diese Authentifizierung für alle [!DNL Adobe Experience Cloud solutions] zu verwalten, einschließlich [!DNL Adobe Target].
@@ -54,9 +61,9 @@ In diesem Abschnitt greifen Sie auf die [!DNL Adobe Developer Console] zu und er
 
 <!--(1. Generate your private key and public certificate, per the [documentation on authentication](https://developer.adobe.com/developer-console/docs/guides/authentication/). // [//]: # (as described in **Step 1** of [How to set up Adobe IO: Authentication - Step by Step](https://helpx.adobe.com/marketing-cloud-core/kb/adobe-io-authentication-step-by-step.html). After completing Step 1, return to this guide and resume with Step 2, below. // The outcome of this step should be the creation of a `private.key` file and a `certificate_pub.crt` file. Return to this guide once you have generated these two files.)-->
 
-1. Stellen Sie in der [Adobe Admin Console](https://adminconsole.adobe.com/) sicher, dass Ihrem [!DNL Adobe]-Benutzerkonto sowohl [Produktadministrator](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) als auch [Entwickler](https://helpx.adobe.com/de/enterprise/using/manage-developers.html) Zugriff auf [!DNL Target] gewährt wurde.
+1. Stellen Sie in der [Adobe Admin Console](https://adminconsole.adobe.com/) sicher, dass Ihrem [!DNL Adobe]-Benutzerkonto sowohl [Produktadministrator](https://helpx.adobe.com/enterprise/using/admin-roles.html) als auch [Entwickler](https://helpx.adobe.com/enterprise/using/manage-developers.html) Zugriff auf [!DNL Target] gewährt wurde.
 
-1. Wählen Sie in der {0[&#128279;](https://developer.adobe.com/console/home)Adobe Developer Console} die [!UICONTROL Experience Cloud-Organisation] für die Sie diese Integration erstellen möchten. (Beachten Sie, dass Sie wahrscheinlich nur Zugriff auf eine einzige [!UICONTROL Experience Cloud-Organisation] haben.)
+1. Wählen Sie in der {0](https://developer.adobe.com/console/home)Adobe Developer Console} die [!UICONTROL Experience Cloud-Organisation] für die Sie diese Integration erstellen möchten. [(Beachten Sie, dass Sie wahrscheinlich nur Zugriff auf eine einzige [!UICONTROL Experience Cloud-Organisation] haben.)
 
    ![configure-io-target-createproject2.png](assets/configure-io-target-createproject2.png)
 
@@ -105,9 +112,9 @@ Es gibt viele Möglichkeiten, die Details Ihres Projekts in Postman anzugeben, a
 
 >[!NOTE]
 >
->Videoanweisungen für alle Experience Cloud-Lösungen, einschließlich [!DNL Target], finden Sie unter [Verwenden von Postman mit Experience Platform-APIs](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=de). Die folgenden Abschnitte sind für die [!DNL Target]-APIs relevant: 1. Erstellen und Exportieren der Experience Platform-API nach Postman 2. Erstellen eines Zugriffs-Tokens mit Postman. Diese Schritte werden ebenfalls unten beschrieben.
+>Eine Videoanleitung für jede Experience Cloud-Lösung, einschließlich [!DNL Target], finden Sie unter [Verwenden von Postman mit Experience Platform-APIs](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html). Die folgenden Abschnitte sind für die [!DNL Target]-APIs relevant: 1. Erstellen und Exportieren der Experience Platform-API nach Postman 2. Erstellen eines Zugriffs-Tokens mit Postman. Diese Schritte werden ebenfalls unten beschrieben.
 
-1. Navigieren Sie noch in der {0[&#128279;](https://developer.adobe.com/console/home)Adobe Developer Console}, um die Anmeldeinformationen für das **[!UICONTROL Service-Konto (JWT) Ihres neuen Projekts]**. Verwenden Sie entweder die linke Navigation oder den **[!UICONTROL Anmeldedaten]** Abschnitt wie dargestellt.
+1. Navigieren Sie noch in der {0](https://developer.adobe.com/console/home)Adobe Developer Console}, um die Anmeldeinformationen für das **[!UICONTROL Service-Konto (JWT) Ihres neuen Projekts]**. [Verwenden Sie entweder die linke Navigation oder den **[!UICONTROL Anmeldedaten]** Abschnitt wie dargestellt.
 
    ![JWT1](assets/configure-io-target-jwt1.png)
 
@@ -165,7 +172,7 @@ In diesem Abschnitt generieren Sie Ihr Bearer-Zugriffstoken, das zum Authentifiz
 
    ![token1](assets/configure-io-target-generatetoken1.png)
 
-1. Klicken Sie auf die Postman-Sammlung zur Generierung von Adobe I/O-Zugriffstoken **.**
+1. Klicken Sie auf die Postman-Sammlung zur Generierung von Adobe I/O-Zugriffstoken ]**.**[!UICONTROL 
 
    ![token2](assets/configure-io-target-generatetoken2.png)
 
@@ -241,4 +248,4 @@ In dieser Übung verwenden Sie Ihr neues Bearer-Zugriffstoken, indem Sie eine AP
 
    ![testToken6](assets/configure-io-target-testtoken6.png)
 
-Nachdem Sie nun Ihre Adobe-Authentifizierung überprüft haben, können Sie sie für die Interaktion mit [!DNL Adobe Target]-APIs (sowie anderen Adobe-APIs) verwenden. Sie können beispielsweise [Recommendations-APIs verwenden](recs-api/overview.md) um Recommendations zu erstellen oder zu verwalten, oder Sie können sie mit der Target[Bereitstellungs-API &#x200B;](/help/dev/implement/delivery-api/overview.md).
+Nachdem Sie nun Ihre Adobe-Authentifizierung überprüft haben, können Sie sie für die Interaktion mit [!DNL Adobe Target]-APIs (sowie anderen Adobe-APIs) verwenden. Sie können beispielsweise [Recommendations-APIs verwenden](recs-api/overview.md) um Recommendations zu erstellen oder zu verwalten, oder Sie können sie mit der Target[Bereitstellungs-API ](/help/dev/implement/delivery-api/overview.md).

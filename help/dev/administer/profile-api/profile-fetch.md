@@ -1,21 +1,24 @@
 ---
 title: Profile abrufen
-description: Erfahren Sie, wie Sie mit Adobe Target-Profil-APIs Besucherdaten abrufen können, die in verwendet werden [!DNL Target].
+description: Erfahren Sie, wie Sie mit Adobe Target-Profil-APIs Besucherdaten abrufen können, um sie in [!DNL Target] zu verwenden.
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: b422ae68-49b3-4d60-9ea4-0fa67b6934b0
-TQID: https://experienceleague.adobe.com/sCVfAY8W0oYu2ak-W4MYvcWSoUiAuaU3762JEhocZSE
+TQID: 'https://experienceleague.adobe.com/sCVfAY8W0oYu2ak-W4MYvcWSoUiAuaU3762JEhocZSE'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 297
+source-wordcount: '297'
 ht-degree: 0%
-
 ---
-
 # Profile abrufen
 
 Ein [!DNL Target] kann auf drei Arten abgerufen werden: mithilfe eines `[!DNL Experience Cloud Visitor ID]` (`ECID`), `tntid` oder `thirdPartyId`.
@@ -70,7 +73,7 @@ Wenn dieser Aufruf erfolgt, versucht [!DNL Target], das Profil zuerst in dem Clu
 
 ## Authentifizierung
 
-Das [!DNL Target Profile API] kann gesichert werden, indem die Authentifizierung über die [!DNL Target]-Benutzeroberfläche aktiviert wird, wie hier beschrieben. Sobald die Authentifizierung aktiviert ist, muss bei allen Profil-API-Anfragen das Profil-Authentifizierungstoken in den Anfragekopfzeilen festgelegt sein. Das Token selbst kann über die [!DNL Target]-Benutzeroberfläche oder mithilfe der oben im Abschnitt &quot;[-Authentifizierungstoken“ &#x200B;](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} Schritte generiert werden.
+Das [!DNL Target Profile API] kann gesichert werden, indem die Authentifizierung über die [!DNL Target]-Benutzeroberfläche aktiviert wird, wie hier beschrieben. Sobald die Authentifizierung aktiviert ist, muss bei allen Profil-API-Anfragen das Profil-Authentifizierungstoken in den Anfragekopfzeilen festgelegt sein. Das Token selbst kann über die [!DNL Target]-Benutzeroberfläche oder mithilfe der oben im Abschnitt &quot;[-Authentifizierungstoken“ ](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} Schritte generiert werden.
 
 ## Messung
 

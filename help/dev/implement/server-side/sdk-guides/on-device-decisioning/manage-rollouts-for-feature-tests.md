@@ -1,27 +1,34 @@
 ---
 title: Verwalten von Rollouts für Funktionstests
-description: Erfahren Sie, wie Sie Rollouts für Funktionstests mit [!UICONTROL On-Device Decisioning“ &#x200B;].
+description: Erfahren Sie, wie Sie Rollouts für Funktionstests mit [!UICONTROL On-Device Decisioning“ ].
 feature: APIs/SDKs
 exl-id: caa91728-6ac0-4583-a594-0c8fe616342d
-TQID: https://experienceleague.adobe.com/soG8leVV3R4Y4FSns5oIJ43oziIhtOb2zJ5bkFYxeo0
+TQID: 'https://experienceleague.adobe.com/soG8leVV3R4Y4FSns5oIJ43oziIhtOb2zJ5bkFYxeo0'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 596
+source-wordcount: '596'
 ht-degree: 1%
-
 ---
-
 # Verwalten von Rollouts für Funktionstests
 
 ## Zusammenfassung der Schritte
@@ -42,9 +49,9 @@ Durch die Aktivierung der geräteinternen Entscheidungsfindung wird sichergestel
 
 >[!NOTE]
 >
->Sie müssen über die Admin- oder Genehmiger[Benutzerrolle verfügen, &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=de) den Umschalter [!UICONTROL On-Device Decisioning] zu aktivieren oder zu deaktivieren.
+>Sie müssen über die Admin- oder Genehmiger[Benutzerrolle verfügen, ](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) den Umschalter [!UICONTROL On-Device Decisioning] zu aktivieren oder zu deaktivieren.
 
-Nach der Aktivierung [!UICONTROL &#x200B; Umschalters &#x200B;]On-Device Decisioning“ beginnt [!DNL Adobe Target] mit der Erstellung *Regelartefakte* für Ihren Client.
+Nach der Aktivierung [!UICONTROL  Umschalters ]On-Device Decisioning“ beginnt [!DNL Adobe Target] mit der Erstellung *Regelartefakte* für Ihren Client.
 
 ## &#x200B;2. Erstellen einer [!UICONTROL A/B-Test]-Aktivität
 

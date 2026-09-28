@@ -1,34 +1,47 @@
 ---
 keywords: Server-seitig, Server-seitig, SDK, SDKs, geräteintern, Entscheidungsfindung, auf dem Gerät, auf dem Gerät, keine Latenz, Latenz, nahezu null, node.js, Server-seitig3
-description: Erfahren Sie, wie Sie [!UICONTROL [!UICONTROL On-Device Decisioning]] verwenden können, um Ihre A/ [!DNL Target] - und MVT-Aktivitäten auf Ihrem Server zwischenzuspeichern, um speicherinterne Entscheidungen mit nahezu null Latenz durchzuführen.
+description: Erfahren Sie, wie Sie [!UICONTROL [!UICONTROL On-Device Decisioning]] verwenden, um Ihre [!DNL Target] A/B- und MVT-Aktivitäten auf Ihrem Server zwischenzuspeichern, um speicherinterne Entscheidungen mit nahezu null Latenz durchzuführen.
 title: Was ist On-Device Decisioning?
 feature: Implement Server-side
 exl-id: 22ed3072-56f0-4075-9d1a-d642afe3b649
-TQID: https://experienceleague.adobe.com/-HHGn3lG5fOh2GLXQ6jOLRQmX7H24lN-2fseOg4y5H4
+TQID: 'https://experienceleague.adobe.com/-HHGn3lG5fOh2GLXQ6jOLRQmX7H24lN-2fseOg4y5H4'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1349
+source-wordcount: '1349'
 ht-degree: 8%
-
 ---
-
 # Übersicht über On-device Decisioning
 
 Die [!DNL Adobe Target]-SDKs der nächsten Generation bieten jetzt [!UICONTROL geräteinterne Entscheidungsfindung], mit der Sie Ihre A/B- und Experience Targeting(XT)-Kampagnen auf Ihrem Server zwischenspeichern und speicherinterne Entscheidungsfindungen mit einer Latenz von nahezu null durchführen können, ohne Netzwerkanfragen an die Edge Network von [!DNL Adobe Target] zu blockieren.
@@ -60,7 +73,7 @@ Das folgende Diagramm zeigt die Architektur [!UICONTROL On-Device Decisioning]. 
 
 ### Aktivitäten
 
-Die geräteinterne Entscheidungsfindung unterstützt die folgenden Aktivitätstypen, die vom ([-basierten Experience Composer) erstellt &#x200B;](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de):
+Die geräteinterne Entscheidungsfindung unterstützt die folgenden Aktivitätstypen, die vom ([-basierten Experience Composer) erstellt ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html):
 
 * [!UICONTROL A/B-Test]
 * [!UICONTROL Experience Targeting] (XT)
@@ -77,17 +90,17 @@ Die geräteinterne Entscheidungsfindung unterstützt die folgenden Zielgruppenre
 
 | Zielgruppenregel | On-device Decisioning |
 | --- | --- |
-| [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=de) | Ja<P>Bei der Verwendung der geräteinternen Entscheidungsfindung werden die folgenden Geoattribute unterstützt:<ul><li>Land/Region</li><li>Stadt</li><li>Breitengrad</li><li>Längengrad</li></ul> |
-| [Netzwerk](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html?lang=de) | Nein |
-| [Mobile](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html?lang=de) | Nein |
-| [Benutzerdefinierte Parameter](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html?lang=de) | Ja |
-| [Betriebssystem](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html?lang=de) | Ja |
-| [Seiten der Site](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html?lang=de) | Ja |
-| [Browser](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html?lang=de) | Ja |
-| [Besucherprofil](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=de) | Nein |
-| [Traffic-Quellen](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=de) | Nein |
-| [Zeitrahmen](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=de) | Ja |
-| [Experience Cloud-Zielgruppen](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=de) (Zielgruppen aus Adobe Audience Manager, Adobe Analytics und Adobe Experience Manager | Nein |
+| [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) | Ja<P>Bei der Verwendung der geräteinternen Entscheidungsfindung werden die folgenden Geoattribute unterstützt:<ul><li>Land/Region</li><li>Stadt</li><li>Breitengrad</li><li>Längengrad</li></ul> |
+| [Netzwerk](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/network.html) | Nein |
+| [Mobile](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/mobile.html) | Nein |
+| [Benutzerdefinierte Parameter](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/custom-parameters.html) | Ja |
+| [Betriebssystem](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html) | Ja |
+| [Seiten der Site](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/site-pages.html) | Ja |
+| [Browser](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/browser.html) | Ja |
+| [Besucherprofil](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | Nein |
+| [Traffic-Quellen](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | Nein |
+| [Zeitrahmen](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | Ja |
+| [Experience Cloud-Zielgruppen](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (Zielgruppen aus Adobe Audience Manager, Adobe Analytics und Adobe Experience Manager | Nein |
 
 ## Wie stelle ich meinen Client für die Verwendung von [!UICONTROL On-Device Decisioning] bereit?
 
@@ -105,7 +118,7 @@ Nach der Aktivierung des Umschalters „Geräteinterne Entscheidungsfindung“ b
 >
 >Stellen Sie sicher, dass Sie den Umschalter aktivieren, bevor Sie [!DNL Adobe Target] SDK für die Verwendung [!UICONTROL On-Device Decisioning] initialisieren. Die Regelartefakte müssen zunächst generiert und an die Akamai-CDNs weitergegeben werden, damit [!UICONTROL On-Device Decisioning] funktioniert.
 
-### Alle vorhandenen ([!UICONTROL &#x200B; Entscheidungsfindung auf dem Gerät] qualifizierten Aktivitäten in den Artefakt-Umschalter einschließen
+### Alle vorhandenen ([!UICONTROL  Entscheidungsfindung auf dem Gerät] qualifizierten Aktivitäten in den Artefakt-Umschalter einschließen
 
 Schalten Sie dieses **ein** wenn alle Ihre Live [!DNL Target]-Aktivitäten, die für die [!UICONTROL Entscheidungsfindung auf dem Gerät] qualifiziert sind, automatisch in das Artefakt aufgenommen werden sollen.
 
@@ -125,7 +138,7 @@ Sie können auch alle Aktivitäten anzeigen, die [!UICONTROL On-Device Decisioni
 >
 >Nach dem Erstellen und Aktivieren einer Aktivität, die [!UICONTROL On-Device Decisioning]-fähig ist, kann es 20 Minuten dauern, bis sie in das Regelartefakt aufgenommen wird, das generiert und an die Akamai CDN-Pos weitergegeben wird.
 
-## Wie lautet die Zusammenfassung der Schritte, die ich ausführen muss, um sicherzustellen, [!UICONTROL &#x200B; meine &#x200B;]-Aktivitäten erfolgreich über die Server-seitige SDK von [!DNL Adobe Target] bereitgestellt werden?
+## Wie lautet die Zusammenfassung der Schritte, die ich ausführen muss, um sicherzustellen, [!UICONTROL  meine ]-Aktivitäten erfolgreich über die Server-seitige SDK von [!DNL Adobe Target] bereitgestellt werden?
 
 1. Rufen Sie die [!DNL Adobe Target]-Benutzeroberfläche auf und navigieren Sie **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** > **[!UICONTROL Kontodetails]**, um den Umschalter **[!UICONTROL Geräteinterne Entscheidungsfindung]** zu aktivieren.
 1. Aktivieren Sie den **[!UICONTROL Alle vorhandenen [!UICONTROL geräteinternen Entscheidungsfindung einbeziehen] qualifizierten Aktivitäten im Artefakt]**.
@@ -134,7 +147,7 @@ Sie können auch alle Aktivitäten anzeigen, die [!UICONTROL On-Device Decisioni
 1. Implementieren Sie `getOffers()` oder `getAttributes()` in Ihrem Code, um ein Erlebnis auf dem Gerät abzurufen.
 1. Bereitstellen des Codes.
 
-Beispiele, die die ersten Schritte mit den Schritten 1-3 oben veranschaulichen, finden Sie [&#x200B; Abschnitt „Erste Schritte](../getting-started/getting-started.md).
+Beispiele, die die ersten Schritte mit den Schritten 1-3 oben veranschaulichen, finden Sie [ Abschnitt „Erste Schritte](../getting-started/getting-started.md).
 
 
 ## Zusätzliche Ressourcen
@@ -157,7 +170,7 @@ Dieses 7-minütige Video:
 * Beschreibt [!UICONTROL On-Device Decisioning] einschließlich dessen Vergleich mit anderen Methoden [!DNL Target] Implementierung
 * Veranschaulicht, wie die [!UICONTROL On-Device Decisioning] in Target aktiviert wird
 * Untersucht eine beispielhafte formularbasierte Composer-Aktivität, die mit JSON-Inhalten konfiguriert wurde
-* Zeigt beispielhaften Node.js-SDK-Code mit der Schlüsselkonfiguration, die für [!UICONTROL &#x200B; Entscheidungsfindung auf dem Gerät erforderlich ist]
+* Zeigt beispielhaften Node.js-SDK-Code mit der Schlüsselkonfiguration, die für [!UICONTROL  Entscheidungsfindung auf dem Gerät erforderlich ist]
 * Zeigt Ergebnisse in einem Browser an
 
 >[!VIDEO](https://video.tv.adobe.com/v/329032/?quality=12)

@@ -3,28 +3,39 @@ title: Verwalten benutzerdefinierter Kriterien
 description: Schritte, die zur Verwendung von Adobe Target-APIs zum Verwalten, Erstellen, Auflisten, Bearbeiten, Abrufen und Löschen von Adobe Target Recommendations-Kriterien erforderlich sind.
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
-thumbnail: null
+thumbnail:
 author: Judy Kim
 exl-id: 51a67a49-a92d-4377-9a9f-27116e011ab1
-TQID: https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0
+TQID: 'https://experienceleague.adobe.com/sRzck0uJDaJdFZ9nG4Ijrbw31iX3M8WY5nIW2x4nl-0'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: f05a93102cc0f9b86a6521ff8007aa59f2af3c1a
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 890
+source-wordcount: '939'
 ht-degree: 0%
-
 ---
-
 # Verwalten benutzerdefinierter Kriterien
 
 Manchmal können die von Recommendations bereitgestellten Algorithmen bestimmte Elemente, die Sie bewerben möchten, nicht aufdecken. In einem solchen Fall bieten benutzerdefinierte Kriterien eine Möglichkeit, einen bestimmten Satz empfohlener Elemente für ein bestimmtes Schlüsselelement oder eine bestimmte Kategorie bereitzustellen.
 
-Um benutzerdefinierte Kriterien zu erstellen, definieren und importieren Sie die gewünschte Zuordnung zwischen dem Schlüsselelement oder der Kategorie und den empfohlenen Elementen. Dieser Prozess wird in der [Dokumentation zu benutzerdefinierten Kriterien“ &#x200B;](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=de). Wie in dieser Dokumentation erwähnt, können Sie benutzerdefinierte Kriterien über die Benutzeroberfläche von Target erstellen, bearbeiten und löschen. Target bietet jedoch auch eine Reihe von APIs für benutzerdefinierte Kriterien, die eine detailliertere Verwaltung Ihrer benutzerdefinierten Kriterien ermöglichen.
+Um benutzerdefinierte Kriterien zu erstellen, definieren und importieren Sie die gewünschte Zuordnung zwischen dem Schlüsselelement oder der Kategorie und den empfohlenen Elementen. Dieser Prozess wird in der [Dokumentation zu benutzerdefinierten Kriterien“ ](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html). Wie in dieser Dokumentation erwähnt, können Sie benutzerdefinierte Kriterien über die Benutzeroberfläche von Target erstellen, bearbeiten und löschen. Target bietet jedoch auch eine Reihe von APIs für benutzerdefinierte Kriterien, die eine detailliertere Verwaltung Ihrer benutzerdefinierten Kriterien ermöglichen.
 
 >[!WARNING]
 >
@@ -38,7 +49,7 @@ Zum Erstellen benutzerdefinierter Kriterien mit der [API für benutzerdefinierte
 
 >[!WARNING]
 >
->Benutzerdefinierte Kriterien, die mit der API Benutzerdefinierte Kriterien erstellen erstellt wurden, wie in dieser Übung beschrieben, werden in der Benutzeroberfläche angezeigt, wo sie beibehalten werden. Sie können sie nicht in der Benutzeroberfläche bearbeiten oder löschen. Sie können sie bearbeiten oder löschen **über die API**, aber in beiden Fällen werden sie weiterhin in der Target-Benutzeroberfläche angezeigt. Damit die Option zum Bearbeiten oder Löschen aus der Benutzeroberfläche beibehalten werden kann, erstellen Sie die benutzerdefinierten Kriterien mithilfe der Benutzeroberfläche gemäß [Dokumentation](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=de) im Gegensatz zur Verwendung der API zum Erstellen benutzerdefinierter Kriterien.
+>Benutzerdefinierte Kriterien, die mit der API Benutzerdefinierte Kriterien erstellen erstellt wurden, wie in dieser Übung beschrieben, werden in der Benutzeroberfläche angezeigt, wo sie beibehalten werden. Sie können sie nicht in der Benutzeroberfläche bearbeiten oder löschen. Sie können sie bearbeiten oder löschen **über die API**, aber in beiden Fällen werden sie weiterhin in der Target-Benutzeroberfläche angezeigt. Damit die Option zum Bearbeiten oder Löschen aus der Benutzeroberfläche beibehalten werden kann, erstellen Sie die benutzerdefinierten Kriterien mithilfe der Benutzeroberfläche gemäß [Dokumentation](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html) im Gegensatz zur Verwendung der API zum Erstellen benutzerdefinierter Kriterien.
 
 Fahren Sie mit den folgenden Schritten erst fort, nachdem Sie die obige Warnung gelesen haben und neue benutzerdefinierte Kriterien erstellen, die anschließend nicht aus der Benutzeroberfläche gelöscht werden können.
 
@@ -54,7 +65,7 @@ Fahren Sie mit den folgenden Schritten erst fort, nachdem Sie die obige Warnung 
 
    ![CreateCustomCriteria3](assets/CreateCustomCriteria3.png)
 
-1. Um sicherzustellen, dass Ihre benutzerdefinierten Kriterien erstellt wurden, navigieren Sie in Adobe Target zu **[!UICONTROL Recommendations > Kriterien]** und suchen Sie nach Ihren Kriterien anhand des Namens, oder verwenden Sie im **nächsten Schritt die** API für benutzerdefinierte Kriterien auflisten.
+1. Um sicherzustellen, dass Ihre benutzerdefinierten Kriterien erstellt wurden, navigieren Sie in Adobe Target zu **[!UICONTROL Recommendations > Kriterien]** und suchen Sie nach Ihren Kriterien anhand des Namens, oder verwenden Sie im ]**nächsten Schritt die**[!UICONTROL  API für benutzerdefinierte Kriterien auflisten.
 
    ![CreateCustomCriteria4](assets/CreateCustomCriteria4.png)
 
@@ -110,12 +121,12 @@ Löschen Sie mithilfe der zuvor erwähnten Kriterien-ID Ihre benutzerdefinierten
 
 `DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/criteria/custom/:criteriaId`
 
-1. Geben Sie die Kriterien-ID der (einzelnen) benutzerdefinierten Kriterien an, die Sie löschen möchten. Klicken Sie **[!UICONTROL Senden]**.
+1. Geben Sie die Kriterien-ID der (einzelnen) benutzerdefinierten Kriterien an, die Sie löschen möchten. Klicken Sie auf **[!UICONTROL Senden]**.
    ![DeleteCustomCriteria1](assets/DeleteCustomCriteria1.png)
 
 1. Stellen Sie sicher, dass die Kriterien mit Benutzerdefinierte Kriterien abrufen gelöscht wurden.
    ![DeleteCustomCriteria2](assets/DeleteCustomCriteria2.png)
-In diesem Fall zeigt der erwartete 404-Fehler an, dass die gelöschten Kriterien nicht gefunden wurden.
+   In diesem Fall zeigt der erwartete 404-Fehler an, dass die gelöschten Kriterien nicht gefunden wurden.
 
 >[!NOTE]
 >
