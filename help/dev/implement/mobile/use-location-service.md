@@ -1,21 +1,27 @@
 ---
 keywords: Mobile App, Speicherort der mobilen App, Ziel-Mobile App, mobile Zielspeicherorte, Standortdienst, Adobe Experience Cloud-Standortdienst, POIs, Points of Interest, SDK, Standort, Mobile App1
-description: Erfahren Sie, wie Sie mit dem  [!DNL Adobe Experience Platform Location Service]  Ihre Mobile Apps mit Standorterkennung aktivieren können.
-title: Wie verwende ich das  [!DNL Adobe Location Service]?
+description: Erfahren Sie, wie Sie mit dem [!DNL Adobe Experience Platform Location Service] Ihre mobilen Apps mit Standorterkennung aktivieren können.
+title: Wie verwende ich die [!DNL Adobe Location Service]?
 feature: Implement Mobile
 exl-id: ff38c0bb-3451-420f-8538-10f1d0606232
-TQID: https://experienceleague.adobe.com/dr-6ZJdh-o9p75Cm1LsT7IrRglSiAMlkGKoEc4EZU6E
+TQID: 'https://experienceleague.adobe.com/dr-6ZJdh-o9p75Cm1LsT7IrRglSiAMlkGKoEc4EZU6E'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 180
+source-wordcount: '181'
 ht-degree: 3%
-
 ---
-
 # Verwenden Sie [!UICONTROL Standortdienst]
 
 Der Standort ist ein wichtiger Kontext für das Verständnis und die Interaktion mit mobilen Benutzern. Mithilfe dieses Kontexts können Entwickler von Mobile Apps das Design der App verbessern und sie zu einem personalisierteren und ansprechenderen Erlebnis machen.

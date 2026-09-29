@@ -3,26 +3,38 @@ title: Abrufen von Recommendations mit der Bereitstellungs-API
 description: Dieser Artikel führt Entwicklerinnen und Entwickler durch die Schritte, die zum Abrufen von Recommendations-Inhalten mithilfe der Adobe Target-Bereitstellungs-API erforderlich sind.
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
-thumbnail: null
+thumbnail:
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-TQID: https://experienceleague.adobe.com/K94vITD8ZSDXLkC42Vm02eC5RmHudBvukXNcdPFVjzk
+TQID: 'https://experienceleague.adobe.com/K94vITD8ZSDXLkC42Vm02eC5RmHudBvukXNcdPFVjzk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 129298289889a3b133eb07d0caeade2fd0b5568e
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1284
+source-wordcount: '1380'
 ht-degree: 1%
-
 ---
-
 # Abrufen von Recommendations mit der Bereitstellungs-API
 
 Die Recommendations-APIs von Adobe Target und Adobe Target können für die Bereitstellung von Antworten auf Web-Seiten verwendet werden. Sie können aber auch für Erlebnisse außerhalb von HTML verwendet werden, wie Apps, Bildschirme, Konsolen, E-Mails, Kiosks und andere Anzeigegeräte. Mit anderen Worten: Wenn Target-Bibliotheken und JavaScript nicht verwendet werden können, ermöglicht die [Target-Bereitstellungs-API](/help/dev/implement/delivery-api/overview.md) weiterhin den Zugriff auf alle Target-Funktionen, um personalisierte Erlebnisse bereitzustellen.
@@ -62,7 +74,7 @@ Um Empfehlungen zu erstellen, die mit der Bereitstellungs-API verwendet werden k
    ![server-side-create-recs.png](assets/server-side-create-recs.png)
 
 1. Wählen Sie eine Eigenschaft aus und klicken Sie auf **[!UICONTROL Weiter]**.
-1. Definieren Sie den Speicherort, an dem Benutzer die Antwort der Empfehlung erhalten sollen. Im folgenden Beispiel wird ein Speicherort namens *api_charter* verwendet. Wählen Sie Ihr zuvor erstelltes JSON-basiertes Design mit dem Namen *Einfaches JSON.*
+1. Definieren Sie den Speicherort, an dem Benutzer die Antwort der Empfehlung erhalten sollen. Im folgenden Beispiel wird ein Speicherort namens *api_charter* verwendet. Wählen Sie Ihr zuvor erstelltes JSON-basiertes Design mit dem Namen &quot;*JSON“ aus.*
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
 1. Speichern und aktivieren Sie die Empfehlung. Es wird Ergebnisse generieren. [Sobald die Ergebnisse fertig sind](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=de) können Sie die Bereitstellungs-API verwenden, um sie abzurufen.
 
@@ -84,7 +96,7 @@ Denken Sie daran, Ihre Abfrageparameter korrekt zu konfigurieren. Geben Sie beis
 1. Senden Sie die Anfrage. Dies wird für den Speicherort *api_charter* ausgeführt, auf dem eine aktive Empfehlung ausgeführt wird, die mit Ihrem JSON-Design definiert wird und eine Liste empfohlener Entitäten ausgibt.
 1. Sie erhalten eine Antwort, die auf dem JSON-Design basiert.
    ![server-side-create-recs-json-response2.png](assets/server-side-create-recs-json-response2.png)
-Die Antwort enthält die Schlüssel-ID sowie die Entitäts-IDs der empfohlenen Entitäten.
+   Die Antwort enthält die Schlüssel-ID sowie die Entitäts-IDs der empfohlenen Entitäten.
 
 Durch diese Verwendung der Bereitstellungs-API mit Recommendations können Sie zusätzliche Schritte ausführen, bevor Sie dem Besucher Recommendations auf dem Nicht-HTML-Gerät anzeigen. Sie können beispielsweise die Antwort von der Bereitstellungs-API verwenden, um eine zusätzliche Echtzeitsuche nach Entitätsattributdetails (Bestand, Preis, Bewertung usw.) aus einem anderen System (z. B. CMS, PIM oder E-Commerce-Plattform) durchzuführen, bevor die endgültigen Ergebnisse angezeigt werden.
 

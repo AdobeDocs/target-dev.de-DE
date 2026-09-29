@@ -1,33 +1,46 @@
 ---
 title: SDKs initialisieren
-description: Stellen Sie sicher, dass alle erforderlichen Schritte zum Laden  [!DNL Adobe Target]  JavaScript-Bibliothek „at.js“ in der richtigen Reihenfolge ausgeführt werden.
+description: Stellen Sie sicher, dass alle erforderlichen Schritte zum Laden der [!DNL Adobe Target] at.js-JavaScript-Bibliothek in der richtigen Reihenfolge ausgeführt werden.
 feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 250a8382-1fdd-4a70-b712-a25af5adad71
-TQID: https://experienceleague.adobe.com/PxAKvxntUCdacBLopvANAI7-8OWe-ELQqFRJu-n3RWo
+TQID: 'https://experienceleague.adobe.com/PxAKvxntUCdacBLopvANAI7-8OWe-ELQqFRJu-n3RWo'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1879
+source-wordcount: '1880'
 ht-degree: 4%
-
 ---
-
 # SDKs initialisieren
 
 Führen Sie die Schritte im *Initialisieren von SDK* aus, um sicherzustellen, dass alle erforderlichen Aufgaben zum Laden der [!DNL Adobe Target] JavaScript-Bibliothek „at.js“ in der richtigen Reihenfolge ausgeführt werden.
@@ -202,12 +215,12 @@ Mit diesem Schritt stellen Sie sicher, dass alle Daten, die an [!DNL Target] ges
 
 * Die Datenschicht sollte mit allen Daten bereit sein, die an [!DNL Target] gesendet werden müssen.
 * Recommendations: Profil anreichern.
-   * Übergeben Sie `entity.id`, um Daten für kürzlich angezeigte Kriterien und Elemente basierend auf Kriterien zu erfassen, die auf dem zuletzt angezeigten Produkt basieren.
-   * Übergeben Sie `entity.id`, um Daten für Beliebtheitskriterien basierend auf der bevorzugten Kategorie zu erfassen.
-   * Übergeben Sie das Profilattribut, wenn benutzerdefinierte Kriterien darauf basieren oder bei der Filterung von Einschlussregeln in beliebigen Kriterien verwendet werden.
+  * Übergeben Sie `entity.id`, um Daten für kürzlich angezeigte Kriterien und Elemente basierend auf Kriterien zu erfassen, die auf dem zuletzt angezeigten Produkt basieren.
+  * Übergeben Sie `entity.id`, um Daten für Beliebtheitskriterien basierend auf der bevorzugten Kategorie zu erfassen.
+  * Übergeben Sie das Profilattribut, wenn benutzerdefinierte Kriterien darauf basieren oder bei der Filterung von Einschlussregeln in beliebigen Kriterien verwendet werden.
 * Recommendations: Nehmen Sie Produktdaten auf.
-   * Andere Entitätsparameter (reserviert und benutzerdefiniert) können übergeben werden, um den Produktkatalog in [!DNL Recommendations] aufzunehmen oder zu aktualisieren.
-   * Der Produktkatalog kann auch mithilfe von Entitäts-Feeds aktualisiert werden, indem die [!DNL Target]-Benutzeroberfläche oder -API verwendet wird.
+  * Andere Entitätsparameter (reserviert und benutzerdefiniert) können übergeben werden, um den Produktkatalog in [!DNL Recommendations] aufzunehmen oder zu aktualisieren.
+  * Der Produktkatalog kann auch mithilfe von Entitäts-Feeds aktualisiert werden, indem die [!DNL Target]-Benutzeroberfläche oder -API verwendet wird.
 
 **Daten[!DNL Target]** zuordnen
 

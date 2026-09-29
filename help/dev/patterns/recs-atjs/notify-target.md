@@ -1,26 +1,33 @@
 ---
 title: Zielgruppe benachrichtigen
-description: Stellen Sie sicher, dass alle Ereignisse, die verfolgt werden müssen [!DNL Target]  mit der trackEvent-Methode gesendet werden.
+description: Stellen Sie sicher, dass alle Ereignisse, die von [!DNL Target] verfolgt werden müssen, mit der trackEvent-Methode gesendet werden.
 feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
-TQID: https://experienceleague.adobe.com/u-RPLXjG8UBI7bDu2HgPFFnNBU--Yr0UydVX-Q-dcTc
+TQID: 'https://experienceleague.adobe.com/u-RPLXjG8UBI7bDu2HgPFFnNBU--Yr0UydVX-Q-dcTc'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Implementation
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 369
+source-wordcount: '370'
 ht-degree: 0%
-
 ---
-
 # [!DNL Target] benachrichtigen
 
 Durch Abschluss dieses Schritts wird sichergestellt, dass alle Ereignisse, die an [!DNL Adobe Target] gesendet werden müssen, mit der `trackEvent`-Methode gesendet werden.
@@ -56,9 +63,9 @@ Sie müssen die Attribute für die Bestellkonvertierung nicht in diesen Aufruf e
 * Treffen Sie sich mit Ihrem Business-Team, um alle Ereignisse zu identifizieren, die als Konversions- oder Erfolgsmetriken betrachtet werden können. Sie müssen auch das Konversionsereignis identifizieren, das Umsatz generiert, damit diese Details zusammen mit den Ereignisdaten an [!DNL Target] gesendet werden können.
 * Stellen Sie sicher, dass die folgenden Attribute in der Datenschicht verfügbar sind, damit Sie sie mit dem Konversionsereignis senden können. Das Konversionsereignis generiert Umsatz, z. B. ein Produktkauf- oder Warenkorbereignis.
 
-   * `productPurchaseId`: Produkt-IDs, die im Rahmen der Bestellung gekauft wurden. Trennen Sie mehrere Produkte durch Kommas.
-   * `orderTotal`: Bestellsumme für den Kauf.
-   * `orderId`: Auftrags-ID des Kaufs.
+  * `productPurchaseId`: Produkt-IDs, die im Rahmen der Bestellung gekauft wurden. Trennen Sie mehrere Produkte durch Kommas.
+  * `orderTotal`: Bestellsumme für den Kauf.
+  * `orderId`: Auftrags-ID des Kaufs.
 
   Die folgende Abbildung zeigt eine [Regel für [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=de){target=_blank}, die nur auf der Seite [!UICONTROL Bestätigung] ausgelöst werden sollte.
 

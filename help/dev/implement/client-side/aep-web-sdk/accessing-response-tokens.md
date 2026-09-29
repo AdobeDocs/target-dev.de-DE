@@ -1,26 +1,34 @@
 ---
 title: Zugreifen auf Antwort-Token mithilfe der Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie mit dem auf Antwort-Token  [!DNL Adobe Experience Platform Web SDK].
+description: Erfahren Sie, wie Sie mit dem [!DNL Adobe Experience Platform Web SDK] auf Antwort-Token zugreifen können.
 keywords: Personalisierung;Target;Adobe Target;renderDecisions;sendEvent;Entscheidungsumfänge;result.decisions,Response Token;
 feature: AEP Web SDK
 exl-id: b125017c-c257-4f2f-a479-dd0f20e76a9a
-TQID: https://experienceleague.adobe.com/kqa-HY5-dOvNq-yGqthunYDdyTKkiiFdsHquyN34ERg
+TQID: 'https://experienceleague.adobe.com/kqa-HY5-dOvNq-yGqthunYDdyTKkiiFdsHquyN34ERg'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 273
+source-wordcount: '273'
 ht-degree: 0%
-
 ---
-
 # Zugriff auf Antwort-Token
 
 Personalization-Inhalte, die von [!DNL Adobe Target] zurückgegeben werden[&#x200B; umfassen &#x200B;](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=de)Antwort-Token), die Details zur Aktivität, zum Angebot, zum Erlebnis, zum Benutzerprofil, zu geografischen Informationen und mehr sind. Diese Details können für Drittanbieter-Tools freigegeben oder zum Debugging verwendet werden. Antwort-Token können in der [!DNL Target]-Benutzeroberfläche konfiguriert werden.
