@@ -29,7 +29,7 @@ topic_v2:
     internal-label: Security
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
     internal-label: Privacy
-source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
+source-git-commit: 78ca638b097a9d3f3028353c80f4929e036e2f49
 workflow-type: tm+mt
 source-wordcount: '1326'
 ht-degree: 1%
@@ -41,7 +41,7 @@ Anweisungen für die Arbeit mit [!DNL Adobe] Client Care zur Implementierung der
 ## CNAME-Unterstützung in [!DNL Target] anfordern
 
 1. Bestimmen Sie die Liste der Hostnamen, die Sie für Ihr SSL-Zertifikat benötigen (siehe FAQ unten).
-1. [Füllen Sie dieses Formular aus](/help/dev/implement/assets/FPC_Request_Form.xlsx) und fügen Sie es ein, wenn Sie [ein Ticket für die  [!DNL Adobe] -Kundenunterstützung öffnen, um CNAME-Unterstützung anzufordern](https://experienceleague.adobe.com/de/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C):
+1. [Füllen Sie dieses Formular aus](/help/dev/implement/assets/FPC_Request_Form.xlsx) und fügen Sie es ein, wenn Sie [ein Ticket für die  [!DNL Adobe] -Kundenunterstützung öffnen, um CNAME-Unterstützung anzufordern](https://experienceleague.adobe.com/en/docs/target/using/cmp-resources-and-contact-information#reference_ACA3391A00EF467B87930A450050077C):
 
    * [!DNL Adobe Target] Clientcode:
    * Hostnamen für SSL-Zertifikate (Beispiel: `target.example.com target.example.org`):
@@ -349,7 +349,7 @@ To check DNS propagation around the world, see whatsmydns.net:
 Wenn Sie CNAME verwenden, sollte der Ausschluss-Link beispielsweise den Parameter „client=`clientcode`&quot; enthalten:
 `https://my.cname.domain/optout?client=clientcode`.
 
-Ersetzen Sie `clientcode` durch Ihren Client-Code und fügen Sie dann den Text oder das Bild hinzu, das mit der [Opt-out-URL) verknüpft &#x200B;](/help/dev/before-implement/privacy/privacy.md) soll.
+Ersetzen Sie `clientcode` durch Ihren Client-Code und fügen Sie dann den Text oder das Bild hinzu, das mit der [Opt-out-URL) verknüpft ](/help/dev/before-implement/privacy/privacy.md) soll.
 
 ## Bekannte Einschränkungen
 
