@@ -75,7 +75,7 @@ Tags in [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-
 
 ## at.js-Version 2.11.6 (29. September 2024)
 
-* Es wurde ein Problem behoben, das dazu führte, dass [!DNL Target] mit Umleitungsangeboten in [!UICONTROL Visual Experience Composer] (VEC) oder [!UICONTROL Form-Based Experience Composer) nicht korrekt ].
+* Es wurde ein Problem behoben, das dazu führte, dass [!DNL Target] mit Umleitungsangeboten in [!UICONTROL Visual Experience Composer] (VEC) oder [!UICONTROL Form-Based Experience Composer) nicht korrekt &#x200B;].
 
 ## at.js-Version 2.11.5 (14. August 2024)
 
