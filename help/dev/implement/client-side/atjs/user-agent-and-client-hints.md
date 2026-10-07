@@ -7,26 +7,34 @@ exl-id: e0d87d95-ee95-4ca9-8632-222ae1fb9a91
 TQID: https://experienceleague.adobe.com/7-Kr0OwJ4o780zkFL2EIQ0vJUqVyQp-RuoJOaBNYrQg
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+    internal-label: Insights
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
   - id: ff2b9b37-92e0-45fc-b853-379d44c08c89
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Audience segmentation
+source-git-commit: 09c7444b7ed70521cfd01caf5c996643d0a27547
 workflow-type: tm+mt
-source-wordcount: 1340
-ht-degree: 73%
-
+source-wordcount: '1460'
+ht-degree: 67%
 ---
-
 # User-agent und Client Hints
 
 Adobe Target verwendet den user-agent, um Besucher für die Segmentierung und Personalisierung zu qualifizieren.
@@ -57,6 +65,14 @@ Von diesem user-agent kann der Server, der die Anfrage erhält, die folgenden In
 | Gerät | SM-S908E (Samsung Galaxy S22 Ultra) |
 
 Im Laufe der Jahre ist die Menge der Browser- und Geräteinformationen, die in der user-agent-Zeichenfolge enthalten sind, gestiegen.
+
+## Benutzerdefinierte Skripte, die den Benutzeragenten überschreiben {#custom-scripts-overwrite-user-agent}
+
+Da das Targeting für mobile Geräte auf der Benutzeragenten-Zeichenfolge basiert, kann jedes benutzerdefinierte Skript auf Ihrer Seite, das `navigator.userAgent` ändert, bevor [!DNL Target] es liest, dazu führen, dass das Geräte-Targeting fehlschlägt.
+
+Wenn Ihre Website über ein benutzerdefiniertes Skript verfügt, das auf alle Ereignisse anstatt auf das erforderliche spezifische Ereignis wartet, kann es unbeabsichtigt ein [!DNL Web SDK] Ereignis abfangen und `navigator.userAgent` überschreiben. Infolgedessen erhält [!DNL Target] falsche Geräteinformationen anstelle des tatsächlichen Geräts des Besuchers, und das erwartete Erlebnis wird nicht bereitgestellt.
+
+Wenn sich das Targeting für Mobilgeräte nicht wie erwartet verhält, überprüfen Sie, ob benutzerdefinierte Skripte oder Ereignis-Listener auf der Seite `navigator.userAgent` ändern, und grenzen Sie diese Listener so eng wie möglich ein, damit sie nicht unbeabsichtigt [!DNL Target]- oder Web-SDK-Ereignisse abfangen.
 
 ## Anwendungsfälle für User-Agent
 
