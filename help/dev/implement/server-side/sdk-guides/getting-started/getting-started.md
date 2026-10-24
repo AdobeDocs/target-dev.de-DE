@@ -56,7 +56,7 @@ Durch die Aktivierung der geräteinternen Entscheidungsfindung wird sichergestel
 
 >[!NOTE]
 >
->Sie müssen über die **[!UICONTROL Admin]**- oder **[!UICONTROL Genehmiger]**[Benutzerrolle](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) verfügen, um den Umschalter **[!UICONTROL On-Device Decisioning]** zu aktivieren oder zu deaktivieren.
+>Sie müssen über die **[!UICONTROL Admin]**- oder **[!UICONTROL Genehmiger]**&#x200B;[Benutzerrolle](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) verfügen, um den Umschalter **[!UICONTROL On-Device Decisioning]** zu aktivieren oder zu deaktivieren.
 
 Nach der Aktivierung **[!UICONTROL Umschalters]** On-Device Decisioning“ beginnt [!DNL Adobe Target] mit der Erstellung [Regelartefakte](../on-device-decisioning/rule-artifact-overview.md) für Ihren Client.
 
@@ -179,7 +179,7 @@ target_client = TargetClient.create(CONFIG)
 
    ![ALT-Bild](assets/asset-location.png)
 
-1. Wählen Sie im **[!UICONTROL CONTENT]** auf derselben Seite in der Dropdown-]**(1) die Option**[!UICONTROL  JSON-Angebot erstellen“ aus, wie dargestellt.
+1. Wählen Sie im **[!UICONTROL CONTENT]** auf derselben Seite in der Dropdown-**(1) die Option** JSON-Angebot erstellen“ aus, wie dargestellt.
 
    ![ALT-Bild](assets/asset-offer.png)
 
