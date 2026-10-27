@@ -1,6 +1,6 @@
 ---
 title: Adobe Target-API zur Massenaktualisierung von Profilen
-description: Erfahren Sie, wie Sie mit [!DNL Adobe Target] [!UICONTROL API zur Massenaktualisierung von Profildaten &#x200B;] mehrere Besucher zur Verwendung beim Targeting an [!DNL Target] senden.
+description: Erfahren Sie, wie Sie mit [!DNL Adobe Target] [!UICONTROL API zur Massenaktualisierung von Profildaten ] mehrere Besucher zur Verwendung beim Targeting an [!DNL Target] senden.
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
@@ -25,14 +25,14 @@ topic_v2:
     internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
+source-git-commit: 3a1674348a1cb39351051addf8e063efbf0dc9e9
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1336'
 ht-degree: 6%
 ---
 # [!DNL Adobe Target Bulk Profile Update API]
 
-Mit der [!DNL Adobe Target] [!UICONTROL API zur Massenaktualisierung von &#x200B;]) können Sie Benutzerprofile für mehrere Besucher einer Website mithilfe einer Batch-Datei stapelweise aktualisieren.
+Mit der [!DNL Adobe Target] [!UICONTROL API zur Massenaktualisierung von ]) können Sie Benutzerprofile für mehrere Besucher einer Website mithilfe einer Batch-Datei stapelweise aktualisieren.
 
 Mit der [!UICONTROL Bulk Profile Update API] können Sie für viele Benutzer bequem detaillierte Besucherprofildaten in Form von Profilparametern senden, um sie aus einer beliebigen externen Quelle zu [!DNL Target]. Zu den externen Quellen können CRM (Customer Relationship Management)- oder POS (Point of Sale)-Systeme gehören, die normalerweise nicht auf einer Web-Seite verfügbar sind.
 
@@ -97,7 +97,7 @@ Sie verweisen im POST-Aufruf an [!DNL Target] Server auf diese Datei, um die Dat
 >
 >Alle Parameternamen und -werte müssen URL-kodiert (UTF-8) sein, bevor Sie den mit `Content-Type: application/x-www-form-urlencoded` gesendeten Batch übermitteln, wobei der Hauptteil mit `batch=` beginnt. Nicht kodierte reservierte Zeichen werden als Anfragesyntax anstelle von Daten gelesen, wodurch der Batch abgelehnt, abgeschnitten oder beschädigt werden kann.
 >
->Wenn Sie eine Antwort „Unerwarteter Fehler“ ohne ausgegebene `batchId` erhalten, finden Sie unter [API für die Massenaktualisierung von Profilen gibt „Unerwarteter Fehler“ &#x200B;](https://experienceleague.adobe.com/de/docs/experience-cloud-kcs/kbarticles/ka-24281) Schritte zur Fehlerbehebung zurück.
+>Wenn Sie eine Antwort „Unerwarteter Fehler“ ohne ausgegebene `batchId` erhalten, finden Sie unter [API für die Massenaktualisierung von Profilen gibt „Unerwarteter Fehler“ ](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281) Schritte zur Fehlerbehebung zurück.
 
 Die folgenden Zeichen sind normalerweise in Profilwerten vorhanden, haben jedoch eine besondere Bedeutung in `application/x-www-form-urlencoded`. Wenn Sie sie unverschlüsselt senden, schlägt die Anfrage fehl oder die Daten sind ohne offensichtlichen Fehler beschädigt:
 
@@ -156,9 +156,9 @@ Erwartete Werte für die Statusfelder sind:
 
 | Status | Details |
 | --- | --- |
-| [!UICONTROL complete] | Die Anfrage zur Aktualisierung des Profil-Batches wurde erfolgreich abgeschlossen. |
-| [!UICONTROL unvollständig] | Die Anfrage zur Aktualisierung des Profil-Batches wird noch verarbeitet und nicht abgeschlossen. |
-| [!UICONTROL stecken geblieben] | Die Anfrage zur Aktualisierung des Profil-Batches ist hängen geblieben und konnte nicht abgeschlossen werden. |
+| [!UICONTROL complete] | Die Anfrage zur Aktualisierung des Profil-Batches wurde erfolgreich abgeschlossen. Keine Aktion erforderlich. |
+| [!UICONTROL unvollständig] | Die Anfrage zur Aktualisierung des Profil-Batches wird noch verarbeitet und nicht abgeschlossen. Keine Aktion erforderlich. |
+| [!UICONTROL stecken geblieben] | Die Anfrage zur Aktualisierung des Profil-Batches ist hängen geblieben und konnte nicht abgeschlossen werden. Wenn ein Batch auch nach 24 Stunden nach dem Hochladen hängen bleibt, müssen Sie ihn erneut hochladen. |
 
 ### Detaillierte Batch-Status-URL-Antwort
 
