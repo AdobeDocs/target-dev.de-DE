@@ -25,9 +25,9 @@ topic_v2:
     internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
+source-git-commit: 3a1674348a1cb39351051addf8e063efbf0dc9e9
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1336'
 ht-degree: 6%
 ---
 # [!DNL Adobe Target Bulk Profile Update API]
@@ -156,9 +156,9 @@ Erwartete Werte für die Statusfelder sind:
 
 | Status | Details |
 | --- | --- |
-| [!UICONTROL complete] | Die Anfrage zur Aktualisierung des Profil-Batches wurde erfolgreich abgeschlossen. |
-| [!UICONTROL unvollständig] | Die Anfrage zur Aktualisierung des Profil-Batches wird noch verarbeitet und nicht abgeschlossen. |
-| [!UICONTROL stecken geblieben] | Die Anfrage zur Aktualisierung des Profil-Batches ist hängen geblieben und konnte nicht abgeschlossen werden. |
+| [!UICONTROL complete] | Die Anfrage zur Aktualisierung des Profil-Batches wurde erfolgreich abgeschlossen. Keine Aktion erforderlich. |
+| [!UICONTROL unvollständig] | Die Anfrage zur Aktualisierung des Profil-Batches wird noch verarbeitet und nicht abgeschlossen. Keine Aktion erforderlich. |
+| [!UICONTROL stecken geblieben] | Die Anfrage zur Aktualisierung des Profil-Batches ist hängen geblieben und konnte nicht abgeschlossen werden. Wenn ein Batch auch nach 24 Stunden nach dem Hochladen hängen bleibt, müssen Sie ihn erneut hochladen. |
 
 ### Detaillierte Batch-Status-URL-Antwort
 
