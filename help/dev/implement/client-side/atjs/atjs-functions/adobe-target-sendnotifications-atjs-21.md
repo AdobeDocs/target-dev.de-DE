@@ -1,27 +1,30 @@
 ---
 keywords: adobe.target.sendNotifications, sendNotifications, sendNotifications, sendNotifications, send Notifications, notifications, at.js, Funktionen, Funktion, $9
-description: Verwenden Sie [!UICONTROL adobe.target.sendNotifications()] für at.js, um Benachrichtigungen an den  [!DNL Target]  zu senden, wenn ein Erlebnis nicht mit „applyOffer gerendert . (at.js.2.1 +)
+description: Verwenden Sie [!UICONTROL adobe.target.sendNotifications()] für at.js, um Benachrichtigungen an den [!DNL Target] Edge zu senden, wenn ein Erlebnis nicht mit „applyOffer] gerendert [!UICONTROL . (at.js.2.1 +)
 title: Wie verwende ich die Funktion adobe.target.sendNotifications()?
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
 TQID: https://experienceleague.adobe.com/QprkTK-0WGq-fzJ9e3FUSAZAandaZFiUY62-zQ6ajY8
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 642
+source-wordcount: '643'
 ht-degree: 83%
-
 ---
-
 # [!UICONTROL adobe.target.sendNotifications(options)]
 
 Diese Funktion sendet eine Benachrichtigung an [!DNL Target] Edge, wenn ein Erlebnis ohne Verwendung von `[!UICONTROL adobe.target.applyOffer()]` oder `[!UICONTROL adobe.target.applyOffers()]` gerendert wird.

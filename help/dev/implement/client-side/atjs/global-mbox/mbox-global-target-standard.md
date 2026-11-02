@@ -1,29 +1,34 @@
 ---
 keywords: globale mbox, Target Classic, globale Mbox mit Target Classic verwenden
-description: Erfahren Sie, wie Sie eine ältere globale Mbox für Ihre - [!DNL Adobe Target]  verwenden, wenn Sie bereits eine globale Mbox auf Ihren Seiten für Ihre Legacy-Implementierungen erstellt haben.
+description: Erfahren Sie, wie Sie eine ältere globale Mbox für Ihre [!DNL Adobe Target]-Aktivitäten verwenden, wenn Sie bereits eine globale Mbox auf Ihren Seiten für Ihre Legacy-Implementierungen erstellt haben.
 title: Kann ich eine globale Mbox in einer Legacy-Implementierung verwenden?
 feature: at.js
 exl-id: fe608b5e-ff66-4ba2-a622-d4f7307a9ca9
 TQID: https://experienceleague.adobe.com/BCubNDwB8gxZ9bpuCNhxcnFnjB1xQK8ZRkLveinPj4w
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 304
+source-wordcount: '305'
 ht-degree: 19%
-
 ---
-
 # Verwenden einer globalen Mbox in einer Legacy-Implementierung
 
 Standardmäßig erstellt [!DNL Target] eine globale Mbox mit dem Namen target-global-mbox, die zum Ausführen von in [!DNL Target] erstellten Aktivitäten verwendet wird. Wenn Sie jedoch bereits eine globale Mbox auf Ihren Seiten für Ihre Legacy-Implementierungen erstellt haben, können Sie diese Mbox für Ihre [!DNL Target]-Aktivitäten verwenden.

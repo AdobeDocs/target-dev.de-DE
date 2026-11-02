@@ -1,27 +1,30 @@
 ---
 keywords: mboxCreate, mboxCreate, mbox create, at.js, Funktionen, Funktion
-description: Verwenden Sie die Funktion [!UICONTROL mboxCreate()] für die JavaScript-Bibliothek  [!DNL Adobe Target] .at.js, um Angebote auf das nächstgelegene DIV mit dem mboxDefault-Klassennamen anzuwenden. (at.js 1.x)
+description: Verwenden Sie die Funktion [!UICONTROL mboxCreate()] für die [!DNL Adobe Target] at.js-JavaScript-Bibliothek, um Angebote auf das nächstgelegene DIV mit dem mboxDefault-Klassennamen anzuwenden. (at.js 1.x)
 title: Wie verwende ich die Funktion [!UICONTROL mboxCreate()]?
 feature: at.js
 exl-id: 86eba1fc-4e1d-4793-94e7-898bf81f8945
 TQID: https://experienceleague.adobe.com/hCEKL9RPtqIbMVEouzObjU6dc7TKl1hBtKZ1jEdicRE
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 216
+source-wordcount: '217'
 ht-degree: 40%
-
 ---
-
 # [!UICONTROL mboxCreate(mbox,params)] - at.js 1.x
 
 Führt eine Anforderung aus und wendet das Angebot auf den nächsten DIV-Bereich mit dem Klassennamen „mboxDefault“ an.

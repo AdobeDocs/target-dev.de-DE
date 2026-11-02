@@ -1,28 +1,32 @@
 ---
 keywords: Flimmern, at.js, Implementierung, asynchron, asynchron, synchron, synchron, $8
-description: Erfahren Sie, wie at.js und [!DNL Target] Flimmern verhindern (Standardinhalt wird vorübergehend angezeigt, bevor er durch Aktivitätsinhalte ersetzt wird) beim Laden von Seiten oder Apps.
+description: Erfahren Sie, wie at.js und [!DNL Target] Flackern (Standardinhalte werden vorübergehend angezeigt, bevor sie durch Aktivitätsinhalte ersetzt werden) beim Laden von Seiten oder Apps verhindern.
 title: Wie verwaltet at.js Flackern?
 feature: at.js
 exl-id: 8aacf254-ec3d-4831-89bb-db7f163b3869
 TQID: https://experienceleague.adobe.com/r8uyzkf1gSHmppyDHPOcn5jrH86Hedb4ArMmtigq93w
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 717
+source-wordcount: '718'
 ht-degree: 57%
-
 ---
-
 # Verwaltung von Flackern mit „at.js“
 
 Informationen dazu, wie die [!DNL Adobe Target] at.js-JavaScript-Bibliothek Flackern beim Laden von Seiten oder Apps verhindert.

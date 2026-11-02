@@ -7,22 +7,26 @@ exl-id: 1efed365-8a74-4c85-bdb1-8daaaf53d642
 TQID: https://experienceleague.adobe.com/7uABK1rDaMpA7a0skEo3g1KxTnoc-gif-uHMkMnE8QE
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 557
+source-wordcount: '557'
 ht-degree: 38%
-
 ---
-
 # „at.js“-Funktionen
 
 Liste der Funktionen, die mit der [!DNL Adobe Target] at.js-JavaScript-Bibliothek verwendet werden können. Klicken Sie in der Spalte „Funktion“ auf die Links, um weitere Informationen und Beispiele zu erhalten.
@@ -32,7 +36,7 @@ Liste der Funktionen, die mit der [!DNL Adobe Target] at.js-JavaScript-Bibliothe
 | [[!UICONTROL adobe.target.getOffer(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffer.md) | Diese Funktion löst eine Anfrage aus, um ein [!DNL Target] Angebot abzurufen. Verwenden Sie sie mit `adobe.target.applyOffer()`, um die Antwort zu verarbeiten, oder verwenden Sie Ihre eigene Methode für die Verarbeitung von „success“. |
 | [[!UICONTROL adobe.target.getOffers(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)<P>(at.js 2.x) | Mit dieser Funktion können Sie mehrere Angebote abrufen, indem Sie mehrere Mboxes übergeben. Darüber hinaus können mehrere Angebote für alle Ansichten in aktiven Aktivitäten abgerufen werden.<P>**Hinweis:** Diese Funktion wurde mit at.js 2.x eingeführt. Diese Funktion ist nicht verfügbar für at.js-Version 1.*x*. |
 | [[!UICONTROL adobe.target.applyOffer(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-applyoffer.md) | Diese Funktion dient zur Anwendung der Antwortinhalte. |
-| [[!UICONTROL adobe.target.applyOffers(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-applyoffers-atjs-2.md)<P>(at.js 2.x) | Mit dieser Funktion können Sie mehr als ein Angebot anwenden, das von [!UICONTROL adobe.target.getOffers() abgerufen &#x200B;].<P>**Hinweis:** Diese Funktion wurde mit at.js 2.x eingeführt. Diese Funktion ist nicht verfügbar für at.js-Version 1.*x*. |
+| [[!UICONTROL adobe.target.applyOffers(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-applyoffers-atjs-2.md)<P>(at.js 2.x) | Mit dieser Funktion können Sie mehr als ein Angebot anwenden, das von [!UICONTROL adobe.target.getOffers() abgerufen ].<P>**Hinweis:** Diese Funktion wurde mit at.js 2.x eingeführt. Diese Funktion ist nicht verfügbar für at.js-Version 1.*x*. |
 | [[!UICONTROL adobe.target.triggerView (ViewName, Optionen)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)<P>(at.js 2.x) | Diese Funktion kann immer aufgerufen werden, wenn eine neue Seite geladen wird oder wenn eine Komponente auf einer Seite erneut wiedergegeben wird.<P> Diese Funktion sollte für Single Page Applications (SPAs) implementiert werden, damit der [!UICONTROL Visual Experience Composer] (VEC) zum Erstellen von [!UICONTROL A/B-Test]- und [!UICONTROL Experience Targeting] (XT)-Aktivitäten verwendet werden kann. |
 | [[!UICONTROL adobe.target.trackEvent(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) | Diese Funktion löst eine Anforderung zum Melden von Benutzeraktionen aus (wie beispielsweise Klicks und Konversionen). Sie übermittelt keine Aktivitäten in der Antwort. |
 | [[!UICONTROL mboxCreate(mbox,params)]](/help/dev/implement/client-side/atjs/atjs-functions/mboxcreate-atjs.md)<P>(at.js 1.x) | Führt eine Anforderung aus und wendet das Angebot auf den nächsten DIV-Bereich mit dem Klassennamen „mboxDefault“ an.<P>**Hinweis:** Diese Funktion ist nur für at.js-Versionen 1.*x* verfügbar. Diese Funktion wird seit der Veröffentlichung von at.js 2.x nicht mehr unterstützt. Diese Funktion gibt Standardinhalte zurück, wenn sie mit at.js 2.x verwendet wird. |

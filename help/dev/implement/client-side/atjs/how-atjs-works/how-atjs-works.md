@@ -1,48 +1,55 @@
 ---
 keywords: Systemdiagramm, Flimmern, at.js, Implementierung, JavaScript-Bibliothek, js, atjs, $8
-description: Erfahren Sie, wie die  [!DNL Target] -JavaScript-Bibliothek (at.js), einschließlich Systemdiagrammen, funktioniert. Dies hilft Ihnen auch, den Workflow zum Laden von Seiten besser zu verstehen.
+description: Erfahren Sie, wie die [!DNL Target] at.js-JavaScript-Bibliothek, einschließlich Systemdiagrammen, funktioniert. Dies hilft Ihnen auch, den Workflow zum Laden von Seiten besser zu verstehen.
 title: Wie funktioniert die JavaScript-Bibliothek at.js?
 feature: at.js
 exl-id: 9183797c-857b-4b7f-a573-6bb1d583f7b1
 TQID: https://experienceleague.adobe.com/ZyfwRiSeZDL-gFA-3MehXoNO5XhdANPaAmHqDxVeQ-g
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d3cdead0-685a-4489-9250-4bb709942f66
+    internal-label: Data collection
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1220
-ht-degree: 54%
-
+source-wordcount: '1221'
+ht-degree: 52%
 ---
-
 # Funktionsweise von „at.js“
 
 Zur Client-seitigen Implementierung von [!DNL Adobe Target] müssen Sie die JavaScript-Bibliothek „at.js“ verwenden.
 
-Bei Client-seitigen Implementierungen von [!DNL Adobe Target] stellt [!DNL Target] die mit einer Aktivität verknüpften Erlebnisse direkt dem Client-Browser bereit. Der Browser entscheidet, welches Erlebnis angezeigt werden soll, und zeigt es an. Bei einer Client-seitigen Implementierung können Sie einen WYSIWYG-Editor, Visual [Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=de) (VEC) oder eine nicht visuelle Schnittstelle, den [formularbasierten Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=de), verwenden, um Ihre Tests und Personalisierungserlebnisse zu erstellen.
+Bei Client-seitigen Implementierungen von [!DNL Adobe Target] stellt [!DNL Target] die mit einer Aktivität verknüpften Erlebnisse direkt dem Client-Browser bereit. Der Browser entscheidet, welches Erlebnis angezeigt werden soll, und zeigt es an. Bei einer Client-seitigen Implementierung können Sie einen WYSIWYG-Editor, Visual [Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC) oder eine nicht visuelle Schnittstelle, den [formularbasierten Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), verwenden, um Ihre Tests und Personalisierungserlebnisse zu erstellen.
 
 ## Was ist at.js?
 
-Die at.js-Bibliothek ist die Implementierungsbibliothek für die Client-seitige Implementierung von [!DNL Adobe Target]. Die at.js-Bibliothek sorgt für kürzere Seitenladezeiten bei Web-Implementierungen und bietet bessere Implementierungsoptionen für Single-Page-Anwendungen. „at.js“ ist die empfohlene Implementierungsbibliothek und wird häufig mit neuen Funktionen aktualisiert. Es wird empfohlen, dass alle -Kunden die [neueste Version von at.js) implementieren oder &#x200B;](/help/dev/implement/client-side/atjs/target-atjs-versions.md).
+Die at.js-Bibliothek ist die Implementierungsbibliothek für die Client-seitige Implementierung von [!DNL Adobe Target]. Die at.js-Bibliothek sorgt für kürzere Seitenladezeiten bei Web-Implementierungen und bietet bessere Implementierungsoptionen für Single-Page-Anwendungen. „at.js“ ist die empfohlene Implementierungsbibliothek und wird häufig mit neuen Funktionen aktualisiert. Es wird empfohlen, dass alle -Kunden die [neueste Version von at.js) implementieren oder ](/help/dev/implement/client-side/atjs/target-atjs-versions.md).
 
-Weitere Informationen finden Sie unter [JavaScript-Bibliotheken in Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=de#libraries).
+Weitere Informationen finden Sie unter [JavaScript-Bibliotheken in Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#libraries).
 
 In der [!DNL Target]unten dargestellten Implementierung sind die folgenden Adobe Experience Cloud-Lösungen implementiert: [!DNL Analytics], Target und [!DNL Audience Manager]. Darüber hinaus werden die folgenden [!DNL Experience Cloud] Core Services implementiert: [!DNL Adobe Experience Platform], [!UICONTROL Audiences] und [!UICONTROL Besucher-ID-].
 
 ## Was ist der Unterschied zwischen at.js 1.*x* und at.js 2.x-Workflow-Diagrammen?
 
-Weitere [&#x200B; zu den Unterschieden, die in 2.O ab 1.x eingeführt wurden, finden Sie unter „Aktualisieren von at.js 1.x auf at.js 2.x](/help/dev/implement/client-side/atjs/upgrading-from-atjs-1x-to-atjs-20.md) **.
+Weitere [ zu den Unterschieden, die in 2.O ab 1.x eingeführt wurden, finden Sie unter „Aktualisieren von at.js 1.x auf at.js 2.x](/help/dev/implement/client-side/atjs/upgrading-from-atjs-1x-to-atjs-20.md) **.
 
 Grob betrachtet gibt es einige Unterschiede zwischen den beiden Versionen:
 
@@ -76,10 +83,10 @@ Jetzt werden, wo immer `triggerView()` in Ihrer SPA implementiert ist, die [!UIC
 
 | Schritt | Details |
 | --- | --- |
-| 1 | `triggerView()` wird in der SPA aufgerufen, um die [!UICONTROL Ansicht“ zu rendern &#x200B;] Aktionen anzuwenden, um visuelle Elemente zu ändern. |
+| 1 | `triggerView()` wird in der SPA aufgerufen, um die [!UICONTROL Ansicht“ zu rendern ] Aktionen anzuwenden, um visuelle Elemente zu ändern. |
 | 2 | Gezielte Inhalte für die Ansicht werden aus dem Cache gelesen. |
 | 3 | Die zielgerichteten Inhalte werden so schnell wie möglich bereitgestellt, ohne dass Standardinhalte aufflackern. |
-| 4 | Eine Benachrichtigungsanfrage wird an den [!DNL Target]Profilspeicher[!UICONTROL &#x200B; gesendet, &#x200B;] den Besucher in der Aktivitäts- und Inkrementmetrik zu zählen. |
+| 4 | Eine Benachrichtigungsanfrage wird an den [!DNL Target]Profilspeicher[!UICONTROL  gesendet, ] den Besucher in der Aktivitäts- und Inkrementmetrik zu zählen. |
 | 5 | [!DNL Analytics] Daten an [!UICONTROL Datenerfassungs-Server] gesendet. |
 | 6 | [!DNL Target] Daten werden über die SDID mit [!DNL Analytics] Daten abgeglichen und in den [!DNL Analytics]-Reporting-Speicher verarbeitet. [!DNL Analytics] Daten können dann sowohl in [!DNL Analytics] als auch [!DNL Target] über A4T-Berichte angezeigt werden. |
 
@@ -89,7 +96,7 @@ at.js 2.x verbessert die Unterstützung von Adobe Target für SPAs und kann mit 
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-Weitere Informationen finden Sie unter [Funktionsweise von at.js 2.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=de).
+Weitere Informationen finden Sie unter [Funktionsweise von at.js 2.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html).
 
 ## at.js 1.x-Diagramm
 

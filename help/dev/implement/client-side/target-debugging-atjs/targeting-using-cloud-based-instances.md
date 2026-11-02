@@ -1,27 +1,30 @@
 ---
 keywords: Cloud-Instanzen, öffentliche Suffix-Liste, öffentliches Suffix, Cookie, Erstanbieter-Cookie, Erstanbieter-Cookie, azurewebsites.net, cloudapp.net, amazonaws.com, cloudfront.net, herokuapp.com, firebaseapp.com,, cookieDomain, Cloud-Instanzen5, Cloud-Instanzen6, Cloud-Instanzen7, Cloud-Instanzen8, Cloud-Instanzen9, öffentliche Suffix-Liste0, öffentliche Suffix-Liste1, öffentliche Suffix-Liste2, öffentliche Suffix-Liste3, öffentliche Suffix-Liste4, öffentliche Suffix-Liste5
-description: Erfahren Sie mehr über Probleme (mit Lösungen), auf die Kundinnen und Kunden stoßen, wenn sie Cloud [!DNL Adobe Target] basierte Instanzen zum Testen oder für Machbarkeitsprüfungen verwenden.
-title: Kann ich  [!DNL Target]  mit Cloud-basierten Instanzen verwenden?
+description: Erfahren Sie mehr über Probleme (mit Lösungen), auf die Kundinnen und Kunden stoßen, wenn sie Cloud-basierte Instanzen zum Testen von [!DNL Adobe Target] oder für Machbarkeitsprüfungen verwenden.
+title: Kann ich [!DNL Target] mit Cloud-basierten Instanzen verwenden?
 feature: at.js
 exl-id: 4b24fdc0-6c74-4b29-bbf9-7a761d4564a2
 TQID: https://experienceleague.adobe.com/df63sTQxukCfa4pYc1X6FRvxV3cY2UG-ixk5v9Fqh-c
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
-source-wordcount: 203
+source-wordcount: '205'
 ht-degree: 46%
-
 ---
-
 # Verwenden Cloud-basierter Instanzen mit [!DNL Target]
 
 Informationen zu Problemen, die Kunden beim Verwenden Cloud-basierter Instanzen zum Testen von [!DNL Adobe Target] haben.

@@ -1,29 +1,34 @@
 ---
 keywords: Fehlersuche, häufig gestellte Fragen, FAQ, FAQs, global, globale mbox
-description: Lesen Sie häufig gestellte Fragen (FAQs) und Antworten zu Adobe [!DNL Target] globalen Mboxes.
+description: Häufig gestellte Fragen (FAQs) und Antworten zu Adobe [!DNL Target] globalen Mboxes.
 title: Was sind häufig gestellte Fragen zur globalen Mbox?
 feature: at.js
 exl-id: 7bcd1b67-809a-466a-b648-6e0e44386157
 TQID: https://experienceleague.adobe.com/bxsjCqSQpp6M20StzZtMBrfxjJCKgPEPfS2OlBUP00A
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 316
+source-wordcount: '317'
 ht-degree: 34%
-
 ---
-
 # Häufig gestellte Fragen zu globalen Mboxes
 
 Liste der häufig gestellten Fragen (FAQs) zu globalen Mboxes.
@@ -32,9 +37,9 @@ Liste der häufig gestellten Fragen (FAQs) zu globalen Mboxes.
 
 Für Ihr Konto wird nur eine globale Mbox unterstützt.
 
-Sie können den Ausführungsort Ihrer Aktivitäten beschränken, indem Sie Ihren Aktivitäten URL-Regeln hinzufügen. Weitere Informationen finden Sie unter [Gleiches Erlebnis auf ähnlichen Seiten](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html?lang=de).
+Sie können den Ausführungsort Ihrer Aktivitäten beschränken, indem Sie Ihren Aktivitäten URL-Regeln hinzufügen. Weitere Informationen finden Sie unter [Gleiches Erlebnis auf ähnlichen Seiten](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html).
 
-Sie können auch mit [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) einen Parameter auf der Seite übergeben und diese Parameter dann im Abschnitt „URL konfigurieren“ im [!UICONTROL Visual Experience Composer] (VEC) auswählen oder indem Sie die Parameter im [!UICONTROL formularbasierten Experience Composer) als „Verfeinerungen“ &#x200B;].
+Sie können auch mit [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) einen Parameter auf der Seite übergeben und diese Parameter dann im Abschnitt „URL konfigurieren“ im [!UICONTROL Visual Experience Composer] (VEC) auswählen oder indem Sie die Parameter im [!UICONTROL formularbasierten Experience Composer) als „Verfeinerungen“ ].
 
 ## Wie gebe ich Umsatzdaten an eine [!DNL Target] globale Mbox weiter?
 
