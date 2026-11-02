@@ -1,29 +1,34 @@
 ---
 keywords: Häufig gestellte Fragen zu at.js, at.js-FAQ, häufig gestellte Fragen, Flackern, Ladeprogramm, Loader, Seitenlader, domänenübergreifend, Dateigröße, x-Domäne, at.js und mbox.js, nur x, Safari, Single-Page-App, fehlende Selektoren, Selektoren, Single-Page-Anwendung, Einzelseiten-Anwendung, tt.omtrdc.net, SPA, Adobe Experience Manager, AEM, IP-Adresse, IP, httponly, HttpOnly, Secure, IP, Cookie-Domäne
-description: Antworten auf häufig gestellte Fragen zur  [!DNL Adobe Target] .js-JavaScript-Bibliothek.
+description: Antworten auf häufig gestellte Fragen zur [!DNL Adobe Target] at.js-JavaScript-Bibliothek.
 title: Was sind häufige Fragen und Antworten zu at.js?
 feature: at.js
 exl-id: 362ccc5b-8731-46c0-bc52-3e55c273e216
 TQID: https://experienceleague.adobe.com/wOC67fpxKtZKP3-o-T86oA-HqySuPGebT9W5LUHuxSA
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
-source-wordcount: 2994
+source-wordcount: '2995'
 ht-degree: 64%
-
 ---
-
 # Häufig gestellte Fragen zu „at.js“
 
 Antworten auf häufig gestellte Fragen über die [!DNL Adobe Target] zur at.js-JavaScript-Bibliothek.

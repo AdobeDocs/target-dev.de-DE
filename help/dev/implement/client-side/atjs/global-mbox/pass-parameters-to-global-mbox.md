@@ -1,27 +1,30 @@
 ---
 keywords: globale mbox-Parameter, targetPageParams, Abfragezeichenfolge, Array, JSON, dtm
-description: Erfahren Sie, wie Sie mit der [!UICONTROL targetPageParams]-Funktion zusätzliche Zielgruppen- oder Kontextinformationen an die  [!DNL Adobe Target] -globale Mbox übergeben.
+description: Erfahren Sie, wie Sie mit der [!UICONTROL targetPageParams]-Funktion zusätzliche Zielgruppen- oder Kontextinformationen an die [!DNL Adobe Target] globale Mbox übergeben.
 title: Wie übergebe ich Parameter an eine globale Mbox?
 feature: at.js
 exl-id: 2a6be3e4-a618-4812-9e87-b01789705c40
 TQID: https://experienceleague.adobe.com/MRdqU23ARg1E-gf8QDbXOpaVJWd9Fx1pqJ4QXjsBdtA
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 378
+source-wordcount: '379'
 ht-degree: 60%
-
 ---
-
 # Übergeben von Parametern an eine globale Mbox
 
 Die JavaScript `targetPageParams`-Funktion wird verwendet, um Parameter an die globale Mbox in [!DNL Adobe Target] zu übergeben. Dies ist in jedem Szenario erforderlich, in dem zusätzliche Zielgruppen-/Kontextinformationen an [!DNL Target] übergeben werden sollen.

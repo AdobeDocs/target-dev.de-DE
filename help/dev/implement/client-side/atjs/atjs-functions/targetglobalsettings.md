@@ -1,34 +1,44 @@
 ---
 keywords: serverstate, targetGlobalSettings, targetGlobalSettings, globalSettings, globalSettings, globale Einstellungen, at.js, Funktionen, Funktion, clientCode, clientCode, serverDomain, serverdomain, cookieDomain, serverstate5, serverstate6, serverstate7, serverstate8, serverstate9, targetGlobalSettings0, targetGlobalSettings1, targetGlobalSettings2, targetGlobalSettings3, targetGlobalSettings4, targetGlobalSettings5, cookieDomain, crossDomain, timeout, globalMboxAutoCreate, visitorApiTimeout, defaultContentHiddenStyle, defaultContentVisibleStyle, bodyHiddenStyle, bodyHidingEnabled, imsOrgId, secureOnly, overrideMboxEdgeServer, overrideMboxEdgeServerTimeout, cookieDomain5, cookieDomain6, cookieDomain7, cookieDomain8, cookieDomain9, crossDomain0, crossDomain1, crossDomain2, crossDomain3, crossDomain4, crossDomain5, optOutEnabled selectorsPollingTimeout, dataProviders, Hybrid Personalization, deviceIdLifetime
-description: Verwenden Sie die Funktion [!UICONTROL targetGlobalSettings()] für die JavaScript-Bibliothek  [!DNL Adobe Target] .at.js, um Einstellungen zu überschreiben, anstatt die API  [!DNL Target] .UI oder REST zu verwenden.
+description: Verwenden Sie die Funktion [!UICONTROL targetGlobalSettings()] für die [!DNL Adobe Target] at.js-JavaScript-Bibliothek, um Einstellungen zu überschreiben, anstatt die [!DNL Target]-Benutzeroberfläche oder REST-APIs zu verwenden.
 title: Wie verwende ich die Funktion [!UICONTROL targetGlobalSettings()]?
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
 TQID: https://experienceleague.adobe.com/6IeQo7RCys6Qe6bPydmmtgaAERi7rnneBYFOzseaL2g
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
 workflow-type: tm+mt
-source-wordcount: 2705
+source-wordcount: '2707'
 ht-degree: 56%
-
 ---
-
 # [!UICONTROL targetGlobalSettings()]
 
 Sie können Einstellungen in der at.js-Bibliothek mithilfe von `[!UICONTROL targetGlobalSettings()]` überschreiben, anstatt sie in der [!DNL Target]-Benutzeroberfläche oder durch Verwendung von REST-APIs zu konfigurieren.
@@ -552,12 +562,12 @@ Beachten Sie bei der Verwendung von `serverState` Folgendes:
 
 * Derzeit unterstützt at.js v2.2 nur die Bereitstellung von Erlebnissen über serverState für:
 
-   * Mit VEC erstellte Aktivitäten, die beim Laden der Seite ausgeführt werden.
-   * Vorab abgerufene Ansichten.
+  * Mit VEC erstellte Aktivitäten, die beim Laden der Seite ausgeführt werden.
+  * Vorab abgerufene Ansichten.
 
-     Bei der Verwendung von [!DNL Target] Views und `triggerView()` in der at.js-API durch SPAs speichert at.js v2.2 den Inhalt für alle Ansichten, die vorab auf der Server-Seite abgerufen wurden, zwischen und wendet diese an, sobald jede Ansicht über `triggerView()` ausgelöst wird, auch wieder ohne dass zusätzliche Aufrufe zum Abrufen von Inhalten an [!DNL Target] ausgelöst werden.
+    Bei der Verwendung von [!DNL Target] Views und `triggerView()` in der at.js-API durch SPAs speichert at.js v2.2 den Inhalt für alle Ansichten, die vorab auf der Server-Seite abgerufen wurden, zwischen und wendet diese an, sobald jede Ansicht über `triggerView()` ausgelöst wird, auch wieder ohne dass zusätzliche Aufrufe zum Abrufen von Inhalten an [!DNL Target] ausgelöst werden.
 
-   * **Hinweis**: Derzeit werden auf der Server-Seite abgerufene mboxes in `serverState` nicht unterstützt.
+  * **Hinweis**: Derzeit werden auf der Server-Seite abgerufene mboxes in `serverState` nicht unterstützt.
 
 * Bei der Anwendung `serverState` Angebote berücksichtigt at.js `pageLoadEnabled`- und `viewsEnabled`, z. B. werden Seitenladeangebote nicht angewendet, wenn die `pageLoadEnabled` auf „false“ gesetzt ist.
 

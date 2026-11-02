@@ -1,28 +1,32 @@
 ---
 keywords: Benutzerdefinierte Ereignisse, at.js, Anfrage fehlgeschlagen, Anfrage erfolgreich, Content Rendering fehlgeschlagen, Content Rendering erfolgreich, Bibliothek geladen, Request Start, Content Rendering Start, Content Rendering keine Angebote, Content Rendering Redirect, Custom Events2
-description: Verwenden Sie benutzerdefinierte Ereignisse für die  [!DNL Adobe Target] .js-JavaScript-Bibliothek, die benachrichtigt werden, wenn eine Mbox-Anfrage oder ein Angebot fehlschlägt oder erfolgreich ist.
+description: Verwenden Sie benutzerdefinierte Ereignisse für die [!DNL Adobe Target] at.js-JavaScript-Bibliothek, die benachrichtigt werden, wenn eine Mbox-Anfrage oder ein Angebot fehlschlägt oder erfolgreich ist.
 title: Wie verwende ich benutzerdefinierte at.js-Ereignisse?
 feature: at.js
 exl-id: a4baed9a-9eb8-4343-9834-709b03e44ca2
 TQID: https://experienceleague.adobe.com/gCjLJ-XBlMe-GE-gaTJ2wHkn1jmal6Ftbs1GDb0zURA
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 661
+source-wordcount: '662'
 ht-degree: 70%
-
 ---
-
 # Benutzerdefinierte at.js-Ereignisse
 
 Informationen zu `at.js custom events`, die Sie darüber informieren, ob eine Mbox-Anforderung oder ein Angebot erfolgreich war oder fehlgeschlagen ist.

@@ -1,29 +1,34 @@
 ---
 keywords: adobe.target.getOffers, getOffers, getOffers, getOffers, at.js, Funktionen, Funktion, $8
-description: Verwenden Sie die Funktion [!UICONTROL adobe.target.getOffers()] und ihre Optionen für die Bibliothek " [!DNL Adobe Target] .js“, um Anfragen zum Abrufen mehrerer  [!DNL Target]  auszulösen. (at.js 2.x)
+description: Verwenden Sie die Funktion [!UICONTROL adobe.target.getOffers()] und ihre Optionen für die [!DNL Adobe Target] at.js-Bibliothek, um Anfragen auszulösen, um mehrere [!DNL Target]-Angebote zu erhalten. (at.js 2.x)
 title: Wie verwende ich die Funktion [!UICONTROL adobe.target.getOffers()]?
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
 TQID: https://experienceleague.adobe.com/jJXcWyQzJ48GNCNcOT165vxcO-CLExTj-t-3kbR2FZ0
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 1357
+source-wordcount: '1359'
 ht-degree: 57%
-
 ---
-
 # [!UICONTROL adobe.target.getOffers()] - at.js 2.x
 
 Mit dieser Funktion können Sie mehrere Angebote abrufen, indem Sie mehrere Mboxes übergeben. Darüber hinaus können mehrere Angebote für alle Ansichten in aktiven Aktivitäten abgerufen werden.
