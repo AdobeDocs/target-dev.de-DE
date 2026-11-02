@@ -93,7 +93,7 @@ Target.getSessionId { (id, err) in
 
 ## Testen in den Web-Ansichten
 
-Webvorschau-Links werden auf der Seite [!UICONTROL Aktivitätsdetail] generiert, indem auf den [[!UICONTROL Link für die ] von Adobe geklickt ](/help/dev/implement/mobile/target-mobile-preview.md), um ein Popup zum Kopieren jedes Erlebnisvorschau-Links anzuzeigen, ähnlich dem folgenden:
+Webvorschau-Links werden auf der Seite [!UICONTROL Aktivitätsdetail] generiert, indem auf den [[!UICONTROL Link für die &#x200B;] von Adobe geklickt &#x200B;](/help/dev/implement/mobile/target-mobile-preview.md), um ein Popup zum Kopieren jedes Erlebnisvorschau-Links anzuzeigen, ähnlich dem folgenden:
 
 ```
 ?at_preview_token=mhFIzJSF7JWb-RsnakpBqi_s83Sl64hZp928VWpkwvI&at_preview_index=1_1&at_preview_listed_activities_only=true

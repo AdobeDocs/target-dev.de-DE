@@ -36,7 +36,7 @@ Die Adobe Experience Platform Mobile SDKs unterstützen derzeit iOS, Android und
 
 ## Wie häufig wird die standortbasierte Funktion verwendet, um den Breiten- und Längengrad zu überprüfen?
 
-Weitere Informationen finden Sie in der Dokumentation ](https://experienceleague.adobe.com/docs/places/using/home.html){target=_blank} Adobe Places .[
+Weitere Informationen finden Sie in der Dokumentation [&#128279;](https://experienceleague.adobe.com/docs/places/using/home.html){target=_blank} Adobe Places .
 
 ## Benötige ich at.js, damit die Adobe Experience Platform Mobile SDKs funktionieren?
 

@@ -41,7 +41,7 @@ Bei Client-seitigen Implementierungen von [!DNL Adobe Target] stellt [!DNL Targe
 
 ## Was ist at.js?
 
-Die at.js-Bibliothek ist die Implementierungsbibliothek für die Client-seitige Implementierung von [!DNL Adobe Target]. Die at.js-Bibliothek sorgt für kürzere Seitenladezeiten bei Web-Implementierungen und bietet bessere Implementierungsoptionen für Single-Page-Anwendungen. „at.js“ ist die empfohlene Implementierungsbibliothek und wird häufig mit neuen Funktionen aktualisiert. Es wird empfohlen, dass alle -Kunden die [neueste Version von at.js) implementieren oder ](/help/dev/implement/client-side/atjs/target-atjs-versions.md).
+Die at.js-Bibliothek ist die Implementierungsbibliothek für die Client-seitige Implementierung von [!DNL Adobe Target]. Die at.js-Bibliothek sorgt für kürzere Seitenladezeiten bei Web-Implementierungen und bietet bessere Implementierungsoptionen für Single-Page-Anwendungen. „at.js“ ist die empfohlene Implementierungsbibliothek und wird häufig mit neuen Funktionen aktualisiert. Es wird empfohlen, dass alle -Kunden die [neueste Version von at.js) implementieren oder &#x200B;](/help/dev/implement/client-side/atjs/target-atjs-versions.md).
 
 Weitere Informationen finden Sie unter [JavaScript-Bibliotheken in Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#libraries).
 
@@ -49,7 +49,7 @@ In der [!DNL Target]unten dargestellten Implementierung sind die folgenden Adobe
 
 ## Was ist der Unterschied zwischen at.js 1.*x* und at.js 2.x-Workflow-Diagrammen?
 
-Weitere [ zu den Unterschieden, die in 2.O ab 1.x eingeführt wurden, finden Sie unter „Aktualisieren von at.js 1.x auf at.js 2.x](/help/dev/implement/client-side/atjs/upgrading-from-atjs-1x-to-atjs-20.md) **.
+Weitere [&#x200B; zu den Unterschieden, die in 2.O ab 1.x eingeführt wurden, finden Sie unter „Aktualisieren von at.js 1.x auf at.js 2.x](/help/dev/implement/client-side/atjs/upgrading-from-atjs-1x-to-atjs-20.md) **.
 
 Grob betrachtet gibt es einige Unterschiede zwischen den beiden Versionen:
 
@@ -83,10 +83,10 @@ Jetzt werden, wo immer `triggerView()` in Ihrer SPA implementiert ist, die [!UIC
 
 | Schritt | Details |
 | --- | --- |
-| 1 | `triggerView()` wird in der SPA aufgerufen, um die [!UICONTROL Ansicht“ zu rendern ] Aktionen anzuwenden, um visuelle Elemente zu ändern. |
+| 1 | `triggerView()` wird in der SPA aufgerufen, um die [!UICONTROL Ansicht“ zu rendern &#x200B;] Aktionen anzuwenden, um visuelle Elemente zu ändern. |
 | 2 | Gezielte Inhalte für die Ansicht werden aus dem Cache gelesen. |
 | 3 | Die zielgerichteten Inhalte werden so schnell wie möglich bereitgestellt, ohne dass Standardinhalte aufflackern. |
-| 4 | Eine Benachrichtigungsanfrage wird an den [!DNL Target]Profilspeicher[!UICONTROL  gesendet, ] den Besucher in der Aktivitäts- und Inkrementmetrik zu zählen. |
+| 4 | Eine Benachrichtigungsanfrage wird an den [!DNL Target]Profilspeicher[!UICONTROL &#x200B; gesendet, &#x200B;] den Besucher in der Aktivitäts- und Inkrementmetrik zu zählen. |
 | 5 | [!DNL Analytics] Daten an [!UICONTROL Datenerfassungs-Server] gesendet. |
 | 6 | [!DNL Target] Daten werden über die SDID mit [!DNL Analytics] Daten abgeglichen und in den [!DNL Analytics]-Reporting-Speicher verarbeitet. [!DNL Analytics] Daten können dann sowohl in [!DNL Analytics] als auch [!DNL Target] über A4T-Berichte angezeigt werden. |
 

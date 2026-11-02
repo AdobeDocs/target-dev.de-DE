@@ -64,7 +64,7 @@ So öffnen Sie beispielsweise DevTools in Google Chrome:
 
 ## Schritt 3: Überprüfen des Download-Regelartefakts mithilfe von benutzerdefinierten at.js-Ereignissen
 
-Die at.js-Bibliothek sendet zwei neue benutzerdefinierte Ereignisse, um die [!UICONTROL geräteinterne Entscheidungsfindung“ ] unterstützen.
+Die at.js-Bibliothek sendet zwei neue benutzerdefinierte Ereignisse, um die [!UICONTROL geräteinterne Entscheidungsfindung“ &#x200B;] unterstützen.
 
 * `adobe.target.event.ARTIFACT_DOWNLOAD_SUCCEEDED`
 * `adobe.target.event.ARTIFACT_DOWNLOAD_FAILED`

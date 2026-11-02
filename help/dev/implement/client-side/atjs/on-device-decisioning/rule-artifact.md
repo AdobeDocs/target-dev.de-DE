@@ -31,7 +31,7 @@ ht-degree: 0%
 ---
 # [!UICONTROL Geräteinterne Entscheidungsfindung] Regelartefakt
 
-Das Regelartefakt ist eine JSON-Darstellung Ihrer [!DNL Adobe Target]-Aktivitäten [!UICONTROL Entscheidungsfindung auf ]. Das Regelartefakt wird von [!DNL Target] generiert und an das Akamai-CDN weitergegeben, um sicherzustellen, dass ein Regelartefakt so nah wie möglich bei Ihren Besuchern verfügbar ist. Das Regelartefakt enthält Metadaten, die die präzise Ausführung und Bereitstellung Ihrer Aktivitäten sicherstellen und gleichzeitig über die Ereignisverfolgung eine Echtzeitanalyse ermöglichen.
+Das Regelartefakt ist eine JSON-Darstellung Ihrer [!DNL Adobe Target]-Aktivitäten [!UICONTROL Entscheidungsfindung auf &#x200B;]. Das Regelartefakt wird von [!DNL Target] generiert und an das Akamai-CDN weitergegeben, um sicherzustellen, dass ein Regelartefakt so nah wie möglich bei Ihren Besuchern verfügbar ist. Das Regelartefakt enthält Metadaten, die die präzise Ausführung und Bereitstellung Ihrer Aktivitäten sicherstellen und gleichzeitig über die Ereignisverfolgung eine Echtzeitanalyse ermöglichen.
 
 * Klicken Sie [hier](../../../../implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md), um weitere Informationen zum Regelartefakt zu erhalten.
 * Klicken Sie [hier](../../../../implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-example.md), um ein Beispiel für ein JSON-Regelartefakt anzuzeigen.

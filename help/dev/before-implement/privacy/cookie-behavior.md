@@ -51,7 +51,7 @@ Siehe auch [Löschen des  [!DNL Target] -](cookie-deleting.md).
 
 ## Verwendung von Erstanbieter- oder Drittanbieter-Cookies
 
-Durch Ihre Site-Einrichtung wird bestimmt, welche Cookies Sie verwenden. Es ist hilfreich zu verstehen, wie [!DNL Target] funktioniert, wenn Sie versuchen, Erstanbieter- und Drittanbieter-Cookies zu verstehen. Weitere Informationen finden [ unter  [!DNL Adobe] [!DNL Target]Funktionsweise](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html) .
+Durch Ihre Site-Einrichtung wird bestimmt, welche Cookies Sie verwenden. Es ist hilfreich zu verstehen, wie [!DNL Target] funktioniert, wenn Sie versuchen, Erstanbieter- und Drittanbieter-Cookies zu verstehen. Weitere Informationen finden [&#x200B; unter  [!DNL Adobe] [!DNL Target]Funktionsweise](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html) .
 
 Es gibt drei Haupt-Nutzungsszenarien für Cookies:
 

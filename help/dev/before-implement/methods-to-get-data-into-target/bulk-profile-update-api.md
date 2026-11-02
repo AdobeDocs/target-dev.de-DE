@@ -24,7 +24,7 @@ ht-degree: 5%
 ---
 # API zur Massenaktualisierung von Profilen
 
-Mit der [!DNL Adobe Target] [!UICONTROL API zur Massenaktualisierung von ]) können Sie Benutzerprofile für mehrere Besucher einer Website mithilfe einer Batch-Datei stapelweise aktualisieren.
+Mit der [!DNL Adobe Target] [!UICONTROL API zur Massenaktualisierung von &#x200B;]) können Sie Benutzerprofile für mehrere Besucher einer Website mithilfe einer Batch-Datei stapelweise aktualisieren.
 
 Mit der [!UICONTROL Bulk Profile Update API] können Sie für viele Benutzer bequem detaillierte Besucherprofildaten in Form von Profilparametern senden, um sie aus einer beliebigen externen Quelle zu [!DNL Target]. Zu den externen Quellen können CRM (Customer Relationship Management)- oder POS (Point of Sale)-Systeme gehören, die normalerweise nicht auf einer Web-Seite verfügbar sind.
 

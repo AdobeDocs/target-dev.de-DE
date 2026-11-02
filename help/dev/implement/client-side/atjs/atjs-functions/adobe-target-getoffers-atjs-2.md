@@ -222,7 +222,7 @@ adobe.target.getOffers({
 }
 ```
 
-Die Payload kann dann über die „Data Insertion [&quot; an [!DNL Adobe Analytics] weitergeleitet ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
+Die Payload kann dann über die „Data Insertion [&quot; an [!DNL Adobe Analytics] weitergeleitet &#x200B;](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md).
 
 ## Abrufen und Rendern von Daten aus mehreren Mboxes über [!UICONTROL getOffers()] und [!UICONTROL applyOffers()]
 
@@ -305,7 +305,7 @@ Beachten Sie, dass dieses Beispiel `prefetch > mboxes` verwendet, Sie könnten a
 
 ## Aufruf [!UICONTROL getOffers()], um einen Seitenladevorgang durchzuführen
 
-Das folgende Beispiel zeigt, wie Sie einen pageLoad mit [!UICONTROL getOffers() ] at.js 2.*x durchführen*
+Das folgende Beispiel zeigt, wie Sie einen pageLoad mit [!UICONTROL getOffers() &#x200B;] at.js 2.*x durchführen*
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({

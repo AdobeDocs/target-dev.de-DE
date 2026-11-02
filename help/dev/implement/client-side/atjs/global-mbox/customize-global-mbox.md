@@ -1,6 +1,6 @@
 ---
 keywords: Globale Mbox, Globale Mbox anpassen, at.js bearbeiten, at.js implementieren, at.js
-description: Erfahren Sie auf der Seite [!UICONTROL Administration]-[!UICONTROL Implementation“ in [!DNL Adobe Target], wie Sie eine globale Mbox ] at.js anpassen.
+description: Erfahren Sie auf der Seite [!UICONTROL Administration]-[!UICONTROL Implementation“ in [!DNL Adobe Target], wie Sie eine globale Mbox &#x200B;] at.js anpassen.
 title: Wie kann ich eine globale Mbox anpassen?
 feature: at.js
 exl-id: f7809c3d-6e77-4bbe-8da3-4ab0a448c801
@@ -45,7 +45,7 @@ Die globale Mbox wird auch für Klick-Tracking eingesetzt.
 
 1. Implementieren Sie die at.js-Bibliothek auf Ihrer Site.
 
-   Weitere Informationen finden [ unter „Bereitstellen von ](/help/dev/implement/client-side/atjs/how-to-deployatjs/how-to-deployatjs.md).js“ .
+   Weitere Informationen finden [&#x200B; unter „Bereitstellen von &#x200B;](/help/dev/implement/client-side/atjs/how-to-deployatjs/how-to-deployatjs.md).js“ .
 
 1. Stimmen Sie die Umstellung mit Ihrer Veröffentlichung zeitlich ab.
 

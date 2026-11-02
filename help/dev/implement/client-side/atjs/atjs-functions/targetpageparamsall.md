@@ -33,7 +33,7 @@ Mit dieser Methode können Sie Parameter von außerhalb des Anforderungscodes an
 
 Dies ist sehr nützlich, wenn dieselbe Parameterkonfiguration für mehrere Mbox-Aufrufe verwendet werden soll. Sie muss vom Kunden definiert werden. Sie sollte ein Array von Parametern zurückgeben, die an alle Mbox-Aufrufe auf der Seite übergeben werden. Diese Funktion kann definiert werden, bevor at.js geladen wird, oder unter **[!UICONTROL Administration]** > **[!UICONTROL Implementierung]** > **[!UICONTROL Bearbeiten]** > **[!UICONTROL Code-Einstellungen]** > **[!UICONTROL Bibliothekskopfzeile]**.
 
-Sie können Parameter mithilfe der Funktion [!UICONTROL targetPageParamsAll() auf eine der folgenden Arten ] target-global-mbox übergeben:
+Sie können Parameter mithilfe der Funktion [!UICONTROL targetPageParamsAll() auf eine der folgenden Arten &#x200B;] target-global-mbox übergeben:
 
 * Als eine durch kaufmännisches Und getrennte Liste
 * Als Array

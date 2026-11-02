@@ -26,7 +26,7 @@ ht-degree: 0%
 ---
 # Server-seitige Protokollierung für A4T-Daten in [!DNL Experience Platform Web SDK]
 
-Mit dem [!DNL Adobe Experience Platform Web SDK] können Sie die Funktion [!UICONTROL Adobe Analytics for Target] (A4T) in [!UICONTROL Experience Platform Edge Network} ]. Wenn die Server-seitige Protokollierung aktiviert ist, werden alle [!DNL Analytics] über die Edge Network gesendeten Treffer mit [!DNL Target] Details auf der Server-Seite erweitert, ohne dass der Trefferzusammenfügungsprozess durchlaufen werden muss.
+Mit dem [!DNL Adobe Experience Platform Web SDK] können Sie die Funktion [!UICONTROL Adobe Analytics for Target] (A4T) in [!UICONTROL Experience Platform Edge Network&rbrace; &#x200B;]. Wenn die Server-seitige Protokollierung aktiviert ist, werden alle [!DNL Analytics] über die Edge Network gesendeten Treffer mit [!DNL Target] Details auf der Server-Seite erweitert, ohne dass der Trefferzusammenfügungsprozess durchlaufen werden muss.
 
 Die Server-seitige Protokollierung für [!DNL Analytics] ist aktiviert, wenn [!DNL Analytics] in der Datenstromkonfiguration aktiviert ist:
 
@@ -38,4 +38,4 @@ Das folgende Diagramm zeigt, wie Daten durch das System fließen, wenn die Serve
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde die Server-seitige Protokollierung für A4T-Daten in der Web-SDK behandelt. Weitere Informationen zum [ von A4T-Daten auf der Client](/help/dev/implement/a4t/client-side-logging.md)Seite finden Sie im Handbuch zur Client-seitigen Protokollierung .
+In diesem Handbuch wurde die Server-seitige Protokollierung für A4T-Daten in der Web-SDK behandelt. Weitere Informationen zum [&#x200B; von A4T-Daten auf der Client](/help/dev/implement/a4t/client-side-logging.md)Seite finden Sie im Handbuch zur Client-seitigen Protokollierung .

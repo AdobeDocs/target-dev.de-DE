@@ -48,9 +48,9 @@ Die [!DNL Adobe Experience Platform Web SDK] unterstützt zwei Arten der [!DNL A
 | Protokollierungsmethode | Beschreibung |
 | --- | --- |
 | Server-seitige [!DNL Analytics] | Alle [!DNL Analytics] über die Edge Network gesendeten Treffer werden Server-seitig um [!DNL Target] Details erweitert, ohne dass der Trefferzusammenfügungsprozess durchlaufen werden muss. |
-| Client-seitige [!DNL Analytics] | [!DNL Target] Daten werden Client-seitig zurückgegeben, sodass Sie Daten manuell erweitern und mit der Data Insertion[API an [!DNL Analytics] senden ](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
+| Client-seitige [!DNL Analytics] | [!DNL Target] Daten werden Client-seitig zurückgegeben, sodass Sie Daten manuell erweitern und mit der Data Insertion[API an [!DNL Analytics] senden &#x200B;](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
 
-Die Protokollierungsmethode wird davon bestimmt, ob Sie in Ihrem konfigurierten (Datenstrom[ aktiviert [!DNL Adobe Analytics]](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview):
+Die Protokollierungsmethode wird davon bestimmt, ob Sie in Ihrem konfigurierten (Datenstrom[&#x200B; aktiviert [!DNL Adobe Analytics]](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview):
 
 ![Entscheidungsfluss der Protokollierungsmethode](/help/dev/implement/a4t/assets/analytics-logging.png)
 
