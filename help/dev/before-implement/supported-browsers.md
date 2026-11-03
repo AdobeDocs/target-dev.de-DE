@@ -22,9 +22,9 @@ topic_v2:
     internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d1a60ca866f126520e9a17257adc50114ddd8e7
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '452'
 ht-degree: 19%
 ---
 # Unterstützte Browser
@@ -45,7 +45,7 @@ Die [!DNL Target]-Schnittstelle unterstützt die folgenden Browser und Geräte:
 | Gerätetyp | Browser-Version |
 |--- |--- |
 | [!DNL Windows] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
-| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li><li>[!DNL Safari]</li></ul> |
 
 ## Anforderungen an die visuelle Bearbeitung
 
@@ -53,7 +53,7 @@ Damit Sie Ihre Web-Seiten zuverlässig im [!UICONTROL Visual Experience Composer
 
 >[!NOTE]
 >
->[!DNL Google Chrome] und [!DNL Microsoft Edge] sind derzeit die einzigen Browser, die die visuelle Bearbeitung von Web-Seiten in [!DNL Adobe Target] unterstützen.
+>[!DNL Google Chrome] und [!DNL Microsoft Edge] sind derzeit die einzigen Browser, die die visuelle Bearbeitung von Web-Seiten in [!DNL Adobe Target] unterstützen. [!DNL Safari] unterstützt weder VEC noch EEC.
 
 
 ## Inhaltsbereitstellung
