@@ -22,9 +22,9 @@ topic_v2:
     internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d1a60ca866f126520e9a17257adc50114ddd8e7
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '452'
 ht-degree: 19%
 ---
 # Unterstützte Browser
@@ -45,15 +45,15 @@ Die [!DNL Target]-Schnittstelle unterstützt die folgenden Browser und Geräte:
 | Gerätetyp | Browser-Version |
 |--- |--- |
 | [!DNL Windows] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
-| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li><li>[!DNL Safari]</li></ul> |
 
 ## Anforderungen an die visuelle Bearbeitung
 
-Damit Sie Ihre Web-Seiten zuverlässig im [!UICONTROL Visual Experience Composer] (VEC) öffnen, erstellen und in der Vorschau anzeigen können, muss die Browser-Erweiterung [Adobe Experience Cloud Visual Editing Helper](https://experienceleague.adobe.com/de/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} in Ihrem Webbrowser installiert sein oder [!UICONTROL Enhanced Experience Composer (EEC) verwenden].
+Damit Sie Ihre Web-Seiten zuverlässig im [!UICONTROL Visual Experience Composer] (VEC) öffnen, erstellen und in der Vorschau anzeigen können, muss die Browser-Erweiterung [Adobe Experience Cloud Visual Editing Helper](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} in Ihrem Webbrowser installiert sein oder [!UICONTROL Enhanced Experience Composer (EEC) verwenden].
 
 >[!NOTE]
 >
->[!DNL Google Chrome] und [!DNL Microsoft Edge] sind derzeit die einzigen Browser, die die visuelle Bearbeitung von Web-Seiten in [!DNL Adobe Target] unterstützen.
+>[!DNL Google Chrome] und [!DNL Microsoft Edge] sind derzeit die einzigen Browser, die die visuelle Bearbeitung von Web-Seiten in [!DNL Adobe Target] unterstützen. [!DNL Safari] unterstützt weder VEC noch EEC.
 
 
 ## Inhaltsbereitstellung
@@ -71,5 +71,5 @@ Beachten Sie Folgendes:
 * Die [!DNL Adobe Experience Platform Web SDK] wurde für eine optimale Funktionsweise in den neuesten Versionen von [!DNL Google Chrome], [!DNL Safari], [!DNL Firefox] und [!DNL Microsoft Edge Chromium] entwickelt. Bei der Verwendung bestimmter Funktionen in älteren Versionen dieser Browser oder veralteten Browsern, wie z. B. [!DNL Internet Explorer], können Probleme auftreten.
 * Bei at.js-Implementierungen zeigt [!DNL Target] Standardinhalte in früheren Versionen von Internet Explorer und möglicherweise in früheren Versionen der oben aufgeführten Browser an.
 * In Internet Explorer werden alle unbekannten Elemente (z. B. benutzerdefinierte Elemente) als derselbe Elementtyp behandelt. Daher funktioniert der Versand nicht mit benutzerdefinierten Elementen.
-* [!DNL Target] zeigt Standardinhalte in Browsern an, die oben nicht aufgeführt sind, und in Browsern, die den [Quirks-Modus“ &#x200B;](https://en.wikipedia.org/wiki/Quirks_mode). Für at.js ist ein Dokumenttyp erforderlich, der im Standardmodus dargestellt wird, beispielsweise `<!DOCTYPE html>`.
+* [!DNL Target] zeigt Standardinhalte in Browsern an, die oben nicht aufgeführt sind, und in Browsern, die den [Quirks-Modus“ ](https://en.wikipedia.org/wiki/Quirks_mode). Für at.js ist ein Dokumenttyp erforderlich, der im Standardmodus dargestellt wird, beispielsweise `<!DOCTYPE html>`.
 * [!DNL Adobe] Bereitstellungsinfrastruktur wird nach dem 12. September 2018 so gesichert, dass TLS 1.0-Geräte und -Browser NICHT mehr unterstützt werden. Siehe [Änderungen hinsichtlich der Verschlüsselung mit TLS (Transport Layer Security)](../before-implement/tls-transport-layer-security-encryption.md), um die Gesamtauswirkungen dieser Änderung zu verstehen.
