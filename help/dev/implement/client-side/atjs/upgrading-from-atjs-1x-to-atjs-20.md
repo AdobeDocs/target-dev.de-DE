@@ -800,6 +800,6 @@ Version wird als Abfragezeichenfolgenparameter über den Versionsparameter gesen
 
 at.js 2.*x* erweitert die Unterstützung von Adobe [!DNL Target] für SPAs und integriert diese in andere Experience Cloud-Lösungen. In diesem Video wird erklärt, wie alles zusammenkommt.
 
->[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3507932/?captions=ger&quality=12)
 
 Weitere Informationen finden [&#x200B; unter „Funktionsweise von at *js*.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=de) .

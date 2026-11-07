@@ -339,7 +339,7 @@ Weitere Informationen dazu finden Sie in den folgenden Videos:
 
 ### Funktionsweise von at.js 2.x
 
->[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3507932/?captions=ger&quality=12)
 
 Weitere Informationen finden Sie unter [Funktionsweise von at.js 2.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=de).
 
