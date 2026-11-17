@@ -25,9 +25,9 @@ topic_v2:
     internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-source-git-commit: 3a1674348a1cb39351051addf8e063efbf0dc9e9
+source-git-commit: 78a2ba4a9668cee9813788f03c81eb68f3a6af07
 workflow-type: tm+mt
-source-wordcount: '1336'
+source-wordcount: '1316'
 ht-degree: 6%
 ---
 # [!DNL Adobe Target Bulk Profile Update API]
@@ -203,5 +203,3 @@ Das Senden leerer Werte (“&quot;, Null oder fehlende Felder) für vorhandene P
 Dieses Verhalten gilt sowohl für v1 als auch für v2 der [!DNL Bulk Profile Update API].
 
 Der Versuch, ein Attribut durch Senden eines leeren Werts zu löschen oder zu entfernen, hat keine Auswirkungen.
-
-Die Unterstützung für das explizite Entfernen von Attributen ist für eine zukünftige Version (v3) der API geplant, ist aber derzeit nicht verfügbar.
